@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.*" />
+    <PackageReference Include="AutoFixture" Version="4.1.*" />
+    <PackageReference Include="nunit" Version="3.11.*" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.11.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.*" />
+    <PackageReference Include="Moq" Version="4.8.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FillInTheTextBot.Messengers\FillInTheTextBot.Messengers.csproj" />
+    <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
+    <ProjectReference Include="..\FillInTheTextBot.Services\FillInTheTextBot.Services.csproj" />
+  </ItemGroup>
+
+</Project>
