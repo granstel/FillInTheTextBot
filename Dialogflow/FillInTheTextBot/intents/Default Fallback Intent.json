@@ -1,0 +1,39 @@
+{
+  "id": "f691206f-44a5-4588-968e-38085014eda4",
+  "name": "Default Fallback Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": [
+            "Не совсем понимаю, о чём ты.",
+            "Вот эта последняя фраза мне не ясна.",
+            "А вот это не совсем понятно.",
+            "Можешь сказать то же самое другими словами?",
+            "Вот сейчас я тебя совсем не понимаю.",
+            "Попробуй, пожалуйста, выразить свою мысль по-другому."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
