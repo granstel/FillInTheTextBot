@@ -1,0 +1,108 @@
+{
+  "id": "634147c2-82a3-4146-9522-73bf2316ba1b",
+  "name": "0-LessonIssue",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "text-0",
+          "parameters": {},
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aebd1c56-73af-4048-8011-caa611acda96",
+          "required": true,
+          "dataType": "@sys.person",
+          "name": "boy",
+          "value": "$boy",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя мальчика (например, одноклассника)"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи имя мальчика (одноклассника, например)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "e76ff73c-2f72-47d0-8bda-ff18e62e7a30",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-1",
+          "value": "$adjective-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь прилагательное"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови прилагательное"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "155324b5-0c25-4c45-b0a5-07be6a9ea5db",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animal",
+          "value": "$animal",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь - животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": "Внимание, вот что получилось: Вчера $boy принес на урок зверька, который называется карликовый $adjective-1 $animal. Тот сразу удрал из портфеля, подкрался к учительскому столу и укусил учительницу за ногу. Мариванна закричала как беспартийная выхухоль и вскочила на стол. \"Уберите это чудовище! Это чей бешеный тушканчик?\" \"Это не бешеный тушканчик, - сказал Лёха, - а пупырчатый гамадрил. Я и не заметил дома, что он в портфель забрался!\"\nЛёха хотел поймать своего питомца, но тот быстро заскочил на шкаф и зарычал как кремлёвский песец. Ловили всем классом, еле поймали. Мариванна достала из сумочки большой арбуз, откусила кусок и сказала: \"Надо успокоиться!\" Тут гамадрил вырвался из наших рук, подбежал и тоже откусил кусок. Пальца. Такой забавный!"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-0"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

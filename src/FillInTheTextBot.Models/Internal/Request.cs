@@ -2,7 +2,7 @@ namespace FillInTheTextBot.Models.Internal
 {
     public class Request
     {
-        public Source Source {get; set;}
+        public Source? Source {get; set;}
 
         public string ChatHash {get; set;}
 

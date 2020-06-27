@@ -1,0 +1,161 @@
+[
+  {
+    "id": "018eccd3-3e9a-4273-b324-f48173685ef6",
+    "data": [
+      {
+        "text": "Поехали",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "3a4093f2-8ae3-400a-8772-f25ec150d67e",
+    "data": [
+      {
+        "text": "Начинаем",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "93189643-49f7-4528-a397-7d24dad3782f",
+    "data": [
+      {
+        "text": "Начали",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "a443974c-8026-4927-b859-3d006d7f9d11",
+    "data": [
+      {
+        "text": "начинай",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e7ea360a-9347-4972-bdcc-91eae39bb87e",
+    "data": [
+      {
+        "text": "Да",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1adc8d9e-43b5-4247-ab50-665bc45ca0ad",
+    "data": [
+      {
+        "text": "давай",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a60ef96e-add1-4272-b172-ae3b3dc40615",
+    "data": [
+      {
+        "text": "готовы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8d48dc55-c080-40e4-8e83-69bfaabb0e1b",
+    "data": [
+      {
+        "text": "готова",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8d9b3500-ddaf-449b-9404-e7dc31b0c339",
+    "data": [
+      {
+        "text": "готов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "069d2a85-bf92-4533-9c01-c3db8f6c2b0d",
+    "data": [
+      {
+        "text": "Я готова",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7c54ce2e-28ae-4a82-9014-e5d69eb09a78",
+    "data": [
+      {
+        "text": "Мы готовы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "73aed419-f7c1-4cd5-9db0-39b061ed02f1",
+    "data": [
+      {
+        "text": "Я готов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "02db9107-0a5f-4613-acae-65f9e210ef58",
+    "data": [
+      {
+        "text": "Вперёд",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  }
+]

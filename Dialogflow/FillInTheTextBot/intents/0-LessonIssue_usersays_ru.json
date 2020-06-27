@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ee80cb08-3712-4b5c-9822-b37e5cd24bd7",
+    "data": [
+      {
+        "text": "гамадрил",
+        "alias": "animal",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c8b64bba-6cae-4e5e-8f52-17abf5400df1",
+    "data": [
+      {
+        "text": "пупырчатый",
+        "alias": "adjective-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "24770271-9f2f-4278-bd97-3db88b83dff2",
+    "data": [
+      {
+        "text": "Лёха",
+        "alias": "boy",
+        "meta": "@sys.person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

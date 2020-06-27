@@ -1,0 +1,62 @@
+[
+  {
+    "id": "13b15989-4fc1-4763-91c7-a0b531a9fc9a",
+    "data": [
+      {
+        "text": "а как это работает",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "153aa60f-812b-4eae-875c-8fb655198ded",
+    "data": [
+      {
+        "text": "помощь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "654f2d2f-033e-4c83-bbe3-11d36451f345",
+    "data": [
+      {
+        "text": "Что ты умеешь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3c4cd102-c75e-45b5-ab25-04795f7cd55a",
+    "data": [
+      {
+        "text": "что ты такое",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "609cfa38-2b38-42ad-b353-c1a000352f98",
+    "data": [
+      {
+        "text": "что это",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  }
+]

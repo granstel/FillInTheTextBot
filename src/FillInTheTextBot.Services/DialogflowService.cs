@@ -7,11 +7,13 @@ using FillInTheTextBot.Models.Internal;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using NLog;
+using System.Linq;
 
 namespace FillInTheTextBot.Services
 {
     public class DialogflowService : IDialogflowService
     {
+        private const string EventKey = "event:";
         private const string StartCommand = "/start";
         private const string ErrorCommand = "/error";
 
@@ -42,6 +44,17 @@ namespace FillInTheTextBot.Services
             {
                 {Source.Yandex, YandexEventResolve},
             };
+        }
+
+        public async Task<Dialog> GetResponseAsync(string text, string sessionId)
+        {
+            var request = new Request
+            {
+                Text = text,
+                SessionId = sessionId
+            };
+
+            return await GetResponseAsync(request);
         }
 
         public async Task<Dialog> GetResponseAsync(Request request)
@@ -86,7 +99,7 @@ namespace FillInTheTextBot.Services
             var intentRequest = new DetectIntentRequest
             {
                 SessionAsSessionName = session,
-                QueryInput = query
+                QueryInput = query,
             };
 
             return intentRequest;
@@ -98,18 +111,13 @@ namespace FillInTheTextBot.Services
 
             var sourceMessenger = request?.Source;
 
-            if (sourceMessenger != null)
+            if (sourceMessenger != null && _eventResolvers.ContainsKey(sourceMessenger.Value))
             {
-                var sourceValue = sourceMessenger.Value;
-
-                if (_eventResolvers.ContainsKey(sourceValue))
-                {
-                    result = _eventResolvers[sourceValue].Invoke(request);
-                }
-                else
-                {
-                    result = EventByCommand(request.Text);
-                }
+                result = _eventResolvers[sourceMessenger.Value].Invoke(request);
+            }
+            else
+            {
+                result = EventByCommand(request.Text);
             }
 
             return result;
@@ -119,7 +127,16 @@ namespace FillInTheTextBot.Services
         {
             var result = default(EventInput);
 
-            if (_commandDictionary.TryGetValue(requestText, out var eventName))
+            _commandDictionary.TryGetValue(requestText, out var eventName);
+
+            var splitted = requestText.Split(new[] { EventKey }, StringSplitOptions.None);
+
+            if (splitted.Length == 2)
+            {
+                eventName = splitted.LastOrDefault();
+            }
+
+            if (!string.IsNullOrEmpty(eventName))
             {
                 result = GetEvent(eventName);
             }
@@ -141,7 +158,7 @@ namespace FillInTheTextBot.Services
             EventInput result;
 
             // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
-            if (request.NewSession == true || string.IsNullOrEmpty(request.Text))
+            if (request.NewSession == true && string.IsNullOrEmpty(request.Text))
             {
                 result = GetEvent(WelcomeEventName);
             }
