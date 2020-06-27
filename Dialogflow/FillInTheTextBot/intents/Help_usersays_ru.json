@@ -1,6 +1,66 @@
 [
   {
-    "id": "80713ea7-832a-468f-8bdc-c7ebb23d2b43",
+    "id": "872c92c7-2c98-4ba6-9fed-baf3faf2785a",
+    "data": [
+      {
+        "text": "у меня есть вопросы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1f576bd7-927a-436f-b40f-9492e4168d73",
+    "data": [
+      {
+        "text": "что ты умеешь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "cb1d1c4e-b8dc-4ada-a7d6-5ee80af9d04d",
+    "data": [
+      {
+        "text": "мне ничего не понятно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "09c406d9-9448-458c-ac63-be9ddbf2b30b",
+    "data": [
+      {
+        "text": "какие слова",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "24cc5f48-d9c2-497e-b81c-3dc5c3373f1f",
+    "data": [
+      {
+        "text": "что",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "71f8c28a-d7ce-419b-8183-077215e5adf3",
     "data": [
       {
         "text": "а как это работает",
@@ -12,7 +72,7 @@
     "updated": 0
   },
   {
-    "id": "b76b64f8-5f0f-483b-bc04-5beebae8ade4",
+    "id": "833682e4-bdb8-4fe9-9938-781a03851d98",
     "data": [
       {
         "text": "помощь",
@@ -24,7 +84,7 @@
     "updated": 0
   },
   {
-    "id": "86a76f8d-48ed-4ff7-97d5-b04242dc10a3",
+    "id": "1c516899-392b-4292-93fc-321d6ea8a471",
     "data": [
       {
         "text": "Что ты умеешь",
@@ -36,7 +96,7 @@
     "updated": 0
   },
   {
-    "id": "d7b1c123-e989-4563-a44c-baeeb64f4058",
+    "id": "54fb4e00-68fb-42d3-91e6-9267910b347d",
     "data": [
       {
         "text": "что ты такое",
@@ -48,7 +108,7 @@
     "updated": 0
   },
   {
-    "id": "e32fe59d-7fff-4608-ac06-b40fbaa3d00c",
+    "id": "42f9d6b8-f438-4abd-9b47-30f7a7a2ca99",
     "data": [
       {
         "text": "что это",
