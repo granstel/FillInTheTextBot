@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using FillInTheTextBot.Models.Internal;
 using GranSteL.Helpers.Redis;
@@ -50,7 +51,16 @@ namespace FillInTheTextBot.Services
             var dialog = await _dialogflowService.GetResponseAsync(eventName, sessionId);
 
 
-            var text = $"{startText} {dialog?.Response}";
+            var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
+
+            var textWithName = string.Empty;
+
+            if (!string.IsNullOrEmpty(textName))
+            {
+                textWithName = $"Текст называется \"{textName}\".";
+            }
+
+            var text = $"{startText} {textWithName} {dialog?.Response}";
 
             response.Text = text;
 

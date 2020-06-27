@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace FillInTheTextBot.Models.Internal
 {
@@ -13,5 +14,10 @@ namespace FillInTheTextBot.Models.Internal
         public string Response { get; set; }
 
         public string Action { get; set; }
+
+        public IEnumerable<string> GetParameters(string key)
+        {
+            return Parameters?.Where(p => string.Equals(p.Key, key)).Select(p => p.Value);
+        }
     }
 }
