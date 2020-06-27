@@ -1,10 +1,10 @@
 [
   {
-    "id": "ee80cb08-3712-4b5c-9822-b37e5cd24bd7",
+    "id": "1d6b5ebe-8e7d-4169-829b-93c0f62c4e82",
     "data": [
       {
-        "text": "гамадрил",
-        "alias": "animal",
+        "text": "пирог",
+        "alias": "food",
         "meta": "@sys.any",
         "userDefined": true
       }
@@ -14,7 +14,147 @@
     "updated": 0
   },
   {
-    "id": "c8b64bba-6cae-4e5e-8f52-17abf5400df1",
+    "id": "11bf3c51-7861-4ced-99c9-e95361ffe0af",
+    "data": [
+      {
+        "text": "арбуз",
+        "alias": "food",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "6f2795fe-865d-46d6-b048-41eeacb5a667",
+    "data": [
+      {
+        "text": "красивая",
+        "alias": "adjective-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2f24dd89-31e9-4dc2-9f37-32df0a7cb220",
+    "data": [
+      {
+        "text": "классная",
+        "alias": "adjective-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d14d282d-0044-4bfa-9d19-5752ad2f63cc",
+    "data": [
+      {
+        "text": "пупырчатая",
+        "alias": "adjective-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f2231b57-fbb9-428b-a91c-8a1797377880",
+    "data": [
+      {
+        "text": "беспартийная",
+        "alias": "adjective-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ab8194ed-ad2c-4e82-a909-75f1ec2d1fe6",
+    "data": [
+      {
+        "text": "Людмила Петровна",
+        "alias": "teacher",
+        "meta": "@sys.person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "196729e4-95fd-4b4d-9f44-395043039c08",
+    "data": [
+      {
+        "text": "Елена Александровна",
+        "alias": "teacher",
+        "meta": "@sys.person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d96f9665-56e9-4be9-b18f-d0a31d114022",
+    "data": [
+      {
+        "text": "Ирина Анатольевна",
+        "alias": "teacher",
+        "meta": "@sys.person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "69461263-ba2a-42e4-bb6b-055865a1dc6b",
+    "data": [
+      {
+        "text": "Мариванна",
+        "alias": "teacher",
+        "meta": "@sys.person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "86a8185f-9911-4241-a432-deaffe77c707",
+    "data": [
+      {
+        "text": "гамадрил",
+        "alias": "animal-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "218c11dd-91cb-4143-8d48-169e772ffd04",
     "data": [
       {
         "text": "пупырчатый",
@@ -28,7 +168,7 @@
     "updated": 0
   },
   {
-    "id": "24770271-9f2f-4278-bd97-3db88b83dff2",
+    "id": "aeacc57d-9625-4dd6-8586-71c8c400c98e",
     "data": [
       {
         "text": "Лёха",

@@ -2,7 +2,9 @@
   "id": "634147c2-82a3-4146-9522-73bf2316ba1b",
   "name": "0-LessonIssue",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "Started"
+  ],
   "responses": [
     {
       "resetContexts": false,
@@ -15,7 +17,19 @@
       ],
       "parameters": [
         {
-          "id": "aebd1c56-73af-4048-8011-caa611acda96",
+          "id": "ec4d5d58-ccda-4afa-87b9-cb664eb7e888",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "text-name",
+          "value": "Случай на уроке",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "5c0d6413-1533-40b9-b74f-8447174ff742",
           "required": true,
           "dataType": "@sys.person",
           "name": "boy",
@@ -37,7 +51,7 @@
           "isList": false
         },
         {
-          "id": "e76ff73c-2f72-47d0-8bda-ff18e62e7a30",
+          "id": "9e3bc2fb-00b9-4788-9e51-a57193248048",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-1",
@@ -45,11 +59,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Теперь прилагательное"
+              "value": "Теперь - прилагательное мужского рода"
             },
             {
               "lang": "ru",
-              "value": "Теперь назови прилагательное"
+              "value": "Теперь назови прилагательное мужского рода"
             }
           ],
           "promptMessages": [],
@@ -59,11 +73,11 @@
           "isList": false
         },
         {
-          "id": "155324b5-0c25-4c45-b0a5-07be6a9ea5db",
+          "id": "00fec6f7-e592-4f6e-8ab4-4bd3884ef21e",
           "required": true,
           "dataType": "@sys.any",
-          "name": "animal",
-          "value": "$animal",
+          "name": "animal-1",
+          "value": "$animal-1",
           "prompts": [
             {
               "lang": "ru",
@@ -79,6 +93,154 @@
           "noInputPromptMessages": [],
           "outputDialogContexts": [],
           "isList": false
+        },
+        {
+          "id": "fecf8cdb-f5da-4800-9971-a2ca6614c78f",
+          "required": true,
+          "dataType": "@sys.person",
+          "name": "teacher",
+          "value": "$teacher",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя учительницы"
+            },
+            {
+              "lang": "ru",
+              "value": "Следующее - имя учительницы"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "a7babf2e-ce28-4740-86d3-0d7bdad9e7ed",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-2",
+          "value": "$adjective-2",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Прилагательное женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "3dcf4949-3cfd-4f82-8653-37298913f142",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animal-2",
+          "value": "$animal-2",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Животное женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "a9873e59-3096-4eac-a7f8-bfb58b456f57",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-3",
+          "value": "$adjective-3",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Снова прилагательное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "2fc60118-ab16-4b1b-81f9-de9c29d9d414",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animal-3",
+          "value": "$animal-3",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови ещё одно животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "0e98f89f-0a21-4203-8db1-6e30ea7d7241",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-4",
+          "value": "$adjective-4",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Ещё одно прилагательное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "4991cb30-f4a8-4197-86dd-6a246dcf8256",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animal-4",
+          "value": "$animal-4",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И ещё одно животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "e8a1e9b7-dcf4-4ab5-9f1d-ac96505a78b3",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "food",
+          "value": "$food",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Последнее - что-то съедобное, мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
       "messages": [
@@ -86,7 +248,7 @@
           "type": 0,
           "lang": "ru",
           "condition": "",
-          "speech": "Внимание, вот что получилось: Вчера $boy принес на урок зверька, который называется карликовый $adjective-1 $animal. Тот сразу удрал из портфеля, подкрался к учительскому столу и укусил учительницу за ногу. Мариванна закричала как беспартийная выхухоль и вскочила на стол. \"Уберите это чудовище! Это чей бешеный тушканчик?\" \"Это не бешеный тушканчик, - сказал Лёха, - а пупырчатый гамадрил. Я и не заметил дома, что он в портфель забрался!\"\nЛёха хотел поймать своего питомца, но тот быстро заскочил на шкаф и зарычал как кремлёвский песец. Ловили всем классом, еле поймали. Мариванна достала из сумочки большой арбуз, откусила кусок и сказала: \"Надо успокоиться!\" Тут гамадрил вырвался из наших рук, подбежал и тоже откусил кусок. Пальца. Такой забавный!"
+          "speech": "Внимание, вот что получилось: Вчера $boy принес на урок зверька, который называется карликовый $adjective-1 $animal-1. Тот сразу удрал из портфеля, подкрался к учительскому столу и укусил учительницу за ногу. $teacher закричала как $adjective-2 $animal-2 и вскочила на стол. \"Уберите это чудовище! Это чей $adjective-3 $animal-3?\" \"Это не $adjective-3 $animal-3, - сказал $boy, - а $adjective-1 $animal-1. Я и не заметил дома, что он в портфель забрался!\"\n$boy хотел поймать своего питомца, но тот быстро вскочил на шкаф и зарычал как $adjective-4 $animal-4. Ловили всем классом, еле поймали. $teacher достала из сумочки большой $food, откусила кусок и сказала: \"Надо успокоиться!\" Тут $animal-1 вырвался из наших рук, подбежал к ней, и тоже откусил кусок. Пальца. Такой забавный!"
         }
       ],
       "defaultResponsePlatforms": {},

@@ -1,6 +1,55 @@
 [
   {
-    "id": "018eccd3-3e9a-4273-b324-f48173685ef6",
+    "id": "56c5e838-5440-4f1d-938e-fdbd48e738eb",
+    "data": [
+      {
+        "text": "да",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "df36290e-d2d9-4310-bd4d-8b9283b0440b",
+    "data": [
+      {
+        "text": "ну да",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "bb46a0fc-e6b9-48ce-9543-238dd8060451",
+    "data": [
+      {
+        "text": "давай дальше",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b71302cf-68a8-43df-9bd9-f38fedb8b95b",
+    "data": [
+      {
+        "text": "lf",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "64847236-44a4-4de9-a853-ed17883c7944",
     "data": [
       {
         "text": "Поехали",
@@ -13,7 +62,7 @@
     "updated": 0
   },
   {
-    "id": "3a4093f2-8ae3-400a-8772-f25ec150d67e",
+    "id": "de23b4f7-5158-4142-acea-f10488429b8e",
     "data": [
       {
         "text": "Начинаем",
@@ -25,7 +74,7 @@
     "updated": 0
   },
   {
-    "id": "93189643-49f7-4528-a397-7d24dad3782f",
+    "id": "8f373825-1b8a-4d89-9f91-36596aee60cc",
     "data": [
       {
         "text": "Начали",
@@ -37,7 +86,7 @@
     "updated": 0
   },
   {
-    "id": "a443974c-8026-4927-b859-3d006d7f9d11",
+    "id": "033ddfaa-b609-4dea-87c1-9153af08bffc",
     "data": [
       {
         "text": "начинай",
@@ -49,7 +98,7 @@
     "updated": 0
   },
   {
-    "id": "e7ea360a-9347-4972-bdcc-91eae39bb87e",
+    "id": "b828e372-2555-4ba9-b3cc-10e975e5b188",
     "data": [
       {
         "text": "Да",
@@ -62,7 +111,7 @@
     "updated": 0
   },
   {
-    "id": "1adc8d9e-43b5-4247-ab50-665bc45ca0ad",
+    "id": "16fc5027-c633-4788-a678-bf0a2173c653",
     "data": [
       {
         "text": "давай",
@@ -74,7 +123,7 @@
     "updated": 0
   },
   {
-    "id": "a60ef96e-add1-4272-b172-ae3b3dc40615",
+    "id": "a873d4a3-9be3-458e-be3d-73bed630a291",
     "data": [
       {
         "text": "готовы",
@@ -86,7 +135,7 @@
     "updated": 0
   },
   {
-    "id": "8d48dc55-c080-40e4-8e83-69bfaabb0e1b",
+    "id": "a7a81479-b3c6-4690-aa4e-f77682f67719",
     "data": [
       {
         "text": "готова",
@@ -98,7 +147,7 @@
     "updated": 0
   },
   {
-    "id": "8d9b3500-ddaf-449b-9404-e7dc31b0c339",
+    "id": "5efe66fb-b348-40f8-b643-2c44e703d98b",
     "data": [
       {
         "text": "готов",
@@ -110,7 +159,7 @@
     "updated": 0
   },
   {
-    "id": "069d2a85-bf92-4533-9c01-c3db8f6c2b0d",
+    "id": "96eada59-da7e-4117-8095-908b41fa3822",
     "data": [
       {
         "text": "Я готова",
@@ -122,7 +171,7 @@
     "updated": 0
   },
   {
-    "id": "7c54ce2e-28ae-4a82-9014-e5d69eb09a78",
+    "id": "a417c1c2-ae19-475a-b81f-12b53fbde9ec",
     "data": [
       {
         "text": "Мы готовы",
@@ -134,7 +183,7 @@
     "updated": 0
   },
   {
-    "id": "73aed419-f7c1-4cd5-9db0-39b061ed02f1",
+    "id": "21abf278-5871-42d4-8cd3-d7e944218dfc",
     "data": [
       {
         "text": "Я готов",
@@ -146,7 +195,7 @@
     "updated": 0
   },
   {
-    "id": "02db9107-0a5f-4613-acae-65f9e210ef58",
+    "id": "2b868836-68fb-4d7c-952e-e148f32688d8",
     "data": [
       {
         "text": "Вперёд",

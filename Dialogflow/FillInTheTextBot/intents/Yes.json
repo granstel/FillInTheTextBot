@@ -7,21 +7,14 @@
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
-      "parameters": [
+      "affectedContexts": [
         {
-          "id": "7d866f63-f2b3-4d2e-ac9d-c07b082f7eb4",
-          "required": false,
-          "dataType": "@sys.geo-city",
-          "name": "geo-city",
-          "value": "$geo-city",
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "name": "Started",
+          "parameters": {},
+          "lifespan": 500
         }
       ],
+      "parameters": [],
       "messages": [
         {
           "type": 0,
