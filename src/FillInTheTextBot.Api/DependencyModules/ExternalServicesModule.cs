@@ -7,6 +7,7 @@ using FillInTheTextBot.Services.Configuration;
 using Grpc.Auth;
 using RestSharp;
 using StackExchange.Redis;
+using System;
 
 namespace FillInTheTextBot.Api.DependencyModules
 {
@@ -18,18 +19,35 @@ namespace FillInTheTextBot.Api.DependencyModules
             
             builder.RegisterType<QnaClient>().As<IQnaClient>();
             
-            builder.Register(RegisterDialogflowClient).As<SessionsClient>();
+            builder.Register(RegisterDialogflowSessionsClient).As<SessionsClient>();
+            builder.Register(RegisterDialogflowContextsClient).As<ContextsClient>();
 
             builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
         }
 
-        private SessionsClient RegisterDialogflowClient(IComponentContext context)
+        private SessionsClient RegisterDialogflowSessionsClient(IComponentContext context)
         {
             var configuration = context.Resolve<DialogflowConfiguration>();
 
             var credential = GoogleCredential.FromFile(configuration.JsonPath).CreateScoped(SessionsClient.DefaultScopes);
 
             var clientBuilder = new SessionsClientBuilder
+            {
+                ChannelCredentials = credential.ToChannelCredentials()
+            };
+
+            var client = clientBuilder.Build();
+
+            return client;
+        }
+
+        private ContextsClient RegisterDialogflowContextsClient(IComponentContext context)
+        {
+            var configuration = context.Resolve<DialogflowConfiguration>();
+
+            var credential = GoogleCredential.FromFile(configuration.JsonPath).CreateScoped(SessionsClient.DefaultScopes);
+
+            var clientBuilder = new ContextsClientBuilder
             {
                 ChannelCredentials = credential.ToChannelCredentials()
             };

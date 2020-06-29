@@ -28,15 +28,16 @@ namespace FillInTheTextBot.Services
 
         private readonly Logger _log = LogManager.GetLogger(nameof(DialogflowService));
 
-        private readonly SessionsClient _dialogflowClient;
+        private readonly SessionsClient _sessionsClient;
+        private readonly ContextsClient _contextsClient;
         private readonly DialogflowConfiguration _configuration;
         private readonly IMapper _mapper;
 
         private readonly Dictionary<Source, Func<Request, EventInput>> _eventResolvers;
 
-        public DialogflowService(SessionsClient dialogflowClient, DialogflowConfiguration configuration, IMapper mapper)
+        public DialogflowService(SessionsClient sessionsClient, DialogflowConfiguration configuration, IMapper mapper, ContextsClient contextsClient)
         {
-            _dialogflowClient = dialogflowClient;
+            _sessionsClient = sessionsClient;
             _configuration = configuration;
             _mapper = mapper;
 
@@ -44,6 +45,7 @@ namespace FillInTheTextBot.Services
             {
                 {Source.Yandex, YandexEventResolve},
             };
+            _contextsClient = contextsClient;
         }
 
         public async Task<Dialog> GetResponseAsync(string text, string sessionId)
@@ -61,10 +63,19 @@ namespace FillInTheTextBot.Services
         {
             var intentRequest = CreateQuery(request);
 
+            var contextTestTwo = _contextsClient.CreateContext(intentRequest.SessionAsSessionName, new Context 
+            {
+                ContextName = new ContextName(_configuration.ProjectId, request.SessionId, "test-2"),
+                LifespanCount = 1
+            });
+
+            var contexts = _contextsClient.ListContexts(intentRequest.SessionAsSessionName).ToList();
+
+
             if (_configuration.LogQuery)
                 _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
-            var intentResponse = await _dialogflowClient.DetectIntentAsync(intentRequest);
+            var intentResponse = await _sessionsClient.DetectIntentAsync(intentRequest);
 
             if (_configuration.LogQuery)
                 _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
@@ -73,6 +84,9 @@ namespace FillInTheTextBot.Services
 
             var response = _mapper.Map<Dialog>(queryResult);
 
+
+            contexts = _contextsClient.ListContexts(intentRequest.SessionAsSessionName).ToList();
+            
             return response;
         }
 
