@@ -15,5 +15,9 @@ namespace FillInTheTextBot.Models.Internal
         public string SessionId { get; set; }
 
         public bool? NewSession { get; set; }
+        
+        public string RequiredContext { get; set; }
+        
+        public bool ClearContexts { get; set; }
     }
 }

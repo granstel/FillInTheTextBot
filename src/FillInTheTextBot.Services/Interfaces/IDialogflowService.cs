@@ -7,6 +7,8 @@ namespace FillInTheTextBot.Services
     {
         Task<Dialog> GetResponseAsync(Request request);
 
-        Task<Dialog> GetResponseAsync(string text, string sessionId);
+        Task<Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null);
+
+        Task DeleteAllContexts(Request request);
     }
 }

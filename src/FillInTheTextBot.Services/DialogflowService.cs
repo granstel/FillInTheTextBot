@@ -48,12 +48,13 @@ namespace FillInTheTextBot.Services
             _contextsClient = contextsClient;
         }
 
-        public async Task<Dialog> GetResponseAsync(string text, string sessionId)
+        public async Task<Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null)
         {
             var request = new Request
             {
                 Text = text,
-                SessionId = sessionId
+                SessionId = sessionId,
+                RequiredContext = requiredContext
             };
 
             return await GetResponseAsync(request);
@@ -63,14 +64,14 @@ namespace FillInTheTextBot.Services
         {
             var intentRequest = CreateQuery(request);
 
-            var contextTestTwo = _contextsClient.CreateContext(intentRequest.SessionAsSessionName, new Context 
+            if (!string.IsNullOrEmpty(request.RequiredContext))
             {
-                ContextName = new ContextName(_configuration.ProjectId, request.SessionId, "test-2"),
-                LifespanCount = 1
-            });
-
-            var contexts = _contextsClient.ListContexts(intentRequest.SessionAsSessionName).ToList();
-
+                _contextsClient.CreateContext(intentRequest.SessionAsSessionName, new Context
+                {
+                    ContextName = new ContextName(_configuration.ProjectId, request.SessionId, request.RequiredContext),
+                    LifespanCount = 1
+                });
+            }
 
             if (_configuration.LogQuery)
                 _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
@@ -83,16 +84,20 @@ namespace FillInTheTextBot.Services
             var queryResult = intentResponse.QueryResult;
 
             var response = _mapper.Map<Dialog>(queryResult);
-
-
-            contexts = _contextsClient.ListContexts(intentRequest.SessionAsSessionName).ToList();
             
             return response;
         }
 
+        public async Task DeleteAllContexts(Request request)
+        {
+            var session = CreateSession(request);
+
+            await _contextsClient.DeleteAllContextsAsync(session);
+        }
+
         private DetectIntentRequest CreateQuery(Request request)
         {
-            var session = new SessionName(_configuration.ProjectId, request.SessionId);
+            var session = CreateSession(request);
 
             var eventInput = ResolveEvent(request);
 
@@ -182,6 +187,13 @@ namespace FillInTheTextBot.Services
             }
 
             return result;
+        }
+
+        private SessionName CreateSession(Request request)
+        {
+            var session = new SessionName(_configuration.ProjectId, request.SessionId);
+
+            return session;
         }
     }
 }
