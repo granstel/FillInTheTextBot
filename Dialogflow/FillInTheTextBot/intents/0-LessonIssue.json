@@ -3,25 +3,26 @@
   "name": "0-LessonIssue",
   "auto": true,
   "contexts": [
-    "Started"
+    "text-0"
   ],
   "responses": [
     {
       "resetContexts": false,
+      "action": "DeleteAllContexts",
       "affectedContexts": [
         {
           "name": "text-0",
           "parameters": {},
-          "lifespan": 50
+          "lifespan": 5
         }
       ],
       "parameters": [
         {
-          "id": "ec4d5d58-ccda-4afa-87b9-cb664eb7e888",
+          "id": "fe2d1bab-0e3d-4a69-99f9-f0e6429de0f4",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
-          "value": "Случай на уроке",
+          "value": "Текст называется \"Случай на уроке\".",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -29,7 +30,7 @@
           "isList": false
         },
         {
-          "id": "5c0d6413-1533-40b9-b74f-8447174ff742",
+          "id": "1c5d2f6b-2710-411b-ac95-0aff0a0e1c26",
           "required": true,
           "dataType": "@sys.person",
           "name": "boy",
@@ -51,7 +52,7 @@
           "isList": false
         },
         {
-          "id": "9e3bc2fb-00b9-4788-9e51-a57193248048",
+          "id": "5de050d9-c113-4fba-8d21-b4021b51da05",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-1",
@@ -73,7 +74,7 @@
           "isList": false
         },
         {
-          "id": "00fec6f7-e592-4f6e-8ab4-4bd3884ef21e",
+          "id": "3d5ea61f-6208-485b-b27a-acb3d798d1d0",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-1",
@@ -95,7 +96,7 @@
           "isList": false
         },
         {
-          "id": "fecf8cdb-f5da-4800-9971-a2ca6614c78f",
+          "id": "7fe232a3-0e00-43e3-b208-3a4bf0aa4ef4",
           "required": true,
           "dataType": "@sys.person",
           "name": "teacher",
@@ -117,7 +118,7 @@
           "isList": false
         },
         {
-          "id": "a7babf2e-ce28-4740-86d3-0d7bdad9e7ed",
+          "id": "f22858da-67c3-4329-8e7b-231db98f2b42",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-2",
@@ -135,7 +136,7 @@
           "isList": false
         },
         {
-          "id": "3dcf4949-3cfd-4f82-8653-37298913f142",
+          "id": "5dc47fc9-6795-476b-85c8-d32e486bf03e",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-2",
@@ -153,7 +154,7 @@
           "isList": false
         },
         {
-          "id": "a9873e59-3096-4eac-a7f8-bfb58b456f57",
+          "id": "c446c9ef-ea3f-4e05-bc56-195f45182b89",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-3",
@@ -171,7 +172,7 @@
           "isList": false
         },
         {
-          "id": "2fc60118-ab16-4b1b-81f9-de9c29d9d414",
+          "id": "b4040703-ac67-4716-b8f8-b52ba66d5bef",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-3",
@@ -189,7 +190,7 @@
           "isList": false
         },
         {
-          "id": "0e98f89f-0a21-4203-8db1-6e30ea7d7241",
+          "id": "1a5eb192-4877-47c6-a4a4-454d1653970b",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-4",
@@ -207,7 +208,7 @@
           "isList": false
         },
         {
-          "id": "4991cb30-f4a8-4197-86dd-6a246dcf8256",
+          "id": "fea23041-d7c7-4eec-bcc5-c8484b2bafbb",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-4",
@@ -225,7 +226,7 @@
           "isList": false
         },
         {
-          "id": "e8a1e9b7-dcf4-4ab5-9f1d-ac96505a78b3",
+          "id": "1ea67198-17d1-47d9-854b-78712c4d3b22",
           "required": true,
           "dataType": "@sys.any",
           "name": "food",

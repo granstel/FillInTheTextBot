@@ -1,0 +1,28 @@
+[
+  {
+    "id": "8c610e69-1404-4320-a137-9f94b8bbcb3c",
+    "data": [
+      {
+        "text": "тест",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d6aa4a97-7f44-4747-ad83-e6c12e44683b",
+    "data": [
+      {
+        "text": "белый",
+        "alias": "geo-city",
+        "meta": "@sys.geo-city",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

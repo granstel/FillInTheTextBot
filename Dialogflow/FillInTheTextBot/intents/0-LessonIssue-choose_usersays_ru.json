@@ -1,0 +1,80 @@
+[
+  {
+    "id": "f4ae17a5-0326-4242-880e-d191b386edc9",
+    "data": [
+      {
+        "text": "случай на уроке",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ef85932d-19ba-4a00-b4a8-1b0fa56e2815",
+    "data": [
+      {
+        "text": "давай самый ",
+        "userDefined": false
+      },
+      {
+        "text": "первый",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e7d53e80-e869-4264-93b8-08072b6a56d5",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "первый",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "fedab5fd-94fc-4689-9293-f172dfe470ac",
+    "data": [
+      {
+        "text": "давай случай на уроке",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "68fdbbe4-6858-4fd8-9d87-1189e6fccc17",
+    "data": [
+      {
+        "text": "Включи случай на уроке",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
