@@ -1,25 +1,9 @@
 [
   {
-    "id": "a6e5a688-7d11-4b34-82de-0aef30a1e5f8",
+    "id": "9d1f0fab-8b99-4efd-a735-c96a306228c4",
     "data": [
       {
-        "text": "случай на уроке",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "428ea358-e4ca-480e-b626-4e838dcc5311",
-    "data": [
-      {
-        "text": "давай самый ",
-        "userDefined": false
-      },
-      {
-        "text": "первый",
+        "text": "второй",
         "meta": "@sys.ignore",
         "userDefined": false
       },
@@ -33,19 +17,19 @@
     "updated": 0
   },
   {
-    "id": "f9a58304-f1c3-41f4-959c-faf737363c82",
+    "id": "08c540f8-0966-4c01-a2c0-3f9e0b0bba55",
     "data": [
       {
-        "text": "давай ",
+        "text": "Давай ",
         "userDefined": false
       },
       {
-        "text": "первый",
+        "text": "сочиним",
         "meta": "@sys.ignore",
         "userDefined": false
       },
       {
-        "text": " текст",
+        "text": " про карантин",
         "userDefined": false
       }
     ],
@@ -54,10 +38,10 @@
     "updated": 0
   },
   {
-    "id": "030ab170-e197-4642-a2dd-0424b25cd490",
+    "id": "755329a8-30b0-41d4-9e7c-27c131d2797d",
     "data": [
       {
-        "text": "давай случай на уроке",
+        "text": "Давай про карантин",
         "userDefined": false
       }
     ],
@@ -66,10 +50,23 @@
     "updated": 0
   },
   {
-    "id": "4743c4ca-884d-474d-bc35-3d418bf271ff",
+    "id": "872210a6-fe86-4bde-aeaf-b5cac68c2707",
     "data": [
       {
-        "text": "Включи случай на уроке",
+        "text": "Давай текст карантин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ae54ffa4-9109-4b11-9cbe-2b6c81c89cac",
+    "data": [
+      {
+        "text": "Карантин",
+        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

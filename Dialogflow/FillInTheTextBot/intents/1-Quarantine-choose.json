@@ -1,0 +1,59 @@
+{
+  "id": "e610614f-aa08-481d-bde2-4626c51b0565",
+  "name": "1-Quarantine-choose",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "text-1",
+          "parameters": {},
+          "lifespan": 50
+        },
+        {
+          "name": "1-Quarantine-choose-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "542449a4-7b4d-4c47-90a3-d970f4c7bf98",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "textKey",
+          "value": "text-1",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": [
+            "Окей!",
+            "Хорошо!",
+            "Начинаем!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
