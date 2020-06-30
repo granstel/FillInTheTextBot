@@ -65,7 +65,7 @@ namespace FillInTheTextBot.Services
 
             var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
 
-            var text = $"{startText} {textName}{dialog?.Response}";
+            var text = $"{startText} {textName} {dialog?.Response}";
 
             response.Text = text;
 
