@@ -30,17 +30,15 @@ namespace FillInTheTextBot.Services
 
         private readonly SessionsClient _sessionsClient;
         private readonly ContextsClient _contextsClient;
-        private readonly IntentsClient _intentsClient;
         private readonly DialogflowConfiguration _configuration;
         private readonly IMapper _mapper;
 
         private readonly Dictionary<Source, Func<Request, EventInput>> _eventResolvers;
 
-        public DialogflowService(SessionsClient sessionsClient, ContextsClient contextsClient, IntentsClient intentsClient, DialogflowConfiguration configuration, IMapper mapper)
+        public DialogflowService(SessionsClient sessionsClient, ContextsClient contextsClient, DialogflowConfiguration configuration, IMapper mapper)
         {
             _sessionsClient = sessionsClient;
             _contextsClient = contextsClient;
-            _intentsClient = intentsClient;
 
             _configuration = configuration;
             _mapper = mapper;
@@ -49,7 +47,6 @@ namespace FillInTheTextBot.Services
             {
                 {Source.Yandex, YandexEventResolve},
             };
-            
         }
 
         public async Task<Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null)
@@ -67,11 +64,6 @@ namespace FillInTheTextBot.Services
         public async Task<Dialog> GetResponseAsync(Request request)
         {
             var intentRequest = CreateQuery(request);
-
-            var intents = _intentsClient.ListIntents(new ListIntentsRequest
-            {
-                ParentAsAgentName = new AgentName(_configuration.ProjectId)
-            }).ToList();
 
             if (!string.IsNullOrEmpty(request.RequiredContext))
             {
