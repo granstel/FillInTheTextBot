@@ -11,12 +11,12 @@
         {
           "name": "text-0",
           "parameters": {},
-          "lifespan": 5
+          "lifespan": 50
         }
       ],
       "parameters": [
         {
-          "id": "b956f851-5fe7-45d4-bf43-b9c1217fb8f3",
+          "id": "ecf8ac64-825f-46d0-95c5-b41a9db0fec9",
           "required": false,
           "dataType": "@sys.any",
           "name": "textKey",

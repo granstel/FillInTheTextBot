@@ -9,16 +9,10 @@
     {
       "resetContexts": false,
       "action": "DeleteAllContexts",
-      "affectedContexts": [
-        {
-          "name": "text-0",
-          "parameters": {},
-          "lifespan": 5
-        }
-      ],
+      "affectedContexts": [],
       "parameters": [
         {
-          "id": "fe2d1bab-0e3d-4a69-99f9-f0e6429de0f4",
+          "id": "9a54d6c2-b8ff-4852-b2fc-bc736ded3bd3",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
@@ -30,7 +24,7 @@
           "isList": false
         },
         {
-          "id": "1c5d2f6b-2710-411b-ac95-0aff0a0e1c26",
+          "id": "a6c6ea49-bcdb-4b3a-b181-0ac753781913",
           "required": true,
           "dataType": "@sys.person",
           "name": "boy",
@@ -52,7 +46,7 @@
           "isList": false
         },
         {
-          "id": "5de050d9-c113-4fba-8d21-b4021b51da05",
+          "id": "45938329-947f-4ede-8a96-999e5835d4be",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-1",
@@ -74,7 +68,7 @@
           "isList": false
         },
         {
-          "id": "3d5ea61f-6208-485b-b27a-acb3d798d1d0",
+          "id": "a71e7a2f-6c17-48a1-a7d0-fde06de1e358",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-1",
@@ -96,7 +90,7 @@
           "isList": false
         },
         {
-          "id": "7fe232a3-0e00-43e3-b208-3a4bf0aa4ef4",
+          "id": "b4d09210-2e7b-405f-95e7-f61d068b8bf1",
           "required": true,
           "dataType": "@sys.person",
           "name": "teacher",
@@ -118,7 +112,7 @@
           "isList": false
         },
         {
-          "id": "f22858da-67c3-4329-8e7b-231db98f2b42",
+          "id": "6e70c44d-4a34-468b-b360-ebcbdf16fc63",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-2",
@@ -136,7 +130,7 @@
           "isList": false
         },
         {
-          "id": "5dc47fc9-6795-476b-85c8-d32e486bf03e",
+          "id": "3a259f83-afa6-4cdf-9fed-b41fd9c1fc0a",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-2",
@@ -154,7 +148,7 @@
           "isList": false
         },
         {
-          "id": "c446c9ef-ea3f-4e05-bc56-195f45182b89",
+          "id": "886e630c-4ae5-4633-996f-983185679e06",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-3",
@@ -172,7 +166,7 @@
           "isList": false
         },
         {
-          "id": "b4040703-ac67-4716-b8f8-b52ba66d5bef",
+          "id": "80e3cfa8-4dc6-409f-a12a-661885fa9a45",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-3",
@@ -190,7 +184,7 @@
           "isList": false
         },
         {
-          "id": "1a5eb192-4877-47c6-a4a4-454d1653970b",
+          "id": "17611fb8-ff1d-478b-81a1-cbb33fe25787",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-4",
@@ -208,7 +202,7 @@
           "isList": false
         },
         {
-          "id": "fea23041-d7c7-4eec-bcc5-c8484b2bafbb",
+          "id": "1946c4fa-2662-4354-9a88-15eda3beee80",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-4",
@@ -226,7 +220,7 @@
           "isList": false
         },
         {
-          "id": "1ea67198-17d1-47d9-854b-78712c4d3b22",
+          "id": "e0446a63-cae6-4f87-a0e5-1669b41e30d3",
           "required": true,
           "dataType": "@sys.any",
           "name": "food",
