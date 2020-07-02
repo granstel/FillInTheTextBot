@@ -1,0 +1,39 @@
+{
+  "id": "107880bb-3c11-4d19-a220-87e2798a81e4",
+  "name": "TextsOver",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": [
+            "Мы прошли все тексты, которые у меня есть. Может, пройдём их ещё раз?",
+            "Мы сочинили все тексты, которые у меня есть. Может, пройдём их ещё раз?",
+            "У меня пока закончились тексты. Может, пройдём эти ещё раз?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "texts-over"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

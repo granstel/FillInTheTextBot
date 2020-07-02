@@ -1,0 +1,73 @@
+[
+  {
+    "id": "391a13e6-8574-4979-b2a3-71e9b5107b6a",
+    "data": [
+      {
+        "text": "закончить",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7e9f190f-a435-47ee-a2ef-91ceb2327c9a",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " выход",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a05b6cea-004f-40e5-b831-c49ef17f93b6",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " выйти",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "71d4a3df-8ca9-46fe-9a85-b44e0b643e0d",
+    "data": [
+      {
+        "text": "выйти",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "732584e5-1974-4438-b2c8-86bbb3f86d5d",
+    "data": [
+      {
+        "text": "выход",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

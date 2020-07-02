@@ -1,0 +1,62 @@
+[
+  {
+    "id": "5485623d-1efc-4887-a351-7159fa0f8e7f",
+    "data": [
+      {
+        "text": "отказываюсь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8c5ba2ee-8d28-461b-a1b1-e5785da2a48c",
+    "data": [
+      {
+        "text": "не стоит",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e679309e-bc48-4161-bf87-ca1d75cffb61",
+    "data": [
+      {
+        "text": "ни в коем случае",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e5dd32b1-37fb-474a-bd6f-847827bfccca",
+    "data": [
+      {
+        "text": "не надо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "dac806da-e94e-451a-aded-3bf1aa614233",
+    "data": [
+      {
+        "text": "нет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
