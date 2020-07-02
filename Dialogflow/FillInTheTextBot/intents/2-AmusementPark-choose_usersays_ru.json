@@ -1,25 +1,9 @@
 [
   {
-    "id": "4aede1ad-8a9a-4d59-a128-140f3d42d8ed",
+    "id": "32e3f7b9-b689-4cd5-b9b6-33ca19a71252",
     "data": [
       {
-        "text": "случай на уроке",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "b6e13183-73ad-4389-9c5e-3b18b9199730",
-    "data": [
-      {
-        "text": "давай самый ",
-        "userDefined": false
-      },
-      {
-        "text": "первый",
+        "text": "третий",
         "meta": "@sys.ignore",
         "userDefined": false
       },
@@ -33,19 +17,19 @@
     "updated": 0
   },
   {
-    "id": "71d90d04-8bc3-4b8c-ad03-aa547fdeb66a",
+    "id": "eff5bcf0-3cc5-4a9d-9229-34804a33b601",
     "data": [
       {
-        "text": "давай ",
+        "text": "давай про ",
         "userDefined": false
       },
       {
-        "text": "первый",
+        "text": "парк",
         "meta": "@sys.ignore",
         "userDefined": false
       },
       {
-        "text": " текст",
+        "text": " развлечений",
         "userDefined": false
       }
     ],
@@ -54,10 +38,19 @@
     "updated": 0
   },
   {
-    "id": "2b19f766-b58c-4924-b5ff-83853d460786",
+    "id": "10d6550e-028f-4a7b-9767-95834832b2f6",
     "data": [
       {
-        "text": "давай случай на уроке",
+        "text": "Давай ",
+        "userDefined": false
+      },
+      {
+        "text": "парк",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " развлечений",
         "userDefined": false
       }
     ],
@@ -66,10 +59,15 @@
     "updated": 0
   },
   {
-    "id": "27cba289-1594-4550-8b13-c76b72b32c5b",
+    "id": "13039b40-0f6b-4557-9d9a-49642ebb4363",
     "data": [
       {
-        "text": "Включи случай на уроке",
+        "text": "Парк",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " развлечений",
         "userDefined": false
       }
     ],

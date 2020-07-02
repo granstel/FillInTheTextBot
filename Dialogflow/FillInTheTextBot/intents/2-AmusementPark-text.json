@@ -1,0 +1,300 @@
+{
+  "id": "3e96eaf5-ea88-442f-8e6a-0d4e94191736",
+  "name": "2-AmusementPark-text",
+  "auto": true,
+  "contexts": [
+    "text-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DeleteAllContexts",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "5d206195-47a9-4654-a159-35ac411272b0",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "text-name",
+          "value": "Этот текст называется \"Парк развлечений\".",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "1092654b-638c-44da-a748-1eef60264e40",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "human",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови имя своего друга или известного артиста"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови имя своего друга или известного актёра"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи имя своего друга или известного актёра"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "bbbac7b1-0d64-4c6b-9811-f24f98478af7",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "thing",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Предмет мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови предмет мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "9b7d67ff-27d1-4d25-acf7-d076762826bd",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "things",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Предмет во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови предмет во множественном числе"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "efb0866e-c75e-4090-ac59-69d7206d3fd3",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animals",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови животное во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови животное во множественном числе"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "50a09ad5-5d06-4f64-b266-97c5f87e01c8",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjectives-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь просто отвечай на вопросы первое, что приходит в голову. Первый вопрос - \"какие\"?"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь отвечай на вопросы первое, что пришло в голову. Первый вопрос - \"какие\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "9b4d01d0-4610-477a-b8e4-8bf2b893fb96",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "actions-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Что делали\"?"
+            },
+            {
+              "lang": "ru",
+              "value": "Дальше - \"что делали\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "5800bdf8-a191-46cd-89a8-c79641d1db39",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-male",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "eeb4e1cd-11ff-42a6-9b9a-f59b4c64bc39",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "actions-2",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Что сделали\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "f3941f12-9b1b-4782-9414-50856a4d93af",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjectives-2",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какие\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "94e71379-144d-4d10-80f5-af9db9aa07d2",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "actions-3",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Что делать\"? (из нескольких слов)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "517f3115-871d-4dda-a3db-9bfe0078da6b",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "actions-4",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Ещё раз \"что делать\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "0149401a-7fee-4b9b-b1c8-c55d524e1ea5",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "actions-5",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Снова - \"Что делать\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "6be0df40-96db-456c-baab-7ebbd8f3cea4",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "where",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний - \"Где\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": "В прошлом месяце я ездил в парк развлечений с другом по имени $human.\nТам были $adjectives-1 люди, которые повсюду $actions-1. Были там и чудаки в карнавальных костюмах - ну, настоящие $animals. Один из них надел мне на голову $adjective-male $thing, и мы $actions-2 от такого нахальства.\nПотом мы покатались на аттракционе $adjectives-2 горки, которые почему-то назывались Волшебные $things. $human совсем ошалел от этих горок, и мы решили $actions-3. Потом мы поехали в гостиницу и стали там $actions-4.\nЕще мне хочется отдохнуть $where. Поедем туда на следующий год и будем там вовсю $actions-5."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

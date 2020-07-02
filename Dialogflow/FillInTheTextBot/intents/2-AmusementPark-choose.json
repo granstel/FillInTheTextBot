@@ -1,6 +1,6 @@
 {
-  "id": "e610614f-aa08-481d-bde2-4626c51b0565",
-  "name": "1-Quarantine-choose",
+  "id": "7d1e1eb3-e343-4809-b676-915d346f11a8",
+  "name": "2-AmusementPark-choose",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -8,18 +8,23 @@
       "resetContexts": false,
       "affectedContexts": [
         {
-          "name": "text-1",
+          "name": "text-2",
           "parameters": {},
           "lifespan": 50
+        },
+        {
+          "name": "2-AmusementPark-choose-followup",
+          "parameters": {},
+          "lifespan": 2
         }
       ],
       "parameters": [
         {
-          "id": "efd775a9-1257-4e12-8534-20615516f3e9",
+          "id": "08f23ba1-755a-405b-afef-7a18c4829d7e",
           "required": false,
           "dataType": "@sys.any",
           "name": "textKey",
-          "value": "text-1",
+          "value": "text-2",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -33,9 +38,9 @@
           "lang": "ru",
           "condition": "",
           "speech": [
-            "Окей!",
+            "Начинаем!",
             "Хорошо!",
-            "Начинаем!"
+            "Поехали!"
           ]
         }
       ],
