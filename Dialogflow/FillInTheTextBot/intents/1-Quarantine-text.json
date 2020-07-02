@@ -1,12 +1,9 @@
 {
   "id": "003bde36-932f-4ec8-97d9-06b01f2a827f",
-  "parentId": "e610614f-aa08-481d-bde2-4626c51b0565",
-  "rootParentId": "e610614f-aa08-481d-bde2-4626c51b0565",
   "name": "1-Quarantine-text",
   "auto": true,
   "contexts": [
-    "text-1",
-    "1-Quarantine-choose-followup"
+    "text-1"
   ],
   "responses": [
     {
@@ -15,11 +12,275 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "2ef28b4b-f6b1-4b13-8888-fcbfe9a591a5",
+          "id": "1e60fbd9-ba19-40c0-87fb-51ca75e4bae8",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
           "value": "Будем сочинять про \"Карантин\".",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "3f02d62c-1588-4ada-bd62-af8e281adeb3",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number-1",
+          "value": "$number-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любое число, больше четырёх"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число, больше четырёх"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "7d393e24-e1ae-4a19-ac0d-057164904daa",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number-2",
+          "value": "$number-2",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи любое число, больше единицы"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любое число, больше единицы"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "d1893524-440f-4e3e-b5a6-7c61986595a5",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number-3",
+          "value": "$number-3",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи ещё одно любое число, больше четырёх"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови ещё одно число, больше четырёх"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "e82d89d9-a824-40d1-863a-de5e269273a7",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-1",
+          "value": "$adjective-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови прилагательное во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь - прилагательное во множественном числе"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "bf3bd6f2-f01e-4d3e-9730-0af7ae2af67b",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-male-1",
+          "value": "$adjective-male-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи прилагательное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь - прилагательное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "e6bc5413-2dd1-4a66-bd21-a400dcc0a2ad",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "thing",
+          "value": "$thing",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови предмет мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь - предмет мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "b353a108-36ca-43e7-9ac6-a160964dacd8",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-male-2",
+          "value": "$adjective-male-2",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь - ещё одно прилагательное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови ещё одно прилагательное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "1208565a-13ae-46f0-8514-c4129b82b7b6",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animal-male",
+          "value": "$animal-male",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь - животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "66670310-c0ea-43c9-a6de-8c4dd16f53db",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-female",
+          "value": "$adjective-female",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи прилагательное женского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь - назови прилагательное женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "7d396e11-1fa7-4c12-9a40-e0ecc77dee6c",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animal-female",
+          "value": "$animal-female",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови животное женского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь скажи животное женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "d3206de3-6855-45b5-ab6a-9d15107a71c2",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-male-3",
+          "value": "$adjective-male-3",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь - прилагательное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи прилагательное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "bf1750d1-1ddd-43d3-968a-a5f53644b441",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "bird",
+          "value": "$bird",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее: назови птицу мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "И, наконец, скажи название птицы мужского рода"
+            }
+          ],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -32,7 +293,7 @@
           "type": 0,
           "lang": "ru",
           "condition": "",
-          "speech": "У нас объявили что-то типа карантина: соблюдать дистанцию между людьми 3 метров, не собираться больше 1 человек, не плевать на 2 метров с разбега. За порядком следят замороженные полицейские, и у каждого на поясе живородящий утюг. Всё закрылось. Мне сказали, что я должен взять на прокорм какого-нибудь зверя, а то у зоопарка кончились деньги. Я позвонил туда и спросил: \"У вас есть душераздирающий крокодил? Я мечтал о нём с детства!\" Они сказали: \"Да, конечно, есть, сейчас привезём!\" Они привезли зверька, но оказалось, это совсем не крокодил, а гигантская саблезубая свиноматка! 5 минут она вела себя тихо, но потом съела всё съедобное в доме и даже проглотила клетку, в которой сидел мой любимец зубастый пингвин. И стала ходить по пятам за мной... Я убежал на улицу и спросил у полицейского: \"У вас есть оружие?\" Он: \"А вам зачем?\" Я сказал: \"У меня дома поселилась саблезубая свиноматка. Идёмте, покажу.\" Я пропустил его вперёд (а сам не зашёл) и запер за ним дверь. Пусть разбираются сами! И пошёл к другу. Всё равно квартира не моя, а арендованная."
+          "speech": "Внимание, вот что получилось! У нас объявили что-то типа карантина: соблюдать дистанцию между людьми $number-1 метров, не собираться больше $number-2 человек, не плевать на $number-3 метров с разбега. За порядком следят $adjective-1 полицейские, и у каждого на поясе $adjective-male-1 $thing. Всё закрылось. Мне сказали, что я должен взять на прокорм какого-нибудь зверя, а то у зоопарка кончились деньги. Я позвонил туда и спросил: \"У вас есть $adjective-male-2 $animal-male? Я мечтал о нём с детства!\" Они сказали: \"Да, конечно, есть, сейчас привезём!\" Они привезли зверька, но оказалось, это совсем не $animal-male, а гигантская $adjective-female $animal-female! 5 минут она вела себя тихо, но потом съела всё съедобное в доме и даже проглотила клетку, в которой сидел мой любимец $adjective-male-3 $bird. И стала ходить по пятам за мной... Я убежал на улицу и спросил у полицейского: \"У вас есть оружие?\" Он: \"А вам зачем?\" Я сказал: \"У меня дома поселилась $adjective-female $animal-female. Идёмте, покажу.\" Я пропустил его вперёд (а сам не зашёл) и запер за ним дверь. Пусть разбираются сами! И пошёл к другу. Всё равно квартира не моя, а съёмная."
         }
       ],
       "defaultResponsePlatforms": {},

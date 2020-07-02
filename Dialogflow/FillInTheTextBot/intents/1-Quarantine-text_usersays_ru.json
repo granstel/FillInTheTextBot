@@ -1,0 +1,212 @@
+[
+  {
+    "id": "49056d38-78ec-47b0-acaa-02d82c23788f",
+    "data": [
+      {
+        "text": "123",
+        "alias": "number-1",
+        "meta": "@sys.number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "10272554-b921-4603-8542-e7e9aada0ca2",
+    "data": [
+      {
+        "text": "123",
+        "alias": "number-2",
+        "meta": "@sys.number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "0398fff6-602f-44cc-b7c3-84cfbf997f55",
+    "data": [
+      {
+        "text": "2",
+        "alias": "number-3",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3074f7b0-1231-4e97-8002-3a44729c32da",
+    "data": [
+      {
+        "text": "8",
+        "alias": "number-1",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac77be77-58da-401f-9982-59dd479af3fb",
+    "data": [
+      {
+        "text": "множественные",
+        "alias": "adjective-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c5cfe9af-d0f2-4a4c-a64b-a451270f248f",
+    "data": [
+      {
+        "text": "большой",
+        "alias": "adjective-male-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5ed0fba4-e1d1-4315-8a9e-b0a98fbd575e",
+    "data": [
+      {
+        "text": "пистолет",
+        "alias": "thing",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e12b1c8c-009d-4054-a209-a2b92845d029",
+    "data": [
+      {
+        "text": "чёрный",
+        "alias": "adjective-male-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "34bb12c6-d087-43c7-b375-3fd8d7bf61e2",
+    "data": [
+      {
+        "text": "селезень",
+        "alias": "animal-male",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7429b3f6-93fa-4e9c-8bb4-ceeb277a39bf",
+    "data": [
+      {
+        "text": "красивая",
+        "alias": "adjective-female",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e925fe53-5c8e-4a6f-89cb-65f3e1f40716",
+    "data": [
+      {
+        "text": "птица",
+        "alias": "animal-female",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9fa6d3c2-4115-466a-a500-145272aa9c91",
+    "data": [
+      {
+        "text": "большой",
+        "alias": "adjective-male-3",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "efdc52ac-6454-43e4-b302-32ab32f204f1",
+    "data": [
+      {
+        "text": "самец",
+        "alias": "bird",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ac2f8a0f-7192-4058-90de-1c76d66aa0f8",
+    "data": [
+      {
+        "text": "15",
+        "alias": "number-3",
+        "meta": "@sys.number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "156c58bd-ff27-4b22-8896-63ebfdfcdcf8",
+    "data": [
+      {
+        "text": "345",
+        "alias": "number-2",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
