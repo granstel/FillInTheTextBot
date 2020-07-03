@@ -1,6 +1,146 @@
 [
   {
-    "id": "1b5d1356-b24c-4f3c-9295-fd1e841b4c62",
+    "id": "9a8b77d0-f9d1-40fb-89c6-581aaff89282",
+    "data": [
+      {
+        "text": "антон",
+        "alias": "boy",
+        "meta": "@sys.person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "38330663-c59f-46ad-89ad-9ebf555ffbd4",
+    "data": [
+      {
+        "text": "скорый",
+        "alias": "adjective-1",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c4027675-43bf-4e59-9d1b-85378f7c943b",
+    "data": [
+      {
+        "text": "орел",
+        "alias": "animal-1",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f5338236-dc5b-47bf-a235-05f4e52811e3",
+    "data": [
+      {
+        "text": "марфа васильевна",
+        "alias": "teacher",
+        "meta": "@sys.person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "63d7364f-401e-4fbc-aca2-0b50be72e679",
+    "data": [
+      {
+        "text": "мягкая",
+        "alias": "adjective-2",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "17527665-e8fc-4e81-ba53-c8b195082f27",
+    "data": [
+      {
+        "text": "оранжевый",
+        "alias": "adjective-3",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "03fd79c9-caf7-4c59-a7c6-3f0d01d1a127",
+    "data": [
+      {
+        "text": "богомол",
+        "alias": "animal-2",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "db952b78-cec3-4a84-af18-f0d0b798056c",
+    "data": [
+      {
+        "text": "шерстистый",
+        "alias": "adjective-4",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8f7617e2-874f-418a-81a2-5aadde2be867",
+    "data": [
+      {
+        "text": "ихтиозавр",
+        "alias": "animal-3",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "bc319731-2a60-44b8-b2e1-790b9e475a0f",
+    "data": [
+      {
+        "text": "булочка",
+        "alias": "food",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9410373a-7b20-4f21-b5f3-0fd36bf35d67",
     "data": [
       {
         "text": "белый",
@@ -14,7 +154,7 @@
     "updated": 0
   },
   {
-    "id": "5017a9f8-dc87-4360-a4e1-e869df592bc8",
+    "id": "46582aec-8021-4bef-8111-4acec454e0bc",
     "data": [
       {
         "text": "козел",
@@ -28,7 +168,7 @@
     "updated": 0
   },
   {
-    "id": "479b2416-fbe8-4df8-9505-7a67aac1cf21",
+    "id": "5210071d-1090-4a43-905f-8ce2dfe10716",
     "data": [
       {
         "text": "антонина петровна",
@@ -42,7 +182,7 @@
     "updated": 0
   },
   {
-    "id": "790c3591-0c7d-4afc-83f3-d8d1f6d68ccc",
+    "id": "79cfd3eb-8998-4881-9ef8-7064414c26cf",
     "data": [
       {
         "text": "розовая",
@@ -56,7 +196,7 @@
     "updated": 0
   },
   {
-    "id": "2f7a98ae-1355-4e07-b216-4724704c903a",
+    "id": "c5aa0b23-0353-4a98-9a40-23212a13ba5b",
     "data": [
       {
         "text": "улитка",
@@ -70,7 +210,7 @@
     "updated": 0
   },
   {
-    "id": "d636f184-d663-4827-b321-ae21f9a2a3c2",
+    "id": "e4b743fa-3a9f-4c3d-bf05-85d4f916ad46",
     "data": [
       {
         "text": "сильный",
@@ -84,7 +224,7 @@
     "updated": 0
   },
   {
-    "id": "171be8d7-33f5-4447-b51b-79b3fb25fba1",
+    "id": "df38bf0f-befa-4ce6-9fe9-18713b8b343b",
     "data": [
       {
         "text": "медведь",
@@ -98,7 +238,7 @@
     "updated": 0
   },
   {
-    "id": "5f3fce86-f8b4-4c20-88fd-83cff2c4359f",
+    "id": "b9fab69d-0719-4be6-bdc5-2aa02c3e1312",
     "data": [
       {
         "text": "красный",
@@ -112,7 +252,7 @@
     "updated": 0
   },
   {
-    "id": "24224737-b5a0-41dc-8be9-6576689d3b02",
+    "id": "9e0f63fb-7be2-4c5e-b544-b60cc70660af",
     "data": [
       {
         "text": "олень",
@@ -126,7 +266,7 @@
     "updated": 0
   },
   {
-    "id": "af8ebc1e-c2cb-42ea-a54f-86f383171e19",
+    "id": "6c84e2d8-9d9e-4c94-beef-dfb8a9da64ef",
     "data": [
       {
         "text": "чебурек",
@@ -140,7 +280,7 @@
     "updated": 0
   },
   {
-    "id": "5a99eee6-e0ad-46ac-b525-652d7ece499c",
+    "id": "6b427147-dc9d-46b1-9375-da6994bf942a",
     "data": [
       {
         "text": "пирог",
@@ -154,7 +294,7 @@
     "updated": 0
   },
   {
-    "id": "11252f95-f743-402f-8640-8ddcc78e0dd7",
+    "id": "3b943162-7bfc-4cf2-8962-da4446f64488",
     "data": [
       {
         "text": "арбуз",
@@ -168,7 +308,7 @@
     "updated": 0
   },
   {
-    "id": "120c71a2-2797-469a-87ca-2b66a77445a9",
+    "id": "c2ea12f6-0772-45d0-a37a-64c9e4910a47",
     "data": [
       {
         "text": "красивая",
@@ -182,7 +322,7 @@
     "updated": 0
   },
   {
-    "id": "c00eeb66-0b8b-4fdf-8dbc-c05310970e55",
+    "id": "ec4eea80-e05a-46c0-88db-54774f8386aa",
     "data": [
       {
         "text": "классная",
@@ -196,7 +336,7 @@
     "updated": 0
   },
   {
-    "id": "f13c2817-fcbd-49c9-bffb-d10e32857346",
+    "id": "b4029a18-d16e-4a44-a967-d86bd0f98893",
     "data": [
       {
         "text": "пупырчатая",
@@ -210,7 +350,7 @@
     "updated": 0
   },
   {
-    "id": "2230ebeb-8c16-447f-bc04-a04f1486223b",
+    "id": "5f608e1f-ac8c-4305-930d-1675c6dcec54",
     "data": [
       {
         "text": "беспартийная",
@@ -224,7 +364,7 @@
     "updated": 0
   },
   {
-    "id": "3464aa46-da3a-46cf-992d-fc479fb487c1",
+    "id": "af0276ff-8975-4570-8be4-62e63cee9f1a",
     "data": [
       {
         "text": "Людмила Петровна",
@@ -238,7 +378,7 @@
     "updated": 0
   },
   {
-    "id": "aa57bcac-972d-47c5-98fd-1ed0f312a42f",
+    "id": "680a9f66-fdfe-40b9-b0ce-f739203d4648",
     "data": [
       {
         "text": "Елена Александровна",
@@ -252,7 +392,7 @@
     "updated": 0
   },
   {
-    "id": "e79ba331-c4ce-43c0-be79-a918ac69a2be",
+    "id": "a869baae-fd14-4155-8146-aefb4ac29d29",
     "data": [
       {
         "text": "Ирина Анатольевна",
@@ -266,7 +406,7 @@
     "updated": 0
   },
   {
-    "id": "fbadfd41-1336-4715-9462-fea03e594309",
+    "id": "9596caf1-bb17-4ba4-987a-eb62fbfd02c9",
     "data": [
       {
         "text": "Мариванна",
@@ -280,7 +420,7 @@
     "updated": 0
   },
   {
-    "id": "df129257-9dbe-466e-802d-71b9c5610781",
+    "id": "999bf111-79ab-4f02-8495-8ce8d5c28c5f",
     "data": [
       {
         "text": "гамадрил",
@@ -294,7 +434,7 @@
     "updated": 0
   },
   {
-    "id": "97c5fe0a-e609-484e-8f41-311ae236923c",
+    "id": "f89cac46-5ab5-4e40-a899-0390489b469c",
     "data": [
       {
         "text": "пупырчатый",
@@ -308,7 +448,7 @@
     "updated": 0
   },
   {
-    "id": "c4f9be33-6a1e-49e2-8d7e-7ff2618d7698",
+    "id": "9985574c-f0d4-44a5-83d4-f0a270d28090",
     "data": [
       {
         "text": "Лёха",
