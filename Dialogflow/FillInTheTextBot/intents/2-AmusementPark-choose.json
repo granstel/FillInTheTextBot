@@ -6,6 +6,7 @@
   "responses": [
     {
       "resetContexts": false,
+      "action": "GetText",
       "affectedContexts": [
         {
           "name": "text-2",
@@ -20,7 +21,7 @@
       ],
       "parameters": [
         {
-          "id": "08f23ba1-755a-405b-afef-7a18c4829d7e",
+          "id": "5038b6a2-27b9-420b-a9c6-fdc82d8e4797",
           "required": false,
           "dataType": "@sys.any",
           "name": "textKey",

@@ -1,5 +1,17 @@
 [
   {
+    "id": "b9461f9a-40e5-45d6-bfe9-4a3403ebf8e7",
+    "data": [
+      {
+        "text": "забавно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
     "id": "d3a55c06-7dca-4a6b-b204-b3ffc3977190",
     "data": [
       {
@@ -28,18 +40,6 @@
     "data": [
       {
         "text": "прикольно",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "a92df32d-6b7b-4af3-b4fe-c5ebd914215e",
-    "data": [
-      {
-        "text": "забавно",
         "userDefined": false
       }
     ],

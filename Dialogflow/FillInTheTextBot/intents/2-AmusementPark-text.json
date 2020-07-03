@@ -12,7 +12,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "5d206195-47a9-4654-a159-35ac411272b0",
+          "id": "a3840be1-90e9-4c64-b365-037a9c550cd6",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
@@ -24,10 +24,11 @@
           "isList": false
         },
         {
-          "id": "1092654b-638c-44da-a748-1eef60264e40",
+          "id": "6200098a-239a-4a36-af7d-fb99c744900c",
           "required": true,
           "dataType": "@sys.any",
           "name": "human",
+          "value": "$human",
           "prompts": [
             {
               "lang": "ru",
@@ -49,10 +50,11 @@
           "isList": false
         },
         {
-          "id": "bbbac7b1-0d64-4c6b-9811-f24f98478af7",
+          "id": "a08e1c40-ab9f-4e2d-85d7-b9b0dde910b6",
           "required": true,
           "dataType": "@sys.any",
           "name": "thing",
+          "value": "$thing",
           "prompts": [
             {
               "lang": "ru",
@@ -70,10 +72,11 @@
           "isList": false
         },
         {
-          "id": "9b7d67ff-27d1-4d25-acf7-d076762826bd",
+          "id": "efc15c70-475b-43de-b5f6-037a0dd881de",
           "required": true,
           "dataType": "@sys.any",
           "name": "things",
+          "value": "$things",
           "prompts": [
             {
               "lang": "ru",
@@ -91,10 +94,11 @@
           "isList": false
         },
         {
-          "id": "efb0866e-c75e-4090-ac59-69d7206d3fd3",
+          "id": "707a4027-0be2-44b1-b3c5-22e785f0f0a3",
           "required": true,
           "dataType": "@sys.any",
           "name": "animals",
+          "value": "$animals",
           "prompts": [
             {
               "lang": "ru",
@@ -112,18 +116,19 @@
           "isList": false
         },
         {
-          "id": "50a09ad5-5d06-4f64-b266-97c5f87e01c8",
+          "id": "28213565-e469-4607-8526-f0f4389cba50",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjectives-1",
+          "value": "$adjectives-1",
           "prompts": [
             {
               "lang": "ru",
-              "value": "Теперь просто отвечай на вопросы первое, что приходит в голову. Первый вопрос - \"какие\"?"
+              "value": "Теперь просто отвечай на вопросы первое, что приходит в голову. Итак - \"какие\"?"
             },
             {
               "lang": "ru",
-              "value": "Теперь отвечай на вопросы первое, что пришло в голову. Первый вопрос - \"какие\"?"
+              "value": "Теперь отвечай на вопросы первое, что приходит в голову. Итак - \"какие\"?"
             }
           ],
           "promptMessages": [],
@@ -133,10 +138,11 @@
           "isList": false
         },
         {
-          "id": "9b4d01d0-4610-477a-b8e4-8bf2b893fb96",
+          "id": "16f688f3-213a-465b-8934-baec01ed79b1",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-1",
+          "value": "$actions-1",
           "prompts": [
             {
               "lang": "ru",
@@ -154,10 +160,11 @@
           "isList": false
         },
         {
-          "id": "5800bdf8-a191-46cd-89a8-c79641d1db39",
+          "id": "531d964e-ef4d-4bc7-adf9-7469c461a97b",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-male",
+          "value": "$adjective-male",
           "prompts": [
             {
               "lang": "ru",
@@ -171,10 +178,11 @@
           "isList": false
         },
         {
-          "id": "eeb4e1cd-11ff-42a6-9b9a-f59b4c64bc39",
+          "id": "fe15a2e5-4b3f-4011-a83c-007f8372e81e",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-2",
+          "value": "$actions-2",
           "prompts": [
             {
               "lang": "ru",
@@ -188,10 +196,11 @@
           "isList": false
         },
         {
-          "id": "f3941f12-9b1b-4782-9414-50856a4d93af",
+          "id": "dee6512c-4632-44ad-9280-d81abcf6c502",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjectives-2",
+          "value": "$adjectives-2",
           "prompts": [
             {
               "lang": "ru",
@@ -205,10 +214,11 @@
           "isList": false
         },
         {
-          "id": "94e71379-144d-4d10-80f5-af9db9aa07d2",
+          "id": "2f05309f-21ff-42bb-a900-41af4c2fe3aa",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-3",
+          "value": "$actions-3",
           "prompts": [
             {
               "lang": "ru",
@@ -222,10 +232,11 @@
           "isList": false
         },
         {
-          "id": "517f3115-871d-4dda-a3db-9bfe0078da6b",
+          "id": "ea82607f-0a88-41c0-a628-19d1609afa6f",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-4",
+          "value": "$actions-4",
           "prompts": [
             {
               "lang": "ru",
@@ -239,10 +250,11 @@
           "isList": false
         },
         {
-          "id": "0149401a-7fee-4b9b-b1c8-c55d524e1ea5",
+          "id": "b1cb0dcb-d539-4849-9057-642c12f15feb",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-5",
+          "value": "$actions-5",
           "prompts": [
             {
               "lang": "ru",
@@ -256,10 +268,11 @@
           "isList": false
         },
         {
-          "id": "6be0df40-96db-456c-baab-7ebbd8f3cea4",
+          "id": "fcaa52e8-5abb-4cb0-b703-bd1e2ec1105a",
           "required": true,
           "dataType": "@sys.any",
           "name": "where",
+          "value": "$where",
           "prompts": [
             {
               "lang": "ru",
