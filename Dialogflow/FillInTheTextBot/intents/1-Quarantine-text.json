@@ -14,11 +14,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "1e60fbd9-ba19-40c0-87fb-51ca75e4bae8",
+          "id": "5fc0102e-2e61-4018-ab6e-67016bb50301",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
-          "value": "Будем сочинять про \"Карантин\".",
+          "value": "Будем сочинять про \"Карантин\". Отвечай на вопросы первое, что приходит в голову. Итак:",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -26,7 +26,7 @@
           "isList": false
         },
         {
-          "id": "3f02d62c-1588-4ada-bd62-af8e281adeb3",
+          "id": "504ab13e-6eec-4eae-bae2-4cffff0ba998",
           "required": true,
           "dataType": "@sys.number",
           "name": "number-1",
@@ -34,11 +34,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Назови любое число, больше четырёх"
+              "value": "назови любое число, больше четырёх"
             },
             {
               "lang": "ru",
-              "value": "Скажи любое число, больше четырёх"
+              "value": "скажи любое число, больше четырёх"
             }
           ],
           "promptMessages": [],
@@ -48,7 +48,7 @@
           "isList": false
         },
         {
-          "id": "7d393e24-e1ae-4a19-ac0d-057164904daa",
+          "id": "1bf8232e-8fa4-49c1-ae7c-d83e379c1eda",
           "required": true,
           "dataType": "@sys.number",
           "name": "number-2",
@@ -56,7 +56,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Скажи любое число, больше единицы"
+              "value": "Теперь любое число, больше единицы"
             },
             {
               "lang": "ru",
@@ -70,7 +70,7 @@
           "isList": false
         },
         {
-          "id": "d1893524-440f-4e3e-b5a6-7c61986595a5",
+          "id": "6468fe6e-81c2-400a-9f87-0d9d5a0d711e",
           "required": true,
           "dataType": "@sys.number",
           "name": "number-3",
@@ -82,7 +82,7 @@
             },
             {
               "lang": "ru",
-              "value": "Назови ещё одно число, больше четырёх"
+              "value": "Теперь ещё одно число, больше четырёх"
             }
           ],
           "promptMessages": [],
@@ -92,7 +92,7 @@
           "isList": false
         },
         {
-          "id": "e82d89d9-a824-40d1-863a-de5e269273a7",
+          "id": "070fa7f7-df5d-4283-b334-ff4611e5f917",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-1",
@@ -100,11 +100,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Назови прилагательное во множественном числе"
-            },
-            {
-              "lang": "ru",
-              "value": "Теперь - прилагательное во множественном числе"
+              "value": "\"Какие\"?"
             }
           ],
           "promptMessages": [],
@@ -114,29 +110,7 @@
           "isList": false
         },
         {
-          "id": "bf3bd6f2-f01e-4d3e-9730-0af7ae2af67b",
-          "required": true,
-          "dataType": "@sys.any",
-          "name": "adjective-male-1",
-          "value": "$adjective-male-1",
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "Скажи прилагательное мужского рода"
-            },
-            {
-              "lang": "ru",
-              "value": "Теперь - прилагательное мужского рода"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
-        },
-        {
-          "id": "e6bc5413-2dd1-4a66-bd21-a400dcc0a2ad",
+          "id": "4cb199bc-146f-4d38-9d93-d631d9f6240c",
           "required": true,
           "dataType": "@sys.any",
           "name": "thing",
@@ -158,19 +132,15 @@
           "isList": false
         },
         {
-          "id": "b353a108-36ca-43e7-9ac6-a160964dacd8",
+          "id": "37167f8b-f4b0-4953-bf6c-bb229e729b4d",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-male-2",
-          "value": "$adjective-male-2",
+          "name": "adjective-male-1",
+          "value": "$adjective-male-1",
           "prompts": [
             {
               "lang": "ru",
-              "value": "Теперь - ещё одно прилагательное мужского рода"
-            },
-            {
-              "lang": "ru",
-              "value": "Назови ещё одно прилагательное мужского рода"
+              "value": "\"Какой\"?"
             }
           ],
           "promptMessages": [],
@@ -180,7 +150,7 @@
           "isList": false
         },
         {
-          "id": "1208565a-13ae-46f0-8514-c4129b82b7b6",
+          "id": "e391f2cd-9c23-4581-b894-8790012749b9",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-male",
@@ -202,19 +172,15 @@
           "isList": false
         },
         {
-          "id": "66670310-c0ea-43c9-a6de-8c4dd16f53db",
+          "id": "66e2c13e-72bc-467d-bd41-501baa638b43",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-female",
-          "value": "$adjective-female",
+          "name": "adjective-male-2",
+          "value": "$adjective-male-2",
           "prompts": [
             {
               "lang": "ru",
-              "value": "Скажи прилагательное женского рода"
-            },
-            {
-              "lang": "ru",
-              "value": "Теперь - назови прилагательное женского рода"
+              "value": "\"Какой\"?"
             }
           ],
           "promptMessages": [],
@@ -224,7 +190,7 @@
           "isList": false
         },
         {
-          "id": "7d396e11-1fa7-4c12-9a40-e0ecc77dee6c",
+          "id": "d846993f-2665-44b9-aec6-df3e1e14435e",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-female",
@@ -246,19 +212,15 @@
           "isList": false
         },
         {
-          "id": "d3206de3-6855-45b5-ab6a-9d15107a71c2",
+          "id": "1bcc0556-b91e-459c-bb82-28c44f3565f7",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-male-3",
-          "value": "$adjective-male-3",
+          "name": "adjective-female",
+          "value": "$adjective-female",
           "prompts": [
             {
               "lang": "ru",
-              "value": "Теперь - прилагательное мужского рода"
-            },
-            {
-              "lang": "ru",
-              "value": "Скажи прилагательное мужского рода"
+              "value": "\"Какая\"?"
             }
           ],
           "promptMessages": [],
@@ -268,7 +230,7 @@
           "isList": false
         },
         {
-          "id": "bf1750d1-1ddd-43d3-968a-a5f53644b441",
+          "id": "04999ec5-3434-4d61-9be6-c64b5a84214e",
           "required": true,
           "dataType": "@sys.any",
           "name": "bird",
@@ -276,11 +238,29 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И последнее: назови птицу мужского рода"
+              "value": "Назови птицу мужского рода"
             },
             {
               "lang": "ru",
-              "value": "И, наконец, скажи название птицы мужского рода"
+              "value": "Скажи название птицы мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "fd1b9cf8-ce96-468b-ad0c-ab482f788052",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-male-3",
+          "value": "$adjective-male-3",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - \"Какой\"?"
             }
           ],
           "promptMessages": [],

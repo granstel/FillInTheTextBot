@@ -1,0 +1,64 @@
+[
+  {
+    "id": "ff1e523f-d0b2-4a2c-932d-dd3b42406a3e",
+    "data": [
+      {
+        "text": "ну давай",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8bf759bf-a2a1-4e37-9513-52bb6dfbee73",
+    "data": [
+      {
+        "text": "окей",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "baf00cec-6e4d-46b3-958f-90c9334dd82f",
+    "data": [
+      {
+        "text": "хорошо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "041dc824-c23a-4b5a-b22f-e6d262e01afc",
+    "data": [
+      {
+        "text": "Давай",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "613796ba-11a4-492a-9d5b-10130b2e3136",
+    "data": [
+      {
+        "text": "Да",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

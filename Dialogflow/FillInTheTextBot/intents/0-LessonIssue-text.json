@@ -14,11 +14,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "ff12f94e-db2f-40eb-b22f-39efb60ef45a",
+          "id": "b495d778-ae70-4a23-8964-378119842389",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
-          "value": "Текст называется \"Случай на уроке\".",
+          "value": "Когда я буду задавать вопросы, отвечай первое, что приходит в голову. Итак, текст называется \"Случай на уроке\".",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -26,7 +26,7 @@
           "isList": false
         },
         {
-          "id": "f895b378-e6bd-4021-a37f-9a13685402b7",
+          "id": "051e549a-3555-484b-a2ba-c50da0580135",
           "required": true,
           "dataType": "@sys.person",
           "name": "boy",
@@ -48,7 +48,7 @@
           "isList": false
         },
         {
-          "id": "86b920f2-39fc-484b-82a4-b00bfe6f8545",
+          "id": "572e7a6f-efae-4f0e-9234-bb937e64f405",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-1",
@@ -56,11 +56,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Теперь - прилагательное мужского рода"
-            },
-            {
-              "lang": "ru",
-              "value": "Теперь назови прилагательное мужского рода"
+              "value": "\"Какой\"?"
             }
           ],
           "promptMessages": [],
@@ -70,7 +66,7 @@
           "isList": false
         },
         {
-          "id": "9ff42648-6c3b-47d8-a89a-519bf6f1443b",
+          "id": "9caccaa0-c851-49c2-b356-004902cae936",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-1",
@@ -92,7 +88,7 @@
           "isList": false
         },
         {
-          "id": "df28e4a3-6686-42d0-a6b6-e6805743296d",
+          "id": "b87626e3-9ef8-4c8b-bc41-608f6e3ecc20",
           "required": true,
           "dataType": "@sys.person",
           "name": "teacher",
@@ -114,7 +110,7 @@
           "isList": false
         },
         {
-          "id": "39cc2d96-b376-4468-bba7-97f3649d0078",
+          "id": "3ae90ab8-0259-4346-b5e9-436e607d5737",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-2",
@@ -122,7 +118,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Прилагательное женского рода"
+              "value": "\"Какая\"?"
             }
           ],
           "promptMessages": [],
@@ -132,7 +128,7 @@
           "isList": false
         },
         {
-          "id": "3e85992e-be80-488d-af55-de0360b3ebe2",
+          "id": "e6e296ae-7acd-4c0a-9597-e6fe8e089217",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-2",
@@ -150,25 +146,7 @@
           "isList": false
         },
         {
-          "id": "18308bc6-b000-4d89-b0fd-4f77cb6f7eac",
-          "required": true,
-          "dataType": "@sys.any",
-          "name": "adjective-3",
-          "value": "$adjective-3",
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "Снова прилагательное мужского рода"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
-        },
-        {
-          "id": "c5f5ee7a-445c-4106-946c-1a1e5d97d73c",
+          "id": "44b9bd17-5558-462f-943a-99e842691b97",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-3",
@@ -176,7 +154,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Теперь назови ещё одно животное мужского рода"
+              "value": "Ещё одно животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Снова животное мужского рода"
             }
           ],
           "promptMessages": [],
@@ -186,7 +168,43 @@
           "isList": false
         },
         {
-          "id": "b9f5fd3a-a7c0-4095-a089-6b6b7a0bd7fe",
+          "id": "352c9461-d248-4655-bb1c-d1683f258895",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-3",
+          "value": "$adjective-3",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "b7f94903-0ce2-4407-92cb-03b018697321",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "food",
+          "value": "$food",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Что-то съедобное, мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "1c78deba-8e82-4391-8f52-a252eb3c675f",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-4",
@@ -194,7 +212,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Ещё одно прилагательное мужского рода"
+              "value": "Снова - \"Какой\"?"
             }
           ],
           "promptMessages": [],
@@ -204,7 +222,7 @@
           "isList": false
         },
         {
-          "id": "7059d6fe-4aaa-4c3a-9d7a-8aa65c21e4ab",
+          "id": "852c538f-f012-4fd8-bf6d-367374779e74",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-4",
@@ -213,24 +231,6 @@
             {
               "lang": "ru",
               "value": "И ещё одно животное мужского рода"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
-        },
-        {
-          "id": "ffcc720e-c9b4-4d85-b6ee-ba97267d449c",
-          "required": true,
-          "dataType": "@sys.any",
-          "name": "food",
-          "value": "$food",
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "Последнее - что-то съедобное, мужского рода"
             }
           ],
           "promptMessages": [],

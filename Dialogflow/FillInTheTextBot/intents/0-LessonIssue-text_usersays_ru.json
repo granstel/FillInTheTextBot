@@ -1,5 +1,119 @@
 [
   {
+    "id": "db2968b9-2cba-43cf-ab24-52fae182d9fc",
+    "data": [
+      {
+        "text": "Лёха",
+        "alias": "boy",
+        "meta": "@sys.person",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "пупырчатый",
+        "alias": "adjective-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "гамадрил",
+        "alias": "animal-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "Мариванна",
+        "alias": "teacher",
+        "meta": "@sys.person",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "беспартийная",
+        "alias": "adjective-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "выхухоль",
+        "alias": "animal-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "бешеный",
+        "alias": "adjective-3",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "тушканчик",
+        "alias": "animal-3",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "кремлёвский",
+        "alias": "adjective-4",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "песец",
+        "alias": "animal-4",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": ", ",
+        "userDefined": false
+      },
+      {
+        "text": "арбуз",
+        "alias": "food",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
     "id": "9a8b77d0-f9d1-40fb-89c6-581aaff89282",
     "data": [
       {

@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "a3840be1-90e9-4c64-b365-037a9c550cd6",
+          "id": "d0b49473-18ce-4d50-bbbc-1c5f748587ba",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
@@ -26,7 +26,7 @@
           "isList": false
         },
         {
-          "id": "6200098a-239a-4a36-af7d-fb99c744900c",
+          "id": "e60fcccf-3fc7-4611-8212-b0e4a55e03ff",
           "required": true,
           "dataType": "@sys.any",
           "name": "human",
@@ -52,7 +52,7 @@
           "isList": false
         },
         {
-          "id": "a08e1c40-ab9f-4e2d-85d7-b9b0dde910b6",
+          "id": "37c51d44-d620-44ff-91e2-812886e0d448",
           "required": true,
           "dataType": "@sys.any",
           "name": "thing",
@@ -74,7 +74,7 @@
           "isList": false
         },
         {
-          "id": "efc15c70-475b-43de-b5f6-037a0dd881de",
+          "id": "17d19e1c-9ea8-49c8-a8d7-38b8f64a5905",
           "required": true,
           "dataType": "@sys.any",
           "name": "things",
@@ -96,7 +96,7 @@
           "isList": false
         },
         {
-          "id": "707a4027-0be2-44b1-b3c5-22e785f0f0a3",
+          "id": "f6628e05-d5c7-4494-ab47-932eaa45289b",
           "required": true,
           "dataType": "@sys.any",
           "name": "animals",
@@ -118,7 +118,7 @@
           "isList": false
         },
         {
-          "id": "28213565-e469-4607-8526-f0f4389cba50",
+          "id": "2d18bcf4-7bdb-43d2-86d5-39ee69e243e9",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjectives-1",
@@ -140,7 +140,7 @@
           "isList": false
         },
         {
-          "id": "16f688f3-213a-465b-8934-baec01ed79b1",
+          "id": "f2c908e3-2056-4934-baed-5c9ef9ad7a1c",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-1",
@@ -162,7 +162,7 @@
           "isList": false
         },
         {
-          "id": "531d964e-ef4d-4bc7-adf9-7469c461a97b",
+          "id": "e45441ba-372e-4c7f-9083-71b22cc334a2",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-male",
@@ -180,7 +180,7 @@
           "isList": false
         },
         {
-          "id": "fe15a2e5-4b3f-4011-a83c-007f8372e81e",
+          "id": "6d6d72d5-aa16-4b87-bea6-c7ea9c1ad574",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-2",
@@ -198,7 +198,7 @@
           "isList": false
         },
         {
-          "id": "dee6512c-4632-44ad-9280-d81abcf6c502",
+          "id": "ab739503-b792-4e07-96cd-5094d27e10ea",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjectives-2",
@@ -216,7 +216,7 @@
           "isList": false
         },
         {
-          "id": "2f05309f-21ff-42bb-a900-41af4c2fe3aa",
+          "id": "33cb5982-1bff-4f39-aeda-05eae01b60ef",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-3",
@@ -234,7 +234,7 @@
           "isList": false
         },
         {
-          "id": "ea82607f-0a88-41c0-a628-19d1609afa6f",
+          "id": "385fc8e6-f453-468c-a584-43e8281babd1",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-4",
@@ -252,7 +252,7 @@
           "isList": false
         },
         {
-          "id": "b1cb0dcb-d539-4849-9057-642c12f15feb",
+          "id": "f434869c-31af-4265-8c53-92747a387d35",
           "required": true,
           "dataType": "@sys.any",
           "name": "actions-5",
@@ -270,7 +270,7 @@
           "isList": false
         },
         {
-          "id": "fcaa52e8-5abb-4cb0-b703-bd1e2ec1105a",
+          "id": "3928baab-9b2f-4e73-a230-bc4abaf4aab5",
           "required": true,
           "dataType": "@sys.any",
           "name": "where",
@@ -293,7 +293,7 @@
           "type": 0,
           "lang": "ru",
           "condition": "",
-          "speech": "В прошлом месяце я ездил в парк развлечений с другом по имени $human.\nТам были $adjectives-1 люди, которые повсюду $actions-1. Были там и чудаки в карнавальных костюмах - ну, настоящие $animals. Один из них надел мне на голову $adjective-male $thing, и мы $actions-2 от такого нахальства.\nПотом мы покатались на аттракционе $adjectives-2 горки, которые почему-то назывались Волшебные $things. $human совсем ошалел от этих горок, и мы решили $actions-3. Потом мы поехали в гостиницу и стали там $actions-4.\nЕще мне хочется отдохнуть $where. Поедем туда на следующий год и будем там вовсю $actions-5."
+          "speech": "Слушай, что получилось: В прошлом месяце я ездил в парк развлечений с другом по имени $human.\nТам были $adjectives-1 люди, которые повсюду $actions-1. Были там и чудаки в карнавальных костюмах - ну, настоящие $animals. Один из них надел мне на голову $adjective-male $thing, и мы $actions-2 от такого нахальства.\nПотом мы покатались на аттракционе $adjectives-2 горки, которые почему-то назывались Волшебные $things. $human совсем ошалел от этих горок, и мы решили $actions-3. Потом мы поехали в гостиницу и стали там $actions-4.\nЕще мне хочется отдохнуть $where. Поедем туда на следующий год и будем там вовсю $actions-5."
         }
       ],
       "defaultResponsePlatforms": {},
