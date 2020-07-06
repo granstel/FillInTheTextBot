@@ -19,16 +19,22 @@ namespace FillInTheTextBot.Services
 
         public async Task<Response> GetResponseAsync(Request request)
         {
-            //TODO: processing commands, invoking external services, and other cool asynchronous staff to generate response
             var dialog = await _dialogflowService.GetResponseAsync(request);
 
             var response = new Response { Text = dialog?.Response, Finished = dialog?.EndConversation ?? false };
+
+            if (dialog.Parameters.TryGetValue("resetTextIndex", out var resetTextIndex) && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
+            {
+                var LastTextIndexKey = GetLastTextIndexKey(request.UserHash);
+
+                _cache.TryAdd(LastTextIndexKey, 0);
+            }
 
             if (string.Equals(dialog?.Action, "GetText"))
             {
                 var textKey = dialog?.GetParameters("textKey").FirstOrDefault();
 
-                response = await GetText(dialog.Response, request.SessionId, textKey);
+                response = await GetText(request, dialog.Response, textKey);
             }
 
             if (!dialog.ParametersIncomplete && string.Equals(dialog.Action, "DeleteAllContexts"))
@@ -39,28 +45,39 @@ namespace FillInTheTextBot.Services
             return response;
         }
 
-        private async Task<Response> GetText(string startText, string sessionId, string textKey = null)
+        private async Task<Response> GetText(Request request, string startText, string textKey = null)
         {
             var response = new Response();
+
+            var LastTextIndexKey = GetLastTextIndexKey(request.UserHash);
+
+            _cache.TryGet<int>(LastTextIndexKey, out var nextTextIndex);
+
+            var index = nextTextIndex++;
 
             if (string.IsNullOrEmpty(textKey))
             {
                 if (!_cache.TryGet<string[]>("Texts", out var texts))
                 {
                     response.Text = "Что-то у меня не нашлось никаких текстов...";
+
+                    return response;
                 }
 
-                var random = new Random();
-
-                var index = random.Next(0, texts.Length - 1);
-
-                textKey = texts[index];
+                if (index >= texts.Length)
+                {
+                    textKey = "texts-over";
+                }
+                else
+                {
+                    textKey = texts[index];
+                }
             }
 
             var eventName = $"event:{textKey}";
 
 
-            var dialog = await _dialogflowService.GetResponseAsync(eventName, sessionId, textKey);
+            var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, textKey);
 
 
             var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
@@ -69,7 +86,14 @@ namespace FillInTheTextBot.Services
 
             response.Text = text;
 
+            _cache.TryAdd(LastTextIndexKey, nextTextIndex);
+
             return response;
+        }
+
+        private string GetLastTextIndexKey(string userHash)
+        {
+            return $"LastTextIndex:{userHash}";
         }
     }
 }
