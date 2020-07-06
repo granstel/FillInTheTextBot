@@ -53,8 +53,6 @@ namespace FillInTheTextBot.Services
 
             _cache.TryGet<int>(LastTextIndexKey, out var nextTextIndex);
 
-            var index = nextTextIndex++;
-
             if (string.IsNullOrEmpty(textKey))
             {
                 if (!_cache.TryGet<string[]>("Texts", out var texts))
@@ -63,6 +61,8 @@ namespace FillInTheTextBot.Services
 
                     return response;
                 }
+
+                var index = nextTextIndex++;
 
                 if (index >= texts.Length)
                 {
