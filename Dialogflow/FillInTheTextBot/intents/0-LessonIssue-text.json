@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "b495d778-ae70-4a23-8964-378119842389",
+          "id": "fb0c4552-2340-4ad8-bf73-288430e5e3a2",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
@@ -26,7 +26,7 @@
           "isList": false
         },
         {
-          "id": "051e549a-3555-484b-a2ba-c50da0580135",
+          "id": "58fdf478-9091-421a-b3d5-7af340c582cf",
           "required": true,
           "dataType": "@sys.person",
           "name": "boy",
@@ -48,7 +48,7 @@
           "isList": false
         },
         {
-          "id": "572e7a6f-efae-4f0e-9234-bb937e64f405",
+          "id": "e7b4026f-7a75-407a-be34-ee08fc47af57",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-1",
@@ -66,7 +66,7 @@
           "isList": false
         },
         {
-          "id": "9caccaa0-c851-49c2-b356-004902cae936",
+          "id": "590e24a1-eaae-40ba-a64d-b7266fb46d2e",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-1",
@@ -88,7 +88,7 @@
           "isList": false
         },
         {
-          "id": "b87626e3-9ef8-4c8b-bc41-608f6e3ecc20",
+          "id": "c8b61b57-0fd0-4b12-af24-26e8d2b490e3",
           "required": true,
           "dataType": "@sys.person",
           "name": "teacher",
@@ -110,7 +110,7 @@
           "isList": false
         },
         {
-          "id": "3ae90ab8-0259-4346-b5e9-436e607d5737",
+          "id": "25af5319-528e-4741-aa3f-f3ae4e60a9ba",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-2",
@@ -128,7 +128,7 @@
           "isList": false
         },
         {
-          "id": "e6e296ae-7acd-4c0a-9597-e6fe8e089217",
+          "id": "39cb61a8-4bb5-443f-899c-afc8d45e16b8",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-2",
@@ -146,7 +146,7 @@
           "isList": false
         },
         {
-          "id": "44b9bd17-5558-462f-943a-99e842691b97",
+          "id": "575e0973-0bae-44a3-948b-5dcf1a48cec1",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-3",
@@ -168,7 +168,7 @@
           "isList": false
         },
         {
-          "id": "352c9461-d248-4655-bb1c-d1683f258895",
+          "id": "702cac7c-30eb-419f-9746-103b3da3da81",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-3",
@@ -186,7 +186,7 @@
           "isList": false
         },
         {
-          "id": "b7f94903-0ce2-4407-92cb-03b018697321",
+          "id": "c644f820-d167-49ba-aeb2-e9adba097565",
           "required": true,
           "dataType": "@sys.any",
           "name": "food",
@@ -204,7 +204,7 @@
           "isList": false
         },
         {
-          "id": "1c78deba-8e82-4391-8f52-a252eb3c675f",
+          "id": "046f279e-016d-49d3-8663-88485c1aaaba",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-4",
@@ -222,7 +222,7 @@
           "isList": false
         },
         {
-          "id": "852c538f-f012-4fd8-bf6d-367374779e74",
+          "id": "3def0e69-422a-4184-9347-c7c6cdd61c3f",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-4",
@@ -245,7 +245,7 @@
           "type": 0,
           "lang": "ru",
           "condition": "",
-          "speech": "Внимание, вот что получилось: Вчера $boy принес на урок зверька, который называется карликовый $adjective-1 $animal-1. Тот сразу удрал из портфеля, подкрался к учительскому столу и укусил учительницу за ногу. $teacher закричала как $adjective-2 $animal-2 и вскочила на стол. \"Уберите это чудовище! Это чей $adjective-3 $animal-3?\" \"Это не $adjective-3 $animal-3, - сказал $boy, - а $adjective-1 $animal-1. Я и не заметил дома, что он в портфель забрался!\"\n$boy хотел поймать своего питомца, но тот быстро вскочил на шкаф и зарычал как $adjective-4 $animal-4. Ловили всем классом, еле поймали. $teacher достала из сумочки большой $food, откусила кусок и сказала: \"Надо успокоиться!\" Тут $animal-1 вырвался из наших рук, подбежал к ней, и тоже откусил кусок. Пальца. Такой забавный!"
+          "speech": "Внимание, вот что получилось: Вчера $boy принес на урок зверька, который называется карликовый $adjective-1 $animal-1. Тот сразу удрал из портфеля, подкрался к учительскому столу и укусил учительницу за ногу. $teacher закричала как $adjective-2 $animal-2 и вскочила на стол. \"Уберите это чудовище! Это чей $adjective-3 $animal-3?\" \"Это не $adjective-3 $animal-3, - сказал $boy, - а $adjective-1 $animal-1. Я и не заметил дома, что он в портфель забрался!\"\n$boy хотел поймать своего питомца, но тот быстро вскочил на шкаф и зарычал как $adjective-4 $animal-4. Ловили всем классом, еле поймали. $teacher достала из сумочки большой $food, откусила кусок и сказала: \"Надо успокоиться!\" Тут $animal-1 вырвался из наших рук, подбежал к ней, и тоже откусил кусок. Пальца. Такой забавный! По-моему здорово получилось! Сочиним ещё?"
         }
       ],
       "defaultResponsePlatforms": {},

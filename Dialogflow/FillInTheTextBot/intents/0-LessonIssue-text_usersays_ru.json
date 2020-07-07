@@ -33,7 +33,7 @@
         "userDefined": false
       },
       {
-        "text": "Мариванна",
+        "text": "Мария Ивановна",
         "alias": "teacher",
         "meta": "@sys.person",
         "userDefined": true
@@ -523,7 +523,7 @@
     "id": "9596caf1-bb17-4ba4-987a-eb62fbfd02c9",
     "data": [
       {
-        "text": "Мариванна",
+        "text": "Мария Ивановна",
         "alias": "teacher",
         "meta": "@sys.person",
         "userDefined": true

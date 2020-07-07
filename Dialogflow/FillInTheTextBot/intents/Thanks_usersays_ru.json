@@ -1,5 +1,103 @@
 [
   {
+    "id": "0fe9a1f2-0b0c-42e7-b19b-f606783bb059",
+    "data": [
+      {
+        "text": "забавно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "83725675-942a-4155-a87d-41224f4767d6",
+    "data": [
+      {
+        "text": "весело",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "90d8efb3-2feb-45d0-92e0-1b108f9c5dc5",
+    "data": [
+      {
+        "text": "отлично",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "760321e0-3ad7-41e2-9b01-17537146d43c",
+    "data": [
+      {
+        "text": "чудесно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5df34d92-96ba-49b5-a180-a1938d58e921",
+    "data": [
+      {
+        "text": "понравилось",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a460da3f-5462-4a53-bdbf-5ae9c282638d",
+    "data": [
+      {
+        "text": "прикольно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e9b16a61-2f83-4ac9-a575-cea4b96d32b5",
+    "data": [
+      {
+        "text": "ясно",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2bd25dbb-3cc7-41fd-b819-d9e4f30877de",
+    "data": [
+      {
+        "text": "здорово",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
     "id": "9d443284-b539-4ba7-99e3-56643e9e0b82",
     "data": [
       {
@@ -25,19 +123,7 @@
       }
     ],
     "isTemplate": false,
-    "count": 1,
-    "updated": 0
-  },
-  {
-    "id": "0fe9a1f2-0b0c-42e7-b19b-f606783bb059",
-    "data": [
-      {
-        "text": "забавно",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 1,
+    "count": 2,
     "updated": 0
   },
   {
@@ -61,19 +147,7 @@
       }
     ],
     "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "a460da3f-5462-4a53-bdbf-5ae9c282638d",
-    "data": [
-      {
-        "text": "прикольно",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "updated": 0
   },
   {
@@ -85,19 +159,7 @@
       }
     ],
     "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "90d8efb3-2feb-45d0-92e0-1b108f9c5dc5",
-    "data": [
-      {
-        "text": "отлично",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "updated": 0
   },
   {
