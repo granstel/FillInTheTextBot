@@ -44,11 +44,6 @@ namespace FillInTheTextBot.Api
                 app.UseMiddleware<HttpLogMiddleware>();
             }
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
             app.UseMiddleware<ExceptionsMiddleware>();
 
             app.UseMvc();
