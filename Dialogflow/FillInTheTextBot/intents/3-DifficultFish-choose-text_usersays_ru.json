@@ -1,0 +1,310 @@
+[
+  {
+    "id": "6e0a675c-adbe-4db4-8c2a-c9f2c0e51e58",
+    "data": [
+      {
+        "text": "олениха",
+        "alias": "animal-female",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1bb2bc46-f77c-4354-913d-2681b75bfae1",
+    "data": [
+      {
+        "text": "пятнистая",
+        "alias": "adjective-female-1",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f3cc0b07-5ade-4828-90f1-230adf62bb9c",
+    "data": [
+      {
+        "text": "забиралась на дерево",
+        "alias": "action-female",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9e921e02-4b24-4a3c-b715-6a17b59783e2",
+    "data": [
+      {
+        "text": "поезд",
+        "alias": "big-thing",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d37e25fe-70e1-4308-9293-3b91f2264820",
+    "data": [
+      {
+        "text": "голубой",
+        "alias": "adjective-male-1",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b5fa7bd1-615c-4bd7-94e9-fb9f1131de8c",
+    "data": [
+      {
+        "text": "стул",
+        "alias": "furniture",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "af8f70c2-5f68-4a65-ae40-d7418f455675",
+    "data": [
+      {
+        "text": "колченогий",
+        "alias": "adjective-male-2",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8c85a0a0-414e-40f9-b362-6565991db51d",
+    "data": [
+      {
+        "text": "мамонт",
+        "alias": "animal-male-1",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "562d9b65-fc52-46e4-a864-32c49b5a01fc",
+    "data": [
+      {
+        "text": "древний",
+        "alias": "adjective-male-3",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a80965fb-4cce-420b-accb-fa60c3ffc089",
+    "data": [
+      {
+        "text": "тигр",
+        "alias": "animal-male-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "46360673-3b5b-49c1-b8b3-cceca424f07a",
+    "data": [
+      {
+        "text": "быстрый",
+        "alias": "adjective-male-4",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4d5e309d-e611-4396-9dbc-965f402365f0",
+    "data": [
+      {
+        "text": "рогатый",
+        "alias": "adjective-male-4",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "22936c13-e364-466a-8390-9c1240a674e1",
+    "data": [
+      {
+        "text": "лев",
+        "alias": "animal-male-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "05bceae2-4fa1-440a-9379-ef7d175bdd27",
+    "data": [
+      {
+        "text": "грубый",
+        "alias": "adjective-male-3",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a615ec51-a6db-4981-ac3c-4ea92e93c4e6",
+    "data": [
+      {
+        "text": "бегемот",
+        "alias": "animal-male-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "872ed248-7601-4a4f-94aa-38ede3188164",
+    "data": [
+      {
+        "text": "вонючий",
+        "alias": "adjective-male-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "58f9e328-6a06-458f-a76b-09c3ad3a95bd",
+    "data": [
+      {
+        "text": "диван",
+        "alias": "furniture",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5f7cf5f6-628a-4a98-a97e-510a7975a7b5",
+    "data": [
+      {
+        "text": "дряхлый",
+        "alias": "adjective-male-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "bd26d415-3d3e-4ff7-af36-e594103b4ebf",
+    "data": [
+      {
+        "text": "мусоровоз",
+        "alias": "big-thing",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "fc170f28-b176-412c-952e-34af1a755fea",
+    "data": [
+      {
+        "text": "играла в футбол",
+        "alias": "action-female",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "be951271-d6ee-472d-931c-a96478fcac3d",
+    "data": [
+      {
+        "text": "жуткая",
+        "alias": "adjective-female-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a76c7ef6-0783-41b9-a27e-ad20978af93f",
+    "data": [
+      {
+        "text": "корова",
+        "alias": "animal-female",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  }
+]

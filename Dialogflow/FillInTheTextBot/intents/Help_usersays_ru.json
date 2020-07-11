@@ -1,5 +1,41 @@
 [
   {
+    "id": "673f5cf2-66d9-47ed-9860-c1d2809ad85b",
+    "data": [
+      {
+        "text": "не понимаю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "39392d1a-6a58-46c1-ae05-30778904a6fa",
+    "data": [
+      {
+        "text": "не понятно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1e1c4c4f-dbc2-40ed-a26a-ee58907d9cf4",
+    "data": [
+      {
+        "text": "непонятно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
     "id": "00215fbf-3a8f-48e3-91e4-113b8bd0d457",
     "data": [
       {
