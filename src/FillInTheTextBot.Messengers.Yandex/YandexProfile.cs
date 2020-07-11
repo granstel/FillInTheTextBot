@@ -2,7 +2,6 @@ using System;
 using AutoMapper;
 using FillInTheTextBot.Models.Internal;
 using Yandex.Dialogs.Models;
-using Yandex.Dialogs.Models.Cards;
 using Yandex.Dialogs.Models.Input;
 using Internal = FillInTheTextBot.Models.Internal;
 using YandexModels = Yandex.Dialogs.Models;

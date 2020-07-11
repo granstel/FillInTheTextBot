@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using FillInTheTextBot.Models.Internal;
+using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
 
 namespace FillInTheTextBot.Services
@@ -27,7 +28,7 @@ namespace FillInTheTextBot.Services
             {
                 var LastTextIndexKey = GetLastTextIndexKey(request.UserHash);
 
-                _cache.TryAdd(LastTextIndexKey, 0);
+                _cache.TryAddAsync(LastTextIndexKey, 0).Forget();
             }
 
             if (string.Equals(dialog?.Action, "GetText"))
@@ -39,7 +40,7 @@ namespace FillInTheTextBot.Services
 
             if (!dialog.ParametersIncomplete && string.Equals(dialog.Action, "DeleteAllContexts"))
             {
-                await _dialogflowService.DeleteAllContexts(request);
+                _dialogflowService.DeleteAllContexts(request).Forget();
             }
 
             return response;
@@ -86,7 +87,7 @@ namespace FillInTheTextBot.Services
 
             response.Text = text;
 
-            _cache.TryAdd(LastTextIndexKey, nextTextIndex);
+            _cache.TryAddAsync(LastTextIndexKey, nextTextIndex).Forget();
 
             return response;
         }
