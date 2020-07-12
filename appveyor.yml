@@ -1,0 +1,9 @@
+version: 1.1.0.{build}
+branches:
+  only:
+  - master
+image: Visual Studio 2019
+build_script:
+- cmd: dotnet build src\FillInTheTextBot.sln -c Release
+test_script:
+- cmd: dotnet test "src\FillInTheTextBot.sln" -c Release
