@@ -179,7 +179,7 @@ namespace FillInTheTextBot.Services
             EventInput result;
 
             // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
-            if (request.NewSession == true && string.IsNullOrEmpty(request.Text))
+            if (string.IsNullOrEmpty(request.Text))
             {
                 if (request.IsOldUser)
                 {
