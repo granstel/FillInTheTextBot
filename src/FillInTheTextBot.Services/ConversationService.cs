@@ -20,6 +20,8 @@ namespace FillInTheTextBot.Services
 
         public async Task<Response> GetResponseAsync(Request request)
         {
+            request = CheckOldUser(request);
+
             var dialog = await _dialogflowService.GetResponseAsync(request);
 
             var response = new Response { Text = dialog?.Response, Finished = dialog?.EndConversation ?? false };
@@ -100,6 +102,20 @@ namespace FillInTheTextBot.Services
             var LastTextIndexKey = GetLastTextIndexKey(userHash);
 
             _cache.TryAddAsync(LastTextIndexKey, 0).Forget();
+        }
+
+        private Request CheckOldUser(Request request)
+        {
+            if (request.NewSession == false || request.IsOldUser)
+                return request;
+
+            var nextTextIndexKey = GetLastTextIndexKey(request.UserHash);
+
+            var gotIndex = _cache.TryGet<int>(nextTextIndexKey, out _);
+
+            request.IsOldUser = gotIndex;
+
+            return request;
         }
     }
 }
