@@ -22,7 +22,10 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.SessionId, m => m.ResolveUsing(s => s.Session?.SessionId))
                 .ForMember(d => d.NewSession, m => m.ResolveUsing(s => s.Session?.New))
                 .ForMember(d => d.Language, m => m.ResolveUsing(s => s.Meta?.Locale))
-                .ForMember(d => d.Source, m => m.UseValue(Source.Yandex));
+                .ForMember(d => d.Source, m => m.UseValue(Source.Yandex))
+                .ForMember(d => d.RequiredContext, m => m.Ignore())
+                .ForMember(d => d.ClearContexts, m => m.Ignore())
+                .ForMember(d => d.IsOldUser, m => m.Ignore());
 
             CreateMap<Internal.Response, OutputModel>()
                 .ForMember(d => d.Response, m => m.MapFrom(s => s))
