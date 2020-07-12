@@ -13,6 +13,11 @@ namespace FillInTheTextBot.Messengers.Yandex
     {
         private const string PingCommand = "ping";
         private const string PongResponse = "pong";
+        private const string ErrorCommand = "error";
+
+        private const string oldUSerStateKey = "isOldUser";
+
+        private const string errorAnswer = "Простите, у меня какие-то проблемы... Давайте попробуем ещё раз";
 
         private readonly IMapper _mapper;
 
@@ -23,6 +28,25 @@ namespace FillInTheTextBot.Messengers.Yandex
             _mapper = mapper;
         }
 
+        protected override Internal.Request Before(InputModel input)
+        {
+            if (input == default)
+            {
+                _log.Error($"{nameof(InputModel)} is null");
+
+                input = CreateErrorInput();
+            }
+
+            var result = base.Before(input);
+
+            if (input.TryGetFromUserState(oldUSerStateKey, out bool IsOldUser))
+            {
+                result.IsOldUser = IsOldUser;
+            }
+
+            return result;
+        }
+
         protected override Internal.Response ProcessCommand(Internal.Request request)
         {
             Internal.Response response = null;
@@ -30,6 +54,11 @@ namespace FillInTheTextBot.Messengers.Yandex
             if (PingCommand.Equals(request.Text, StringComparison.InvariantCultureIgnoreCase))
             {
                 response = new Internal.Response { Text = PongResponse };
+            }
+
+            if (ErrorCommand.Equals(request?.Text, StringComparison.InvariantCultureIgnoreCase))
+            {
+                response = new Internal.Response { Text = errorAnswer };
             }
 
             return response;
@@ -47,7 +76,7 @@ namespace FillInTheTextBot.Messengers.Yandex
             {
                 _log.Error(e);
 
-                var response = new Internal.Response { Text = "Простите, у меня какие-то проблемы... Давайте попробуем ещё раз" };
+                var response = new Internal.Response { Text = errorAnswer };
 
                 result = await AfterAsync(input, response);
             }
@@ -61,7 +90,22 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             _mapper.Map(input, output);
 
+            output.AddToUserState(oldUSerStateKey, true);
+
             return output;
+        }
+
+        private InputModel CreateErrorInput()
+        {
+            return new InputModel
+            {
+                Request = new Request
+                {
+                    OriginalUtterance = ErrorCommand
+                },
+                Session = new InputSession(),
+                Version = "1.0"
+            };
         }
     }
 }

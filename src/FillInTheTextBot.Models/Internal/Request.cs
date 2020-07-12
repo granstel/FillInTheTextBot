@@ -19,5 +19,6 @@ namespace FillInTheTextBot.Models.Internal
         public string RequiredContext { get; set; }
         
         public bool ClearContexts { get; set; }
+        public bool IsOldUser { get; set; }
     }
 }
