@@ -1,0 +1,217 @@
+{
+  "id": "ba5eb6bd-a653-4382-91fc-a26f0dc63f9a",
+  "name": "4-Hospital-text",
+  "auto": true,
+  "contexts": [
+    "text-4"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DeleteAllContexts",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "dd2acafc-d92e-43db-a4cf-600abd826e04",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "text-name",
+          "value": "Этот текст про \"Больницу\".",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "4fc218bc-5a12-40f6-9a29-b9b16af86839",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number-1",
+          "value": "$number-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва назови любое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "27e5b249-39c4-4738-9ce3-a0ae4d993401",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "action",
+          "value": "$action",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь - \"Что делали\"? (из нескольких слов)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "8cd6279d-173d-4148-b53f-309fc7821641",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number-2",
+          "value": "$number-2",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови ещё одно любое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "261bf35b-90de-448a-9e80-87ecc03190da",
+          "required": true,
+          "dataType": "@sys.person",
+          "name": "person",
+          "value": "$person",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какого-нибудь знаменитого мужчину"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "2698ae0b-6e81-4171-bda8-520c005b6347",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-male",
+          "value": "$adjective-male",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "34885323-a2cc-46fe-b013-380de72cf13f",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animal",
+          "value": "$animal",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "02e678ca-7e1a-409e-b1cf-023643bdc445",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "liquid",
+          "value": "$liquid",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови жидкость"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "9d65bc3a-a8c2-45e1-8d58-295329b48490",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "adjective-female",
+          "value": "$adjective-female",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какая\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "242dbf44-877b-4a0b-ad76-099418e31acd",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number-3",
+          "value": "$number-3",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - снова любое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": "Слушай, что получилось: Катался на лыжах, сломал руку, ногу, нос, ухо, и угодил в больницу.\nВ больнице мне понравилось. В нашей палате было человек эдак $number-1. Некоторые играли в шахматы, другие в волейбол, третьи просто $action - в общем, было не скучно.\n- Что это там бежит по потолку? - поинтересовался я.\n- Это наш любимчик - таракан по прозвищу $adjective-male $animal, - ответил старший по палате, которого звали $person.\nС утра там процедуры: на выбор - либо капельница литров $number-2, либо клизма $number-3 л. Выжившие идут на завтрак.\nВо дворе флигель патологоанатома с вывеской над дверью: \"Добро пожаловать!\"\n- Эй, новенький! Заходи! - закричал он мне, приветливо размахивая топором.\n- Потом! - сказал я и поковылял в процедурную.\n- Сделайте мне каких-нибудь уколов! - попросил я медсестру. - С детства их обожаю!\n- А какой у вас диагноз?\n- $adjective-female свинка, - сказал я.\n- Тогда $liquid подойдёт, - сказала сестра, наполнила шприц и сделала первый укол. Стало хорошо.\nПо-моему, забавно! Давай ещё один?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-4"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

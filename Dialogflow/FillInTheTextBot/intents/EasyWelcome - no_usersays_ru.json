@@ -1,9 +1,9 @@
 [
   {
-    "id": "f8582a33-2072-472e-a21d-90d8e1d30ade",
+    "id": "60c4dfc4-4890-4187-b115-e6dd7088fb39",
     "data": [
       {
-        "text": "заканчиваем истории",
+        "text": "не делай этого",
         "userDefined": false
       }
     ],
@@ -12,10 +12,10 @@
     "updated": 0
   },
   {
-    "id": "91643c08-f858-499e-9dbe-936d55729980",
+    "id": "e9ac1369-6a44-4c23-9a58-49a6a1b8536f",
     "data": [
       {
-        "text": "заканчиваем",
+        "text": "спасибо нет",
         "userDefined": false
       }
     ],
@@ -24,15 +24,10 @@
     "updated": 0
   },
   {
-    "id": "3fb8152e-437a-4e53-9cbb-8dac8b426cdf",
+    "id": "6f0b7b74-441e-431d-9a65-bd7f4e420ef4",
     "data": [
       {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " я ухожу пока",
+        "text": "нет",
         "userDefined": false
       }
     ],
@@ -41,10 +36,10 @@
     "updated": 0
   },
   {
-    "id": "061d2212-f36d-4c16-be4d-7e9f68d30201",
+    "id": "968c1721-c969-47f5-9b56-3a44ecf97ec0",
     "data": [
       {
-        "text": "закончить",
+        "text": "я не хочу этого",
         "userDefined": false
       }
     ],
@@ -53,15 +48,10 @@
     "updated": 0
   },
   {
-    "id": "3ecfcee2-aea1-415c-bb82-67c0363764eb",
+    "id": "720a7a21-67b1-4d89-a4c1-c8f3e7b59694",
     "data": [
       {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " выход",
+        "text": "не думаю",
         "userDefined": false
       }
     ],
@@ -70,15 +60,10 @@
     "updated": 0
   },
   {
-    "id": "79226c7f-192d-4b6d-9943-286459cbdb07",
+    "id": "966b0a43-d42f-498b-a9ea-a7fd4e75ff69",
     "data": [
       {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " выйти",
+        "text": "не согласен",
         "userDefined": false
       }
     ],
@@ -87,10 +72,10 @@
     "updated": 0
   },
   {
-    "id": "37946b7e-3bd2-4760-ab13-d73e5de6fec0",
+    "id": "8fe3399a-fb7e-4c8f-a6e6-d402a651bbaa",
     "data": [
       {
-        "text": "выйти",
+        "text": "не интересует",
         "userDefined": false
       }
     ],
@@ -99,11 +84,22 @@
     "updated": 0
   },
   {
-    "id": "d3c31fb7-00a5-41c8-bce9-2ba437dde677",
+    "id": "f177fa9d-c1e2-496e-9233-742c6b033489",
     "data": [
       {
-        "text": "выход",
-        "meta": "@sys.ignore",
+        "text": "определенно нет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8bd1077b-c240-4dc3-be94-4eba0097ffcc",
+    "data": [
+      {
+        "text": "да нет",
         "userDefined": false
       }
     ],

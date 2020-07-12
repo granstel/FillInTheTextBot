@@ -1,0 +1,142 @@
+[
+  {
+    "id": "5d35c24b-27c9-4c15-a798-98da01282240",
+    "data": [
+      {
+        "text": "обнимали берёзу",
+        "alias": "action",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f46e0d22-9a37-4cd2-b58d-fd81f62c3f7c",
+    "data": [
+      {
+        "text": "крокодил",
+        "alias": "animal",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c0fb0bbb-9b51-48ab-89da-86791752403b",
+    "data": [
+      {
+        "text": "2",
+        "alias": "number-3",
+        "meta": "@sys.number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9e8bb9ee-38b8-42bd-894d-0bd3ea681448",
+    "data": [
+      {
+        "text": "1",
+        "alias": "number-2",
+        "meta": "@sys.number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4724ec9d-3ec7-463c-99c4-22660121bb71",
+    "data": [
+      {
+        "text": "керосин",
+        "alias": "liquid",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8a35b3e8-34c5-44b3-9d01-68325ddba16a",
+    "data": [
+      {
+        "text": "Джорно Джованна",
+        "alias": "person",
+        "meta": "@sys.person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e6db5e43-4308-464a-af51-a502826f7154",
+    "data": [
+      {
+        "text": "Григорий Лепс",
+        "alias": "person",
+        "meta": "@sys.person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d35d51a1-edbc-43dc-b8d2-5335bc0bee92",
+    "data": [
+      {
+        "text": "задумчивая",
+        "alias": "adjective-female",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "76951929-c8ce-40f8-bf35-83dd7977e2a9",
+    "data": [
+      {
+        "text": "лысый",
+        "alias": "adjective-male",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "57638082-2ece-49eb-bb59-fd1782d43a92",
+    "data": [
+      {
+        "text": "12",
+        "alias": "number-1",
+        "meta": "@sys.number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

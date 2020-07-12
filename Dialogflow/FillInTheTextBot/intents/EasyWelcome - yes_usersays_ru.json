@@ -1,9 +1,9 @@
 [
   {
-    "id": "f8582a33-2072-472e-a21d-90d8e1d30ade",
+    "id": "5d24ced5-62a4-4771-89ce-4f3fa8d6dcbd",
     "data": [
       {
-        "text": "заканчиваем истории",
+        "text": "меня устраивает",
         "userDefined": false
       }
     ],
@@ -12,10 +12,10 @@
     "updated": 0
   },
   {
-    "id": "91643c08-f858-499e-9dbe-936d55729980",
+    "id": "939fb11f-a847-4aa2-a0a4-40ffd596580d",
     "data": [
       {
-        "text": "заканчиваем",
+        "text": "я согласен",
         "userDefined": false
       }
     ],
@@ -24,15 +24,10 @@
     "updated": 0
   },
   {
-    "id": "3fb8152e-437a-4e53-9cbb-8dac8b426cdf",
+    "id": "0f0e9961-595f-4598-bfce-066a4f676311",
     "data": [
       {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " я ухожу пока",
+        "text": "сделай это",
         "userDefined": false
       }
     ],
@@ -41,10 +36,10 @@
     "updated": 0
   },
   {
-    "id": "061d2212-f36d-4c16-be4d-7e9f68d30201",
+    "id": "00a7d34c-549b-446d-8f41-ff79b2152de8",
     "data": [
       {
-        "text": "закончить",
+        "text": "да",
         "userDefined": false
       }
     ],
@@ -53,15 +48,10 @@
     "updated": 0
   },
   {
-    "id": "3ecfcee2-aea1-415c-bb82-67c0363764eb",
+    "id": "99d865c4-1720-4551-8728-e7c3b4422b61",
     "data": [
       {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " выход",
+        "text": "не возражаю",
         "userDefined": false
       }
     ],
@@ -70,15 +60,10 @@
     "updated": 0
   },
   {
-    "id": "79226c7f-192d-4b6d-9943-286459cbdb07",
+    "id": "b3f14384-ecc6-407b-bf3f-8e6b524630bb",
     "data": [
       {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " выйти",
+        "text": "разумеется",
         "userDefined": false
       }
     ],
@@ -87,10 +72,10 @@
     "updated": 0
   },
   {
-    "id": "37946b7e-3bd2-4760-ab13-d73e5de6fec0",
+    "id": "25508f69-c0f4-4088-84b5-5f0a958da8bc",
     "data": [
       {
-        "text": "выйти",
+        "text": "точно",
         "userDefined": false
       }
     ],
@@ -99,11 +84,34 @@
     "updated": 0
   },
   {
-    "id": "d3c31fb7-00a5-41c8-bce9-2ba437dde677",
+    "id": "605fd211-b86e-4fce-bc7b-4d1bb80cfba0",
     "data": [
       {
-        "text": "выход",
-        "meta": "@sys.ignore",
+        "text": "подтверждаю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "bfe38234-9ac2-4895-947d-e0353fe732bd",
+    "data": [
+      {
+        "text": "конечно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9e0b07b1-2b02-4094-a38a-eedf7cfe559b",
+    "data": [
+      {
+        "text": "это верно",
         "userDefined": false
       }
     ],

@@ -1,0 +1,45 @@
+{
+  "id": "52162657-210f-46be-a923-2e91bd10128f",
+  "name": "EasyWelcome",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "EasyWelcome-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": [
+            "С возвращением! У меня появился новый текст про \"Больницу\". Сочиним историю про неё?",
+            "Привет, с возвращением! У меня есть новый текст, про \"Больницу\". Сочиним его?",
+            "И снова привет! Давай сочиним новую историю, про \"Больницу\"?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "EasyWelcome"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
