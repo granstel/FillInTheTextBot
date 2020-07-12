@@ -26,9 +26,7 @@ namespace FillInTheTextBot.Services
 
             if (dialog.Parameters.TryGetValue("resetTextIndex", out var resetTextIndex) && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
-                var LastTextIndexKey = GetLastTextIndexKey(request.UserHash);
-
-                _cache.TryAddAsync(LastTextIndexKey, 0).Forget();
+                ResetLastTextIndexKey(request.UserHash);
             }
 
             if (string.Equals(dialog?.Action, "GetText"))
@@ -50,10 +48,6 @@ namespace FillInTheTextBot.Services
         {
             var response = new Response();
 
-            var LastTextIndexKey = GetLastTextIndexKey(request.UserHash);
-
-            _cache.TryGet<int>(LastTextIndexKey, out var nextTextIndex);
-
             if (string.IsNullOrEmpty(textKey))
             {
                 if (!_cache.TryGet<string[]>("Texts", out var texts))
@@ -62,6 +56,10 @@ namespace FillInTheTextBot.Services
 
                     return response;
                 }
+
+                var nextTextIndexKey = GetLastTextIndexKey(request.UserHash);
+
+                _cache.TryGet<int>(nextTextIndexKey, out var nextTextIndex);
 
                 var index = nextTextIndex++;
 
@@ -73,6 +71,8 @@ namespace FillInTheTextBot.Services
                 {
                     textKey = texts[index];
                 }
+
+                _cache.TryAddAsync(nextTextIndexKey, nextTextIndex).Forget();
             }
 
             var eventName = $"event:{textKey}";
@@ -87,14 +87,19 @@ namespace FillInTheTextBot.Services
 
             response.Text = text;
 
-            _cache.TryAddAsync(LastTextIndexKey, nextTextIndex).Forget();
-
             return response;
         }
 
         private string GetLastTextIndexKey(string userHash)
         {
             return $"LastTextIndex:{userHash}";
+        }
+
+        private void ResetLastTextIndexKey(string userHash)
+        {
+            var LastTextIndexKey = GetLastTextIndexKey(userHash);
+
+            _cache.TryAddAsync(LastTextIndexKey, 0).Forget();
         }
     }
 }
