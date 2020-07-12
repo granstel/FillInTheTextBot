@@ -106,5 +106,89 @@
     "isTemplate": false,
     "count": 0,
     "updated": 0
+  },
+  {
+    "id": "6c60b26d-0f44-451a-9b03-328699d90d45",
+    "data": [
+      {
+        "text": "нет спасибо хватит",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b051ea7f-2f89-4d22-82a9-3e33c93110a9",
+    "data": [
+      {
+        "text": "мне некогда спасибо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c514275f-35fb-415b-b065-bb366a26bbf7",
+    "data": [
+      {
+        "text": "отказываюсь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5517fac9-3084-4cd5-a616-e1e0115e9dbd",
+    "data": [
+      {
+        "text": "не стоит",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c38593c6-e136-4543-a1a1-ebd23b94b1e3",
+    "data": [
+      {
+        "text": "ни в коем случае",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e7c6cf52-27f4-46ba-a84d-4536e0cbfaac",
+    "data": [
+      {
+        "text": "не надо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a6d5181c-57ca-4478-80f0-4f10855d362a",
+    "data": [
+      {
+        "text": "нет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
   }
 ]
