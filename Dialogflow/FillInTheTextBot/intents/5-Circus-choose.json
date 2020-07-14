@@ -1,36 +1,31 @@
 {
-  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
-  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - yes",
+  "id": "79679865-6697-4ddd-badc-bdca3500e184",
+  "name": "5-Circus-choose",
   "auto": true,
-  "contexts": [
-    "EasyWelcome-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-5",
+          "parameters": {},
+          "lifespan": 50
+        },
+        {
+          "name": "5-Circus-choose-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "f37cc50c-cf61-4bf1-909d-34d0c82b0077",
+          "id": "559a047a-5855-4bb9-952a-a1114efaeba8",
           "required": false,
           "dataType": "@sys.any",
           "name": "textKey",
           "value": "text-5",
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
-        },
-        {
-          "id": "1a78300a-ab8e-4baa-99b3-c1a939c3c964",
-          "required": false,
-          "dataType": "@sys.any",
-          "name": "resetTextIndex",
-          "value": "true",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -44,9 +39,9 @@
           "lang": "ru",
           "condition": "",
           "speech": [
+            "Приступим!",
             "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Погнали!"
           ]
         }
       ],
