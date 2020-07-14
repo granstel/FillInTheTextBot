@@ -1,4 +1,6 @@
 # FillInTheTextBot
+[![Build status](https://ci.appveyor.com/api/projects/status/nejvcq6j36ei1t9m?svg=true)](https://ci.appveyor.com/project/granstel/fillinthetextbot)
+
 Чат-бот, играющий в игру "Занимательные истории": он просит поочереди называть слова (имена, прилагательные, прочее), потом вставляет их в текст на нужные места, и показывает то, что получилось. Сделан на ["Онлайн-хакатоне по разработке навыков Алисы"](https://yandex.ru/promo/events/generated/online-hack-alisa-27-06-2020/)
 
 Можно сыграть вместе с Алисой:
