@@ -1,0 +1,43 @@
+[
+  {
+    "id": "7bd463ab-0a2b-422d-9f62-d79a0514b3a9",
+    "data": [
+      {
+        "text": "диалог не отвечает",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3312fc4e-f312-4c18-8246-c18d6c4e7cf5",
+    "data": [
+      {
+        "text": "почему диалог не отвечает",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c5d23284-60fb-4001-ae45-72271ab3bd8c",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " почему ты говоришь диалог не отвечает",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

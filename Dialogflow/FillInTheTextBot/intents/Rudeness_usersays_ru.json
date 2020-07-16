@@ -1,5 +1,41 @@
 [
   {
+    "id": "007c5f37-0387-4f0b-a5ce-6d5a981c909c",
+    "data": [
+      {
+        "text": "обосрись",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1540254a-9857-45cb-93ab-d2276c49b9f0",
+    "data": [
+      {
+        "text": "обосрись вкладку твою мать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "6252f7c0-76d5-4fe9-bc18-9838cedf7ead",
+    "data": [
+      {
+        "text": "фигня",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
     "id": "7f5bff0c-77a1-4f02-8771-eae445000c9c",
     "data": [
       {

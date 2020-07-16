@@ -1,0 +1,116 @@
+[
+  {
+    "id": "6c03746b-e845-4555-9098-849eabcee390",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " прочитай текст ",
+        "userDefined": false
+      },
+      {
+        "text": "андрея",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "96c03e30-e1d4-4d77-af66-26628e178c1b",
+    "data": [
+      {
+        "text": "давай про",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "eeb86f10-088f-4222-aa10-2b72fdceb077",
+    "data": [
+      {
+        "text": "давай сочиним про",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "30e9ed96-3232-4fd1-8262-7b210563fc1f",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " про ",
+        "userDefined": false
+      },
+      {
+        "text": "алису",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "573ba786-4107-403b-a54d-1427c7c3a205",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " про случай в диалогах",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "95501478-c9bf-4084-96dc-c3effdedb7f2",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " стих",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

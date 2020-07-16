@@ -1,5 +1,46 @@
 [
   {
+    "id": "28c15955-e3ef-4d91-be90-052eb88946ba",
+    "data": [
+      {
+        "text": "играем",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3b24357e-6387-4b62-8b3b-17adcde18fa9",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "0048f4fb-760a-4286-be75-c96ca7dd7eea",
+    "data": [
+      {
+        "text": "дп",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
     "id": "d18d4e8f-5f74-459e-b0f9-6981fd5b902a",
     "data": [
       {

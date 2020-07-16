@@ -1,5 +1,42 @@
 [
   {
+    "id": "6c5cc28c-f30f-484c-84f5-8bbddbdd458b",
+    "data": [
+      {
+        "text": "правила",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5dbabb9f-e18a-455b-9f97-3a21b85c187d",
+    "data": [
+      {
+        "text": "Правила игры",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "31b99953-0db8-4460-8a69-62992b51c893",
+    "data": [
+      {
+        "text": "расскажи правила",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
     "id": "e29fa4a4-3469-450e-bdd4-76d66db8650f",
     "data": [
       {

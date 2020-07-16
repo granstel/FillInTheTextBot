@@ -1,5 +1,22 @@
 [
   {
+    "id": "3fc9cbec-8788-496c-9e41-ccf4cb911881",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
     "id": "a367622b-817c-4d2d-ae7b-737e08015acc",
     "data": [
       {

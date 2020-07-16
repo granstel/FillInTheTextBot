@@ -1,0 +1,34 @@
+{
+  "id": "66faf4c5-7d8c-45cc-a710-195384d0d6d4",
+  "name": "TextRequest",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": [
+            "У меня пока нет такого текста, но мы что-нибудь придумаем! Давай пока сочиним про что-то ещё?",
+            "У меня ещё такого нет, но скоро может появиться! Давай сочиним про что-то ещё?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
