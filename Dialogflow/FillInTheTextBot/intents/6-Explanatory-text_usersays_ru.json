@@ -1,0 +1,128 @@
+[
+  {
+    "id": "3354022c-a99c-482d-ba8d-5804d4c13046",
+    "data": [
+      {
+        "text": "на работу",
+        "alias": "where-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "01dd1902-9ab4-4b6e-9f11-ee09663eacd6",
+    "data": [
+      {
+        "text": "червяк",
+        "alias": "animal-male-1",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "e538dc33-6f2a-4716-b3f4-c475319bf604",
+    "data": [
+      {
+        "text": "жужелица",
+        "alias": "animal-female-1",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "cb085052-6dea-4d9f-819e-da4760ea834e",
+    "data": [
+      {
+        "text": "в лифте",
+        "alias": "where-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "82b2315c-e044-4314-869e-f83161ecdee0",
+    "data": [
+      {
+        "text": "крабы",
+        "alias": "animals",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "eb458b56-8b53-409a-8e78-e66f7ea304fb",
+    "data": [
+      {
+        "text": "на улицу",
+        "alias": "where-3",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "fc2f2671-7ebf-4230-8b8e-1f96924c017b",
+    "data": [
+      {
+        "text": "тоша",
+        "alias": "person",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b600a93c-29e5-41b5-a8d6-d41f07d57d11",
+    "data": [
+      {
+        "text": "Антон",
+        "alias": "person",
+        "meta": "@sys.person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "fc2f2671-7ebf-4230-8b8e-1f96924c017b",
+    "data": [
+      {
+        "text": "тоша",
+        "alias": "person",
+        "meta": "@sys.person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

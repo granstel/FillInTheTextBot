@@ -1,0 +1,189 @@
+{
+  "id": "01e2556b-341a-426b-9067-d1b359fefbfe",
+  "name": "6-Explanatory-text",
+  "auto": true,
+  "contexts": [
+    "text-6"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DeleteAllContexts",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "fb74496a-c6de-4558-ad5d-6c6383d89103",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "text-name",
+          "value": "Сейчас будем придумывать \"объяснительную об опоздании.",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "44ba2e4f-08d2-4f61-b9c6-64dc6332ff1e",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "where-1",
+          "value": "$where-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, куда мы опоздали?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сначала скажи, куда мы опоздали?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "02879636-1daf-4e23-b057-635289482e74",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animal-male-1",
+          "value": "$animal-male-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь - животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "4368fe80-0c31-4a79-a998-90199af95968",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animal-female-1",
+          "value": "$animal-female-1",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Животное женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "fa45d5fb-1f61-4444-9d2a-57dbe2c1b064",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "where-2",
+          "value": "$where-2",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Где\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "da13bd4e-1aa1-4259-8128-1330ae9cc9d3",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "animals",
+          "value": "$animals",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Животное во множественном числе"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "bd7e3836-2563-4fb6-be16-39cb21bf9f74",
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "where-3",
+          "value": "$where-3",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Куда\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "d86f8b47-c909-4649-9d5f-491bc1e8fa7c",
+          "required": true,
+          "dataType": "@sys.person",
+          "name": "person",
+          "value": "$person",
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок: скажи имя твоего знакомого"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее: назови имя твоего знакомого"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": "Итак, объяснительная: Сегодня, когда я шел $where-1, на меня внезапно с дерева свалился мокрый $animal-male-1. Я закричал как вымирающая $animal-female-1 и потерял сознание. Очнулся я $where-2 и сказал: Отвезите меня $where-1, мне очень надо. Но эти $animals почему-то отвезли меня $where-3, и оттуда я шёл пешком, пока меня не подвёз пьяный $person. Вот почему я опоздал сегодня $where-1. Мне кажется, прикольно получилось! Может, ещё?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-6"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

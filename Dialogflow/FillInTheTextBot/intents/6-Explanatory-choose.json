@@ -1,36 +1,31 @@
 {
-  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
-  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - yes",
+  "id": "962a4d43-446e-4526-b4a5-8872512cc531",
+  "name": "6-Explanatory-choose",
   "auto": true,
-  "contexts": [
-    "EasyWelcome-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-6",
+          "parameters": {},
+          "lifespan": 50
+        },
+        {
+          "name": "6-Explanatory-choose-followup",
+          "parameters": {},
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "7ef99331-f0a8-47e8-8c28-b207e20dd358",
+          "id": "e7dbfc96-8725-4a07-9d5e-41fbf99da2ed",
           "required": false,
           "dataType": "@sys.any",
           "name": "textKey",
           "value": "text-6",
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
-        },
-        {
-          "id": "cd9b170b-e299-4fad-bc2c-bbe0696a6d30",
-          "required": false,
-          "dataType": "@sys.any",
-          "name": "resetTextIndex",
-          "value": "true",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -45,8 +40,8 @@
           "condition": "",
           "speech": [
             "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Отлично!",
+            "Начнём!"
           ]
         }
       ],
