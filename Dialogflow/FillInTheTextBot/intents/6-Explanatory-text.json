@@ -1,5 +1,7 @@
 {
   "id": "01e2556b-341a-426b-9067-d1b359fefbfe",
+  "parentId": "962a4d43-446e-4526-b4a5-8872512cc531",
+  "rootParentId": "962a4d43-446e-4526-b4a5-8872512cc531",
   "name": "6-Explanatory-text",
   "auto": true,
   "contexts": [
