@@ -1,5 +1,54 @@
 [
   {
+    "id": "d0680d62-90f3-4617-90fa-f0549f670e7d",
+    "data": [
+      {
+        "text": "го",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b0b3b77b-0ba5-4d98-b891-be3e413d11b8",
+    "data": [
+      {
+        "text": "да очень весело",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5535c579-fb6f-4a2e-a34f-22094e59af2d",
+    "data": [
+      {
+        "text": "игра",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "47918d3d-e553-4398-b980-6c8d3123f68b",
+    "data": [
+      {
+        "text": "продолжить",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
     "id": "3fc9cbec-8788-496c-9e41-ccf4cb911881",
     "data": [
       {

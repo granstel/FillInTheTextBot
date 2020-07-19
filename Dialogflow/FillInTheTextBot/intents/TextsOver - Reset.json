@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "ecc3e9f3-ca76-4cb4-b705-a3302e1056cc",
+          "id": "507f9865-fac4-4ccc-9763-134ee46bb7da",
           "required": false,
           "dataType": "@sys.any",
           "name": "resetTextIndex",

@@ -89,12 +89,12 @@
       {
         "text": "тоша",
         "alias": "person",
-        "meta": "@sys.any",
-        "userDefined": false
+        "meta": "@sys.person",
+        "userDefined": true
       }
     ],
     "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "updated": 0
   },
   {
@@ -102,20 +102,6 @@
     "data": [
       {
         "text": "Антон",
-        "alias": "person",
-        "meta": "@sys.person",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "fc2f2671-7ebf-4230-8b8e-1f96924c017b",
-    "data": [
-      {
-        "text": "тоша",
         "alias": "person",
         "meta": "@sys.person",
         "userDefined": false
