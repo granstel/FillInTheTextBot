@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "9960035f-3017-42d7-b97b-d0871521b191",
+          "id": "41786979-6d60-43ea-999b-9448738ca7b7",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
@@ -26,7 +26,7 @@
           "isList": false
         },
         {
-          "id": "c166b5d9-693c-4988-b2bc-2a711330fcce",
+          "id": "dfa6367e-2e36-4bbb-8f72-b213d66def0b",
           "required": true,
           "dataType": "@sys.any",
           "name": "where-1",
@@ -48,7 +48,7 @@
           "isList": false
         },
         {
-          "id": "5fff0e3f-cea8-424f-8b02-5a8568388cd8",
+          "id": "b8a1c49e-0da3-43d2-a4fc-4d714a62a2eb",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-male-1",
@@ -70,7 +70,7 @@
           "isList": false
         },
         {
-          "id": "5897e64b-d2df-468c-98de-b55bcad7cc3e",
+          "id": "0def4a10-556c-401d-b99c-12eaeb336a7c",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-female-1",
@@ -88,7 +88,7 @@
           "isList": false
         },
         {
-          "id": "42473cf7-096f-40dd-82c0-ccb8678f93fa",
+          "id": "4cf1a7f6-0bd2-49f0-bbe3-6e3da14042c0",
           "required": true,
           "dataType": "@sys.any",
           "name": "where-2",
@@ -106,7 +106,7 @@
           "isList": false
         },
         {
-          "id": "b73dbf14-c27f-4f3c-a8dd-03f677c36254",
+          "id": "c93e1bb9-475a-4e03-b64f-5b444546f371",
           "required": true,
           "dataType": "@sys.any",
           "name": "animals",
@@ -124,7 +124,7 @@
           "isList": false
         },
         {
-          "id": "522bf545-c7d8-47ee-825e-50092390f4a8",
+          "id": "bd39c231-387f-4adb-aed8-57bed1917ef7",
           "required": true,
           "dataType": "@sys.any",
           "name": "where-3",
@@ -142,7 +142,7 @@
           "isList": false
         },
         {
-          "id": "3be3f966-8fb4-4a84-94e8-43cb93a427e3",
+          "id": "b9da20b2-b043-4994-8c5b-4e7471f5b87d",
           "required": true,
           "dataType": "@sys.person",
           "name": "person",
@@ -169,7 +169,7 @@
           "type": 0,
           "lang": "ru",
           "condition": "",
-          "speech": "Итак, объяснительная: Сегодня, когда я шел $where-1, на меня внезапно с дерева свалился мокрый $animal-male-1. Я закричал как вымирающая $animal-female-1 и потерял сознание. Очнулся я $where-2 и сказал: Отвезите меня $where-1, мне очень надо. Но эти $animals почему-то отвезли меня $where-3, и оттуда я шёл пешком, пока меня не подвёз пьяный $person. Вот почему я опоздал сегодня $where-1. Мне кажется, прикольно получилось! Может, ещё?"
+          "speech": "Итак, объяснительная: Сегодня, когда я шел $where-1, на меня внезапно с дерева свалился мокрый $animal-male-1. Я закричал как вымирающая $animal-female-1 и потерял сознание. Очнулся я $where-2 и сказал: Отвезите меня $where-1, мне очень надо. Но эти $animals почему-то отвезли меня $where-3, и оттуда я шёл пешком, пока меня не подвёз пьяный $person. Вот почему я опоздал сегодня $where-1. \n- Мне кажется, прикольно получилось! Может, ещё?"
         }
       ],
       "defaultResponsePlatforms": {},

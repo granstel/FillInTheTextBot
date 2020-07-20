@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c10778be-fc4b-45b5-99d2-3b25b17c9ed2",
+          "id": "1866075b-e9c1-49e7-840f-f5bb6cfd53b7",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
@@ -26,7 +26,7 @@
           "isList": false
         },
         {
-          "id": "fe45ef65-f73a-4449-90db-e93fefd362a4",
+          "id": "a0395223-516e-45e5-bf70-d6b1bc93cb2d",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-female",
@@ -48,7 +48,7 @@
           "isList": false
         },
         {
-          "id": "9236f5c9-ac6b-43f3-87d0-e5a5be1b7d86",
+          "id": "621ce93d-df44-4140-8def-45d16ce573ab",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-female-1",
@@ -66,7 +66,7 @@
           "isList": false
         },
         {
-          "id": "68f31ee5-ce01-4291-a1f8-6cf07c78a0ce",
+          "id": "e21b6961-79f8-496d-8b53-99555facf855",
           "required": true,
           "dataType": "@sys.any",
           "name": "action-female",
@@ -84,7 +84,7 @@
           "isList": false
         },
         {
-          "id": "7b7dec29-18b0-4e51-b8ec-b0fdfc5fac09",
+          "id": "7c4f0d22-9fab-4048-955f-be785f5cd305",
           "required": true,
           "dataType": "@sys.any",
           "name": "big-thing",
@@ -106,7 +106,7 @@
           "isList": false
         },
         {
-          "id": "18622db5-92ac-4d20-9411-286a8b8b3748",
+          "id": "972cc158-e9ad-49ef-8c37-c4066c45dbd3",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-male-1",
@@ -124,7 +124,7 @@
           "isList": false
         },
         {
-          "id": "0e547752-cff7-4efd-8e93-701acffaab62",
+          "id": "f3fe9e2b-70ae-43a2-855d-1eaafe8922de",
           "required": true,
           "dataType": "@sys.any",
           "name": "furniture",
@@ -146,7 +146,7 @@
           "isList": false
         },
         {
-          "id": "cc32c12c-926d-4f7a-b0cb-a79981813f95",
+          "id": "5182840d-6eec-4016-979a-6e176dc66679",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-male-2",
@@ -164,7 +164,7 @@
           "isList": false
         },
         {
-          "id": "d4ffc77c-57b5-4889-a54c-babcbb7be9c1",
+          "id": "81c9d745-6ba3-4e4b-aa16-f9637d0a7e78",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-male-1",
@@ -190,7 +190,7 @@
           "isList": false
         },
         {
-          "id": "17c2e14d-cb7e-4ceb-ae49-913fb4eeabe4",
+          "id": "ab9b8a5d-d028-46e1-9da5-af330bb94687",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-male-3",
@@ -208,7 +208,7 @@
           "isList": false
         },
         {
-          "id": "4ab13e9a-045d-495e-a842-114254c96b5b",
+          "id": "ef3b1753-5c95-4ef5-a944-4423e00e35ff",
           "required": true,
           "dataType": "@sys.any",
           "name": "animal-male-2",
@@ -226,7 +226,7 @@
           "isList": false
         },
         {
-          "id": "b9264665-f272-4b9f-9c63-2dfa7dd35471",
+          "id": "3873f9aa-38d8-4740-aade-3c826fbecbb6",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-male-4",
@@ -249,7 +249,7 @@
           "type": 0,
           "lang": "ru",
           "condition": "",
-          "speech": "Вот что у нас получилось: Жили-были старик со старухой у самого синего моря. Старуха $action-female, старик ловил рыбу. Однажды забросил он невод в море, вытащил его, а в нем странная золотая рыбка.\n- Ну, что молчишь? - молвила рыбка. - Говори желание!\n- Эх, корыто у старухи развалилось! Давай стиральную машину, что ли...\n- Будет тебе стиральная машина! - сказала рыбка. - А что еще?\n- Давай еще $adjective-male-1 $big-thing и $adjective-male-2 $furniture!\nОтпустил старик рыбку в море, пошел домой, и видит рядом со своей избушкой такую картину: стоит $adjective-male-3 $animal-male-1, на нём $$adjective-female-1 $animal-female, еще выше $adjective-male-4 $animal-male-2, а на самой верхушке стоит его старуха и боится пошевельнуться.\n\"Что-то перепутала рыбка, - подумал старик. - Но прикольно получилось! Цирк, да и только!\"\n...По-моему, отличная история! Сочиним ещё?"
+          "speech": "Вот что у нас получилось: Жили-были старик со старухой у самого синего моря. Старуха $action-female, старик ловил рыбу. Однажды забросил он невод в море, вытащил его, а в нем странная золотая рыбка.\n- Ну, что молчишь? - молвила рыбка. - Говори желание!\n- Эх, корыто у старухи развалилось! Давай стиральную машину, что ли...\n- Будет тебе стиральная машина! - сказала рыбка. - А что еще?\n- Давай еще $adjective-male-1 $big-thing и $adjective-male-2 $furniture!\nОтпустил старик рыбку в море, пошел домой, и видит рядом со своей избушкой такую картину: стоит $adjective-male-3 $animal-male-1, на нём $$adjective-female-1 $animal-female, еще выше $adjective-male-4 $animal-male-2, а на самой верхушке стоит его старуха и боится пошевельнуться.\n\"Что-то перепутала рыбка, - подумал старик. - Но прикольно получилось! Цирк, да и только!\"\n- По-моему, отличная история! Сочиним ещё?"
         }
       ],
       "defaultResponsePlatforms": {},

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "4e17510b-23c6-4b6d-acac-19e7502f1fe3",
+    "data": [
+      {
+        "text": "аделаида",
+        "alias": "person-female",
+        "meta": "@sys.person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "148cf081-7a0e-4fc8-abf3-c7fde16aaf26",
+    "data": [
+      {
+        "text": "страшная",
+        "alias": "adjective-female",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "8000c58e-ff30-49ed-abaf-77d6acd6ca16",
+    "data": [
+      {
+        "text": "франкенштейн",
+        "alias": "person-male",
+        "meta": "@sys.person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "0c2bfb5c-d2fd-4a2c-a0db-dc17255a68a7",
+    "data": [
+      {
+        "text": "c гвоздем в башке",
+        "alias": "adjective-male-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "9858dde1-0150-46a5-be35-184ff5208192",
+    "data": [
+      {
+        "text": "хомяк",
+        "alias": "animal",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "8014e9b4-beda-4381-b889-8c42f834cf56",
+    "data": [
+      {
+        "text": "пушистенькой",
+        "alias": "adjective-male-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "b54f4dc4-0c79-4b7b-b30f-4ab62c40f6cf",
+    "data": [
+      {
+        "text": "бегал в колесе",
+        "alias": "action-1",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "8f2a96ab-304e-4824-9c54-08c18d78ab45",
+    "data": [
+      {
+        "text": "гиря",
+        "alias": "thing",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "86a47317-dc19-4098-b3a7-1eb56a90f17d",
+    "data": [
+      {
+        "text": "темно бордовый с потеками",
+        "alias": "adjective-male-3",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "17dd95d9-eb64-4d03-a9b5-7c39ec391c83",
+    "data": [
+      {
+        "text": "спать",
+        "alias": "action-2",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "fb7e4571-5d4f-4b66-b0d2-ddfdc168df50",
+    "data": [
+      {
+        "text": "на кудыкину гору",
+        "alias": "where",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  }
+]

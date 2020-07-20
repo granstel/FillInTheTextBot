@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "a740381b-dc5f-4c93-9b3e-b989c7542f57",
+          "id": "7af863ba-de58-4436-a2cb-04fd364f7d71",
           "required": false,
           "dataType": "@sys.any",
           "name": "text-name",
@@ -26,7 +26,7 @@
           "isList": false
         },
         {
-          "id": "4a7aa089-87fd-4243-886e-da0ea2b6ae91",
+          "id": "bd5046a5-cab5-4051-be46-75407d39cf3d",
           "required": true,
           "dataType": "@sys.person",
           "name": "person-1",
@@ -44,7 +44,7 @@
           "isList": false
         },
         {
-          "id": "a658b9f9-5b11-4219-88f1-8e2fb50dcbdf",
+          "id": "f5be0b20-49ae-4f79-86c9-72665910e0b0",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-1",
@@ -62,7 +62,7 @@
           "isList": false
         },
         {
-          "id": "cf14bd67-0ecf-467c-b16a-3cb75f36e328",
+          "id": "836c330d-0769-4f3c-8c44-c9950bef9a4a",
           "required": true,
           "dataType": "@sys.person",
           "name": "person-2",
@@ -80,7 +80,7 @@
           "isList": false
         },
         {
-          "id": "147bf022-55d6-4644-bdf9-ea81bfb35dab",
+          "id": "6e149db7-003b-4b2f-9af5-62fb8670f395",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-2",
@@ -98,7 +98,7 @@
           "isList": false
         },
         {
-          "id": "9f8936ba-8977-4395-9d76-36b200f69417",
+          "id": "33831bc7-61eb-4073-874d-ba6fbffa0c5b",
           "required": true,
           "dataType": "@sys.any",
           "name": "thing-1",
@@ -116,7 +116,7 @@
           "isList": false
         },
         {
-          "id": "aff69579-aa29-452f-8138-d7ee10d9c076",
+          "id": "249004d4-cfec-463d-8ea1-3d29d5aa0391",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-3",
@@ -134,7 +134,7 @@
           "isList": false
         },
         {
-          "id": "2af2b107-c373-4eae-a5fa-cd6983fedda1",
+          "id": "72185a2e-6950-4ebb-8c57-c7a43b7d1058",
           "required": true,
           "dataType": "@sys.any",
           "name": "thing-2",
@@ -152,7 +152,7 @@
           "isList": false
         },
         {
-          "id": "a43e0ab4-516f-4481-89db-f594e09e6361",
+          "id": "e46afc7f-9e51-4f0f-b7bf-3abcc33747c5",
           "required": true,
           "dataType": "@sys.any",
           "name": "adjective-4",
@@ -175,7 +175,7 @@
           "type": 0,
           "lang": "ru",
           "condition": "",
-          "speech": "Внимание! Вот что у нас получилось: Вчера я ходила в цирк. Сначала на арену выскочил $adjective-1 $person-1. За ним выполз $adjective-2 $person-2. И они бросались тухлой рыбой целый час! Потом вышел клоун, и в руках у него был $adjective-3 $thing-2. Клоун бросил этот $thing-2 в зрителей, и попал прямо в меня! Я обиделась, достала из кармана $adjective-4 $thing-1, кинула в клоуна и попала прямо в лоб! Мне понравился этот цирк!\n...По-моему получилась прикольная история! Сочиним ещё?"
+          "speech": "Внимание! Вот что у нас получилось: Вчера я ходила в цирк. Сначала на арену выскочил $adjective-1 $person-1. За ним выполз $adjective-2 $person-2. И они бросались тухлой рыбой целый час! Потом вышел клоун, и в руках у него был $adjective-3 $thing-2. Клоун бросил этот $thing-2 в зрителей, и попал прямо в меня! Я обиделась, достала из кармана $adjective-4 $thing-1, кинула в клоуна и попала прямо в лоб! Мне понравился этот цирк!\n- По-моему получилась прикольная история! Сочиним ещё?"
         }
       ],
       "defaultResponsePlatforms": {},

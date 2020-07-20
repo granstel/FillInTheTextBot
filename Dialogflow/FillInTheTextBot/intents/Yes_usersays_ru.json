@@ -1,6 +1,30 @@
 [
   {
-    "id": "e983f49b-e2f0-41c8-afc2-bf653bab49b4",
+    "id": "e8974514-139a-4970-aba7-00443fa9fefb",
+    "data": [
+      {
+        "text": "стоит",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "9814be03-7731-44ec-a38f-166b9afb3a91",
+    "data": [
+      {
+        "text": "ну",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "294b3eda-81af-4485-baa5-c42f72756b75",
     "data": [
       {
         "text": "игра",
@@ -13,7 +37,7 @@
     "updated": 0
   },
   {
-    "id": "fba924d3-38b0-42cb-829b-1dbde3f100ec",
+    "id": "c3485eaf-fcda-411f-8be5-ba8bb4a57fd6",
     "data": [
       {
         "text": "продолжить",
@@ -25,7 +49,7 @@
     "updated": 0
   },
   {
-    "id": "3e476ef3-590f-416a-80d3-4e2b46fb277e",
+    "id": "ba04ec25-9921-4c0d-9c09-18a96727b56f",
     "data": [
       {
         "text": "да очень весело",
@@ -37,7 +61,7 @@
     "updated": 0
   },
   {
-    "id": "287ccfbc-904a-466b-8063-41e8ea885a8c",
+    "id": "7477b0ea-5e67-49bb-861b-f3e33c2894c2",
     "data": [
       {
         "text": "го",
@@ -49,7 +73,7 @@
     "updated": 0
   },
   {
-    "id": "28c15955-e3ef-4d91-be90-052eb88946ba",
+    "id": "2a481ada-f9b8-49fe-b589-b16963482ded",
     "data": [
       {
         "text": "играем",
@@ -61,7 +85,7 @@
     "updated": 0
   },
   {
-    "id": "3b24357e-6387-4b62-8b3b-17adcde18fa9",
+    "id": "657cdefc-07c2-4e3a-a2f3-c0f7925d905d",
     "data": [
       {
         "text": "давай ",
@@ -78,7 +102,7 @@
     "updated": 0
   },
   {
-    "id": "0048f4fb-760a-4286-be75-c96ca7dd7eea",
+    "id": "ac429bb0-5820-4960-9e92-3e05a784d3ad",
     "data": [
       {
         "text": "дп",
@@ -90,7 +114,7 @@
     "updated": 0
   },
   {
-    "id": "d18d4e8f-5f74-459e-b0f9-6981fd5b902a",
+    "id": "471b4dc2-993f-4954-99c4-5f9171dccf87",
     "data": [
       {
         "text": "угу",
@@ -103,7 +127,7 @@
     "updated": 0
   },
   {
-    "id": "7ed96572-fd97-4682-a64f-d233e25a5a3d",
+    "id": "8535d40a-6454-4f26-9ad9-087f19497cdb",
     "data": [
       {
         "text": "давай еще сочиним",
@@ -115,7 +139,7 @@
     "updated": 0
   },
   {
-    "id": "3820d1fb-8aa6-4cbc-bf43-ad04aad99cda",
+    "id": "2394bebf-1c32-41de-9027-5c1736bf1e56",
     "data": [
       {
         "text": "еще ",
@@ -132,7 +156,7 @@
     "updated": 0
   },
   {
-    "id": "35ebd0d4-81cb-4338-822f-5d2c29ff218d",
+    "id": "f7d2afd0-4797-4629-915e-c6b79d05249a",
     "data": [
       {
         "text": "да еще ",
@@ -149,7 +173,7 @@
     "updated": 0
   },
   {
-    "id": "89080961-4363-4b5a-97d9-56464a3fa5e5",
+    "id": "a472cd46-213f-4035-8a85-083de5ee8375",
     "data": [
       {
         "text": "заново",
@@ -162,7 +186,7 @@
     "updated": 0
   },
   {
-    "id": "67cb17f1-3ddc-4dcc-91a0-2c42f443ef06",
+    "id": "446ee3ca-1754-4fb5-9c35-d93fde169a42",
     "data": [
       {
         "text": "давай еще ",
@@ -183,7 +207,7 @@
     "updated": 0
   },
   {
-    "id": "f74b4f6e-b735-4a79-bf22-aef9c199cc9d",
+    "id": "b5420a9f-3f45-4815-9d29-9e55b9916bbe",
     "data": [
       {
         "text": "заново заново заново",
@@ -195,7 +219,7 @@
     "updated": 0
   },
   {
-    "id": "5c6fbde4-8764-4c40-8f4a-92e7d087af07",
+    "id": "317ec9ed-bc2c-4703-ab92-b1c234328be7",
     "data": [
       {
         "text": "еще ",
@@ -216,7 +240,7 @@
     "updated": 0
   },
   {
-    "id": "4d998507-f6c9-44e9-b313-cc555df03546",
+    "id": "0f125e78-50ed-4e72-a0a7-b1580699cb5c",
     "data": [
       {
         "text": "включай занимательные истории",
@@ -228,7 +252,7 @@
     "updated": 0
   },
   {
-    "id": "ba003549-3cd7-47e1-972e-66c23f588f59",
+    "id": "577de8eb-8045-49b6-836d-839ea904f0ca",
     "data": [
       {
         "text": "хочу",
@@ -240,7 +264,7 @@
     "updated": 0
   },
   {
-    "id": "18e3f357-4438-4c85-93f9-4674acd54310",
+    "id": "7e52513a-0421-4200-bec9-db4d664ad5a9",
     "data": [
       {
         "text": "продолжаем",
@@ -252,7 +276,7 @@
     "updated": 0
   },
   {
-    "id": "15e2fc73-92ff-4f2c-b941-75db52405a15",
+    "id": "835e5339-63cd-4089-bc2d-25c3bc9db48b",
     "data": [
       {
         "text": "приступим",
@@ -264,7 +288,7 @@
     "updated": 0
   },
   {
-    "id": "46dd81c2-9aa9-43a4-9f8f-2b05ca0ac0d8",
+    "id": "e4a50705-d89c-4ecd-a17f-08312e4b9e22",
     "data": [
       {
         "text": "алиса",
@@ -281,7 +305,7 @@
     "updated": 0
   },
   {
-    "id": "5ae3742b-c340-4f20-946d-23a512aaf78d",
+    "id": "66f665cf-0bec-405e-baaf-5f5172140c69",
     "data": [
       {
         "text": "начнем",
@@ -293,7 +317,7 @@
     "updated": 0
   },
   {
-    "id": "fd94e1b0-edb2-4bc6-b227-62f46a1bed47",
+    "id": "e65dd80c-6d5b-4195-8246-3c35668a9efe",
     "data": [
       {
         "text": "ага",
@@ -306,7 +330,7 @@
     "updated": 0
   },
   {
-    "id": "d00ffbe9-3a2f-491e-b08e-ba0e2f4750fe",
+    "id": "259188f1-3395-4439-bfbc-ffd34a2de311",
     "data": [
       {
         "text": "да",
@@ -318,7 +342,7 @@
     "updated": 0
   },
   {
-    "id": "513e244e-1e0e-47b8-b390-7bcf33350b3c",
+    "id": "bd9a0555-271c-4527-bb8b-ac8cdd791e03",
     "data": [
       {
         "text": "Начинаем",
@@ -330,7 +354,7 @@
     "updated": 0
   },
   {
-    "id": "2935d2d0-4703-45f7-a67c-34cf3ae2d6fb",
+    "id": "f55dda12-c24a-4ef9-bae5-402a363cde8a",
     "data": [
       {
         "text": "Начали",
@@ -342,7 +366,7 @@
     "updated": 0
   },
   {
-    "id": "85c805f7-8296-4e62-8136-8aba2cf0377a",
+    "id": "366ca77f-b379-4643-ae6d-40d49f2d718a",
     "data": [
       {
         "text": "погнали",
@@ -355,7 +379,7 @@
     "updated": 0
   },
   {
-    "id": "bd1eb8f3-c982-4e77-8a7f-27ac7ededbc1",
+    "id": "b3400493-ff8b-4ac9-8b8d-a12ab3eba5a1",
     "data": [
       {
         "text": "поехали",
@@ -367,7 +391,7 @@
     "updated": 0
   },
   {
-    "id": "f3f59fc4-8133-48b5-907f-7d86b0946892",
+    "id": "2d823365-9cf1-474d-87b3-764e8ca2f58c",
     "data": [
       {
         "text": "давай",
@@ -379,7 +403,7 @@
     "updated": 0
   },
   {
-    "id": "1b7857c4-a104-402e-9966-6ffd7a0fb22d",
+    "id": "ae344dd8-c5d4-4211-9c0f-ef3111e13b61",
     "data": [
       {
         "text": "давай дальше",
@@ -391,7 +415,7 @@
     "updated": 0
   },
   {
-    "id": "4736ed32-03b2-4cff-a340-e161f5b43a85",
+    "id": "516d3b26-185d-40c8-8556-b76fe4a550a2",
     "data": [
       {
         "text": "давай еще",
@@ -403,7 +427,7 @@
     "updated": 0
   },
   {
-    "id": "9f5b0f00-4c2e-434a-8fae-9822cc180cbb",
+    "id": "25c0624c-f2a4-4fc3-bf0a-a227899e4e92",
     "data": [
       {
         "text": "ну да",
@@ -415,7 +439,7 @@
     "updated": 0
   },
   {
-    "id": "095d6f7f-8e3b-4c55-8a72-685a6d67245d",
+    "id": "22c025f1-518a-4665-9e6b-8fb95a90cd46",
     "data": [
       {
         "text": "lf",
@@ -428,7 +452,7 @@
     "updated": 0
   },
   {
-    "id": "9136308f-f05d-43dc-98c7-451dc6d2436b",
+    "id": "1c5e4d36-734c-44fd-b063-b48022de0975",
     "data": [
       {
         "text": "Поехали",
@@ -441,7 +465,7 @@
     "updated": 0
   },
   {
-    "id": "8f220770-b502-43d5-9631-25a3807b304b",
+    "id": "af6faa26-b88e-40f2-991c-c5a1c3663f39",
     "data": [
       {
         "text": "начинай",
@@ -453,7 +477,7 @@
     "updated": 0
   },
   {
-    "id": "700d8083-63be-4d6b-9854-2c008fa97deb",
+    "id": "94430f52-00db-4ed0-aa59-482bee813efb",
     "data": [
       {
         "text": "Да",
@@ -466,7 +490,7 @@
     "updated": 0
   },
   {
-    "id": "7df90d00-a66a-4650-b2a3-3686bcd934f1",
+    "id": "8e99f479-eeea-4f0b-a07e-6aa5b14c944e",
     "data": [
       {
         "text": "готовы",
@@ -478,7 +502,7 @@
     "updated": 0
   },
   {
-    "id": "3af436cd-131c-412b-a3f4-a5b7363ae29c",
+    "id": "afe53bb1-d67c-419b-a138-90c7ad4e751a",
     "data": [
       {
         "text": "готова",
@@ -490,7 +514,7 @@
     "updated": 0
   },
   {
-    "id": "8e972007-55ca-47df-8762-8daae67e186e",
+    "id": "0ef4ee9a-da58-4d9d-8f76-73d0e9b38158",
     "data": [
       {
         "text": "готов",
@@ -502,7 +526,7 @@
     "updated": 0
   },
   {
-    "id": "ddb4457e-11d1-4490-bc49-1a6e53a6e321",
+    "id": "babef934-2b5d-4c7a-b7fb-8cb318a50423",
     "data": [
       {
         "text": "Я готова",
@@ -514,7 +538,7 @@
     "updated": 0
   },
   {
-    "id": "096f28ba-287b-454f-8c8c-de22503fd6c1",
+    "id": "545af000-228a-491b-bac0-fbf82d73acf5",
     "data": [
       {
         "text": "Мы готовы",
@@ -526,7 +550,7 @@
     "updated": 0
   },
   {
-    "id": "c9989b9b-c636-41e8-a354-7379cdab5b03",
+    "id": "f737b230-89fd-45f2-8041-be4b70e1d9ac",
     "data": [
       {
         "text": "Я готов",
@@ -538,7 +562,7 @@
     "updated": 0
   },
   {
-    "id": "0df328f7-f6d5-4f1b-9e09-a695eddcaddb",
+    "id": "d0448614-3da2-44e7-8a89-eb9be774bc4c",
     "data": [
       {
         "text": "Вперёд",

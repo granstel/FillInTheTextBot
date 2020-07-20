@@ -1,0 +1,74 @@
+[
+  {
+    "id": "33bbf996-55a4-4182-8020-c8fabfaede19",
+    "data": [
+      {
+        "text": "давай про колобка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "4b88cb53-03d4-4900-b6fb-ab67cfb4e2ee",
+    "data": [
+      {
+        "text": "давай про колобка уже",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "8310202c-2b5e-4909-b732-f4a947d39b43",
+    "data": [
+      {
+        "text": "колобок",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "24dfd638-4e68-43ce-844d-910a339315e0",
+    "data": [
+      {
+        "text": "про колобка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e60f85bc-eeb6-4ab4-9f81-a48325b179da",
+    "data": [
+      {
+        "text": "про нового колобка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "93de682e-2ed5-4fa1-83a8-1047fda4731f",
+    "data": [
+      {
+        "text": "новый колобок",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

@@ -1,6 +1,132 @@
 [
   {
-    "id": "eda655a2-d560-4be9-aa07-10a58b602169",
+    "id": "f828cb1c-49b7-4395-8513-913394ac79be",
+    "data": [
+      {
+        "text": "тюлениха",
+        "alias": "animal-female",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "8b977e61-35ac-48bc-b450-00d806c9eb2b",
+    "data": [
+      {
+        "text": "теплоход",
+        "alias": "big-thing",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "0542ae7b-dacf-41c4-9f34-063b8213f5e4",
+    "data": [
+      {
+        "text": "белый",
+        "alias": "adjective-male-1",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "ed14876d-c253-42c7-ba95-f023ea3bda65",
+    "data": [
+      {
+        "text": "диван",
+        "alias": "furniture",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "f795882b-7536-422e-8d34-b25f133a9a42",
+    "data": [
+      {
+        "text": "высокий",
+        "alias": "adjective-male-2",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "05a156eb-caab-4991-802a-d95e8fa8b06c",
+    "data": [
+      {
+        "text": "бобр",
+        "alias": "animal-male-1",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "e381b43d-c5f0-4c01-a841-da4c0367ce62",
+    "data": [
+      {
+        "text": "седой",
+        "alias": "adjective-male-2",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "9c66c9b6-6266-4528-8e48-22967bc5ac61",
+    "data": [
+      {
+        "text": "аллигатор",
+        "alias": "animal-male-2",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "3bf9cc6e-e9db-4997-9ac6-b7a562353fd7",
+    "data": [
+      {
+        "text": "водоплавающий",
+        "alias": "adjective-male-3",
+        "meta": "@sys.any",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "6a5a0859-e383-4619-89d6-90ed0cecf829",
     "data": [
       {
         "text": "олениха",
@@ -14,7 +140,7 @@
     "updated": 0
   },
   {
-    "id": "890bcac3-cfbb-4692-a274-4d300f7f2ca6",
+    "id": "0d7b8d3a-1f12-49a9-8461-f2260c2dfec7",
     "data": [
       {
         "text": "пятнистая",
@@ -28,7 +154,7 @@
     "updated": 0
   },
   {
-    "id": "2f03dcae-abea-42a5-b525-3d7f6da74368",
+    "id": "a65b8938-09d6-46d8-be91-75182f5518c3",
     "data": [
       {
         "text": "забиралась на дерево",
@@ -42,7 +168,7 @@
     "updated": 0
   },
   {
-    "id": "1c04da25-5299-4d01-a03d-053219037f88",
+    "id": "e86a47fd-b9c9-4b04-8aa5-730e260f1604",
     "data": [
       {
         "text": "поезд",
@@ -56,7 +182,7 @@
     "updated": 0
   },
   {
-    "id": "0f40e62b-2fdf-4a1f-81c8-e4c056c46e0c",
+    "id": "4cbf3453-634c-452c-afe1-cecd76c68da4",
     "data": [
       {
         "text": "голубой",
@@ -70,7 +196,7 @@
     "updated": 0
   },
   {
-    "id": "550d2c9f-9fbe-4ce3-9f1a-427276d4f4d2",
+    "id": "a7f46f47-889d-4a2c-ac98-1295a59ee35e",
     "data": [
       {
         "text": "стул",
@@ -84,7 +210,7 @@
     "updated": 0
   },
   {
-    "id": "11191606-d7b0-4772-8d42-d9c90fa3b9f1",
+    "id": "a985b2bf-a11d-427f-9f0f-24f5c96d571e",
     "data": [
       {
         "text": "колченогий",
@@ -98,7 +224,7 @@
     "updated": 0
   },
   {
-    "id": "40081f72-765a-4dab-968a-397a5c18f2b2",
+    "id": "baf33d19-11af-429c-9cb4-c1c064bf949a",
     "data": [
       {
         "text": "мамонт",
@@ -112,7 +238,7 @@
     "updated": 0
   },
   {
-    "id": "bcd0af41-ca7d-49fb-9d3a-c41c48b1237c",
+    "id": "99a03e46-cbab-4466-91ba-3aaf69fdc744",
     "data": [
       {
         "text": "древний",
@@ -126,7 +252,7 @@
     "updated": 0
   },
   {
-    "id": "b94ab57e-6495-4636-9c09-3e8aaa4f34a5",
+    "id": "de659a88-1ef8-4790-9a69-dc3f4da69fb6",
     "data": [
       {
         "text": "тигр",
@@ -140,7 +266,7 @@
     "updated": 0
   },
   {
-    "id": "789ada8a-b3d3-4c65-9e7e-1e3b8193e790",
+    "id": "59d8f79b-cc77-4165-abb1-f1c79497a864",
     "data": [
       {
         "text": "быстрый",
@@ -154,7 +280,7 @@
     "updated": 0
   },
   {
-    "id": "2422ff3c-edbc-4004-86d4-637c577b4202",
+    "id": "6a20b0bc-07a0-49fb-8e65-1f73bf3a9ade",
     "data": [
       {
         "text": "рогатый",
@@ -168,7 +294,7 @@
     "updated": 0
   },
   {
-    "id": "da6ee332-5531-4740-b0c0-7cf6192e8304",
+    "id": "3e151f3a-b436-407a-b997-1f44c4026e3c",
     "data": [
       {
         "text": "лев",
@@ -182,7 +308,7 @@
     "updated": 0
   },
   {
-    "id": "6edb8981-955c-4980-923f-e1c32d62ee2c",
+    "id": "56eeb56a-fd65-42b8-80c0-6a2c3676a3c0",
     "data": [
       {
         "text": "грубый",
@@ -196,7 +322,7 @@
     "updated": 0
   },
   {
-    "id": "e1671ab6-c477-48f9-9e46-6c4b20111e94",
+    "id": "728633d9-a2e8-49e7-811b-e38721f900c4",
     "data": [
       {
         "text": "бегемот",
@@ -210,7 +336,7 @@
     "updated": 0
   },
   {
-    "id": "02a0fca8-f375-4bf5-bae0-90bec7c5fb12",
+    "id": "ad6ac7b7-1f2c-46eb-839f-63fdc57eb201",
     "data": [
       {
         "text": "вонючий",
@@ -224,21 +350,7 @@
     "updated": 0
   },
   {
-    "id": "7d47417d-dee0-4a27-8ca6-9ff79b23fc22",
-    "data": [
-      {
-        "text": "диван",
-        "alias": "furniture",
-        "meta": "@sys.any",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "8e0a8b84-b8e2-4a48-9316-258221af5683",
+    "id": "aaec84ce-1d8f-4dcf-96d2-884d37e76afd",
     "data": [
       {
         "text": "дряхлый",
@@ -252,7 +364,7 @@
     "updated": 0
   },
   {
-    "id": "33265d0a-58df-4f94-82b8-cbab28436cb0",
+    "id": "49c85948-321e-457b-8958-3b1a1021ca57",
     "data": [
       {
         "text": "мусоровоз",
@@ -266,7 +378,7 @@
     "updated": 0
   },
   {
-    "id": "551a7df4-d76e-4c31-bf0c-31e1e8a25055",
+    "id": "d066ed30-b18e-4dec-9ef2-ce377dcb4e3b",
     "data": [
       {
         "text": "играла в футбол",
@@ -280,7 +392,7 @@
     "updated": 0
   },
   {
-    "id": "c95dee94-249f-4848-903d-8b500e5b5080",
+    "id": "36b165a0-3c23-42ac-90c4-4d59ee42ccfd",
     "data": [
       {
         "text": "жуткая",
@@ -294,7 +406,7 @@
     "updated": 0
   },
   {
-    "id": "482d9552-135a-49d7-9689-e788f1813119",
+    "id": "a01b558a-cbf9-4852-a3a2-1b502566ef3c",
     "data": [
       {
         "text": "корова",
