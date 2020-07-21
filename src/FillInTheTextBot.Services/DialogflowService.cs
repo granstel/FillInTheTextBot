@@ -20,6 +20,8 @@ namespace FillInTheTextBot.Services
         private const string WelcomeEventName = "Welcome";
         private const string EasyWelcomeEventName = "EasyWelcome";
         private const string ErrorEventName = "Error";
+        
+        private const int MaximumRequestLength = 50;
 
         private readonly Dictionary<string, string> _commandDictionary = new Dictionary<string, string>
         {
@@ -103,11 +105,18 @@ namespace FillInTheTextBot.Services
 
             var eventInput = ResolveEvent(request);
 
+            var text = request.Text;
+
+            if (text.Length > MaximumRequestLength)
+            {
+                text = request.Text.Substring(0, MaximumRequestLength);
+            }
+
             var query = new QueryInput
             {
                 Text = new TextInput
                 {
-                    Text = request.Text,
+                    Text = text,
                     LanguageCode = _configuration.LanguageCode
                 },
             };
