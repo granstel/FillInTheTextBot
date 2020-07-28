@@ -1,0 +1,34 @@
+{
+  "id": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "Texts-list",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "ru",
+          "condition": "",
+          "speech": [
+            "Я их сейчас озвучу, а если надоест - останови меня, и скажи \"любой\". Итак, вот что у меня сейчас есть:\n- Случай на уроке.\n- Карантин.\n- Парк развлечений.\n- Непростая рыбка.\n- Про цирк.\n- Объяснительная.\n- Новый колобок.\nЧто выберешь?",
+            "Я их сейчас перечислю, а если надоест - останови меня и просто попроси \"любой\". Вот что у меня сейчас есть:\n- Случай на уроке.\n- Карантин.\n- Парк развлечений.\n- Непростая рыбка.\n- Про цирк.\n- Объяснительная.\n- Новый колобок.\nЧто выбираешь?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

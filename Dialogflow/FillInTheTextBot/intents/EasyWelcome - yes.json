@@ -14,11 +14,10 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "e6478adf-95eb-4b95-8dec-da7fccd6bba2",
+          "id": "2f0bdda3-6408-43d6-9500-8f91e0b49521",
           "required": false,
           "dataType": "@sys.any",
           "name": "textKey",
-          "value": "text-7",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -26,11 +25,11 @@
           "isList": false
         },
         {
-          "id": "2747fcfc-1e85-4ea6-b602-316fa6494cea",
+          "id": "7953023c-9802-4db6-8854-242d26525c6a",
           "required": false,
           "dataType": "@sys.any",
           "name": "resetTextIndex",
-          "value": "true",
+          "value": "false",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
