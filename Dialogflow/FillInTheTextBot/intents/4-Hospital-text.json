@@ -14,23 +14,27 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "dd2acafc-d92e-43db-a4cf-600abd826e04",
+          "id": "f550fe9d-2061-4746-8669-4ac46cd1ac28",
+          "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "name": "text-name",
           "value": "Этот текст про \"Больницу\".",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
-          "id": "4fc218bc-5a12-40f6-9a29-b9b16af86839",
+          "id": "800f4513-9ad4-4eee-8676-48bf44cc8aca",
+          "name": "number-1",
           "required": true,
           "dataType": "@sys.number",
-          "name": "number-1",
           "value": "$number-1",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -44,15 +48,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
-          "id": "27e5b249-39c4-4738-9ce3-a0ae4d993401",
+          "id": "ab7c0727-0e49-4175-a099-f56bf2b88b87",
+          "name": "action",
           "required": true,
           "dataType": "@sys.any",
-          "name": "action",
           "value": "$action",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -62,15 +67,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
-          "id": "8cd6279d-173d-4148-b53f-309fc7821641",
+          "id": "fe7dc301-c906-4186-a172-5014175a97ea",
+          "name": "number-2",
           "required": true,
           "dataType": "@sys.number",
-          "name": "number-2",
           "value": "$number-2",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -80,15 +86,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
-          "id": "261bf35b-90de-448a-9e80-87ecc03190da",
+          "id": "cf2dd0df-e2a3-4998-9293-b8ce0ae18c66",
+          "name": "person",
           "required": true,
           "dataType": "@sys.person",
-          "name": "person",
           "value": "$person",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -98,15 +105,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
-          "id": "2698ae0b-6e81-4171-bda8-520c005b6347",
+          "id": "a0e70935-519a-423a-9e85-1cc2b557b2ef",
+          "name": "adjective-male",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-male",
           "value": "$adjective-male",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -116,33 +124,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
-          "id": "34885323-a2cc-46fe-b013-380de72cf13f",
-          "required": true,
-          "dataType": "@sys.any",
-          "name": "animal",
-          "value": "$animal",
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "Животное мужского рода"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
-        },
-        {
-          "id": "02e678ca-7e1a-409e-b1cf-023643bdc445",
-          "required": true,
-          "dataType": "@sys.any",
+          "id": "81b4047c-e87c-42dd-bbee-5e79b0e98ee0",
           "name": "liquid",
+          "required": true,
+          "dataType": "@sys.any",
           "value": "$liquid",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -152,33 +143,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
-          "id": "9d65bc3a-a8c2-45e1-8d58-295329b48490",
-          "required": true,
-          "dataType": "@sys.any",
-          "name": "adjective-female",
-          "value": "$adjective-female",
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "\"Какая\"?"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
-        },
-        {
-          "id": "242dbf44-877b-4a0b-ad76-099418e31acd",
+          "id": "1b691125-6d3a-4d82-970d-99fa37318da8",
+          "name": "number-3",
           "required": true,
           "dataType": "@sys.number",
-          "name": "number-3",
           "value": "$number-3",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -188,19 +162,21 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         }
       ],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
-          "speech": "Слушай, что получилось: Катался на лыжах, сломал руку, ногу, нос, ухо, и угодил в больницу.\nВ больнице мне понравилось. В нашей палате было человек эдак $number-1. Некоторые играли в шахматы, другие в волейбол, третьи просто $action - в общем, было не скучно.\n- Что это там бежит по потолку? - поинтересовался я.\n- Это наш любимчик - таракан по прозвищу $adjective-male $animal, - ответил старший по палате, которого звали $person.\nС утра там процедуры: на выбор - либо капельница литров $number-2, либо клизма $number-3 л. Выжившие идут на завтрак.\nВо дворе флигель патологоанатома с вывеской над дверью: \"Добро пожаловать!\"\n- Эй, новенький! Заходи! - закричал он мне, приветливо размахивая топором.\n- Потом! - сказал я и поковылял в процедурную.\n- Сделайте мне каких-нибудь уколов! - попросил я медсестру. - С детства их обожаю!\n- А какой у вас диагноз?\n- $adjective-female свинка, - сказал я.\n- Тогда $liquid подойдёт, - сказала сестра, наполнила шприц и сделала первый укол. Стало хорошо.\nПо-моему, забавно! Давай ещё один?"
+          "speech": [
+            "Слушай, что получилось: Катался на лыжах, сломал руку, ногу, нос, ухо, и угодил в больницу.\nВ больнице мне понравилось. В нашей палате было человек эдак $number-1. Некоторые играли в шахматы, другие в волейбол, третьи просто $action - в общем, было не скучно.\nС утра там процедуры: на выбор - либо капельница литров $number-2, либо клизма $number-3 л. Выжившие идут на завтрак.\nВо дворе флигель с вывеской над дверью: \"Добро пожаловать!\". В нём живёт $adjective-male патологоанатом $person.\n- Эй, новенький! Заходи! - закричал он мне, приветливо размахивая топором.\n- Как-нибудь потом! - сказал я и поковылял в процедурную.\n- Сделайте мне каких-нибудь уколов! - попросил я медсестру. - С детства их обожаю!\n- Тогда специально для вас - $liquid! - сказала сестра, наполнила шприц и сделала первый укол. Стало хорошо.\nПо-моему, забавно! Давай ещё один?"
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

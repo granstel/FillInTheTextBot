@@ -15,30 +15,33 @@
       "parameters": [
         {
           "id": "507f9865-fac4-4ccc-9763-134ee46bb7da",
+          "name": "resetTextIndex",
           "required": false,
           "dataType": "@sys.any",
-          "name": "resetTextIndex",
           "value": "true",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         }
       ],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
           "speech": [
             "Окей, начнём с начала!",
             "Хорошо, начинаем с начала!",
             "Начинаем с начала!"
-          ]
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

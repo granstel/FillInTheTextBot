@@ -1,35 +1,10 @@
 [
   {
-    "id": "6c6462ff-f109-4d19-b3d4-b44e2af87312",
+    "id": "30417ef6-af1e-41e3-9659-fe0eecdd0969",
     "data": [
       {
-        "text": "давай про колобка",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 1,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "184562c4-3503-464e-ab44-66b0a44eee14",
-    "data": [
-      {
-        "text": "давай про колобка уже",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 1,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "ea24e632-a8b1-403d-bab3-6dd7e4fef4bb",
-    "data": [
-      {
-        "text": "колобок",
+        "text": "алиса",
+        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -39,10 +14,10 @@
     "updated": 0
   },
   {
-    "id": "64ead65a-dc4e-4451-a687-c97dc9c4afb6",
+    "id": "b2ccf593-7806-48c9-a826-ce6f53a68b91",
     "data": [
       {
-        "text": "про колобка",
+        "text": "как тебя зовут",
         "userDefined": false
       }
     ],
@@ -52,10 +27,10 @@
     "updated": 0
   },
   {
-    "id": "f01e9458-3c1f-46c9-8fe8-d4a94e242674",
+    "id": "8eafac38-b381-4f49-b204-8a11c53faac8",
     "data": [
       {
-        "text": "про нового колобка",
+        "text": "кто это",
         "userDefined": false
       }
     ],
@@ -65,10 +40,36 @@
     "updated": 0
   },
   {
-    "id": "5016649d-7f52-42bd-9164-6d95c06641a0",
+    "id": "2a7b7939-aba1-47b9-a4cf-4c0fabeb6765",
     "data": [
       {
-        "text": "новый колобок",
+        "text": "кто здесь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "893be892-1f74-48dc-8f3c-3fb429f58834",
+    "data": [
+      {
+        "text": "кто ты",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "99bfca90-a3b0-4d83-83fc-2ad617c4ceae",
+    "data": [
+      {
+        "text": "робота нельзя обидеть",
         "userDefined": false
       }
     ],

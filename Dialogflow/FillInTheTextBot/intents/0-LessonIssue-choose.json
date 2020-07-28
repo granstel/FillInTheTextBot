@@ -10,37 +10,39 @@
       "affectedContexts": [
         {
           "name": "text-0",
-          "parameters": {},
           "lifespan": 50
         }
       ],
       "parameters": [
         {
           "id": "efd93240-d7c5-4a33-b803-e7e41ca0983e",
+          "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "name": "textKey",
           "value": "text-0",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         }
       ],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
           "speech": [
             "Окей!",
             "Хорошо!",
             "Поехали!"
-          ]
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],
