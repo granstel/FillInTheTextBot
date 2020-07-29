@@ -4,7 +4,6 @@
   "shortDescription": "",
   "examples": "",
   "linkToDocs": "",
-  "displayName": "FillInTheTextBot",
   "disableInteractionLogs": false,
   "disableStackdriverLogs": true,
   "googleAssistant": {
@@ -41,11 +40,10 @@
     "cloudFunctionsInitialized": false
   },
   "isPrivate": true,
+  "customClassifierMode": "use.after",
   "mlMinConfidence": 0.3,
   "supportedLanguages": [],
-  "enableOnePlatformApi": true,
   "onePlatformApiVersion": "v2",
-  "secondaryKey": "751e7726dcea4fc9a15a2a702b671b23",
   "analyzeQueryTextSentiment": false,
   "enabledKnowledgeBaseNames": [],
   "knowledgeServiceConfidenceAdjustment": -0.4,

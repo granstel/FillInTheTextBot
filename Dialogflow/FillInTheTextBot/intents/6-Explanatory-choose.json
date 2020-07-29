@@ -10,43 +10,42 @@
       "affectedContexts": [
         {
           "name": "text-6",
+          "parameters": {},
           "lifespan": 50
         },
         {
           "name": "6-Explanatory-choose-followup",
+          "parameters": {},
           "lifespan": 2
         }
       ],
       "parameters": [
         {
           "id": "e7dbfc96-8725-4a07-9d5e-41fbf99da2ed",
-          "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
+          "name": "textKey",
           "value": "text-6",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
       "messages": [
         {
-          "type": "0",
-          "title": "",
-          "textToSpeech": "",
+          "type": 0,
           "lang": "ru",
+          "condition": "",
           "speech": [
             "Хорошо!",
             "Отлично!",
             "Начнём!"
-          ],
-          "condition": ""
+          ]
         }
       ],
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

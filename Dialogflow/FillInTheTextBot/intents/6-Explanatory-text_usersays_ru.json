@@ -4,14 +4,13 @@
     "data": [
       {
         "text": "на работу",
-        "meta": "@sys.any",
         "alias": "where-1",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -19,14 +18,13 @@
     "data": [
       {
         "text": "червяк",
-        "meta": "@sys.any",
         "alias": "animal-male-1",
+        "meta": "@sys.any",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -34,14 +32,13 @@
     "data": [
       {
         "text": "жужелица",
-        "meta": "@sys.any",
         "alias": "animal-female-1",
+        "meta": "@sys.any",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -49,14 +46,13 @@
     "data": [
       {
         "text": "в лифте",
-        "meta": "@sys.any",
         "alias": "where-2",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -64,14 +60,13 @@
     "data": [
       {
         "text": "крабы",
-        "meta": "@sys.any",
         "alias": "animals",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -79,14 +74,13 @@
     "data": [
       {
         "text": "на улицу",
-        "meta": "@sys.any",
         "alias": "where-3",
+        "meta": "@sys.any",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -94,14 +88,13 @@
     "data": [
       {
         "text": "тоша",
-        "meta": "@sys.person",
         "alias": "person",
+        "meta": "@sys.person",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -109,14 +102,13 @@
     "data": [
       {
         "text": "Антон",
-        "meta": "@sys.person",
         "alias": "person",
+        "meta": "@sys.person",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   }
 ]

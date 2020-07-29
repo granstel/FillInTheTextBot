@@ -4,14 +4,13 @@
     "data": [
       {
         "text": "получать по сопатке",
-        "meta": "@sys.any",
         "alias": "actions-1",
+        "meta": "@sys.any",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -19,14 +18,13 @@
     "data": [
       {
         "text": "бегать трусцой",
-        "meta": "@sys.any",
         "alias": "actions-2",
+        "meta": "@sys.any",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -34,14 +32,13 @@
     "data": [
       {
         "text": "мурчать",
-        "meta": "@sys.any",
         "alias": "actions-3",
+        "meta": "@sys.any",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -49,14 +46,13 @@
     "data": [
       {
         "text": "на крыше",
-        "meta": "@sys.any",
         "alias": "where",
+        "meta": "@sys.any",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -64,14 +60,13 @@
     "data": [
       {
         "text": "линушка",
-        "meta": "@sys.any",
         "alias": "human",
+        "meta": "@sys.any",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -79,14 +74,13 @@
     "data": [
       {
         "text": "кубик",
-        "meta": "@sys.any",
         "alias": "thing",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -94,14 +88,13 @@
     "data": [
       {
         "text": "глаза",
-        "meta": "@sys.any",
         "alias": "things",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -109,14 +102,13 @@
     "data": [
       {
         "text": "утки",
-        "meta": "@sys.any",
         "alias": "animals",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -124,14 +116,13 @@
     "data": [
       {
         "text": "бегали",
-        "meta": "@sys.any",
         "alias": "actions-1",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -139,14 +130,13 @@
     "data": [
       {
         "text": "красный",
-        "meta": "@sys.any",
         "alias": "adjective-male",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -154,14 +144,13 @@
     "data": [
       {
         "text": "странные",
-        "meta": "@sys.any",
         "alias": "adjectives-2",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -169,14 +158,13 @@
     "data": [
       {
         "text": "лежать лицом вниз",
-        "meta": "@sys.any",
         "alias": "actions-3",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -184,14 +172,13 @@
     "data": [
       {
         "text": "лежать лицом вверх",
-        "meta": "@sys.any",
         "alias": "actions-4",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -199,14 +186,13 @@
     "data": [
       {
         "text": "бегать",
-        "meta": "@sys.any",
         "alias": "actions-5",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -214,14 +200,13 @@
     "data": [
       {
         "text": "дома",
-        "meta": "@sys.any",
         "alias": "where",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -229,14 +214,13 @@
     "data": [
       {
         "text": "бросаться помидорами",
-        "meta": "@sys.any",
         "alias": "actions-5",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -244,14 +228,13 @@
     "data": [
       {
         "text": "Кремле",
-        "meta": "@sys.any",
         "alias": "where",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -259,14 +242,13 @@
     "data": [
       {
         "text": "сморкаться в скатерть",
-        "meta": "@sys.any",
         "alias": "actions-4",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -274,14 +256,13 @@
     "data": [
       {
         "text": "гоняться за кошками",
-        "meta": "@sys.any",
         "alias": "actions-3",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -289,14 +270,13 @@
     "data": [
       {
         "text": "портянки",
-        "meta": "@sys.any",
         "alias": "things",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -304,14 +284,13 @@
     "data": [
       {
         "text": "вислоухие",
-        "meta": "@sys.any",
         "alias": "adjectives-2",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -319,14 +298,13 @@
     "data": [
       {
         "text": "громко пукнули",
-        "meta": "@sys.any",
         "alias": "actions-2",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -334,14 +312,13 @@
     "data": [
       {
         "text": "сапог",
-        "meta": "@sys.any",
         "alias": "thing",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -349,14 +326,13 @@
     "data": [
       {
         "text": "электрический",
-        "meta": "@sys.any",
         "alias": "adjective-male",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -364,14 +340,13 @@
     "data": [
       {
         "text": "тушканчики",
-        "meta": "@sys.any",
         "alias": "animals",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -379,14 +354,13 @@
     "data": [
       {
         "text": "безобразно выражались",
-        "meta": "@sys.any",
         "alias": "actions-1",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -394,14 +368,13 @@
     "data": [
       {
         "text": "замороженные",
-        "meta": "@sys.any",
         "alias": "adjectives-1",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -409,14 +382,13 @@
     "data": [
       {
         "text": "Коля Басков",
-        "meta": "@sys.any",
         "alias": "human",
+        "meta": "@sys.any",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   }
 ]

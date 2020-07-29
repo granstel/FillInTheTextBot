@@ -10,43 +10,42 @@
       "affectedContexts": [
         {
           "name": "text-3",
+          "parameters": {},
           "lifespan": 50
         },
         {
           "name": "3-DifficultFish-choose-followup",
+          "parameters": {},
           "lifespan": 2
         }
       ],
       "parameters": [
         {
           "id": "6f26734c-a974-47cb-a162-7d6b5547a3c2",
-          "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
+          "name": "textKey",
           "value": "text-3",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
       "messages": [
         {
-          "type": "0",
-          "title": "",
-          "textToSpeech": "",
+          "type": 0,
           "lang": "ru",
+          "condition": "",
           "speech": [
             "Начинаем!",
             "Хорошо!",
             "Отлично!"
-          ],
-          "condition": ""
+          ]
         }
       ],
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

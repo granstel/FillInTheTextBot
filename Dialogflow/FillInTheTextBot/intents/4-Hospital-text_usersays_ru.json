@@ -4,14 +4,13 @@
     "data": [
       {
         "text": "обнимали берёзу",
-        "meta": "@sys.any",
         "alias": "action",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -25,7 +24,6 @@
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -33,14 +31,13 @@
     "data": [
       {
         "text": "2",
-        "meta": "@sys.number",
         "alias": "number-3",
+        "meta": "@sys.number",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -48,14 +45,13 @@
     "data": [
       {
         "text": "1",
-        "meta": "@sys.number",
         "alias": "number-2",
+        "meta": "@sys.number",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -63,14 +59,13 @@
     "data": [
       {
         "text": "керосин",
-        "meta": "@sys.any",
         "alias": "liquid",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -78,14 +73,13 @@
     "data": [
       {
         "text": "Джорно Джованна",
-        "meta": "@sys.person",
         "alias": "person",
+        "meta": "@sys.person",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -93,14 +87,13 @@
     "data": [
       {
         "text": "Григорий Лепс",
-        "meta": "@sys.person",
         "alias": "person",
+        "meta": "@sys.person",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -114,7 +107,6 @@
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -122,14 +114,13 @@
     "data": [
       {
         "text": "лысый",
-        "meta": "@sys.any",
         "alias": "adjective-male",
+        "meta": "@sys.any",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   },
   {
@@ -137,14 +128,13 @@
     "data": [
       {
         "text": "12",
-        "meta": "@sys.number",
         "alias": "number-1",
+        "meta": "@sys.number",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
-    "lang": "ru",
     "updated": 0
   }
 ]

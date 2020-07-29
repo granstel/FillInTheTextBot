@@ -14,47 +14,43 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "2f0bdda3-6408-43d6-9500-8f91e0b49521",
-          "name": "textKey",
+          "id": "a82fab83-bde6-4d05-9fdb-857025c9c4b0",
           "required": false,
           "dataType": "@sys.any",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
+          "name": "textKey",
+          "value": "text-8",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
-          "id": "7953023c-9802-4db6-8854-242d26525c6a",
-          "name": "resetTextIndex",
+          "id": "9b9155a2-3b5a-4d93-b445-ac1840302801",
           "required": false,
           "dataType": "@sys.any",
-          "value": "false",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
+          "name": "resetTextIndex",
+          "value": "true",
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
       "messages": [
         {
-          "type": "0",
-          "title": "",
-          "textToSpeech": "",
+          "type": 0,
           "lang": "ru",
+          "condition": "",
           "speech": [
             "Хорошо!",
             "Начинаем!",
             "Приступим!"
-          ],
-          "condition": ""
+          ]
         }
       ],
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

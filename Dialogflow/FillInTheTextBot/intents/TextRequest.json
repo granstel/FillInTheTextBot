@@ -6,22 +6,20 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
       "affectedContexts": [],
       "parameters": [],
       "messages": [
         {
-          "type": "0",
-          "title": "",
-          "textToSpeech": "",
+          "type": 0,
           "lang": "ru",
+          "condition": "",
           "speech": [
             "У меня пока нет такого, но мы что-нибудь придумаем! Давай пока сочиним про что-то ещё?",
             "У меня ещё такого нет, но скоро может появиться! Давай сочиним про что-то ещё?"
-          ],
-          "condition": ""
+          ]
         }
       ],
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

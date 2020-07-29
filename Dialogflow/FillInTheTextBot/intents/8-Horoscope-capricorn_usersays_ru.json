@@ -1,9 +1,9 @@
 [
   {
-    "id": "c511cf0e-c95c-4568-b1b9-c04504350f6b",
+    "id": "78c17f44-c12f-41f9-81a8-6a54b01c70da",
     "data": [
       {
-        "text": "больница",
+        "text": "козероги",
         "meta": "@sys.ignore",
         "userDefined": false
       }
@@ -13,10 +13,10 @@
     "updated": 0
   },
   {
-    "id": "690f871a-765a-4c70-a4e4-d20b4d3b6658",
+    "id": "fcbe2d0d-e927-4be2-8703-2920869fd5bb",
     "data": [
       {
-        "text": "про больницу",
+        "text": "для козерогов",
         "userDefined": false
       }
     ],
@@ -25,10 +25,10 @@
     "updated": 0
   },
   {
-    "id": "c5708ddf-aa0b-4fa6-a551-97fede830e84",
+    "id": "16d0ce88-1729-4230-bc33-dbc76ac92f72",
     "data": [
       {
-        "text": "текст про больницу",
+        "text": "гороскоп для козерогов",
         "userDefined": false
       }
     ],
@@ -37,32 +37,27 @@
     "updated": 0
   },
   {
-    "id": "1e231afc-146f-420c-82d1-7693836652b2",
+    "id": "568d65ba-5464-40c7-91e2-044f3069c13d",
     "data": [
       {
-        "text": "5",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " текст",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "69753fba-4aca-4c70-9405-b80c5ab598c3",
-    "data": [
-      {
-        "text": "пятый",
+        "text": "годовой",
         "meta": "@sys.ignore",
         "userDefined": false
       },
       {
-        "text": " текст",
+        "text": " гороскоп для козерогов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "556e22f6-e1d9-41ab-be66-e9a37c8c20eb",
+    "data": [
+      {
+        "text": "гороскоп для козерога на год",
         "userDefined": false
       }
     ],

@@ -15,26 +15,22 @@
       "parameters": [
         {
           "id": "6fce4ac1-e6de-4b15-8a6e-7e206eb19f93",
-          "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
+          "name": "text-name",
           "value": "Сейчас попробуем сочинить \"Новую сказку про колобка\".",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "7ec1f250-3e30-4d25-8562-8ec87966b5a4",
-          "name": "person-female",
           "required": true,
           "dataType": "@sys.person",
+          "name": "person-female",
           "value": "$person-female",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -48,16 +44,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "7af2ff09-a2cb-44fb-a099-efbf39b1ab9b",
-          "name": "adjective-female",
           "required": true,
           "dataType": "@sys.any",
+          "name": "adjective-female",
           "value": "$adjective-female",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -67,16 +62,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "1b474c1c-9353-483d-baf4-ecd05f1ca08e",
-          "name": "person-male",
           "required": true,
           "dataType": "@sys.person",
+          "name": "person-male",
           "value": "$person-male",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -90,16 +84,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "d391f228-58ff-42ed-ab47-29ccb45e5b25",
-          "name": "adjective-male-1",
           "required": true,
           "dataType": "@sys.any",
+          "name": "adjective-male-1",
           "value": "$adjective-male-1",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -109,16 +102,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "00ccfd29-b41b-405f-bc47-a74bea48fc8d",
-          "name": "animal",
           "required": true,
           "dataType": "@sys.any",
+          "name": "animal",
           "value": "$animal",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -132,16 +124,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "521176c3-1e83-4843-b8e9-2aad97ff2b25",
-          "name": "adjective-male-2",
           "required": true,
           "dataType": "@sys.any",
+          "name": "adjective-male-2",
           "value": "$adjective-male-2",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -151,16 +142,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "2f159b73-1413-4586-ad67-08c1f127e7f6",
-          "name": "action-1",
           "required": true,
           "dataType": "@sys.any",
+          "name": "action-1",
           "value": "$action-1",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -170,16 +160,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "12a775c7-bc81-4ca9-9b1e-d085a6c26184",
-          "name": "thing",
           "required": true,
           "dataType": "@sys.any",
+          "name": "thing",
           "value": "$thing",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -189,16 +178,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "fd102e18-503c-484e-a98b-447facf006dd",
-          "name": "adjective-male-3",
           "required": true,
           "dataType": "@sys.any",
+          "name": "adjective-male-3",
           "value": "$adjective-male-3",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -208,16 +196,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "a7cf770f-d9ba-40db-8c3e-f86d158bb110",
-          "name": "action-2",
           "required": true,
           "dataType": "@sys.any",
+          "name": "action-2",
           "value": "$action-2",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -231,16 +218,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "debdeeac-2f4f-438f-931c-0581cc591930",
-          "name": "where",
           "required": true,
           "dataType": "@sys.any",
+          "name": "where",
           "value": "$where",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -254,21 +240,19 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
       "messages": [
         {
-          "type": "0",
-          "title": "",
-          "textToSpeech": "",
+          "type": 0,
           "lang": "ru",
-          "speech": [
-            "Итак, новая сказка про колобка: Однажды $adjective-female $person-female и $adjective-male-2 $person-male решили испечь $adjective-male-1 колобок. Сказано - сделано. Колобок получился ну очень $adjective-male-3. Покатился он по тропинке, и тут навстречу ему $animal. Сразу было видно, что $animal собирается съесть колобка. Но тот не испугался: он бросил в зверя то, что мы называем $thing, только в два раза больше, и бедолага $animal от страха $action-1. Колобок на радостях принялся $action-2, пока не устал, а потом покатился дальше, $where.\n- По-моему, здорово получилось! Давай ещё?"
-          ],
-          "condition": ""
+          "condition": "",
+          "speech": "Итак, новая сказка про колобка: Однажды $adjective-female $person-female и $adjective-male-2 $person-male решили испечь $adjective-male-1 колобок. Сказано - сделано. Колобок получился ну очень $adjective-male-3. Покатился он по тропинке, и тут навстречу ему $animal. Сразу было видно, что $animal собирается съесть колобка. Но тот не испугался: он бросил в зверя то, что мы называем $thing, только в два раза больше, и бедолага $animal от страха $action-1. Колобок на радостях принялся $action-2, пока не устал, а потом покатился дальше, $where.\n- По-моему, здорово получилось! Давай ещё?"
         }
       ],
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

@@ -6,22 +6,20 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
       "affectedContexts": [],
       "parameters": [],
       "messages": [
         {
-          "type": "0",
-          "title": "",
-          "textToSpeech": "",
+          "type": 0,
           "lang": "ru",
+          "condition": "",
           "speech": [
             "Видимо, возникли какие-то проблемы, но я что-нибудь придумаю. Давай продолжим?",
             "Наверно, были какие-то проблемы, но их наверняка скоро исправят. Продолжим?"
-          ],
-          "condition": ""
+          ]
         }
       ],
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

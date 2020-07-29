@@ -15,26 +15,22 @@
       "parameters": [
         {
           "id": "e43fc3d4-7bc5-43c4-81d8-30fe7433f5be",
-          "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
+          "name": "text-name",
           "value": "Этот текст называется \"Парк развлечений\".",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "d9d5acd3-1a7e-45f6-b9a3-2a24598d5bc8",
-          "name": "human",
           "required": true,
           "dataType": "@sys.any",
+          "name": "human",
           "value": "$human",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -52,16 +48,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "b4c123b1-2021-4ffe-b3d8-7a3eebeb62a3",
-          "name": "thing",
           "required": true,
           "dataType": "@sys.any",
+          "name": "thing",
           "value": "$thing",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -75,16 +70,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "036f204b-9118-4837-86a9-911d7b65f51b",
-          "name": "things",
           "required": true,
           "dataType": "@sys.any",
+          "name": "things",
           "value": "$things",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -98,16 +92,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "38982d6b-03a3-4d14-aabc-95981f15cd91",
-          "name": "animals",
           "required": true,
           "dataType": "@sys.any",
+          "name": "animals",
           "value": "$animals",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -121,16 +114,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "436859fc-35ee-4b48-ac9d-f5ac1ca050fb",
-          "name": "adjectives-1",
           "required": true,
           "dataType": "@sys.any",
+          "name": "adjectives-1",
           "value": "$adjectives-1",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -144,16 +136,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "c51cc6ed-2a95-4be7-a4db-7b6960e851c9",
-          "name": "actions-1",
           "required": true,
           "dataType": "@sys.any",
+          "name": "actions-1",
           "value": "$actions-1",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -167,16 +158,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "1f6c6bc1-0257-4105-9894-18baa059ff07",
-          "name": "adjective-male",
           "required": true,
           "dataType": "@sys.any",
+          "name": "adjective-male",
           "value": "$adjective-male",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -186,16 +176,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "c9581608-ff8a-4c4f-ba29-3c3f5c83961c",
-          "name": "actions-2",
           "required": true,
           "dataType": "@sys.any",
+          "name": "actions-2",
           "value": "$actions-2",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -205,16 +194,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "bf873396-5d7b-416c-9709-af9d871468f6",
-          "name": "adjectives-2",
           "required": true,
           "dataType": "@sys.any",
+          "name": "adjectives-2",
           "value": "$adjectives-2",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -224,16 +212,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "90e58692-684b-4fea-bf03-f59ac85554e7",
-          "name": "actions-3",
           "required": true,
           "dataType": "@sys.any",
+          "name": "actions-3",
           "value": "$actions-3",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -243,16 +230,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "d8b84321-fdec-4c28-a7dc-3f1f2fa44f2a",
-          "name": "actions-4",
           "required": true,
           "dataType": "@sys.any",
+          "name": "actions-4",
           "value": "$actions-4",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -262,16 +248,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "56e1cb46-ab4b-4ed9-93dc-af10b0ac3040",
-          "name": "actions-5",
           "required": true,
           "dataType": "@sys.any",
+          "name": "actions-5",
           "value": "$actions-5",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -281,16 +266,15 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
           "id": "8746af25-c114-49c4-9c96-302c377c5a75",
-          "name": "where",
           "required": true,
           "dataType": "@sys.any",
+          "name": "where",
           "value": "$where",
-          "defaultValue": "",
-          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -300,21 +284,19 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
       "messages": [
         {
-          "type": "0",
-          "title": "",
-          "textToSpeech": "",
+          "type": 0,
           "lang": "ru",
-          "speech": [
-            "Слушай, что получилось: В прошлом месяце я ездил в парк развлечений с другом по имени $human.\nТам были $adjectives-1 люди, которые повсюду $actions-1. Были там и чудаки в карнавальных костюмах - ну, настоящие $animals. Один из них надел мне на голову $adjective-male $thing, и мы $actions-2 от такого нахальства.\nПотом мы покатались на аттракционе $adjectives-2 горки, которые почему-то назывались Волшебные $things. $human совсем ошалел от этих горок, и мы решили $actions-3. Потом мы поехали в гостиницу и стали там $actions-4.\nЕще мне хочется отдохнуть $where. Поедем туда на следующий год и будем там вовсю $actions-5. По-моему, получилось весьма занимательно! Давай ещё один сочиним?"
-          ],
-          "condition": ""
+          "condition": "",
+          "speech": "Слушай, что получилось: В прошлом месяце я ездил в парк развлечений с другом по имени $human.\nТам были $adjectives-1 люди, которые повсюду $actions-1. Были там и чудаки в карнавальных костюмах - ну, настоящие $animals. Один из них надел мне на голову $adjective-male $thing, и мы $actions-2 от такого нахальства.\nПотом мы покатались на аттракционе $adjectives-2 горки, которые почему-то назывались Волшебные $things. $human совсем ошалел от этих горок, и мы решили $actions-3. Потом мы поехали в гостиницу и стали там $actions-4.\nЕще мне хочется отдохнуть $where. Поедем туда на следующий год и будем там вовсю $actions-5. По-моему, получилось весьма занимательно! Давай ещё один сочиним?"
         }
       ],
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

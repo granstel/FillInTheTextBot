@@ -10,43 +10,42 @@
       "affectedContexts": [
         {
           "name": "text-7",
+          "parameters": {},
           "lifespan": 50
         },
         {
           "name": "7-NewBun-choose-followup",
+          "parameters": {},
           "lifespan": 2
         }
       ],
       "parameters": [
         {
           "id": "1e426873-1a8e-47f2-a745-b21e5b4c7970",
-          "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
+          "name": "textKey",
           "value": "text-7",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
       "messages": [
         {
-          "type": "0",
-          "title": "",
-          "textToSpeech": "",
+          "type": 0,
           "lang": "ru",
+          "condition": "",
           "speech": [
             "Хорошо!",
             "Отлично!",
             "Вперёд!"
-          ],
-          "condition": ""
+          ]
         }
       ],
+      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

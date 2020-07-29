@@ -1,0 +1,72 @@
+[
+  {
+    "id": "7b1b3948-62e4-4161-a7dd-032acc63bd0f",
+    "data": [
+      {
+        "text": "333",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "702341c7-690f-48f9-b659-e799eabecec7",
+    "data": [
+      {
+        "text": "трясущаяся",
+        "alias": "adjective-female",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "748c7d6e-cd56-4e7c-9dc3-e947ae29a1da",
+    "data": [
+      {
+        "text": "корова",
+        "alias": "animal",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5e76727d-fe57-44e3-8291-40978d8bfdec",
+    "data": [
+      {
+        "text": "чёрный",
+        "alias": "adjective-male",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "141f720c-b795-42b7-aceb-ca63fdf5b44d",
+    "data": [
+      {
+        "text": "рояль",
+        "alias": "thing",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
