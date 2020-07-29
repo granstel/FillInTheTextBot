@@ -1,5 +1,23 @@
 [
   {
+    "id": "0db4c18e-31a4-4807-8992-e15e88519fe3",
+    "data": [
+      {
+        "text": "как дела ",
+        "userDefined": false
+      },
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "30417ef6-af1e-41e3-9659-fe0eecdd0969",
     "data": [
       {
