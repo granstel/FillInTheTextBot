@@ -1,5 +1,7 @@
 {
   "id": "915cb648-52a6-4f2d-80a3-f1ab046306f0",
+  "parentId": "3313101e-869f-4068-8e2b-cc8648e62ba6",
+  "rootParentId": "3313101e-869f-4068-8e2b-cc8648e62ba6",
   "name": "9-Horoscope-aquarius-text",
   "auto": true,
   "contexts": [

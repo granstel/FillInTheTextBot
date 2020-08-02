@@ -1,5 +1,7 @@
 {
   "id": "b61aee1b-9155-44d1-9200-cdf9fe63e91d",
+  "parentId": "fffeab4c-cc15-48ce-9157-99896559bdad",
+  "rootParentId": "fffeab4c-cc15-48ce-9157-99896559bdad",
   "name": "8-Horoscope-capricorn-text",
   "auto": true,
   "contexts": [
