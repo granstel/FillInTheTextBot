@@ -6,21 +6,23 @@
   "responses": [
     {
       "resetContexts": false,
+      "action": "",
       "affectedContexts": [],
       "parameters": [],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
           "speech": [
             "Фу, как грубо!",
             "Это было грубо!",
             "Не груби мне!"
-          ]
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

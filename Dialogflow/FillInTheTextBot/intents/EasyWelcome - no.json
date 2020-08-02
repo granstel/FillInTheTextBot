@@ -15,20 +15,21 @@
       "parameters": [],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
           "speech": [
             "Тогда продолжим, но всё равно скоро до него дойдём.",
             "Хорошо, мы всё равно до него скоро дойдём."
-          ]
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],
-  "priority": 500000,
+  "priority": -1,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,

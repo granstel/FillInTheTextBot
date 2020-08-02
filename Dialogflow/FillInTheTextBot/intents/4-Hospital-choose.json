@@ -10,42 +10,43 @@
       "affectedContexts": [
         {
           "name": "text-4",
-          "parameters": {},
           "lifespan": 50
         },
         {
           "name": "4-Hospital-choose-followup",
-          "parameters": {},
           "lifespan": 2
         }
       ],
       "parameters": [
         {
           "id": "0cbbfb10-07ab-417a-90b2-4d3d437cff83",
+          "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "name": "textKey",
           "value": "text-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         }
       ],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
           "speech": [
             "Хорошо!",
             "Начинаем!",
             "Приступим!"
-          ]
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

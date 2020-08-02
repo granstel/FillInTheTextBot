@@ -1,29 +1,20 @@
 {
-  "id": "ac46f58e-71a7-4e95-83fb-cfe1b82ac65c",
-  "name": "3-DifficultFish-choose",
+  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
+  "name": "NewText",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [
-        {
-          "name": "text-3",
-          "lifespan": 50
-        },
-        {
-          "name": "3-DifficultFish-choose-followup",
-          "lifespan": 2
-        }
-      ],
+      "affectedContexts": [],
       "parameters": [
         {
-          "id": "6f26734c-a974-47cb-a162-7d6b5547a3c2",
+          "id": "374c7752-c59d-4619-87eb-e5f6ad2bcebd",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "text-3",
+          "value": "text-10",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -40,9 +31,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Начинаем!",
-            "Хорошо!",
-            "Отлично!"
+            "Самая свежая история -"
           ],
           "condition": ""
         }

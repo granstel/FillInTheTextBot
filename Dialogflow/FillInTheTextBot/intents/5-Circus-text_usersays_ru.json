@@ -4,13 +4,14 @@
     "data": [
       {
         "text": "петр тэтгрен",
-        "alias": "person-1",
         "meta": "@sys.person",
+        "alias": "person-1",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -18,13 +19,14 @@
     "data": [
       {
         "text": "волосатый",
-        "alias": "adjective-1",
         "meta": "@sys.any",
+        "alias": "adjective-1",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -32,13 +34,14 @@
     "data": [
       {
         "text": "тиль линдеман",
-        "alias": "person-2",
         "meta": "@sys.person",
+        "alias": "person-2",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -46,13 +49,14 @@
     "data": [
       {
         "text": "пьянющий пьянющий",
-        "alias": "adjective-2",
         "meta": "@sys.any",
+        "alias": "adjective-2",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -60,13 +64,14 @@
     "data": [
       {
         "text": "руль",
-        "alias": "thing-1",
         "meta": "@sys.any",
+        "alias": "thing-1",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -74,13 +79,14 @@
     "data": [
       {
         "text": "фонарь",
-        "alias": "thing-2",
         "meta": "@sys.any",
+        "alias": "thing-2",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -88,13 +94,14 @@
     "data": [
       {
         "text": "светящийся",
-        "alias": "adjective-3",
         "meta": "@sys.any",
+        "alias": "adjective-3",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -102,13 +109,14 @@
     "data": [
       {
         "text": "обгрызанный",
-        "alias": "adjective-4",
         "meta": "@sys.any",
+        "alias": "adjective-4",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -116,13 +124,14 @@
     "data": [
       {
         "text": "горшок",
-        "alias": "thing-2",
         "meta": "@sys.any",
+        "alias": "thing-2",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -130,13 +139,14 @@
     "data": [
       {
         "text": "кремлёвский",
-        "alias": "adjective-3",
         "meta": "@sys.any",
+        "alias": "adjective-3",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -144,13 +154,14 @@
     "data": [
       {
         "text": "капкан",
-        "alias": "thing-1",
         "meta": "@sys.any",
+        "alias": "thing-1",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -158,13 +169,14 @@
     "data": [
       {
         "text": "пьяный",
-        "alias": "adjective-2",
         "meta": "@sys.any",
+        "alias": "adjective-2",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -172,13 +184,14 @@
     "data": [
       {
         "text": "Тилль Линдеман",
-        "alias": "person-2",
         "meta": "@sys.person",
+        "alias": "person-2",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -186,13 +199,14 @@
     "data": [
       {
         "text": "Белый",
-        "alias": "adjective-1",
         "meta": "@sys.any",
+        "alias": "adjective-1",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -200,13 +214,14 @@
     "data": [
       {
         "text": "Пётр Тетгрен",
-        "alias": "person-1",
         "meta": "@sys.person",
+        "alias": "person-1",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   }
 ]

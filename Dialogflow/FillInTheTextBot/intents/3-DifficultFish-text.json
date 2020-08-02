@@ -15,22 +15,26 @@
       "parameters": [
         {
           "id": "1866075b-e9c1-49e7-840f-f5bb6cfd53b7",
+          "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "name": "text-name",
           "value": "Этот текст про \"Непростую рыбку\".",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "a0395223-516e-45e5-bf70-d6b1bc93cb2d",
+          "name": "animal-female",
           "required": true,
           "dataType": "@sys.any",
-          "name": "animal-female",
           "value": "$animal-female",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -44,15 +48,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "621ce93d-df44-4140-8def-45d16ce573ab",
+          "name": "adjective-female-1",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-female-1",
           "value": "$adjective-female-1",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -62,15 +67,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "e21b6961-79f8-496d-8b53-99555facf855",
+          "name": "action-female",
           "required": true,
           "dataType": "@sys.any",
-          "name": "action-female",
           "value": "$action-female",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -80,15 +86,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "7c4f0d22-9fab-4048-955f-be785f5cd305",
+          "name": "big-thing",
           "required": true,
           "dataType": "@sys.any",
-          "name": "big-thing",
           "value": "$big-thing",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -102,15 +109,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "972cc158-e9ad-49ef-8c37-c4066c45dbd3",
+          "name": "adjective-male-1",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-male-1",
           "value": "$adjective-male-1",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -120,15 +128,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "f3fe9e2b-70ae-43a2-855d-1eaafe8922de",
+          "name": "furniture",
           "required": true,
           "dataType": "@sys.any",
-          "name": "furniture",
           "value": "$furniture",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -142,15 +151,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "5182840d-6eec-4016-979a-6e176dc66679",
+          "name": "adjective-male-2",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-male-2",
           "value": "$adjective-male-2",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -160,15 +170,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "81c9d745-6ba3-4e4b-aa16-f9637d0a7e78",
+          "name": "animal-male-1",
           "required": true,
           "dataType": "@sys.any",
-          "name": "animal-male-1",
           "value": "$animal-male-1",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -186,15 +197,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "ab9b8a5d-d028-46e1-9da5-af330bb94687",
+          "name": "adjective-male-3",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-male-3",
           "value": "$adjective-male-3",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -204,15 +216,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "ef3b1753-5c95-4ef5-a944-4423e00e35ff",
+          "name": "animal-male-2",
           "required": true,
           "dataType": "@sys.any",
-          "name": "animal-male-2",
           "value": "$animal-male-2",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -222,15 +235,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "3873f9aa-38d8-4740-aade-3c826fbecbb6",
+          "name": "adjective-male-4",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-male-4",
           "value": "$adjective-male-4",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -240,19 +254,21 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         }
       ],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
-          "speech": "Вот что у нас получилось: Жили-были старик со старухой у самого синего моря. Старуха $action-female, старик ловил рыбу. Однажды забросил он невод в море, вытащил его, а в нем странная золотая рыбка.\n- Ну, что молчишь? - молвила рыбка. - Говори желание!\n- Эх, корыто у старухи развалилось! Давай стиральную машину, что ли...\n- Будет тебе стиральная машина! - сказала рыбка. - А что еще?\n- Давай еще $adjective-male-1 $big-thing и $adjective-male-2 $furniture!\nОтпустил старик рыбку в море, пошел домой, и видит рядом со своей избушкой такую картину: стоит $adjective-male-3 $animal-male-1, на нём $$adjective-female-1 $animal-female, еще выше $adjective-male-4 $animal-male-2, а на самой верхушке стоит его старуха и боится пошевельнуться.\n\"Что-то перепутала рыбка, - подумал старик. - Но прикольно получилось! Цирк, да и только!\"\n- По-моему, отличная история! Сочиним ещё?"
+          "speech": [
+            "Вот что у нас получилось: Жили-были старик со старухой у самого синего моря. Старуха $action-female, старик ловил рыбу. Однажды забросил он невод в море, вытащил его, а в нем странная золотая рыбка.\n- Ну, что молчишь? - молвила рыбка. - Говори желание!\n- Эх, корыто у старухи развалилось! Давай стиральную машину, что ли...\n- Будет тебе стиральная машина! - сказала рыбка. - А что еще?\n- Давай еще $adjective-male-1 $big-thing и $adjective-male-2 $furniture!\nОтпустил старик рыбку в море, пошел домой, и видит рядом со своей избушкой такую картину: стоит $adjective-male-3 $animal-male-1, на нём $$adjective-female-1 $animal-female, еще выше $adjective-male-4 $animal-male-2, а на самой верхушке стоит его старуха и боится пошевельнуться.\n\"Что-то перепутала рыбка, - подумал старик. - Но прикольно получилось! Цирк, да и только!\"\n- По-моему, отличная история! Сочиним ещё?"
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

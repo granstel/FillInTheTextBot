@@ -10,42 +10,43 @@
       "affectedContexts": [
         {
           "name": "text-5",
-          "parameters": {},
           "lifespan": 50
         },
         {
           "name": "5-Circus-choose-followup",
-          "parameters": {},
           "lifespan": 2
         }
       ],
       "parameters": [
         {
           "id": "559a047a-5855-4bb9-952a-a1114efaeba8",
+          "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "name": "textKey",
           "value": "text-5",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         }
       ],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
           "speech": [
             "Приступим!",
             "Хорошо!",
             "Погнали!"
-          ]
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

@@ -10,42 +10,43 @@
       "affectedContexts": [
         {
           "name": "text-2",
-          "parameters": {},
           "lifespan": 50
         },
         {
           "name": "2-AmusementPark-choose-followup",
-          "parameters": {},
           "lifespan": 2
         }
       ],
       "parameters": [
         {
           "id": "5038b6a2-27b9-420b-a9c6-fdc82d8e4797",
+          "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "name": "textKey",
           "value": "text-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         }
       ],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
           "speech": [
             "Начинаем!",
             "Хорошо!",
             "Поехали!"
-          ]
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

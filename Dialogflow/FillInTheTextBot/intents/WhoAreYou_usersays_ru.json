@@ -1,5 +1,31 @@
 [
   {
+    "id": "8343b97f-e460-4d5e-b5f7-18a969c148c3",
+    "data": [
+      {
+        "text": "расскажи о себе",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fde7f6a0-38b7-4f94-85d8-dac5b3587c55",
+    "data": [
+      {
+        "text": "подскажи о себе лучше",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "0db4c18e-31a4-4807-8992-e15e88519fe3",
     "data": [
       {
@@ -14,6 +40,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -27,6 +54,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -39,6 +67,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -51,6 +80,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -63,6 +93,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -75,6 +106,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -87,6 +119,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   }
 ]

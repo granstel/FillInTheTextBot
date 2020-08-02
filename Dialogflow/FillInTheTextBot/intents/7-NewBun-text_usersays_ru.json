@@ -4,13 +4,14 @@
     "data": [
       {
         "text": "аделаида",
-        "alias": "person-female",
         "meta": "@sys.person",
+        "alias": "person-female",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -18,13 +19,14 @@
     "data": [
       {
         "text": "страшная",
-        "alias": "adjective-female",
         "meta": "@sys.any",
+        "alias": "adjective-female",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -32,13 +34,14 @@
     "data": [
       {
         "text": "франкенштейн",
-        "alias": "person-male",
         "meta": "@sys.person",
+        "alias": "person-male",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -46,13 +49,14 @@
     "data": [
       {
         "text": "c гвоздем в башке",
-        "alias": "adjective-male-1",
         "meta": "@sys.any",
+        "alias": "adjective-male-1",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -60,13 +64,14 @@
     "data": [
       {
         "text": "хомяк",
-        "alias": "animal",
         "meta": "@sys.any",
+        "alias": "animal",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -74,13 +79,14 @@
     "data": [
       {
         "text": "пушистенькой",
-        "alias": "adjective-male-2",
         "meta": "@sys.any",
+        "alias": "adjective-male-2",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -88,13 +94,14 @@
     "data": [
       {
         "text": "бегал в колесе",
-        "alias": "action-1",
         "meta": "@sys.any",
+        "alias": "action-1",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -102,13 +109,14 @@
     "data": [
       {
         "text": "гиря",
-        "alias": "thing",
         "meta": "@sys.any",
+        "alias": "thing",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -116,13 +124,14 @@
     "data": [
       {
         "text": "темно бордовый с потеками",
-        "alias": "adjective-male-3",
         "meta": "@sys.any",
+        "alias": "adjective-male-3",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -130,13 +139,14 @@
     "data": [
       {
         "text": "спать",
-        "alias": "action-2",
         "meta": "@sys.any",
+        "alias": "action-2",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -144,13 +154,14 @@
     "data": [
       {
         "text": "на кудыкину гору",
-        "alias": "where",
         "meta": "@sys.any",
+        "alias": "where",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   }
 ]

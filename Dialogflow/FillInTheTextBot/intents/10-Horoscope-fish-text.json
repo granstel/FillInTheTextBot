@@ -1,9 +1,9 @@
 {
-  "id": "b61aee1b-9155-44d1-9200-cdf9fe63e91d",
-  "name": "8-Horoscope-capricorn-text",
+  "id": "1c53cf77-99c3-4e7e-a7d9-81deeb471d65",
+  "name": "10-Horoscope-fish-text",
   "auto": true,
   "contexts": [
-    "text-8"
+    "text-10"
   ],
   "responses": [
     {
@@ -12,11 +12,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "e59bbd40-ad05-43d0-9d5f-5acbdaaf2877",
+          "id": "8a6ae908-5e11-44b1-a421-932c1955336c",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "гороскоп для козерогов.",
+          "value": "гороскоп для рыб.",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -26,17 +26,21 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9086721f-b5db-4526-85ef-74d7b9a6d8fd",
-          "name": "thing",
+          "id": "cdd7b5df-ff7e-4a6f-92a0-286f41567013",
+          "name": "furniture",
           "required": true,
           "dataType": "@sys.any",
-          "value": "$thing",
+          "value": "$furniture",
           "defaultValue": "",
           "isList": false,
           "prompts": [
             {
               "lang": "ru",
-              "value": "Чтобы звёзды раскрыли будущее, назови большой предмет"
+              "value": "Для начала назови предмет мебели"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови предмет мебели"
             }
           ],
           "promptMessages": [],
@@ -45,11 +49,30 @@
           "outputDialogContexts": []
         },
         {
-          "id": "8919fcc2-7563-4a93-a2d7-7d79206d9866",
-          "name": "adjective-male",
+          "id": "24284b86-3d20-4ff7-bfc0-30adb957547d",
+          "name": "animal",
           "required": true,
           "dataType": "@sys.any",
-          "value": "$adjective-male",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2ada91b2-7279-4935-a75f-6bf783fb8d1a",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
           "defaultValue": "",
           "isList": false,
           "prompts": [
@@ -64,17 +87,21 @@
           "outputDialogContexts": []
         },
         {
-          "id": "7cfe26dc-f6cd-466c-b41c-dc83485d9475",
-          "name": "animal",
+          "id": "5c18b90f-14c5-4edb-9cd8-47f2cd029fc1",
+          "name": "thing",
           "required": true,
           "dataType": "@sys.any",
-          "value": "$animal",
+          "value": "$thing",
           "defaultValue": "",
           "isList": false,
           "prompts": [
             {
               "lang": "ru",
-              "value": "Звёзды спрашивают, какое животное женского рода вам нравится?"
+              "value": "Теперь - любой предмет, мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови предмет мужского рода"
             }
           ],
           "promptMessages": [],
@@ -83,36 +110,17 @@
           "outputDialogContexts": []
         },
         {
-          "id": "86c5ad6d-a9ae-47c9-9a13-3aef5b6a2cce",
-          "name": "adjective-female",
+          "id": "3c02ff95-2909-41ae-bf7e-a183bd6eb5c9",
+          "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
-          "value": "$adjective-female",
+          "value": "$adjective-2",
           "defaultValue": "",
           "isList": false,
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какая\"?"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "d81468ca-b248-4aba-a4cf-442a1bd1db73",
-          "name": "number",
-          "required": true,
-          "dataType": "@sys.number",
-          "value": "$number",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "И напоследок, чтобы гороскоп получился точным, назови своё любимое число (лучше побольше)"
+              "value": "И последний вопрос - \"какой\"?"
             }
           ],
           "promptMessages": [],
@@ -128,7 +136,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Вот что говорят звёзды: Зимой вы совершите героический поступок: на улице, заметив, что на девушку падает $adjective-male $thing, вы успеете подставить свою голову. $thing разлетится на мелкие кусочки, а вам хоть бы хны, потому что вы - Козерог!\nЛетом вы вдруг скажете первому встречному: \"Давай пободаемся!\", а тот окажется колдуном и превратит вас в редкое животное \"$adjective-female $animal\", но ненадолго.\nОсенью вы займётесь бизнесом и к концу года накопите $number р!\nВывод: не надо ни с кем бодаться, и всё у вас будет отлично!\nВот такой гороскоп. Сочиним ещё что-нибудь?"
+            "Вот что открыли звёзды: Всем известны рыба-молот, рыба-меч, а также рыба-пила. Но вы совсем другой тип - рыба-$furniture. Такие рыбки стараются лечь на дно и ничего не делать.\nСкоро вам повезёт в лотерее - вы выиграете $adjective-2 $thing, очень полезная вещь. Говорят, помогает от насморка.\nПо гороскопу хоть вы Рыбы, но в душе - тот ещё $adjective-1 $animal.\nНе ищите удачу в мутной воде, и всё будет хорошо.\nПо-моему, отлично вышло. Давай ещё?"
           ],
           "condition": ""
         }
@@ -142,7 +150,7 @@
   "fallbackIntent": false,
   "events": [
     {
-      "name": "text-8"
+      "name": "text-10"
     }
   ],
   "conditionalResponses": [],
