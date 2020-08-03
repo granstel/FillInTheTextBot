@@ -15,22 +15,26 @@
       "parameters": [
         {
           "id": "fc55be78-0282-4e61-b41e-2104cca6a350",
+          "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "name": "text-name",
           "value": "Будем сочинять про \"Карантин\". Отвечай на вопросы первое, что приходит в голову. Итак:",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "dce08d0f-b307-4c2a-8fd4-8966307b0bc0",
+          "name": "number-1",
           "required": true,
           "dataType": "@sys.number",
-          "name": "number-1",
           "value": "$number-1",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -44,15 +48,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "da74c0aa-7be3-4328-962f-24c29afbb954",
+          "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-1",
           "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -62,15 +67,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "ddfd080d-84e2-4ed4-8241-a927a0d22e08",
+          "name": "number-2",
           "required": true,
           "dataType": "@sys.number",
-          "name": "number-2",
           "value": "$number-2",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -84,15 +90,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "590a4123-5c64-463b-b4c9-60d3d4e75928",
+          "name": "thing",
           "required": true,
           "dataType": "@sys.any",
-          "name": "thing",
           "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -106,15 +113,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "fdbda545-9f08-42b9-81ff-a25434a4a1e8",
+          "name": "number-3",
           "required": true,
           "dataType": "@sys.number",
-          "name": "number-3",
           "value": "$number-3",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -128,15 +136,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "d42ce011-db02-41da-b0b0-609b1d702e0e",
+          "name": "adjective-male-1",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-male-1",
           "value": "$adjective-male-1",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -146,15 +155,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "b1ff9eef-2702-49cf-8bee-4e46b54c67d3",
+          "name": "animal-male",
           "required": true,
           "dataType": "@sys.any",
-          "name": "animal-male",
           "value": "$animal-male",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -168,15 +178,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "e30af11f-f888-4493-8bca-2b1bd8e9b019",
+          "name": "adjective-male-2",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-male-2",
           "value": "$adjective-male-2",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -186,15 +197,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "9498f3a6-fdce-4882-8bb6-4c3554d1b7c8",
+          "name": "animal-female",
           "required": true,
           "dataType": "@sys.any",
-          "name": "animal-female",
           "value": "$animal-female",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -208,15 +220,16 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         },
         {
           "id": "6c8cfe9b-349f-4d74-8d1f-ea8bf8f71d5d",
+          "name": "adjective-female",
           "required": true,
           "dataType": "@sys.any",
-          "name": "adjective-female",
           "value": "$adjective-female",
+          "defaultValue": "",
+          "isList": false,
           "prompts": [
             {
               "lang": "ru",
@@ -226,19 +239,21 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
+          "outputDialogContexts": []
         }
       ],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
-          "speech": "Слушай! У нас карантин: надо соблюдать дистанцию $number-1 м, не собираться больше $number-2 человек, не плевать на $number-3 м с разбега. За порядком следят $adjective-1 полицейские, и у каждого на поясе $adjective-male-1 $thing. Всё закрылось. Мне сказали, что я должен взять на прокорм какого-нибудь зверя, а то у зоопарка кончились деньги. Я позвонил туда и спросил: \"У вас есть $adjective-male-2 $animal-male? Я всегда мечтал о нём!\" Они сказали: \"Да, конечно, есть, сейчас привезём!\" Они привезли зверька, но оказалось, это совсем не $animal-male, а гигантская $adjective-female $animal-female! 5 минут она вела себя тихо, но потом съела всё съедобное в доме, и стала ходить по пятам за мной... Я убежал на улицу и спросил у полицейского: \"У вас есть оружие?\" Он: \"А вам зачем?\" Я сказал: \"У меня дома поселилась $adjective-female $animal-female. Идёмте, покажу.\" Я пропустил его вперёд (а сам не зашёл), запер за ним дверь, и ушёл. Всё равно квартира не моя, а съёмная. \n- По-моему отлично! Давай ещё сочиним?"
+          "speech": [
+            "Слушай! У нас карантин: надо соблюдать дистанцию $number-1 м, не собираться больше $number-2 человек, не плевать на $number-3 м с разбега. За порядком следят $adjective-1 полицейские, и у каждого на поясе $adjective-male-1 $thing. Всё закрылось. Мне сказали, что я должен взять на прокорм какого-нибудь зверя, а то у зоопарка кончились деньги. Я позвонил туда и спросил: \"У вас есть $adjective-male-2 $animal-male? Я всегда мечтал о нём!\" Они сказали: \"Да, конечно, есть, сейчас привезём!\" Они привезли зверька, но оказалось, это совсем не $animal-male, а гигантская $adjective-female $animal-female! 5 минут она вела себя тихо, но потом съела всё съедобное в доме, и стала ходить по пятам за мной... Я убежал на улицу и спросил у полицейского: \"У вас есть оружие?\" Он: \"А вам зачем?\" Я сказал: \"У меня дома поселилась $adjective-female $animal-female. Идёмте, покажу.\" Я пропустил его вперёд (а сам не зашёл), запер за ним дверь, и ушёл. Всё равно квартира не моя, а съёмная. \n- По-моему отлично! Давай ещё сочиним?"
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

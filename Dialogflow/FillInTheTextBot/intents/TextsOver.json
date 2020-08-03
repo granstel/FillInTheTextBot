@@ -6,27 +6,28 @@
   "responses": [
     {
       "resetContexts": false,
+      "action": "",
       "affectedContexts": [
         {
           "name": "TextsOver-followup",
-          "parameters": {},
           "lifespan": 2
         }
       ],
       "parameters": [],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
           "speech": [
             "Хотя погоди... Мы прошли все истории, но уже скоро появятся новые. Может, пройдём их ещё раз?",
             "Хотя... Мы прошли всё, что у меня было, но совсем скоро появятся новые истории. Может, пройдём их ещё раз?",
             "Ээ, погоди... У меня пока закончились истории, но уже скоро появятся новые. Может, пройдём эти ещё раз?"
-          ]
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

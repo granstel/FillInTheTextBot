@@ -4,13 +4,14 @@
     "data": [
       {
         "text": "123",
-        "alias": "number-1",
         "meta": "@sys.number",
+        "alias": "number-1",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -18,13 +19,14 @@
     "data": [
       {
         "text": "123",
-        "alias": "number-2",
         "meta": "@sys.number",
+        "alias": "number-2",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -32,13 +34,14 @@
     "data": [
       {
         "text": "2",
-        "alias": "number-3",
         "meta": "@sys.number",
+        "alias": "number-3",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -46,13 +49,14 @@
     "data": [
       {
         "text": "8",
-        "alias": "number-1",
         "meta": "@sys.number",
+        "alias": "number-1",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -60,13 +64,14 @@
     "data": [
       {
         "text": "множественные",
-        "alias": "adjective-1",
         "meta": "@sys.any",
+        "alias": "adjective-1",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -74,13 +79,14 @@
     "data": [
       {
         "text": "большой",
-        "alias": "adjective-male-1",
         "meta": "@sys.any",
+        "alias": "adjective-male-1",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -88,13 +94,14 @@
     "data": [
       {
         "text": "пистолет",
-        "alias": "thing",
         "meta": "@sys.any",
+        "alias": "thing",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -102,13 +109,14 @@
     "data": [
       {
         "text": "чёрный",
-        "alias": "adjective-male-2",
         "meta": "@sys.any",
+        "alias": "adjective-male-2",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -116,13 +124,14 @@
     "data": [
       {
         "text": "селезень",
-        "alias": "animal-male",
         "meta": "@sys.any",
+        "alias": "animal-male",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -130,13 +139,14 @@
     "data": [
       {
         "text": "красивая",
-        "alias": "adjective-female",
         "meta": "@sys.any",
+        "alias": "adjective-female",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -144,13 +154,14 @@
     "data": [
       {
         "text": "птица",
-        "alias": "animal-female",
         "meta": "@sys.any",
+        "alias": "animal-female",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -164,6 +175,7 @@
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -177,6 +189,7 @@
     ],
     "isTemplate": false,
     "count": 1,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -184,13 +197,14 @@
     "data": [
       {
         "text": "15",
-        "alias": "number-3",
         "meta": "@sys.number",
+        "alias": "number-3",
         "userDefined": true
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -198,13 +212,14 @@
     "data": [
       {
         "text": "345",
-        "alias": "number-2",
         "meta": "@sys.number",
+        "alias": "number-2",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   }
 ]

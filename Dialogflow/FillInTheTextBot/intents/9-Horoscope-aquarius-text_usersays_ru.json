@@ -1,11 +1,26 @@
 [
   {
-    "id": "7b1b3948-62e4-4161-a7dd-032acc63bd0f",
+    "id": "a7606be9-6edc-495d-b044-de2d45aa3d40",
     "data": [
       {
-        "text": "333",
-        "meta": "@sys.number",
-        "alias": "number",
+        "text": "ушастый",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "72e446ca-8277-44a5-b67f-345b763298b1",
+    "data": [
+      {
+        "text": "Петька",
+        "meta": "@sys.person",
+        "alias": "person",
         "userDefined": false
       }
     ],
@@ -15,12 +30,12 @@
     "updated": 0
   },
   {
-    "id": "702341c7-690f-48f9-b659-e799eabecec7",
+    "id": "77b9fac1-5f78-48b9-83a8-f53c753d8270",
     "data": [
       {
-        "text": "трясущаяся",
+        "text": "кот",
         "meta": "@sys.any",
-        "alias": "adjective-female",
+        "alias": "animal-2",
         "userDefined": true
       }
     ],
@@ -30,12 +45,12 @@
     "updated": 0
   },
   {
-    "id": "748c7d6e-cd56-4e7c-9dc3-e947ae29a1da",
+    "id": "aabfc320-d1f0-4796-a6d2-cb07741f3829",
     "data": [
       {
-        "text": "корова",
+        "text": "серый",
         "meta": "@sys.any",
-        "alias": "animal",
+        "alias": "adjective-1",
         "userDefined": true
       }
     ],
@@ -45,27 +60,12 @@
     "updated": 0
   },
   {
-    "id": "5e76727d-fe57-44e3-8291-40978d8bfdec",
+    "id": "6b533848-d5f3-4c11-a317-603fc81c9835",
     "data": [
       {
-        "text": "чёрный",
+        "text": "крыса",
         "meta": "@sys.any",
-        "alias": "adjective-male",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "141f720c-b795-42b7-aceb-ca63fdf5b44d",
-    "data": [
-      {
-        "text": "рояль",
-        "meta": "@sys.any",
-        "alias": "thing",
+        "alias": "animal-1",
         "userDefined": true
       }
     ],

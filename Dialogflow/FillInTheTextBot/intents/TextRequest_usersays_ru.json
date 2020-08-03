@@ -1,5 +1,44 @@
 [
   {
+    "id": "47b2f7f7-e9ee-4c24-b9de-549ec75f3cb9",
+    "data": [
+      {
+        "text": "хочу что то свое придумать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a37be3e9-907c-4b6f-a2ef-d54748fa0c47",
+    "data": [
+      {
+        "text": "а можно я придумаю свой рассказ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "11322d05-6b13-4f40-8380-38308c71d13e",
+    "data": [
+      {
+        "text": "можно я придумаю свой текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "b25b987f-35de-4de7-bbd7-b1b5cdc7414d",
     "data": [
       {
@@ -9,6 +48,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -30,6 +70,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -42,6 +83,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -64,6 +106,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -76,6 +119,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -88,6 +132,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -114,6 +159,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -135,6 +181,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   },
   {
@@ -156,6 +203,7 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
     "updated": 0
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "id": "ac46f58e-71a7-4e95-83fb-cfe1b82ac65c",
-  "name": "3-DifficultFish-choose",
+  "id": "3313101e-869f-4068-8e2b-cc8648e62ba6",
+  "name": "9-Horoscope-aquarius",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -9,21 +9,21 @@
       "action": "GetText",
       "affectedContexts": [
         {
-          "name": "text-3",
+          "name": "text-9",
           "lifespan": 50
         },
         {
-          "name": "3-DifficultFish-choose-followup",
+          "name": "9-Horoscope-aquarius-followup",
           "lifespan": 2
         }
       ],
       "parameters": [
         {
-          "id": "6f26734c-a974-47cb-a162-7d6b5547a3c2",
+          "id": "af8ed332-6eeb-4dcd-918e-b0c98a4a0e47",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "text-3",
+          "value": "text-9",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -40,9 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Начинаем!",
-            "Хорошо!",
-            "Отлично!"
+            "Сейчас составим"
           ],
           "condition": ""
         }

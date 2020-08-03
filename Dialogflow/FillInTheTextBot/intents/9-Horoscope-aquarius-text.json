@@ -1,11 +1,11 @@
 {
-  "id": "b61aee1b-9155-44d1-9200-cdf9fe63e91d",
-  "parentId": "fffeab4c-cc15-48ce-9157-99896559bdad",
-  "rootParentId": "fffeab4c-cc15-48ce-9157-99896559bdad",
-  "name": "8-Horoscope-capricorn-text",
+  "id": "915cb648-52a6-4f2d-80a3-f1ab046306f0",
+  "parentId": "3313101e-869f-4068-8e2b-cc8648e62ba6",
+  "rootParentId": "3313101e-869f-4068-8e2b-cc8648e62ba6",
+  "name": "9-Horoscope-aquarius-text",
   "auto": true,
   "contexts": [
-    "text-8"
+    "text-9"
   ],
   "responses": [
     {
@@ -14,11 +14,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "e59bbd40-ad05-43d0-9d5f-5acbdaaf2877",
+          "id": "ea71c6a1-bfca-4dc0-8f8d-4bc85e3190aa",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "гороскоп для козерогов.",
+          "value": "гороскоп для водолеев.",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -28,17 +28,17 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9086721f-b5db-4526-85ef-74d7b9a6d8fd",
-          "name": "thing",
+          "id": "c1bbe36f-c1b3-4ae8-8947-2985210628fd",
+          "name": "animal-1",
           "required": true,
           "dataType": "@sys.any",
-          "value": "$thing",
+          "value": "$animal-1",
           "defaultValue": "",
           "isList": false,
           "prompts": [
             {
               "lang": "ru",
-              "value": "Чтобы звёзды раскрыли будущее, назови большой предмет"
+              "value": "Чтобы будущее нам открылось, назови своё любимое животное"
             }
           ],
           "promptMessages": [],
@@ -47,11 +47,11 @@
           "outputDialogContexts": []
         },
         {
-          "id": "8919fcc2-7563-4a93-a2d7-7d79206d9866",
-          "name": "adjective-male",
+          "id": "da179d8e-c1bb-4035-b297-5ce8f2ffd491",
+          "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
-          "value": "$adjective-male",
+          "value": "$adjective-1",
           "defaultValue": "",
           "isList": false,
           "prompts": [
@@ -66,17 +66,17 @@
           "outputDialogContexts": []
         },
         {
-          "id": "7cfe26dc-f6cd-466c-b41c-dc83485d9475",
-          "name": "animal",
+          "id": "d9adbe41-c836-4e09-8431-e7cd51f580c9",
+          "name": "animal-2",
           "required": true,
           "dataType": "@sys.any",
-          "value": "$animal",
+          "value": "$animal-2",
           "defaultValue": "",
           "isList": false,
           "prompts": [
             {
               "lang": "ru",
-              "value": "Звёзды спрашивают, какое животное женского рода вам нравится?"
+              "value": "Теперь назови животное, которое тебе не нравится"
             }
           ],
           "promptMessages": [],
@@ -85,17 +85,17 @@
           "outputDialogContexts": []
         },
         {
-          "id": "86c5ad6d-a9ae-47c9-9a13-3aef5b6a2cce",
-          "name": "adjective-female",
+          "id": "5498c706-1134-47b5-a35e-e01c627da806",
+          "name": "person",
           "required": true,
-          "dataType": "@sys.any",
-          "value": "$adjective-female",
+          "dataType": "@sys.person",
+          "value": "$person",
           "defaultValue": "",
           "isList": false,
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какая\"?"
+              "value": "Чтобы гороскоп был точным, назови имя своего друга"
             }
           ],
           "promptMessages": [],
@@ -104,17 +104,21 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d81468ca-b248-4aba-a4cf-442a1bd1db73",
-          "name": "number",
+          "id": "380048d6-a80f-4fd8-a2a7-06d7aaaad5a6",
+          "name": "adjective-2",
           "required": true,
-          "dataType": "@sys.number",
-          "value": "$number",
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
           "defaultValue": "",
           "isList": false,
           "prompts": [
             {
               "lang": "ru",
-              "value": "И напоследок, чтобы гороскоп получился точным, назови своё любимое число (лучше побольше)"
+              "value": "И последнее - \"Какой\"?"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок - \"Какой\"?"
             }
           ],
           "promptMessages": [],
@@ -130,7 +134,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Вот что говорят звёзды: Зимой вы совершите героический поступок: на улице, заметив, что на девушку падает $adjective-male $thing, вы успеете подставить свою голову. $thing разлетится на мелкие кусочки, а вам хоть бы хны, потому что вы - Козерог!\nЛетом вы вдруг скажете первому встречному: \"Давай пободаемся!\", а тот окажется колдуном и превратит вас в редкое животное \"$adjective-female $animal\", но ненадолго.\nОсенью вы займётесь бизнесом и к концу года накопите $number р!\nВывод: не надо ни с кем бодаться, и всё у вас будет отлично!\nВот такой гороскоп. Сочиним ещё что-нибудь?"
+            "Вот что получилось: Водолей - покровитель фонтанов, водопадов, газировки, и депутатов. Весной вы придумаете новый сорт пива - $adjective-1 $person, но его почему-то никто не захочет производить.\nЛетом вы поймёте: лучше $animal-1 в небе, чем $animal-2 в вашей квартире.\nОсенью вас наградят медалью \"Самый $adjective-2 Водолей мира\".\nЭто всё, что сказали звёзды. Давай ещё сочиним?"
           ],
           "condition": ""
         }
@@ -144,7 +148,7 @@
   "fallbackIntent": false,
   "events": [
     {
-      "name": "text-8"
+      "name": "text-9"
     }
   ],
   "conditionalResponses": [],

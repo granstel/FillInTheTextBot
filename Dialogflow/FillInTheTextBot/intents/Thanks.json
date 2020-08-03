@@ -6,22 +6,24 @@
   "responses": [
     {
       "resetContexts": false,
+      "action": "",
       "affectedContexts": [],
       "parameters": [],
       "messages": [
         {
-          "type": 0,
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
           "lang": "ru",
-          "condition": "",
           "speech": [
             "Мне тоже понравилось! Сочиним что-нибудь ещё?",
             "И мне понравилось! Давай ещё что-нибудь сочиним?",
             "Сочиним что-нибудь ещё?",
             "Давай ещё что-нибудь сочиним?"
-          ]
+          ],
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {},
       "speech": []
     }
   ],

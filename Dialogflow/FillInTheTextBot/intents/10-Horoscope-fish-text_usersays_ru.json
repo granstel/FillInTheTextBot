@@ -1,26 +1,11 @@
 [
   {
-    "id": "7b1b3948-62e4-4161-a7dd-032acc63bd0f",
+    "id": "28a56c5f-4164-4420-b2bb-c10e602c8ff8",
     "data": [
       {
-        "text": "333",
-        "meta": "@sys.number",
-        "alias": "number",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "702341c7-690f-48f9-b659-e799eabecec7",
-    "data": [
-      {
-        "text": "трясущаяся",
+        "text": "трепещущий",
         "meta": "@sys.any",
-        "alias": "adjective-female",
+        "alias": "adjective-2",
         "userDefined": true
       }
     ],
@@ -30,10 +15,40 @@
     "updated": 0
   },
   {
-    "id": "748c7d6e-cd56-4e7c-9dc3-e947ae29a1da",
+    "id": "6d114ba0-57af-4f82-bc23-328d27f58555",
     "data": [
       {
-        "text": "корова",
+        "text": "валенок",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "20c576ec-2051-4e72-b76d-8edb826ec695",
+    "data": [
+      {
+        "text": "саблезубый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b7c35dab-87f5-4e5e-b9ba-1b82174ddc4b",
+    "data": [
+      {
+        "text": "тушканчик",
         "meta": "@sys.any",
         "alias": "animal",
         "userDefined": true
@@ -45,27 +60,12 @@
     "updated": 0
   },
   {
-    "id": "5e76727d-fe57-44e3-8291-40978d8bfdec",
+    "id": "a472e747-809f-4a75-ac73-8f781c224886",
     "data": [
       {
-        "text": "чёрный",
+        "text": "диван",
         "meta": "@sys.any",
-        "alias": "adjective-male",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "141f720c-b795-42b7-aceb-ca63fdf5b44d",
-    "data": [
-      {
-        "text": "рояль",
-        "meta": "@sys.any",
-        "alias": "thing",
+        "alias": "furniture",
         "userDefined": true
       }
     ],

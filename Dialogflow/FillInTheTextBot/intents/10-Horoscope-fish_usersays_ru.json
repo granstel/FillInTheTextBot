@@ -1,9 +1,9 @@
 [
   {
-    "id": "cced5e26-f013-4939-bc6b-7eb1d2f73f2e",
+    "id": "d0b05bf5-9fba-4358-83c7-74105724748f",
     "data": [
       {
-        "text": "диалог не отвечает",
+        "text": "для рыб",
         "userDefined": false
       }
     ],
@@ -13,10 +13,10 @@
     "updated": 0
   },
   {
-    "id": "654bcbec-713c-4c46-a5a8-1602e20532bc",
+    "id": "21d85589-4824-49b2-911f-3787bf733a0b",
     "data": [
       {
-        "text": "почему диалог не отвечает",
+        "text": "про рыб",
         "userDefined": false
       }
     ],
@@ -26,15 +26,23 @@
     "updated": 0
   },
   {
-    "id": "626f4bf1-f4f5-4edb-b85f-08d7b4197ff8",
+    "id": "4d09b16e-27eb-47f1-b6ba-6fb037a94273",
     "data": [
       {
-        "text": "алиса",
-        "meta": "@sys.ignore",
+        "text": "гороскоп про рыб",
         "userDefined": false
-      },
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5eb05878-aff8-413e-bbad-3f1a11b8ddb4",
+    "data": [
       {
-        "text": " почему ты говоришь диалог не отвечает",
+        "text": "гороскоп для рыб",
         "userDefined": false
       }
     ],
