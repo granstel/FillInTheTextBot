@@ -14,6 +14,8 @@ namespace FillInTheTextBot.Models
         public string Response { get; set; }
 
         public string Action { get; set; }
+        
+        public Payload Payload { get; set; }
 
         public IEnumerable<string> GetParameters(string key)
         {

@@ -3,7 +3,6 @@ using AutoMapper;
 using FillInTheTextBot.Models;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
-using Internal = FillInTheTextBot.Models.Internal;
 using YandexModels = Yandex.Dialogs.Models;
 
 namespace FillInTheTextBot.Messengers.Yandex
@@ -39,8 +38,8 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.Text, m => m.MapFrom(s => s.Text.Replace(Environment.NewLine, "\n")))
                 .ForMember(d => d.Tts, m => m.MapFrom(s => s.AlternativeText.Replace(Environment.NewLine, "\n")))
                 .ForMember(d => d.EndSession, m => m.MapFrom(s => s.Finished))
-                .ForMember(d => d.Card, m => m.Ignore())
-                .ForMember(d => d.Buttons, m => m.Ignore());
+                .ForMember(d => d.Buttons, m => m.MapFrom(s => s.Buttons))
+                .ForMember(d => d.Card, m => m.Ignore());
 
             CreateMap<Models.Response, Session>()
                 .ForMember(d => d.UserId, m => m.MapFrom(s => s.UserHash))
@@ -56,6 +55,10 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.StartAccountLinking, m => m.Ignore())
                 .ForMember(d => d.UserStateUpdate, m => m.Ignore())
                 .ForMember(d => d.SessionState, m => m.Ignore());
+
+            CreateMap<Button, YandexModels.Buttons.ResponseButton>()
+                .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
+                .ForMember(d => d.Url, m => m.MapFrom(s => s.Url));
         }
     }
 }

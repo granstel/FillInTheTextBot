@@ -24,7 +24,12 @@ namespace FillInTheTextBot.Services
 
             var dialog = await _dialogflowService.GetResponseAsync(request);
 
-            var response = new Response { Text = dialog?.Response, Finished = dialog?.EndConversation ?? false };
+            var response = new Response 
+            { 
+                Text = dialog?.Response, 
+                Finished = dialog?.EndConversation ?? false,
+                Buttons = dialog?.Payload?.Buttons
+            };
 
             if (dialog.Parameters.TryGetValue("resetTextIndex", out var resetTextIndex) && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {

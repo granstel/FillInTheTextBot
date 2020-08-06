@@ -11,5 +11,7 @@ namespace FillInTheTextBot.Models
         public string AlternativeText { get; set; }
 
         public bool Finished { get; set; }
+
+        public Button[] Buttons { get; set; }
     }
 }
