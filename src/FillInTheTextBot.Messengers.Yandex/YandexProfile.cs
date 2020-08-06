@@ -58,7 +58,9 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             CreateMap<Button, YandexModels.Buttons.ResponseButton>()
                 .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
-                .ForMember(d => d.Url, m => m.MapFrom(s => s.Url));
+                .ForMember(d => d.Url, m => m.MapFrom(s => s.Url))
+                .ForMember(d => d.Hide, m => m.UseValue(false))
+                .ForMember(d => d.Payload, m => m.Ignore());
         }
     }
 }
