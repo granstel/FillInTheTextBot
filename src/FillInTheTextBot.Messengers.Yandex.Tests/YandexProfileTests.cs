@@ -2,6 +2,7 @@
 using AutoFixture.Kernel;
 using AutoMapper;
 using NUnit.Framework;
+using System.Linq;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Buttons;
 using Yandex.Dialogs.Models.Cards;
@@ -50,6 +51,26 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
             Assert.AreEqual(input.Session.MessageId, output.Session.MessageId);
             Assert.AreEqual(input.Version, output.Version);
             Assert.NotNull(output.Response);
+        }
+
+        [Test]
+        public void Map_ResponseWithButtons_Response()
+        {
+            var buttons = _fixture.Build<Models.Button>()
+                .With(b => b.Text)
+                .With(b => b.Url)
+                .CreateMany().ToArray();
+
+            var input = _fixture.Build<Models.Response>()
+                .With(r => r.Buttons, buttons)
+                .Create();
+
+
+            var result = _target.Map<Response>(input);
+
+
+            Assert.NotNull(result?.Buttons);
+            Assert.AreEqual(buttons.Length, result?.Buttons?.Length);
         }
     }
 }
