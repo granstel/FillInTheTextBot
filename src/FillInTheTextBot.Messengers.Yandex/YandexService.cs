@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AutoMapper;
-using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using NLog;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
-using Internal = FillInTheTextBot.Models.Internal;
 
 namespace FillInTheTextBot.Messengers.Yandex
 {

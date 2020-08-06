@@ -1,8 +1,6 @@
 ﻿using Autofac;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
-using FillInTheTextBot.Services;
-using FillInTheTextBot.Services.Clients;
 using FillInTheTextBot.Services.Configuration;
 using Grpc.Auth;
 using RestSharp;
@@ -15,8 +13,6 @@ namespace FillInTheTextBot.Api.DependencyModules
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<RestClient>().As<IRestClient>();
-            
-            builder.RegisterType<QnaClient>().As<IQnaClient>();
             
             builder.Register(RegisterDialogflowSessionsClient).As<SessionsClient>();
             builder.Register(RegisterDialogflowContextsClient).As<ContextsClient>();

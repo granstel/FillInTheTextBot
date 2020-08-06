@@ -1,7 +1,6 @@
 ﻿using Autofac;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
-using FillInTheTextBot.Services.Serialization;
 using GranSteL.Helpers.Redis;
 using StackExchange.Redis;
 
@@ -12,9 +11,7 @@ namespace FillInTheTextBot.Api.DependencyModules
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<ConversationService>().As<IConversationService>();
-            builder.RegisterType<QnaService>().As<IQnaService>();
             builder.RegisterType<DialogflowService>().As<IDialogflowService>();
-            builder.RegisterType<CustomJsonSerializer>().AsSelf();
 
             builder.Register(RegisterCacheService).As<IRedisCacheService>().SingleInstance();
         }

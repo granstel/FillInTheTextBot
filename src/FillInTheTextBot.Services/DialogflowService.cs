@@ -8,6 +8,7 @@ using FillInTheTextBot.Services.Extensions;
 using NLog;
 using System.Linq;
 using FillInTheTextBot.Models;
+using GranSteL.Helpers.Redis.Extensions;
 
 namespace FillInTheTextBot.Services
 {

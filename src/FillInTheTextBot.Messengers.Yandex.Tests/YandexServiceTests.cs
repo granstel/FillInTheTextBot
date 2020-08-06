@@ -6,7 +6,6 @@ using Moq;
 using NUnit.Framework;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
-using Internal = FillInTheTextBot.Models.Internal;
 
 namespace FillInTheTextBot.Messengers.Yandex.Tests
 {
