@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using FillInTheTextBot.Models.Internal;
+using FillInTheTextBot.Models;
 using Telegram.Bot.Types;
 
 namespace FillInTheTextBot.Messengers.Telegram

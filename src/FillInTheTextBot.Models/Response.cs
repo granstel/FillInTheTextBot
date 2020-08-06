@@ -1,8 +1,8 @@
-namespace FillInTheTextBot.Models.Internal
+namespace FillInTheTextBot.Models
 {
     public class Response
     {
-        public string ChatHash {get; set;}
+        public string ChatHash { get; set; }
 
         public string UserHash { get; set; }
 

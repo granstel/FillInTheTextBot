@@ -3,7 +3,7 @@ using System.Linq;
 using AutoMapper;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.WellKnownTypes;
-using FillInTheTextBot.Models.Internal;
+using FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Services.Mapping
 {

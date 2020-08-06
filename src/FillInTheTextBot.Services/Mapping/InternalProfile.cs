@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using FillInTheTextBot.Models.Internal;
+using FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Services.Mapping
 {

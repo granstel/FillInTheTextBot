@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AutoMapper;
+using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using NLog;
 using Yandex.Dialogs.Models;
@@ -28,7 +29,7 @@ namespace FillInTheTextBot.Messengers.Yandex
             _mapper = mapper;
         }
 
-        protected override Internal.Request Before(InputModel input)
+        protected override Models.Request Before(InputModel input)
         {
             if (input == default)
             {
@@ -47,18 +48,18 @@ namespace FillInTheTextBot.Messengers.Yandex
             return result;
         }
 
-        protected override Internal.Response ProcessCommand(Internal.Request request)
+        protected override Models.Response ProcessCommand(Models.Request request)
         {
-            Internal.Response response = null;
+            Models.Response response = null;
 
             if (PingCommand.Equals(request.Text, StringComparison.InvariantCultureIgnoreCase))
             {
-                response = new Internal.Response { Text = PongResponse };
+                response = new Models.Response { Text = PongResponse };
             }
 
             if (ErrorCommand.Equals(request?.Text, StringComparison.InvariantCultureIgnoreCase))
             {
-                response = new Internal.Response { Text = errorAnswer };
+                response = new Models.Response { Text = errorAnswer };
             }
 
             return response;
@@ -76,7 +77,7 @@ namespace FillInTheTextBot.Messengers.Yandex
             {
                 _log.Error(e);
 
-                var response = new Internal.Response { Text = errorAnswer };
+                var response = new Models.Response { Text = errorAnswer };
 
                 result = await AfterAsync(input, response);
             }
@@ -84,7 +85,7 @@ namespace FillInTheTextBot.Messengers.Yandex
             return result;
         }
 
-        protected override async Task<OutputModel> AfterAsync(InputModel input, Internal.Response response)
+        protected override async Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
         {
             var output = await base.AfterAsync(input, response);
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace FillInTheTextBot.Models.Internal
+namespace FillInTheTextBot.Models
 {
     public class Dialog
     {

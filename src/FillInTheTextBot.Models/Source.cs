@@ -1,4 +1,4 @@
-namespace FillInTheTextBot.Models.Internal
+namespace FillInTheTextBot.Models
 {
     /// <summary>
     /// Источник запроса, мессенджер

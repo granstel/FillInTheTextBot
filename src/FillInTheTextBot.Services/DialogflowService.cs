@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Google.Cloud.Dialogflow.V2;
-using FillInTheTextBot.Models.Internal;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using NLog;
 using System.Linq;
+using FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Services
 {

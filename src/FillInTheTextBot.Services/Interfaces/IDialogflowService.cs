@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using FillInTheTextBot.Models.Internal;
+using FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Services
 {

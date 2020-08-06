@@ -1,6 +1,6 @@
 ﻿using AutoFixture;
 using AutoMapper;
-using FillInTheTextBot.Models.Internal;
+using FillInTheTextBot.Models;
 using NUnit.Framework;
 using Telegram.Bot.Types;
 

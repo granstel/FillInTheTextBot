@@ -1,6 +1,6 @@
 using System;
 using AutoMapper;
-using FillInTheTextBot.Models.Internal;
+using FillInTheTextBot.Models;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
 using Internal = FillInTheTextBot.Models.Internal;
@@ -15,7 +15,7 @@ namespace FillInTheTextBot.Messengers.Yandex
     {
         public YandexProfile()
         {
-            CreateMap<InputModel, Internal.Request>()
+            CreateMap<InputModel, Models.Request>()
                 .ForMember(d => d.ChatHash, m => m.ResolveUsing(s => s.Session?.SkillId))
                 .ForMember(d => d.UserHash, m => m.ResolveUsing(s => s.Session?.UserId))
                 .ForMember(d => d.Text, m => m.ResolveUsing(s => s.Request?.OriginalUtterance))
@@ -27,7 +27,7 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.ClearContexts, m => m.Ignore())
                 .ForMember(d => d.IsOldUser, m => m.Ignore());
 
-            CreateMap<Internal.Response, OutputModel>()
+            CreateMap<Models.Response, OutputModel>()
                 .ForMember(d => d.Response, m => m.MapFrom(s => s))
                 .ForMember(d => d.Session, m => m.MapFrom(s => s))
                 .ForMember(d => d.Version, m => m.Ignore())
@@ -35,14 +35,14 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.UserStateUpdate, m => m.Ignore())
                 .ForMember(d => d.SessionState, m => m.Ignore());
 
-            CreateMap<Internal.Response, YandexModels.Response>()
+            CreateMap<Models.Response, YandexModels.Response>()
                 .ForMember(d => d.Text, m => m.MapFrom(s => s.Text.Replace(Environment.NewLine, "\n")))
                 .ForMember(d => d.Tts, m => m.MapFrom(s => s.AlternativeText.Replace(Environment.NewLine, "\n")))
                 .ForMember(d => d.EndSession, m => m.MapFrom(s => s.Finished))
                 .ForMember(d => d.Card, m => m.Ignore())
                 .ForMember(d => d.Buttons, m => m.Ignore());
 
-            CreateMap<Internal.Response, Session>()
+            CreateMap<Models.Response, Session>()
                 .ForMember(d => d.UserId, m => m.MapFrom(s => s.UserHash))
                 .ForMember(d => d.MessageId, m => m.Ignore())
                 .ForMember(d => d.SessionId, m => m.Ignore())

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using AutoMapper;
-using FillInTheTextBot.Models.Internal;
+using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 
 namespace FillInTheTextBot.Messengers

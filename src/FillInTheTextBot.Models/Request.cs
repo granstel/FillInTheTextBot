@@ -1,10 +1,10 @@
-namespace FillInTheTextBot.Models.Internal
+namespace FillInTheTextBot.Models
 {
     public class Request
     {
-        public Source? Source {get; set;}
+        public Source? Source { get; set; }
 
-        public string ChatHash {get; set;}
+        public string ChatHash { get; set; }
 
         public string UserHash { get; set; }
 
@@ -15,9 +15,9 @@ namespace FillInTheTextBot.Models.Internal
         public string SessionId { get; set; }
 
         public bool? NewSession { get; set; }
-        
+
         public string RequiredContext { get; set; }
-        
+
         public bool ClearContexts { get; set; }
         public bool IsOldUser { get; set; }
     }

@@ -1,8 +1,8 @@
-﻿using FillInTheTextBot.Models.Internal;
-using FillInTheTextBot.Services.Extensions;
+﻿using FillInTheTextBot.Services.Extensions;
 using AutoFixture;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Services.Tests.Extensions
 {

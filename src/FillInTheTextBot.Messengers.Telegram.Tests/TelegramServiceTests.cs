@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using AutoFixture;
 using AutoMapper;
-using FillInTheTextBot.Models.Internal;
+using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using Moq;
 using NUnit.Framework;
