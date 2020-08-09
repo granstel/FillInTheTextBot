@@ -15,7 +15,7 @@ namespace FillInTheTextBot.Services.Mapping
             CreateMap<QueryResult, Dialog>()
                 .ForMember(d => d.Parameters, m => m.MapFrom(s => GetParameters(s)))
                 .ForMember(d => d.Response, m => m.MapFrom(s => s.FulfillmentText))
-                .ForMember(d => d.Payload, m => m.MapFrom(s => GetPayload(s)))
+                .ForMember(d => d.Payload, m => m.MapFrom(s => GetButtons(s)))
                 .ForMember(d => d.ParametersIncomplete, m => m.MapFrom(s => !s.AllRequiredParamsPresent))
                 .ForMember(d => d.Action, m => m.MapFrom(s => s.Action))
                 .ForMember(d => d.EndConversation, m => m.Ignore())
@@ -64,13 +64,27 @@ namespace FillInTheTextBot.Services.Mapping
             return dictionary;
         }
 
-        private Payload GetPayload(QueryResult s)
+        private Button[] GetButtons(QueryResult s)
         {
-            var payload = s?.FulfillmentMessages?
-                            .Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.Payload)
-                            .Select(m => m.Payload.ToString().Deserialize<Payload>()).FirstOrDefault();
+            var quickReplies = s?.FulfillmentMessages
+                            ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.QuickReplies)
+                            .SelectMany(m => m.QuickReplies.QuickReplies_.Select(r => new Button
+                            {
+                                Text = r,
+                                QuickReply = true
+                            })).Where(r => r != null).ToList();
 
-            return payload;
+            var cards = s?.FulfillmentMessages
+                            ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.Card)
+                            .SelectMany(m => m.Card.Buttons.Select(b => new Button
+                            {
+                                Text = b.Text,
+                                Url = b.Postback
+                            })).Where(b => b != null).ToList();
+
+            quickReplies.AddRange(cards);
+
+            return quickReplies.ToArray();
         }
     }
 }
