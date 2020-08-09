@@ -39,7 +39,7 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.Text, m => m.MapFrom(s => s.Text.Replace(Environment.NewLine, "\n")))
                 .ForMember(d => d.Tts, m => m.MapFrom(s => s.AlternativeText.Replace(Environment.NewLine, "\n")))
                 .ForMember(d => d.EndSession, m => m.MapFrom(s => s.Finished))
-                .ForMember(d => d.Buttons, m => m.ResolveUsing(MapToResponseButtons))
+                .ForMember(d => d.Buttons, m => m.MapFrom(s => s.Buttons))
                 .ForMember(d => d.Card, m => m.Ignore());
 
             CreateMap<Models.Response, Session>()
@@ -62,17 +62,6 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.Url, m => m.MapFrom(s => s.Url))
                 .ForMember(d => d.Hide, m => m.UseValue(false))
                 .ForMember(d => d.Payload, m => m.Ignore());
-        }
-
-        private ResponseButton[] MapToResponseButtons(
-            Models.Response source,
-            YandexModels.Response destinationParent,
-            YandexModels.Buttons.Button[] destination,
-            ResolutionContext context)
-        {
-            var result = context.Mapper.Map<ResponseButton[]>(source.Buttons);
-
-            return result;
         }
     }
 }
