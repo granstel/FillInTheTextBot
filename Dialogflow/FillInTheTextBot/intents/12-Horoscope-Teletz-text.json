@@ -1,5 +1,7 @@
 {
   "id": "36e5ca2a-5d48-41a1-8874-ae66a81990a9",
+  "parentId": "0b0df3e5-e699-40b5-bb81-9b48e37cc01a",
+  "rootParentId": "0b0df3e5-e699-40b5-bb81-9b48e37cc01a",
   "name": "12-Horoscope-Teletz-text",
   "auto": true,
   "contexts": [
