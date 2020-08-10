@@ -1,38 +1,29 @@
 {
-  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
-  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - yes",
+  "id": "0b0df3e5-e699-40b5-bb81-9b48e37cc01a",
+  "name": "12-Horoscope-Teletz",
   "auto": true,
-  "contexts": [
-    "EasyWelcome-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-12",
+          "lifespan": 50
+        },
+        {
+          "name": "12-Horoscope-Teletz-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "db36df61-f917-4e84-8a76-a59cfe1bd2ce",
+          "id": "ae3a1c52-e711-45fb-af88-4a1541305f42",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
           "value": "text-12",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "204aaf69-e133-4db3-90a5-2a0d86a8886f",
-          "name": "resetTextIndex",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "true",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -49,9 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Пусть звёзды откроют нам"
           ],
           "condition": ""
         }
