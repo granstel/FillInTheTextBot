@@ -1,6 +1,6 @@
 {
-  "id": "fffeab4c-cc15-48ce-9157-99896559bdad",
-  "name": "8-Horoscope-capricorn",
+  "id": "ad2b5810-2971-42f0-91a1-07c17e85eeb2",
+  "name": "11-Horoscope-Oven",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -9,21 +9,21 @@
       "action": "GetText",
       "affectedContexts": [
         {
-          "name": "text-8",
+          "name": "text-11",
           "lifespan": 50
         },
         {
-          "name": "8-Horoscope-capricorn-followup",
+          "name": "11-Horoscope-Oven-followup",
           "lifespan": 2
         }
       ],
       "parameters": [
         {
-          "id": "a1199843-6755-45aa-acb3-cb01ad4b964e",
+          "id": "57937215-6a19-48f6-90b7-d49c7f6740ba",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "text-8",
+          "value": "text-11",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -40,7 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Давай взглянем на карту созвездий, и составим"
+            "Сейчас звёзды поведают нам"
           ],
           "condition": ""
         }
