@@ -1,6 +1,6 @@
 {
-  "id": "fffeab4c-cc15-48ce-9157-99896559bdad",
-  "name": "8-Horoscope-capricorn",
+  "id": "0b0df3e5-e699-40b5-bb81-9b48e37cc01a",
+  "name": "12-Horoscope-Teletz",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -9,21 +9,21 @@
       "action": "GetText",
       "affectedContexts": [
         {
-          "name": "text-8",
+          "name": "text-12",
           "lifespan": 50
         },
         {
-          "name": "8-Horoscope-capricorn-followup",
+          "name": "12-Horoscope-Teletz-followup",
           "lifespan": 2
         }
       ],
       "parameters": [
         {
-          "id": "a1199843-6755-45aa-acb3-cb01ad4b964e",
+          "id": "ae3a1c52-e711-45fb-af88-4a1541305f42",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "text-8",
+          "value": "text-12",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -40,7 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Давай взглянем на карту созвездий, и составим"
+            "Пусть звёзды откроют нам"
           ],
           "condition": ""
         }

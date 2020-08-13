@@ -1,5 +1,41 @@
 [
   {
+    "id": "c65f5497-bb4c-4743-bbc4-771dd27d2033",
+    "data": [
+      {
+        "text": "второй",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5296ee25-42fb-49c4-ad32-3fc5344cbd61",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "два",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "4c97fdf7-9984-47b0-82bc-867d10c84f4f",
     "data": [
       {
@@ -34,25 +70,7 @@
       }
     ],
     "isTemplate": false,
-    "count": 1,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "c65f5497-bb4c-4743-bbc4-771dd27d2033",
-    "data": [
-      {
-        "text": "второй",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " текст",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 2,
     "lang": "ru",
     "updated": 0
   },

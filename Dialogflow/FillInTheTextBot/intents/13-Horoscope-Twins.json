@@ -1,6 +1,6 @@
 {
-  "id": "fffeab4c-cc15-48ce-9157-99896559bdad",
-  "name": "8-Horoscope-capricorn",
+  "id": "4d371474-93fa-4ccf-ac8c-f963e5ab81f3",
+  "name": "13-Horoscope-Twins",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -9,21 +9,21 @@
       "action": "GetText",
       "affectedContexts": [
         {
-          "name": "text-8",
+          "name": "text-13",
           "lifespan": 50
         },
         {
-          "name": "8-Horoscope-capricorn-followup",
+          "name": "13-Horoscope-Twins-followup",
           "lifespan": 2
         }
       ],
       "parameters": [
         {
-          "id": "a1199843-6755-45aa-acb3-cb01ad4b964e",
+          "id": "03a072c1-95d7-4344-b1f7-bb1e2df320aa",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "text-8",
+          "value": "text-13",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -40,7 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Давай взглянем на карту созвездий, и составим"
+            "Звёзды помогут составить нам"
           ],
           "condition": ""
         }
