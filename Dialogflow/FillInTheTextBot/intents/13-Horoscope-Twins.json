@@ -1,38 +1,29 @@
 {
-  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
-  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - yes",
+  "id": "4d371474-93fa-4ccf-ac8c-f963e5ab81f3",
+  "name": "13-Horoscope-Twins",
   "auto": true,
-  "contexts": [
-    "EasyWelcome-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-13",
+          "lifespan": 50
+        },
+        {
+          "name": "13-Horoscope-Twins-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "47daafcb-f9d3-4725-9dad-9619aa05a4b8",
+          "id": "03a072c1-95d7-4344-b1f7-bb1e2df320aa",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
           "value": "text-13",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "3cc0c07f-f5a0-46a3-b06b-5366224c0bc8",
-          "name": "resetTextIndex",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "true",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -49,9 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Звёзды помогут составить нам"
           ],
           "condition": ""
         }
