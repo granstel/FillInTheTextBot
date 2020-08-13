@@ -28,7 +28,7 @@ namespace FillInTheTextBot.Services
             { 
                 Text = dialog?.Response, 
                 Finished = dialog?.EndConversation ?? false,
-                Buttons = dialog?.Payload?.Buttons
+                Buttons = dialog?.Buttons
             };
 
             if (dialog.Parameters.TryGetValue("resetTextIndex", out var resetTextIndex) && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))

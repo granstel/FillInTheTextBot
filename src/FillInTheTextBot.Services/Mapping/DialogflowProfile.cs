@@ -14,7 +14,7 @@ namespace FillInTheTextBot.Services.Mapping
             CreateMap<QueryResult, Dialog>()
                 .ForMember(d => d.Parameters, m => m.MapFrom(s => GetParameters(s)))
                 .ForMember(d => d.Response, m => m.MapFrom(s => s.FulfillmentText))
-                .ForMember(d => d.Payload, m => m.MapFrom(s => GetButtons(s)))
+                .ForMember(d => d.Buttons, m => m.MapFrom(s => GetButtons(s)))
                 .ForMember(d => d.ParametersIncomplete, m => m.MapFrom(s => !s.AllRequiredParamsPresent))
                 .ForMember(d => d.Action, m => m.MapFrom(s => s.Action))
                 .ForMember(d => d.EndConversation, m => m.Ignore())
