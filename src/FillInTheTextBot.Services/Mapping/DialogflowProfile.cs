@@ -4,7 +4,6 @@ using AutoMapper;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.WellKnownTypes;
 using FillInTheTextBot.Models;
-using GranSteL.Helpers.Redis.Extensions;
 
 namespace FillInTheTextBot.Services.Mapping
 {
