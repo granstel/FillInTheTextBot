@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "e59bbd40-ad05-43d0-9d5f-5acbdaaf2877",
+          "id": "2d43fdb6-29e2-4d22-9558-3c22a6f1bcb0",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -28,7 +28,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9086721f-b5db-4526-85ef-74d7b9a6d8fd",
+          "id": "3f968fe4-132b-4783-ac2c-d7c1c664c7b9",
           "name": "thing",
           "required": true,
           "dataType": "@sys.any",
@@ -47,7 +47,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "8919fcc2-7563-4a93-a2d7-7d79206d9866",
+          "id": "c7dd9fb9-1609-4228-b29f-22efe07286fd",
           "name": "adjective-male",
           "required": true,
           "dataType": "@sys.any",
@@ -66,7 +66,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "7cfe26dc-f6cd-466c-b41c-dc83485d9475",
+          "id": "05e2b526-f8d1-4d8b-a08c-38fa9925ccfc",
           "name": "animal",
           "required": true,
           "dataType": "@sys.any",
@@ -85,7 +85,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "86c5ad6d-a9ae-47c9-9a13-3aef5b6a2cce",
+          "id": "88bd4312-82cf-480f-ac5e-fc78d007d4d7",
           "name": "adjective-female",
           "required": true,
           "dataType": "@sys.any",
@@ -104,7 +104,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d81468ca-b248-4aba-a4cf-442a1bd1db73",
+          "id": "6efa453d-e099-49d5-ac86-a48aeb2f8648",
           "name": "number",
           "required": true,
           "dataType": "@sys.number",
@@ -130,7 +130,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Вот что говорят звёзды: Зимой вы совершите героический поступок: на улице, заметив, что на девушку падает $adjective-male $thing, вы успеете подставить свою голову. $thing разлетится на мелкие кусочки, а вам хоть бы хны, потому что вы - Козерог!\nЛетом вы вдруг скажете первому встречному: \"Давай пободаемся!\", а тот окажется колдуном и превратит вас в редкое животное \"$adjective-female $animal\", но ненадолго.\nОсенью вы займётесь бизнесом и к концу года накопите $number р!\nВывод: не надо ни с кем бодаться, и всё у вас будет отлично!\nВот такой гороскоп. Сочиним ещё что-нибудь?"
+            "Вот что говорят звёзды: Зимой вы совершите героический поступок: на улице, заметив, что на девушку падает $adjective-male $thing, вы успеете подставить свою голову. $thing разлетится на мелкие кусочки, а вам хоть бы хны, потому что вы - Козерог!\nЛетом вы вдруг скажете первому встречному: \"Давай пободаемся!\", а тот окажется колдуном и превратит вас в редкое животное \"$adjective-female $animal\", но ненадолго.\nОсенью вы займётесь бизнесом и к концу года накопите $number р!\nВывод: не надо ни с кем бодаться, и всё у вас будет отлично!\nВот такой прикольный гороскоп. Сочиним ещё что-нибудь?"
           ],
           "condition": ""
         }

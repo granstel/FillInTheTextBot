@@ -1,38 +1,29 @@
 {
-  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
-  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - yes",
+  "id": "7da34583-8945-4cb8-bb89-78748579b27f",
+  "name": "14-Horoscope-Raks",
   "auto": true,
-  "contexts": [
-    "EasyWelcome-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-14",
+          "lifespan": 50
+        },
+        {
+          "name": "14-Horoscope-Raks-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "56437ba5-bc83-4ccc-a30d-fa5333689373",
+          "id": "351264c6-ab8f-4fd7-ac29-5f571301c405",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
           "value": "text-14",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "39e07ae5-6717-429d-abae-2a2a9a73b585",
-          "name": "resetTextIndex",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "true",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -49,9 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Интересно, откроют ли нам звёзды"
           ],
           "condition": ""
         }
