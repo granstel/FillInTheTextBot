@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.Extensions;
 using NLog;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
@@ -48,7 +49,19 @@ namespace FillInTheTextBot.Messengers.Yandex
                 result.IsOldUser = IsOldUser;
             }
 
+            SetContexts(input, result);
+
             return result;
+        }
+
+        private void SetContexts(InputModel input, Models.Request request)
+        {
+            if (request.HasScreen)
+            {
+                request.HasScreen = true;
+
+                _dialogflowService.SetContext(request.SessionId, "Screen", 50000).Forget();
+            }
         }
 
         protected override Models.Response ProcessCommand(Models.Request request)

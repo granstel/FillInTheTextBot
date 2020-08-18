@@ -10,5 +10,7 @@ namespace FillInTheTextBot.Services
         Task<Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null);
 
         Task DeleteAllContexts(Request request);
+
+        Task SetContext(string sessionId, string contextName, int lifeSpan = 1);
     }
 }

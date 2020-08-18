@@ -89,25 +89,18 @@ namespace FillInTheTextBot.Services
             return response;
         }
 
-        public Task SetContext(SessionName sessionName, string contextName, int lifeSpan = 1)
-        {
-            return _contextsClient.CreateContextAsync(sessionName, new Context
-            {
-                ContextName = new ContextName(_configuration.ProjectId, sessionName.SessionId, contextName),
-                LifespanCount = lifeSpan
-            });
-        }
-
-        public Task DeleteContext(string sessionId, string contextName)
-        {
-            return _contextsClient.DeleteContextAsync(new ContextName(_configuration.ProjectId, sessionId, contextName));
-        }
-
         public Task DeleteAllContexts(Request request)
         {
             var session = CreateSession(request);
 
             return _contextsClient.DeleteAllContextsAsync(session);
+        }
+
+        public Task SetContext(string sessionId, string contextName, int lifeSpan = 1)
+        {
+            var session = CreateSession(sessionId);
+
+            return SetContext(session, contextName, lifeSpan);
         }
 
         private DetectIntentRequest CreateQuery(Request request)
@@ -223,6 +216,27 @@ namespace FillInTheTextBot.Services
             var session = new SessionName(_configuration.ProjectId, request.SessionId);
 
             return session;
+        }
+
+        private SessionName CreateSession(string sessionId)
+        {
+            var session = new SessionName(_configuration.ProjectId, sessionId);
+
+            return session;
+        }
+
+        private Task SetContext(SessionName sessionName, string contextName, int lifeSpan = 1)
+        {
+            return _contextsClient.CreateContextAsync(sessionName, new Context
+            {
+                ContextName = new ContextName(_configuration.ProjectId, sessionName.SessionId, contextName),
+                LifespanCount = lifeSpan
+            });
+        }
+
+        private Task DeleteContext(string sessionId, string contextName)
+        {
+            return _contextsClient.DeleteContextAsync(new ContextName(_configuration.ProjectId, sessionId, contextName));
         }
     }
 }
