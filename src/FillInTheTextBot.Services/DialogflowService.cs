@@ -8,6 +8,7 @@ using NLog;
 using System.Linq;
 using FillInTheTextBot.Models;
 using GranSteL.Helpers.Redis.Extensions;
+using FillInTheTextBot.Services.Extensions;
 
 namespace FillInTheTextBot.Services
 {
@@ -70,11 +71,7 @@ namespace FillInTheTextBot.Services
 
             if (!string.IsNullOrEmpty(request.RequiredContext))
             {
-                _contextsClient.CreateContext(intentRequest.SessionAsSessionName, new Context
-                {
-                    ContextName = new ContextName(_configuration.ProjectId, request.SessionId, request.RequiredContext),
-                    LifespanCount = 1
-                });
+                SetContext(intentRequest.SessionAsSessionName, request.RequiredContext).Forget();
             }
 
             if (_configuration.LogQuery)
@@ -92,11 +89,25 @@ namespace FillInTheTextBot.Services
             return response;
         }
 
-        public async Task DeleteAllContexts(Request request)
+        public Task SetContext(SessionName sessionName, string contextName, int lifeSpan = 1)
+        {
+            return _contextsClient.CreateContextAsync(sessionName, new Context
+            {
+                ContextName = new ContextName(_configuration.ProjectId, sessionName.SessionId, contextName),
+                LifespanCount = lifeSpan
+            });
+        }
+
+        public Task DeleteContext(string sessionId, string contextName)
+        {
+            return _contextsClient.DeleteContextAsync(new ContextName(_configuration.ProjectId, sessionId, contextName));
+        }
+
+        public Task DeleteAllContexts(Request request)
         {
             var session = CreateSession(request);
 
-            await _contextsClient.DeleteAllContextsAsync(session);
+            return _contextsClient.DeleteAllContextsAsync(session);
         }
 
         private DetectIntentRequest CreateQuery(Request request)

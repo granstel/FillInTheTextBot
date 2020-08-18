@@ -19,12 +19,17 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string errorAnswer = "Простите, у меня какие-то проблемы... Давайте попробуем ещё раз";
 
         private readonly IMapper _mapper;
+        private readonly IDialogflowService _dialogflowService;
 
         private readonly Logger _log = LogManager.GetLogger(nameof(YandexService));
 
-        public YandexService(IConversationService conversationService, IMapper mapper) : base(conversationService, mapper)
+        public YandexService(
+            IConversationService conversationService, 
+            IMapper mapper, 
+            IDialogflowService dialogflowService) : base(conversationService, mapper)
         {
             _mapper = mapper;
+            _dialogflowService = dialogflowService;
         }
 
         protected override Models.Request Before(InputModel input)
