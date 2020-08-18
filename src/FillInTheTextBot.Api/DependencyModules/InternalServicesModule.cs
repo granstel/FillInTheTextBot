@@ -11,7 +11,7 @@ namespace FillInTheTextBot.Api.DependencyModules
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<ConversationService>().As<IConversationService>();
-            builder.RegisterType<DialogflowService>().As<IDialogflowService>();
+            builder.RegisterType<DialogflowService>().As<IDialogflowService>().InstancePerLifetimeScope();
 
             builder.Register(RegisterCacheService).As<IRedisCacheService>().SingleInstance();
         }
