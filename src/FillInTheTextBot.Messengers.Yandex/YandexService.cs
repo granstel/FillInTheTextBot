@@ -58,9 +58,17 @@ namespace FillInTheTextBot.Messengers.Yandex
         {
             if (request.HasScreen)
             {
-                request.HasScreen = true;
-
                 _dialogflowService.SetContext(request.SessionId, "Screen", 50000).Forget();
+            }
+
+            if (input.Meta?.ClientId.Contains("yandexnavi") == true)
+            {
+                _dialogflowService.SetContext(request.SessionId, "navigator", 50000).Forget();
+            }
+
+            if (request.HasScreen && (input.Meta?.ClientId?.Contains("searchplugin") == true || input.Meta?.ClientId?.Contains("browser") == true))
+            {
+                _dialogflowService.SetContext(request.SessionId, "advertising", 50000).Forget();
             }
         }
 
