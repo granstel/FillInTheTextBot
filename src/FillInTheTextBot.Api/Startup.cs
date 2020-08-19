@@ -37,6 +37,8 @@ namespace FillInTheTextBot.Api
         // ReSharper disable once UnusedMember.Global
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, AppConfiguration configuration)
         {
+            app.UseMiddleware<ExceptionsMiddleware>();
+
             if (!env.IsDevelopment())
             {
                 app.UseMiddleware<MetricsMiddleware>();
@@ -46,9 +48,7 @@ namespace FillInTheTextBot.Api
             {
                 app.UseMiddleware<HttpLogMiddleware>();
             }
-
-            app.UseMiddleware<ExceptionsMiddleware>();
-
+            
             app.UseMvc();
         }
     }
