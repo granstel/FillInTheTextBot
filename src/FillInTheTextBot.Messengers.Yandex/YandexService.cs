@@ -25,8 +25,8 @@ namespace FillInTheTextBot.Messengers.Yandex
         private readonly Logger _log = LogManager.GetLogger(nameof(YandexService));
 
         public YandexService(
-            IConversationService conversationService, 
-            IMapper mapper, 
+            IConversationService conversationService,
+            IMapper mapper,
             IDialogflowService dialogflowService) : base(conversationService, mapper)
         {
             _mapper = mapper;
@@ -61,12 +61,12 @@ namespace FillInTheTextBot.Messengers.Yandex
                 _dialogflowService.SetContext(request.SessionId, "Screen", 50000).Forget();
             }
 
-            if (input.Meta?.ClientId.Contains("yandexnavi") == true)
+            if (input.IsNavigator())
             {
                 _dialogflowService.SetContext(request.SessionId, "navigator", 50000).Forget();
             }
 
-            if (request.HasScreen && (input.Meta?.ClientId?.Contains("searchplugin") == true || input.Meta?.ClientId?.Contains("browser") == true))
+            if (input.IsCanShowAdvertising())
             {
                 _dialogflowService.SetContext(request.SessionId, "advertising", 50000).Forget();
             }
