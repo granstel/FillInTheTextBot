@@ -43,7 +43,7 @@ namespace FillInTheTextBot.Services
                 response = await GetText(request, dialog.Response, textKey);
             }
 
-            if (!dialog.ParametersIncomplete && string.Equals(dialog.Action, "DeleteAllContexts"))
+            if (dialog.Parameters.TryGetValue("deleteAllContexts", out var deleteAllContexts) && string.Equals(deleteAllContexts, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
                 _dialogflowService.DeleteAllContexts(request).Forget();
             }
