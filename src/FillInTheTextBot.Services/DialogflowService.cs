@@ -8,7 +8,6 @@ using NLog;
 using System.Linq;
 using FillInTheTextBot.Models;
 using GranSteL.Helpers.Redis.Extensions;
-using FillInTheTextBot.Services.Extensions;
 
 namespace FillInTheTextBot.Services
 {
@@ -59,7 +58,6 @@ namespace FillInTheTextBot.Services
             {
                 Text = text,
                 SessionId = sessionId,
-                RequiredContext = requiredContext
             };
 
             return await GetResponseAsync(request);
@@ -68,11 +66,6 @@ namespace FillInTheTextBot.Services
         public async Task<Dialog> GetResponseAsync(Request request)
         {
             var intentRequest = CreateQuery(request);
-
-            if (!string.IsNullOrEmpty(request.RequiredContext))
-            {
-                SetContext(intentRequest.SessionAsSessionName, request.RequiredContext).Forget();
-            }
 
             if (_configuration.LogQuery)
                 _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
@@ -133,17 +126,8 @@ namespace FillInTheTextBot.Services
             var intentRequest = new DetectIntentRequest
             {
                 SessionAsSessionName = session,
-                QueryInput = query,
-                QueryParams = new QueryParameters()
-                {
-                    Payload = new Google.Protobuf.WellKnownTypes.Struct()
-                }
+                QueryInput = query
             };
-
-            intentRequest.QueryParams.Payload.Fields.Add(nameof(request.UserHash), new Google.Protobuf.WellKnownTypes.Value
-            {
-                StringValue = request.UserHash
-            });
 
             return intentRequest;
         }
