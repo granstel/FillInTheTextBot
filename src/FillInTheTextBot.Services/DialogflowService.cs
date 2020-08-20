@@ -21,7 +21,7 @@ namespace FillInTheTextBot.Services
         private const string EasyWelcomeEventName = "EasyWelcome";
         private const string ErrorEventName = "Error";
 
-        private const int MaximumRequestLength = 20;
+        private const int MaximumRequestLength = 30;
 
         private readonly Dictionary<string, string> _commandDictionary = new Dictionary<string, string>
         {
