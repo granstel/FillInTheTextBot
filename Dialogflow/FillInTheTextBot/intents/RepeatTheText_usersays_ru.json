@@ -1,0 +1,112 @@
+[
+  {
+    "id": "da487b85-18cb-431a-b331-38a5b4efad0d",
+    "data": [
+      {
+        "text": "повтори последний текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "059a9a06-a717-4603-9cb5-3686e306c444",
+    "data": [
+      {
+        "text": "ну ка повтори что сказала",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6e0a7a6d-67a4-49f0-aff1-0ec6a04fc71c",
+    "data": [
+      {
+        "text": "повторить",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "577344b1-3874-45fd-8d3f-43f5535c46b0",
+    "data": [
+      {
+        "text": "повтори",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "998b34c8-ef76-4231-b691-0c749522d0da",
+    "data": [
+      {
+        "text": "прочитай ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9917122a-2e7d-467d-92a5-6516827b9d51",
+    "data": [
+      {
+        "text": "расскажи ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " пожалуйста",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8baf8d9f-9a1f-4057-8b26-033ff5e9bdf5",
+    "data": [
+      {
+        "text": "повтори ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
