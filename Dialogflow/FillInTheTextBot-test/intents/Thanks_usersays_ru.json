@@ -1,0 +1,297 @@
+[
+  {
+    "id": "216eefc6-c056-4e76-b09f-6f18ab5ff57c",
+    "data": [
+      {
+        "text": "короче это вот что получилось",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "487bb008-433e-49ee-a3c8-51e265386d30",
+    "data": [
+      {
+        "text": "это мило",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f9fcc921-aaa0-474e-b842-16e7dcae216c",
+    "data": [
+      {
+        "text": "ахахахахапххпхвххахахахахахахахахахахахахах",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ccb833cf-bafa-450f-acbc-78342765b5e0",
+    "data": [
+      {
+        "text": "ну как хорошая история",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6730f8ac-3ca2-47c3-82bb-1911743e8a8d",
+    "data": [
+      {
+        "text": "а мы подружились",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7e2d098e-9569-4ad6-8971-fe8528ef2e5b",
+    "data": [
+      {
+        "text": "вот это история",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b8a1bfcd-d4d2-4162-9425-86f360c8bef6",
+    "data": [
+      {
+        "text": "забавно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "31a0e22a-622f-43d2-8e20-30afe87e7a78",
+    "data": [
+      {
+        "text": "весело",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c4f8c630-6bc3-4bc6-8e61-30fc540993b5",
+    "data": [
+      {
+        "text": "отлично",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7705bb13-8479-4cac-9591-c69539415d24",
+    "data": [
+      {
+        "text": "чудесно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "77c018d2-e7df-457c-ae20-82350555978e",
+    "data": [
+      {
+        "text": "понравилось",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7158f36b-cb7e-414d-9c8c-27662d067393",
+    "data": [
+      {
+        "text": "прикольно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ca659870-3f50-496a-9e6b-99e32a2c5291",
+    "data": [
+      {
+        "text": "ясно",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6ab2b881-1748-417d-a49e-537792b86c4d",
+    "data": [
+      {
+        "text": "здорово",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fd1246d6-5972-4926-afc1-ae5a1d06a67b",
+    "data": [
+      {
+        "text": "классно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8ec5ea03-53c5-4eea-935f-47fcdcf2d9b8",
+    "data": [
+      {
+        "text": "спасибо ",
+        "userDefined": false
+      },
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "19af7d20-0f04-4136-87b8-b65264fc3460",
+    "data": [
+      {
+        "text": "ржака",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "303718a8-ce76-4f22-825b-7871292d0980",
+    "data": [
+      {
+        "text": "супер",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e5d1502e-b895-4481-86a2-b06d8386c285",
+    "data": [
+      {
+        "text": "великолепно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "518c0b30-045c-495d-9801-2ab248b6dc93",
+    "data": [
+      {
+        "text": "спасибо",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d913b4af-ba02-4360-8400-72e2669a3e4d",
+    "data": [
+      {
+        "text": "круто",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3a8aadbd-dd6a-4d45-a2b9-f93ab56ac263",
+    "data": [
+      {
+        "text": "Класс",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "id": "1a0cac4d-b438-4f8e-bded-7d280b4881cd",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "три",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a5a85f0e-cc80-4faa-9936-6eca4c3889f3",
+    "data": [
+      {
+        "text": "третий текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d0be4f7b-9559-4dcf-9c3a-a4895c22fd49",
+    "data": [
+      {
+        "text": "третий",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3a8e0707-9672-4935-be27-d69b569c60ca",
+    "data": [
+      {
+        "text": "давай про ",
+        "userDefined": false
+      },
+      {
+        "text": "парк",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " развлечений",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ed0b5e5b-8397-453e-b18d-912ab9871fb6",
+    "data": [
+      {
+        "text": "Давай ",
+        "userDefined": false
+      },
+      {
+        "text": "парк",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " развлечений",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c6a5f17d-85c2-4ea1-ad29-32c4b04ff374",
+    "data": [
+      {
+        "text": "Парк",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " развлечений",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

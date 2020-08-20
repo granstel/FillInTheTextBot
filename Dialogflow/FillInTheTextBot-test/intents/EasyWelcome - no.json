@@ -1,0 +1,40 @@
+{
+  "id": "04d9fc78-464b-4ed3-be60-519187d30a67",
+  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
+  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
+  "name": "EasyWelcome - no",
+  "auto": true,
+  "contexts": [
+    "EasyWelcome-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Тогда продолжим, но всё равно скоро до него дойдём.",
+            "Хорошо, мы всё равно до него скоро дойдём."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

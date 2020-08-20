@@ -1,0 +1,62 @@
+[
+  {
+    "id": "f73e78f0-9c48-4c6a-85a3-12ddf3b2f27c",
+    "data": [
+      {
+        "text": "бегать босиком",
+        "meta": "@sys.any",
+        "alias": "action-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2b22a89c-3109-4f96-be87-a111785f0b1c",
+    "data": [
+      {
+        "text": "чайник",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9c05dcd5-9ca9-4526-804b-47dbf980bfe7",
+    "data": [
+      {
+        "text": "есть мороженое",
+        "meta": "@sys.any",
+        "alias": "action-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "febdc5e9-885c-4c70-a260-4d2b3a4178f5",
+    "data": [
+      {
+        "text": "Света",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

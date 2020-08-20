@@ -1,0 +1,126 @@
+[
+  {
+    "id": "2504f223-b801-4045-b764-4fba1a69a970",
+    "data": [
+      {
+        "text": "номер десять",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0c7afb42-d345-43ce-93ac-48d8023121f0",
+    "data": [
+      {
+        "text": "десятый",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8d191a02-32ea-4b8c-a760-0cc0eb5424b0",
+    "data": [
+      {
+        "text": "гороскоп про ",
+        "userDefined": false
+      },
+      {
+        "text": "водолеев",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "566ce40c-73b5-4775-9d8a-610b4dcd62d7",
+    "data": [
+      {
+        "text": "гороскоп про водолея",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5093e9ab-b278-4d08-b378-9472b46bb657",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "водолеев",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "91a0ae62-73ce-4226-b409-e254311c72ee",
+    "data": [
+      {
+        "text": "про водолея",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cda23c97-517e-46fa-9073-f1e21c2911f6",
+    "data": [
+      {
+        "text": "для водолея",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8af5e0d4-ce21-4f23-bfb0-03e070ca2aa6",
+    "data": [
+      {
+        "text": "для ",
+        "userDefined": false
+      },
+      {
+        "text": "водолеев",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

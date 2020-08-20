@@ -1,0 +1,102 @@
+[
+  {
+    "id": "99ed2c39-4adc-4d22-b317-fcfebb71d03a",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "двенадцать",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a2b56c55-42ed-4f56-bb14-a815108bc346",
+    "data": [
+      {
+        "text": "двенадцатый",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f55c08c6-c74c-4f7c-bf8f-ba5b06759eba",
+    "data": [
+      {
+        "text": "овны",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b1b4b117-7770-44e5-a718-8f766784f17d",
+    "data": [
+      {
+        "text": "овен",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "632581e5-96c8-4cc9-a576-4164301f8a58",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "овнов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b516eba9-9815-4765-b69a-0a72ed2ed912",
+    "data": [
+      {
+        "text": "гороскоп для ",
+        "userDefined": false
+      },
+      {
+        "text": "овнов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

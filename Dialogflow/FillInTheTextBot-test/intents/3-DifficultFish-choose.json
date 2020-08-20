@@ -1,0 +1,61 @@
+{
+  "id": "ac46f58e-71a7-4e95-83fb-cfe1b82ac65c",
+  "name": "3-DifficultFish-choose",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-3",
+          "lifespan": 50
+        },
+        {
+          "name": "3-DifficultFish-choose-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "36eb1c8b-bbc5-4ec6-9c88-35b91cb00c9e",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Начинаем!",
+            "Хорошо!",
+            "Отлично!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

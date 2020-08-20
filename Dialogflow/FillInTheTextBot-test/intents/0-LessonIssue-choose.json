@@ -1,0 +1,57 @@
+{
+  "id": "7f42154b-e917-492a-8f8a-ee1b815734f0",
+  "name": "0-LessonIssue-choose",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-0",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "68813ee0-dede-484a-924c-82c4ff78ee04",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-0",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Окей!",
+            "Хорошо!",
+            "Поехали!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,36 @@
+{
+  "id": "63f87fcf-2f80-44f7-9f28-46f204cea411",
+  "name": "Problems",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Видимо, возникли какие-то проблемы, но я что-нибудь придумаю. Давай продолжим?",
+            "Наверно, были какие-то проблемы, но их наверняка скоро исправят. Продолжим?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

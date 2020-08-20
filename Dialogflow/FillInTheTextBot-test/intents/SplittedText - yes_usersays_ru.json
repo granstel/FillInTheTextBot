@@ -1,0 +1,132 @@
+[
+  {
+    "id": "5d24ced5-62a4-4771-89ce-4f3fa8d6dcbd",
+    "data": [
+      {
+        "text": "меня устраивает",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "939fb11f-a847-4aa2-a0a4-40ffd596580d",
+    "data": [
+      {
+        "text": "я согласен",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0f0e9961-595f-4598-bfce-066a4f676311",
+    "data": [
+      {
+        "text": "сделай это",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "00a7d34c-549b-446d-8f41-ff79b2152de8",
+    "data": [
+      {
+        "text": "да",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "99d865c4-1720-4551-8728-e7c3b4422b61",
+    "data": [
+      {
+        "text": "не возражаю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b3f14384-ecc6-407b-bf3f-8e6b524630bb",
+    "data": [
+      {
+        "text": "разумеется",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "25508f69-c0f4-4088-84b5-5f0a958da8bc",
+    "data": [
+      {
+        "text": "точно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "605fd211-b86e-4fce-bc7b-4d1bb80cfba0",
+    "data": [
+      {
+        "text": "подтверждаю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bfe38234-9ac2-4895-947d-e0353fe732bd",
+    "data": [
+      {
+        "text": "конечно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9e0b07b1-2b02-4094-a38a-eedf7cfe559b",
+    "data": [
+      {
+        "text": "это верно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

@@ -1,0 +1,139 @@
+[
+  {
+    "id": "c65f5497-bb4c-4743-bbc4-771dd27d2033",
+    "data": [
+      {
+        "text": "второй",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5296ee25-42fb-49c4-ad32-3fc5344cbd61",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "два",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4c97fdf7-9984-47b0-82bc-867d10c84f4f",
+    "data": [
+      {
+        "text": "коронтин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ce4435ed-1ca5-49ee-bf93-d58ec1a9da7f",
+    "data": [
+      {
+        "text": "давай про коронтин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b1394b3f-b8d3-4851-b1a5-a8369e5dc333",
+    "data": [
+      {
+        "text": "карантин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "285571d0-581b-4de2-ac36-eefffdf2209d",
+    "data": [
+      {
+        "text": "Давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " про карантин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0187ddd2-de44-487a-be6d-bde0bfa93b32",
+    "data": [
+      {
+        "text": "Давай про карантин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7f4552c3-5e79-4177-9ce6-5629fb1f3720",
+    "data": [
+      {
+        "text": "Давай текст карантин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "761a251f-8702-4473-824b-86a837d10d90",
+    "data": [
+      {
+        "text": "Карантин",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

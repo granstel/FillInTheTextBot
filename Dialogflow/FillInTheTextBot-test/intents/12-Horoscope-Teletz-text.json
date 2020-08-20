@@ -1,0 +1,180 @@
+{
+  "id": "36e5ca2a-5d48-41a1-8874-ae66a81990a9",
+  "parentId": "0b0df3e5-e699-40b5-bb81-9b48e37cc01a",
+  "rootParentId": "0b0df3e5-e699-40b5-bb81-9b48e37cc01a",
+  "name": "12-Horoscope-Teletz-text",
+  "auto": true,
+  "contexts": [
+    "text-12"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "7a827425-c9e4-4c1c-8ceb-dba3a743edc0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для тельцов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a075ace6-03cc-4ff8-97ac-70b9c871c159",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови своё любимое крупное животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cb6406d5-51b6-4006-943b-8d9429438162",
+          "name": "drink",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$drink",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь - какой-нибудь напиток"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "eacbef78-bb25-4e86-995f-b94deddfa949",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c2563d4b-43e7-4d4d-ad40-8afd6045bda8",
+          "name": "person",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя какой-нибудь кино-звезды"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "110b0cd2-af81-47aa-b4fb-dc7901db27bd",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь - большой предмет женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3ca0960c-0344-4758-a836-625cd2db8d78",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок, назови своё нелюбимое число"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее - назови число, которое тебе не нравится"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, гороскоп для тельцов! Ваша любимая рифма: Телец - молодец. И это правда! Вам всё удаётся, и друзья, завидуя, называют вас $adjective-1 $animal.\nВесной вы поставите рекорд - выпьете залпом $number л своего любимого напитка - $drink. А ещё вы получите приглашение на телевидение, где вас будет ждать большая чугунная $thing, которую вручит $person!\nНе надо ни на кого бычиться, и всё у вас будет превосходно!\nПо-моему, отличный гороскоп! Давай сочиним что-то ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-12"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

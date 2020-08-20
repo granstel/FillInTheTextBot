@@ -1,0 +1,161 @@
+{
+  "id": "1c53cf77-99c3-4e7e-a7d9-81deeb471d65",
+  "parentId": "53eb0d1e-70c9-459d-a779-c5b7f7f4ce58",
+  "rootParentId": "53eb0d1e-70c9-459d-a779-c5b7f7f4ce58",
+  "name": "10-Horoscope-fish-text",
+  "auto": true,
+  "contexts": [
+    "text-10"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "8a6ae908-5e11-44b1-a421-932c1955336c",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для рыб.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cdd7b5df-ff7e-4a6f-92a0-286f41567013",
+          "name": "furniture",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$furniture",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови предмет мебели"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови предмет мебели"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "24284b86-3d20-4ff7-bfc0-30adb957547d",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2ada91b2-7279-4935-a75f-6bf783fb8d1a",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5c18b90f-14c5-4edb-9cd8-47f2cd029fc1",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь - любой предмет, мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови предмет мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3c02ff95-2909-41ae-bf7e-a183bd6eb5c9",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос - \"какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что открыли звёзды: Всем известны рыба-молот, рыба-меч, а также рыба-пила. Но вы совсем другой тип - рыба-$furniture. Такие рыбки стараются лечь на дно и ничего не делать.\nСкоро вам повезёт в лотерее - вы выиграете $adjective-2 $thing, очень полезная вещь. Говорят, помогает от насморка.\nПо гороскопу хоть вы Рыбы, но в душе - тот ещё $adjective-1 $animal.\nНе ищите удачу в мутной воде, и всё будет хорошо.\nПо-моему, отлично вышло. Давай ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-10"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

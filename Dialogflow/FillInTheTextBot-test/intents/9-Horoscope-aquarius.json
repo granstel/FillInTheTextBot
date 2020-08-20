@@ -1,0 +1,59 @@
+{
+  "id": "3313101e-869f-4068-8e2b-cc8648e62ba6",
+  "name": "9-Horoscope-aquarius",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-9",
+          "lifespan": 50
+        },
+        {
+          "name": "9-Horoscope-aquarius-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "92391868-c32f-4903-b505-0b5e4c050b3a",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-9",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Сейчас составим"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

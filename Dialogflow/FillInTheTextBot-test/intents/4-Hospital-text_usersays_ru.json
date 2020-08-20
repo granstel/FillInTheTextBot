@@ -1,0 +1,150 @@
+[
+  {
+    "id": "6f21b94e-a861-484a-b11a-d385ce656ef8",
+    "data": [
+      {
+        "text": "обнимали берёзу",
+        "meta": "@sys.any",
+        "alias": "action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6a5fbac6-022e-494f-8b91-8c20975a7905",
+    "data": [
+      {
+        "text": "крокодил",
+        "meta": "@sys.ignore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aaf03873-0b2e-46ce-b847-5e581a8d3fc3",
+    "data": [
+      {
+        "text": "2",
+        "meta": "@sys.number",
+        "alias": "number-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7e64c93a-efec-4a18-a84e-35b98ed5913e",
+    "data": [
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "741cec77-f612-4b23-8d58-12a660779ce7",
+    "data": [
+      {
+        "text": "керосин",
+        "meta": "@sys.any",
+        "alias": "liquid",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0590e7b8-3499-48d5-a66d-2f4de27f6cd0",
+    "data": [
+      {
+        "text": "Джорно Джованна",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "05a6ec65-e421-488f-8566-7ac38bc3cddd",
+    "data": [
+      {
+        "text": "Григорий Лепс",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "48de8faa-834a-47df-bdd5-26ed3d9150b6",
+    "data": [
+      {
+        "text": "задумчивая",
+        "meta": "@sys.ignore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ad40f09a-e1e3-4288-9d97-b3b567dfc4b7",
+    "data": [
+      {
+        "text": "лысый",
+        "meta": "@sys.any",
+        "alias": "adjective-male",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "da2ec0d6-9618-4471-8782-2613f55dc387",
+    "data": [
+      {
+        "text": "12",
+        "meta": "@sys.number",
+        "alias": "number-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

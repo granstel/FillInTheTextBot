@@ -1,0 +1,150 @@
+{
+  "id": "1d460a33-fbcc-472a-b4c8-b79f18a59da1",
+  "parentId": "ad2b5810-2971-42f0-91a1-07c17e85eeb2",
+  "rootParentId": "ad2b5810-2971-42f0-91a1-07c17e85eeb2",
+  "name": "11-Horoscope-Oven-text",
+  "auto": true,
+  "contexts": [
+    "text-11"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "71940e6a-a47e-4fd1-84d8-89ee72ec935b",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для овнов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e5f1a8a1-2a89-4ee6-a0a1-348192e9ecde",
+          "name": "person",
+          "required": true,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала скажи имя человека, который тебе нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала скажи имя того, кто тебе нравится"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c34b24af-d359-4c39-8e4b-44bc76cfd2b8",
+          "name": "action-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Что тебе хотелось бы делать вместе с этим человеком?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что бы тебе хотелось делать вместе с этим человеком?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e68d0bdd-9289-4640-a8f3-c9a241719552",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Чтобы гороскоп был точнее, скажи, что ты точно не хочешь получить на день рождения?"
+            },
+            {
+              "lang": "ru",
+              "value": "Чтобы гороскоп получился точным скажи, что ты не очень хочешь получить в подарок?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "f6f7bfbc-a306-4c17-a504-e53314e71da3",
+          "name": "action-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - что ты любишь делать вместе со своими друзьями?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее - что тебе нравится делать вместе с друзьями?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Звёзды раскрыли, что осенью к вам придёт любовь, и она не будет безответной! $person подарит вам отличную штуку - $thing.\nЗимой заведите себе какое-нибудь хобби, например, $action-2 по ночам с разбега или $action-1 босиком вприпрыжку.\nСоставьте список того, что нужно сделать, и разорвите его на мелкие кусочки, тогда всё будет замечательно!\nПо-моему, неплохо получилось! Давай ещё что-нибудь придумаем?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-11"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

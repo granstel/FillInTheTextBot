@@ -1,0 +1,46 @@
+{
+  "id": "107880bb-3c11-4d19-a220-87e2798a81e4",
+  "name": "TextsOver",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "TextsOver-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Хотя погоди... Мы прошли все истории, но уже скоро появятся новые. Может, пройдём их ещё раз?",
+            "Хотя... Мы прошли всё, что у меня было, но совсем скоро появятся новые истории. Может, пройдём их ещё раз?",
+            "Ээ, погоди... У меня пока закончились истории, но уже скоро появятся новые. Может, пройдём эти ещё раз?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "texts-over"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

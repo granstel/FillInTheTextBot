@@ -1,0 +1,42 @@
+{
+  "id": "197323ba-3326-4013-b98e-13b3aec95e5c",
+  "parentId": "b1074daf-72b5-4880-a250-7596eb8b1dbb",
+  "rootParentId": "b1074daf-72b5-4880-a250-7596eb8b1dbb",
+  "name": "SplittedText - no",
+  "auto": true,
+  "contexts": [
+    "SplittedText",
+    "SplittedText-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Да ладно тебе, немного же осталось",
+            "Ну давай я этот дочитаю, и сочиним новый, хорошо?",
+            "Давай уже дочитаю, и сочиним новый, хорошо?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "f691206f-44a5-4588-968e-38085014eda4",
+  "name": "Default Fallback Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Не совсем понимаю, о чём ты. Это мы уже сочиняем?",
+            "А вот это не совсем понятно. Это уже вставлять в текст?",
+            "Что? Это мы уже сочиняем?",
+            "Что-что? Это уже вставлять в текст?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

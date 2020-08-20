@@ -1,0 +1,236 @@
+[
+  {
+    "id": "1b876ed9-7758-4076-b0c7-64cc2f115e34",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ты совсем что ",
+        "userDefined": false
+      },
+      {
+        "text": "ли",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " дурная",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "53d77551-af1a-4268-92e3-d8272196b4ae",
+    "data": [
+      {
+        "text": "обосрись",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5531acb9-4d29-461a-b2e5-69c42933dab2",
+    "data": [
+      {
+        "text": "обосрись вкладку твою мать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "de952983-9858-4365-bb7a-935b469fe18b",
+    "data": [
+      {
+        "text": "фигня",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a7895b1d-28dd-444a-86b0-b909c96cee3b",
+    "data": [
+      {
+        "text": "ну его нахер",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aff180d9-5270-4816-b0ed-e19a56965624",
+    "data": [
+      {
+        "text": "из говна получилось",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f5be0264-142f-4037-b43d-6a0b394057d3",
+    "data": [
+      {
+        "text": "что блядь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5509e453-442d-4a26-a86f-61c61c111614",
+    "data": [
+      {
+        "text": "иди на хуй",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cde6ab63-5d9c-4cde-b2a5-811ee0adbc62",
+    "data": [
+      {
+        "text": "иди нафиг",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "eedacef7-8e00-4d80-98d1-66ac793a7787",
+    "data": [
+      {
+        "text": "пойти",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " нафиг",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ea155293-f98d-49df-9f37-9993570b521e",
+    "data": [
+      {
+        "text": "дура",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "572388de-660e-449d-8c61-98494cdbc7b0",
+    "data": [
+      {
+        "text": "да ты дура",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4138918c-4dfc-4222-9934-7b2b05f49bea",
+    "data": [
+      {
+        "text": "ты самая тупая",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "096e0a93-8a10-49f5-b9ce-757ace739437",
+    "data": [
+      {
+        "text": "тупая",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f1226775-df24-4084-acad-7e4daee40ebb",
+    "data": [
+      {
+        "text": "блять надо позвонить ему ",
+        "userDefined": false
+      },
+      {
+        "text": "хую",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "af8859e8-b702-48d2-bb1b-272f4ef0fcb9",
+    "data": [
+      {
+        "text": "ты глупая",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

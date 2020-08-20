@@ -1,0 +1,157 @@
+{
+  "id": "915cb648-52a6-4f2d-80a3-f1ab046306f0",
+  "parentId": "3313101e-869f-4068-8e2b-cc8648e62ba6",
+  "rootParentId": "3313101e-869f-4068-8e2b-cc8648e62ba6",
+  "name": "9-Horoscope-aquarius-text",
+  "auto": true,
+  "contexts": [
+    "text-9"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "ea71c6a1-bfca-4dc0-8f8d-4bc85e3190aa",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для водолеев.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c1bbe36f-c1b3-4ae8-8947-2985210628fd",
+          "name": "animal-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Чтобы будущее нам открылось, назови своё любимое животное"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "da179d8e-c1bb-4035-b297-5ce8f2ffd491",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d9adbe41-c836-4e09-8431-e7cd51f580c9",
+          "name": "animal-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови животное, которое тебе не нравится"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5498c706-1134-47b5-a35e-e01c627da806",
+          "name": "person",
+          "required": true,
+          "dataType": "@sys.person",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Чтобы гороскоп был точным, назови имя своего друга"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "380048d6-a80f-4fd8-a2a7-06d7aaaad5a6",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - \"Какой\"?"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок - \"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что получилось: Водолей - покровитель фонтанов, водопадов, газировки, и депутатов. Весной вы придумаете новый сорт пива - $adjective-1 $person, но его почему-то никто не захочет производить.\nЛетом вы поймёте: лучше $animal-1 в небе, чем $animal-2 в вашей квартире.\nОсенью вас наградят медалью \"Самый $adjective-2 Водолей мира\".\nЭто всё, что сказали звёзды. Давай ещё сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-9"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

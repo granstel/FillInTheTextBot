@@ -1,0 +1,210 @@
+{
+  "id": "89eced7c-6748-4ee5-8977-75e3fd26d317",
+  "parentId": "79679865-6697-4ddd-badc-bdca3500e184",
+  "rootParentId": "79679865-6697-4ddd-badc-bdca3500e184",
+  "name": "5-Circus-text",
+  "auto": true,
+  "contexts": [
+    "text-5"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "7af863ba-de58-4436-a2cb-04fd364f7d71",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "Текст про \"Цирк\".",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bd5046a5-cab5-4051-be46-75407d39cf3d",
+          "name": "person-1",
+          "required": true,
+          "dataType": "@sys.person",
+          "value": "$person-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови знаменитого мужчину"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "f5be0b20-49ae-4f79-86c9-72665910e0b0",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "836c330d-0769-4f3c-8c44-c9950bef9a4a",
+          "name": "person-2",
+          "required": true,
+          "dataType": "@sys.person",
+          "value": "$person-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови ещё одного знаменитого мужчину"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "6e149db7-003b-4b2f-9af5-62fb8670f395",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"? В несколько слов"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "33831bc7-61eb-4073-874d-ba6fbffa0c5b",
+          "name": "thing-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови предмет мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "249004d4-cfec-463d-8ea1-3d29d5aa0391",
+          "name": "adjective-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "72185a2e-6950-4ebb-8c57-c7a43b7d1058",
+          "name": "thing-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови ещё один предмет мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e46afc7f-9e51-4f0f-b7bf-3abcc33747c5",
+          "name": "adjective-4",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос - \"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Внимание! Вот что у нас получилось: Вчера я ходила в цирк. Сначала на арену выскочил $adjective-1 $person-1. За ним выполз $adjective-2 $person-2. И они бросались тухлой рыбой целый час! Потом вышел клоун, и в руках у него был $adjective-3 $thing-2. Клоун бросил этот $thing-2 в зрителей, и попал прямо в меня! Я обиделась, достала из кармана $adjective-4 $thing-1, кинула в клоуна и попала прямо в лоб! Мне понравился этот цирк!\n- По-моему получилась прикольная история! Сочиним ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-5"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

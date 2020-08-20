@@ -1,0 +1,119 @@
+[
+  {
+    "id": "60c4dfc4-4890-4187-b115-e6dd7088fb39",
+    "data": [
+      {
+        "text": "не делай этого",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e9ac1369-6a44-4c23-9a58-49a6a1b8536f",
+    "data": [
+      {
+        "text": "спасибо нет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6f0b7b74-441e-431d-9a65-bd7f4e420ef4",
+    "data": [
+      {
+        "text": "нет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "968c1721-c969-47f5-9b56-3a44ecf97ec0",
+    "data": [
+      {
+        "text": "я не хочу этого",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "720a7a21-67b1-4d89-a4c1-c8f3e7b59694",
+    "data": [
+      {
+        "text": "не думаю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "966b0a43-d42f-498b-a9ea-a7fd4e75ff69",
+    "data": [
+      {
+        "text": "не согласен",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8fe3399a-fb7e-4c8f-a6e6-d402a651bbaa",
+    "data": [
+      {
+        "text": "не интересует",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f177fa9d-c1e2-496e-9233-742c6b033489",
+    "data": [
+      {
+        "text": "определенно нет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8bd1077b-c240-4dc3-be94-4eba0097ffcc",
+    "data": [
+      {
+        "text": "да нет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

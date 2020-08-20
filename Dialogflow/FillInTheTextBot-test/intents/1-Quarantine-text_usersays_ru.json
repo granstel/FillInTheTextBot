@@ -1,0 +1,225 @@
+[
+  {
+    "id": "dc7cde95-af51-4796-baf5-25c75fc32567",
+    "data": [
+      {
+        "text": "123",
+        "meta": "@sys.number",
+        "alias": "number-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "575534bc-f591-44f1-b820-abade46161f3",
+    "data": [
+      {
+        "text": "123",
+        "meta": "@sys.number",
+        "alias": "number-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "81dad951-05ea-41b2-8d4e-56493d3beac0",
+    "data": [
+      {
+        "text": "2",
+        "meta": "@sys.number",
+        "alias": "number-3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d519567d-5335-4fe4-a71f-b65640244dc4",
+    "data": [
+      {
+        "text": "8",
+        "meta": "@sys.number",
+        "alias": "number-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "56eb3866-1cbd-4c84-8ede-59b7bd444cb7",
+    "data": [
+      {
+        "text": "множественные",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "051cf9f1-5ed6-47c4-9750-ec8b46921baf",
+    "data": [
+      {
+        "text": "большой",
+        "meta": "@sys.any",
+        "alias": "adjective-male-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "620c43bd-3a73-4f39-bd7c-df97364068da",
+    "data": [
+      {
+        "text": "пистолет",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "04d3c7ff-cb31-44ec-8a65-06700b7991f1",
+    "data": [
+      {
+        "text": "чёрный",
+        "meta": "@sys.any",
+        "alias": "adjective-male-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "57ef24bf-df10-48a3-a933-9771abac884e",
+    "data": [
+      {
+        "text": "селезень",
+        "meta": "@sys.any",
+        "alias": "animal-male",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5b2c6999-6965-42cc-bfa3-3bcbab9a8cd3",
+    "data": [
+      {
+        "text": "красивая",
+        "meta": "@sys.any",
+        "alias": "adjective-female",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "722dfbc4-3773-4e67-830f-085e048f9f71",
+    "data": [
+      {
+        "text": "птица",
+        "meta": "@sys.any",
+        "alias": "animal-female",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dddea331-8b12-4c9c-a094-a5986b376de3",
+    "data": [
+      {
+        "text": "большой",
+        "meta": "@sys.ignore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5922e608-c966-44a8-a63c-c8218e75dc95",
+    "data": [
+      {
+        "text": "самец",
+        "meta": "@sys.ignore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d4ea7779-b1a6-4a1a-814a-761ac8815f57",
+    "data": [
+      {
+        "text": "15",
+        "meta": "@sys.number",
+        "alias": "number-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "727f189c-9501-4370-99c9-2025e3d4730e",
+    "data": [
+      {
+        "text": "345",
+        "meta": "@sys.number",
+        "alias": "number-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

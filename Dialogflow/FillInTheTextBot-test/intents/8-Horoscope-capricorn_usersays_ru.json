@@ -1,0 +1,104 @@
+[
+  {
+    "id": "1ab0d650-64d1-439c-9d53-94cefb976d9d",
+    "data": [
+      {
+        "text": "номер девять",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "81da921b-f8da-483a-8f75-2982b324aac5",
+    "data": [
+      {
+        "text": "девятый",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "78c17f44-c12f-41f9-81a8-6a54b01c70da",
+    "data": [
+      {
+        "text": "козероги",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fcbe2d0d-e927-4be2-8703-2920869fd5bb",
+    "data": [
+      {
+        "text": "для козерогов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "16d0ce88-1729-4230-bc33-dbc76ac92f72",
+    "data": [
+      {
+        "text": "гороскоп для козерогов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "568d65ba-5464-40c7-91e2-044f3069c13d",
+    "data": [
+      {
+        "text": "годовой",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " гороскоп для козерогов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "556e22f6-e1d9-41ab-be66-e9a37c8c20eb",
+    "data": [
+      {
+        "text": "гороскоп для козерога на год",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

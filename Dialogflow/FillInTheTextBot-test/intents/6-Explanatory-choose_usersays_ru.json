@@ -1,0 +1,77 @@
+[
+  {
+    "id": "5b34ccb9-5d06-4f0c-a9d1-9a6d81b0c228",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "семь",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f3bc74bc-69a0-4e67-a290-b87219e148fc",
+    "data": [
+      {
+        "text": "седьмой",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a924850f-4eb5-4681-a158-e5b92580ad2c",
+    "data": [
+      {
+        "text": "про объяснительную",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bf247a5b-711c-4927-afb5-6c7d27bbf2ed",
+    "data": [
+      {
+        "text": "объяснительная",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ba362b80-fbfa-4e03-9f3f-120ef176fe93",
+    "data": [
+      {
+        "text": "про опоздание",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
