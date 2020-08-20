@@ -9,7 +9,7 @@
   "disableStackdriverLogs": true,
   "googleAssistant": {
     "googleAssistantCompatible": false,
-    "project": "fillinthetextbot-test-bctxpk",
+    "project": "fillinthetextbot-vyyaxp",
     "welcomeIntentSignInRequired": false,
     "startIntents": [],
     "systemIntents": [],

@@ -9,7 +9,7 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "saveToRepeat",
+      "action": "DeleteAllContexts",
       "affectedContexts": [],
       "parameters": [
         {
