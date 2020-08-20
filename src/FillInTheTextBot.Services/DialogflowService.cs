@@ -82,18 +82,18 @@ namespace FillInTheTextBot.Services
             return response;
         }
 
-        public Task DeleteAllContexts(Request request)
+        public Task DeleteAllContextsAsync(Request request)
         {
             var session = CreateSession(request);
 
             return _contextsClient.DeleteAllContextsAsync(session);
         }
 
-        public Task SetContext(string sessionId, string contextName, int lifeSpan = 1)
+        public Task SetContextAsync(string sessionId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             var session = CreateSession(sessionId);
 
-            return SetContext(session, contextName, lifeSpan);
+            return SetContext(session, contextName, lifeSpan, parameters);
         }
 
         private DetectIntentRequest CreateQuery(Request request)
@@ -218,13 +218,30 @@ namespace FillInTheTextBot.Services
             return session;
         }
 
-        private Task SetContext(SessionName sessionName, string contextName, int lifeSpan = 1)
+        private Task SetContext(SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
-            return _contextsClient.CreateContextAsync(sessionName, new Context
+            var context = new Context
             {
                 ContextName = new ContextName(_configuration.ProjectId, sessionName.SessionId, contextName),
-                LifespanCount = lifeSpan
-            });
+                LifespanCount = lifeSpan,
+            };
+
+            if (parameters?.Any() == true)
+            {
+                context.Parameters = new Google.Protobuf.WellKnownTypes.Struct();
+
+                foreach (var parameter in parameters)
+                {
+                    var value = new Google.Protobuf.WellKnownTypes.Value
+                    {
+                        StringValue = parameter.Value
+                    };
+
+                    context.Parameters.Fields.Add(parameter.Key, value);
+                }
+            }
+
+            return _contextsClient.CreateContextAsync(sessionName, context);
         }
 
         private Task DeleteContext(string sessionId, string contextName)

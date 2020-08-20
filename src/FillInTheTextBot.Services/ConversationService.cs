@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FillInTheTextBot.Models;
@@ -31,6 +32,16 @@ namespace FillInTheTextBot.Services
                 Buttons = dialog?.Buttons
             };
 
+            if (!dialog.ParametersIncomplete && string.Equals(dialog.Action, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
+            {
+                var parameters = new Dictionary<string, string>
+                {
+                    { "text", dialog?.Response }
+                };
+
+                _dialogflowService.SetContextAsync(request.SessionId, "savedText", 5, parameters).Forget();
+            }
+
             if (dialog.Parameters.TryGetValue("resetTextIndex", out var resetTextIndex) && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
                 ResetLastTextIndexKey(request.UserHash);
@@ -45,7 +56,7 @@ namespace FillInTheTextBot.Services
 
             if (dialog.Parameters.TryGetValue("deleteAllContexts", out var deleteAllContexts) && string.Equals(deleteAllContexts, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
-                _dialogflowService.DeleteAllContexts(request).Forget();
+                _dialogflowService.DeleteAllContextsAsync(request).Forget();
             }
 
             return response;

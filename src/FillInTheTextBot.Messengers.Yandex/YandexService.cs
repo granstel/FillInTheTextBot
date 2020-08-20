@@ -61,17 +61,17 @@ namespace FillInTheTextBot.Messengers.Yandex
         {
             if (request.HasScreen)
             {
-                _dialogflowService.SetContext(request.SessionId, "Screen", 50000).Forget();
+                _dialogflowService.SetContextAsync(request.SessionId, "Screen", 50000).Forget();
             }
 
             if (input.IsNavigator())
             {
-                _dialogflowService.SetContext(request.SessionId, "navigator", 50000).Forget();
+                _dialogflowService.SetContextAsync(request.SessionId, "navigator", 50000).Forget();
             }
 
             if (input.IsCanShowAdvertising())
             {
-                _dialogflowService.SetContext(request.SessionId, "advertising", 50000).Forget();
+                _dialogflowService.SetContextAsync(request.SessionId, "advertising", 50000).Forget();
             }
         }
 
