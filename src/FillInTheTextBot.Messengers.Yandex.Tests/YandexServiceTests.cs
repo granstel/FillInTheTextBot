@@ -16,6 +16,7 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
         private Mock<IConversationService> _conversationService;
         private Mock<IMapper> _mapper;
+        private Mock<IDialogflowService> _dialogflowService;
 
         private YandexService _target;
 
@@ -28,8 +29,9 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             _conversationService = _mockRepository.Create<IConversationService>();
             _mapper = _mockRepository.Create<IMapper>();
+            _dialogflowService = _mockRepository.Create<IDialogflowService>();
 
-            _target = new YandexService(_conversationService.Object, _mapper.Object);
+            _target = new YandexService(_conversationService.Object, _mapper.Object, _dialogflowService.Object);
 
             _fixture = new Fixture();
         }

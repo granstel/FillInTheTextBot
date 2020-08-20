@@ -21,7 +21,7 @@ namespace FillInTheTextBot.Services
         private const string WelcomeEventName = "Welcome";
         private const string EasyWelcomeEventName = "EasyWelcome";
         private const string ErrorEventName = "Error";
-        
+
         private const int MaximumRequestLength = 20;
 
         private readonly Dictionary<string, string> _commandDictionary = new Dictionary<string, string>
@@ -85,7 +85,7 @@ namespace FillInTheTextBot.Services
             var queryResult = intentResponse.QueryResult;
 
             var response = _mapper.Map<Dialog>(queryResult);
-            
+
             return response;
         }
 
@@ -134,7 +134,16 @@ namespace FillInTheTextBot.Services
             {
                 SessionAsSessionName = session,
                 QueryInput = query,
+                QueryParams = new QueryParameters()
+                {
+                    Payload = new Google.Protobuf.WellKnownTypes.Struct()
+                }
             };
+
+            intentRequest.QueryParams.Payload.Fields.Add(nameof(request.UserHash), new Google.Protobuf.WellKnownTypes.Value
+            {
+                StringValue = request.UserHash
+            });
 
             return intentRequest;
         }

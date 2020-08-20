@@ -49,7 +49,10 @@ namespace FillInTheTextBot.Messengers.Yandex
                 result.IsOldUser = IsOldUser;
             }
 
-            SetContexts(input, result);
+            if (result.NewSession == true)
+            {
+                SetContexts(input, result);
+            }
 
             return result;
         }
