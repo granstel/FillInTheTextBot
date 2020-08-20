@@ -6,7 +6,7 @@ namespace FillInTheTextBot.Services.Extensions
     {
         public static bool IsNavigator(this InputModel source)
         {
-            var result = source?.Meta?.ClientId.Contains("yandexnavi") == true;
+            var result = source?.Meta?.ClientId?.Contains("yandexnavi") == true;
 
             return result;
         }
