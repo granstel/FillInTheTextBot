@@ -1,7 +1,6 @@
 {
   "id": "634147c2-82a3-4146-9522-73bf2316ba1b",
   "parentId": "7f42154b-e917-492a-8f8a-ee1b815734f0",
-  "rootParentId": "7f42154b-e917-492a-8f8a-ee1b815734f0",
   "name": "0-LessonIssue-text",
   "auto": true,
   "contexts": [
@@ -14,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "f1911844-e58a-4838-b075-64286885034a",
+          "id": "9bb202a0-05ff-41cd-8f04-1668c571d0b9",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -28,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "46fcb304-e7db-432d-a102-01690883a6c1",
+          "id": "8c845708-befa-4c99-913b-93cd10929c82",
           "name": "boy",
           "required": true,
           "dataType": "@sys.person",
@@ -51,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bd2a3e2b-c33f-471a-84a1-2bbdf9bafdb0",
+          "id": "8a7bd789-1e18-4b11-8f97-aa584c57baf7",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -70,7 +69,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a2281200-192a-42f3-8c6c-ff9802304eee",
+          "id": "d6928546-2c18-43e2-b930-aba12100401b",
           "name": "animal-1",
           "required": true,
           "dataType": "@sys.any",
@@ -93,7 +92,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "af1c062d-131a-4b74-a853-1a599af0ff69",
+          "id": "cc49dee3-d1ac-4396-a6b2-16335d19951c",
           "name": "teacher",
           "required": true,
           "dataType": "@sys.person",
@@ -116,7 +115,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "77e1db22-9f39-4586-b960-af59f41e84f1",
+          "id": "549337ed-d6b2-4176-b17c-4b06f69359de",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -135,7 +134,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "fba6e198-428c-4395-a687-9119b57d650f",
+          "id": "04355ffa-4157-472a-bc28-e6919fcc7cf6",
           "name": "animal-2",
           "required": true,
           "dataType": "@sys.any",
@@ -154,7 +153,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "cc08197b-bdb9-4824-a462-061eecb5d046",
+          "id": "6569faee-724f-4034-820c-e429a5e68a29",
           "name": "animal-3",
           "required": true,
           "dataType": "@sys.any",
@@ -177,7 +176,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "67b99682-7ce5-4e37-9dd3-f59082e835b3",
+          "id": "cb2c3f65-57bd-41f9-a30f-31e5fd1575da",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -196,7 +195,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a671ed2a-99ee-4034-9bb1-656877d096c1",
+          "id": "2a904c0c-4dd6-4a42-9171-73fdf34efea1",
           "name": "food",
           "required": true,
           "dataType": "@sys.any",
@@ -215,7 +214,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "77d4465f-cfdf-47ba-b8c4-988802896ef5",
+          "id": "eab38b40-adf3-4f26-9130-43e60cf9f7c6",
           "name": "adjective-4",
           "required": true,
           "dataType": "@sys.any",
@@ -234,7 +233,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "4685f299-c16a-47e3-ae4f-c368378f9adf",
+          "id": "7c993298-11a3-44b0-ac01-001054f667d2",
           "name": "animal-4",
           "required": true,
           "dataType": "@sys.any",
@@ -254,6 +253,18 @@
         }
       ],
       "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",

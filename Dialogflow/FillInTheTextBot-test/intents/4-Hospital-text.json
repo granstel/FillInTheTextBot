@@ -166,6 +166,18 @@
         }
       ],
       "messages": [
+	  {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Конечно давай ещё один!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",

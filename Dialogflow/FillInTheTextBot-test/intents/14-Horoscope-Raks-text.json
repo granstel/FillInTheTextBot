@@ -135,6 +135,18 @@
         }
       ],
       "messages": [
+	  {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повторить",
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",
