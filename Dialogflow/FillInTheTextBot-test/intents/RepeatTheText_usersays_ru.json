@@ -1,5 +1,138 @@
 [
   {
+    "id": "8baf8d9f-9a1f-4057-8b26-033ff5e9bdf5",
+    "data": [
+      {
+        "text": "повтори ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "577344b1-3874-45fd-8d3f-43f5535c46b0",
+    "data": [
+      {
+        "text": "повтори",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ebeac668-16b5-4a4c-97c0-ba08041aca0f",
+    "data": [
+      {
+        "text": "прочти ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f3c510b6-6cc1-4d83-9885-4935668d154a",
+    "data": [
+      {
+        "text": "прочти ещё",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "998b34c8-ef76-4231-b691-0c749522d0da",
+    "data": [
+      {
+        "text": "прочитай ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "64545947-9144-41e1-9dfe-4fc127354630",
+    "data": [
+      {
+        "text": "давай ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3cfce740-5806-42e7-a2f4-02f608d4593e",
+    "data": [
+      {
+        "text": "повтори ",
+        "userDefined": false
+      },
+      {
+        "text": "чё",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " сказала",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b5506689-88d1-42bd-8504-d3e0d2c5967e",
+    "data": [
+      {
+        "text": "повтори что сказала",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "da487b85-18cb-431a-b331-38a5b4efad0d",
     "data": [
       {
@@ -34,38 +167,7 @@
       }
     ],
     "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "577344b1-3874-45fd-8d3f-43f5535c46b0",
-    "data": [
-      {
-        "text": "повтори",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "998b34c8-ef76-4231-b691-0c749522d0da",
-    "data": [
-      {
-        "text": "прочитай ещё ",
-        "userDefined": false
-      },
-      {
-        "text": "раз",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "lang": "ru",
     "updated": 0
   },
@@ -87,25 +189,7 @@
       }
     ],
     "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "8baf8d9f-9a1f-4057-8b26-033ff5e9bdf5",
-    "data": [
-      {
-        "text": "повтори ещё ",
-        "userDefined": false
-      },
-      {
-        "text": "раз",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "lang": "ru",
     "updated": 0
   }
