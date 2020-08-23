@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <Version>1.1.1</Version>
+    <Version>1.2.0</Version>
+    <PackageReleaseNotes>Отображение кнопок (#4), контексты под разные устройства и возможности (#5), повтор только что составленного текста (#6)</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
