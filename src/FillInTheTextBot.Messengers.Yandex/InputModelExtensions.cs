@@ -14,7 +14,8 @@ namespace FillInTheTextBot.Services.Extensions
         public static bool IsCanShowAdvertising(this InputModel source)
         {
             var result = source?.Meta?.Interfaces?.Screen != null && 
-                (source?.Meta?.ClientId?.Contains("searchplugin") == true || source?.Meta?.ClientId?.Contains("browser") == true);
+                (source?.Meta?.ClientId?.Contains("searchplugin") == true || source?.Meta?.ClientId?.Contains("browser") == true) &&
+                source?.Meta?.ClientId?.Contains("android") == true;
 
             return result;
         }
