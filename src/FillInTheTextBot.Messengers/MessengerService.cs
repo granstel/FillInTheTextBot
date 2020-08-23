@@ -1,7 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.Extensions;
 
 namespace FillInTheTextBot.Messengers
 {
@@ -9,16 +11,29 @@ namespace FillInTheTextBot.Messengers
     {
         private readonly IConversationService _conversationService;
         private readonly IMapper _mapper;
+        protected readonly IDialogflowService DialogflowService;
 
-        protected MessengerService(IConversationService conversationService, IMapper mapper)
+        protected MessengerService(IConversationService conversationService, IMapper mapper, IDialogflowService dialogflowService)
         {
             _conversationService = conversationService;
             _mapper = mapper;
+            DialogflowService = dialogflowService;
         }
 
         protected virtual Request Before(TInput input)
         {
             var request = _mapper.Map<Request>(input);
+
+            if (request.NewSession == true)
+            {
+                var parameters = new Dictionary<string, string>
+                {
+                    { nameof(request.UserHash), request.UserHash },
+                    { nameof(request.ClientId), request.ClientId }
+                };
+
+                DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 5000, parameters).Forget();
+            }
 
             return request;
         }

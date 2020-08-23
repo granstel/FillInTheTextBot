@@ -23,5 +23,7 @@ namespace FillInTheTextBot.Models
         public bool IsOldUser { get; set; }
         
         public bool HasScreen { get; set; }
+
+        public string ClientId { get; set; }
     }
 }

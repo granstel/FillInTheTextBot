@@ -115,7 +115,7 @@ namespace FillInTheTextBot.Services
                 {
                     Text = text,
                     LanguageCode = _configuration.LanguageCode
-                },
+                }
             };
 
             if (eventInput != null)

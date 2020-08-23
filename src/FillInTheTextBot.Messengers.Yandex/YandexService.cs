@@ -20,17 +20,15 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string errorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз";
 
         private readonly IMapper _mapper;
-        private readonly IDialogflowService _dialogflowService;
 
         private readonly Logger _log = LogManager.GetLogger(nameof(YandexService));
 
         public YandexService(
             IConversationService conversationService,
             IMapper mapper,
-            IDialogflowService dialogflowService) : base(conversationService, mapper)
+            IDialogflowService dialogflowService) : base(conversationService, mapper, dialogflowService)
         {
             _mapper = mapper;
-            _dialogflowService = dialogflowService;
         }
 
         protected override Models.Request Before(InputModel input)
@@ -61,17 +59,17 @@ namespace FillInTheTextBot.Messengers.Yandex
         {
             if (request.HasScreen)
             {
-                _dialogflowService.SetContextAsync(request.SessionId, "Screen", 50000).Forget();
+                DialogflowService.SetContextAsync(request.SessionId, "Screen", 50000).Forget();
             }
 
             if (input.IsNavigator())
             {
-                _dialogflowService.SetContextAsync(request.SessionId, "navigator", 50000).Forget();
+                DialogflowService.SetContextAsync(request.SessionId, "navigator", 50000).Forget();
             }
 
             if (input.IsCanShowAdvertising())
             {
-                _dialogflowService.SetContextAsync(request.SessionId, "advertising", 50000).Forget();
+                DialogflowService.SetContextAsync(request.SessionId, "advertising", 50000).Forget();
             }
         }
 
