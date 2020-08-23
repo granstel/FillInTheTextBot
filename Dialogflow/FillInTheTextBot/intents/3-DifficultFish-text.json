@@ -10,7 +10,7 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "DeleteAllContexts",
+      "action": "saveToRepeat",
       "affectedContexts": [],
       "parameters": [
         {
@@ -258,6 +258,18 @@
         }
       ],
       "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори ещё раз",
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",

@@ -10,7 +10,7 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "DeleteAllContexts",
+      "action": "saveToRepeat",
       "affectedContexts": [],
       "parameters": [
         {
@@ -166,6 +166,18 @@
         }
       ],
       "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Конечно давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",

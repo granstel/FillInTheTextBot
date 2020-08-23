@@ -16,6 +16,18 @@
       "parameters": [],
       "messages": [
         {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Конечно!",
+            "Список историй"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
