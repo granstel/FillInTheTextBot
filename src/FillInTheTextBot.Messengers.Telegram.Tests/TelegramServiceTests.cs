@@ -19,6 +19,7 @@ namespace FillInTheTextBot.Messengers.Telegram.Tests
         private Mock<ITelegramBotClient> _telegramBotClient;
         private Mock<IConversationService> _conversationService;
         private Mock<IMapper> _mapper;
+        private Mock<IDialogflowService> _dialogfloService;
 
         private TelegramService _target;
 
@@ -32,8 +33,9 @@ namespace FillInTheTextBot.Messengers.Telegram.Tests
             _telegramBotClient = _mockRepository.Create<ITelegramBotClient>();
             _conversationService = _mockRepository.Create<IConversationService>();
             _mapper = _mockRepository.Create<IMapper>();
+            _dialogfloService = _mockRepository.Create<IDialogflowService>();
 
-            _target = new TelegramService(_telegramBotClient.Object, _conversationService.Object, _mapper.Object);
+            _target = new TelegramService(_telegramBotClient.Object, _conversationService.Object, _mapper.Object, _dialogfloService.Object);
             
             _fixture = new Fixture();
         }

@@ -15,7 +15,11 @@ namespace FillInTheTextBot.Messengers.Telegram
 
         private readonly Logger _log = LogManager.GetLogger(nameof(TelegramService));
 
-        public TelegramService(ITelegramBotClient client, IConversationService conversationService, IMapper mapper) : base(conversationService, mapper)
+        public TelegramService(
+            ITelegramBotClient client,
+            IConversationService conversationService,
+            IMapper mapper,
+            IDialogflowService dialogfloService) : base(conversationService, mapper, dialogfloService)
         {
             _client = client;
         }
