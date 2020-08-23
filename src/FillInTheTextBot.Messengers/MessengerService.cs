@@ -28,8 +28,8 @@ namespace FillInTheTextBot.Messengers
             {
                 var parameters = new Dictionary<string, string>
                 {
-                    { nameof(request.UserHash), request.UserHash },
-                    { nameof(request.ClientId), request.ClientId }
+                    { nameof(request.UserHash), request.UserHash ?? string.Empty },
+                    { nameof(request.ClientId), request.ClientId ?? string.Empty }
                 };
 
                 DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 5000, parameters).Forget();
