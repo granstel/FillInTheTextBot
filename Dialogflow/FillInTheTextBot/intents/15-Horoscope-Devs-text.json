@@ -1,0 +1,152 @@
+{
+  "id": "b74cc53d-2d5d-471d-9fbb-a05b13a1f3fe",
+  "name": "15-Horoscope-Devs-text",
+  "auto": true,
+  "contexts": [
+    "text-15"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "fb1cdc2a-0a3a-49ac-b3a1-0d9c9ae7520f",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для дев.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "394aecd7-e502-4d7a-a11a-721a13713a11",
+          "name": "number-1",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови большое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови какое-нибудь большое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0fa3ba98-4e9c-4ea3-962c-138ee6acee26",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "22744be3-52a5-4c8c-9b1e-73b99650ef73",
+          "name": "number-2",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Чтобы гороскоп получился более точным, скажи, сколько тебе лет?"
+            },
+            {
+              "lang": "ru",
+              "value": "Чтобы гороскоп был точным, скажи, сколько тебе лет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1cfef944-c905-463e-9e42-927b524e7cb6",
+          "name": "action",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - что ты любишь делать по ночам?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос - что тебе нравится делать вечером?"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок - чем ты любишь заниматься днём?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос - что тебе нравится делать по утрам?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что получилось: весной на вас внезапно свалятся деньги, потому что кто-то уронит с балкона свою копилку. В ней будет целое состояние - $number-1 р.!\nЛетом возможно лёгкое заболевание - $adjective насморк из всех отверстий.\nОсенью сбежавшая из секретной лаборатории крыса укусит вас, из-за чего появится супер-сила: вы сможете неистово $action $number-2 ч. подряд!\nБудьте проще, и люди к вам потянутся!\nПо-моему, отличный гороскоп! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-15"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,16 +1,25 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "ad1b27be-e514-43e2-b957-5ca8457a9549",
+  "name": "15-Horoscope-Devs",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-15",
+          "lifespan": 50
+        },
+        {
+          "name": "15-Horoscope-Devs-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "265adb18-4fe0-4ab7-9a4d-20fa9e176701",
+          "id": "76c77bca-a0df-4168-89b1-c411afabcae3",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история -"
+            "Интересно, помогут ли звёзды составить"
           ],
           "condition": ""
         }
