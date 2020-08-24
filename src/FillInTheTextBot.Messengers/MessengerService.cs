@@ -35,6 +35,11 @@ namespace FillInTheTextBot.Messengers
                 DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 5000, parameters).Forget();
             }
 
+            if (request.HasScreen)
+            {
+                DialogflowService.SetContextAsync(request.SessionId, "screen", 50000).Forget();
+            }
+
             return request;
         }
 

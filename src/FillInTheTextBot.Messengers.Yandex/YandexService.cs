@@ -57,11 +57,6 @@ namespace FillInTheTextBot.Messengers.Yandex
 
         private void SetContexts(InputModel input, Models.Request request)
         {
-            if (request.HasScreen)
-            {
-                DialogflowService.SetContextAsync(request.SessionId, "Screen", 50000).Forget();
-            }
-
             if (input.IsNavigator())
             {
                 DialogflowService.SetContextAsync(request.SessionId, "navigator", 50000).Forget();

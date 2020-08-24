@@ -13,14 +13,14 @@ namespace FillInTheTextBot.Messengers.Telegram
             .ForMember(d => d.UserHash, m => m.ResolveUsing(s => (s.Message?.From?.Id).GetValueOrDefault()))
             .ForMember(d => d.SessionId, m => m.ResolveUsing(s => (s.Message?.From?.Id).GetValueOrDefault()))
             .ForMember(d => d.Text, m => m.ResolveUsing(s => s.Message?.Text))
+            .ForMember(d => d.HasScreen, m => m.UseValue(true))
             .ForMember(d => d.ClientId, m => m.ResolveUsing(s => Source.Telegram.ToString()))
             .ForMember(d => d.Source, m => m.UseValue(Source.Telegram))
             .ForMember(d => d.Language, m => m.Ignore())
             .ForMember(d => d.NewSession, m => m.Ignore())
             .ForMember(d => d.RequiredContext, m => m.Ignore())
             .ForMember(d => d.ClearContexts, m => m.Ignore())
-            .ForMember(d => d.IsOldUser, m => m.Ignore())
-            .ForMember(d => d.HasScreen, m => m.Ignore());
+            .ForMember(d => d.IsOldUser, m => m.Ignore());
         }
     }
 }
