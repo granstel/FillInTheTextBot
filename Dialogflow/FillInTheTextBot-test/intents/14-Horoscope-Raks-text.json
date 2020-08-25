@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "6ff14c62-f39f-47c8-b78f-bb6223be73d1",
+          "id": "bfc09888-cbeb-4e0c-96d9-5b4465a33daf",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "c8e2ed00-e1ee-4ee8-b275-51b301f8b05e",
+          "id": "b26f95fa-4526-4b3e-bfaa-231107348c2b",
           "name": "furniture",
           "required": true,
           "dataType": "@sys.any",
@@ -50,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9486b92e-ed63-46fe-9597-89328807312c",
+          "id": "23cdc554-6338-4d8c-aa36-05dbdbecd360",
           "name": "person-1",
           "required": true,
           "dataType": "@sys.person",
@@ -73,7 +73,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "224fc61a-2157-4ab6-818d-c2abe0157519",
+          "id": "823daa80-42ba-4b55-abc0-1084b511e6cd",
           "name": "color",
           "required": true,
           "dataType": "@sys.color",
@@ -96,7 +96,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "14504eb9-3663-40ee-b6a3-0347873f68d6",
+          "id": "cf9252d1-b1ee-4fbd-bedf-1d9f97eacdb0",
           "name": "insect",
           "required": true,
           "dataType": "@sys.any",
@@ -115,7 +115,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "5feeaeb0-9a2f-41e4-9c84-e31b7e4e3bdf",
+          "id": "172b09ba-1e2d-4996-a977-2046b5c7a6ee",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -125,7 +125,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "Последний вопрос - \"Какой\"?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос - \"Какой\"?"
             }
           ],
           "promptMessages": [],

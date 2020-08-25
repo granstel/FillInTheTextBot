@@ -1,0 +1,64 @@
+[
+  {
+    "id": "8dcb8726-88da-4f16-a14e-880cd74f4b56",
+    "data": [
+      {
+        "text": "гороскоп о девах",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "23158575-f909-4db2-af2d-7d6260c7b939",
+    "data": [
+      {
+        "text": "гороскоп про ",
+        "userDefined": false
+      },
+      {
+        "text": "дев",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "670b8e63-bc5b-41ec-8d07-bcb7c02b605c",
+    "data": [
+      {
+        "text": "гороскоп для ",
+        "userDefined": false
+      },
+      {
+        "text": "дев",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3034ca0a-21ba-4e97-8ea4-79ec05f189c2",
+    "data": [
+      {
+        "text": "девы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "id": "ca070b03-9a04-485e-9bc6-a8d407ae3020",
+    "data": [
+      {
+        "text": "мне вчера исполнилось ",
+        "userDefined": false
+      },
+      {
+        "text": "8",
+        "meta": "@sys.number",
+        "alias": "number-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f2b722e0-3c60-4ef2-a3f2-f090326d2246",
+    "data": [
+      {
+        "text": "13",
+        "meta": "@sys.number",
+        "alias": "number-2",
+        "userDefined": true
+      },
+      {
+        "text": " лет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ac19aee9-dba1-4357-89a9-6fb7de65fd4b",
+    "data": [
+      {
+        "text": "24",
+        "meta": "@sys.number",
+        "alias": "number-2",
+        "userDefined": true
+      },
+      {
+        "text": " года",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b67bb128-bab5-4e6c-8b25-035e99370b73",
+    "data": [
+      {
+        "text": "мне ",
+        "userDefined": false
+      },
+      {
+        "text": "пятнадцать",
+        "meta": "@sys.number",
+        "alias": "number-2",
+        "userDefined": true
+      },
+      {
+        "text": " лет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "054dfb78-8dbf-40c0-84ac-2fc400c07482",
+    "data": [
+      {
+        "text": "сидеть",
+        "meta": "@sys.any",
+        "alias": "action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c8fdebbb-a38d-459b-a74d-715dee539034",
+    "data": [
+      {
+        "text": "спать на диване",
+        "meta": "@sys.any",
+        "alias": "action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2e20d75a-cac0-4a85-9979-eec230544d18",
+    "data": [
+      {
+        "text": "бегать по крышам",
+        "meta": "@sys.any",
+        "alias": "action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "de76c34f-55f3-47db-be44-ef02f32f03d0",
+    "data": [
+      {
+        "text": "безобразный",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a3ee4175-5aa8-4cf6-9672-33cc91c22c01",
+    "data": [
+      {
+        "text": "фонтанирующий",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "24631e8f-de45-494d-a75d-94a000536746",
+    "data": [
+      {
+        "text": "5000",
+        "meta": "@sys.number",
+        "alias": "number-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a2a68acf-982d-49b8-bb18-2698e1067443",
+    "data": [
+      {
+        "text": "пять тысяч",
+        "meta": "@sys.number",
+        "alias": "number-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

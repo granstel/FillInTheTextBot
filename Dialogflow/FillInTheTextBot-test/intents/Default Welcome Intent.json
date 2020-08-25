@@ -11,6 +11,19 @@
       "parameters": [],
       "messages": [
         {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!",
+            "Список текстов",
+            "Ничего не понятно"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
