@@ -32,12 +32,12 @@ namespace FillInTheTextBot.Messengers
                     { nameof(request.ClientId), request.ClientId ?? string.Empty }
                 };
 
-                DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 5000, parameters).Forget();
-            }
+                DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 50000, parameters).Forget();
 
-            if (request.HasScreen)
-            {
-                DialogflowService.SetContextAsync(request.SessionId, "screen", 50000).Forget();
+                if (request.HasScreen)
+                {
+                    DialogflowService.SetContextAsync(request.SessionId, "screen", 50000).Forget();
+                }
             }
 
             return request;
