@@ -104,6 +104,7 @@ namespace FillInTheTextBot.Services
             var text = $"{startText} {textName} {dialog?.Response}";
 
             response.Text = text;
+            response.Buttons = dialog?.Buttons;
 
             return response;
         }
