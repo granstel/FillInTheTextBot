@@ -1,5 +1,49 @@
 [
   {
+    "id": "643ae562-57bc-4c32-9f2e-cee4cc9d085e",
+    "data": [
+      {
+        "text": "идём дальше",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a503cf53-cde5-4e59-9cbd-881a290f7d1d",
+    "data": [
+      {
+        "text": "всё сделано",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "284c62fb-5046-4582-bcd5-0a0b58fdb0d3",
+    "data": [
+      {
+        "text": "всё ",
+        "userDefined": false
+      },
+      {
+        "text": "готово",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "b9475aa1-40fa-4506-b446-fdb17903957f",
     "data": [
       {
