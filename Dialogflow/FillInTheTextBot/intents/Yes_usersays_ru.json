@@ -1,5 +1,40 @@
 [
   {
+    "id": "b9475aa1-40fa-4506-b446-fdb17903957f",
+    "data": [
+      {
+        "text": "Давай ещё!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dc100a7b-d9fa-4802-b3a9-42106eb7aec3",
+    "data": [
+      {
+        "text": "Давай ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": "!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "799d11dc-408f-42d5-9d3c-fee08dc4b802",
     "data": [
       {

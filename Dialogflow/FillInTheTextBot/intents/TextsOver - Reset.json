@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "507f9865-fac4-4ccc-9763-134ee46bb7da",
+          "id": "cfe05a21-2815-4f9a-a7a3-edf45f966cf7",
           "name": "resetTextIndex",
           "required": false,
           "dataType": "@sys.any",
@@ -35,9 +35,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Окей, начнём с начала!",
-            "Хорошо, начинаем с начала!",
-            "Начинаем с начала!"
+            "Окей, продолжаем!",
+            "Хорошо, продолжаем!"
           ],
           "condition": ""
         }

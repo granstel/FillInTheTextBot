@@ -1,0 +1,68 @@
+{
+  "id": "3145d212-7d15-4352-a897-7c8f0c371d4d",
+  "name": "TextsOver-screen",
+  "auto": true,
+  "contexts": [
+    "screen"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "TextsOver-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+              "text": "Поставить оценку"
+            },
+            {
+              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal?action\u003ddonation",
+              "text": "Задонатить"
+            },
+            {
+              "text": "Всё сделано!"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Хотя, давай отдохнём. Если тебе понравились мои занимательные истории, можешь поставить мне высокую оценку в каталоге. Там же, кстати, можно отправить донат моему разработчику. Кнопки внизу подскажут, что делать. Как закончишь - возвращайся, и тогда продолжим!",
+            "Хотя, давай сделаем паузу. Если тебе понравилось сочинять истории вместе со мной, можешь поставить мне высокую оценку в каталоге. А ещё там можно отправить донат моему разработчику. В общем, кнопки внизу всё подскажут. Когда закончишь - возвращайся, и пойдём дальше!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "texts-over"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
