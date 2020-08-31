@@ -23,6 +23,20 @@
           "condition": ""
         },
         {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+              "text": "Поставить оценку"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
