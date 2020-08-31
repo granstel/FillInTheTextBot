@@ -1,0 +1,152 @@
+{
+  "id": "5554dffc-9562-47c6-8306-8b16c85741eb",
+  "name": "TextsList-Screen",
+  "auto": true,
+  "contexts": [
+    "Screen"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Случай на уроке"
+            },
+            {
+              "text": "Карантин"
+            },
+            {
+              "text": "Парк развлечений"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Непростая рыбка"
+            },
+            {
+              "text": "Больница"
+            },
+            {
+              "text": "Про цирк"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Объяснительная"
+            },
+            {
+              "text": "Новый колобок"
+            },
+            {
+              "text": "Гороскоп для козерогов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "про водолеев"
+            },
+            {
+              "text": "для рыб"
+            },
+            {
+              "text": "овнов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "про тельцов"
+            },
+            {
+              "text": "и близнецов"
+            },
+            {
+              "text": "для раков"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "о девах"
+            },
+            {
+              "text": "и про львов"
+            },
+            {
+              "text": "Любой"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Если не сможешь выбрать, просто скажи \"любой\". Итак, вот что у меня сейчас есть:",
+            "Вот они. Если трудно выбрать, просто скажи \"любой\""
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

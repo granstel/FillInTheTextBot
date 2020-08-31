@@ -1,0 +1,163 @@
+{
+  "id": "0614d08a-4f9d-49e7-ada8-52677b2044e0",
+  "name": "16-Horoscope-Levs-text",
+  "auto": true,
+  "contexts": [
+    "text-16"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "6c6e3425-9458-49ee-9864-294fc225d7f7",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп про львов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e32f91d7-19e0-4c81-bfee-6e837c182885",
+          "name": "action",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, что ты любишь делать зимними вечерами?"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, что тебе нравится делать летом?"
+            },
+            {
+              "lang": "ru",
+              "value": "Первый вопрос - что надо делать, чтобы стать сильнее?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, что надо делать в море?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a3166974-bef4-4458-b70c-9ecfa29b0f22",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "dbdd97a4-7b2f-4ada-a21f-199d6f0078ab",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови любой предмет мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "91a2faea-8dbf-4676-9f4d-ef69ccc994c6",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Снова - \"какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "9100a165-cca0-4972-a6c6-16e295819aea",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос - сколько стоит твой телефон?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, гороскоп рекомендует львам отращивать гриву - чем она будет больше, тем вы будете сильнее!\nВесной ни в коем случае не покупайте $thing, даже если он будет $adjective-2!\nЛетом вас ждёт экстремальное развлечение: вы будете $action под одеялком.\nОсенью вас ожидает наследство от дальнего родственника, который жил в США - вы о нём и не подозревали! И вам достанется $number $! Ура!\nЗимой вам вручат медаль \"Самый $adjective-1 Лев во вселенной\".\nНе точите ни на кого зуб - и всё у вас будет превосходно!\nМне кажется, получилось очень занимательно! Давай ещё что-нибудь придумаем?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-16"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

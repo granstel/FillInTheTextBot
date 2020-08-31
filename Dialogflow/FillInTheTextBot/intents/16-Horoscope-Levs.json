@@ -1,38 +1,29 @@
 {
-  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
-  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - yes",
+  "id": "f0f2dfde-faaa-4189-8cfd-5a1fd11e1b7b",
+  "name": "16-Horoscope-Levs",
   "auto": true,
-  "contexts": [
-    "EasyWelcome-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-16",
+          "lifespan": 5
+        },
+        {
+          "name": "16-Horoscope-Levs-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "1e7f1b69-088c-4b66-91a0-ef067730326b",
+          "id": "96c81ecb-c4b9-45d5-a7f6-8fc02a3bf4d2",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
           "value": "text-16",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "79a1a2c5-bbea-4234-be20-05ba403cd8ca",
-          "name": "resetTextIndex",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "true",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -49,9 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Сейчас мы узнаем"
           ],
           "condition": ""
         }
