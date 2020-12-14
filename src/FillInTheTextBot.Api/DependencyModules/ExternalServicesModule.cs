@@ -14,9 +14,8 @@ namespace FillInTheTextBot.Api.DependencyModules
         {
             builder.RegisterType<RestClient>().As<IRestClient>();
             
-            builder.Register(RegisterDialogflowSessionsClient).As<SessionsClient>();
-            builder.Register(RegisterDialogflowContextsClient).As<ContextsClient>();
-            builder.Register(RegisterDialogflowIntentsClient).As<IntentsClient>();
+            builder.Register(RegisterDialogflowSessionsClient).As<SessionsClient>().SingleInstance();
+            builder.Register(RegisterDialogflowContextsClient).As<ContextsClient>().SingleInstance();
 
             builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
         }
@@ -41,25 +40,9 @@ namespace FillInTheTextBot.Api.DependencyModules
         {
             var configuration = context.Resolve<DialogflowConfiguration>();
 
-            var credential = GoogleCredential.FromFile(configuration.JsonPath).CreateScoped(SessionsClient.DefaultScopes);
+            var credential = GoogleCredential.FromFile(configuration.JsonPath).CreateScoped(ContextsClient.DefaultScopes);
 
             var clientBuilder = new ContextsClientBuilder
-            {
-                ChannelCredentials = credential.ToChannelCredentials()
-            };
-
-            var client = clientBuilder.Build();
-
-            return client;
-        }
-
-        private IntentsClient RegisterDialogflowIntentsClient(IComponentContext context)
-        {
-            var configuration = context.Resolve<DialogflowConfiguration>();
-
-            var credential = GoogleCredential.FromFile(configuration.JsonPath).CreateScoped(SessionsClient.DefaultScopes);
-
-            var clientBuilder = new IntentsClientBuilder
             {
                 ChannelCredentials = credential.ToChannelCredentials()
             };
