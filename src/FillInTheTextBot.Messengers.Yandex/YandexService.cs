@@ -15,9 +15,9 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string PongResponse = "pong";
         private const string ErrorCommand = "error";
 
-        private const string oldUSerStateKey = "isOldUser";
+        private const string OldUserStateKey = "isOldUser";
 
-        private const string errorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз";
+        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз";
 
         private readonly IMapper _mapper;
 
@@ -42,9 +42,9 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             var result = base.Before(input);
 
-            if (input.TryGetFromUserState(oldUSerStateKey, out bool IsOldUser))
+            if (input.TryGetFromUserState(OldUserStateKey, out bool isOldUser))
             {
-                result.IsOldUser = IsOldUser;
+                result.IsOldUser = isOldUser;
             }
 
             if (result.NewSession == true)
@@ -77,9 +77,9 @@ namespace FillInTheTextBot.Messengers.Yandex
                 response = new Models.Response { Text = PongResponse };
             }
 
-            if (ErrorCommand.Equals(request?.Text, StringComparison.InvariantCultureIgnoreCase))
+            if (ErrorCommand.Equals(request.Text, StringComparison.InvariantCultureIgnoreCase))
             {
-                response = new Models.Response { Text = errorAnswer };
+                response = new Models.Response { Text = ErrorAnswer };
             }
 
             return response;
@@ -97,7 +97,7 @@ namespace FillInTheTextBot.Messengers.Yandex
             {
                 _log.Error(e);
 
-                var response = new Models.Response { Text = errorAnswer };
+                var response = new Models.Response { Text = ErrorAnswer };
 
                 result = await AfterAsync(input, response);
             }
@@ -111,7 +111,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             _mapper.Map(input, output);
 
-            output.AddToUserState(oldUSerStateKey, true);
+            output.AddToUserState(OldUserStateKey, true);
 
             return output;
         }
