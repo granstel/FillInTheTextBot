@@ -7,6 +7,7 @@ using FillInTheTextBot.Api.Exceptions;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Internal;
 using NLog;
 
 namespace FillInTheTextBot.Api.Middleware
@@ -94,7 +95,7 @@ namespace FillInTheTextBot.Api.Middleware
             {
                 if (request.ContentLength > 0)
                 {
-                    request.EnableBuffering();
+                    request.EnableRewind();
 
                     await AddBodyAsync(builder, request.Body);
                 }

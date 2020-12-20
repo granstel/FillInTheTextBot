@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace FillInTheTextBot.Api
 {
@@ -36,7 +35,7 @@ namespace FillInTheTextBot.Api
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         // ReSharper disable once UnusedMember.Global
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AppConfiguration configuration)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, AppConfiguration configuration)
         {
             app.UseMiddleware<ExceptionsMiddleware>();
 
@@ -49,6 +48,8 @@ namespace FillInTheTextBot.Api
             {
                 app.UseMiddleware<HttpLogMiddleware>();
             }
+            
+            app.UseMvc();
         }
     }
 }
