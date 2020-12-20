@@ -32,7 +32,7 @@ namespace FillInTheTextBot.Services
                 Buttons = dialog?.Buttons
             };
 
-            if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
+            if (!dialog.ParametersIncomplete && string.Equals(dialog.Action, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
             {
                 var parameters = new Dictionary<string, string>
                 {
@@ -42,11 +42,7 @@ namespace FillInTheTextBot.Services
                 _dialogflowService.SetContextAsync(request.SessionId, "savedText", 5, parameters).Forget();
             }
 
-            var resetTextIndex = string.Empty;
-
-            var isGotResetParameter = dialog?.Parameters.TryGetValue("resetTextIndex", out resetTextIndex) ?? false;
-
-            if (isGotResetParameter && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
+            if (dialog.Parameters.TryGetValue("resetTextIndex", out var resetTextIndex) && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
                 ResetLastTextIndexKey(request.UserHash);
             }
@@ -55,14 +51,10 @@ namespace FillInTheTextBot.Services
             {
                 var textKey = dialog?.GetParameters("textKey").FirstOrDefault();
 
-                response = await GetText(request, dialog?.Response, textKey);
+                response = await GetText(request, dialog.Response, textKey);
             }
 
-            var deleteAllContexts = string.Empty;
-
-            var isGotDeleteParameter = dialog?.Parameters.TryGetValue("deleteAllContexts", out deleteAllContexts) ?? false;
-
-            if (isGotDeleteParameter && string.Equals(deleteAllContexts, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
+            if (dialog.Parameters.TryGetValue("deleteAllContexts", out var deleteAllContexts) && string.Equals(deleteAllContexts, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
                 _dialogflowService.DeleteAllContextsAsync(request).Forget();
             }
@@ -83,11 +75,11 @@ namespace FillInTheTextBot.Services
                     return response;
                 }
 
-                var lastTextIndexKey = GetLastTextIndexKey(request.UserHash);
+                var nextTextIndexKey = GetLastTextIndexKey(request.UserHash);
 
-                _cache.TryGet<int>(lastTextIndexKey, out var lastTextIndex);
+                _cache.TryGet<int>(nextTextIndexKey, out var nextTextIndex);
 
-                var index = lastTextIndex++;
+                var index = nextTextIndex++;
 
                 if (index >= texts.Length)
                 {
@@ -98,7 +90,7 @@ namespace FillInTheTextBot.Services
                     textKey = texts[index];
                 }
 
-                _cache.TryAddAsync(lastTextIndexKey, lastTextIndex).Forget();
+                _cache.TryAddAsync(nextTextIndexKey, nextTextIndex).Forget();
             }
 
             var eventName = $"event:{textKey}";
@@ -124,23 +116,21 @@ namespace FillInTheTextBot.Services
 
         private void ResetLastTextIndexKey(string userHash)
         {
-            var lastTextIndexKey = GetLastTextIndexKey(userHash);
+            var LastTextIndexKey = GetLastTextIndexKey(userHash);
 
-            _cache.TryAddAsync(lastTextIndexKey, 0).Forget();
+            _cache.TryAddAsync(LastTextIndexKey, 0).Forget();
         }
 
         private Request CheckOldUser(Request request)
         {
             if (request.NewSession == false || request.IsOldUser)
-            {
                 return request;
-            }
 
             var nextTextIndexKey = GetLastTextIndexKey(request.UserHash);
 
-            var isGotIndex = _cache.TryGet<int>(nextTextIndexKey, out _);
+            var gotIndex = _cache.TryGet<int>(nextTextIndexKey, out _);
 
-            request.IsOldUser = isGotIndex;
+            request.IsOldUser = gotIndex;
 
             return request;
         }
