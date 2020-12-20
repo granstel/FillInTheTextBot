@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>1.2.1</Version>
-    <PackageReleaseNotes>Исправления, конекст UserInfo</PackageReleaseNotes>
+    <Version>1.3.0</Version>
+    <PackageReleaseNotes>update "Google.Cloud.Dialogflow.V2" to Version="3.1.0", single instance of DF clients to avoid used memory increasing, .net core 3.1</PackageReleaseNotes>
     <UserSecretsId>9b1972c4-2bf9-4894-a114-402f382879fb</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
@@ -11,6 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.8.*" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.10" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.*" />
     <PackageReference Include="NLog" Version="4.7.*" />

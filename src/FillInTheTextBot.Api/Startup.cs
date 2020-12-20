@@ -26,7 +26,9 @@ namespace FillInTheTextBot.Api
         // ReSharper disable once UnusedMember.Global
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services
+                .AddMvc()
+                .AddNewtonsoftJson();
 
             _applicationContainer = DependencyConfiguration.Configure(services, _configuration);
 
@@ -49,6 +51,9 @@ namespace FillInTheTextBot.Api
             {
                 app.UseMiddleware<HttpLogMiddleware>();
             }
+
+            app.UseRouting();
+            app.UseEndpoints(e => e.MapControllers());
         }
     }
 }
