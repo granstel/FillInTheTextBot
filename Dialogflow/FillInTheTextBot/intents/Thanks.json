@@ -30,6 +30,10 @@
             {
               "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
               "text": "Поставить оценку"
+            },
+            {
+              "postback": "https://vk.cc/bWrHHS",
+              "text": "Подписаться на новости"
             }
           ],
           "textToSpeech": "",
