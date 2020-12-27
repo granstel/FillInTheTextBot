@@ -1,31 +1,33 @@
 {
-  "id": "ac46f58e-71a7-4e95-83fb-cfe1b82ac65c",
+  "id": "0f8ef905-772e-44f7-8730-9adcbfe21e26",
   "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
-  "name": "3-DifficultFish-choose",
+  "name": "17-KaC-Forester",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "TextsList-followup"
+  ],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
       "affectedContexts": [
         {
-          "name": "text-3",
-          "lifespan": 50
+          "name": "text-17",
+          "lifespan": 5
         },
         {
-          "name": "3-DifficultFish-choose-followup",
+          "name": "17-KaC-Forester-followup",
           "lifespan": 2
         }
       ],
       "parameters": [
         {
-          "id": "56f7b44b-1df4-4e4e-a7ac-309321c5f472",
+          "id": "e1a8d072-0e70-444f-bc0d-7e8b91ebaa77",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "text-3",
+          "value": "text-17",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -42,9 +44,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Начинаем!",
-            "Хорошо!",
-            "Отлично!"
+            "Итак,"
           ],
           "condition": ""
         }

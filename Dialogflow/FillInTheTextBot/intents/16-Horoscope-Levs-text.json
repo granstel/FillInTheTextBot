@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "6c6e3425-9458-49ee-9864-294fc225d7f7",
+          "id": "c853da02-bbd3-4261-96b1-8f41a22cfa02",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e32f91d7-19e0-4c81-bfee-6e837c182885",
+          "id": "a9c91775-8805-4544-bed7-5901024d4b70",
           "name": "action",
           "required": true,
           "dataType": "@sys.any",
@@ -42,14 +42,6 @@
             {
               "lang": "ru",
               "value": "Для начала скажи, что тебе нравится делать летом?"
-            },
-            {
-              "lang": "ru",
-              "value": "Первый вопрос - что надо делать, чтобы стать сильнее?"
-            },
-            {
-              "lang": "ru",
-              "value": "Сперва скажи, что надо делать в море?"
             }
           ],
           "promptMessages": [],
@@ -58,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a3166974-bef4-4458-b70c-9ecfa29b0f22",
+          "id": "2dfadee8-ff4d-46f0-b4d6-5b23f27261ea",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +69,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "dbdd97a4-7b2f-4ada-a21f-199d6f0078ab",
+          "id": "40c99f52-c695-4498-8f53-dcbfacf2f466",
           "name": "thing",
           "required": true,
           "dataType": "@sys.any",
@@ -96,7 +88,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "91a2faea-8dbf-4676-9f4d-ef69ccc994c6",
+          "id": "c61288e3-5482-4e64-9410-ef209bfc8e8d",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -115,7 +107,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9100a165-cca0-4972-a6c6-16e295819aea",
+          "id": "d4d85050-24f4-480a-a6b3-d1b702831388",
           "name": "number",
           "required": true,
           "dataType": "@sys.number",
