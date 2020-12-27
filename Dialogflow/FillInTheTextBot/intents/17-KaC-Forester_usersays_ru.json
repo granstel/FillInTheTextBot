@@ -1,0 +1,60 @@
+[
+  {
+    "id": "72793da1-2e48-4b2e-a9f9-f376f14af50f",
+    "data": [
+      {
+        "text": "случай в лесу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "128f9197-98d9-47ba-a05a-4aca59685183",
+    "data": [
+      {
+        "text": "король и шут",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " лесник",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f006d6db-f61d-42bc-ad19-71588620b651",
+    "data": [
+      {
+        "text": "лесник",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "96db61d4-4cd0-4ec8-8276-aea0095fb3cb",
+    "data": [
+      {
+        "text": "про лесника",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

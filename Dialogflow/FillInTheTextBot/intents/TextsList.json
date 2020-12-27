@@ -7,7 +7,12 @@
     {
       "resetContexts": false,
       "action": "",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "TextsList-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [],
       "messages": [
         {
