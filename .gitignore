@@ -17,3 +17,5 @@
 /src/FillInTheTextBot.Api/Zidium.config
 /src/FillInTheTextBot.Api/fillinthetextbot-test-bctxpk-bb6ea1e87cd1.json
 **/.idea/
+*.pfx
+*.user
