@@ -4,7 +4,6 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <Version>1.2.1</Version>
     <PackageReleaseNotes>Исправления, конекст UserInfo</PackageReleaseNotes>
-    <UserSecretsId>9b1972c4-2bf9-4894-a114-402f382879fb</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
@@ -28,6 +27,9 @@
 
   <ItemGroup>
     <Content Update="nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Zidium.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
