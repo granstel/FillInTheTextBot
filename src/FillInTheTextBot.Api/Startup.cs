@@ -39,11 +39,6 @@ namespace FillInTheTextBot.Api
         {
             app.UseMiddleware<ExceptionsMiddleware>();
 
-            if (!env.IsDevelopment())
-            {
-                app.UseMiddleware<MetricsMiddleware>();
-            }
-
             if (configuration.HttpLog.Enabled)
             {
                 app.UseMiddleware<HttpLogMiddleware>();
