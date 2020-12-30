@@ -17,7 +17,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
         private const string OldUserStateKey = "isOldUser";
 
-        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз";
+        private const string errorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории Алисы из Яндекса\" и напиши об этом в личку";
 
         private readonly IMapper _mapper;
 
