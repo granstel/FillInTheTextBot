@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c853da02-bbd3-4261-96b1-8f41a22cfa02",
+          "id": "53c9dc77-c901-4530-a878-87023e0125c6",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a9c91775-8805-4544-bed7-5901024d4b70",
+          "id": "0582bf3a-c5bc-4857-b523-788d8ae89b25",
           "name": "action",
           "required": true,
           "dataType": "@sys.any",
@@ -50,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "2dfadee8-ff4d-46f0-b4d6-5b23f27261ea",
+          "id": "095ca6dc-642b-4f40-8b2a-92b8b20655ff",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -69,7 +69,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "40c99f52-c695-4498-8f53-dcbfacf2f466",
+          "id": "4a26d205-6149-41b1-8668-2719c1df3818",
           "name": "thing",
           "required": true,
           "dataType": "@sys.any",
@@ -88,7 +88,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "c61288e3-5482-4e64-9410-ef209bfc8e8d",
+          "id": "58a74e7e-46ca-463a-b819-f64e9e84b94d",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -107,7 +107,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d4d85050-24f4-480a-a6b3-d1b702831388",
+          "id": "02e01932-a45b-49d8-805d-488872d7241a",
           "name": "number",
           "required": true,
           "dataType": "@sys.number",
@@ -127,6 +127,18 @@
         }
       ],
       "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори ещё раз",
+            "Да, давай сочиним!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",
