@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "6abe8043-dd00-4843-9f27-fa1b372fbfb9",
+          "id": "67ef9dac-a7c3-44ea-baef-7cd5adea1baa",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "3d1c8945-46e3-471a-ace9-8e61059acc03",
+          "id": "ca2c62c3-7fe3-4a6b-a5b9-3aafe4510bc7",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -50,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d3493a9c-90c9-41c9-8ec8-4cce35f36433",
+          "id": "b720924e-a137-41b4-a33b-e61daa562f1b",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -73,7 +73,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d815af4c-b40c-4570-ba2a-eb126ddcc265",
+          "id": "50b4a0d6-4b03-45fb-8587-ce571a34195f",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -96,7 +96,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "767cf6bb-5e3b-44e1-aec9-ad9ee04fdf65",
+          "id": "9d41ea94-d459-487e-ad5c-31721e1d564b",
           "name": "color",
           "required": true,
           "dataType": "@sys.color",
@@ -123,10 +123,10 @@
           "outputDialogContexts": []
         },
         {
-          "id": "8186f609-eaf3-46b6-be42-ca834b25fc7e",
+          "id": "556c1a24-0ecf-4893-bf7b-ef4dffdeca5f",
           "name": "name",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$name",
           "defaultValue": "",
           "isList": false,
@@ -173,7 +173,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Итак, вот какое письмо мы написали: \"Дорогой Дедушка Мороз! Мы с нетерпением ждём тебя. Новый год - это самый $adjective-1 праздник в году. Так не хочется говорить о учебе, потому что она такая $adjective-2. Но мы обещаем, что будем получать только лучшие оценки. Так что, открывай поскорее свой $color мешок и вручай нам $adjective-3 подарки. С уважением, $name и Алиса!\"\nПо-моему, письмо вышло очень занимательное! Давай ещё что-нибудь сочиним?"
+            "Итак, вот какое письмо мы написали: \"Дорогой Дедушка Мороз! Мы с нетерпением ждём тебя. Новый год - это самый $adjective-1 праздник в году. Так не хочется говорить о учебе, потому что она такая $adjective-2. Но мы обещаем, что будем получать только лучшие оценки. Так что, открывай поскорее свой $color мешок и вручай нам $adjective-3 подарки. С уважением, $name и Алиса!\"\nПо-моему, у нас получилось очень милое письмо! Давай ещё что-нибудь сочиним?"
           ],
           "condition": ""
         }
