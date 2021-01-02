@@ -1,0 +1,77 @@
+[
+  {
+    "id": "03544d69-8d71-4e23-8f2e-8a60728e4235",
+    "data": [
+      {
+        "text": "весовой",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " гороскоп",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "52ef66a9-7161-4b7d-8f2d-aeeb6318f087",
+    "data": [
+      {
+        "text": "Гороскоп для весы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "efbbea2e-12a5-420c-8272-598f1728d006",
+    "data": [
+      {
+        "text": "весы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b70a7ad5-b271-4aa0-9fac-7846c4eb1ff2",
+    "data": [
+      {
+        "text": "гороскоп про весы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6f12730d-98df-414b-835a-1c411262531c",
+    "data": [
+      {
+        "text": "Гороскоп для ",
+        "userDefined": false
+      },
+      {
+        "text": "весов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

@@ -1,0 +1,179 @@
+{
+  "id": "8a700d7c-4c06-4474-9633-7dba03e62609",
+  "name": "19-Horoscope-Libra-text",
+  "auto": true,
+  "contexts": [
+    "text-19"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "a3ee9974-b107-49a6-b384-101a50f9f987",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для весов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8e8b6ba7-3adc-4634-908f-a5b4123b0671",
+          "name": "month",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$month",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, в каком месяце у тебя День рождения?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, в каком месяце ты празднуешь День рождения?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "849ac621-3165-492e-a823-2a9c28e38ab8",
+          "name": "device",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$device",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, как называется самый большой предмет, который стоит у тебя на кухне?"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь - какой самый большой предмет есть у тебя на кухне?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c2bbbf66-df9e-4e9e-94ca-54463584d58f",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "463eeb6b-90be-4c08-a3a3-7109c700d1cd",
+          "name": "vegetable",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$vegetable",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови пожалуйста какой-нибудь овощ или фрукт"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови какой-нибудь овощ или фрукт"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d1f3ea87-aca5-409f-8211-f1e569b0aaf7",
+          "name": "eat",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$eat",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - назови самую невкусную еду"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний - какая самая невкусная еда?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Ещё раз",
+            "Давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот какой гороскоп для весов у нас получился: тщательно взвешивайте все риски - а они всегда есть! Например, $month на голову может упасть $device, а это очень неприятно.\nУравновешенность - ваше главное достоинство. В спорах сохраняйте спокойствие и не кидайтесь чем попало, потому что $adjective $vegetable - это не аргумент.\nВнимание, $eat - вот что вам нужно есть три раза в день. Это воспитывает волю и увеличивает попу, а в наши дни усидчивость и равновесие всегда пригодятся.\nВ новом году не дёргайте за уши стражей порядка, и всё будет хорошо.\nПо-моему, очень забавно. Сочиним что-нибудь ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-19"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
