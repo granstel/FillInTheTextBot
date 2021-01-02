@@ -8,6 +8,8 @@
 
         public DialogflowConfiguration Dialogflow { get; set; }
 
+        public DialogflowConfiguration[] DialogflowInstances { get; set; }
+
         public RedisConfiguration Redis { get; set; }
     }
 }
