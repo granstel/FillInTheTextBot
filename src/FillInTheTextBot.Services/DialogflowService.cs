@@ -32,7 +32,7 @@ namespace FillInTheTextBot.Services
 
         private readonly Logger _log = LogManager.GetLogger(nameof(DialogflowService));
 
-        private readonly SessionsClient _sessionsClient;
+        //private readonly SessionsClient _sessionsClient;
         private readonly ContextsClient _contextsClient;
         private readonly DialogflowConfiguration _configuration;
         private readonly DialogflowClientsBalancer _balancer;
@@ -41,13 +41,13 @@ namespace FillInTheTextBot.Services
         private readonly Dictionary<Source, Func<Request, EventInput>> _eventResolvers;
 
         public DialogflowService(
-            SessionsClient sessionsClient,
+            //SessionsClient sessionsClient,
             ContextsClient contextsClient,
             DialogflowConfiguration configuration,
             DialogflowClientsBalancer balancer,
             IMapper mapper)
         {
-            _sessionsClient = sessionsClient;
+            //_sessionsClient = sessionsClient;
             _contextsClient = contextsClient;
 
             _configuration = configuration;
