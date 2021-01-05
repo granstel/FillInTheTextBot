@@ -73,15 +73,20 @@ namespace FillInTheTextBot.Services
 
         public async Task<Dialog> GetResponseAsync(Request request)
         {
-            var intentRequest = CreateQuery(request);
+            var dialog = await _balancer.InvokeSessionsClient(request.UserHash,
+                (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context));
+
+            return dialog;
+        }
+
+        public async Task<Dialog> GetResponseInternalAsync(Request request, SessionsClient client, DialogflowContext context)
+        {
+            var intentRequest = CreateQuery(request, context);
 
             if (_configuration.LogQuery)
                 _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
-            DetectIntentResponse intentResponseNew = await _balancer.InvokeSessionsClient(request.UserHash,
-                sessionClient => sessionClient.DetectIntentAsync(intentRequest));
-
-            DetectIntentResponse intentResponse = await _sessionsClient.DetectIntentAsync(intentRequest);
+            DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest);
 
             if (_configuration.LogQuery)
                 _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
@@ -95,7 +100,7 @@ namespace FillInTheTextBot.Services
 
         public Task DeleteAllContextsAsync(Request request)
         {
-            var session = CreateSession(request);
+            var session = CreateSession(request.SessionId);
 
             return _contextsClient.DeleteAllContextsAsync(session);
         }
@@ -107,9 +112,9 @@ namespace FillInTheTextBot.Services
             return SetContext(session, contextName, lifeSpan, parameters);
         }
 
-        private DetectIntentRequest CreateQuery(Request request)
+        private DetectIntentRequest CreateQuery(Request request, DialogflowContext context)
         {
-            var session = CreateSession(request);
+            var session = CreateSession(context.ProjectId, request.SessionId);
 
             var eventInput = ResolveEvent(request);
 
@@ -145,7 +150,7 @@ namespace FillInTheTextBot.Services
 
         public EventInput ResolveEvent(Request request)
         {
-            var result = default(EventInput);
+            EventInput result;
 
             var sourceMessenger = request?.Source;
 
@@ -155,7 +160,7 @@ namespace FillInTheTextBot.Services
             }
             else
             {
-                result = EventByCommand(request.Text);
+                result = EventByCommand(request?.Text);
             }
 
             return result;
@@ -215,9 +220,9 @@ namespace FillInTheTextBot.Services
             return result;
         }
 
-        private SessionName CreateSession(Request request)
+        private SessionName CreateSession(string projectId, string sessionsId)
         {
-            var session = new SessionName(_configuration.ProjectId, request.SessionId);
+            var session = new SessionName(projectId, sessionsId);
 
             return session;
         }
