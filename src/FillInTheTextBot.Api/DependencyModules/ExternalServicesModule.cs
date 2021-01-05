@@ -17,9 +17,6 @@ namespace FillInTheTextBot.Api.DependencyModules
         {
             builder.RegisterType<RestClient>().As<IRestClient>();
             
-            //builder.Register(RegisterDialogflowSessionsClient).As<SessionsClient>().SingleInstance();
-            builder.Register(RegisterDialogflowContextsClient).As<ContextsClient>().SingleInstance();
-
             builder.Register(RegisterDialogflowBalancer).As<DialogflowClientsBalancer>().SingleInstance();
 
             builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
@@ -39,7 +36,7 @@ namespace FillInTheTextBot.Api.DependencyModules
                 ClientsConfigurations = clientsConfigurations
             };
 
-            var balancer = new DialogflowClientsBalancer(balancerConfiguration, RegisterDialogflowSessionsClient);
+            var balancer = new DialogflowClientsBalancer(balancerConfiguration, RegisterDialogflowSessionsClient, RegisterDialogflowContextsClient);
 
             return balancer;
         }
@@ -58,11 +55,9 @@ namespace FillInTheTextBot.Api.DependencyModules
             return client;
         }
 
-        private ContextsClient RegisterDialogflowContextsClient(IComponentContext context)
+        private ContextsClient RegisterDialogflowContextsClient(DialogflowContext context)
         {
-            var configuration = context.Resolve<DialogflowConfiguration>();
-
-            var credential = GoogleCredential.FromFile(configuration.JsonPath).CreateScoped(ContextsClient.DefaultScopes);
+            var credential = GoogleCredential.FromFile(context.JsonPath).CreateScoped(ContextsClient.DefaultScopes);
 
             var clientBuilder = new ContextsClientBuilder
             {
