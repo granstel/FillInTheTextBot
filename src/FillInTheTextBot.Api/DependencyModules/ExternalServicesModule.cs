@@ -1,4 +1,6 @@
-﻿using Autofac;
+﻿using System;
+using System.Linq;
+using Autofac;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using FillInTheTextBot.Services.Configuration;
@@ -26,8 +28,11 @@ namespace FillInTheTextBot.Api.DependencyModules
         private DialogflowClientsBalancer RegisterDialogflowBalancer(IComponentContext context)
         {
             var configuration = context.Resolve<AppConfiguration>();
+            var keys = configuration.DialogflowInstances.Select(i => i.JsonPath).ToList();
 
-            var balancer = new DialogflowClientsBalancer()
+            var balancer = new DialogflowClientsBalancer(keys, TimeSpan.FromMinutes(5));
+
+            return balancer;
         }
 
         private SessionsClient RegisterDialogflowSessionsClient(IComponentContext context)

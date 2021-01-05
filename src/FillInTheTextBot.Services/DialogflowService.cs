@@ -7,6 +7,7 @@ using FillInTheTextBot.Services.Configuration;
 using NLog;
 using System.Linq;
 using FillInTheTextBot.Models;
+using GranSteL.DialogflowBalancer;
 using GranSteL.Helpers.Redis.Extensions;
 
 namespace FillInTheTextBot.Services
@@ -34,17 +35,24 @@ namespace FillInTheTextBot.Services
         private readonly SessionsClient _sessionsClient;
         private readonly ContextsClient _contextsClient;
         private readonly DialogflowConfiguration _configuration;
+        private readonly DialogflowClientsBalancer _balancer;
         private readonly IMapper _mapper;
 
         private readonly Dictionary<Source, Func<Request, EventInput>> _eventResolvers;
 
-        public DialogflowService(SessionsClient sessionsClient, ContextsClient contextsClient, DialogflowConfiguration configuration, IMapper mapper)
+        public DialogflowService(
+            SessionsClient sessionsClient,
+            ContextsClient contextsClient,
+            DialogflowConfiguration configuration,
+            DialogflowClientsBalancer balancer,
+            IMapper mapper)
         {
             _sessionsClient = sessionsClient;
             _contextsClient = contextsClient;
 
             _configuration = configuration;
             _mapper = mapper;
+            _balancer = balancer;
 
             _eventResolvers = new Dictionary<Source, Func<Request, EventInput>>
             {
@@ -70,7 +78,10 @@ namespace FillInTheTextBot.Services
             if (_configuration.LogQuery)
                 _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
-            var intentResponse = await _sessionsClient.DetectIntentAsync(intentRequest);
+            DetectIntentResponse intentResponseNew = await _balancer.InvokeSessionsClient(request.UserHash,
+                sessionClient => sessionClient.DetectIntentAsync(intentRequest));
+
+            DetectIntentResponse intentResponse = await _sessionsClient.DetectIntentAsync(intentRequest);
 
             if (_configuration.LogQuery)
                 _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
