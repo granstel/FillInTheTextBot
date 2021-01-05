@@ -6,6 +6,7 @@ using Google.Cloud.Dialogflow.V2;
 using FillInTheTextBot.Services.Configuration;
 using GranSteL.DialogflowBalancer;
 using Grpc.Auth;
+using Grpc.Core;
 using RestSharp;
 using StackExchange.Redis;
 
@@ -41,11 +42,15 @@ namespace FillInTheTextBot.Api.DependencyModules
 
             var credential = GoogleCredential.FromFile(configuration.JsonPath).CreateScoped(SessionsClient.DefaultScopes);
 
+            var channel = new Channel(SessionsClient.DefaultEndpoint, credential.ToChannelCredentials());
+            
+            var invoker = new DefaultCallInvoker(channel);
+            
             var clientBuilder = new SessionsClientBuilder
             {
-                ChannelCredentials = credential.ToChannelCredentials()
+                CallInvoker = invoker
             };
-
+            
             var client = clientBuilder.Build();
 
             return client;
