@@ -28,9 +28,18 @@ namespace FillInTheTextBot.Api.DependencyModules
         private DialogflowClientsBalancer RegisterDialogflowBalancer(IComponentContext context)
         {
             var configuration = context.Resolve<AppConfiguration>();
-            var keys = configuration.DialogflowInstances.Select(i => i.JsonPath).ToList();
 
-            var balancer = new DialogflowClientsBalancer(keys, TimeSpan.FromMinutes(5));
+            var clientsConfigurations = configuration.DialogflowInstances
+                .Select(i => new DialogflowClientsConfiguration(i.ProjectId, i.JsonPath))
+                .ToList();
+
+            var balancerConfiguration = new DialogflowBalancerConfiguration
+            {
+                ScopeExpiration = TimeSpan.FromMinutes(5),
+                ClientsConfigurations = clientsConfigurations
+            };
+
+            var balancer = new DialogflowClientsBalancer(balancerConfiguration);
 
             return balancer;
         }
