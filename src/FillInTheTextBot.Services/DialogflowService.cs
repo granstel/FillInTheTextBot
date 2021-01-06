@@ -114,7 +114,7 @@ namespace FillInTheTextBot.Services
         {
             var session = CreateSession(projectId, sessionId);
 
-            return SetContextAsync(client, session, contextName, lifeSpan, parameters);
+            return SetContextAsync(client, projectId, session, contextName, lifeSpan, parameters);
         }
 
         private DetectIntentRequest CreateQuery(Request request, DialogflowContext context)
@@ -232,11 +232,11 @@ namespace FillInTheTextBot.Services
             return session;
         }
 
-        private Task SetContextAsync(ContextsClient client, SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        private Task SetContextAsync(ContextsClient client, string projectId, SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             var context = new Context
             {
-                ContextName = new ContextName(_configuration.ProjectId, sessionName.SessionId, contextName),
+                ContextName = new ContextName(projectId, sessionName.SessionId, contextName),
                 LifespanCount = lifeSpan,
             };
 
