@@ -5,6 +5,7 @@ using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using FillInTheTextBot.Services.Configuration;
 using GranSteL.DialogflowBalancer;
+using GranSteL.Helpers.Redis;
 using Grpc.Auth;
 using RestSharp;
 using StackExchange.Redis;
@@ -36,7 +37,8 @@ namespace FillInTheTextBot.Api.DependencyModules
                 ClientsConfigurations = clientsConfigurations
             };
 
-            var balancer = new DialogflowClientsBalancer(balancerConfiguration, RegisterDialogflowSessionsClient, RegisterDialogflowContextsClient);
+            var cache = context.Resolve<IRedisCacheService>();
+            var balancer = new DialogflowClientsBalancer(cache, balancerConfiguration, RegisterDialogflowSessionsClient, RegisterDialogflowContextsClient);
 
             return balancer;
         }
