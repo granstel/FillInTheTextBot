@@ -1,11 +1,11 @@
 [
   {
-    "id": "18dc9e83-b085-45e7-b11f-e44834061c8c",
+    "id": "f42b360e-9003-4c0d-a761-4b751f3be3ca",
     "data": [
       {
-        "text": "Ариночка",
+        "text": "кабачковая икра",
         "meta": "@sys.any",
-        "alias": "name",
+        "alias": "eat",
         "userDefined": true
       }
     ],
@@ -15,12 +15,12 @@
     "updated": 0
   },
   {
-    "id": "12be5c8c-b8c2-49a8-be82-c90248f5030e",
+    "id": "89b1b113-2a20-48cf-b731-c846efae621d",
     "data": [
       {
-        "text": "Сашенька",
+        "text": "каша",
         "meta": "@sys.any",
-        "alias": "name",
+        "alias": "eat",
         "userDefined": true
       }
     ],
@@ -30,12 +30,12 @@
     "updated": 0
   },
   {
-    "id": "b9fca9ce-47d3-44f2-a226-dd3c94225f31",
+    "id": "4b8ce655-1c76-4d67-a479-c9da360561e9",
     "data": [
       {
-        "text": "Юленька",
+        "text": "бычьи хвосты",
         "meta": "@sys.any",
-        "alias": "name",
+        "alias": "eat",
         "userDefined": true
       }
     ],
@@ -45,12 +45,12 @@
     "updated": 0
   },
   {
-    "id": "042594cc-842b-4d1d-9c58-a843ea1851a2",
+    "id": "af886409-ab16-4560-9215-213b32641796",
     "data": [
       {
-        "text": "Коля",
+        "text": "чебурек",
         "meta": "@sys.any",
-        "alias": "name",
+        "alias": "vegetable",
         "userDefined": true
       }
     ],
@@ -60,12 +60,12 @@
     "updated": 0
   },
   {
-    "id": "d6345ddf-fc4b-4d09-92c9-784f842ab0f4",
+    "id": "a68d1e5f-fc2c-4977-9ed1-d8876106fb53",
     "data": [
       {
-        "text": "Настюша",
+        "text": "помидорч",
         "meta": "@sys.any",
-        "alias": "name",
+        "alias": "vegetable",
         "userDefined": true
       }
     ],
@@ -75,12 +75,12 @@
     "updated": 0
   },
   {
-    "id": "35921fd4-4f51-49d0-8d79-4e7096e239d2",
+    "id": "62829140-1c91-49b2-a5c6-61919151a116",
     "data": [
       {
-        "text": "Стёпа",
+        "text": "арбуз",
         "meta": "@sys.any",
-        "alias": "name",
+        "alias": "vegetable",
         "userDefined": true
       }
     ],
@@ -90,12 +90,12 @@
     "updated": 0
   },
   {
-    "id": "8b1686fc-235d-4998-8407-01a396232178",
+    "id": "dc21546c-c624-4a73-b2ac-866ea4b35a78",
     "data": [
       {
-        "text": "Дима",
+        "text": "гнилой",
         "meta": "@sys.any",
-        "alias": "name",
+        "alias": "adjective",
         "userDefined": true
       }
     ],
@@ -105,102 +105,12 @@
     "updated": 0
   },
   {
-    "id": "689cd10a-1312-49a7-ad1d-fe1a61a3967f",
+    "id": "2b008274-5c03-447e-8098-5111a4969d32",
     "data": [
       {
-        "text": "бурмалиновый",
-        "meta": "@sys.color",
-        "alias": "color",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "c803640b-9944-42ea-9cd5-8f0cd600abb0",
-    "data": [
-      {
-        "text": "фиолетовый",
-        "meta": "@sys.color",
-        "alias": "color",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "39fda7f7-9bc6-4b16-898d-2232d25febb7",
-    "data": [
-      {
-        "text": "зелёныйф",
-        "meta": "@sys.color",
-        "alias": "color",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "cc48a8fb-ba5d-416f-8d7f-d8359bf04837",
-    "data": [
-      {
-        "text": "жёлтый",
-        "meta": "@sys.color",
-        "alias": "color",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "9b782260-3b59-4af4-8017-86df4d9b6d95",
-    "data": [
-      {
-        "text": "красный",
-        "meta": "@sys.color",
-        "alias": "color",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "50c78523-e3aa-418b-bce6-3d665e710c03",
-    "data": [
-      {
-        "text": "синий",
-        "meta": "@sys.color",
-        "alias": "color",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "7729ced1-6d76-4bdd-85f5-748557ba03d7",
-    "data": [
-      {
-        "text": "крутые",
+        "text": "бухой",
         "meta": "@sys.any",
-        "alias": "adjective-3",
+        "alias": "adjective",
         "userDefined": true
       }
     ],
@@ -210,12 +120,12 @@
     "updated": 0
   },
   {
-    "id": "58e8200d-69df-4fdb-af0f-b994767ea7b9",
+    "id": "61bed1f2-03d1-4920-938a-913a00b2d097",
     "data": [
       {
-        "text": "пошлые",
+        "text": "сопливый",
         "meta": "@sys.any",
-        "alias": "adjective-3",
+        "alias": "adjective",
         "userDefined": true
       }
     ],
@@ -225,12 +135,12 @@
     "updated": 0
   },
   {
-    "id": "e5f70048-10d4-43da-9cce-19cca0201e92",
+    "id": "14439e5c-73b3-4c30-98b9-31c0a5c65ea5",
     "data": [
       {
-        "text": "грязные",
+        "text": "стол",
         "meta": "@sys.any",
-        "alias": "adjective-3",
+        "alias": "device",
         "userDefined": true
       }
     ],
@@ -240,12 +150,12 @@
     "updated": 0
   },
   {
-    "id": "65fa66de-5721-4690-af94-6bee3111aca2",
+    "id": "f2872e3c-48cf-44e7-928f-285e0e02f292",
     "data": [
       {
-        "text": "отличные",
+        "text": "посудомойка",
         "meta": "@sys.any",
-        "alias": "adjective-3",
+        "alias": "device",
         "userDefined": true
       }
     ],
@@ -255,12 +165,12 @@
     "updated": 0
   },
   {
-    "id": "66c89461-2c21-4bc9-b30f-863dfa22ebfb",
+    "id": "3f8ed519-185f-44e2-9409-4e5d1524562c",
     "data": [
       {
-        "text": "лучшие",
+        "text": "посудомоечная машина",
         "meta": "@sys.any",
-        "alias": "adjective-3",
+        "alias": "device",
         "userDefined": true
       }
     ],
@@ -270,12 +180,12 @@
     "updated": 0
   },
   {
-    "id": "52e71fe2-9b4c-4707-87e2-a208fe99a15b",
+    "id": "05242764-1d66-431e-b983-c32e3400b635",
     "data": [
       {
-        "text": "хорошие",
+        "text": "взбесившийся холодильник",
         "meta": "@sys.any",
-        "alias": "adjective-3",
+        "alias": "device",
         "userDefined": true
       }
     ],
@@ -285,12 +195,12 @@
     "updated": 0
   },
   {
-    "id": "1a0d9ae9-d014-41cf-a5b0-cac971cea9f1",
+    "id": "0e7e6230-9bf1-44ab-a03d-e7f8f7c851b2",
     "data": [
       {
-        "text": "интересная",
+        "text": "электроплита",
         "meta": "@sys.any",
-        "alias": "adjective-2",
+        "alias": "device",
         "userDefined": true
       }
     ],
@@ -300,12 +210,12 @@
     "updated": 0
   },
   {
-    "id": "de4736f6-e192-4b4c-b9df-35852145d789",
+    "id": "0a0514c4-ad56-474f-97b2-ffe9ce9b026a",
     "data": [
       {
-        "text": "красивая",
+        "text": "телевизор",
         "meta": "@sys.any",
-        "alias": "adjective-2",
+        "alias": "device",
         "userDefined": true
       }
     ],
@@ -315,12 +225,12 @@
     "updated": 0
   },
   {
-    "id": "0d959aab-d387-4be2-b82d-4172cf084fdf",
+    "id": "12217e8e-07f8-49a8-949d-8f9c1eb0be7d",
     "data": [
       {
-        "text": "хорошая",
+        "text": "холодильник",
         "meta": "@sys.any",
-        "alias": "adjective-2",
+        "alias": "device",
         "userDefined": true
       }
     ],
@@ -330,12 +240,12 @@
     "updated": 0
   },
   {
-    "id": "cbce8451-c8b0-4409-a297-84895f0765ca",
+    "id": "13eef4f6-786a-462d-ab1a-784ff37dbfb7",
     "data": [
       {
-        "text": "умная",
+        "text": "плита",
         "meta": "@sys.any",
-        "alias": "adjective-2",
+        "alias": "device",
         "userDefined": true
       }
     ],
@@ -345,12 +255,12 @@
     "updated": 0
   },
   {
-    "id": "558f29e6-597d-443b-83ef-8ec48100c47b",
+    "id": "95be0e27-ca90-422e-b053-89cc631911d7",
     "data": [
       {
-        "text": "тупая",
+        "text": "в декабре",
         "meta": "@sys.any",
-        "alias": "adjective-2",
+        "alias": "month",
         "userDefined": true
       }
     ],
@@ -360,12 +270,12 @@
     "updated": 0
   },
   {
-    "id": "c29e8ed7-5e59-4622-a7fa-8eafa0cabbff",
+    "id": "a0a7daaf-c698-43f7-a013-c35ef13a5dbc",
     "data": [
       {
-        "text": "отстойный",
+        "text": "ноябре",
         "meta": "@sys.any",
-        "alias": "adjective-1",
+        "alias": "month",
         "userDefined": true
       }
     ],
@@ -375,12 +285,12 @@
     "updated": 0
   },
   {
-    "id": "2d24b469-d16a-4122-8dc5-c01341b540f0",
+    "id": "8f773a81-9867-4bea-9ae0-442ee73ed126",
     "data": [
       {
-        "text": "мощный",
+        "text": "октябре",
         "meta": "@sys.any",
-        "alias": "adjective-1",
+        "alias": "month",
         "userDefined": true
       }
     ],
@@ -390,12 +300,12 @@
     "updated": 0
   },
   {
-    "id": "6f071779-d6cf-4980-b8cb-7cdfda01e6c9",
+    "id": "3c0ba2bf-f7d0-4da2-a351-cf6d00d28b98",
     "data": [
       {
-        "text": "жёсткий",
+        "text": "в сентябре",
         "meta": "@sys.any",
-        "alias": "adjective-1",
+        "alias": "month",
         "userDefined": true
       }
     ],
@@ -405,12 +315,12 @@
     "updated": 0
   },
   {
-    "id": "346acff6-c227-4a38-adc7-c8487fed4ef9",
+    "id": "8e71459d-ac0d-46e4-811f-0298a45aabb5",
     "data": [
       {
-        "text": "криповый",
+        "text": "в августе",
         "meta": "@sys.any",
-        "alias": "adjective-1",
+        "alias": "month",
         "userDefined": true
       }
     ],
@@ -420,12 +330,12 @@
     "updated": 0
   },
   {
-    "id": "bad5f579-de6f-4c32-a0a6-74625b82d0fe",
+    "id": "3b793eea-75f5-4d4b-b299-d0d1cbf25d52",
     "data": [
       {
-        "text": "успешный",
+        "text": "июле",
         "meta": "@sys.any",
-        "alias": "adjective-1",
+        "alias": "month",
         "userDefined": true
       }
     ],
@@ -435,12 +345,12 @@
     "updated": 0
   },
   {
-    "id": "9986d83e-8872-4303-bc33-df9b59484ef8",
+    "id": "3364ff81-4760-412e-ac07-ec020f74e6df",
     "data": [
       {
-        "text": "хороший",
+        "text": "июне",
         "meta": "@sys.any",
-        "alias": "adjective-1",
+        "alias": "month",
         "userDefined": true
       }
     ],
@@ -450,12 +360,72 @@
     "updated": 0
   },
   {
-    "id": "dcea5f58-8437-4112-ba12-a3fc10f3f888",
+    "id": "565599ef-1327-4a0d-8aad-7660a000e99e",
     "data": [
       {
-        "text": "плохой",
+        "text": "мае",
         "meta": "@sys.any",
-        "alias": "adjective-1",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e59db2cf-de2d-41a1-b0aa-6a7e5a03285b",
+    "data": [
+      {
+        "text": "в апреле",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f5974328-8a57-4caf-a2cd-69065a3af7ac",
+    "data": [
+      {
+        "text": "в марте",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2b3923de-06aa-4e6c-bc6b-5e42faed94e5",
+    "data": [
+      {
+        "text": "в феврале",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e11c42ab-a87c-4526-b346-b469d9b229b4",
+    "data": [
+      {
+        "text": "в январе",
+        "meta": "@sys.any",
+        "alias": "month",
         "userDefined": true
       }
     ],

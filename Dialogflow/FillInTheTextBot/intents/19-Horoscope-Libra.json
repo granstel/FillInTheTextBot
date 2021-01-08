@@ -1,37 +1,26 @@
 {
-  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
-  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - yes",
+  "id": "9eff7040-8644-411c-b3e4-aed3be0a5948",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "19-Horoscope-Libra",
   "auto": true,
-  "contexts": [
-    "EasyWelcome-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-19",
+          "lifespan": 5
+        }
+      ],
       "parameters": [
         {
-          "id": "15cbbf11-4bc2-40da-bd0e-46336a7130e7",
+          "id": "31c92ee9-138d-42e0-bfeb-2a3f006411f5",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "0bc070c6-0b13-483d-ae10-7097d96111d2",
-          "name": "resetTextIndex",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "false",
+          "value": "text-19",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -48,9 +37,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Давай вместе составим"
           ],
           "condition": ""
         }

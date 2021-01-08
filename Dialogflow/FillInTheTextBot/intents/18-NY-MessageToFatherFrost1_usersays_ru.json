@@ -1,5 +1,27 @@
 [
   {
+    "id": "cbab4183-fe86-4763-8ff8-762840a8a80f",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " новогоднее письмо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "4aec442f-773a-4fb7-b76e-9fa64c11c76c",
     "data": [
       {

@@ -1,6 +1,7 @@
 {
   "id": "5554dffc-9562-47c6-8306-8b16c85741eb",
   "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "TextsList-Screen",
   "auto": true,
   "contexts": [
@@ -63,6 +64,19 @@
               "text": "Новый колобок"
             },
             {
+              "text": "Новогоднее письмо"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
               "text": "Гороскоп для козерогов"
             }
           ],
@@ -117,8 +131,21 @@
               "text": "о девах"
             },
             {
-              "text": "и про львов"
+              "text": "про львов"
             },
+            {
+              "text": "для весов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
             {
               "text": "Любой"
             }
