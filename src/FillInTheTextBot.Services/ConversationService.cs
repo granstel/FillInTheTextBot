@@ -23,8 +23,6 @@ namespace FillInTheTextBot.Services
 
         public async Task<Response> GetResponseAsync(Request request)
         {
-            request = CheckOldUser(request);
-
             var dialog = await _dialogflowService.GetResponseAsync(request);
 
             var response = new Response 
@@ -69,6 +67,8 @@ namespace FillInTheTextBot.Services
                 _dialogflowService.DeleteAllContextsAsync(request).Forget();
             }
 
+            response.NextTextIndex = request.NextTextIndex;
+
             return response;
         }
 
@@ -78,23 +78,14 @@ namespace FillInTheTextBot.Services
 
             if (string.IsNullOrEmpty(textKey))
             {
-                if (!_cache.TryGet<string[]>("Texts", out var texts))
+                if (!_cache.TryGet("Texts", out string[] texts))
                 {
                     response.Text = "Что-то у меня не нашлось никаких текстов...";
 
                     return response;
                 }
 
-                if (!request.Payload.TryGetValue(NextTextIndexKey, out string nextTextIndexString))
-                {
-                    var nextTextIndexCacheKey = GetNextTextIndexCacheKey(request.UserHash);
-
-                    _cache.TryGet(nextTextIndexCacheKey, out nextTextIndexString);
-                }
-
-                var nextTextIndex = int.Parse(nextTextIndexString);
-
-                var index = nextTextIndex++;
+                var index = request.NextTextIndex++;
 
                 if (index >= texts.Length)
                 {
@@ -104,12 +95,10 @@ namespace FillInTheTextBot.Services
                 {
                     textKey = texts[index];
                 }
-
-                response.Payload.Add(NextTextIndexKey, nextTextIndex.ToString());
             }
 
             var eventName = $"event:{textKey}";
-
+            
 
             var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, textKey);
 
@@ -139,22 +128,6 @@ namespace FillInTheTextBot.Services
             var lastTextIndexKey = GetNextTextIndexCacheKey(userHash);
 
             _cache.TryAddAsync(lastTextIndexKey, 0).Forget();
-        }
-
-        private Request CheckOldUser(Request request)
-        {
-            if (request.NewSession == false || request.IsOldUser)
-            {
-                return request;
-            }
-
-            var nextTextIndexKey = GetNextTextIndexCacheKey(request.UserHash);
-
-            var isGotIndex = _cache.TryGet<int>(nextTextIndexKey, out _);
-
-            request.IsOldUser = isGotIndex;
-
-            return request;
         }
     }
 }

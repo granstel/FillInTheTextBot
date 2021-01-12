@@ -15,8 +15,6 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string PongResponse = "pong";
         private const string ErrorCommand = "error";
 
-        private const string OldUserStateKey = "isOldUser";
-
         private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории Алисы из Яндекса\" и напиши об этом в личку";
 
         private readonly IMapper _mapper;
@@ -42,13 +40,17 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             var result = base.Before(input);
 
-            if (input.TryGetFromUserState(OldUserStateKey, out bool isOldUser))
+            if (input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser))
             {
                 result.IsOldUser = isOldUser;
             }
 
-            result.FillPayloadFrom(input.State.Application);
-            result.FillPayloadFrom(input.State.User);
+            if (input.TryGetFromUserState(nameof(result.NextTextIndex), out object nextTextIndex) != true)
+            {
+                input.TryGetFromApplicationState(nameof(result.NextTextIndex), out nextTextIndex);
+            }
+
+            result.NextTextIndex = Convert.ToInt32(nextTextIndex);
 
             if (result.NewSession == true)
             {
@@ -114,13 +116,9 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             _mapper.Map(input, output);
 
-            output.AddToUserState(OldUserStateKey, true);
-
-            foreach (var keyValuePair in response.Payload)
-            {
-                output.AddToUserState(keyValuePair.Key, keyValuePair.Value);
-                output.AddToApplicationState(keyValuePair.Key, keyValuePair.Value);
-            }
+            output.AddToUserState(Models.Request.IsOldUserKey, true);
+            output.AddToUserState(nameof(response.NextTextIndex), response.NextTextIndex);
+            output.AddToApplicationState(nameof(response.NextTextIndex), response.NextTextIndex);
 
             return output;
         }

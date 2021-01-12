@@ -1,14 +1,7 @@
-using System.Collections.Generic;
-
 namespace FillInTheTextBot.Models
 {
     public class Response
     {
-        public Response()
-        {
-            Payload = new Dictionary<string, string>();
-        }
-
         public string ChatHash { get; set; }
 
         public string UserHash { get; set; }
@@ -21,6 +14,6 @@ namespace FillInTheTextBot.Models
 
         public Button[] Buttons { get; set; }
 
-        public IDictionary<string, string> Payload { get; set; }
+        public int NextTextIndex { get; set; }
     }
 }

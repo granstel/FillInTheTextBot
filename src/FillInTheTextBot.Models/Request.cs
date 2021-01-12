@@ -1,13 +1,8 @@
-using System.Collections.Generic;
-
 namespace FillInTheTextBot.Models
 {
     public class Request
     {
-        public Request()
-        {
-            Payload = new Dictionary<string, string>();
-        }
+        public static string IsOldUserKey => nameof(IsOldUser);
 
         public Source? Source { get; set; }
 
@@ -33,17 +28,6 @@ namespace FillInTheTextBot.Models
 
         public string ClientId { get; set; }
 
-        public IDictionary<string, string> Payload { get; set; }
-
-        public void FillPayloadFrom(IDictionary<string, object> source)
-        {
-            foreach (var keyValuePair in source)
-            {
-                if (!Payload.ContainsKey(keyValuePair.Key))
-                {
-                    Payload.Add(keyValuePair.Key, keyValuePair.Value.ToString());
-                }
-            }
-        }
+        public int NextTextIndex { get; set; }
     }
 }
