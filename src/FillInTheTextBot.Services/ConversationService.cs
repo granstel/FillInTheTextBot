@@ -10,6 +10,8 @@ namespace FillInTheTextBot.Services
 {
     public class ConversationService : IConversationService
     {
+        const string NextTextIndexKey = "nextTextIndex";
+
         private readonly IDialogflowService _dialogflowService;
         private readonly IRedisCacheService _cache;
 
@@ -83,11 +85,16 @@ namespace FillInTheTextBot.Services
                     return response;
                 }
 
-                var lastTextIndexKey = GetLastTextIndexKey(request.UserHash);
+                if (!request.Payload.TryGetValue(NextTextIndexKey, out string nextTextIndexString))
+                {
+                    var nextTextIndexCacheKey = GetNextTextIndexCacheKey(request.UserHash);
 
-                _cache.TryGet<int>(lastTextIndexKey, out var lastTextIndex);
+                    _cache.TryGet(nextTextIndexCacheKey, out nextTextIndexString);
+                }
 
-                var index = lastTextIndex++;
+                var nextTextIndex = int.Parse(nextTextIndexString);
+
+                var index = nextTextIndex++;
 
                 if (index >= texts.Length)
                 {
@@ -98,7 +105,7 @@ namespace FillInTheTextBot.Services
                     textKey = texts[index];
                 }
 
-                _cache.TryAddAsync(lastTextIndexKey, lastTextIndex).Forget();
+                response.Payload.Add(NextTextIndexKey, nextTextIndex.ToString());
             }
 
             var eventName = $"event:{textKey}";
@@ -117,14 +124,19 @@ namespace FillInTheTextBot.Services
             return response;
         }
 
-        private string GetLastTextIndexKey(string userHash)
+        /// <summary>
+        /// На самом деле это индекс не последнего, а следующего текста
+        /// </summary>
+        /// <param name="userHash">Идентификатор пользователя</param>
+        /// <returns>Ключ для получения индекса текста из кеша</returns>
+        private string GetNextTextIndexCacheKey(string userHash)
         {
-            return $"LastTextIndex:{userHash}";
+            return $"{NextTextIndexKey}:{userHash}";
         }
 
         private void ResetLastTextIndexKey(string userHash)
         {
-            var lastTextIndexKey = GetLastTextIndexKey(userHash);
+            var lastTextIndexKey = GetNextTextIndexCacheKey(userHash);
 
             _cache.TryAddAsync(lastTextIndexKey, 0).Forget();
         }
@@ -136,7 +148,7 @@ namespace FillInTheTextBot.Services
                 return request;
             }
 
-            var nextTextIndexKey = GetLastTextIndexKey(request.UserHash);
+            var nextTextIndexKey = GetNextTextIndexCacheKey(request.UserHash);
 
             var isGotIndex = _cache.TryGet<int>(nextTextIndexKey, out _);
 

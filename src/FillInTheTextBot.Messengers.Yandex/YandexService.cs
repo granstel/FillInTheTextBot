@@ -47,6 +47,9 @@ namespace FillInTheTextBot.Messengers.Yandex
                 result.IsOldUser = isOldUser;
             }
 
+            result.FillPayloadFrom(input.State.Application);
+            result.FillPayloadFrom(input.State.User);
+
             if (result.NewSession == true)
             {
                 SetContexts(input, result);
@@ -112,6 +115,12 @@ namespace FillInTheTextBot.Messengers.Yandex
             _mapper.Map(input, output);
 
             output.AddToUserState(OldUserStateKey, true);
+
+            foreach (var keyValuePair in response.Payload)
+            {
+                output.AddToUserState(keyValuePair.Key, keyValuePair.Value);
+                output.AddToApplicationState(keyValuePair.Key, keyValuePair.Value);
+            }
 
             return output;
         }
