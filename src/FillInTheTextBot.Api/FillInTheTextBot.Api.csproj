@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>1.4.0</Version>
-    <PackageReleaseNotes>fix DF limits</PackageReleaseNotes>
+    <Version>1.4.1</Version>
+    <PackageReleaseNotes>fix DF limits, add balancer nuget</PackageReleaseNotes>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
