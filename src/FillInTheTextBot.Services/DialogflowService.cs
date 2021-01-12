@@ -7,6 +7,7 @@ using FillInTheTextBot.Services.Configuration;
 using NLog;
 using System.Linq;
 using FillInTheTextBot.Models;
+using GranSteL.DialogflowBalancer;
 using GranSteL.Helpers.Redis.Extensions;
 
 namespace FillInTheTextBot.Services
@@ -31,20 +32,20 @@ namespace FillInTheTextBot.Services
 
         private readonly Logger _log = LogManager.GetLogger(nameof(DialogflowService));
 
-        private readonly SessionsClient _sessionsClient;
-        private readonly ContextsClient _contextsClient;
         private readonly DialogflowConfiguration _configuration;
+        private readonly DialogflowClientsBalancer _balancer;
         private readonly IMapper _mapper;
 
         private readonly Dictionary<Source, Func<Request, EventInput>> _eventResolvers;
 
-        public DialogflowService(SessionsClient sessionsClient, ContextsClient contextsClient, DialogflowConfiguration configuration, IMapper mapper)
+        public DialogflowService(
+            DialogflowConfiguration configuration,
+            DialogflowClientsBalancer balancer,
+            IMapper mapper)
         {
-            _sessionsClient = sessionsClient;
-            _contextsClient = contextsClient;
-
             _configuration = configuration;
             _mapper = mapper;
+            _balancer = balancer;
 
             _eventResolvers = new Dictionary<Source, Func<Request, EventInput>>
             {
@@ -65,12 +66,32 @@ namespace FillInTheTextBot.Services
 
         public async Task<Dialog> GetResponseAsync(Request request)
         {
-            var intentRequest = CreateQuery(request);
+            var dialog = await _balancer.InvokeSessionsClient(request.SessionId,
+                (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context));
+
+            return dialog;
+        }
+
+        public Task DeleteAllContextsAsync(Request request)
+        {
+            return _balancer.InvokeContextsClient(request.SessionId,
+                (client, context) => DeleteAllContextsInternalAsync(request.SessionId, context.ProjectId, client));
+        }
+
+        public Task SetContextAsync(string sessionId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        {
+            return _balancer.InvokeContextsClient(sessionId,
+                (client, context) => SetContextInternalAsync(client, sessionId, context.ProjectId, contextName, lifeSpan, parameters));
+        }
+
+        private async Task<Dialog> GetResponseInternalAsync(Request request, SessionsClient client, DialogflowContext context)
+        {
+            var intentRequest = CreateQuery(request, context);
 
             if (_configuration.LogQuery)
                 _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
-            var intentResponse = await _sessionsClient.DetectIntentAsync(intentRequest);
+            DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest);
 
             if (_configuration.LogQuery)
                 _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
@@ -82,23 +103,23 @@ namespace FillInTheTextBot.Services
             return response;
         }
 
-        public Task DeleteAllContextsAsync(Request request)
+        private Task DeleteAllContextsInternalAsync(string sessionId, string projectId, ContextsClient client)
         {
-            var session = CreateSession(request);
+            var session = CreateSession(projectId, sessionId);
 
-            return _contextsClient.DeleteAllContextsAsync(session);
+            return client.DeleteAllContextsAsync(session);
         }
 
-        public Task SetContextAsync(string sessionId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        private Task SetContextInternalAsync(ContextsClient client, string sessionId, string projectId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
-            var session = CreateSession(sessionId);
+            var session = CreateSession(projectId, sessionId);
 
-            return SetContext(session, contextName, lifeSpan, parameters);
+            return SetContextAsync(client, projectId, session, contextName, lifeSpan, parameters);
         }
 
-        private DetectIntentRequest CreateQuery(Request request)
+        private DetectIntentRequest CreateQuery(Request request, DialogflowContext context)
         {
-            var session = CreateSession(request);
+            var session = CreateSession(context.ProjectId, request.SessionId);
 
             var eventInput = ResolveEvent(request);
 
@@ -134,7 +155,7 @@ namespace FillInTheTextBot.Services
 
         public EventInput ResolveEvent(Request request)
         {
-            var result = default(EventInput);
+            EventInput result;
 
             var sourceMessenger = request?.Source;
 
@@ -144,7 +165,7 @@ namespace FillInTheTextBot.Services
             }
             else
             {
-                result = EventByCommand(request.Text);
+                result = EventByCommand(request?.Text);
             }
 
             return result;
@@ -204,25 +225,18 @@ namespace FillInTheTextBot.Services
             return result;
         }
 
-        private SessionName CreateSession(Request request)
+        private SessionName CreateSession(string projectId, string sessionsId)
         {
-            var session = new SessionName(_configuration.ProjectId, request.SessionId);
+            var session = new SessionName(projectId, sessionsId);
 
             return session;
         }
 
-        private SessionName CreateSession(string sessionId)
-        {
-            var session = new SessionName(_configuration.ProjectId, sessionId);
-
-            return session;
-        }
-
-        private Task SetContext(SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        private Task SetContextAsync(ContextsClient client, string projectId, SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             var context = new Context
             {
-                ContextName = new ContextName(_configuration.ProjectId, sessionName.SessionId, contextName),
+                ContextName = new ContextName(projectId, sessionName.SessionId, contextName),
                 LifespanCount = lifeSpan,
             };
 
@@ -241,12 +255,7 @@ namespace FillInTheTextBot.Services
                 }
             }
 
-            return _contextsClient.CreateContextAsync(sessionName, context);
-        }
-
-        private Task DeleteContext(string sessionId, string contextName)
-        {
-            return _contextsClient.DeleteContextAsync(new ContextName(_configuration.ProjectId, sessionId, contextName));
+            return client.CreateContextAsync(sessionName, context);
         }
     }
 }

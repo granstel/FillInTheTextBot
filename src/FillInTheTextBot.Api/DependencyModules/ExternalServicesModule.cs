@@ -1,7 +1,11 @@
-﻿using Autofac;
+﻿using System;
+using System.Linq;
+using Autofac;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using FillInTheTextBot.Services.Configuration;
+using GranSteL.DialogflowBalancer;
+using GranSteL.Helpers.Redis;
 using Grpc.Auth;
 using RestSharp;
 using StackExchange.Redis;
@@ -14,17 +18,34 @@ namespace FillInTheTextBot.Api.DependencyModules
         {
             builder.RegisterType<RestClient>().As<IRestClient>();
             
-            builder.Register(RegisterDialogflowSessionsClient).As<SessionsClient>().SingleInstance();
-            builder.Register(RegisterDialogflowContextsClient).As<ContextsClient>().SingleInstance();
+            builder.Register(RegisterDialogflowBalancer).As<DialogflowClientsBalancer>().SingleInstance();
 
             builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
         }
 
-        private SessionsClient RegisterDialogflowSessionsClient(IComponentContext context)
+        private DialogflowClientsBalancer RegisterDialogflowBalancer(IComponentContext context)
         {
-            var configuration = context.Resolve<DialogflowConfiguration>();
+            var configuration = context.Resolve<AppConfiguration>();
 
-            var credential = GoogleCredential.FromFile(configuration.JsonPath).CreateScoped(SessionsClient.DefaultScopes);
+            var clientsConfigurations = configuration.DialogflowInstances
+                .Select(i => new DialogflowClientsConfiguration(i.ProjectId, i.JsonPath))
+                .ToList();
+
+            var balancerConfiguration = new DialogflowBalancerConfiguration
+            {
+                ScopeExpiration = TimeSpan.FromMinutes(5),
+                ClientsConfigurations = clientsConfigurations
+            };
+
+            var cache = context.Resolve<IRedisCacheService>();
+            var balancer = new DialogflowClientsBalancer(cache, balancerConfiguration, RegisterDialogflowSessionsClient, RegisterDialogflowContextsClient);
+
+            return balancer;
+        }
+
+        private SessionsClient RegisterDialogflowSessionsClient(DialogflowContext context)
+        {
+            var credential = GoogleCredential.FromFile(context.JsonPath).CreateScoped(SessionsClient.DefaultScopes);
 
             var clientBuilder = new SessionsClientBuilder
             {
@@ -36,11 +57,9 @@ namespace FillInTheTextBot.Api.DependencyModules
             return client;
         }
 
-        private ContextsClient RegisterDialogflowContextsClient(IComponentContext context)
+        private ContextsClient RegisterDialogflowContextsClient(DialogflowContext context)
         {
-            var configuration = context.Resolve<DialogflowConfiguration>();
-
-            var credential = GoogleCredential.FromFile(configuration.JsonPath).CreateScoped(ContextsClient.DefaultScopes);
+            var credential = GoogleCredential.FromFile(context.JsonPath).CreateScoped(ContextsClient.DefaultScopes);
 
             var clientBuilder = new ContextsClientBuilder
             {

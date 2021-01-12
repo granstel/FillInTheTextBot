@@ -77,6 +77,19 @@
               "text": "Новый колобок"
             },
             {
+              "text": "Новогоднее письмо"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
               "text": "Гороскоп для козерогов"
             }
           ],
@@ -131,8 +144,21 @@
               "text": "о девах"
             },
             {
-              "text": "и про львов"
+              "text": "про львов"
             },
+            {
+              "text": "для весов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
             {
               "text": "Любой"
             }
