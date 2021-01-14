@@ -2,7 +2,7 @@ namespace FillInTheTextBot.Models
 {
     public class Request
     {
-        public static string IsOldUserKey => nameof(IsOldUser);
+        public static string IsOldUserKey => nameof(IsOldUser).ToUpper();
 
         public Source? Source { get; set; }
 

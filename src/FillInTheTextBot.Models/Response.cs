@@ -2,6 +2,8 @@ namespace FillInTheTextBot.Models
 {
     public class Response
     {
+        public static string NextTextIndexKey => nameof(NextTextIndex).ToUpper();
+
         public string ChatHash { get; set; }
 
         public string UserHash { get; set; }

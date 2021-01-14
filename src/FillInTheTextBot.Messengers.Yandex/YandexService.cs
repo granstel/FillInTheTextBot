@@ -43,15 +43,15 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             
             if (!input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser))
-            {//TODO: remove at next release
-                input.TryGetFromUserState(IsOldUserOldKey, out isOldUser);
+            {
+                input.TryGetFromUserState(IsOldUserOldKey, out isOldUser);//TODO: remove at next release
             }
 
             result.IsOldUser = isOldUser;
 
-            if (input.TryGetFromUserState(nameof(result.NextTextIndex), out object nextTextIndex) != true)
+            if (input.TryGetFromUserState(Models.Response.NextTextIndexKey, out object nextTextIndex) != true)
             {
-                input.TryGetFromApplicationState(nameof(result.NextTextIndex), out nextTextIndex);
+                input.TryGetFromApplicationState(Models.Response.NextTextIndexKey, out nextTextIndex);
             }
 
             result.NextTextIndex = Convert.ToInt32(nextTextIndex);
@@ -120,10 +120,10 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             _mapper.Map(input, output);
 
-            output.AddToUserState(IsOldUserOldKey, null);
+            output.AddToUserState(IsOldUserOldKey, null);//TODO: remove at next release
             output.AddToUserState(Models.Request.IsOldUserKey, true);
-            output.AddToUserState(nameof(response.NextTextIndex), response.NextTextIndex);
-            output.AddToApplicationState(nameof(response.NextTextIndex), response.NextTextIndex);
+            output.AddToUserState(Models.Response.NextTextIndexKey, response.NextTextIndex);
+            output.AddToApplicationState(Models.Response.NextTextIndexKey, response.NextTextIndex);
 
             return output;
         }
