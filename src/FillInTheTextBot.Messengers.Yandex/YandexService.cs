@@ -14,6 +14,7 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string PingCommand = "ping";
         private const string PongResponse = "pong";
         private const string ErrorCommand = "error";
+        private const string IsOldUserOldKey = "isOldUser";
 
         private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории Алисы из Яндекса\" и напиши об этом в личку";
 
@@ -40,10 +41,13 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             var result = base.Before(input);
 
-            if (input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser))
-            {
-                result.IsOldUser = isOldUser;
+            
+            if (!input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser))
+            {//TODO: remove at next release
+                input.TryGetFromUserState(IsOldUserOldKey, out isOldUser);
             }
+
+            result.IsOldUser = isOldUser;
 
             if (input.TryGetFromUserState(nameof(result.NextTextIndex), out object nextTextIndex) != true)
             {
@@ -116,6 +120,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             _mapper.Map(input, output);
 
+            output.AddToUserState(IsOldUserOldKey, null);
             output.AddToUserState(Models.Request.IsOldUserKey, true);
             output.AddToUserState(nameof(response.NextTextIndex), response.NextTextIndex);
             output.AddToApplicationState(nameof(response.NextTextIndex), response.NextTextIndex);
