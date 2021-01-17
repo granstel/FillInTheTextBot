@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "a6419f72-8faf-4d6b-abae-75324427ca6a",
+          "id": "a40f9032-3221-45fc-8b0b-17fbd6e35cf7",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "df84da8a-867a-4c31-a61b-c37c8ad49436",
+          "id": "4c74a103-1694-416a-9235-172aa6e6b7ba",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -58,7 +58,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "480c142c-04d7-4a6c-a106-850a75946991",
+          "id": "4269904e-96b9-42e8-bec6-edced0067f0f",
           "name": "kafe",
           "required": true,
           "dataType": "@sys.any",
@@ -85,7 +85,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "56a15a35-218b-4ef8-b8bb-67daaccc50d0",
+          "id": "e590bf7c-967b-433e-91a6-a4e89b0fe5cd",
           "name": "alcohol",
           "required": true,
           "dataType": "@sys.any",
@@ -116,7 +116,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0d9e8cc6-cfa7-4c04-88dd-15e8003220b4",
+          "id": "a050944e-1e99-44c4-b827-7ad03d9799c0",
           "name": "city",
           "required": true,
           "dataType": "@sys.any",
@@ -148,6 +148,18 @@
         }
       ],
       "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Расскажи ещё раз",
+            "Давай ещё сочиним!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",
