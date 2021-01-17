@@ -20,19 +20,6 @@
           "title": "истории",
           "buttons": [
             {
-              "text": "Новогоднее письмо"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
-          "type": "1",
-          "platform": "telegram",
-          "title": "истории",
-          "buttons": [
-            {
               "text": "Случай на уроке"
             },
             {
@@ -89,6 +76,9 @@
           "platform": "telegram",
           "title": "истории",
           "buttons": [
+            {
+              "text": "Анекдот про енота"
+            },
             {
               "text": "Гороскоп для козерогов"
             }

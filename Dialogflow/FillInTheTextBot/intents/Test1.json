@@ -1,13 +1,18 @@
 {
-  "id": "6e8b484d-6fbf-4f7e-9e45-88f583389453",
-  "name": "Exit",
+  "id": "0098764e-faa6-4fae-83ce-cdee00b4dbb4",
+  "name": "Test1",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "test1",
+          "lifespan": 5
+        }
+      ],
       "parameters": [],
       "messages": [
         {
@@ -16,12 +21,13 @@
           "title": "кнопки",
           "buttons": [
             {
-              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-              "text": "Поставить оценку"
+              "text": "1 час"
             },
             {
-              "postback": "https://vk.cc/bWrHHS",
-              "text": "Подписаться на новости"
+              "text": "8 часов"
+            },
+            {
+              "text": "Не разрешаю"
             }
           ],
           "textToSpeech": "",
@@ -34,9 +40,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Окей, возвращайся, будуж дать!",
-            "Если что, я всегда здесь, возвращайся!",
-            "Приходи ещё, я буду здесь!"
+            "Привет! В Великом Новгороде много всего интересного. Если откроешь мне гео-локацию, тогда смогу быстрее подсказать, чем там можно заняться. На сколько можешь открыть её мне?"
           ],
           "condition": ""
         }

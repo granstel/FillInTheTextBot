@@ -1,38 +1,30 @@
 {
-  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
-  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - yes",
+  "id": "312d0b4f-e866-46af-9744-083148d53b44",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "20-Joke-Raccoon",
   "auto": true,
-  "contexts": [
-    "EasyWelcome-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-20",
+          "lifespan": 5
+        },
+        {
+          "name": "20-Joke-Raccoon-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "fa8c5519-98a0-42a8-bba2-ff97d5710c73",
+          "id": "1f6db153-9209-4d22-9e62-5c1afee98656",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
           "value": "text-20",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "cbea721c-6e98-4088-a339-7cb01bce3b96",
-          "name": "resetTextIndex",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "true",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -49,9 +41,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Вот тебе",
+            "Сейчас расскажу",
+            "Давай расскажу"
           ],
           "condition": ""
         }

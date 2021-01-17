@@ -1,0 +1,177 @@
+{
+  "id": "2330a1ea-1a93-441b-8168-c980503e99df",
+  "parentId": "312d0b4f-e866-46af-9744-083148d53b44",
+  "name": "20-Joke-Raccoon-text",
+  "auto": true,
+  "contexts": [
+    "text-20"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "a6419f72-8faf-4d6b-abae-75324427ca6a",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "анекдот про енота!",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "df84da8a-867a-4c31-a61b-c37c8ad49436",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала, назови свой любимый цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, какой у тебя любимый цвет?"
+            },
+            {
+              "lang": "ru",
+              "value": "Но сперва скажи, какой твой любимый цвет?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови свой любимый цвет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "480c142c-04d7-4a6c-a106-850a75946991",
+          "name": "kafe",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$kafe",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь - скажи название какого-нибудь кафе или ресторана"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, как называется кафе или ресторан, в который ты любишь ходить?"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь кафе или ресторан"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "56a15a35-218b-4ef8-b8bb-67daaccc50d0",
+          "name": "alcohol",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$alcohol",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи, какой алкогольный напиток ты знаешь?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи название какого-нибудь алкогольного напитка"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови какой-нибудь алкогольный напиток"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой алкогольный напиток ты знаешь?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0d9e8cc6-cfa7-4c04-88dd-15e8003220b4",
+          "name": "city",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$city",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос - как называется город, в котором тебе хотелось бы жить?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее - какой город тебе не нравится?"
+            },
+            {
+              "lang": "ru",
+              "value": "И наконец - как называется населённый пункт, в котором ты живёшь?"
+            },
+            {
+              "lang": "ru",
+              "value": "И наконец - какой город тебе не нравится?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что получилось: Заходит $color енот с ноутбуком в заведение под названием $kafe и говорит:\n- Мне $alcohol, пожалуйста. \nОфициант офигевает, но всё-таки приносит $alcohol еноту, строчащему на ноутбуке, и говорит:\n- Вы… говорящий енот?! Никогда такого не видел!\n- Я недавно приехал из города $city, вот работу ищу.\n- Может вам в цирк работать пойти? - предложил официант.\nЕнот удивился: - А зачем им программисты?!\n- …\n- ...\nЗанавес. У тебя смешно получилось! Давай сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-20"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
