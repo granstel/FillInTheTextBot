@@ -29,7 +29,9 @@ namespace FillInTheTextBot.Services
             { 
                 Text = dialog?.Response, 
                 Finished = dialog?.EndConversation ?? false,
-                Buttons = dialog?.Buttons
+                Buttons = dialog?.Buttons,
+                ScopeKey = dialog?.ScopeKey
+
             };
 
             if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
@@ -109,6 +111,7 @@ namespace FillInTheTextBot.Services
 
             response.Text = text;
             response.Buttons = dialog?.Buttons;
+            response.ScopeKey = dialog?.ScopeKey;
 
             return response;
         }

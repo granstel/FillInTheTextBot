@@ -29,5 +29,7 @@ namespace FillInTheTextBot.Models
         public string ClientId { get; set; }
 
         public int NextTextIndex { get; set; }
+
+        public string ScopeKey { get; set; }
     }
 }

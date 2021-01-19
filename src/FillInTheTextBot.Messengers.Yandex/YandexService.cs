@@ -49,12 +49,16 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             result.IsOldUser = isOldUser;
 
-            if (input.TryGetFromUserState(Models.Response.NextTextIndexKey, out object nextTextIndex) != true)
+            if (input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex) != true)
             {
-                input.TryGetFromApplicationState(Models.Response.NextTextIndexKey, out nextTextIndex);
+                input.TryGetFromApplicationState(Models.Response.NextTextIndexStorageKey, out nextTextIndex);
             }
 
             result.NextTextIndex = Convert.ToInt32(nextTextIndex);
+
+            input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
+
+            result.ScopeKey = scopeKey;
 
             if (result.NewSession == true)
             {
@@ -121,9 +125,13 @@ namespace FillInTheTextBot.Messengers.Yandex
             _mapper.Map(input, output);
 
             output.AddToUserState(IsOldUserOldKey, null);//TODO: remove at next release
+
             output.AddToUserState(Models.Request.IsOldUserKey, true);
-            output.AddToUserState(Models.Response.NextTextIndexKey, response.NextTextIndex);
-            output.AddToApplicationState(Models.Response.NextTextIndexKey, response.NextTextIndex);
+
+            output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
+            output.AddToApplicationState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
+
+            output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 
             return output;
         }

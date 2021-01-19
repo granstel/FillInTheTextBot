@@ -19,7 +19,6 @@ namespace FillInTheTextBot.Api.DependencyModules
             builder.RegisterType<RestClient>().As<IRestClient>();
             
             builder.Register(RegisterDialogflowBalancer).As<DialogflowClientsBalancer>().SingleInstance();
-
             builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
         }
 
@@ -39,7 +38,7 @@ namespace FillInTheTextBot.Api.DependencyModules
 
             var cache = context.Resolve<IRedisCacheService>();
             var balancer = new DialogflowClientsBalancer(cache, balancerConfiguration, RegisterDialogflowSessionsClient, RegisterDialogflowContextsClient);
-
+            
             return balancer;
         }
 

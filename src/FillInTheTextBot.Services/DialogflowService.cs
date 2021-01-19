@@ -67,7 +67,7 @@ namespace FillInTheTextBot.Services
         public async Task<Dialog> GetResponseAsync(Request request)
         {
             var dialog = await _balancer.InvokeSessionsClient(request.SessionId,
-                (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context));
+                (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
 
             return dialog;
         }
@@ -75,7 +75,7 @@ namespace FillInTheTextBot.Services
         public Task DeleteAllContextsAsync(Request request)
         {
             return _balancer.InvokeContextsClient(request.SessionId,
-                (client, context) => DeleteAllContextsInternalAsync(request.SessionId, context.ProjectId, client));
+                (client, context) => DeleteAllContextsInternalAsync(request.SessionId, context.ProjectId, client), request.ScopeKey);
         }
 
         public Task SetContextAsync(string sessionId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
@@ -99,6 +99,8 @@ namespace FillInTheTextBot.Services
             var queryResult = intentResponse.QueryResult;
 
             var response = _mapper.Map<Dialog>(queryResult);
+
+            response.ScopeKey = context.ProjectId;
 
             return response;
         }

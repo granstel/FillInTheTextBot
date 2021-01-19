@@ -5,6 +5,11 @@ namespace FillInTheTextBot.Models
 {
     public class Dialog
     {
+        public Dialog()
+        {
+            Parameters = new Dictionary<string, string>();
+        }
+
         public IDictionary<string, string> Parameters { get; set; }
 
         public bool EndConversation { get; set; }
@@ -16,6 +21,8 @@ namespace FillInTheTextBot.Models
         public string Action { get; set; }
 
         public Button[] Buttons { get; set; }
+
+        public string ScopeKey { get; set; }
 
         public IEnumerable<string> GetParameters(string key)
         {
