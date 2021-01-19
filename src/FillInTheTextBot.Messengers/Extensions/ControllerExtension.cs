@@ -11,7 +11,7 @@ namespace FillInTheTextBot.Messengers.Extensions
             var pathBase = request.PathBase.Value;
             var pathSegment = request.Path.Value;
 
-            var url = $"https://{request.Host}{pathBase}{pathSegment}";
+            var url = $"{request.Scheme}://{request.Host}{pathBase}{pathSegment}";
 
             return url;
         }
