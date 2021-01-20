@@ -1,5 +1,36 @@
 [
   {
+    "id": "75c840f6-2b1e-41c1-b3cc-9da11ffde517",
+    "data": [
+      {
+        "text": "запусти навык занимательные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5eac68cb-0f5f-4f6a-9217-9cdae338484d",
+    "data": [
+      {
+        "text": "запусти навык занимательные ",
+        "userDefined": false
+      },
+      {
+        "text": "ис",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "2cdcc205-b46b-45c2-81d3-5af322493509",
     "data": [
       {

@@ -1,5 +1,83 @@
 [
   {
+    "id": "46e23df7-975d-4aca-abf3-c5e0f0ba6f5c",
+    "data": [
+      {
+        "text": "своё",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9098ba6a-daa2-4a7c-aef2-75342fa7afad",
+    "data": [
+      {
+        "text": "свою",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3e2ec663-546a-4e9b-8ed5-79ee4e3334bf",
+    "data": [
+      {
+        "text": "добавить",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e6156553-0507-4310-a6d4-d57bbc86127b",
+    "data": [
+      {
+        "text": "придумать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "52db5cde-dfa3-4a3a-a477-5fa6bd74a0e7",
+    "data": [
+      {
+        "text": "добавить новую историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9d2e4f9a-2f5a-460b-adb8-1e5b8de72532",
+    "data": [
+      {
+        "text": "хочу свою историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "47b2f7f7-e9ee-4c24-b9de-549ec75f3cb9",
     "data": [
       {

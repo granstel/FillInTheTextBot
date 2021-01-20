@@ -1,5 +1,31 @@
 [
   {
+    "id": "5093d9b0-1477-4d85-99d2-161e22d4c5a9",
+    "data": [
+      {
+        "text": "комментарии к оценкам",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "04ed2ed6-9ca3-44c9-aee8-edc59ffa5241",
+    "data": [
+      {
+        "text": "ответы на оценки",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "1bb1eb6c-1551-424c-8617-0bc1c02d9cd6",
     "data": [
       {

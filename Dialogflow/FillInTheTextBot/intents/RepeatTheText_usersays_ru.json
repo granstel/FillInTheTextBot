@@ -1,5 +1,36 @@
 [
   {
+    "id": "b3ec8594-7a75-4325-8c8e-f2fd47651d88",
+    "data": [
+      {
+        "text": "расскажи эту историю еще ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9d32ffa7-464d-4e28-a4da-238f4dfb6c3f",
+    "data": [
+      {
+        "text": "заново расскажи эту историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "3fee8337-2dc4-4396-bbe6-76ddb8eea040",
     "data": [
       {
