@@ -16,7 +16,7 @@
           "title": "Кнопки",
           "buttons": [
             {
-              "postback": "https://vk.cc/bWrHHS",
+              "postback": "https://vk.com/fillinthetextbot",
               "text": "Рассказать о проблеме"
             }
           ],
