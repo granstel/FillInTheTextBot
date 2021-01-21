@@ -1,0 +1,207 @@
+{
+  "id": "a753ca01-8a4e-4dca-94d1-4962f5641b70",
+  "name": "21-Horoscope-Scorpio-text",
+  "auto": true,
+  "contexts": [
+    "text-21"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "131000e1-3197-4d9b-9df6-80e111ed193a",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для скорпионов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "43b11cf6-4c61-4921-98ef-b812cc1560e9",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови животное женского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, какое животное женского рода ты знаешь?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови животное женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "6cd5d280-3d92-416b-99b0-5058b9b40858",
+          "name": "name-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как зовут твою лучшую подругу?"
+            },
+            {
+              "lang": "ru",
+              "value": "Как зовут твою любимую героиню из мультиков?"
+            },
+            {
+              "lang": "ru",
+              "value": "Представь, что у тебя дома живёт курица, как её зовут?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e51662b2-a5ca-40b4-9333-b8c5de56229e",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какая?\""
+            },
+            {
+              "lang": "ru",
+              "value": "Какая у тебя люстра?"
+            },
+            {
+              "lang": "ru",
+              "value": "Какая у тебя рука?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3ac324d7-fd23-4115-9697-0eaf83b6239c",
+          "name": "name-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как зовут твоего друга?"
+            },
+            {
+              "lang": "ru",
+              "value": "Как зовут твоего злейшего врага?"
+            },
+            {
+              "lang": "ru",
+              "value": "Как зовут твоего питомца?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "44abb745-3d4f-48a9-97ec-99c74add8c7c",
+          "name": "name-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И наконец - скажи, какой знаменитый человек тебе больше всего нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "И наконец - скажи имя какого-нибудь персонажа, который тебе больше всего нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее - скажи имя знаменитого человека, который тебе не нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее - назови персонажа, которого ты ненавидишь"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, гороскоп для скорпионов: все вас опасаются, считают вредным созданием, и напрасно - вы очень добры, почти как $adjective $animal.\nНа отдыхе у вас сложится отличная компания: вампир $name-1, ведьма $name-2, $name-3 собственной персоной, и вы. Вы даже организуете джаз-квартет \"$name-2$name-3$animal$name-1\".\nЕсли никого не кусать за попу, размахивая острыми клешнями, то всё у вас будет чудесно.\nПо-моему, забавно получилось! Давай ещё что-нибудь сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-21"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,16 +1,21 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "70aacad2-80ed-4c96-a1b2-2c91d7aaa2bd",
+  "name": "21-Horoscope-Scorpio",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-21",
+          "lifespan": 5
+        }
+      ],
       "parameters": [
         {
-          "id": "ee7b33d6-33e5-4cfa-9bb5-35a6af1d3520",
+          "id": "f4714208-3dc2-48b1-afff-839e64544a46",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +36,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история -"
+            "Давай вместе составим",
+            "Сейчас мы вместе составим",
+            "Сейчас мы составим"
           ],
           "condition": ""
         }
