@@ -10,8 +10,6 @@ namespace FillInTheTextBot.Services
 {
     public class ConversationService : IConversationService
     {
-        const string NextTextIndexKey = "nextTextIndex";
-
         private readonly IDialogflowService _dialogflowService;
         private readonly IRedisCacheService _cache;
 
@@ -50,7 +48,7 @@ namespace FillInTheTextBot.Services
 
             if (isGotResetParameter && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
-                ResetLastTextIndexKey(request.UserHash);
+                request.NextTextIndex = 0;
             }
 
             if (string.Equals(dialog?.Action, "GetText"))
@@ -114,23 +112,6 @@ namespace FillInTheTextBot.Services
             response.ScopeKey = dialog?.ScopeKey;
 
             return response;
-        }
-
-        /// <summary>
-        /// На самом деле это индекс не последнего, а следующего текста
-        /// </summary>
-        /// <param name="userHash">Идентификатор пользователя</param>
-        /// <returns>Ключ для получения индекса текста из кеша</returns>
-        private string GetNextTextIndexCacheKey(string userHash)
-        {
-            return $"{NextTextIndexKey}:{userHash}";
-        }
-
-        private void ResetLastTextIndexKey(string userHash)
-        {
-            var lastTextIndexKey = GetNextTextIndexCacheKey(userHash);
-
-            _cache.TryAddAsync(lastTextIndexKey, 0).Forget();
         }
     }
 }
