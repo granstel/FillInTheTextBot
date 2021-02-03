@@ -1,1 +1,0 @@
-{"swagger":"2.0","info":{"version":"1.0","title":"http://localhost:1402"},"basePath":"","paths":{"/yandex/{token}":{"post":{"operationId":"yandex","consumes":["application/json"],"parameters":[{"name":"token","in":"path","required":true,"type":"string"},{"in":"body","name":"body","description":"Request body","required":true}],"responses":{"0":{},"200":{},"500":{},"404":{}}}}}}
