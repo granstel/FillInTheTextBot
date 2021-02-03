@@ -69,14 +69,9 @@ namespace FillInTheTextBot.Messengers
 
         protected virtual async Task<TOutput> AfterAsync(TInput input, Response response)
         {
-            //TODO: проверить, какой тип будет фигурировать в сообщении
-            //throw new NotImplementedException($"{nameof(AfterAsync)} doesn't implemented for {GetType().Name}");
-            return await Task.Run(() =>
-            {
-                var output = _mapper.Map<TOutput>(response);
+            var output = _mapper.Map<TOutput>(response);
 
-                return output;
-            });
+            return await Task.FromResult(output);
         }
 
         public virtual Task<bool> SetWebhookAsync(string url)
