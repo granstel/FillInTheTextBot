@@ -27,7 +27,9 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.Source, m => m.UseValue(Source.Yandex))
                 .ForMember(d => d.RequiredContext, m => m.Ignore())
                 .ForMember(d => d.ClearContexts, m => m.Ignore())
-                .ForMember(d => d.IsOldUser, m => m.Ignore());
+                .ForMember(d => d.IsOldUser, m => m.Ignore())
+                .ForMember(d => d.NextTextIndex, m => m.Ignore())
+                .ForMember(d => d.ScopeKey, m => m.Ignore());
 
             CreateMap<Models.Response, OutputModel>()
                 .ForMember(d => d.Response, m => m.MapFrom(s => s))
@@ -35,7 +37,8 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.Version, m => m.Ignore())
                 .ForMember(d => d.StartAccountLinking, m => m.Ignore())
                 .ForMember(d => d.UserStateUpdate, m => m.Ignore())
-                .ForMember(d => d.SessionState, m => m.Ignore());
+                .ForMember(d => d.SessionState, m => m.Ignore())
+                .ForMember(d => d.ApplicationState, m => m.Ignore());
 
             CreateMap<Models.Response, YandexModels.Response>()
                 .ForMember(d => d.Text, m => m.MapFrom(s => s.Text.Replace(Environment.NewLine, "\n")))
@@ -57,7 +60,8 @@ namespace FillInTheTextBot.Messengers.Yandex
                 .ForMember(d => d.Response, m => m.Ignore())
                 .ForMember(d => d.StartAccountLinking, m => m.Ignore())
                 .ForMember(d => d.UserStateUpdate, m => m.Ignore())
-                .ForMember(d => d.SessionState, m => m.Ignore());
+                .ForMember(d => d.SessionState, m => m.Ignore())
+                .ForMember(d => d.ApplicationState, m => m.Ignore());
 
             CreateMap<Models.Button, ResponseButton>()
                 .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
