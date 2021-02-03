@@ -29,11 +29,13 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             var pathString = new PathString($"/{path}");
 
             var host = new HostString(Fixture.Create<string>());
+            var scheme = Fixture.Create<string>();
 
             var request = MockRepository.Create<HttpRequest>();
             request.SetupGet(r => r.Path).Returns(pathString);
             request.SetupGet(r => r.Host).Returns(host);
             request.SetupGet(r => r.PathBase).Returns(pathString);
+            request.SetupGet(r => r.Scheme).Returns(scheme);
 
             var context = MockRepository.Create<HttpContext>();
             context.SetupGet(c => c.Request).Returns(request.Object);
@@ -51,7 +53,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             var pathBase = request.PathBase.Value;
             var pathSegment = request.Path.Value;
 
-            var expected = $"https://{request.Host}{pathBase}{pathSegment}";
+            var expected = $"{request.Scheme}://{request.Host}{pathBase}{pathSegment}";
 
             return expected;
         }
