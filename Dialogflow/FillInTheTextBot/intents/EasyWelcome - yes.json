@@ -14,10 +14,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "85da1201-219d-4a09-aa1f-1660ec0226dd",
+          "id": "93144546-155d-4b87-a9fb-da09717a00fa",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
+          "value": "text-22",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -27,11 +28,11 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bf3df9f1-fce7-422c-b698-ea01d6256c78",
+          "id": "d476b332-f169-457b-8be0-3d7a7d072827",
           "name": "resetTextIndex",
           "required": false,
           "dataType": "@sys.any",
-          "value": "false",
+          "value": "true",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
