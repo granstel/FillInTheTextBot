@@ -1,0 +1,60 @@
+{
+  "id": "2431b79a-b75d-4419-9530-af76b5ef5574",
+  "name": "22-Valentine\u0027s day",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-22",
+          "lifespan": 5
+        },
+        {
+          "name": "22-Valentinesday-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "105ca00d-0314-4065-aec2-b730d5226e90",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-22",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Давай сочиним",
+            "Давай придумаем историю"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

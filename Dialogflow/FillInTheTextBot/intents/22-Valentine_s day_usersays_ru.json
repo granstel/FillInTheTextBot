@@ -1,0 +1,138 @@
+[
+  {
+    "id": "28fb7ee7-1d28-494b-90fe-c5c65547833b",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "влюблённых",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "13d57ced-9751-40ed-83a8-dd5435cc5497",
+    "data": [
+      {
+        "text": "влюблённые",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6aa2bf31-989c-44e0-aae8-b7469807c96a",
+    "data": [
+      {
+        "text": "День Святого Валентина",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "510f9085-eb27-4e8d-8987-60a8af8546f7",
+    "data": [
+      {
+        "text": "про любовь",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "41343968-6980-4937-902e-cec7be7a4f67",
+    "data": [
+      {
+        "text": "день ",
+        "userDefined": false
+      },
+      {
+        "text": "всех",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " влюблённыхдень ",
+        "userDefined": false
+      },
+      {
+        "text": "влюблённых",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fe17f096-7f11-4a9a-832f-243d9fd8a786",
+    "data": [
+      {
+        "text": "день всех влюблённых",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5e9ea364-430a-4e28-90b1-ca607c6ea7bb",
+    "data": [
+      {
+        "text": "столик для ",
+        "userDefined": false
+      },
+      {
+        "text": "двоих",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e80b4453-20bf-4c93-959c-b92e07b95acb",
+    "data": [
+      {
+        "text": "столик на ",
+        "userDefined": false
+      },
+      {
+        "text": "двоих",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
