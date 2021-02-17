@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "93144546-155d-4b87-a9fb-da09717a00fa",
+          "id": "27be62d9-2239-410f-8656-5c19da4a6192",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -28,7 +28,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d476b332-f169-457b-8be0-3d7a7d072827",
+          "id": "27804a08-cf0d-47df-8082-fadeb2c42c69",
           "name": "resetTextIndex",
           "required": false,
           "dataType": "@sys.any",
