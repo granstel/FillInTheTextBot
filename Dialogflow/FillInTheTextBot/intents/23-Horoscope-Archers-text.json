@@ -1,0 +1,179 @@
+{
+  "id": "3b8ba24f-0639-47f9-9a59-e0c5a2973684",
+  "name": "23-Horoscope-Archers-text",
+  "auto": true,
+  "contexts": [
+    "text-23"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "a23c8daf-a7e3-418e-8d8c-17381439f126",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для стрельцов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "55c7660b-5ee6-41b4-a821-24eef120b09d",
+          "name": "general",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$general",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала скажи - кто у тебя главный?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, кто главный?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e446af66-b5f7-4d21-8bcf-cb27a4011c0e",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a15fac22-93a6-44bb-a5c3-9213cc79b45e",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи любое число (лучше побольше)"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любое число (чем больше, тем лучше)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "df2a1be5-7705-4508-9890-e03d6f4e041a",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови предмет мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь - любой предмет мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8ea0a402-2f78-4ab1-b0fd-38d03b9faed0",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок - снова \"какой?\""
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее - снова \"какой?\""
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повторить",
+            "Сочиним ещё!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, гороскоп для стрельцов: скоро вы захотите срочно избавиться от вредных привычек, потому что у одного вашего знакомого кожа вдруг приобретёт $adjective-2 цвет, а голова станет похожа на $adjective-1 $thing.\nСтрельцы - прирождённые гипнотизёры. Если $general будет давить на вас, вы легко сможете внушить оппоненту, что с вами нельзя так обращаться, потому что иначе у него тоже может появиться $adjective-2 $adjective-1 $thing вместо головы.\nДа, кстати, однажды ваши сбережения достигнут $number р., и это не предел!\nПравильно выбирайте цели, и всё будет здорово.\nПо-моему, весело получилось! Сочиним ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-23"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

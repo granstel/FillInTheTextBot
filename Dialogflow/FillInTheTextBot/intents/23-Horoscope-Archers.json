@@ -1,16 +1,21 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "b365e0ca-5d48-4d7a-822a-a2a4ce600d77",
+  "name": "23-Horoscope-Archers",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-23",
+          "lifespan": 5
+        }
+      ],
       "parameters": [
         {
-          "id": "efd5a4e3-bc62-48f0-9ed2-bfe626a6a8dc",
+          "id": "fa673df9-06b2-42bc-9491-246123dd65d1",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +36,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история -"
+            "Давай узнаем",
+            "Давай составим",
+            "Сейчас звёзды помогут нам узнать"
           ],
           "condition": ""
         }
