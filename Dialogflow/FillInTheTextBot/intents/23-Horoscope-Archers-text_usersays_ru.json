@@ -1,0 +1,242 @@
+[
+  {
+    "id": "1d0344b7-4a3b-40b4-a284-8c77005c6fcf",
+    "data": [
+      {
+        "text": "450000",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9ffc8f61-36ff-496f-bf3f-f7e52297e658",
+    "data": [
+      {
+        "text": "триста тысяч сорок пять",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9f30d612-cef9-4240-a63a-3f2c34aa3c71",
+    "data": [
+      {
+        "text": "однообразный",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa1daca5-d6c8-4364-a5cc-2afdc6ddda07",
+    "data": [
+      {
+        "text": "любой",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "09259284-a1bf-42f4-a312-c8f9931f8d45",
+    "data": [
+      {
+        "text": "кучерявый",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8509e696-4a21-4be9-81e1-19133af11676",
+    "data": [
+      {
+        "text": "монитор",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c9cdca26-339a-4569-b6ee-25ba1944e14d",
+    "data": [
+      {
+        "text": "помидор",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8595f4cd-8f0f-4e9e-9090-41f175062132",
+    "data": [
+      {
+        "text": "сапог",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ab577d29-ba59-41af-b951-e851676bb480",
+    "data": [
+      {
+        "text": "милый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8d9f61d2-ef70-46d0-a117-bcdb0b614f9d",
+    "data": [
+      {
+        "text": "брезгливый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f984c211-7292-4aef-954a-d9e3883209a1",
+    "data": [
+      {
+        "text": "задумчивый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3c04ee1a-2e6f-45b0-b591-f3e5adcc1b91",
+    "data": [
+      {
+        "text": "президент",
+        "meta": "@sys.any",
+        "alias": "general",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "856ff332-9203-44c6-a0f1-42eb0daf07ef",
+    "data": [
+      {
+        "text": "путин",
+        "meta": "@sys.any",
+        "alias": "general",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "87625317-69f2-4180-b250-e2e577ae7d46",
+    "data": [
+      {
+        "text": "мама",
+        "meta": "@sys.any",
+        "alias": "general",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4d1eb6e9-32c5-4a66-8dc4-044bad75cff8",
+    "data": [
+      {
+        "text": "папа",
+        "meta": "@sys.any",
+        "alias": "general",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9f9973e4-f162-458e-9e49-2e91cdc880ad",
+    "data": [
+      {
+        "text": "начальник",
+        "meta": "@sys.any",
+        "alias": "general",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
