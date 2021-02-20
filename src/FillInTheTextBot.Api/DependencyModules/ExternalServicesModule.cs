@@ -26,7 +26,7 @@ namespace FillInTheTextBot.Api.DependencyModules
         {
             var configuration = context.Resolve<AppConfiguration>();
 
-            var scopeContexts = GetScopesContexts(configuration);
+            var scopeContexts = GetScopesContexts<SessionsClient>(configuration);
 
             var storage = context.Resolve<IScopesStorage>();
             var balancer = new ScopesBalancer<SessionsClient>(storage, scopeContexts, CreateDialogflowSessionsClient);
@@ -34,7 +34,7 @@ namespace FillInTheTextBot.Api.DependencyModules
             return balancer;
         }
 
-        private SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
+        private SessionsClient CreateDialogflowSessionsClient(ScopeContext<SessionsClient> context)
         {
             var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(SessionsClient.DefaultScopes);
 
@@ -52,7 +52,7 @@ namespace FillInTheTextBot.Api.DependencyModules
         {
             var configuration = context.Resolve<AppConfiguration>();
 
-            var contexts = GetScopesContexts(configuration);
+            var contexts = GetScopesContexts<ContextsClient>(configuration);
 
             var storage = context.Resolve<IScopesStorage>();
             var balancer = new ScopesBalancer<ContextsClient>(storage, contexts, CreateDialogflowContextsClient);
@@ -60,7 +60,7 @@ namespace FillInTheTextBot.Api.DependencyModules
             return balancer;
         }
         
-        private ContextsClient CreateDialogflowContextsClient(ScopeContext context)
+        private ContextsClient CreateDialogflowContextsClient(ScopeContext<ContextsClient> context)
         {
             var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(ContextsClient.DefaultScopes);
 
@@ -74,12 +74,12 @@ namespace FillInTheTextBot.Api.DependencyModules
             return client;
         }
 
-        private ICollection<ScopeContext> GetScopesContexts(AppConfiguration configuration)
+        private ICollection<ScopeContext<T>> GetScopesContexts<T>(AppConfiguration configuration)
         {
             var scopeContexts = configuration.DialogflowInstances
                 .Select(i =>
                 {
-                    var context = new ScopeContext(i.ProjectId);
+                    var context = new ScopeContext<T>(i.ProjectId);
                     
                     context.Parameters.Add("ProjectId", i.ProjectId);
                     context.Parameters.Add("JsonPath", i.JsonPath);

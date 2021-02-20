@@ -70,7 +70,7 @@ namespace FillInTheTextBot.Services
         public async Task<Dialog> GetResponseAsync(Request request)
         {
             var dialog = await _sessionsClientBalancer.Invoke(request.SessionId,
-                (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
+                (context) => GetResponseInternalAsync(request, context), request.ScopeKey);
 
             return dialog;
         }
@@ -78,24 +78,30 @@ namespace FillInTheTextBot.Services
         public Task DeleteAllContextsAsync(Request request)
         {
             return _contextsClientBalancer.Invoke(request.SessionId,
-                (client, context) => DeleteAllContextsInternalAsync(request.SessionId, context.Parameters["ProjectId"], client),
+                (context) => DeleteAllContextsInternalAsync(request.SessionId, context.Parameters["ProjectId"], context.ScopeItem),
                     request.ScopeKey);
         }
 
         public Task SetContextAsync(string sessionId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
-            return _contextsClientBalancer.Invoke(sessionId,
-                (client, context) => SetContextInternalAsync(client, sessionId, context.Parameters["ProjectId"], contextName, lifeSpan, parameters));
+            return _contextsClientBalancer.Invoke(sessionId, (context) =>
+                SetContextInternalAsync(
+                    context.ScopeItem, 
+                    sessionId, 
+                    context.Parameters["ProjectId"],
+                    contextName,
+                    lifeSpan,
+                    parameters));
         }
 
-        private async Task<Dialog> GetResponseInternalAsync(Request request, SessionsClient client, ScopeContext context)
+        private async Task<Dialog> GetResponseInternalAsync(Request request, ScopeContext<SessionsClient> context)
         {
-            var intentRequest = CreateQuery(request, context);
+            var intentRequest = CreateQuery(request, context.Parameters);
 
             if (_configuration.LogQuery)
                 _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
-            DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest);
+            DetectIntentResponse intentResponse = await context.ScopeItem.DetectIntentAsync(intentRequest);
 
             if (_configuration.LogQuery)
                 _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
@@ -123,9 +129,9 @@ namespace FillInTheTextBot.Services
             return SetContextAsync(client, projectId, session, contextName, lifeSpan, parameters);
         }
 
-        private DetectIntentRequest CreateQuery(Request request, ScopeContext context)
+        private DetectIntentRequest CreateQuery(Request request, Dictionary<string, string> parameters)
         {
-            var session = CreateSession(context.Parameters["ProjectId"], request.SessionId);
+            var session = CreateSession(parameters["ProjectId"], request.SessionId);
 
             var eventInput = ResolveEvent(request);
 
