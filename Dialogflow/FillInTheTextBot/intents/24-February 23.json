@@ -1,16 +1,21 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "0ecc6a94-51e0-45a1-9ac5-930369f894be",
+  "name": "24-February 23",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-24",
+          "lifespan": 5
+        }
+      ],
       "parameters": [
         {
-          "id": "10b99b1b-ff70-40f4-b4e7-2e20d7cd1d8b",
+          "id": "695925c9-fbbe-4e9a-b357-ef1bde508cb6",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +36,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история -"
+            "Давай сделаем",
+            "Давай сочиним"
           ],
           "condition": ""
         }

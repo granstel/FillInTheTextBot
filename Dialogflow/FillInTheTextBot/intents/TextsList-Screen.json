@@ -83,6 +83,19 @@
               "text": "Про День всех влюблённых"
             },
             {
+              "text": "Про 23 февраля"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
               "text": "Гороскоп для козерогов"
             }
           ],

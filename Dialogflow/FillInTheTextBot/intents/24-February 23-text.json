@@ -1,0 +1,176 @@
+{
+  "id": "7a28273e-51a2-4284-81cb-1e0816973466",
+  "name": "24-February 23-text",
+  "auto": true,
+  "contexts": [
+    "text-24"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "af489411-d7da-42d2-9e5f-ec1e9fa23844",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "поздравление с 23 февраля.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "08d1bbe7-295b-44ed-864c-eabbc19f6c16",
+          "name": "footwear",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$footwear",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какую-нибудь обувь"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови обувь настоящего мужчины"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови свою любимую обувь"
+            },
+            {
+              "lang": "ru",
+              "value": "Какую обувь носит твой друг"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "82e9ce1d-453b-45f3-b5bf-e26a6ca16f5f",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какие?\""
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d50df1fd-b6cb-412b-a0e5-0c0db0cdd882",
+          "name": "hat",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$hat",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как называется солдатский головной убор?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что носят на голове офицеры?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что носят на голове настоящие мужики?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "03d90532-3a17-43ce-ac02-1b753fac2d65",
+          "name": "fruits",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$fruits",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - назови какие-нибудь фрукты"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок - назови какие-нибудь овощи"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее - назови свои любимые фрукты"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок - назови свои любимые овощи"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Мужики, поздравляю с 23 февраля! Желаю $footwear денег, $hat с удачей, а дорога жизни пусть обходит изгибами горе и разочарования! Девушки пускай висят на шее как $adjective $fruits, и  всегда все будет прекрасно!\nПо-моему, классно получилось, сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-24"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
