@@ -5,18 +5,18 @@ using GranSteL.Tools.ScopeSelector;
 
 namespace FillInTheTextBot.Services
 {
-    public class ScopesStorage : IScopesStorage
+    public class ScopeBindingStorage : IScopeBindingStorage
     {
         private readonly IRedisCacheService _cache;
         private readonly TimeSpan _expiration;
 
-        public ScopesStorage(IRedisCacheService cache)
+        public ScopeBindingStorage(IRedisCacheService cache)
         {
             _cache = cache;
             _expiration = TimeSpan.FromMinutes(5);
         }
 
-        public bool TryGetScopeKey(string invocationKey, out string scopeKey)
+        public bool TryGet(string invocationKey, out string scopeKey)
         {
             var cacheKey = GetCacheKey(invocationKey);
 

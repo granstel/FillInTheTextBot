@@ -21,7 +21,7 @@ namespace FillInTheTextBot.Api.DependencyModules
             builder.Register(RegisterSessionsClientBalancer).As<ScopesSelector<SessionsClient>>().SingleInstance();
             builder.Register(RegisterContextsClientBalancer).As<ScopesSelector<ContextsClient>>().SingleInstance();
             builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
-            builder.RegisterType<ScopesStorage>().As<IScopesStorage>().InstancePerLifetimeScope();
+            builder.RegisterType<ScopeBindingStorage>().As<IScopeBindingStorage>().InstancePerLifetimeScope();
         }
 
         private ScopesSelector<SessionsClient> RegisterSessionsClientBalancer(IComponentContext context)
@@ -30,7 +30,7 @@ namespace FillInTheTextBot.Api.DependencyModules
 
             var scopeContexts = GetScopesContexts(configuration);
 
-            var storage = context.Resolve<IScopesStorage>();
+            var storage = context.Resolve<IScopeBindingStorage>();
             var balancer = new ScopesSelector<SessionsClient>(storage, scopeContexts, CreateDialogflowSessionsClient);
             
             return balancer;
@@ -56,7 +56,7 @@ namespace FillInTheTextBot.Api.DependencyModules
 
             var contexts = GetScopesContexts(configuration);
 
-            var storage = context.Resolve<IScopesStorage>();
+            var storage = context.Resolve<IScopeBindingStorage>();
             var balancer = new ScopesSelector<ContextsClient>(storage, contexts, CreateDialogflowContextsClient);
             
             return balancer;
