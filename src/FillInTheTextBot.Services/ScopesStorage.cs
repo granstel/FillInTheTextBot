@@ -1,7 +1,7 @@
 ﻿using System;
 using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
-using GranSteL.ScopesBalancer;
+using GranSteL.Tools.ScopeSelector;
 
 namespace FillInTheTextBot.Services
 {
@@ -10,10 +10,10 @@ namespace FillInTheTextBot.Services
         private readonly IRedisCacheService _cache;
         private readonly TimeSpan _expiration;
 
-        public ScopesStorage(IRedisCacheService cache, TimeSpan expiration)
+        public ScopesStorage(IRedisCacheService cache)
         {
             _cache = cache;
-            _expiration = expiration;
+            _expiration = TimeSpan.FromMinutes(5);
         }
 
         public bool TryGetScopeKey(string invocationKey, out string scopeKey)

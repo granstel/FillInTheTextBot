@@ -8,7 +8,7 @@ using NLog;
 using System.Linq;
 using FillInTheTextBot.Models;
 using GranSteL.Helpers.Redis.Extensions;
-using GranSteL.ScopesBalancer;
+using GranSteL.Tools.ScopeSelector;
 
 namespace FillInTheTextBot.Services
 {
@@ -33,8 +33,8 @@ namespace FillInTheTextBot.Services
         private readonly Logger _log = LogManager.GetLogger(nameof(DialogflowService));
 
         private readonly DialogflowConfiguration _configuration;
-        private readonly ScopesBalancer<SessionsClient> _sessionsClientBalancer;
-        private readonly ScopesBalancer<ContextsClient> _contextsClientBalancer;
+        private readonly ScopesSelector<SessionsClient> _sessionsClientBalancer;
+        private readonly ScopesSelector<ContextsClient> _contextsClientBalancer;
         private readonly IMapper _mapper;
 
         private readonly Dictionary<Source, Func<Request, EventInput>> _eventResolvers;
@@ -42,8 +42,8 @@ namespace FillInTheTextBot.Services
         public DialogflowService(
             IMapper mapper,
             DialogflowConfiguration configuration,
-            ScopesBalancer<SessionsClient> sessionsClientBalancer,
-            ScopesBalancer<ContextsClient> contextsClientBalancer)
+            ScopesSelector<SessionsClient> sessionsClientBalancer,
+            ScopesSelector<ContextsClient> contextsClientBalancer)
         {
             _configuration = configuration;
             _mapper = mapper;

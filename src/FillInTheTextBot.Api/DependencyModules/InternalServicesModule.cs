@@ -2,7 +2,6 @@
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using GranSteL.Helpers.Redis;
-using GranSteL.ScopesBalancer;
 using StackExchange.Redis;
 
 namespace FillInTheTextBot.Api.DependencyModules
@@ -13,7 +12,6 @@ namespace FillInTheTextBot.Api.DependencyModules
         {
             builder.RegisterType<ConversationService>().As<IConversationService>();
             builder.RegisterType<DialogflowService>().As<IDialogflowService>().InstancePerLifetimeScope();
-            builder.RegisterType<ScopesStorage>().As<IScopesStorage>().InstancePerLifetimeScope();
 
             builder.Register(RegisterCacheService).As<IRedisCacheService>().SingleInstance();
         }

@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Autofac;
+using FillInTheTextBot.Services;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using FillInTheTextBot.Services.Configuration;
-using GranSteL.ScopesBalancer;
+using GranSteL.Tools.ScopeSelector;
 using Grpc.Auth;
 using RestSharp;
 using StackExchange.Redis;
@@ -17,19 +18,20 @@ namespace FillInTheTextBot.Api.DependencyModules
         {
             builder.RegisterType<RestClient>().As<IRestClient>();
             
-            builder.Register(RegisterSessionsClientBalancer).As<ScopesBalancer<SessionsClient>>().SingleInstance();
-            builder.Register(RegisterContextsClientBalancer).As<ScopesBalancer<ContextsClient>>().SingleInstance();
+            builder.Register(RegisterSessionsClientBalancer).As<ScopesSelector<SessionsClient>>().SingleInstance();
+            builder.Register(RegisterContextsClientBalancer).As<ScopesSelector<ContextsClient>>().SingleInstance();
             builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
+            builder.RegisterType<ScopesStorage>().As<IScopesStorage>().InstancePerLifetimeScope();
         }
 
-        private ScopesBalancer<SessionsClient> RegisterSessionsClientBalancer(IComponentContext context)
+        private ScopesSelector<SessionsClient> RegisterSessionsClientBalancer(IComponentContext context)
         {
             var configuration = context.Resolve<AppConfiguration>();
 
             var scopeContexts = GetScopesContexts(configuration);
 
             var storage = context.Resolve<IScopesStorage>();
-            var balancer = new ScopesBalancer<SessionsClient>(storage, scopeContexts, CreateDialogflowSessionsClient);
+            var balancer = new ScopesSelector<SessionsClient>(storage, scopeContexts, CreateDialogflowSessionsClient);
             
             return balancer;
         }
@@ -48,14 +50,14 @@ namespace FillInTheTextBot.Api.DependencyModules
             return client;
         }
 
-        private ScopesBalancer<ContextsClient> RegisterContextsClientBalancer(IComponentContext context)
+        private ScopesSelector<ContextsClient> RegisterContextsClientBalancer(IComponentContext context)
         {
             var configuration = context.Resolve<AppConfiguration>();
 
             var contexts = GetScopesContexts(configuration);
 
             var storage = context.Resolve<IScopesStorage>();
-            var balancer = new ScopesBalancer<ContextsClient>(storage, contexts, CreateDialogflowContextsClient);
+            var balancer = new ScopesSelector<ContextsClient>(storage, contexts, CreateDialogflowContextsClient);
             
             return balancer;
         }
