@@ -7,6 +7,7 @@ namespace FillInTheTextBot.Models
     {
         Chat2Desk,
         Telegram,
-        Yandex
+        Yandex,
+        Sber
     }
 }

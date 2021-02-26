@@ -19,13 +19,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messengers", "Messengers", "{ECB31418-3F4F-411C-8AD4-65C342B46B94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Telegram", "FillInTheTextBot.Messengers.Telegram\FillInTheTextBot.Messengers.Telegram.csproj", "{36617591-6C39-4F8A-B413-17B5C63AC31A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Telegram", "FillInTheTextBot.Messengers.Telegram\FillInTheTextBot.Messengers.Telegram.csproj", "{36617591-6C39-4F8A-B413-17B5C63AC31A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Telegram.Tests", "FillInTheTextBot.Messengers.Telegram.Tests\FillInTheTextBot.Messengers.Telegram.Tests.csproj", "{5E2BCDFB-08B1-4405-ACCD-C766B01A3296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Telegram.Tests", "FillInTheTextBot.Messengers.Telegram.Tests\FillInTheTextBot.Messengers.Telegram.Tests.csproj", "{5E2BCDFB-08B1-4405-ACCD-C766B01A3296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Yandex", "FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj", "{83C2D5D6-F6B4-4D19-B72E-B1804D95CFAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Yandex", "FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj", "{83C2D5D6-F6B4-4D19-B72E-B1804D95CFAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Yandex.Tests", "FillInTheTextBot.Messengers.Yandex.Tests\FillInTheTextBot.Messengers.Yandex.Tests.csproj", "{1A4C9866-AE25-4BDA-A27B-230FD5F12222}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Yandex.Tests", "FillInTheTextBot.Messengers.Yandex.Tests\FillInTheTextBot.Messengers.Yandex.Tests.csproj", "{1A4C9866-AE25-4BDA-A27B-230FD5F12222}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Sber", "FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj", "{928C09CB-BF31-4126-987A-E4D7112E0A9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sber.SmartApp.Models", "..\..\Sber.SmartApp.Models\src\Sber.SmartApp.Models\Sber.SmartApp.Models.csproj", "{5BD95C38-D971-46CD-96F5-DF1E3A18B207}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +77,14 @@ Global
 		{1A4C9866-AE25-4BDA-A27B-230FD5F12222}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A4C9866-AE25-4BDA-A27B-230FD5F12222}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A4C9866-AE25-4BDA-A27B-230FD5F12222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BD95C38-D971-46CD-96F5-DF1E3A18B207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD95C38-D971-46CD-96F5-DF1E3A18B207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD95C38-D971-46CD-96F5-DF1E3A18B207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD95C38-D971-46CD-96F5-DF1E3A18B207}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +97,7 @@ Global
 		{5E2BCDFB-08B1-4405-ACCD-C766B01A3296} = {7550458D-AF2F-4233-BF54-49C36113F587}
 		{83C2D5D6-F6B4-4D19-B72E-B1804D95CFAD} = {ECB31418-3F4F-411C-8AD4-65C342B46B94}
 		{1A4C9866-AE25-4BDA-A27B-230FD5F12222} = {7550458D-AF2F-4233-BF54-49C36113F587}
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D} = {ECB31418-3F4F-411C-8AD4-65C342B46B94}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F8B87A9C-C6A0-4ACE-A76D-013674B4D97A}
