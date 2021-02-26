@@ -11,8 +11,8 @@ namespace FillInTheTextBot.Messengers.Sber
         public SberProfile()
         {
             CreateMap<Request, Models.Request>()
-                .ForMember(d => d.ChatHash, m => m.Ignore())
-                .ForMember(d => d.UserHash, m => m.Ignore())
+                .ForMember(d => d.ChatHash, m => m.ResolveUsing(s => s?.Payload?.AppInfo?.ProjectId.ToString()))
+                .ForMember(d => d.UserHash, m => m.ResolveUsing(s => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
                 .ForMember(d => d.Text, m => m.Ignore())
                 .ForMember(d => d.SessionId, m => m.Ignore())
                 .ForMember(d => d.NewSession, m => m.Ignore())
