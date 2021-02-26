@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Threading.Tasks;
+using AutoMapper;
 using FillInTheTextBot.Services;
 using NLog;
 using Sber.SmartApp.Models;
@@ -19,6 +20,15 @@ namespace FillInTheTextBot.Messengers.Sber
             IDialogflowService dialogflowService) : base(conversationService, mapper, dialogflowService)
         {
             _mapper = mapper;
+        }
+
+        protected override async Task<Response> AfterAsync(Request input, Models.Response response)
+        {
+            var output = await base.AfterAsync(input, response);
+
+            _mapper.Map(input, output);
+
+            return output;
         }
     }
 }

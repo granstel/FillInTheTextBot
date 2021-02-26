@@ -52,7 +52,8 @@ namespace FillInTheTextBot.Services
 
             _eventResolvers = new Dictionary<Source, Func<Request, EventInput>>
             {
-                {Source.Yandex, YandexEventResolve},
+                {Source.Yandex, DefaultWelcomeEventResolve},
+                {Source.Sber, DefaultWelcomeEventResolve}
             };
         }
 
@@ -207,7 +208,7 @@ namespace FillInTheTextBot.Services
             };
         }
 
-        private EventInput YandexEventResolve(Request request)
+        private EventInput DefaultWelcomeEventResolve(Request request)
         {
             EventInput result;
 
