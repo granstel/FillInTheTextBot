@@ -15,7 +15,7 @@ namespace FillInTheTextBot.Messengers
         private readonly IMessengerService<TInput, TOutput> _messengerService;
         private readonly MessengerConfiguration _configuration;
         
-        private readonly Logger _log;
+        protected readonly Logger Log;
 
         private const string TokenParameter = "token";
 
@@ -24,7 +24,7 @@ namespace FillInTheTextBot.Messengers
             _messengerService = messengerService;
             _configuration = configuration;
 
-            _log = LogManager.GetLogger(GetType().Name);
+            Log = LogManager.GetLogger(GetType().Name);
         }
 
         public override void OnActionExecuting(ActionExecutingContext context)
