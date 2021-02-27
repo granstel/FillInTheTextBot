@@ -1,3 +1,4 @@
+using System.Linq;
 using AutoMapper;
 using Sber.SmartApp.Models;
 
@@ -36,10 +37,17 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.AutoListening, m => m.MapFrom(s => !s.Finished))
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
                 .ForMember(d => d.Emotion, m => m.UseValue("igrivost"))
+                .ForMember(d => d.Items, m => m.MapFrom(s => s.Buttons.Where(b => b.QuickReply)))
                 ;
 
             CreateMap<string, Emotion>()
                 .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
+
+            CreateMap<Models.Button, Item>()
+                .ForMember(d => d.Bubble, m => m.MapFrom(s => s));
+
+            CreateMap<Models.Button, Bubble>()
+                .ForMember(d => d.Text, m => m.MapFrom(s => s.Text));
 
             CreateMap<Request, Response>()
                 .ForMember(d => d.MessageName, m => m.UseValue("ANSWER_TO_USER"))
