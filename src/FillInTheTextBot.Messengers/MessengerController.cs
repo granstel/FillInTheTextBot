@@ -59,12 +59,7 @@ namespace FillInTheTextBot.Messengers
 
             var response = await _messengerService.ProcessIncomingAsync(input);
 
-            if (SerializerSettings != null)
-            {
-                return new JsonResult(response, SerializerSettings);
-            }
-
-            return Json(response);
+            return Json(response, SerializerSettings);
         }
 
         [HttpPut("{token?}")]
