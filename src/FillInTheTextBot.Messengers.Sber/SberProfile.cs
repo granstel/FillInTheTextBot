@@ -32,9 +32,14 @@ namespace FillInTheTextBot.Messengers.Sber
 
             CreateMap<Models.Response, ResponsePayload>()
                 .ForMember(d => d.PronounceText, m => m.MapFrom(s => s.Text))
+                .ForMember(d => d.PronounceTextType, m => m.UseValue("application/text"))
                 .ForMember(d => d.AutoListening, m => m.MapFrom(s => !s.Finished))
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
+                .ForMember(d => d.Emotion, m => m.UseValue("igrivost"))
                 ;
+
+            CreateMap<string, Emotion>()
+                .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
 
             CreateMap<Request, Response>()
                 .ForMember(d => d.MessageName, m => m.UseValue("ANSWER_TO_USER"))
@@ -46,7 +51,8 @@ namespace FillInTheTextBot.Messengers.Sber
 
             CreateMap<RequestPayload, ResponsePayload>()
                 .ForMember(d => d.Device, m => m.MapFrom(s => s.Device))
-                .ForMember(d => d.ProjectName, m => m.MapFrom(s => s.ProjectName))
+                .ForMember(d => d.ProjectName, m => m.Ignore())
+                .ForMember(d => d.Intent, m => m.Ignore())
                 ;
         }
     }
