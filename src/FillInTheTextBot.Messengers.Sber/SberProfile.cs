@@ -13,7 +13,7 @@ namespace FillInTheTextBot.Messengers.Sber
             CreateMap<Request, Models.Request>()
                 .ForMember(d => d.ChatHash, m => m.ResolveUsing(s => s?.Payload?.AppInfo?.ProjectId.ToString()))
                 .ForMember(d => d.UserHash, m => m.ResolveUsing(s => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
-                .ForMember(d => d.Text, m => m.ResolveUsing(s => s?.Payload?.Message?.AsrNormalizedMessage))
+                .ForMember(d => d.Text, m => m.ResolveUsing(s => s?.Payload?.Message?.OriginalText))
                 .ForMember(d => d.SessionId, m => m.ResolveUsing(s => s?.SessionId))
                 .ForMember(d => d.NewSession, m => m.ResolveUsing(s => s?.Payload?.NewSession))
                 .ForMember(d => d.Language, m => m.Ignore())

@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using FillInTheTextBot.Messengers.Extensions;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
+using FillInTheTextBot.Services.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Newtonsoft.Json;
 using NLog;
 
 namespace FillInTheTextBot.Messengers
@@ -16,6 +19,7 @@ namespace FillInTheTextBot.Messengers
         private readonly MessengerConfiguration _configuration;
         
         protected readonly Logger Log;
+        protected JsonSerializerSettings SerializerSettings;
 
         private const string TokenParameter = "token";
 
@@ -48,7 +52,17 @@ namespace FillInTheTextBot.Messengers
         [HttpPost("{token?}")]
         public virtual async Task<IActionResult> WebHook([FromBody]TInput input, string token)
         {
+            if (!ModelState.IsValid)
+            {
+                Log.Error(ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage)).JoinToString(Environment.NewLine));
+            }
+
             var response = await _messengerService.ProcessIncomingAsync(input);
+
+            if (SerializerSettings != null)
+            {
+                return new JsonResult(response, SerializerSettings);
+            }
 
             return Json(response);
         }
