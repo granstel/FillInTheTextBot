@@ -39,7 +39,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
                 .ForMember(d => d.Emotion, m => m.UseValue("igrivost"))
                 .ForMember(d => d.Items, m => m.MapFrom(s => s.Buttons.Where(b => b.QuickReply)))
-                .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.QuickReply)))
+                .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => !b.QuickReply)))
                 ;
 
             CreateMap<string, Emotion>()
@@ -55,8 +55,22 @@ namespace FillInTheTextBot.Messengers.Sber
             CreateMap<IEnumerable<Models.Button>, Suggestion>().ConvertUsing(MappingFunction);
 
             CreateMap<Models.Button, Button>()
-                .ForMember(d => d.Title, m => m.MapFrom(s => s.Text));
+                .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
+                .ForMember(d => d.Action, m => m.MapFrom(s => s))
+                ;
 
+            CreateMap<Models.Button, Action>()
+                .ForMember(d => d.Text, m => m.MapFrom(s => s.Text))
+                .ForMember(d => d.DeepLink, m => m.MapFrom(s => s.Url))
+                .ForMember(d => d.Type, m => m.ResolveUsing(s =>
+                {
+                    if(!string.IsNullOrEmpty(s.Url))
+                    {
+                        return "deep_link";
+                    }
+
+                    return "text";
+                }));
 
             CreateMap<Request, Response>()
                 .ForMember(d => d.MessageName, m => m.UseValue("ANSWER_TO_USER"))
