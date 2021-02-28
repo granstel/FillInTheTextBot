@@ -38,21 +38,17 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.AutoListening, m => m.MapFrom(s => !s.Finished))
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
                 .ForMember(d => d.Emotion, m => m.UseValue("igrivost"))
-                .ForMember(d => d.Items, m => m.MapFrom(s => s.Buttons.Where(b => b.QuickReply)))
-                .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => !b.QuickReply)))
+                .ForMember(d => d.Items, m => m.MapFrom(s => s))
+                .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.QuickReply)))
                 ;
 
             CreateMap<string, Emotion>()
                 .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
 
-            CreateMap<Models.Button, Item>()
-                .ForMember(d => d.Bubble, m => m.MapFrom(s => s));
+            CreateMap<Models.Response, Item[]>().ConvertUsing(MapResponseToItem);
 
-            CreateMap<Models.Button, Bubble>()
-                .ForMember(d => d.Text, m => m.MapFrom(s => s.Text));
+            CreateMap<IEnumerable<Models.Button>, Suggestion>().ConvertUsing(MapButtonsToSuggestion);
 
-
-            CreateMap<IEnumerable<Models.Button>, Suggestion>().ConvertUsing(MappingFunction);
 
             CreateMap<Models.Button, Button>()
                 .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
@@ -64,7 +60,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.DeepLink, m => m.MapFrom(s => s.Url))
                 .ForMember(d => d.Type, m => m.ResolveUsing(s =>
                 {
-                    if(!string.IsNullOrEmpty(s.Url))
+                    if (!string.IsNullOrEmpty(s.Url))
                     {
                         return "deep_link";
                     }
@@ -87,7 +83,17 @@ namespace FillInTheTextBot.Messengers.Sber
                 ;
         }
 
-        private Suggestion MappingFunction(IEnumerable<Models.Button> source, Suggestion destination, ResolutionContext context)
+        private Item[] MapResponseToItem(Models.Response source, Item[] destinations, ResolutionContext context)
+        {
+            var item = new Item
+            {
+                Bubble = { Text = source.Text }
+            };
+
+            return new[] { item };
+        }
+
+        private Suggestion MapButtonsToSuggestion(IEnumerable<Models.Button> source, Suggestion destination, ResolutionContext context)
         {
             var buttons = context.Mapper.Map<Button[]>(source);
 
