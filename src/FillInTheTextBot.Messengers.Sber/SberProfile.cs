@@ -19,7 +19,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.SessionId, m => m.ResolveUsing(s => s?.SessionId))
                 .ForMember(d => d.NewSession, m => m.ResolveUsing(s => s?.Payload?.NewSession))
                 .ForMember(d => d.Language, m => m.Ignore())
-                .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false))
+                .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => /*s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false*/true))
                 .ForMember(d => d.ClientId, m => m.ResolveUsing(s => s?.Payload?.Device?.Surface))
                 .ForMember(d => d.Source, m => m.UseValue(Models.Source.Sber))
                 .ForMember(d => d.RequiredContext, m => m.Ignore())
@@ -45,7 +45,7 @@ namespace FillInTheTextBot.Messengers.Sber
             CreateMap<string, Emotion>()
                 .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
 
-            CreateMap<Models.Response, Item[]>().ConvertUsing(MapResponseToItem);
+            CreateMap<Models.Response, PayloadItem[]>().ConvertUsing(MapResponseToItem);
 
             CreateMap<IEnumerable<Models.Button>, Suggestion>().ConvertUsing(MapButtonsToSuggestion);
 
@@ -83,12 +83,64 @@ namespace FillInTheTextBot.Messengers.Sber
                 ;
         }
 
-        private Item[] MapResponseToItem(Models.Response source, Item[] destinations, ResolutionContext context)
+        private PayloadItem[] MapResponseToItem(Models.Response source, PayloadItem[] destinations, ResolutionContext context)
         {
-            var item = new Item
+            var item = new PayloadItem
             {
                 Bubble = { Text = source.Text }
             };
+
+            var buttons = source.Buttons.Where(b => !b.QuickReply).ToList();
+
+            var items = buttons.Select(b =>
+            {
+                var cardItem = new CardItem
+                {
+                    Type = "greeting_grid_item",
+                    TopText = new CardItemText
+                    {
+                        Type = "text_cell_view",
+                        Text = b.Text,
+                        Typeface = "caption",
+                        TextColor = "default"
+                    },
+                    BottomText = new CardItemText
+                    {
+                        Type = "text_cell_view",
+                        Text = b.Text,
+                        Typeface = "body3",
+                        TextColor = "default",
+                        MaxLines = 3,
+                        Margins = new Margins
+                        {
+                            Top = "4px"
+                        }
+                    },
+                    Paddings = new Paddings
+                    {
+                        Top = "6px",
+                        Left = "6px",
+                        Right = "6px",
+                        Bottom = "6px"
+                    }
+                };
+
+                var action = context.Mapper.Map<Action>(b);
+
+                cardItem.Actions = new[] { action };
+
+                return cardItem;
+            }).ToArray();
+
+            var card = new Card
+            {
+                Type = "grid_card",
+                Items = items,
+                Columns = 2,
+                ItemWidth = "resizable"
+            };
+
+            item.Card = card;
 
             return new[] { item };
         }
