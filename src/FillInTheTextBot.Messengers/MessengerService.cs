@@ -58,22 +58,26 @@ namespace FillInTheTextBot.Messengers
         {
             try
             {
-                if (request.NewSession == true)
+                if (request.NewSession != true)
                 {
-                    var parameters = new Dictionary<string, string>
-                    {
-                        { nameof(request.UserHash), request.UserHash ?? string.Empty },
-                        { nameof(request.ClientId), request.ClientId ?? string.Empty },
-                        { nameof(request.Source), request.Source.ToString() }
-                    };
-
-                    DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 50000, parameters).Forget();
-
-                    if (request.HasScreen)
-                    {
-                        DialogflowService.SetContextAsync(request.SessionId, "screen", 50000).Forget();
-                    }
+                    return;
                 }
+
+                var parameters = new Dictionary<string, string>
+                {
+                    { nameof(request.UserHash), request.UserHash ?? string.Empty },
+                    { nameof(request.ClientId), request.ClientId ?? string.Empty },
+                    { nameof(request.Source), request.Source.ToString() }
+                };
+
+                DialogflowService.SetContextAsync(request.SessionId, request.Source?.ToString().ToUpper(), 50000, parameters).Forget();
+                DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 50000, parameters).Forget();
+
+                if (request.HasScreen)
+                {
+                    DialogflowService.SetContextAsync(request.SessionId, "screen", 50000).Forget();
+                }
+
             }
             catch (Exception e)
             {

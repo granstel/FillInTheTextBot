@@ -60,25 +60,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             result.ScopeKey = scopeKey;
 
-            if (result.NewSession == true)
-            {
-                SetContexts(input, result);
-            }
-
             return result;
-        }
-
-        private void SetContexts(InputModel input, Models.Request request)
-        {
-            if (input.IsNavigator())
-            {
-                DialogflowService.SetContextAsync(request.SessionId, "navigator", 50000).Forget();
-            }
-
-            if (input.IsCanShowAdvertising())
-            {
-                DialogflowService.SetContextAsync(request.SessionId, "advertising", 50000).Forget();
-            }
         }
 
         protected override Models.Response ProcessCommand(Models.Request request)
@@ -124,8 +106,6 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             _mapper.Map(input, output);
 
-            output.AddToUserState(IsOldUserOldKey, null);//TODO: remove at next release
-
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 
             output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
@@ -133,7 +113,27 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 
+            if (input?.Meta?.Interfaces?.Screen != null)
+            {
+                SetContexts(input);
+            }
+
             return output;
+        }
+
+        private void SetContexts(InputModel input)
+        {
+            var sessionsId = input.Session?.SessionId;
+
+            if (input.IsNavigator())
+            {
+                DialogflowService.SetContextAsync(sessionsId, "navigator", 50000).Forget();
+            }
+
+            if (input.IsCanShowAdvertising())
+            {
+                DialogflowService.SetContextAsync(sessionsId, "advertising", 50000).Forget();
+            }
         }
 
         private InputModel CreateErrorInput()
