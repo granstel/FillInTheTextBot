@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
+using NLog;
 
 namespace FillInTheTextBot.Messengers
 {
@@ -13,32 +15,20 @@ namespace FillInTheTextBot.Messengers
         private readonly IMapper _mapper;
         protected readonly IDialogflowService DialogflowService;
 
+        protected readonly Logger Log;
+
         protected MessengerService(IConversationService conversationService, IMapper mapper, IDialogflowService dialogflowService)
         {
             _conversationService = conversationService;
             _mapper = mapper;
             DialogflowService = dialogflowService;
+
+            Log = LogManager.GetLogger(GetType().Name);
         }
 
         protected virtual Request Before(TInput input)
         {
             var request = _mapper.Map<Request>(input);
-
-            if (request.NewSession == true)
-            {
-                var parameters = new Dictionary<string, string>
-                {
-                    { nameof(request.UserHash), request.UserHash ?? string.Empty },
-                    { nameof(request.ClientId), request.ClientId ?? string.Empty }
-                };
-
-                DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 50000, parameters).Forget();
-
-                if (request.HasScreen)
-                {
-                    DialogflowService.SetContextAsync(request.SessionId, "screen", 50000).Forget();
-                }
-            }
 
             return request;
         }
@@ -55,11 +45,40 @@ namespace FillInTheTextBot.Messengers
                 response = await _conversationService.GetResponseAsync(request);
             }
 
+            TrySetContexts(request);
+
             _mapper.Map(request, response);
 
             var output = await AfterAsync(input, response);
 
             return output;
+        }
+
+        private void TrySetContexts(Request request)
+        {
+            try
+            {
+                if (request.NewSession == true)
+                {
+                    var parameters = new Dictionary<string, string>
+                    {
+                        { nameof(request.UserHash), request.UserHash ?? string.Empty },
+                        { nameof(request.ClientId), request.ClientId ?? string.Empty },
+                        { nameof(request.Source), request.Source.ToString() }
+                    };
+
+                    DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 50000, parameters).Forget();
+
+                    if (request.HasScreen)
+                    {
+                        DialogflowService.SetContextAsync(request.SessionId, "screen", 50000).Forget();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+            }
         }
 
         protected virtual Response ProcessCommand(Request request)
