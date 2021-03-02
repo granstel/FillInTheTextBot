@@ -113,18 +113,18 @@ namespace FillInTheTextBot.Messengers.Sber
                         MaxLines = 3,
                         Margins = new Margins
                         {
-                            Top = "6px",
-                            Left = "6px",
-                            Right = "6px",
-                            Bottom = "6px"
+                            Top = "6x",
+                            Left = "6x",
+                            Right = "6x",
+                            Bottom = "6x"
                         }
                     },
                     Paddings = new Paddings
                     {
-                        Top = "6px",
-                        Left = "6px",
-                        Right = "6px",
-                        Bottom = "6px"
+                        Top = "6x",
+                        Left = "6x",
+                        Right = "6x",
+                        Bottom = "6x"
                     }
                 };
 
