@@ -100,7 +100,7 @@ namespace FillInTheTextBot.Messengers.Sber
                     TopText = new CardItemText
                     {
                         Type = "text_cell_view",
-                        Text = b.Text,
+                        Text = string.Empty,
                         Typeface = "caption",
                         TextColor = "default"
                     },
@@ -113,7 +113,10 @@ namespace FillInTheTextBot.Messengers.Sber
                         MaxLines = 3,
                         Margins = new Margins
                         {
-                            Top = "4px"
+                            Top = "6px",
+                            Left = "6px",
+                            Right = "6px",
+                            Bottom = "6px"
                         }
                     },
                     Paddings = new Paddings
@@ -136,8 +139,8 @@ namespace FillInTheTextBot.Messengers.Sber
             {
                 Type = "grid_card",
                 Items = items,
-                Columns = 2,
-                ItemWidth = "resizable"
+                Columns = 1,
+                ItemWidth = "small"
             };
 
             item.Card = card;
