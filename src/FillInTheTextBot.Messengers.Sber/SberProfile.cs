@@ -92,17 +92,28 @@ namespace FillInTheTextBot.Messengers.Sber
 
             var buttons = source.Buttons.Where(b => !b.QuickReply).ToList();
 
-            var items = buttons.Select(b =>
+            var items = buttons.Select((b, i) =>
             {
+                var topText = $"Текст № {i + 1}";
+
+                if (i == buttons.Count - 1)
+                {
+                    topText = string.Empty;
+                }
+
                 var cardItem = new CardItem
                 {
                     Type = "greeting_grid_item",
                     TopText = new CardItemText
                     {
                         Type = "text_cell_view",
-                        Text = string.Empty,
+                        Text = topText,
                         Typeface = "caption",
-                        TextColor = "default"
+                        TextColor = "default",
+                        Margins = new Margins
+                        {
+                            Top = "2x",
+                        }
                     },
                     BottomText = new CardItemText
                     {
@@ -113,7 +124,7 @@ namespace FillInTheTextBot.Messengers.Sber
                         MaxLines = 2,
                         Margins = new Margins
                         {
-                            Top = "1x",
+                            Top = "4x",
                         }
                     },
                     Paddings = new Paddings
@@ -121,7 +132,7 @@ namespace FillInTheTextBot.Messengers.Sber
                         Top = "0x",
                         Left = "6x",
                         Right = "6x",
-                        Bottom = "16x"
+                        Bottom = "6x"
                     }
                 };
 
