@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
 using NLog;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
+using Request = Yandex.Dialogs.Models.Request;
 
 namespace FillInTheTextBot.Messengers.Yandex
 {
@@ -39,28 +42,35 @@ namespace FillInTheTextBot.Messengers.Yandex
                 input = CreateErrorInput();
             }
 
-            var result = base.Before(input);
+            var request = base.Before(input);
 
-            
+
             if (!input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser))
             {
                 input.TryGetFromUserState(IsOldUserOldKey, out isOldUser);//TODO: remove at next release
             }
 
-            result.IsOldUser = isOldUser;
+            request.IsOldUser = isOldUser;
 
             if (input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex) != true)
             {
                 input.TryGetFromApplicationState(Models.Response.NextTextIndexStorageKey, out nextTextIndex);
             }
 
-            result.NextTextIndex = Convert.ToInt32(nextTextIndex);
+            request.NextTextIndex = Convert.ToInt32(nextTextIndex);
 
             input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
 
-            result.ScopeKey = scopeKey;
+            request.ScopeKey = scopeKey;
 
-            return result;
+            if (request.HasScreen)
+            {
+                var contexts = GetContexts(input);
+
+                request.RequiredContexts.AddRange(contexts);
+            }
+
+            return request;
         }
 
         protected override Models.Response ProcessCommand(Models.Request request)
@@ -113,27 +123,32 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 
-            if (input?.Meta?.Interfaces?.Screen != null)
-            {
-                SetContexts(input);
-            }
-
             return output;
         }
 
-        private void SetContexts(InputModel input)
+        private ICollection<Context> GetContexts(InputModel input)
         {
-            var sessionsId = input.Session?.SessionId;
+            var contexts = new List<Context>();
 
             if (input.IsNavigator())
             {
-                DialogflowService.SetContextAsync(sessionsId, "navigator", 50000).Forget();
+                contexts.Add(new Context
+                {
+                    Name = "navigator",
+                    LifeSpan = 50000
+                });
             }
 
             if (input.IsCanShowAdvertising())
             {
-                DialogflowService.SetContextAsync(sessionsId, "advertising", 50000).Forget();
+                contexts.Add(new Context
+                {
+                    Name = "advertising",
+                    LifeSpan = 50000
+                });
             }
+
+            return contexts;
         }
 
         private InputModel CreateErrorInput()

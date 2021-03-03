@@ -22,8 +22,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => /*s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false*/true))
                 .ForMember(d => d.ClientId, m => m.ResolveUsing(s => s?.Payload?.Device?.Surface))
                 .ForMember(d => d.Source, m => m.UseValue(Models.Source.Sber))
-                .ForMember(d => d.RequiredContext, m => m.Ignore())
-                .ForMember(d => d.ClearContexts, m => m.Ignore())
+                .ForMember(d => d.RequiredContexts, m => m.Ignore())
                 .ForMember(d => d.IsOldUser, m => m.Ignore())
                 .ForMember(d => d.NextTextIndex, m => m.Ignore())
                 .ForMember(d => d.ScopeKey, m => m.Ignore());
@@ -113,7 +112,7 @@ namespace FillInTheTextBot.Messengers.Sber
                         MaxLines = 2,
                         Margins = new Margins
                         {
-                            Top = "1x",
+                            Top = "0x",
                         }
                     },
                     Paddings = new Paddings

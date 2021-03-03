@@ -18,8 +18,7 @@ namespace FillInTheTextBot.Messengers.Telegram
             .ForMember(d => d.Source, m => m.UseValue(Source.Telegram))
             .ForMember(d => d.Language, m => m.Ignore())
             .ForMember(d => d.NewSession, m => m.Ignore())
-            .ForMember(d => d.RequiredContext, m => m.Ignore())
-            .ForMember(d => d.ClearContexts, m => m.Ignore())
+            .ForMember(d => d.RequiredContexts, m => m.Ignore())
             .ForMember(d => d.IsOldUser, m => m.Ignore())
             .ForMember(d => d.NextTextIndex, m => m.Ignore())
             .ForMember(d => d.ScopeKey, m => m.Ignore());

@@ -6,9 +6,9 @@ using Google.Cloud.Dialogflow.V2;
 using FillInTheTextBot.Services.Configuration;
 using NLog;
 using System.Linq;
-using FillInTheTextBot.Models;
 using GranSteL.Helpers.Redis.Extensions;
 using GranSteL.Tools.ScopeSelector;
+using InternalModels = FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Services
 {
@@ -37,7 +37,7 @@ namespace FillInTheTextBot.Services
         private readonly ScopesSelector<ContextsClient> _contextsClientBalancer;
         private readonly IMapper _mapper;
 
-        private readonly Dictionary<Source, Func<Request, EventInput>> _eventResolvers;
+        private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, EventInput>> _eventResolvers;
 
         public DialogflowService(
             IMapper mapper,
@@ -50,16 +50,16 @@ namespace FillInTheTextBot.Services
             _sessionsClientBalancer = sessionsClientBalancer;
             _contextsClientBalancer = contextsClientBalancer;
 
-            _eventResolvers = new Dictionary<Source, Func<Request, EventInput>>
+            _eventResolvers = new Dictionary<InternalModels.Source, Func<InternalModels.Request, EventInput>>
             {
-                {Source.Yandex, DefaultWelcomeEventResolve},
-                {Source.Sber, DefaultWelcomeEventResolve}
+                {InternalModels.Source.Yandex, DefaultWelcomeEventResolve},
+                {InternalModels.Source.Sber, DefaultWelcomeEventResolve}
             };
         }
 
-        public async Task<Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null)
+        public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null)
         {
-            var request = new Request
+            var request = new InternalModels.Request
             {
                 Text = text,
                 SessionId = sessionId,
@@ -68,7 +68,7 @@ namespace FillInTheTextBot.Services
             return await GetResponseAsync(request);
         }
 
-        public async Task<Dialog> GetResponseAsync(Request request)
+        public async Task<InternalModels.Dialog> GetResponseAsync(InternalModels.Request request)
         {
             var dialog = await _sessionsClientBalancer.Invoke(request.SessionId,
                 (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
@@ -76,7 +76,7 @@ namespace FillInTheTextBot.Services
             return dialog;
         }
 
-        public Task DeleteAllContextsAsync(Request request)
+        public Task DeleteAllContextsAsync(InternalModels.Request request)
         {
             return _contextsClientBalancer.Invoke(request.SessionId,
                 (client, context) => DeleteAllContextsInternalAsync(request.SessionId, context.Parameters["ProjectId"], client),
@@ -89,7 +89,7 @@ namespace FillInTheTextBot.Services
                 (client, context) => SetContextInternalAsync(client, sessionId, context.Parameters["ProjectId"], contextName, lifeSpan, parameters));
         }
 
-        private async Task<Dialog> GetResponseInternalAsync(Request request, SessionsClient client, ScopeContext context)
+        private async Task<InternalModels.Dialog> GetResponseInternalAsync(InternalModels.Request request, SessionsClient client, ScopeContext context)
         {
             var intentRequest = CreateQuery(request, context);
 
@@ -103,7 +103,7 @@ namespace FillInTheTextBot.Services
 
             var queryResult = intentResponse.QueryResult;
 
-            var response = _mapper.Map<Dialog>(queryResult);
+            var response = _mapper.Map<InternalModels.Dialog>(queryResult);
 
             response.ScopeKey = context.Parameters["ProjectId"];
 
@@ -121,10 +121,12 @@ namespace FillInTheTextBot.Services
         {
             var session = CreateSession(projectId, sessionId);
 
-            return SetContextAsync(client, projectId, session, contextName, lifeSpan, parameters);
+            var context = GetContext(projectId, session, contextName, lifeSpan, parameters);
+
+            return client.CreateContextAsync(session, context);
         }
 
-        private DetectIntentRequest CreateQuery(Request request, ScopeContext context)
+        private DetectIntentRequest CreateQuery(InternalModels.Request request, ScopeContext context)
         {
             var session = CreateSession(context.Parameters["ProjectId"], request.SessionId);
 
@@ -154,13 +156,19 @@ namespace FillInTheTextBot.Services
             var intentRequest = new DetectIntentRequest
             {
                 SessionAsSessionName = session,
-                QueryInput = query
+                QueryInput = query,
+                QueryParams = new QueryParameters()
             };
+
+            var contexts = request.RequiredContexts.Select(c =>
+                GetContext(context.Parameters["ProjectId"], session, c.Name, c.LifeSpan, c.Parameters)).ToList();
+
+            intentRequest.QueryParams.Contexts.AddRange(contexts);
 
             return intentRequest;
         }
 
-        private EventInput ResolveEvent(Request request)
+        private EventInput ResolveEvent(InternalModels.Request request)
         {
             EventInput result;
 
@@ -208,7 +216,7 @@ namespace FillInTheTextBot.Services
             };
         }
 
-        private EventInput DefaultWelcomeEventResolve(Request request)
+        private EventInput DefaultWelcomeEventResolve(InternalModels.Request request)
         {
             EventInput result;
 
@@ -239,7 +247,7 @@ namespace FillInTheTextBot.Services
             return session;
         }
 
-        private Task SetContextAsync(ContextsClient client, string projectId, SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        private Context GetContext(string projectId, SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             var context = new Context
             {
@@ -262,7 +270,7 @@ namespace FillInTheTextBot.Services
                 }
             }
 
-            return client.CreateContextAsync(sessionName, context);
+            return context;
         }
     }
 }

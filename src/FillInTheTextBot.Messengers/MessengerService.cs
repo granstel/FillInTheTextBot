@@ -70,14 +70,30 @@ namespace FillInTheTextBot.Messengers
                     { nameof(request.Source), request.Source.ToString() }
                 };
 
-                DialogflowService.SetContextAsync(request.SessionId, request.Source?.ToString().ToUpper(), 50000, parameters).Forget();
-                DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 50000, parameters).Forget();
+                request.RequiredContexts.Add(new Context
+                {
+                    Name = request.Source?.ToString().ToUpper(),
+                    LifeSpan = 50000,
+                    Parameters = parameters
+                });
+
+
+                request.RequiredContexts.Add(new Context
+                {
+                    Name = "UserInfo",
+                    LifeSpan = 50000,
+                    Parameters = parameters
+                });
 
                 if (request.HasScreen)
                 {
-                    DialogflowService.SetContextAsync(request.SessionId, "screen", 50000).Forget();
+                    request.RequiredContexts.Add(new Context
+                    {
+                        Name = "screen",
+                        LifeSpan = 50000,
+                        Parameters = parameters
+                    });
                 }
-
             }
             catch (Exception e)
             {

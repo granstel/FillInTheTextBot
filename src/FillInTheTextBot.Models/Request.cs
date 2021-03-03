@@ -1,7 +1,14 @@
+using System.Collections.Generic;
+
 namespace FillInTheTextBot.Models
 {
     public class Request
     {
+        public Request()
+        {
+            RequiredContexts = new List<Context>();
+        }
+
         public static string IsOldUserKey => nameof(IsOldUser).ToUpper();
 
         public Source? Source { get; set; }
@@ -18,9 +25,7 @@ namespace FillInTheTextBot.Models
 
         public bool? NewSession { get; set; }
 
-        public string RequiredContext { get; set; }
-
-        public bool ClearContexts { get; set; }
+        public List<Context> RequiredContexts { get; set; }
 
         public bool IsOldUser { get; set; }
         
