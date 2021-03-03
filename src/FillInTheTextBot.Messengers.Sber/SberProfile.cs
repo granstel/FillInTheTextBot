@@ -106,22 +106,25 @@ namespace FillInTheTextBot.Messengers.Sber
                     },
                     BottomText = new CardItemText
                     {
-                        Type = "left_right_cell_view",
+                        Type = "text_cell_view",
                         Text = b.Text,
-                        Typeface = "button1",
+                        Typeface = "body3",
                         TextColor = "default",
-                        MaxLines = 2,
+                        MaxLines = 3,
                         Margins = new Margins
                         {
-                            Top = "1x",
+                            Top = "6x",
+                            Left = "6x",
+                            Right = "6x",
+                            Bottom = "6x"
                         }
                     },
                     Paddings = new Paddings
                     {
-                        Top = "0x",
+                        Top = "6x",
                         Left = "6x",
                         Right = "6x",
-                        Bottom = "16x"
+                        Bottom = "6x"
                     }
                 };
 
@@ -136,8 +139,8 @@ namespace FillInTheTextBot.Messengers.Sber
             {
                 Type = "grid_card",
                 Items = items,
-                Columns = 2,
-                ItemWidth = "resizable"
+                Columns = 1,
+                ItemWidth = "small"
             };
 
             item.Card = card;
