@@ -30,6 +30,8 @@ namespace FillInTheTextBot.Messengers
         {
             var request = _mapper.Map<Request>(input);
 
+            TrySetContexts(request);
+
             return request;
         }
 
@@ -44,8 +46,6 @@ namespace FillInTheTextBot.Messengers
             {
                 response = await _conversationService.GetResponseAsync(request);
             }
-
-            TrySetContexts(request);
 
             _mapper.Map(request, response);
 
