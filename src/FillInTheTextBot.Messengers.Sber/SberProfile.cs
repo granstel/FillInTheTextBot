@@ -3,7 +3,6 @@ using System.Linq;
 using AutoMapper;
 using FillInTheTextBot.Services.Mapping;
 using Sber.SmartApp.Models;
-using InternalModels = FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Messengers.Sber
 {
@@ -21,7 +20,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.SessionId, m => m.ResolveUsing(s => s?.SessionId))
                 .ForMember(d => d.NewSession, m => m.ResolveUsing(s => s?.Payload?.NewSession))
                 .ForMember(d => d.Language, m => m.Ignore())
-                .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => /*s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false*/true))
+                .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false))
                 .ForMember(d => d.ClientId, m => m.ResolveUsing(s => s?.Payload?.Device?.Surface))
                 .ForMember(d => d.Source, m => m.UseValue(Models.Source.Sber))
                 .ForMember(d => d.RequiredContexts, m => m.Ignore())
@@ -40,7 +39,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
                 .ForMember(d => d.Emotion, m => m.ResolveUsing(s =>
                 {
-                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionsKey[InternalModels.Source.Sber], out string emotionKey);
+                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionsKey[Models.Source.Sber], out string emotionKey);
 
                     return emotionKey;
                 }))
