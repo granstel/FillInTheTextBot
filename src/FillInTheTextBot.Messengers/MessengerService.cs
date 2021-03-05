@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
-using FillInTheTextBot.Services.Extensions;
 using NLog;
 
 namespace FillInTheTextBot.Messengers
