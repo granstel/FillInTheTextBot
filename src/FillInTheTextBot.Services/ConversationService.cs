@@ -11,6 +11,8 @@ namespace FillInTheTextBot.Services
 {
     public class ConversationService : IConversationService
     {
+        private static readonly Random Random = new Random();
+
         private readonly IDialogflowService _dialogflowService;
         private readonly IRedisCacheService _cache;
 
@@ -121,7 +123,7 @@ namespace FillInTheTextBot.Services
         {
             var result = new Dictionary<string, string>();
 
-            foreach (var emotionKey in EmotionsKeysMap.SourceEmotionsKey.Values)
+            foreach (var emotionKey in EmotionsKeysMap.SourceEmotionKeys.Values)
             {
                 var emotion = dialog?.GetParameters(emotionKey).FirstOrDefault();
 
@@ -129,6 +131,24 @@ namespace FillInTheTextBot.Services
                 {
                     result.Add(emotionKey, emotion);
                 }
+            }
+
+            var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
+
+            if (result.Any() || dialog?.ParametersIncomplete == true || string.IsNullOrEmpty(textName))
+            {
+                return result;
+            }
+
+            foreach (var source in EmotionsToStoryMap.SourceEmotions.Keys)
+            {
+                var emotions = EmotionsToStoryMap.SourceEmotions[source];
+
+                var emotion = emotions.OrderBy(x => Random.Next()).FirstOrDefault();
+
+                var emotionKey = EmotionsKeysMap.SourceEmotionKeys[source];
+                
+                result.Add(emotionKey, emotion);
             }
 
             return result;

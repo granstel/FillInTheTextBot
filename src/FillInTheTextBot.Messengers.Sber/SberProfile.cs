@@ -39,7 +39,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
                 .ForMember(d => d.Emotion, m => m.ResolveUsing(s =>
                 {
-                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionsKey[Models.Source.Sber], out string emotionKey);
+                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[Models.Source.Sber], out string emotionKey);
 
                     return emotionKey;
                 }))

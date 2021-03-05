@@ -3,9 +3,15 @@ using FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Services.Mapping
 {
+    /// <summary>
+    /// Map emotion key to request source
+    /// </summary>
     public static class EmotionsKeysMap
     {
-        public static IDictionary<Source, string> SourceEmotionsKey = new Dictionary<Source, string>
+        /// <summary>
+        /// Emotion keys for sources
+        /// </summary>
+        public static IDictionary<Source, string> SourceEmotionKeys = new Dictionary<Source, string>
         {
             { Source.Sber, "sberEmotion" }
         };
