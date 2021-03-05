@@ -30,7 +30,7 @@ namespace FillInTheTextBot.Messengers
         {
             var request = _mapper.Map<Request>(input);
 
-            TrySetContexts(request);
+            SetContexts(request);
 
             return request;
         }
@@ -54,15 +54,10 @@ namespace FillInTheTextBot.Messengers
             return output;
         }
 
-        private void TrySetContexts(Request request)
+        private void SetContexts(Request request)
         {
             try
             {
-                if (request.NewSession != true)
-                {
-                    return;
-                }
-
                 var parameters = new Dictionary<string, string>
                 {
                     { nameof(request.UserHash), request.UserHash ?? string.Empty },
