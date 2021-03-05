@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "af489411-d7da-42d2-9e5f-ec1e9fa23844",
+          "id": "e8cc9377-bc53-4e9b-b6cc-7757af25f497",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "08d1bbe7-295b-44ed-864c-eabbc19f6c16",
+          "id": "3372749d-2c8a-4a96-965f-4ef2c840f562",
           "name": "footwear",
           "required": true,
           "dataType": "@sys.any",
@@ -49,7 +49,7 @@
             },
             {
               "lang": "ru",
-              "value": "Какую обувь носит твой друг"
+              "value": "Как называется обувь, которую носит твой друг"
             }
           ],
           "promptMessages": [],
@@ -58,7 +58,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "82e9ce1d-453b-45f3-b5bf-e26a6ca16f5f",
+          "id": "3dd83e58-84d8-4dc0-9676-2b30052e2db6",
           "name": "adjective",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +77,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d50df1fd-b6cb-412b-a0e5-0c0db0cdd882",
+          "id": "6385eeb6-7b9b-498b-b8f6-3ac4618d803e",
           "name": "hat",
           "required": true,
           "dataType": "@sys.any",
@@ -104,7 +104,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "03d90532-3a17-43ce-ac02-1b753fac2d65",
+          "id": "8ea7fa5c-b33c-4e7b-a4fb-43aa4e75be54",
           "name": "fruits",
           "required": true,
           "dataType": "@sys.any",
@@ -154,7 +154,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Мужики, поздравляю с 23 февраля! Желаю $footwear денег, $hat с удачей, а дорога жизни пусть обходит изгибами горе и разочарования! Девушки пускай висят на шее как $adjective $fruits, и  всегда все будет прекрасно!\nПо-моему, классно получилось, сочиним ещё что-нибудь?"
+            "Мужики, поздравляю с 23 февраля! Желаю $footwear денег, $hat с удачей, а дорога жизни пусть обходит изгибами горе и разочарования! $adjective девушки пускай висят на шее как $fruits, и всегда все будет прекрасно!\nПо-моему, классно получилось, сочиним ещё что-нибудь?"
           ],
           "condition": ""
         }
