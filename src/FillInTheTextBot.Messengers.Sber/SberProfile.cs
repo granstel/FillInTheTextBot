@@ -1,7 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using FillInTheTextBot.Models;
+using FillInTheTextBot.Services.Mapping;
 using Sber.SmartApp.Models;
+using Button = Sber.SmartApp.Models.Button;
+using Request = Sber.SmartApp.Models.Request;
+using Response = Sber.SmartApp.Models.Response;
 
 namespace FillInTheTextBot.Messengers.Sber
 {
@@ -36,7 +41,12 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.PronounceTextType, m => m.UseValue("application/text"))
                 .ForMember(d => d.AutoListening, m => m.MapFrom(s => !s.Finished))
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
-                .ForMember(d => d.Emotion, m => m.UseValue("igrivost"))
+                .ForMember(d => d.Emotion, m => m.ResolveUsing(s =>
+                {
+                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionsKey[Source.Sber], out string emotionKey);
+
+                    return emotionKey;
+                }))
                 .ForMember(d => d.Items, m => m.MapFrom(s => s))
                 .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.QuickReply)))
                 ;

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services.Extensions;
+using FillInTheTextBot.Services.Mapping;
 using GranSteL.Helpers.Redis;
 
 namespace FillInTheTextBot.Services
@@ -67,6 +68,8 @@ namespace FillInTheTextBot.Services
                 _dialogflowService.DeleteAllContextsAsync(request).Forget();
             }
 
+            response.Emotions = GetEmotions(dialog);
+
             response.NextTextIndex = request.NextTextIndex;
 
             return response;
@@ -112,6 +115,23 @@ namespace FillInTheTextBot.Services
             response.ScopeKey = dialog?.ScopeKey;
 
             return response;
+        }
+
+        private IDictionary<string, string> GetEmotions(Dialog dialog)
+        {
+            var result = new Dictionary<string, string>();
+
+            foreach (var emotionKey in EmotionsKeysMap.SourceEmotionsKey.Values)
+            {
+                var emotion = dialog?.GetParameters(emotionKey).FirstOrDefault();
+
+                if (!string.IsNullOrEmpty(emotion))
+                {
+                    result.Add(emotionKey, emotion);
+                }
+            }
+
+            return result;
         }
     }
 }

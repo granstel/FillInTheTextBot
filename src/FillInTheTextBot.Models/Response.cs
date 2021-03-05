@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace FillInTheTextBot.Models
 {
     public class Response
@@ -20,5 +22,7 @@ namespace FillInTheTextBot.Models
         public int NextTextIndex { get; set; }
 
         public string ScopeKey { get; set; }
+        
+        public IDictionary<string, string> Emotions { get; set; }
     }
 }
