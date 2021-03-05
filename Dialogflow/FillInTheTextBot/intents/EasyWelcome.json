@@ -13,7 +13,22 @@
           "lifespan": 2
         }
       ],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "ed4833f2-b7e0-4a6d-bcbc-5af8906255d9",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "radost",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "2",

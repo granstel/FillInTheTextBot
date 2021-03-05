@@ -8,7 +8,22 @@
       "resetContexts": false,
       "action": "",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "3f18d3b6-21e7-4523-a6c2-47b360ec3930",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "zhdu_otvet",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "1",

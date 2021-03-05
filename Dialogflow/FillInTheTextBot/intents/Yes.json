@@ -8,7 +8,22 @@
       "resetContexts": false,
       "action": "GetText",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "3f216e74-ed9f-42cf-aeb7-7fcfd0f9967e",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "igrivost",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "0",

@@ -8,7 +8,22 @@
       "resetContexts": false,
       "action": "",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "b4111e9c-868b-4b7c-ae99-cc50967af27a",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "nedoumenie",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "0",

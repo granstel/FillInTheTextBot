@@ -8,7 +8,22 @@
       "resetContexts": false,
       "action": "",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "35310d34-38d1-4fa0-99c7-0161eba547b9",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "bespokoistvo",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "1",

@@ -8,7 +8,22 @@
       "resetContexts": false,
       "action": "input.welcome",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "c4659a51-1ad3-4f6b-b507-f7cbac73660a",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "predvkusheniye",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "2",
