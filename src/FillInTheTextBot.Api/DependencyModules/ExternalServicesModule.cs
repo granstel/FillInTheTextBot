@@ -1,11 +1,11 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Autofac;
+using FillInTheTextBot.Services;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using FillInTheTextBot.Services.Configuration;
-using GranSteL.DialogflowBalancer;
-using GranSteL.Helpers.Redis;
+using GranSteL.Tools.ScopeSelector;
 using Grpc.Auth;
 using RestSharp;
 using StackExchange.Redis;
@@ -18,33 +18,27 @@ namespace FillInTheTextBot.Api.DependencyModules
         {
             builder.RegisterType<RestClient>().As<IRestClient>();
             
-            builder.Register(RegisterDialogflowBalancer).As<DialogflowClientsBalancer>().SingleInstance();
+            builder.Register(RegisterSessionsClientBalancer).As<ScopesSelector<SessionsClient>>().SingleInstance();
+            builder.Register(RegisterContextsClientBalancer).As<ScopesSelector<ContextsClient>>().SingleInstance();
             builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
+            builder.RegisterType<ScopeBindingStorage>().As<IScopeBindingStorage>().InstancePerLifetimeScope();
         }
 
-        private DialogflowClientsBalancer RegisterDialogflowBalancer(IComponentContext context)
+        private ScopesSelector<SessionsClient> RegisterSessionsClientBalancer(IComponentContext context)
         {
             var configuration = context.Resolve<AppConfiguration>();
 
-            var clientsConfigurations = configuration.DialogflowInstances
-                .Select(i => new DialogflowClientsConfiguration(i.ProjectId, i.JsonPath))
-                .ToList();
+            var scopeContexts = GetScopesContexts(configuration);
 
-            var balancerConfiguration = new DialogflowBalancerConfiguration
-            {
-                ScopeExpiration = TimeSpan.FromMinutes(5),
-                ClientsConfigurations = clientsConfigurations
-            };
-
-            var cache = context.Resolve<IRedisCacheService>();
-            var balancer = new DialogflowClientsBalancer(cache, balancerConfiguration, RegisterDialogflowSessionsClient, RegisterDialogflowContextsClient);
+            var storage = context.Resolve<IScopeBindingStorage>();
+            var balancer = new ScopesSelector<SessionsClient>(storage, scopeContexts, CreateDialogflowSessionsClient);
             
             return balancer;
         }
 
-        private SessionsClient RegisterDialogflowSessionsClient(DialogflowContext context)
+        private SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
         {
-            var credential = GoogleCredential.FromFile(context.JsonPath).CreateScoped(SessionsClient.DefaultScopes);
+            var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(SessionsClient.DefaultScopes);
 
             var clientBuilder = new SessionsClientBuilder
             {
@@ -56,9 +50,21 @@ namespace FillInTheTextBot.Api.DependencyModules
             return client;
         }
 
-        private ContextsClient RegisterDialogflowContextsClient(DialogflowContext context)
+        private ScopesSelector<ContextsClient> RegisterContextsClientBalancer(IComponentContext context)
         {
-            var credential = GoogleCredential.FromFile(context.JsonPath).CreateScoped(ContextsClient.DefaultScopes);
+            var configuration = context.Resolve<AppConfiguration>();
+
+            var contexts = GetScopesContexts(configuration);
+
+            var storage = context.Resolve<IScopeBindingStorage>();
+            var balancer = new ScopesSelector<ContextsClient>(storage, contexts, CreateDialogflowContextsClient);
+            
+            return balancer;
+        }
+        
+        private ContextsClient CreateDialogflowContextsClient(ScopeContext context)
+        {
+            var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(ContextsClient.DefaultScopes);
 
             var clientBuilder = new ContextsClientBuilder
             {
@@ -68,6 +74,23 @@ namespace FillInTheTextBot.Api.DependencyModules
             var client = clientBuilder.Build();
 
             return client;
+        }
+
+        private ICollection<ScopeContext> GetScopesContexts(AppConfiguration configuration)
+        {
+            var scopeContexts = configuration.DialogflowInstances
+                .Select(i =>
+                {
+                    var context = new ScopeContext(i.ProjectId);
+                    
+                    context.Parameters.Add("ProjectId", i.ProjectId);
+                    context.Parameters.Add("JsonPath", i.JsonPath);
+
+                    return context;
+                })
+                .ToList();
+
+            return scopeContexts;
         }
 
         private IDatabase RegisterRedisClient(IComponentContext context)

@@ -1,37 +1,26 @@
 {
-  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
-  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - yes",
+  "id": "0ecc6a94-51e0-45a1-9ac5-930369f894be",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "24-February 23",
   "auto": true,
-  "contexts": [
-    "EasyWelcome-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-24",
+          "lifespan": 5
+        }
+      ],
       "parameters": [
         {
-          "id": "7c13aa18-9357-41b8-8573-c9e90df895f2",
+          "id": "695925c9-fbbe-4e9a-b357-ef1bde508cb6",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "83fddcb8-cd41-473c-9860-7181e9ab28ae",
-          "name": "resetTextIndex",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "false",
+          "value": "text-24",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -48,9 +37,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Давай сделаем",
+            "Давай сочиним"
           ],
           "condition": ""
         }
