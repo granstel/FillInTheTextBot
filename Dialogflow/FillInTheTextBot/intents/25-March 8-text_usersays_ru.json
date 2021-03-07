@@ -1,0 +1,122 @@
+[
+  {
+    "id": "a28c6a57-a485-4dfb-9ee7-2a0a462cd5da",
+    "data": [
+      {
+        "text": "топинг",
+        "meta": "@sys.any",
+        "alias": "sweet-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1d4b6eae-1d5e-4344-8863-8efc78185eec",
+    "data": [
+      {
+        "text": "сливки",
+        "meta": "@sys.any",
+        "alias": "sweet-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "45a9932f-ac2c-487f-9b05-7d84b331b191",
+    "data": [
+      {
+        "text": "крем",
+        "meta": "@sys.any",
+        "alias": "sweet-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d19a6c37-fbdf-42be-8b46-73778d2d9c2a",
+    "data": [
+      {
+        "text": "бисквит",
+        "meta": "@sys.any",
+        "alias": "sweet-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0ea97fcc-8e28-40df-b0a7-c9d5735796cd",
+    "data": [
+      {
+        "text": "безе",
+        "meta": "@sys.any",
+        "alias": "sweet-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0a5d2620-96ed-4548-890c-e40540f5c4f3",
+    "data": [
+      {
+        "text": "фрукты",
+        "meta": "@sys.any",
+        "alias": "sweet-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4505b4cc-69d9-4d6d-a5dc-28345eed13c9",
+    "data": [
+      {
+        "text": "конфеты",
+        "meta": "@sys.any",
+        "alias": "sweet-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8ac7425b-ea58-441c-8d00-dadf6cf1b206",
+    "data": [
+      {
+        "text": "шоколад",
+        "meta": "@sys.any",
+        "alias": "sweet-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
