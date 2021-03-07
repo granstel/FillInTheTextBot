@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "4a11029a-0273-4341-aa40-1943a3a07a4d",
+          "id": "69c8f7bf-f0d0-4a75-b1c1-59d25bbe828b",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "f72281fa-67a5-468e-9610-f2312757ba4e",
+          "id": "fef2fb62-33e1-4790-adad-2f8995d5fd87",
           "name": "sweet-1",
           "required": true,
           "dataType": "@sys.any",
@@ -50,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "60961ea9-9491-49d4-9517-50d3396b9a42",
+          "id": "4c9e8160-b2b7-42b9-a201-e41bda4b82d8",
           "name": "sweet-2",
           "required": true,
           "dataType": "@sys.any",
@@ -69,7 +69,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0bb7fd12-8f55-4cd8-82ed-693034357d37",
+          "id": "cf83ec40-e5f6-4b63-bd5a-755f42a77afd",
           "name": "sweet-3",
           "required": true,
           "dataType": "@sys.any",
@@ -92,7 +92,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "69d9cec0-3ac9-4f69-96da-77ead872afff",
+          "id": "0d99005e-e756-4fdb-8249-a99937b6bb5c",
           "name": "sweet-4",
           "required": true,
           "dataType": "@sys.any",
@@ -134,7 +134,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Вот какое поздравление получилось: Все женщины в мире — это один большой торт, в котором есть $sweet-1, $sweet-2, $sweet-3, $sweet-4, и многое другое на разный вкус и цвет. Кто-то любит $sweet-2, но не нравится $sweet-1, кто-то не выносит $sweet-4, но обожает $sweet-3. А ты - вишенка на этом торте, и тебя любят все! С 8 Марта!\nПо-моему, любая девушка будет довольна! Давай сочиним ещё что-нибудь?"
+            "Вот какое поздравление получилось: Все женщины в мире — это один большой торт, в котором есть $sweet-1, $sweet-2, $sweet-3, $sweet-4, и многое другое на разный вкус и цвет. Кто-то любит $sweet-2, но ненавидит $sweet-1, кто-то не выносит $sweet-4, но обожает $sweet-3. А ты - вишенка на этом торте, и тебя любят все! С 8 Марта!\nПо-моему, любая девушка будет довольна! Давай сочиним ещё что-нибудь?"
           ],
           "condition": ""
         }
