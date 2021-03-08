@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using GranSteL.Helpers.Redis;
 using NLog;
-using Request = Sber.SmartApp.Models.Request;
-using Response = Sber.SmartApp.Models.Response;
+using Sber.SmartApp.Models;
 
 namespace FillInTheTextBot.Messengers.Sber
 {
@@ -67,9 +65,9 @@ namespace FillInTheTextBot.Messengers.Sber
             return output;
         }
 
-        private IEnumerable<Context> GetContexts(Request input)
+        private IEnumerable<Models.Context> GetContexts(Request input)
         {
-            var context = new Context
+            var context = new Models.Context
             {
                 Name = input.Payload.Character.Id,
                 LifeSpan = 50000
