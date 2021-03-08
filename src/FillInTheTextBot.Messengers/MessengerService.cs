@@ -60,21 +60,12 @@ namespace FillInTheTextBot.Messengers
                 var parameters = new Dictionary<string, string>
                 {
                     { nameof(request.UserHash), request.UserHash ?? string.Empty },
-                    { nameof(request.ClientId), request.ClientId ?? string.Empty },
-                    { nameof(request.Source), request.Source.ToString() }
+                    { nameof(request.ClientId), request.ClientId ?? string.Empty }
                 };
 
                 request.RequiredContexts.Add(new Context
                 {
-                    Name = request.Source?.ToString().ToUpper(),
-                    LifeSpan = 50000,
-                    Parameters = parameters
-                });
-
-
-                request.RequiredContexts.Add(new Context
-                {
-                    Name = "UserInfo",
+                    Name = request.Source?.ToString(),
                     LifeSpan = 50000,
                     Parameters = parameters
                 });
@@ -84,8 +75,7 @@ namespace FillInTheTextBot.Messengers
                     request.RequiredContexts.Add(new Context
                     {
                         Name = "screen",
-                        LifeSpan = 50000,
-                        Parameters = parameters
+                        LifeSpan = 50000
                     });
                 }
             }

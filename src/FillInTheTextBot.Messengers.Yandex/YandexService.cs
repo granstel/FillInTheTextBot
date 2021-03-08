@@ -45,10 +45,7 @@ namespace FillInTheTextBot.Messengers.Yandex
             var request = base.Before(input);
 
 
-            if (!input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser))
-            {
-                input.TryGetFromUserState(IsOldUserOldKey, out isOldUser);//TODO: remove at next release
-            }
+            input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
 
             request.IsOldUser = isOldUser;
 
@@ -63,7 +60,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             request.ScopeKey = scopeKey;
 
-            if (request.HasScreen)
+            if (request.NewSession == true)
             {
                 var contexts = GetContexts(input);
 
