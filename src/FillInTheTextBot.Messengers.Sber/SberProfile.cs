@@ -3,6 +3,7 @@ using System.Linq;
 using AutoMapper;
 using FillInTheTextBot.Services.Mapping;
 using Sber.SmartApp.Models;
+using Sber.SmartApp.Models.Constants;
 
 namespace FillInTheTextBot.Messengers.Sber
 {
@@ -67,10 +68,10 @@ namespace FillInTheTextBot.Messengers.Sber
                 {
                     if (!string.IsNullOrEmpty(s.Url))
                     {
-                        return "deep_link";
+                        return ActionTypes.DeepLink;
                     }
 
-                    return "text";
+                    return ActionTypes.Text;
                 }));
 
             CreateMap<Request, Response>()
