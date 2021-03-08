@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
 using NLog;
 using Sber.SmartApp.Models;
@@ -40,10 +41,27 @@ namespace FillInTheTextBot.Messengers.Sber
             request.NextTextIndex = Convert.ToInt32(userState?.NextTextIndex ?? 0);
 
             var contexts = GetContexts(input);
-
             request.RequiredContexts.AddRange(contexts);
 
+            request.SessionId = TryGetSessionIdAsync(request.NewSession, request.UserHash);
+
             return request;
+        }
+
+        private string TryGetSessionIdAsync(bool? newSession, string userHash)
+        {
+            var cacheKey = GetSessionCacheKey(userHash);
+
+            _cache.TryGet(cacheKey, out string sessionId);
+
+            if (newSession == true || string.IsNullOrEmpty(sessionId))
+            {
+                sessionId = Guid.NewGuid().ToString("N");
+
+                _cache.AddAsync(cacheKey, sessionId, TimeSpan.FromMinutes(5)).Forget();
+            }
+
+            return sessionId;
         }
 
         protected override async Task<Response> AfterAsync(Request input, Models.Response response)
@@ -60,7 +78,7 @@ namespace FillInTheTextBot.Messengers.Sber
 
             var userStateCacheKey = GetCacheKey(response.UserHash);
 
-            await _cache.TryAddAsync(userStateCacheKey, userState);
+            await _cache.TryAddAsync(userStateCacheKey, userState, TimeSpan.FromDays(14));
 
             return output;
         }
@@ -79,6 +97,11 @@ namespace FillInTheTextBot.Messengers.Sber
         private string GetCacheKey(string key)
         {
             return $"sber:{key}";
+        }
+
+        private string GetSessionCacheKey(string key)
+        {
+            return $"sber:session:{key}";
         }
     }
 }

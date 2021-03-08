@@ -17,7 +17,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.ChatHash, m => m.ResolveUsing(s => s?.Payload?.AppInfo?.ProjectId.ToString()))
                 .ForMember(d => d.UserHash, m => m.ResolveUsing(s => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
                 .ForMember(d => d.Text, m => m.ResolveUsing(s => s?.Payload?.Message?.OriginalText))
-                .ForMember(d => d.SessionId, m => m.ResolveUsing(s => s?.SessionId))
+                .ForMember(d => d.SessionId, m => m.Ignore())
                 .ForMember(d => d.NewSession, m => m.ResolveUsing(s => s?.Payload?.NewSession))
                 .ForMember(d => d.Language, m => m.Ignore())
                 .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false))
@@ -95,9 +95,9 @@ namespace FillInTheTextBot.Messengers.Sber
                 Bubble = { Text = source.Text }
             };
 
-            var buttons = source.Buttons.Where(b => !b.QuickReply).ToList();
+            var buttons = source.Buttons?.Where(b => !b.QuickReply).ToList();
 
-            var items = buttons.Select(b =>
+            var items = buttons?.Select(b =>
             {
                 var cardItem = new CardItem
                 {
