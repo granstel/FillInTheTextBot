@@ -6,8 +6,6 @@ namespace FillInTheTextBot.Services.Extensions
 {
     public static class TasksExtensions
     {
-        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
-
         /// <summary>
         /// Fire-and-forget
         /// Позволяет не дожидаться завершения задачи.
@@ -24,7 +22,9 @@ namespace FillInTheTextBot.Services.Extensions
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e, "Error while executing the task");
+                    var log = LogManager.GetCurrentClassLogger();
+
+                    log.Error(e, "Error while executing the task");
                 }
             }).ConfigureAwait(false);
         }
