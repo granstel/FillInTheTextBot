@@ -85,13 +85,21 @@ namespace FillInTheTextBot.Messengers.Sber
 
         private IEnumerable<Models.Context> GetContexts(Request input)
         {
-            var context = new Models.Context
-            {
-                Name = input.Payload.Character.Id,
-                LifeSpan = 50000
-            };
+            var contexts = new List<Models.Context>();
 
-            return new[] { context };
+            contexts.Add(new Models.Context
+            {
+                Name = input.Payload?.Character?.Id,
+                LifeSpan = 50000
+            });
+
+            contexts.Add(new Models.Context
+            {
+                Name = input.Payload?.Character?.Appeal,
+                LifeSpan = 50000
+            });
+
+            return contexts;
         }
 
         private string GetCacheKey(string key)
