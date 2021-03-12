@@ -1,5 +1,6 @@
 {
   "id": "bbcffcfd-28d0-4a40-b14d-0cb960433ca9",
+  "parentId": "bc0373b1-2dcb-4936-8d9c-b1ad3cbff961",
   "name": "News-official",
   "auto": true,
   "contexts": [
