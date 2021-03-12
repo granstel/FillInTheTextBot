@@ -1,20 +1,27 @@
 {
-  "id": "6e8b484d-6fbf-4f7e-9e45-88f583389453",
-  "name": "Exit",
+  "id": "90161c20-edd5-467e-b2be-380f18966273",
+  "name": "EasyWelcome-official",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "official"
+  ],
   "responses": [
     {
       "resetContexts": false,
       "action": "",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "EasyWelcome-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "f0a4bb67-a5f4-4901-a4c7-ab30cebd9483",
+          "id": "17efecc3-ceff-4c18-b564-df711e517a5d",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
-          "value": "zhdu_otvet",
+          "value": "radost",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -26,14 +33,22 @@
       ],
       "messages": [
         {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Конечно!",
+            "Список историй"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "1",
           "platform": "telegram",
           "title": "кнопки",
           "buttons": [
-            {
-              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-              "text": "Поставить оценку"
-            },
             {
               "postback": "https://vk.com/fillinthetextbot",
               "text": "Подписаться на новости"
@@ -49,9 +64,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Окей, возвращайся, буду ждать!",
-            "Если что, я всегда здесь, возвращайся!",
-            "Приходи ещё, я буду здесь!"
+            "Настало время занимательных историй! Продолжим?",
+            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
+            "И вот пришло время занимательных историй! Давайте сочиним что-нибудь?"
           ],
           "condition": ""
         }
@@ -63,7 +78,11 @@
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
-  "events": [],
+  "events": [
+    {
+      "name": "EasyWelcome"
+    }
+  ],
   "conditionalResponses": [],
   "condition": "",
   "conditionalFollowupEvents": []

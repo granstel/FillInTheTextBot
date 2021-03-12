@@ -1,8 +1,10 @@
 {
-  "id": "6e8b484d-6fbf-4f7e-9e45-88f583389453",
-  "name": "Exit",
+  "id": "3b052180-4d98-4e4b-9134-5ac578514dd2",
+  "name": "Exit-official",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "official"
+  ],
   "responses": [
     {
       "resetContexts": false,
@@ -10,7 +12,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "f0a4bb67-a5f4-4901-a4c7-ab30cebd9483",
+          "id": "283a4862-7b00-4a22-af9f-fa337f8056d0",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -49,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Окей, возвращайся, буду ждать!",
-            "Если что, я всегда здесь, возвращайся!",
-            "Приходи ещё, я буду здесь!"
+            "Хорошо, возвращайтесь, буду ждать!",
+            "Если что, я всегда здесь, возвращайтесь!",
+            "Приходите ещё, я буду здесь!"
           ],
           "condition": ""
         }
