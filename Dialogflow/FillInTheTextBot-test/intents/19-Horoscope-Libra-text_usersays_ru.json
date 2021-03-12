@@ -1,0 +1,437 @@
+[
+  {
+    "id": "f42b360e-9003-4c0d-a761-4b751f3be3ca",
+    "data": [
+      {
+        "text": "кабачковая икра",
+        "meta": "@sys.any",
+        "alias": "eat",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "89b1b113-2a20-48cf-b731-c846efae621d",
+    "data": [
+      {
+        "text": "каша",
+        "meta": "@sys.any",
+        "alias": "eat",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4b8ce655-1c76-4d67-a479-c9da360561e9",
+    "data": [
+      {
+        "text": "бычьи хвосты",
+        "meta": "@sys.any",
+        "alias": "eat",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "af886409-ab16-4560-9215-213b32641796",
+    "data": [
+      {
+        "text": "чебурек",
+        "meta": "@sys.any",
+        "alias": "vegetable",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a68d1e5f-fc2c-4977-9ed1-d8876106fb53",
+    "data": [
+      {
+        "text": "помидорч",
+        "meta": "@sys.any",
+        "alias": "vegetable",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "62829140-1c91-49b2-a5c6-61919151a116",
+    "data": [
+      {
+        "text": "арбуз",
+        "meta": "@sys.any",
+        "alias": "vegetable",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dc21546c-c624-4a73-b2ac-866ea4b35a78",
+    "data": [
+      {
+        "text": "гнилой",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2b008274-5c03-447e-8098-5111a4969d32",
+    "data": [
+      {
+        "text": "бухой",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "61bed1f2-03d1-4920-938a-913a00b2d097",
+    "data": [
+      {
+        "text": "сопливый",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "14439e5c-73b3-4c30-98b9-31c0a5c65ea5",
+    "data": [
+      {
+        "text": "стол",
+        "meta": "@sys.any",
+        "alias": "device",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f2872e3c-48cf-44e7-928f-285e0e02f292",
+    "data": [
+      {
+        "text": "посудомойка",
+        "meta": "@sys.any",
+        "alias": "device",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3f8ed519-185f-44e2-9409-4e5d1524562c",
+    "data": [
+      {
+        "text": "посудомоечная машина",
+        "meta": "@sys.any",
+        "alias": "device",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "05242764-1d66-431e-b983-c32e3400b635",
+    "data": [
+      {
+        "text": "взбесившийся холодильник",
+        "meta": "@sys.any",
+        "alias": "device",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0e7e6230-9bf1-44ab-a03d-e7f8f7c851b2",
+    "data": [
+      {
+        "text": "электроплита",
+        "meta": "@sys.any",
+        "alias": "device",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0a0514c4-ad56-474f-97b2-ffe9ce9b026a",
+    "data": [
+      {
+        "text": "телевизор",
+        "meta": "@sys.any",
+        "alias": "device",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "12217e8e-07f8-49a8-949d-8f9c1eb0be7d",
+    "data": [
+      {
+        "text": "холодильник",
+        "meta": "@sys.any",
+        "alias": "device",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "13eef4f6-786a-462d-ab1a-784ff37dbfb7",
+    "data": [
+      {
+        "text": "плита",
+        "meta": "@sys.any",
+        "alias": "device",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "95be0e27-ca90-422e-b053-89cc631911d7",
+    "data": [
+      {
+        "text": "в декабре",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a0a7daaf-c698-43f7-a013-c35ef13a5dbc",
+    "data": [
+      {
+        "text": "ноябре",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8f773a81-9867-4bea-9ae0-442ee73ed126",
+    "data": [
+      {
+        "text": "октябре",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3c0ba2bf-f7d0-4da2-a351-cf6d00d28b98",
+    "data": [
+      {
+        "text": "в сентябре",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8e71459d-ac0d-46e4-811f-0298a45aabb5",
+    "data": [
+      {
+        "text": "в августе",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3b793eea-75f5-4d4b-b299-d0d1cbf25d52",
+    "data": [
+      {
+        "text": "июле",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3364ff81-4760-412e-ac07-ec020f74e6df",
+    "data": [
+      {
+        "text": "июне",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "565599ef-1327-4a0d-8aad-7660a000e99e",
+    "data": [
+      {
+        "text": "мае",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e59db2cf-de2d-41a1-b0aa-6a7e5a03285b",
+    "data": [
+      {
+        "text": "в апреле",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f5974328-8a57-4caf-a2cd-69065a3af7ac",
+    "data": [
+      {
+        "text": "в марте",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2b3923de-06aa-4e6c-bc6b-5e42faed94e5",
+    "data": [
+      {
+        "text": "в феврале",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e11c42ab-a87c-4526-b346-b469d9b229b4",
+    "data": [
+      {
+        "text": "в январе",
+        "meta": "@sys.any",
+        "alias": "month",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

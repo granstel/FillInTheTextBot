@@ -1,0 +1,157 @@
+{
+  "id": "bba58550-2675-4297-ac15-6205fb6fe77e",
+  "parentId": "96b316a9-f93f-4413-b309-59f1f24b3556",
+  "name": "25-March 8-text",
+  "auto": true,
+  "contexts": [
+    "text-25"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "69c8f7bf-f0d0-4a75-b1c1-59d25bbe828b",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "поздравление с 8 марта.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "fef2fb62-33e1-4790-adad-2f8995d5fd87",
+          "name": "sweet-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$sweet-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, какую сладость ты любишь"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, какие сладости тебе нравятся"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "4c9e8160-b2b7-42b9-a201-e41bda4b82d8",
+          "name": "sweet-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$sweet-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "А какие сладости предпочитает твоя подруга?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cf83ec40-e5f6-4b63-bd5a-755f42a77afd",
+          "name": "sweet-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$sweet-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Напомни пожалуйста, как называется крем из взбитых яичных белков и сахара, из которого иногда делают тортики или пирожные?"
+            },
+            {
+              "lang": "ru",
+              "value": "Как думаешь, как называется крем из взбитых яичных белков и сахара?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0d99005e-e756-4fdb-8249-a99937b6bb5c",
+          "name": "sweet-4",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$sweet-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - чем поливают мороженое, чтобы оно стало ещё вкуснее?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее - что можно добавить в мороженое, чтобы оно стало ещё вкуснее?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори ещё раз",
+            "Давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот какое поздравление получилось: Все женщины в мире — это один большой торт, в котором есть $sweet-1, $sweet-2, $sweet-3, $sweet-4, и многое другое на разный вкус и цвет. Кто-то любит $sweet-2, но ненавидит $sweet-1, кто-то не выносит $sweet-4, но обожает $sweet-3. А ты - вишенка на этом торте, и тебя любят все! С 8 Марта!\nПо-моему, любая девушка будет довольна! Давай сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-25"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

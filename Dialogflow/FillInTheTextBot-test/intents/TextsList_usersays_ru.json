@@ -1,5 +1,44 @@
 [
   {
+    "id": "c00c0984-af11-4966-912e-f73638b9942a",
+    "data": [
+      {
+        "text": "покажи какие ты истории можешь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f9d96664-64f2-47be-a5b9-484ec7884b6e",
+    "data": [
+      {
+        "text": "покажи список историй",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b765d09e-bf1b-4e90-93da-78870f6313a4",
+    "data": [
+      {
+        "text": "список историй",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "d3010a9f-dcce-4077-b37e-8efd5c94f97d",
     "data": [
       {

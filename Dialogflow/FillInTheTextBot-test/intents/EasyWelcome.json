@@ -13,7 +13,22 @@
           "lifespan": 2
         }
       ],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "947c854e-5c01-457d-86a8-1b220d88f7d5",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "radost",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "2",
@@ -28,14 +43,28 @@
           "condition": ""
         },
         {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Подписаться на новости"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Привет! Если хочешь, напомню список историй, только скажи. Хочешь сочинить новую историю?",
-            "Привет! Если понадобится список историй, так и скажи. Давай сочиним кое-что новое?",
-            "Привет! Могу подсказать список историй, только скажи. У меня есть кое-что новенькое, давай начнём с него?"
+            "Настало время занимательных историй! Продолжим?",
+            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
+            "И вот пришло время занимательных историй! Давай сочиним что-нибудь?"
           ],
           "condition": ""
         }

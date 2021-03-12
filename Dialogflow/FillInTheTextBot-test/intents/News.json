@@ -1,0 +1,53 @@
+{
+  "id": "bc0373b1-2dcb-4936-8d9c-b1ad3cbff961",
+  "name": "News",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Подписаться на новости"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Если хочешь подписаться на новости игры, найти во \"Вконтакте\" группу \"Занимательные истории Алисы из Яндекса\". Продолжим?",
+            "Можно подписаться на новости игры во \"Вконтакте\", в группе \"Занимательные истории Алисы из Яндекса\". Пойдём дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "telegram": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

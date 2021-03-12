@@ -1,5 +1,6 @@
 {
   "id": "b74cc53d-2d5d-471d-9fbb-a05b13a1f3fe",
+  "parentId": "ad1b27be-e514-43e2-b957-5ca8457a9549",
   "name": "15-Horoscope-Devs-text",
   "auto": true,
   "contexts": [
@@ -12,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "fb1cdc2a-0a3a-49ac-b3a1-0d9c9ae7520f",
+          "id": "a10b18fd-c666-40a5-9dd9-9bfce713caee",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -26,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "394aecd7-e502-4d7a-a11a-721a13713a11",
+          "id": "d4da9bf0-15f5-45ad-b557-fa7752ffe6e6",
           "name": "number-1",
           "required": true,
           "dataType": "@sys.number",
@@ -49,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0fa3ba98-4e9c-4ea3-962c-138ee6acee26",
+          "id": "abed8e7e-aafc-45d1-8853-7af343391266",
           "name": "adjective",
           "required": true,
           "dataType": "@sys.any",
@@ -68,7 +69,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "22744be3-52a5-4c8c-9b1e-73b99650ef73",
+          "id": "57662a10-2a69-49ee-8285-6fe93dd63f91",
           "name": "number-2",
           "required": true,
           "dataType": "@sys.number",
@@ -91,7 +92,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1cfef944-c905-463e-9e42-927b524e7cb6",
+          "id": "e926fc82-33d0-4a46-96b9-c4cd53c1e929",
           "name": "action",
           "required": true,
           "dataType": "@sys.any",
@@ -123,6 +124,18 @@
         }
       ],
       "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Да, давай ещё!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",

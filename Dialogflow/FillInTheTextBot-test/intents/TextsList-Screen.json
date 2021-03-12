@@ -1,0 +1,236 @@
+{
+  "id": "5554dffc-9562-47c6-8306-8b16c85741eb",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "TextsList-Screen",
+  "auto": true,
+  "contexts": [
+    "Screen"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "54f1a24c-d4d9-4eb6-8bec-a3abd91fdcd6",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "zhdu_otvet",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Случай на уроке"
+            },
+            {
+              "text": "Карантин"
+            },
+            {
+              "text": "Парк развлечений"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Непростая рыбка"
+            },
+            {
+              "text": "Больница"
+            },
+            {
+              "text": "Про цирк"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Объяснительная"
+            },
+            {
+              "text": "Новый колобок"
+            },
+            {
+              "text": "Новогоднее письмо"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Анекдот про енота"
+            },
+            {
+              "text": "Про День всех влюблённых"
+            },
+            {
+              "text": "Про 23 февраля"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Про 8 марта"
+            },
+            {
+              "text": "Гороскоп для козерогов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп про водолеев"
+            },
+            {
+              "text": "Гороскоп для рыб"
+            },
+            {
+              "text": "Гороскоп овнов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп про тельцов"
+            },
+            {
+              "text": "Гороскоп близнецов"
+            },
+            {
+              "text": "Гороскоп для раков"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп о девах"
+            },
+            {
+              "text": "Гороскоп про львов"
+            },
+            {
+              "text": "Гороскоп для весов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп о скорпионах"
+            },
+            {
+              "text": "Гороскоп про стрельцов"
+            },
+            {
+              "text": "Любой"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Самый новый"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Если не сможешь выбрать, просто скажи \"любой\". Итак, вот что у меня сейчас есть:",
+            "Вот они. Если трудно выбрать, просто скажи \"любой\""
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

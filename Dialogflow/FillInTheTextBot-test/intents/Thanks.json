@@ -8,7 +8,22 @@
       "resetContexts": false,
       "action": "",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "d9f98a88-b328-45f7-8013-60004367399d",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "simpatiya",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "2",
@@ -17,6 +32,24 @@
           "replies": [
             "Да, давай!",
             "Покажи список"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+              "text": "Поставить оценку"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Подписаться на новости"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",
