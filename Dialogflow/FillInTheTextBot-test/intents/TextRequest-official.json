@@ -1,0 +1,52 @@
+{
+  "id": "90d0325e-fc0b-4512-9069-42165ff58292",
+  "name": "TextRequest-official",
+  "auto": true,
+  "contexts": [
+    "official"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Предложить свой текст"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Если хотите предложить свой текст для истории, напишите в личку паблика ВК \"Занимательные истории голосовых помощников\", а потом обязательно возвращайтесь сюда. Давайте сочиним что-нибудь ещё?",
+            "У меня ещё такого нет, но если хотите предложить свой текст для истории, напишите в личку группы ВК \"Занимательные истории голосовых помощников\", а потом возвращайтесь, буду ждать Вас здесь. Продолжим?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,9 +1,10 @@
 {
   "id": "a6166c46-d073-4e3d-98af-1c411e51bdff",
-  "name": "SetRating-screen",
+  "name": "SetRating-screen-yandex",
   "auto": true,
   "contexts": [
-    "screen"
+    "screen",
+    "source-yandex"
   ],
   "responses": [
     {

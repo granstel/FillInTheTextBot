@@ -1,0 +1,210 @@
+{
+  "id": "bc0373b1-2dcb-4936-8d9c-b1ad3cbff961",
+  "name": "News-official",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "official"
+  ],
+  "contexts": [
+    "official"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "defaultResponsePlatforms": {
+        "telegram": true
+      },
+      "messages": [
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "text": "Подписаться на новости",
+              "postback": "https://vk.com/fillinthetextbot"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Если хотите подписаться на новости игры, найдите во \"Вконтакте\" группу \"Занимательные истории голосовых помощников\". Продолжим?",
+            "Можно подписаться на новости игры во \"Вконтакте\", в группе \"Занимательные истории голосовых помощников\". Пойдём дальше?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "комментарии к оценкам",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5093d9b0-1477-4d85-99d2-161e22d4c5a9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "ответы на оценки",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "04ed2ed6-9ca3-44c9-aee8-edc59ffa5241",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "разработчики",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "1bb1eb6c-1551-424c-8617-0bc1c02d9cd6",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "связаться с разработчиком",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "57ad3417-a5f8-4b6e-bd57-c5e45897d194",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "твои новости",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5b05f655-6da7-4060-b1f8-08630f790729",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "новости ",
+          "userDefined": false
+        },
+        {
+          "text": "игры",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "ebe9e522-04a1-4fe1-82d9-e8807d56ab81",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "группа во вконтакте",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "463ab14f-5f93-4062-8601-5cfe772dffb1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "группа в контакте",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c2f74196-0343-4dc4-9d7d-b43539e33c55",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "группа вконтакте",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c7a2e696-6078-40ea-8995-f4991878939f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "как называется группа",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6d3d820b-ebb5-4bce-ac57-e00447558177",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "как подписаться на новости",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d645035c-d488-437f-b6b5-d822a8325720",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "как найти твои новости",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "05379321-5aae-4af1-ab1a-cc64cb8a0b42",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

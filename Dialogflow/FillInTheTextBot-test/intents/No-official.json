@@ -1,8 +1,10 @@
 {
-  "id": "fbeea0af-495b-46e5-b8af-db7b94fbe69d",
-  "name": "тест",
+  "id": "f4ad7d8c-1e89-4952-ad7c-05a193e8518d",
+  "name": "No-official",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "official"
+  ],
   "responses": [
     {
       "resetContexts": false,
@@ -15,6 +17,11 @@
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
+          "speech": [
+            "Ну давайте! Будет весело!",
+            "Да ладно Вам, давайте!",
+            "Будет весело, давайте!"
+          ],
           "condition": ""
         }
       ],

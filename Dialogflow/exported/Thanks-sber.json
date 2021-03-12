@@ -1,0 +1,425 @@
+{
+  "id": "40612716-d7fc-4185-9755-010820087f14",
+  "name": "Thanks-sber",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "source-sber"
+  ],
+  "contexts": [
+    "source-sber"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "sberEmotion",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "simpatiya",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "quick_reply",
+          "platform": "telegram",
+          "condition": "",
+          "replies": [
+            "Да, давай!",
+            "Покажи список"
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "text": "Подписаться на новости",
+              "postback": "https://vk.com/fillinthetextbot"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Мне тоже понравилось! Сочиним что-нибудь ещё?",
+            "И мне понравилось! Давай ещё что-нибудь сочиним?",
+            "Сочиним что-нибудь ещё?",
+            "Давай ещё что-нибудь сочиним?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "молодец",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f6c6e239-d50b-4593-a744-afe96d167f59",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "молодец ",
+          "userDefined": false
+        },
+        {
+          "text": "алиса",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "a82e3bf7-bd2e-4d8e-ae0b-189fdd046892",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "молодец, ",
+          "userDefined": false
+        },
+        {
+          "text": "алиса",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": ", передавай привет разработчику",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2cbff2eb-df80-4e3b-9ccc-dc7de0694aab",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "супер навык",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "1f8cc1cc-7b25-4bf6-872d-e743b29f9ba8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "короче это вот что получилось",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "216eefc6-c056-4e76-b09f-6f18ab5ff57c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "это мило",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "487bb008-433e-49ee-a3c8-51e265386d30",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "ахахахахапххпхвххахахахахахахахахахахахахах",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f9fcc921-aaa0-474e-b842-16e7dcae216c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "ну как хорошая история",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ccb833cf-bafa-450f-acbc-78342765b5e0",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "а мы подружились",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6730f8ac-3ca2-47c3-82bb-1911743e8a8d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "вот это история",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "7e2d098e-9569-4ad6-8971-fe8528ef2e5b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "забавно",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "b8a1bfcd-d4d2-4162-9425-86f360c8bef6",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "весело",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "31a0e22a-622f-43d2-8e20-30afe87e7a78",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "отлично",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c4f8c630-6bc3-4bc6-8e61-30fc540993b5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "чудесно",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "7705bb13-8479-4cac-9591-c69539415d24",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "понравилось",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "77c018d2-e7df-457c-ae20-82350555978e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "прикольно",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "7158f36b-cb7e-414d-9c8c-27662d067393",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "ясно",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "ca659870-3f50-496a-9e6b-99e32a2c5291",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "здорово",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6ab2b881-1748-417d-a49e-537792b86c4d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "классно",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "fd1246d6-5972-4926-afc1-ae5a1d06a67b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "спасибо ",
+          "userDefined": false
+        },
+        {
+          "text": "алиса",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 2,
+      "id": "8ec5ea03-53c5-4eea-935f-47fcdcf2d9b8",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "ржака",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "19af7d20-0f04-4136-87b8-b65264fc3460",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "супер",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "303718a8-ce76-4f22-825b-7871292d0980",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "великолепно",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "e5d1502e-b895-4481-86a2-b06d8386c285",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "спасибо",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "518c0b30-045c-495d-9801-2ab248b6dc93",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "круто",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d913b4af-ba02-4360-8400-72e2669a3e4d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Класс",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "3a8aadbd-dd6a-4d45-a2b9-f93ab56ac263",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

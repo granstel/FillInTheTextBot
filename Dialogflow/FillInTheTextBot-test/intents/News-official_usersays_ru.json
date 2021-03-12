@@ -1,0 +1,163 @@
+[
+  {
+    "id": "5093d9b0-1477-4d85-99d2-161e22d4c5a9",
+    "data": [
+      {
+        "text": "комментарии к оценкам",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "04ed2ed6-9ca3-44c9-aee8-edc59ffa5241",
+    "data": [
+      {
+        "text": "ответы на оценки",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1bb1eb6c-1551-424c-8617-0bc1c02d9cd6",
+    "data": [
+      {
+        "text": "разработчики",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "57ad3417-a5f8-4b6e-bd57-c5e45897d194",
+    "data": [
+      {
+        "text": "связаться с разработчиком",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5b05f655-6da7-4060-b1f8-08630f790729",
+    "data": [
+      {
+        "text": "твои новости",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ebe9e522-04a1-4fe1-82d9-e8807d56ab81",
+    "data": [
+      {
+        "text": "новости ",
+        "userDefined": false
+      },
+      {
+        "text": "игры",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "463ab14f-5f93-4062-8601-5cfe772dffb1",
+    "data": [
+      {
+        "text": "группа во вконтакте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c2f74196-0343-4dc4-9d7d-b43539e33c55",
+    "data": [
+      {
+        "text": "группа в контакте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c7a2e696-6078-40ea-8995-f4991878939f",
+    "data": [
+      {
+        "text": "группа вконтакте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6d3d820b-ebb5-4bce-ac57-e00447558177",
+    "data": [
+      {
+        "text": "как называется группа",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d645035c-d488-437f-b6b5-d822a8325720",
+    "data": [
+      {
+        "text": "как подписаться на новости",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "05379321-5aae-4af1-ab1a-cc64cb8a0b42",
+    "data": [
+      {
+        "text": "как найти твои новости",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  }
+]
