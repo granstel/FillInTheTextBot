@@ -91,14 +91,14 @@ namespace FillInTheTextBot.Messengers.Sber
 
         private PayloadItem[] MapResponseToItem(Models.Response source, PayloadItem[] destinations, ResolutionContext context)
         {
-            var item = new PayloadItem
+            var itemWithBubble = new PayloadItem
             {
                 Bubble = { Text = source.Text }
             };
 
             var buttons = source.Buttons?.Where(b => !b.QuickReply).ToList();
 
-            var items = buttons?.Select(b =>
+            var cardItems = buttons?.Select(b =>
             {
                 var cardItem = new CardItem
                 {
@@ -141,14 +141,17 @@ namespace FillInTheTextBot.Messengers.Sber
             var card = new Card
             {
                 Type = "grid_card",
-                Items = items,
+                Items = cardItems,
                 Columns = 2,
                 ItemWidth = "resizable"
             };
 
-            item.Card = card;
+            var itemWithCard = new PayloadItem
+            {
+                Card = card
+            };
 
-            return new[] { item };
+            return new[] { itemWithBubble, itemWithCard };
         }
 
         private Suggestion MapButtonsToSuggestion(IEnumerable<Models.Button> source, Suggestion destination, ResolutionContext context)
