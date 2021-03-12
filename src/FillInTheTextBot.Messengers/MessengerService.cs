@@ -29,7 +29,8 @@ namespace FillInTheTextBot.Messengers
         {
             var request = _mapper.Map<Request>(input);
 
-            SetContexts(request);
+            var contexts = GetContexts(request);
+            request.RequiredContexts.AddRange(contexts);
 
             return request;
         }
@@ -53,8 +54,10 @@ namespace FillInTheTextBot.Messengers
             return output;
         }
 
-        private void SetContexts(Request request)
+        private ICollection<Context> GetContexts(Request request)
         {
+            var contexts = new List<Context>();
+
             try
             {
                 var parameters = new Dictionary<string, string>
@@ -63,16 +66,16 @@ namespace FillInTheTextBot.Messengers
                     { nameof(request.ClientId), request.ClientId ?? string.Empty }
                 };
 
-                request.RequiredContexts.Add(new Context
+                contexts.Add(new Context
                 {
-                    Name = request.Source?.ToString(),
+                    Name = $"source-{request.Source?.ToString()}",
                     LifeSpan = 50000,
                     Parameters = parameters
                 });
 
                 if (request.HasScreen)
                 {
-                    request.RequiredContexts.Add(new Context
+                    contexts.Add(new Context
                     {
                         Name = "screen",
                         LifeSpan = 50000
@@ -83,6 +86,8 @@ namespace FillInTheTextBot.Messengers
             {
                 Log.Error(e);
             }
+
+            return contexts;
         }
 
         protected virtual Response ProcessCommand(Request request)

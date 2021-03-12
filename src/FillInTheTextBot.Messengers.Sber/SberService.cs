@@ -89,7 +89,7 @@ namespace FillInTheTextBot.Messengers.Sber
 
             contexts.Add(new Models.Context
             {
-                Name = input.Payload?.Character?.Id,
+                Name = $"sber-character-{input.Payload?.Character?.Id}",
                 LifeSpan = 50000
             });
 
