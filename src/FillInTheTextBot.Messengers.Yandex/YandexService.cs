@@ -16,7 +16,7 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string PongResponse = "pong";
         private const string ErrorCommand = "error";
 
-        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории Алисы из Яндекса\" и напиши об этом в личку";
+        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
 
         private readonly IMapper _mapper;
 
