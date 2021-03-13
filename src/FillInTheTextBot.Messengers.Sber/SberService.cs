@@ -12,7 +12,7 @@ namespace FillInTheTextBot.Messengers.Sber
 {
     public class SberService : MessengerService<Request, Response>, ISberService
     {
-        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории Алисы из Яндекса\" и напиши об этом в личку";
+        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
 
         private readonly IMapper _mapper;
         private readonly IRedisCacheService _cache;
@@ -30,6 +30,13 @@ namespace FillInTheTextBot.Messengers.Sber
 
         protected override Models.Request Before(Request input)
         {
+            //if (input == default)
+            //{
+            //    _log.Error($"{nameof(Request)} is null");
+
+            //    input = CreateErrorInput();
+            //}
+
             var request = base.Before(input);
 
             var userStateCacheKey = GetCacheKey(request.UserHash);
@@ -48,20 +55,24 @@ namespace FillInTheTextBot.Messengers.Sber
             return request;
         }
 
-        private string TryGetSessionIdAsync(bool? newSession, string userHash)
+        public override async Task<Response> ProcessIncomingAsync(Request input)
         {
-            var cacheKey = GetSessionCacheKey(userHash);
+            Response result;
 
-            _cache.TryGet(cacheKey, out string sessionId);
-
-            if (newSession == true || string.IsNullOrEmpty(sessionId))
+            try
             {
-                sessionId = Guid.NewGuid().ToString("N");
+                result = await base.ProcessIncomingAsync(input);
+            }
+            catch (Exception e)
+            {
+                _log.Error(e);
 
-                _cache.AddAsync(cacheKey, sessionId, TimeSpan.FromMinutes(5)).Forget();
+                var response = new Models.Response { Text = ErrorAnswer };
+
+                result = await AfterAsync(input, response);
             }
 
-            return sessionId;
+            return result;
         }
 
         protected override async Task<Response> AfterAsync(Request input, Models.Response response)
@@ -81,6 +92,22 @@ namespace FillInTheTextBot.Messengers.Sber
             await _cache.TryAddAsync(userStateCacheKey, userState, TimeSpan.FromDays(14));
 
             return output;
+        }
+
+        private string TryGetSessionIdAsync(bool? newSession, string userHash)
+        {
+            var cacheKey = GetSessionCacheKey(userHash);
+
+            _cache.TryGet(cacheKey, out string sessionId);
+
+            if (newSession == true || string.IsNullOrEmpty(sessionId))
+            {
+                sessionId = Guid.NewGuid().ToString("N");
+
+                _cache.AddAsync(cacheKey, sessionId, TimeSpan.FromMinutes(5)).Forget();
+            }
+
+            return sessionId;
         }
 
         private IEnumerable<Models.Context> GetContexts(Request input)
