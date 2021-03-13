@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
 using NLog;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
-using Request = Yandex.Dialogs.Models.Request;
 
 namespace FillInTheTextBot.Messengers.Yandex
 {
@@ -17,7 +15,6 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string PingCommand = "ping";
         private const string PongResponse = "pong";
         private const string ErrorCommand = "error";
-        private const string IsOldUserOldKey = "isOldUser";
 
         private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории Алисы из Яндекса\" и напиши об этом в личку";
 
@@ -123,13 +120,13 @@ namespace FillInTheTextBot.Messengers.Yandex
             return output;
         }
 
-        private ICollection<Context> GetContexts(InputModel input)
+        private ICollection<Models.Context> GetContexts(InputModel input)
         {
-            var contexts = new List<Context>();
+            var contexts = new List<Models.Context>();
 
             if (input.IsNavigator())
             {
-                contexts.Add(new Context
+                contexts.Add(new Models.Context
                 {
                     Name = "navigator",
                     LifeSpan = 50000
@@ -138,7 +135,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             if (input.IsCanShowAdvertising())
             {
-                contexts.Add(new Context
+                contexts.Add(new Models.Context
                 {
                     Name = "advertising",
                     LifeSpan = 50000
