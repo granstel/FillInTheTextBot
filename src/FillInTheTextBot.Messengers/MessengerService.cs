@@ -10,6 +10,9 @@ namespace FillInTheTextBot.Messengers
 {
     public abstract class MessengerService<TInput, TOutput> : IMessengerService<TInput, TOutput>
     {
+        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
+        private const string ErrorLink = "https://vk.com/fillinthetextbot";
+
         private readonly IConversationService _conversationService;
         private readonly IMapper _mapper;
         protected readonly IDialogflowService DialogflowService;
@@ -37,17 +40,38 @@ namespace FillInTheTextBot.Messengers
 
         public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
         {
-            var request = Before(input);
+            Response response;
 
-            var response = ProcessCommand(request);
-
-            // ReSharper disable once ConvertIfStatementToNullCoalescingExpression
-            if (response == null)
+            try
             {
-                response = await _conversationService.GetResponseAsync(request);
-            }
+                var request = Before(input);
 
-            _mapper.Map(request, response);
+                response = ProcessCommand(request);
+
+                if (response == null)
+                {
+                    response = await _conversationService.GetResponseAsync(request);
+                }
+
+                _mapper.Map(request, response);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+
+                response = new Response
+                {
+                    Text = ErrorAnswer,
+                    Buttons = new []
+                    {
+                        new Button
+                        {
+                            Text = "Сообщить об ошибке",
+                            Url = ErrorLink
+                        }
+                    }
+                };
+            }
 
             var output = await AfterAsync(input, response);
 

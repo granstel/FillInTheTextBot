@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
-using NLog;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
 
@@ -14,13 +13,8 @@ namespace FillInTheTextBot.Messengers.Yandex
     {
         private const string PingCommand = "ping";
         private const string PongResponse = "pong";
-        private const string ErrorCommand = "error";
-
-        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
 
         private readonly IMapper _mapper;
-
-        private readonly Logger _log = LogManager.GetLogger(nameof(YandexService));
 
         public YandexService(
             IConversationService conversationService,
@@ -32,15 +26,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
         protected override Models.Request Before(InputModel input)
         {
-            if (input == default)
-            {
-                _log.Error($"{nameof(InputModel)} is null");
-
-                input = CreateErrorInput();
-            }
-
             var request = base.Before(input);
-
 
             input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
 
@@ -76,32 +62,7 @@ namespace FillInTheTextBot.Messengers.Yandex
                 response = new Models.Response { Text = PongResponse };
             }
 
-            if (ErrorCommand.Equals(request.Text, StringComparison.InvariantCultureIgnoreCase))
-            {
-                response = new Models.Response { Text = ErrorAnswer };
-            }
-
             return response;
-        }
-
-        public override async Task<OutputModel> ProcessIncomingAsync(InputModel input)
-        {
-            OutputModel result;
-
-            try
-            {
-                result = await base.ProcessIncomingAsync(input);
-            }
-            catch (Exception e)
-            {
-                _log.Error(e);
-
-                var response = new Models.Response { Text = ErrorAnswer };
-
-                result = await AfterAsync(input, response);
-            }
-
-            return result;
         }
 
         protected override async Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
@@ -143,19 +104,6 @@ namespace FillInTheTextBot.Messengers.Yandex
             }
 
             return contexts;
-        }
-
-        private InputModel CreateErrorInput()
-        {
-            return new InputModel
-            {
-                Request = new Request
-                {
-                    OriginalUtterance = ErrorCommand
-                },
-                Session = new InputSession(),
-                Version = "1.0"
-            };
         }
     }
 }

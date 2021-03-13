@@ -7,6 +7,11 @@ namespace FillInTheTextBot.Models
         public static string NextTextIndexStorageKey => nameof(NextTextIndex).ToUpper();
         public static string ScopeStorageKey => nameof(ScopeKey).ToUpper();
 
+        public Response()
+        {
+            Emotions = new Dictionary<string, string>();
+        }
+
         public string ChatHash { get; set; }
 
         public string UserHash { get; set; }

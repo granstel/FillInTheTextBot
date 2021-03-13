@@ -5,19 +5,14 @@ using AutoMapper;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
-using NLog;
 using Sber.SmartApp.Models;
 
 namespace FillInTheTextBot.Messengers.Sber
 {
     public class SberService : MessengerService<Request, Response>, ISberService
     {
-        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
-
         private readonly IMapper _mapper;
         private readonly IRedisCacheService _cache;
-
-        private readonly Logger _log = LogManager.GetLogger(nameof(SberService));
 
         public SberService(
             IConversationService conversationService,
@@ -30,13 +25,6 @@ namespace FillInTheTextBot.Messengers.Sber
 
         protected override Models.Request Before(Request input)
         {
-            //if (input == default)
-            //{
-            //    _log.Error($"{nameof(Request)} is null");
-
-            //    input = CreateErrorInput();
-            //}
-
             var request = base.Before(input);
 
             var userStateCacheKey = GetCacheKey(request.UserHash);
@@ -53,26 +41,6 @@ namespace FillInTheTextBot.Messengers.Sber
             request.SessionId = TryGetSessionIdAsync(request.NewSession, request.UserHash);
 
             return request;
-        }
-
-        public override async Task<Response> ProcessIncomingAsync(Request input)
-        {
-            Response result;
-
-            try
-            {
-                result = await base.ProcessIncomingAsync(input);
-            }
-            catch (Exception e)
-            {
-                _log.Error(e);
-
-                var response = new Models.Response { Text = ErrorAnswer };
-
-                result = await AfterAsync(input, response);
-            }
-
-            return result;
         }
 
         protected override async Task<Response> AfterAsync(Request input, Models.Response response)
