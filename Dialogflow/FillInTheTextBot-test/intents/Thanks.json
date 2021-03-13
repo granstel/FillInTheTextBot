@@ -1,5 +1,7 @@
 {
-  "id": "40612716-d7fc-4185-9755-010820087f14",
+  "id": "f6f81db1-5acc-4e30-a397-38b47fc9d92b",
+  "parentId": "40612716-d7fc-4185-9755-010820087f14",
+  "rootParentId": "40612716-d7fc-4185-9755-010820087f14",
   "name": "Thanks",
   "auto": true,
   "contexts": [],
@@ -10,7 +12,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "d9f98a88-b328-45f7-8013-60004367399d",
+          "id": "9008194e-5836-4eac-b10d-0d171a841c5b",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -42,10 +44,6 @@
           "platform": "telegram",
           "title": "кнопки",
           "buttons": [
-            {
-              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-              "text": "Поставить оценку"
-            },
             {
               "postback": "https://vk.com/fillinthetextbot",
               "text": "Подписаться на новости"
