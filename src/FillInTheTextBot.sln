@@ -29,8 +29,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Sber", "FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj", "{928C09CB-BF31-4126-987A-E4D7112E0A9D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sber.SmartApp.Models", "..\..\Sber.SmartApp.Models\src\Sber.SmartApp.Models\Sber.SmartApp.Models.csproj", "{5BD95C38-D971-46CD-96F5-DF1E3A18B207}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,10 +79,6 @@ Global
 		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5BD95C38-D971-46CD-96F5-DF1E3A18B207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BD95C38-D971-46CD-96F5-DF1E3A18B207}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BD95C38-D971-46CD-96F5-DF1E3A18B207}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BD95C38-D971-46CD-96F5-DF1E3A18B207}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
