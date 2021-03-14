@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "b441d8c3-eaaf-4d1a-b4cc-30a789525d36",
+          "id": "f0a4bb67-a5f4-4901-a4c7-ab30cebd9483",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -49,7 +49,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Окей, возвращайся, будуж дать!",
+            "Окей, возвращайся, буду ждать!",
             "Если что, я всегда здесь, возвращайся!",
             "Приходи ещё, я буду здесь!"
           ],

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "7b63e5e9-c475-42f2-bb2f-1c1231b47980",
+    "data": [
+      {
+        "text": "сколько тебе лет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "893be892-1f74-48dc-8f3c-3fb429f58834",
+    "data": [
+      {
+        "text": "кто ты",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "99858e30-e9c4-487a-ad36-dde8a8c1fb01",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ты кто",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8343b97f-e460-4d5e-b5f7-18a969c148c3",
+    "data": [
+      {
+        "text": "расскажи о себе",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fde7f6a0-38b7-4f94-85d8-dac5b3587c55",
+    "data": [
+      {
+        "text": "подскажи о себе лучше",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0db4c18e-31a4-4807-8992-e15e88519fe3",
+    "data": [
+      {
+        "text": "как дела ",
+        "userDefined": false
+      },
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "30417ef6-af1e-41e3-9659-fe0eecdd0969",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b2ccf593-7806-48c9-a826-ce6f53a68b91",
+    "data": [
+      {
+        "text": "как тебя зовут",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8eafac38-b381-4f49-b204-8a11c53faac8",
+    "data": [
+      {
+        "text": "кто это",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2a7b7939-aba1-47b9-a4cf-4c0fabeb6765",
+    "data": [
+      {
+        "text": "кто здесь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "99bfca90-a3b0-4d83-83fc-2ad617c4ceae",
+    "data": [
+      {
+        "text": "робота нельзя обидеть",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

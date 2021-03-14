@@ -1,8 +1,11 @@
 {
-  "id": "40612716-d7fc-4185-9755-010820087f14",
-  "name": "Thanks",
+  "id": "75751bfa-5794-4923-a102-1b5bfe8a3595",
+  "parentId": "63f87fcf-2f80-44f7-9f28-46f204cea411",
+  "name": "Problems-official",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "official"
+  ],
   "responses": [
     {
       "resetContexts": false,
@@ -10,11 +13,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "9008194e-5836-4eac-b10d-0d171a841c5b",
+          "id": "fecb7bad-d0d7-4749-85e6-6bd57e79e3af",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
-          "value": "simpatiya",
+          "value": "bespokoistvo",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -26,25 +29,13 @@
       ],
       "messages": [
         {
-          "type": "2",
-          "platform": "telegram",
-          "title": "",
-          "replies": [
-            "Да, давай!",
-            "Покажи список"
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "1",
           "platform": "telegram",
-          "title": "кнопки",
+          "title": "Кнопки",
           "buttons": [
             {
               "postback": "https://vk.com/fillinthetextbot",
-              "text": "Подписаться на новости"
+              "text": "Рассказать о проблеме"
             }
           ],
           "textToSpeech": "",
@@ -57,10 +48,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Мне тоже понравилось! Сочиним что-нибудь ещё?",
-            "И мне понравилось! Давай ещё что-нибудь сочиним?",
-            "Сочиним что-нибудь ещё?",
-            "Давай ещё что-нибудь сочиним?"
+            "Видимо, возникли какие-то проблемы. Расскажите об этом, пожалуйста, в паблике ВК \"Занимательные истории голосовых помощников\", и меня исправят. Давайте продолжим?",
+            "Наверно, были какие-то проблемы. Расскажите, пожалуйста, об этом в паблике ВК \"Занимательные истории голосовых помощников\", и скоро всё исправят. Продолжим?"
           ],
           "condition": ""
         }
