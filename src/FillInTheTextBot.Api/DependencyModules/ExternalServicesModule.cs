@@ -32,7 +32,7 @@ namespace FillInTheTextBot.Api.DependencyModules
 
             var storage = context.Resolve<IScopeBindingStorage>();
             var balancer = new ScopesSelector<SessionsClient>(storage, scopeContexts, CreateDialogflowSessionsClient);
-            
+
             return balancer;
         }
 
