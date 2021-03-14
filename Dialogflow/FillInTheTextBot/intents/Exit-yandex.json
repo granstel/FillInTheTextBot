@@ -1,0 +1,57 @@
+{
+  "id": "6e8b484d-6fbf-4f7e-9e45-88f583389453",
+  "name": "Exit-yandex",
+  "auto": true,
+  "contexts": [
+    "source-yandex"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+              "text": "Поставить оценку"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Подписаться на новости"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Окей, возвращайся, буду ждать!",
+            "Если что, я всегда здесь, возвращайся!",
+            "Приходи ещё, я буду здесь!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
