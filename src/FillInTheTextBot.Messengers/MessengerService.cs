@@ -93,7 +93,7 @@ namespace FillInTheTextBot.Messengers
                 contexts.Add(new Context
                 {
                     Name = $"source-{request.Source?.ToString()}",
-                    LifeSpan = 50000,
+                    LifeSpan = 1,
                     Parameters = parameters
                 });
 
@@ -102,7 +102,7 @@ namespace FillInTheTextBot.Messengers
                     contexts.Add(new Context
                     {
                         Name = "screen",
-                        LifeSpan = 50000
+                        LifeSpan = 1
                     });
                 }
             }
