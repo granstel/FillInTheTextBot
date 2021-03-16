@@ -134,7 +134,7 @@ namespace FillInTheTextBot.Services
 
             var text = request.Text;
 
-            if (text.Length > MaximumRequestLength)
+            if (text?.Length > MaximumRequestLength)
             {
                 text = request.Text.Substring(0, MaximumRequestLength);
             }
@@ -143,7 +143,7 @@ namespace FillInTheTextBot.Services
             {
                 Text = new TextInput
                 {
-                    Text = text,
+                    Text = text ?? string.Empty,
                     LanguageCode = _configuration.LanguageCode
                 }
             };
