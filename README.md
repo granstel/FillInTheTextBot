@@ -5,6 +5,8 @@
 
 Победил в конкурсе ["Премия Алисы"](https://yandex.ru/blog/dialogs/premiya-alisy-luchshie-navyki-za-iyul-2020)
 
+Новости и обратная связь по оценкам в [сообществе ВК](https://vk.com/fillinthetextbot)
+
 Cыграйте вместе с Алисой:
 
 [![alice](https://dialogs.s3.yandex.net/badges/v1-term1.svg)](https://alice.ya.ru/s/a557c651-94d8-48fd-9c43-d2b644615050)
