@@ -2,6 +2,12 @@
 {
     public class HttpLogConfiguration
     {
+        public HttpLogConfiguration()
+        {
+            ExcludeBodiesWithWords = new string[0];
+            ExcludeEndpoints = new string[0];
+        }
+
         public bool Enabled { get; set; }
 
         public bool AddRequestIdHeader { get; set; }
