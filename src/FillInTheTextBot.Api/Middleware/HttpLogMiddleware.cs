@@ -46,10 +46,10 @@ namespace FillInTheTextBot.Api.Middleware
                 }
             }
 
-            var isExcludeEndpoint = _configuration.ExcludeEndpoints.Any(w =>
+            var isIncludeEndpoint = _configuration.IncludeEndpoints.Any(w =>
                 context.Request.Path.Value.Contains(w, StringComparison.InvariantCultureIgnoreCase));
 
-            if (isExcludeEndpoint)
+            if (!isIncludeEndpoint)
             {
                 await _next(context);
 
