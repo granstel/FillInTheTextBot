@@ -85,7 +85,7 @@ namespace FillInTheTextBot.Messengers.Sber
             contexts.Add(new Models.Context
             {
                 Name = $"sber-character-{input.Payload?.Character?.Id}",
-                LifeSpan = 1
+                LifeSpan = 2
             });
 
             var appeal = input.Payload?.Character?.Appeal;
@@ -95,7 +95,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 contexts.Add(new Models.Context
                 {
                     Name = appeal,
-                    LifeSpan = 1
+                    LifeSpan = 2
                 });
             }
 
