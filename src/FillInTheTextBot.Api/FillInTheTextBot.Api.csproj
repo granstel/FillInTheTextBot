@@ -23,7 +23,6 @@
     <ProjectReference Include="..\FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Services\FillInTheTextBot.Services.csproj" />
-    <ProjectReference Include="..\FillInTheTextBot.Messengers.Telegram\FillInTheTextBot.Messengers.Telegram.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj" />
   </ItemGroup>
 
