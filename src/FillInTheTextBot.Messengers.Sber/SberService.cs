@@ -17,7 +17,8 @@ namespace FillInTheTextBot.Messengers.Sber
         public SberService(
             IConversationService conversationService,
             IMapper mapper,
-            IDialogflowService dialogflowService, IRedisCacheService cache) : base(conversationService, mapper, dialogflowService)
+            IDialogflowService dialogflowService,
+            IRedisCacheService cache) : base(conversationService, mapper, dialogflowService)
         {
             _mapper = mapper;
             _cache = cache;
@@ -29,7 +30,7 @@ namespace FillInTheTextBot.Messengers.Sber
 
             var userStateCacheKey = GetCacheKey(request.UserHash);
 
-            _cache.TryGet(userStateCacheKey, out UserState userState);
+            _cache.TryGet(userStateCacheKey, out Models.UserState userState);
 
             request.IsOldUser = userState?.IsOldUser ?? false;
 
@@ -49,7 +50,7 @@ namespace FillInTheTextBot.Messengers.Sber
 
             _mapper.Map(input, output);
 
-            var userState = new UserState
+            var userState = new Models.UserState
             {
                 IsOldUser = true,
                 NextTextIndex = response.NextTextIndex

@@ -1,4 +1,4 @@
-﻿namespace FillInTheTextBot.Messengers.Sber
+﻿namespace FillInTheTextBot.Models
 {
     public class UserState
     {
