@@ -1,0 +1,302 @@
+[
+  {
+    "id": "41bbd1bc-ea27-472a-a247-6fe885ef90d2",
+    "data": [
+      {
+        "text": "солнце",
+        "meta": "@sys.any",
+        "alias": "big",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2835c566-66e4-43d2-aa9e-95edea41f0ae",
+    "data": [
+      {
+        "text": "земля",
+        "meta": "@sys.any",
+        "alias": "big",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d432f3c6-e53b-4779-917a-06d935f2fe2d",
+    "data": [
+      {
+        "text": "марс",
+        "meta": "@sys.any",
+        "alias": "big",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ff59ec40-0598-4f0e-a7c8-c72233eedcd2",
+    "data": [
+      {
+        "text": "сатурн",
+        "meta": "@sys.any",
+        "alias": "big",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a89376c1-f97c-466a-9b0a-03e713b602a3",
+    "data": [
+      {
+        "text": "юпитер",
+        "meta": "@sys.any",
+        "alias": "big",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ac1e46a9-2f01-40ea-82c4-5163a6f2e4ef",
+    "data": [
+      {
+        "text": "венера",
+        "meta": "@sys.any",
+        "alias": "big",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0ec3696e-66bb-4e21-b635-19f956ce00c9",
+    "data": [
+      {
+        "text": "корова",
+        "meta": "@sys.any",
+        "alias": "animal-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ef8518aa-09a5-4ffe-b447-bfdcb2e01253",
+    "data": [
+      {
+        "text": "кошка",
+        "meta": "@sys.any",
+        "alias": "animal-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5b1bb078-7076-40c2-a5d4-0662a7c92b98",
+    "data": [
+      {
+        "text": "песец",
+        "meta": "@sys.any",
+        "alias": "animal-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8494e523-dc12-4c2c-99ef-c79a005e6dd2",
+    "data": [
+      {
+        "text": "рысь",
+        "meta": "@sys.any",
+        "alias": "animal-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5544d94c-8698-463c-96c2-7f62965080a8",
+    "data": [
+      {
+        "text": "черепаха",
+        "meta": "@sys.any",
+        "alias": "animal-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9f5667fd-4e0c-4d17-a618-63420aed9499",
+    "data": [
+      {
+        "text": "гепард",
+        "meta": "@sys.any",
+        "alias": "animal-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7c1664f0-1ad5-43ba-8089-ab0de90581f0",
+    "data": [
+      {
+        "text": "лошадь",
+        "meta": "@sys.any",
+        "alias": "animal-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "085e8a80-a9c7-43a5-9edf-1080e5dc6570",
+    "data": [
+      {
+        "text": "голубой",
+        "meta": "@sys.color",
+        "alias": "color",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5cf7f827-4f9a-4c68-9111-a49eae3b4810",
+    "data": [
+      {
+        "text": "фиолетовый",
+        "meta": "@sys.color",
+        "alias": "color",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "965f7ea8-cae4-47c4-a7f9-abf88df72c93",
+    "data": [
+      {
+        "text": "бурмалиновый",
+        "meta": "@sys.color",
+        "alias": "color",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "38ee9cbd-b10f-447c-a5aa-1ad35982ddb0",
+    "data": [
+      {
+        "text": "зелёный",
+        "meta": "@sys.color",
+        "alias": "color",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2fd9484a-f078-459c-8042-f01d1daffe64",
+    "data": [
+      {
+        "text": "жёлтый",
+        "meta": "@sys.color",
+        "alias": "color",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "babc50aa-3f32-4213-b19a-835097a472bb",
+    "data": [
+      {
+        "text": "чёрный",
+        "meta": "@sys.color",
+        "alias": "color",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ac817bbc-2f20-4e04-bff9-792eb251ee8d",
+    "data": [
+      {
+        "text": "красный",
+        "meta": "@sys.color",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

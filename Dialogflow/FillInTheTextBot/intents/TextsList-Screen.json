@@ -11,10 +11,15 @@
     {
       "resetContexts": false,
       "action": "",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "TextsList-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "54f1a24c-d4d9-4eb6-8bec-a3abd91fdcd6",
+          "id": "ce4958e6-3617-4d63-984d-7679ea6a08d1",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",

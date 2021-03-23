@@ -15,7 +15,7 @@
       ],
       "parameters": [
         {
-          "id": "6dd8fe58-e8c3-4136-a4cc-a89effdbc78d",
+          "id": "13e8c7a7-697d-4567-90ef-c767d21cbe68",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",

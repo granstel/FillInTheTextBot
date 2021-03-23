@@ -1,0 +1,56 @@
+{
+  "id": "bf3b78d3-2cea-48a3-b008-d030a3f9429b",
+  "name": "26 - Boris the cat and chocolate",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-26",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "9170e920-6fc8-495c-af3c-db8cad34d26e",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-26",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Давай придумаем историю",
+            "Давай сочиним"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
