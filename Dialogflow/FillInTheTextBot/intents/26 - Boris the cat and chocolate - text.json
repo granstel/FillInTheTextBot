@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "63637376-b469-4339-8953-e75791cbd494",
+          "id": "afffcad3-6c24-48a8-a6f4-855a211ea35b",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e6bae60a-bfc6-4864-97af-cb1275b9a487",
+          "id": "2b6f1060-f9ba-488e-93f7-317da0dcfee3",
           "name": "color",
           "required": true,
           "dataType": "@sys.color",
@@ -58,7 +58,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1e7d598e-1f0c-4b17-b6a7-91155a655dcf",
+          "id": "d7dfe28a-5293-4af4-aff0-f87ccc3b397a",
           "name": "animal-1",
           "required": true,
           "dataType": "@sys.any",
@@ -81,7 +81,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "46639ce7-f5da-481e-b8a9-bffa02048583",
+          "id": "48471007-5570-417e-8588-68e203bf8abe",
           "name": "animal-2",
           "required": true,
           "dataType": "@sys.any",
@@ -108,7 +108,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "520140dd-395c-45be-aa58-fe682a3c9801",
+          "id": "e9d6123e-b8b1-49af-9405-ea5c674a2488",
           "name": "big",
           "required": true,
           "dataType": "@sys.any",
@@ -140,6 +140,18 @@
         }
       ],
       "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",
