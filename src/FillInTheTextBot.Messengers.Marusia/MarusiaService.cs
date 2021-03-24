@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AutoMapper;
-using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
-using GranSteL.Helpers.Redis;
 using MailRu.Marusia.Models;
 using MailRu.Marusia.Models.Input;
 
@@ -15,29 +13,33 @@ namespace FillInTheTextBot.Messengers.Marusia
         private const string PongResponse = "pong";
 
         private readonly IMapper _mapper;
-        private readonly IRedisCacheService _cache;
 
         public MarusiaService(
             IConversationService conversationService,
             IMapper mapper,
-            IDialogflowService dialogflowService,
-            IRedisCacheService cache) : base(conversationService, mapper, dialogflowService)
+            IDialogflowService dialogflowService) : base(conversationService, mapper, dialogflowService)
         {
             _mapper = mapper;
-            _cache = cache;
         }
 
         protected override Models.Request Before(InputModel input)
         {
             var request = base.Before(input);
 
-            var userStateCacheKey = GetCacheKey(request.UserHash);
+            input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
 
-            _cache.TryGet(userStateCacheKey, out UserState userState);
+            request.IsOldUser = isOldUser;
 
-            request.IsOldUser = userState?.IsOldUser ?? false;
+            if (input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex) != true)
+            {
+                input.TryGetFromApplicationState(Models.Response.NextTextIndexStorageKey, out nextTextIndex);
+            }
 
-            request.NextTextIndex = Convert.ToInt32(userState?.NextTextIndex ?? 0);
+            request.NextTextIndex = Convert.ToInt32(nextTextIndex);
+
+            input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
+
+            request.ScopeKey = scopeKey;
 
             return request;
         }
@@ -60,22 +62,14 @@ namespace FillInTheTextBot.Messengers.Marusia
 
             _mapper.Map(input, output);
 
-            var userState = new Models.UserState
-            {
-                IsOldUser = true,
-                NextTextIndex = response.NextTextIndex
-            };
+            output.AddToUserState(Models.Request.IsOldUserKey, true);
 
-            var userStateCacheKey = GetCacheKey(response.UserHash);
+            output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
+            output.AddToApplicationState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
 
-            await _cache.TryAddAsync(userStateCacheKey, userState, TimeSpan.FromDays(14));
+            output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 
             return output;
-        }
-
-        private string GetCacheKey(string key)
-        {
-            return $"marusia:{key}";
         }
     }
 }
