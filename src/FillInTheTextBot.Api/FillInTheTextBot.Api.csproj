@@ -21,9 +21,9 @@
   <ItemGroup>
     <ProjectReference Include="..\FillInTheTextBot.Messengers.Marusia\FillInTheTextBot.Messengers.Marusia.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj" />
+    <ProjectReference Include="..\FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Services\FillInTheTextBot.Services.csproj" />
-    <ProjectReference Include="..\FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj" />
   </ItemGroup>
 
   <ItemGroup>
