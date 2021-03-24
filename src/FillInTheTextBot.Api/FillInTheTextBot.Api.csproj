@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>1.7.0</Version>
-    <PackageReleaseNotes>Add Marusia endpoint</PackageReleaseNotes>
+    <Version>1.7.1</Version>
+    <PackageReleaseNotes>Fix Marusia source</PackageReleaseNotes>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
