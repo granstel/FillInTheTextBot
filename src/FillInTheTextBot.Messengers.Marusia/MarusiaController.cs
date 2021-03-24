@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MailRu.Marusia.Models;
+using MailRu.Marusia.Models.Input;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using Yandex.Dialogs.Models;
-using Yandex.Dialogs.Models.Input;
 
 namespace FillInTheTextBot.Messengers.Marusia
 {

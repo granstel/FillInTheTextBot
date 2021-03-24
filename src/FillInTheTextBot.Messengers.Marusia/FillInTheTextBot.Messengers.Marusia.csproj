@@ -15,7 +15,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="Yandex.Dialogs.Models" Version="1.2.0" />
+    <PackageReference Include="MailRu.Marusia.Models" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

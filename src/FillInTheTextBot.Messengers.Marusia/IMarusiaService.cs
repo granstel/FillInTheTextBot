@@ -1,6 +1,6 @@
 ﻿using FillInTheTextBot.Services;
-using Yandex.Dialogs.Models;
-using Yandex.Dialogs.Models.Input;
+using MailRu.Marusia.Models;
+using MailRu.Marusia.Models.Input;
 
 namespace FillInTheTextBot.Messengers.Marusia
 {
