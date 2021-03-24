@@ -2,6 +2,8 @@
 using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.Extensions;
+using GranSteL.Helpers.Redis;
 using MailRu.Marusia.Models;
 using MailRu.Marusia.Models.Input;
 
@@ -13,13 +15,16 @@ namespace FillInTheTextBot.Messengers.Marusia
         private const string PongResponse = "pong";
 
         private readonly IMapper _mapper;
+        private readonly IRedisCacheService _cache;
 
         public MarusiaService(
             IConversationService conversationService,
             IMapper mapper,
-            IDialogflowService dialogflowService) : base(conversationService, mapper, dialogflowService)
+            IDialogflowService dialogflowService,
+            IRedisCacheService cache) : base(conversationService, mapper, dialogflowService)
         {
             _mapper = mapper;
+            _cache = cache;
         }
 
         protected override Models.Request Before(InputModel input)
@@ -64,6 +69,8 @@ namespace FillInTheTextBot.Messengers.Marusia
             output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
+
+            _cache.AddAsync($"marusia:{response.UserHash}", string.Empty).Forget();
 
             return output;
         }
