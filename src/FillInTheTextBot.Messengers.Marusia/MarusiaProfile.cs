@@ -24,7 +24,7 @@ namespace FillInTheTextBot.Messengers.Marusia
                 .ForMember(d => d.Language, m => m.ResolveUsing(s => s.Meta?.Locale))
                 .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => s?.Meta?.Interfaces?.Screen != null))
                 .ForMember(d => d.ClientId, m => m.ResolveUsing(s => s?.Meta?.ClientId))
-                .ForMember(d => d.Source, m => m.UseValue(Source.Yandex))
+                .ForMember(d => d.Source, m => m.UseValue(Source.Marusia))
                 .ForMember(d => d.RequiredContexts, m => m.Ignore())
                 .ForMember(d => d.IsOldUser, m => m.Ignore())
                 .ForMember(d => d.NextTextIndex, m => m.Ignore())
