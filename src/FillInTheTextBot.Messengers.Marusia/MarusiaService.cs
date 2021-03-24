@@ -70,7 +70,7 @@ namespace FillInTheTextBot.Messengers.Marusia
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 
-            _cache.AddAsync($"marusia:{response.UserHash}", string.Empty).Forget();
+            _cache.AddAsync($"marusia:{response.UserHash}", string.Empty, TimeSpan.FromDays(14)).Forget();
 
             return output;
         }
