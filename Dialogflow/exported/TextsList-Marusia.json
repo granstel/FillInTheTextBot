@@ -1,0 +1,311 @@
+{
+  "id": "5554dffc-9562-47c6-8306-8b16c85741eb",
+  "name": "TextsList-Marusia",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "source-marusia"
+  ],
+  "contexts": [
+    "source-marusia"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "source-marusia",
+          "lifespan": 5
+        },
+        {
+          "name": "TextsList-followup",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Случай на уроке"
+            },
+            {
+              "text": "Карантин"
+            },
+            {
+              "text": "Парк развлечений"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Непростая рыбка"
+            },
+            {
+              "text": "Больница"
+            },
+            {
+              "text": "Про цирк"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Объяснительная"
+            },
+            {
+              "text": "Новый колобок"
+            },
+            {
+              "text": "Новогоднее письмо"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Анекдот про енота"
+            },
+            {
+              "text": "Про День всех влюблённых"
+            },
+            {
+              "text": "Про 23 февраля"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Про 8 марта"
+            },
+            {
+              "text": "Гороскоп для козерогов"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп про водолеев"
+            },
+            {
+              "text": "Гороскоп для рыб"
+            },
+            {
+              "text": "Гороскоп овнов"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп про тельцов"
+            },
+            {
+              "text": "Гороскоп близнецов"
+            },
+            {
+              "text": "Гороскоп для раков"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп о девах"
+            },
+            {
+              "text": "Гороскоп про львов"
+            },
+            {
+              "text": "Гороскоп для весов"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп о скорпионах"
+            },
+            {
+              "text": "Гороскоп про стрельцов"
+            },
+            {
+              "text": "Любой"
+            }
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Самый новый"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Я их сейчас озвучу, а если надоест - останови меня, и скажи \"любой\". Итак, вот что у меня сейчас есть:\n- Случай на уроке.\n- Карантин.\n- Парк развлечений.\n- Непростая рыбка.\n- Больница.\n- Про цирк.\n- Объяснительная.\n- Новый колобок.\n- Новогоднее письмо.\n- Анекдот про енота.\n- Про любовь\n- Про 23 февраля\n- Про 8 марта\n- Гороскопы: для козерогов.\n- про водолеев.\n- для рыб.\n- овнов.\n- про тельцов.\n- и близнецов.\n- для раков.\n- о девах.\n- про львов.\n- для весов.\n- о скорпионах.\n- и для стрельцов.\nЧто выберешь?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "список историй",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ee09ca00-ce86-4a11-aa59-98a2133df62a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "покажи список историй",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "a10b1389-72f6-431e-bde8-65be82cfda78",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "покажи список",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4ec48f18-265e-4817-bf24-4f2488aa859d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "что у тебя есть",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "13c61a1b-9e3f-426a-8289-d538e8a73ace",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "прочитай список",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "6c54ad19-967c-4d02-9d96-bd0a2cfdb7e9",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "покажи список текстов",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "dd85d646-51b9-40c6-88b9-312af816d054",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "список текстов",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "252a9556-e616-4056-a5ef-05781a684e6a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "список",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "3c54ddf8-1822-4593-9824-c6305507e3d0",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
