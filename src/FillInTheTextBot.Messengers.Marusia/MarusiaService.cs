@@ -30,10 +30,7 @@ namespace FillInTheTextBot.Messengers.Marusia
 
             request.IsOldUser = isOldUser;
 
-            if (input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex) != true)
-            {
-                input.TryGetFromApplicationState(Models.Response.NextTextIndexStorageKey, out nextTextIndex);
-            }
+            input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex);
 
             request.NextTextIndex = Convert.ToInt32(nextTextIndex);
 
@@ -65,7 +62,6 @@ namespace FillInTheTextBot.Messengers.Marusia
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 
             output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
-            output.AddToApplicationState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 

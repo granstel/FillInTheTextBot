@@ -21,7 +21,7 @@ namespace FillInTheTextBot.Messengers.Marusia
                 .ForMember(d => d.SessionId, m => m.ResolveUsing(s => s.Session?.SessionId))
                 .ForMember(d => d.NewSession, m => m.ResolveUsing(s => s.Session?.New))
                 .ForMember(d => d.Language, m => m.ResolveUsing(s => s.Meta?.Locale))
-                .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => s?.Meta?.Interfaces?.Screen != null))
+                .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => string.Equals(s?.Session?.Application?.ApplicationType, MarusiaModels.ApplicationTypes.Mobile)))
                 .ForMember(d => d.ClientId, m => m.ResolveUsing(s => s?.Meta?.ClientId))
                 .ForMember(d => d.Source, m => m.UseValue(Source.Marusia))
                 .ForMember(d => d.RequiredContexts, m => m.Ignore())
@@ -34,8 +34,7 @@ namespace FillInTheTextBot.Messengers.Marusia
                 .ForMember(d => d.Session, m => m.MapFrom(s => s))
                 .ForMember(d => d.Version, m => m.Ignore())
                 .ForMember(d => d.UserStateUpdate, m => m.Ignore())
-                .ForMember(d => d.SessionState, m => m.Ignore())
-                .ForMember(d => d.ApplicationState, m => m.Ignore());
+                .ForMember(d => d.SessionState, m => m.Ignore());
 
             CreateMap<Response, MarusiaModels.Response>()
                 .ForMember(d => d.Text, m => m.MapFrom(s => s.Text.Replace(Environment.NewLine, "\n")))
@@ -56,8 +55,7 @@ namespace FillInTheTextBot.Messengers.Marusia
                 .ForMember(d => d.Version, m => m.MapFrom(s => s.Version))
                 .ForMember(d => d.Response, m => m.Ignore())
                 .ForMember(d => d.UserStateUpdate, m => m.Ignore())
-                .ForMember(d => d.SessionState, m => m.Ignore())
-                .ForMember(d => d.ApplicationState, m => m.Ignore());
+                .ForMember(d => d.SessionState, m => m.Ignore());
 
             CreateMap<Models.Button, ResponseButton>()
                 .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
