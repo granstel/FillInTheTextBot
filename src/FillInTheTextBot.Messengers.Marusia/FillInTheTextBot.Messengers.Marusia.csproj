@@ -15,7 +15,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="MailRu.Marusia.Models" Version="1.0.0" />
+    <PackageReference Include="MailRu.Marusia.Models" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
