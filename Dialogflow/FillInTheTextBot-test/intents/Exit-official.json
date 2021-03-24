@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "283a4862-7b00-4a22-af9f-fa337f8056d0",
+          "id": "dbb5cbbd-ce47-439a-b036-2e507a51ed1f",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -33,10 +33,6 @@
           "platform": "telegram",
           "title": "кнопки",
           "buttons": [
-            {
-              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-              "text": "Поставить оценку"
-            },
             {
               "postback": "https://vk.com/fillinthetextbot",
               "text": "Подписаться на новости"

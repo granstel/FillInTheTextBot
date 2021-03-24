@@ -1,11 +1,11 @@
 {
-  "id": "5554dffc-9562-47c6-8306-8b16c85741eb",
+  "id": "f075610b-217e-4231-bfd9-a77f564a3fca",
   "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
-  "name": "TextsList-Screen",
+  "name": "TextsList-Marusia",
   "auto": true,
   "contexts": [
-    "Screen"
+    "source-marusia"
   ],
   "responses": [
     {
@@ -14,25 +14,10 @@
       "affectedContexts": [
         {
           "name": "TextsList-followup",
-          "lifespan": 2
+          "lifespan": 5
         }
       ],
-      "parameters": [
-        {
-          "id": "ce4958e6-3617-4d63-984d-7679ea6a08d1",
-          "name": "sberEmotion",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "zhdu_otvet",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        }
-      ],
+      "parameters": [],
       "messages": [
         {
           "type": "1",
@@ -221,8 +206,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Если не сможешь выбрать, просто скажи \"любой\". Итак, вот что у меня сейчас есть:",
-            "Вот они. Если трудно выбрать, просто скажи \"любой\""
+            "Я их сейчас озвучу, а если надоест - останови меня, и скажи \"любой\". Итак, вот что у меня сейчас есть:\n- Случай на уроке.\n- Карантин.\n- Парк развлечений.\n- Непростая рыбка.\n- Больница.\n- Про цирк.\n- Объяснительная.\n- Новый колобок.\n- Новогоднее письмо.\n- Анекдот про енота.\n- Про любовь\n- Про 23 февраля\n- Про 8 марта\n- Гороскопы: для козерогов.\n- про водолеев.\n- для рыб.\n- овнов.\n- про тельцов.\n- и близнецов.\n- для раков.\n- о девах.\n- про львов.\n- для весов.\n- о скорпионах.\n- и для стрельцов.\nЧто выберешь?"
           ],
           "condition": ""
         }

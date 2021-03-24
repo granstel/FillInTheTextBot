@@ -1,29 +1,17 @@
 {
   "id": "6e8b484d-6fbf-4f7e-9e45-88f583389453",
-  "name": "Exit",
+  "parentId": "6e8b484d-6fbf-4f7e-9e45-88f583389453",
+  "name": "Exit-yandex",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "source-yandex"
+  ],
   "responses": [
     {
       "resetContexts": false,
       "action": "",
       "affectedContexts": [],
-      "parameters": [
-        {
-          "id": "f0a4bb67-a5f4-4901-a4c7-ab30cebd9483",
-          "name": "sberEmotion",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "zhdu_otvet",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        }
-      ],
+      "parameters": [],
       "messages": [
         {
           "type": "1",

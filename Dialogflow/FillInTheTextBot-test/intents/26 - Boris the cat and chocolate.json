@@ -1,22 +1,26 @@
 {
-  "id": "cbd4c1fc-e94b-4fc1-8f08-1c4e12d751e9",
-  "name": "RepeatTheText",
+  "id": "bf3b78d3-2cea-48a3-b008-d030a3f9429b",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "26 - Boris the cat and chocolate",
   "auto": true,
-  "contexts": [
-    "savedText"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
-      "affectedContexts": [],
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-26",
+          "lifespan": 5
+        }
+      ],
       "parameters": [
         {
-          "id": "49bd5a45-da7d-454d-a0e8-25bce69ea6ed",
-          "name": "sberEmotion",
+          "id": "9170e920-6fc8-495c-af3c-db8cad34d26e",
+          "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "udovolstvie",
+          "value": "text-26",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -28,24 +32,13 @@
       ],
       "messages": [
         {
-          "type": "2",
-          "platform": "telegram",
-          "title": "",
-          "replies": [
-            "Спасибо",
-            "Дальше"
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "#savedText.text"
+            "Давай придумаем историю",
+            "Давай сочиним"
           ],
           "condition": ""
         }
