@@ -1,7 +1,6 @@
 {
   "id": "b61aee1b-9155-44d1-9200-cdf9fe63e91d",
   "parentId": "fffeab4c-cc15-48ce-9157-99896559bdad",
-  "rootParentId": "fffeab4c-cc15-48ce-9157-99896559bdad",
   "name": "8-Horoscope-capricorn-text",
   "auto": true,
   "contexts": [
@@ -14,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "2d43fdb6-29e2-4d22-9558-3c22a6f1bcb0",
+          "id": "9154778c-ca86-4e15-9086-387878c04625",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -28,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "3f968fe4-132b-4783-ac2c-d7c1c664c7b9",
+          "id": "51665e8b-1f90-4f47-8496-9654827a1143",
           "name": "thing",
           "required": true,
           "dataType": "@sys.any",
@@ -47,7 +46,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "c7dd9fb9-1609-4228-b29f-22efe07286fd",
+          "id": "d411354a-5519-413c-a265-b74931f13c50",
           "name": "adjective-male",
           "required": true,
           "dataType": "@sys.any",
@@ -66,7 +65,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "05e2b526-f8d1-4d8b-a08c-38fa9925ccfc",
+          "id": "55916ec6-5659-473d-b070-28798922bd11",
           "name": "animal",
           "required": true,
           "dataType": "@sys.any",
@@ -85,7 +84,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "88bd4312-82cf-480f-ac5e-fc78d007d4d7",
+          "id": "f13ec0f8-f23c-4d03-8807-8b97489fca3f",
           "name": "adjective-female",
           "required": true,
           "dataType": "@sys.any",
@@ -104,7 +103,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "6efa453d-e099-49d5-ac86-a48aeb2f8648",
+          "id": "bb7417a9-973a-49d4-a8ac-96ce12ab9133",
           "name": "number",
           "required": true,
           "dataType": "@sys.number",
@@ -137,12 +136,26 @@
           "condition": ""
         },
         {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Что новенького в навыке?"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Вот что говорят звёзды: Зимой вы совершите героический поступок: на улице, заметив, что на девушку падает $adjective-male $thing, вы успеете подставить свою голову. $thing разлетится на мелкие кусочки, а вам хоть бы хны, потому что вы - Козерог!\nЛетом вы вдруг скажете первому встречному: \"Давай пободаемся!\", а тот окажется колдуном и превратит вас в редкое животное \"$adjective-female $animal\", но ненадолго.\nОсенью вы займётесь бизнесом и к концу года накопите $number р!\nВывод: не надо ни с кем бодаться, и всё у вас будет отлично!\nВот такой прикольный гороскоп. Сочиним ещё что-нибудь?"
+            "Вот что говорят звёзды: Зимой вы совершите героический поступок: на улице, заметив, что на девушку падает $adjective-male $thing, вы успеете подставить свою голову. $thing разлетится на мелкие кусочки, а вам хоть бы хны, потому что вы - Козерог!\nЛетом вы вдруг скажете первому встречному: \"Давай пободаемся!\", а тот окажется колдуном и превратит вас в редкое животное \"$adjective-female $animal\", но ненадолго.\nОсенью вы займётесь бизнесом и к концу года накопите рублей эдак $number!\nВывод: не надо ни с кем бодаться, и всё у вас будет отлично!\nВот такой прикольный гороскоп. Сочиним ещё что-нибудь?"
           ],
           "condition": ""
         }

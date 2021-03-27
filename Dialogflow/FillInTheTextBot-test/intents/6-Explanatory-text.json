@@ -153,7 +153,7 @@
           "id": "b9da20b2-b043-4994-8c5b-4e7471f5b87d",
           "name": "person",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person",
           "defaultValue": "",
           "isList": false,
@@ -181,6 +181,20 @@
           "replies": [
             "Прочти ещё раз",
             "Да, давай ещё!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Поблагодарить разработчиков"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

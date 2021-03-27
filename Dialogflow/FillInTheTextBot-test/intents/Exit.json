@@ -1,25 +1,20 @@
 {
-  "id": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome",
+  "id": "898d0ecd-bef7-48c9-a491-b268a3ba64f3",
+  "name": "Exit",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "",
-      "affectedContexts": [
-        {
-          "name": "EasyWelcome-followup",
-          "lifespan": 2
-        }
-      ],
+      "affectedContexts": [],
       "parameters": [
         {
-          "id": "d8514912-f6ff-44fa-b7cf-5dd5b9e7f22a",
+          "id": "bf814564-b1ed-4e91-a45c-ea804664de7a",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
-          "value": "radost",
+          "value": "zhdu_otvet",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -31,25 +26,13 @@
       ],
       "messages": [
         {
-          "type": "2",
-          "platform": "telegram",
-          "title": "",
-          "replies": [
-            "Конечно!",
-            "Список историй"
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "1",
           "platform": "telegram",
           "title": "кнопки",
           "buttons": [
             {
               "postback": "https://vk.com/fillinthetextbot",
-              "text": "Узнать, что новенького"
+              "text": "Следить за новостями"
             }
           ],
           "textToSpeech": "",
@@ -62,9 +45,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Настало время занимательных историй! Продолжим?",
-            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
-            "И вот пришло время занимательных историй! Давай сочиним что-нибудь?"
+            "Окей, возвращайся, буду ждать!",
+            "Если что, я всегда здесь, возвращайся!",
+            "Приходи ещё, я буду здесь!"
           ],
           "condition": ""
         }
@@ -76,11 +59,7 @@
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
-  "events": [
-    {
-      "name": "EasyWelcome"
-    }
-  ],
+  "events": [],
   "conditionalResponses": [],
   "condition": "",
   "conditionalFollowupEvents": []

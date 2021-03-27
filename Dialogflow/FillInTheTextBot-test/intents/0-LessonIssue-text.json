@@ -30,7 +30,7 @@
           "id": "8c845708-befa-4c99-913b-93cd10929c82",
           "name": "boy",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$boy",
           "defaultValue": "",
           "isList": false,
@@ -95,7 +95,7 @@
           "id": "cc49dee3-d1ac-4396-a6b2-16335d19951c",
           "name": "teacher",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$teacher",
           "defaultValue": "",
           "isList": false,
@@ -260,6 +260,20 @@
           "replies": [
             "Повтори",
             "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Поделиться идеей"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

@@ -92,7 +92,7 @@
           "id": "cf2dd0df-e2a3-4998-9293-b8ce0ae18c66",
           "name": "person",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person",
           "defaultValue": "",
           "isList": false,
@@ -173,6 +173,20 @@
           "replies": [
             "Повтори",
             "Конечно давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Новости игры"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

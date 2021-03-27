@@ -1,0 +1,177 @@
+[
+  {
+    "id": "5866c8c4-d8f4-40f5-9165-e35f3db80ac3",
+    "data": [
+      {
+        "text": "выйти",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a6319c72-b376-4a6f-bda3-b12cac50efce",
+    "data": [
+      {
+        "text": "выход",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "eacb8053-9d18-4289-86e2-94cec12541be",
+    "data": [
+      {
+        "text": "закончить",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "472e839d-e120-4dec-8ffb-4b948c11aefd",
+    "data": [
+      {
+        "text": "я ухожу пока",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "04fd23c2-3664-4d17-9585-0d95bff4fc4d",
+    "data": [
+      {
+        "text": "заканчиваем",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "229d9b28-7262-470a-b238-a12cb5749aeb",
+    "data": [
+      {
+        "text": "заканчиваем истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5c9e5734-c3e8-4275-86bd-a9d7286c0009",
+    "data": [
+      {
+        "text": "нам пора спать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aeca4966-afc4-49f8-98ce-9bf5bbe53e66",
+    "data": [
+      {
+        "text": "пора спать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "37c422be-1883-46cf-94c3-d9cbe9ada7f2",
+    "data": [
+      {
+        "text": "нет",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " давай пока",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "25f49485-cbdc-4f59-9150-c3cdf59877d0",
+    "data": [
+      {
+        "text": "почему хватит",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1967e189-0f37-49a1-9820-ca63da3d59fe",
+    "data": [
+      {
+        "text": "хватит",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f714724f-8b37-42ae-8caa-c0f881292a11",
+    "data": [
+      {
+        "text": "выключайся",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c677a9c6-714c-488c-9a55-f737c52b08d7",
+    "data": [
+      {
+        "text": "до свидания",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

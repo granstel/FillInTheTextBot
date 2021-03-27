@@ -31,7 +31,7 @@
           "id": "e5f1a8a1-2a89-4ee6-a0a1-348192e9ecde",
           "name": "person",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person",
           "defaultValue": "",
           "isList": false,
@@ -128,6 +128,20 @@
           "replies": [
             "Повтори его",
             "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Рассказать свою идею"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

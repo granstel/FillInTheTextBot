@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "99d592c9-f5a3-44f3-b649-4d5702062dc1",
+          "id": "3693ddaf-47e2-4657-b450-9fa7dcd40fa1",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -33,6 +33,20 @@
             "Да!",
             "Список текстов",
             "Ничего не понятно"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Предложить свой текст"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",
