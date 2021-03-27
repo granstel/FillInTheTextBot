@@ -17,7 +17,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "про кота Бориса и шоколад.",
+          "value": "текст от подписчика: про кота Бориса и шоколад.",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -30,7 +30,7 @@
           "id": "76e74d87-ecfb-4ecc-9fa3-71904d6b01ef",
           "name": "color",
           "required": true,
-          "dataType": "@sys.color",
+          "dataType": "@sys.any",
           "value": "$color",
           "defaultValue": "",
           "isList": false,
@@ -147,6 +147,20 @@
           "replies": [
             "Повтори пожалуйста",
             "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Выразить восхищение автору текста"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

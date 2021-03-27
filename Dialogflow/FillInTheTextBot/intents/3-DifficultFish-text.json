@@ -271,6 +271,20 @@
           "condition": ""
         },
         {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Предложить свою идею"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",

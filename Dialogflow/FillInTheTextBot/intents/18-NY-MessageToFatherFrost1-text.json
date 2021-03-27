@@ -99,7 +99,7 @@
           "id": "9d41ea94-d459-487e-ad5c-31721e1d564b",
           "name": "color",
           "required": true,
-          "dataType": "@sys.color",
+          "dataType": "@sys.any",
           "value": "$color",
           "defaultValue": "",
           "isList": false,
@@ -162,6 +162,20 @@
           "replies": [
             "Повтори",
             "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Подписаться на новости в ВК"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",
