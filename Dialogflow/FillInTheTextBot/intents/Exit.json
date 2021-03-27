@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "00319eef-cdbe-4059-a4ae-6046c72f7cd3",
+          "id": "bf814564-b1ed-4e91-a45c-ea804664de7a",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -32,7 +32,7 @@
           "buttons": [
             {
               "postback": "https://vk.com/fillinthetextbot",
-              "text": "Подписаться на новости"
+              "text": "Следить за новостями"
             }
           ],
           "textToSpeech": "",

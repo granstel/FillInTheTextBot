@@ -15,7 +15,7 @@
       ],
       "parameters": [
         {
-          "id": "13e8c7a7-697d-4567-90ef-c767d21cbe68",
+          "id": "d8514912-f6ff-44fa-b7cf-5dd5b9e7f22a",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -49,7 +49,7 @@
           "buttons": [
             {
               "postback": "https://vk.com/fillinthetextbot",
-              "text": "Подписаться на новости"
+              "text": "Узнать, что новенького"
             }
           ],
           "textToSpeech": "",
