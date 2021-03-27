@@ -1,0 +1,217 @@
+{
+  "id": "b62aee1b-9155-44d1-9200-cdf9fe63e91d",
+  "name": "8-Horoscope-capricorn-text-marusia",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "text-8"
+  ],
+  "contexts": [
+    "text-8"
+  ],
+  "endInteraction": false,
+  "events": [
+    {
+      "name": "text-8"
+    }
+  ],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "b61aee1b-9155-44d1-9200-cdf9fe63e91d",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "text-name",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "гороскоп для козерогов.",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "thing",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "Чтобы звёзды раскрыли будущее, назови большой предмет"
+          ],
+          "value": "$thing",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "adjective-male",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "\"Какой\"?"
+          ],
+          "value": "$adjective-male",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "animal",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "Звёзды спрашивают, какое животное женского рода вам нравится?"
+          ],
+          "value": "$animal",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "adjective-female",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "\"Какая\"?"
+          ],
+          "value": "$adjective-female",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "number",
+          "dataType": "@sys.number",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "И напоследок, чтобы гороскоп получился точным, назови своё любимое число (лучше побольше)"
+          ],
+          "value": "$number",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "quick_reply",
+          "platform": "telegram",
+          "condition": "",
+          "replies": [
+            "Повтори его",
+            "Давай!"
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Вот что говорят звёзды: Зимой вы совершите героический поступок: на улице, заметив, что на девушку падает $adjective-male $thing, вы успеете подставить свою голову. $thing разлетится на мелкие кусочки, а вам хоть бы хны, потому что вы - Козерог!\nЛетом вы вдруг скажете первому встречному: \"Давай пободаемся!\", а тот окажется колдуном и превратит вас в редкое животное \"$adjective-female $animal\", но ненадолго.\nОсенью вы займётесь бизнесом и к концу года накопите $number р!\nВывод: не надо ни с кем бодаться, и всё у вас будет отлично!\nВот такой прикольный гороскоп. Сочиним ещё что-нибудь?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "b61aee1b-9155-44d1-9200-cdf9fe63e91d",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "333",
+          "userDefined": false,
+          "alias": "number",
+          "meta": "@sys.number"
+        }
+      ],
+      "count": 0,
+      "id": "7b1b3948-62e4-4161-a7dd-032acc63bd0f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "трясущаяся",
+          "userDefined": true,
+          "alias": "adjective-female",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "702341c7-690f-48f9-b659-e799eabecec7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "корова",
+          "userDefined": true,
+          "alias": "animal",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "748c7d6e-cd56-4e7c-9dc3-e947ae29a1da",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "чёрный",
+          "userDefined": true,
+          "alias": "adjective-male",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "5e76727d-fe57-44e3-8291-40978d8bfdec",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "рояль",
+          "userDefined": true,
+          "alias": "thing",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "141f720c-b795-42b7-aceb-ca63fdf5b44d",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
