@@ -1,5 +1,45 @@
 [
   {
+    "id": "9bc2eb42-fa81-445b-bf49-a73830d775d1",
+    "data": [
+      {
+        "text": "Давай",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d2373aa7-bf36-4725-b536-4f50d9f9224b",
+    "data": [
+      {
+        "text": "да давай",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f5455803-b1ba-47aa-8688-333a5d462522",
+    "data": [
+      {
+        "text": "Да",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "e9ce8229-e569-4329-a28e-66d2c3e61123",
     "data": [
       {
@@ -425,34 +465,7 @@
       }
     ],
     "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "9bc2eb42-fa81-445b-bf49-a73830d775d1",
-    "data": [
-      {
-        "text": "Давай",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "f5455803-b1ba-47aa-8688-333a5d462522",
-    "data": [
-      {
-        "text": "Да",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "lang": "ru",
     "updated": 0
   }
