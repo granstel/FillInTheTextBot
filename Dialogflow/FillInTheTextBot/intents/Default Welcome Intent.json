@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "12f08187-f00c-4177-9133-d35ed742cf02",
+          "id": "3693ddaf-47e2-4657-b450-9fa7dcd40fa1",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -41,10 +41,11 @@
         {
           "type": "1",
           "platform": "telegram",
-          "title": "Предложить свой текст",
+          "title": "Кнопки",
           "buttons": [
             {
-              "text": "https://vk.com/fillinthetextbot"
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Предложить свой текст"
             }
           ],
           "textToSpeech": "",
