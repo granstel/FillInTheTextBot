@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "1c9d3e24-2d25-4b3b-a6bf-9932a1c1c06d",
+          "id": "91415e95-325b-49dd-8f0d-e89c52c9948b",
           "name": "resetTextIndex",
           "required": false,
           "dataType": "@sys.any",
@@ -44,7 +44,7 @@
       "speech": []
     }
   ],
-  "priority": 500000,
+  "priority": 750000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
