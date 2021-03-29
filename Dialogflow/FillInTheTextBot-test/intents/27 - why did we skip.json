@@ -1,0 +1,62 @@
+{
+  "id": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "name": "27 - why did we skip",
+  "auto": true,
+  "contexts": [
+    "TextsList-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-27",
+          "lifespan": 50
+        },
+        {
+          "name": "27-whydidweskip-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "9ada36c7-4353-4799-b40a-e6f0c70ad2b0",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-27",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Давай придумаем,",
+            "Давай подумаем,"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

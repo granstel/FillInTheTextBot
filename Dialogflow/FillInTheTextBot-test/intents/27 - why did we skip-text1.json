@@ -1,0 +1,179 @@
+{
+  "id": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
+  "parentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "rootParentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "name": "27 - why did we skip-text1",
+  "auto": true,
+  "contexts": [
+    "text-27",
+    "27-whydidweskip-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "27-whydidweskip-text1-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "8baf01be-81d9-458c-8e50-6ca592a52eb6",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "почему они прогуляли. Эта история состоит из трёх частей, пойдём с первой.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "4dd6da7b-55ce-4abc-8df6-891794844f0b",
+          "name": "name-0",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-0",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сначала назови имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала назови имя своего друга"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bc4777f4-66fe-40f0-920d-bbfbee2223e2",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи номер своей школы"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови номер своей школы"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d68bb1a7-c83a-4355-9d50-343c84323f35",
+          "name": "name-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как зовут твою подругу?"
+            },
+            {
+              "lang": "ru",
+              "value": "Как зовут твою одноклассницу?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "27a001b4-f5bf-4eb4-af95-f8ae7dd8024c",
+          "name": "animal-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Какое животное не нравится твоему другу?"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое животное нравится твоим друзьям?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "844bd819-b275-4393-8e7c-169d79cb8725",
+          "name": "name-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Последний вопрос - как зовут твоего одноклассника?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний - скажи имя своего одноклассника"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, первая объяснительная об опоздании: «Я, ученик школы №$number $name-1, не пошёл на урок физики, потому что $animal-2 $name-0 засунул ежа по имени $name-2 в унитаз, и мне пришлось немедленно его оттуда доставать.»\nНачало хорошее, хочешь узнать, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-27"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

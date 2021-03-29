@@ -1,0 +1,166 @@
+{
+  "id": "3f4fb5f6-20c9-407f-b02f-50c4cf0a3f50",
+  "parentId": "b61aee1b-9155-44d1-9200-cdf9fe63e91d",
+  "rootParentId": "fffeab4c-cc15-48ce-9157-99896559bdad",
+  "name": "8-Horoscope-capricorn-text-marusia",
+  "auto": true,
+  "contexts": [
+    "text-8",
+    "source-marusia"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "1ad0b05e-655e-41c8-983c-b74b25a71718",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для козерогов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0d328103-b5c6-466a-a5de-5a16de791204",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Чтобы звёзды раскрыли будущее, назови большой предмет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "9dc4d287-8704-4ef0-9d57-aa3786f2240f",
+          "name": "adjective-male",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "45b4eda7-2821-4832-a3f7-103921b463e8",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Звёзды спрашивают, какое животное женского рода вам нравится?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "6e19e7a5-dfb2-40bc-b8cf-3d18130c90b5",
+          "name": "adjective-female",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-female",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какая\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1d656cab-54c7-4ec0-8587-f34e5a26ad28",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок, чтобы гороскоп получился точным, назови своё любимое число (лучше побольше)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори его",
+            "Давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что говорят звёзды: Зимой вы совершите героический поступок: на улице, заметив, что на девушку падает $adjective-male $thing, вы успеете подставить свою голову. $thing разлетится на мелкие кусочки, а вам хоть бы хны, потому что вы - Козерог!\nЛетом вы вдруг скажете первому встречному: \"Давай пободаемся!\", а тот окажется колдуном и превратит вас в редкое животное \"$adjective-female $animal\", но ненадолго.\nОсенью вы займётесь бизнесом и к концу года накопите рублей эдак $number!\nВывод: не надо ни с кем бодаться, и всё у вас будет отлично!\nВот такой прикольный гороскоп. Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 750000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-8"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

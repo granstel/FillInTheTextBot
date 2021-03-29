@@ -1,0 +1,162 @@
+{
+  "id": "5c770a92-be69-4a57-9960-a012039cd358",
+  "parentId": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
+  "rootParentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "name": "27 - why did we skip-text2",
+  "auto": true,
+  "contexts": [
+    "27-whydidweskip-text1-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "27-whydidweskip-text2-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "e393c15e-0a29-44c4-bad2-698f4303487b",
+          "name": "name-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Идём дальше. Теперь Скажи пожалуйста имя своего учителя"
+            },
+            {
+              "lang": "ru",
+              "value": "Сочиняем дальше. Назови имя своего учителя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "9b3c8ce6-fa5e-41c4-9b3f-36f377112ef2",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3d14deb7-3fae-45c3-9d7e-57e4ee8baa3e",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И ещё один вопрос - «Какого?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e3a883e3-ba96-406f-9405-e4959f007f76",
+          "name": "number",
+          "required": false,
+          "dataType": "@sys.number-integer",
+          "value": "#27-whydidweskip-text1-followup.number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1152e4eb-f962-4850-9bb7-5d3acb4d2b8d",
+          "name": "name-1",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "#27-whydidweskip-text1-followup.name-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "93a2b93c-3ff5-426d-a19e-cc7586b7ddd5",
+          "name": "name-2",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "#27-whydidweskip-text1-followup.name-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2bcbee01-755d-4834-994c-79f8ef485077",
+          "name": "name-0",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "#27-whydidweskip-text1-followup.name-0",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Слушай, что говорится во второй объяснительной: «Я, ученик школы №#27-whydidweskip-text1-followup.number $name-3, не пошёл на $adjective-1 урок физики, так как помогал своей однокласснице, которую зовут #27-whydidweskip-text1-followup.name-1, доставать $adjective-2 ежа по имени #27-whydidweskip-text1-followup.name-2 из туалета. Одна она не справлялась - #27-whydidweskip-text1-followup.name-2 плотно застрял.»\nВесьма занимательно! Давай сочиним, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

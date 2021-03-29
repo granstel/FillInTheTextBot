@@ -1,0 +1,101 @@
+{
+  "id": "654d7520-44bf-4610-b94b-62b81f22ff41",
+  "parentId": "5c770a92-be69-4a57-9960-a012039cd358",
+  "rootParentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "name": "27 - why did we skip-text3",
+  "auto": true,
+  "contexts": [
+    "27-whydidweskip-text2-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "6edfccc6-f3b9-43a8-ba3b-d16d70036842",
+          "name": "name-4",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Продолжаем! Как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "Продолжим! Напомни, пожалуйста, своё имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e661a279-0e88-4b96-bb0d-ae0ec8ee4e38",
+          "name": "adjective-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какие?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ec5ad399-6567-4ceb-8ccf-35e15d5fddd0",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какого цвета?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Третья объяснительная: «Я, ученик школы №#27-whydidweskip-text1-followup.number $name-4, не пошёл на урок физики, потому что сочинял занимательные истории про то, как $adjective-3 #27-whydidweskip-text2-followup.name-1 и #27-whydidweskip-text2-followup.name-3 вытаскивали бедного ежа по имени #27-whydidweskip-text2-followup.name-2 из $color унитаза. А коварный жираф #27-whydidweskip-text2-followup.name-0 тихо смеялся в сторонке.»\nПо-моему, получились отличные объяснительные о том, почему #27-whydidweskip-text2-followup.name-0, #27-whydidweskip-text2-followup.name-1, #27-whydidweskip-text2-followup.name-2, #27-whydidweskip-text2-followup.name-3, и ты прогуляли физику! Давай ещё сочинять?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 750000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
