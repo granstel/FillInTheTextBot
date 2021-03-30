@@ -2,7 +2,7 @@
   "id": "654d7520-44bf-4610-b94b-62b81f22ff41",
   "parentId": "5c770a92-be69-4a57-9960-a012039cd358",
   "rootParentId": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
-  "name": "27 - why did we skip-text3",
+  "name": "27-why did we skip-text3",
   "auto": true,
   "contexts": [
     "27-whydidweskip-text2-followup",
@@ -20,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "74dd4d75-8523-4d8a-b8e3-1383266e5b52",
+          "id": "f83f6124-1773-4fdd-9574-8d93119d2556",
           "name": "name-4",
           "required": true,
           "dataType": "@sys.any",
@@ -43,7 +43,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "51bcf515-c608-4acf-b8cf-50175c0e9804",
+          "id": "1647002d-0c62-4542-8670-88d717369fdf",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -62,7 +62,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "10d04696-deeb-4b93-aa28-71489f270944",
+          "id": "824a4bdc-ed78-4400-a6b2-61632f1bfa0e",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -88,7 +88,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Третья объяснительная: «Я, ученик школы №#text-27.number $name-4, не пошёл на урок физики, потому что сочинял занимательные истории про то, как #text-27.name-1 и #text-27.name-3 вытаскивали бедного ежа Иннокентия из $color унитаза. А коварный жираф #text-27.name-0 тихо смеялся в сторонке и $adjective-3».\nПо-моему, получились отличные объяснительные о том, почему же #text-27.name-0, #text-27.name-1, #text-27.name-3, и ты, прогуляли физику! Давай ещё сочинять?"
+            "- Погодите! Вот продолжение нашего «зоопарка»: «Я, ученик школы №#text-27.number $name-4, не пошёл на урок физики, потому что сочинял занимательные истории про то, как #text-27.name-1 и #text-27.name-3 вытаскивали бедного ежа Иннокентия из $color унитаза. А коварный жираф #text-27.name-0 тихо смеялся в сторонке и $adjective-3».\n- О, Господи, а-ха-ха, какая занимательная история! - сквозь смех проговорил заместитель. - $name-4, сочинишь для нас ещё что-нибудь?"
           ],
           "condition": ""
         }

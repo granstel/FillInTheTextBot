@@ -2,7 +2,7 @@
   "id": "5c770a92-be69-4a57-9960-a012039cd358",
   "parentId": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
   "rootParentId": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
-  "name": "27 - why did we skip-text2",
+  "name": "27-why did we skip-text2",
   "auto": true,
   "contexts": [
     "27-whydidweskip-text1-followup",
@@ -20,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "59f3909b-ef5e-40d2-9197-9e1dd1dacabd",
+          "id": "cc64adaa-6385-4704-b8bf-121e1de474b0",
           "name": "name-3",
           "required": true,
           "dataType": "@sys.any",
@@ -43,7 +43,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e8ce61e3-6e8f-4427-a888-c886fdaece86",
+          "id": "84a397ab-7ea6-4deb-bf41-7eac3be337bc",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -62,7 +62,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9e962743-950b-467e-940a-dcf4dde84724",
+          "id": "b3984d2b-7cca-4381-86d0-6655fdeb8951",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -92,7 +92,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Слушай, что говорится во второй объяснительной: «Я, ученик школы №#text-27.number $name-3, не пошёл на $adjective-1 урок физики, так как помогал своей однокласснице, которую зовут #text-27.name-1, доставать ежа Иннокентия из туалета. Одна она не справлялась - Иннокентий плотно застрял, так что даже не мог $adjective-2».\nВесьма занимательно! Давай сочиним, что было дальше?"
+            "- А вот это гляньте: «Я, ученик школы №#text-27.number $name-3, не пошёл на $adjective-1 урок физики, так как помогал своей однокласснице, которую зовут #text-27.name-1, доставать ежа Иннокентия из туалета. Одна она не справлялась - Иннокентий плотно застрял, так что даже не мог $adjective-2»!\n- Вот она - настоящая дружба! Доставать ежа из унитаза, что может быть прекрасней?! - прослезился заместитель, то ли от умиления, то ли от смеха.\n-…\n-…\nДавай сочиним, что было дальше?"
           ],
           "condition": ""
         }
