@@ -20,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "cb0eef9b-3ebb-49c0-a3e2-175e9622cc8b",
+          "id": "58d61d4d-2702-4fe6-ad76-b4a634d8f563",
           "name": "name-4",
           "required": true,
           "dataType": "@sys.any",
@@ -43,7 +43,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d2f5959b-8231-4a92-8f27-1615ae9bf21c",
+          "id": "515f85cd-e7be-446d-93a4-d59b592c2ed0",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -62,7 +62,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "b6a3cdb8-eb2f-42be-ac0f-527a8988a305",
+          "id": "49e351fc-3bf9-4764-a183-36bb59731200",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -96,7 +96,7 @@
       "speech": []
     }
   ],
-  "priority": 1000000,
+  "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
