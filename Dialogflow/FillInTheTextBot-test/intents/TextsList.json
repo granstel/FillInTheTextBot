@@ -11,6 +11,10 @@
         {
           "name": "TextsList-followup",
           "lifespan": 2
+        },
+        {
+          "name": "TextsList-followup-2",
+          "lifespan": 2
         }
       ],
       "parameters": [],

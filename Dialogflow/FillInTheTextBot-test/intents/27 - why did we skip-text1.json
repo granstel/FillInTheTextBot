@@ -1,12 +1,9 @@
 {
   "id": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
-  "parentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
-  "rootParentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
   "name": "27 - why did we skip-text1",
   "auto": true,
   "contexts": [
-    "text-27",
-    "27-whydidweskip-followup"
+    "text-27"
   ],
   "responses": [
     {
@@ -16,11 +13,15 @@
         {
           "name": "27-whydidweskip-text1-followup",
           "lifespan": 2
+        },
+        {
+          "name": "text-27",
+          "lifespan": 50
         }
       ],
       "parameters": [
         {
-          "id": "8baf01be-81d9-458c-8e50-6ca592a52eb6",
+          "id": "fcef8599-c579-40d6-bb7d-cf2fa624bb5d",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -34,7 +35,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "4dd6da7b-55ce-4abc-8df6-891794844f0b",
+          "id": "1d4966aa-098b-49bb-9c46-e53230317bc7",
           "name": "name-0",
           "required": true,
           "dataType": "@sys.any",
@@ -57,7 +58,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bc4777f4-66fe-40f0-920d-bbfbee2223e2",
+          "id": "f11f2cd3-fab3-4a3c-9c12-d1e5bfdec0ef",
           "name": "number",
           "required": true,
           "dataType": "@sys.number-integer",
@@ -80,7 +81,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d68bb1a7-c83a-4355-9d50-343c84323f35",
+          "id": "1de61fab-c7c4-43ef-8bfe-93ad2c976422",
           "name": "name-1",
           "required": true,
           "dataType": "@sys.any",
@@ -103,7 +104,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "27a001b4-f5bf-4eb4-af95-f8ae7dd8024c",
+          "id": "73735064-715d-408f-ad33-f4aac6471a09",
           "name": "animal-2",
           "required": true,
           "dataType": "@sys.any",
@@ -126,7 +127,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "844bd819-b275-4393-8e7c-169d79cb8725",
+          "id": "029e6c0f-318c-49d5-b9f8-d951438daee4",
           "name": "name-2",
           "required": true,
           "dataType": "@sys.any",

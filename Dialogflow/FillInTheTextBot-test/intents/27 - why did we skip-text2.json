@@ -1,11 +1,12 @@
 {
   "id": "5c770a92-be69-4a57-9960-a012039cd358",
   "parentId": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
-  "rootParentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "rootParentId": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
   "name": "27 - why did we skip-text2",
   "auto": true,
   "contexts": [
-    "27-whydidweskip-text1-followup"
+    "27-whydidweskip-text1-followup",
+    "text-27"
   ],
   "responses": [
     {
@@ -19,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "e393c15e-0a29-44c4-bad2-698f4303487b",
+          "id": "93fb5e79-d5bf-4c1c-a2d5-3be399e5cdd3",
           "name": "name-3",
           "required": true,
           "dataType": "@sys.any",
@@ -42,7 +43,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9b3c8ce6-fa5e-41c4-9b3f-36f377112ef2",
+          "id": "bc5031d2-ddb1-43fa-828b-1fad403571b6",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -61,7 +62,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "3d14deb7-3fae-45c3-9d7e-57e4ee8baa3e",
+          "id": "469c7110-7ec6-4c88-8fcb-97bb57714795",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -80,7 +81,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e3a883e3-ba96-406f-9405-e4959f007f76",
+          "id": "2ccd2512-0f1d-4f4c-b724-8919d27b5690",
           "name": "number",
           "required": false,
           "dataType": "@sys.number-integer",
@@ -94,7 +95,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1152e4eb-f962-4850-9bb7-5d3acb4d2b8d",
+          "id": "92486a03-f0a3-4e95-9b86-e676d8c2d0be",
           "name": "name-1",
           "required": false,
           "dataType": "@sys.any",
@@ -108,7 +109,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "93a2b93c-3ff5-426d-a19e-cc7586b7ddd5",
+          "id": "c5047b15-efda-44b4-96ab-4c4b76dbae62",
           "name": "name-2",
           "required": false,
           "dataType": "@sys.any",
@@ -122,7 +123,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "2bcbee01-755d-4834-994c-79f8ef485077",
+          "id": "d17d51c1-c4f6-4ff4-a40c-7f07f9168098",
           "name": "name-0",
           "required": false,
           "dataType": "@sys.any",
@@ -143,7 +144,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Слушай, что говорится во второй объяснительной: «Я, ученик школы №#27-whydidweskip-text1-followup.number $name-3, не пошёл на $adjective-1 урок физики, так как помогал своей однокласснице, которую зовут #27-whydidweskip-text1-followup.name-1, доставать $adjective-2 ежа по имени #27-whydidweskip-text1-followup.name-2 из туалета. Одна она не справлялась - #27-whydidweskip-text1-followup.name-2 плотно застрял.»\nВесьма занимательно! Давай сочиним, что было дальше?"
+            "Слушай, что говорится во второй объяснительной: «Я, ученик школы №#text-27.number $name-3, не пошёл на $adjective-1 урок физики, так как помогал своей однокласснице, которую зовут #text-27.name-1, доставать $adjective-2 ежа по имени #text-27.name-2 из туалета. Одна она не справлялась - #text-27.name-2 плотно застрял.»\nВесьма занимательно! Давай сочиним, что было дальше?"
           ],
           "condition": ""
         }
@@ -151,7 +152,7 @@
       "speech": []
     }
   ],
-  "priority": 500000,
+  "priority": 750000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,

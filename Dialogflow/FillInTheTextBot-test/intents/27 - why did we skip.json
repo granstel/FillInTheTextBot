@@ -2,9 +2,7 @@
   "id": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
   "name": "27 - why did we skip",
   "auto": true,
-  "contexts": [
-    "TextsList-followup"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
@@ -13,15 +11,11 @@
         {
           "name": "text-27",
           "lifespan": 50
-        },
-        {
-          "name": "27-whydidweskip-followup",
-          "lifespan": 2
         }
       ],
       "parameters": [
         {
-          "id": "9ada36c7-4353-4799-b40a-e6f0c70ad2b0",
+          "id": "87afa3a8-2dfc-4ba9-ba32-a5fb95dc8a34",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
