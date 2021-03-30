@@ -20,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "cc64adaa-6385-4704-b8bf-121e1de474b0",
+          "id": "996f8e79-2b38-4067-ab60-689742130fb3",
           "name": "name-3",
           "required": true,
           "dataType": "@sys.any",
@@ -30,7 +30,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Идём дальше. Теперь Скажи пожалуйста имя мальчика, одноклассника, например"
+              "value": "Тогда сочиняем дальше. Теперь Скажи пожалуйста имя мальчика, одноклассника, например"
             },
             {
               "lang": "ru",
@@ -43,7 +43,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "84a397ab-7ea6-4deb-bf41-7eac3be337bc",
+          "id": "0e09bc27-0621-46b2-9bbc-a1df281d67e7",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -62,7 +62,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "b3984d2b-7cca-4381-86d0-6655fdeb8951",
+          "id": "77edf987-1fab-4731-a1c1-ca70e981a639",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
