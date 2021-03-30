@@ -21,7 +21,7 @@
       ],
       "parameters": [
         {
-          "id": "fcef8599-c579-40d6-bb7d-cf2fa624bb5d",
+          "id": "afff3d0b-5859-40bb-90f0-1616643f3baf",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -35,7 +35,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1d4966aa-098b-49bb-9c46-e53230317bc7",
+          "id": "03a83c43-1b85-4f25-afea-68f3d4c06166",
           "name": "name-0",
           "required": true,
           "dataType": "@sys.any",
@@ -58,7 +58,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "f11f2cd3-fab3-4a3c-9c12-d1e5bfdec0ef",
+          "id": "76537d99-d095-4d55-b566-842e2aa20093",
           "name": "number",
           "required": true,
           "dataType": "@sys.number-integer",
@@ -81,7 +81,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1de61fab-c7c4-43ef-8bfe-93ad2c976422",
+          "id": "fbd196e3-aae4-477f-b900-5d3af135178b",
           "name": "name-1",
           "required": true,
           "dataType": "@sys.any",
@@ -91,57 +91,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Как зовут твою подругу?"
+              "value": "Последний вопрос - как зовут твою подругу?"
             },
             {
               "lang": "ru",
-              "value": "Как зовут твою одноклассницу?"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "73735064-715d-408f-ad33-f4aac6471a09",
-          "name": "animal-2",
-          "required": true,
-          "dataType": "@sys.any",
-          "value": "$animal-2",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "Какое животное не нравится твоему другу?"
-            },
-            {
-              "lang": "ru",
-              "value": "Какое животное нравится твоим друзьям?"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "029e6c0f-318c-49d5-b9f8-d951438daee4",
-          "name": "name-2",
-          "required": true,
-          "dataType": "@sys.any",
-          "value": "$name-2",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "Последний вопрос - как зовут твоего одноклассника?"
-            },
-            {
-              "lang": "ru",
-              "value": "И последний - скажи имя своего одноклассника"
+              "value": "И последний  - как зовут твою одноклассницу?"
             }
           ],
           "promptMessages": [],
@@ -157,7 +111,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Итак, первая объяснительная об опоздании: «Я, ученик школы №$number $name-1, не пошёл на урок физики, потому что $animal-2 $name-0 засунул ежа по имени $name-2 в унитаз, и мне пришлось немедленно его оттуда доставать.»\nНачало хорошее, хочешь узнать, что было дальше?"
+            "Итак, первая объяснительная об опоздании: «Я, ученик школы №$number $name-1, не пошёл на урок физики, потому что жираф $name-0 засунул ежа Иннокентия в унитаз, и мне пришлось немедленно его оттуда доставать».\nНачало хорошее, хочешь узнать, что было дальше?"
           ],
           "condition": ""
         }

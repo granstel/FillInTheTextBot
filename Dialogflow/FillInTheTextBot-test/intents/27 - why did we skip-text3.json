@@ -20,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "58d61d4d-2702-4fe6-ad76-b4a634d8f563",
+          "id": "74dd4d75-8523-4d8a-b8e3-1383266e5b52",
           "name": "name-4",
           "required": true,
           "dataType": "@sys.any",
@@ -43,7 +43,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "515f85cd-e7be-446d-93a4-d59b592c2ed0",
+          "id": "51bcf515-c608-4acf-b8cf-50175c0e9804",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -53,7 +53,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "«Какие?»"
+              "value": "«Что делал?»"
             }
           ],
           "promptMessages": [],
@@ -62,7 +62,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "49e351fc-3bf9-4764-a183-36bb59731200",
+          "id": "10d04696-deeb-4b93-aa28-71489f270944",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -72,7 +72,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "«Какого цвета?»"
+              "value": "И наконец - «какого цвета?»"
             }
           ],
           "promptMessages": [],
@@ -88,7 +88,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Третья объяснительная: «Я, ученик школы №#text-27.number $name-4, не пошёл на урок физики, потому что сочинял занимательные истории про то, как $adjective-3 #text-27.name-1 и #text-27.name-3 вытаскивали бедного ежа по имени #text-27.name-2 из $color унитаза. А коварный жираф #text-27.name-0 тихо смеялся в сторонке.»\nПо-моему, получились отличные объяснительные о том, почему #text-27.name-0, #text-27.name-1, #text-27.name-2, #text-27.name-3, и ты прогуляли физику! Давай ещё сочинять?"
+            "Третья объяснительная: «Я, ученик школы №#text-27.number $name-4, не пошёл на урок физики, потому что сочинял занимательные истории про то, как #text-27.name-1 и #text-27.name-3 вытаскивали бедного ежа Иннокентия из $color унитаза. А коварный жираф #text-27.name-0 тихо смеялся в сторонке и $adjective-3».\nПо-моему, получились отличные объяснительные о том, почему же #text-27.name-0, #text-27.name-1, #text-27.name-3, и ты, прогуляли физику! Давай ещё сочинять?"
           ],
           "condition": ""
         }

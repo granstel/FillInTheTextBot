@@ -20,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "36081960-fcc6-4e9c-9eac-c730db1e488d",
+          "id": "59f3909b-ef5e-40d2-9197-9e1dd1dacabd",
           "name": "name-3",
           "required": true,
           "dataType": "@sys.any",
@@ -30,11 +30,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Идём дальше. Теперь Скажи пожалуйста имя своего учителя"
+              "value": "Идём дальше. Теперь Скажи пожалуйста имя мальчика, одноклассника, например"
             },
             {
               "lang": "ru",
-              "value": "Сочиняем дальше. Назови имя своего учителя"
+              "value": "Сочиняем дальше. Назови имя мальчика, одноклассника, например"
             }
           ],
           "promptMessages": [],
@@ -43,7 +43,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "62e625e1-a8cb-4cf1-bdb1-f04700476807",
+          "id": "e8ce61e3-6e8f-4427-a888-c886fdaece86",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -62,7 +62,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "14dc5590-ad54-43f5-a4f1-f2b610430912",
+          "id": "9e962743-950b-467e-940a-dcf4dde84724",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -72,65 +72,13 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И ещё один вопрос - «Какого?»"
+              "value": "И ещё один вопрос - что невозможно сделать?"
+            },
+            {
+              "lang": "ru",
+              "value": "И ещё один вопрос - что ты никогда не сможешь сделать?"
             }
           ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "67c8e45a-6035-4d2c-a7ae-588937bc4456",
-          "name": "number",
-          "required": false,
-          "dataType": "@sys.number-integer",
-          "value": "#27-whydidweskip-text1-followup.number",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "a01d4bcb-0b7d-46fc-8f1e-3528e6a655d0",
-          "name": "name-1",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "#27-whydidweskip-text1-followup.name-1",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "4e125c4c-d234-4491-abab-8cda9856bdad",
-          "name": "name-2",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "#27-whydidweskip-text1-followup.name-2",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "10cf4182-ac86-4b3d-8c39-fc329e6931fb",
-          "name": "name-0",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "#27-whydidweskip-text1-followup.name-0",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -144,7 +92,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Слушай, что говорится во второй объяснительной: «Я, ученик школы №#text-27.number $name-3, не пошёл на $adjective-1 урок физики, так как помогал своей однокласснице, которую зовут #text-27.name-1, доставать $adjective-2 ежа по имени #text-27.name-2 из туалета. Одна она не справлялась - #text-27.name-2 плотно застрял.»\nВесьма занимательно! Давай сочиним, что было дальше?"
+            "Слушай, что говорится во второй объяснительной: «Я, ученик школы №#text-27.number $name-3, не пошёл на $adjective-1 урок физики, так как помогал своей однокласснице, которую зовут #text-27.name-1, доставать ежа Иннокентия из туалета. Одна она не справлялась - Иннокентий плотно застрял, так что даже не мог $adjective-2».\nВесьма занимательно! Давай сочиним, что было дальше?"
           ],
           "condition": ""
         }
