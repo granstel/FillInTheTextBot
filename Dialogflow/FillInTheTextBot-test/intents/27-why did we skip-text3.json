@@ -25,7 +25,7 @@
       ],
       "parameters": [
         {
-          "id": "1254411e-c4e2-4f9d-b76e-5801c09f22df",
+          "id": "0bc9227b-44c5-41ac-adea-36df379164dd",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -38,7 +38,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "88362e0e-d597-47fe-ae1e-faaed788cb21",
+          "id": "bf0fddf9-67f5-491b-8920-7316f9775edd",
           "name": "name-4",
           "required": true,
           "dataType": "@sys.any",
@@ -61,7 +61,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e0de991c-c4f9-444e-b40a-82ed170420ce",
+          "id": "a4d5961b-d7b4-47b7-9571-38fc9f35522d",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -80,7 +80,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a4f1a6d2-ce10-4c90-a173-5f949697545d",
+          "id": "002af63a-527a-4e19-a566-80491fad329a",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",

@@ -17,11 +17,15 @@
         {
           "name": "text-27-2",
           "lifespan": 0
+        },
+        {
+          "name": "text-27",
+          "lifespan": 50
         }
       ],
       "parameters": [
         {
-          "id": "7a1042e9-b35b-4905-aca9-43b1519274e4",
+          "id": "e6644ee7-0e61-428c-991b-8d594c0d083f",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -35,7 +39,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "92894c03-c4e0-4c20-a032-cb1a08fbc443",
+          "id": "e7e3920f-47ea-4197-88ac-21027694df91",
           "name": "name-3",
           "required": true,
           "dataType": "@sys.any",
@@ -58,7 +62,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "38300692-2fc4-4df0-bfeb-3934ed34fda8",
+          "id": "91180684-39ea-4c19-9a13-66431bfe3e1b",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +81,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1a043270-8826-4978-88cd-4f7b7b27303d",
+          "id": "bf7be83b-e504-44b0-a6ce-aa0df7cd2e7f",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",

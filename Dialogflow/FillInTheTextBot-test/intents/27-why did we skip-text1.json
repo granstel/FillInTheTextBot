@@ -17,11 +17,15 @@
         {
           "name": "text-27-1",
           "lifespan": 0
+        },
+        {
+          "name": "text-27",
+          "lifespan": 50
         }
       ],
       "parameters": [
         {
-          "id": "fb59ac99-dff6-4a6c-98a4-4ba682b5015f",
+          "id": "62c2c6c5-c661-44b7-b085-3e53fcab9ced",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -35,7 +39,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e29b1dce-06e0-45a9-beee-082a5df2b1ed",
+          "id": "e2ce213f-cc42-4936-8231-18718d93aac5",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -49,7 +53,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "c1354baa-12b6-4e90-befa-100a14c6069e",
+          "id": "bd8815dc-211a-4eec-b376-ed68488f2388",
           "name": "name-0",
           "required": true,
           "dataType": "@sys.any",
@@ -72,7 +76,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "c05c7243-9cc5-409a-bb73-9b0b8e160fd0",
+          "id": "3bfd1df6-46fe-4086-ab8c-584a0bc32cf4",
           "name": "number",
           "required": true,
           "dataType": "@sys.number-integer",
@@ -95,7 +99,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "7a8bf78d-3c32-46fc-9eac-5b3f60ec327a",
+          "id": "5f1bda95-967b-43b4-ab66-459c6d190cce",
           "name": "name-1",
           "required": true,
           "dataType": "@sys.any",
