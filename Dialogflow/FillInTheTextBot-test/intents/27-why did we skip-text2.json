@@ -1,13 +1,8 @@
 {
   "id": "5c770a92-be69-4a57-9960-a012039cd358",
-  "parentId": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
-  "rootParentId": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
   "name": "27-why did we skip-text2",
   "auto": true,
-  "contexts": [
-    "27-whydidweskip-text1-followup",
-    "text-27"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
@@ -15,12 +10,30 @@
       "affectedContexts": [
         {
           "name": "27-whydidweskip-text2-followup",
-          "lifespan": 2
+          "lifespan": 1
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 5
         }
       ],
       "parameters": [
         {
-          "id": "996f8e79-2b38-4067-ab60-689742130fb3",
+          "id": "77cc01d1-6c49-40e1-81ae-3ca16297d38b",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-27-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "846c2bf4-e03d-4318-96ee-c4f3f48ae717",
           "name": "name-3",
           "required": true,
           "dataType": "@sys.any",
@@ -30,11 +43,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Тогда сочиняем дальше. Теперь Скажи пожалуйста имя мальчика, одноклассника, например"
+              "value": "Теперь Скажи пожалуйста имя мальчика, одноклассника, например"
             },
             {
               "lang": "ru",
-              "value": "Сочиняем дальше. Назови имя мальчика, одноклассника, например"
+              "value": "Назови имя мальчика, одноклассника, например"
             }
           ],
           "promptMessages": [],
@@ -43,7 +56,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0e09bc27-0621-46b2-9bbc-a1df281d67e7",
+          "id": "4bf2363d-51ff-4138-8485-b297ec35a37d",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -62,7 +75,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "77edf987-1fab-4731-a1c1-ca70e981a639",
+          "id": "9fbfa31f-060e-4436-8af5-7b6058985069",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -104,7 +117,11 @@
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
-  "events": [],
+  "events": [
+    {
+      "name": "text-27-2"
+    }
+  ],
   "conditionalResponses": [],
   "condition": "",
   "conditionalFollowupEvents": []

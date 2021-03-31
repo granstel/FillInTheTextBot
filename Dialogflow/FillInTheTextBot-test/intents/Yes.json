@@ -10,11 +10,25 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "27bda64a-fd09-423b-8d9a-33d7f3e9746a",
+          "id": "16199ede-e4dc-4231-8146-0ab34ed61561",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
           "value": "igrivost",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1658eea0-4003-4a1b-8a62-7cf74b4c9039",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "#multipart-text.textKey",
           "defaultValue": "",
           "isList": false,
           "prompts": [],

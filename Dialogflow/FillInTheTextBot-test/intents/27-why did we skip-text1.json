@@ -2,26 +2,24 @@
   "id": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
   "name": "27-why did we skip-text1",
   "auto": true,
-  "contexts": [
-    "text-27"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "saveToRepeat",
       "affectedContexts": [
         {
-          "name": "27-whydidweskip-text1-followup",
-          "lifespan": 2
-        },
-        {
           "name": "text-27",
           "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 5
         }
       ],
       "parameters": [
         {
-          "id": "5e99459d-805b-480f-9b27-09b0913c2c3e",
+          "id": "5d1577b6-b59f-4b7b-b2b7-9e0d23389637",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -35,7 +33,21 @@
           "outputDialogContexts": []
         },
         {
-          "id": "7faa2622-2231-4cb1-bee2-0ba3dceddd5c",
+          "id": "3cf7c491-4840-4b8f-a664-8cde11b883ae",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-27-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bc6ad59b-949c-4759-a24c-df279777a022",
           "name": "name-0",
           "required": true,
           "dataType": "@sys.any",
@@ -58,7 +70,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "4c90f21a-23be-4df9-933d-467d9840870c",
+          "id": "e94099a9-723d-4b9f-9a02-432c000a6373",
           "name": "number",
           "required": true,
           "dataType": "@sys.number-integer",
@@ -81,7 +93,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ac862e3b-db6e-4bbd-9cf8-aa442efee670",
+          "id": "d9063e3b-6a6d-4c37-84b3-9e3d9b20d29f",
           "name": "name-1",
           "required": true,
           "dataType": "@sys.any",

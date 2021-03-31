@@ -1,26 +1,29 @@
 {
   "id": "654d7520-44bf-4610-b94b-62b81f22ff41",
-  "parentId": "5c770a92-be69-4a57-9960-a012039cd358",
-  "rootParentId": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
   "name": "27-why did we skip-text3",
   "auto": true,
-  "contexts": [
-    "27-whydidweskip-text2-followup",
-    "text-27"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "saveToRepeat",
-      "affectedContexts": [
-        {
-          "name": "text-27",
-          "lifespan": 0
-        }
-      ],
+      "affectedContexts": [],
       "parameters": [
         {
-          "id": "d82b5f60-a9ce-4674-af70-6010ae169641",
+          "id": "0f6ff184-a8de-4dc1-aa52-db630682faa4",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "33def6f6-0283-4900-b569-e32838129203",
           "name": "name-4",
           "required": true,
           "dataType": "@sys.any",
@@ -30,11 +33,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Продолжаем! Как тебя зовут?"
+              "value": "Как тебя зовут?"
             },
             {
               "lang": "ru",
-              "value": "Продолжим! Напомни, пожалуйста, своё имя"
+              "value": "Напомни, пожалуйста, своё имя"
             }
           ],
           "promptMessages": [],
@@ -43,7 +46,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "98da3f54-32d6-48dd-be5d-012c0188542f",
+          "id": "bc1082e2-4261-486e-8c28-2bf7bd614f57",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -62,7 +65,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e0866419-3c33-420e-b009-866342dc1a81",
+          "id": "40ae4a0c-32c8-4533-b4ce-894df7be0374",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -100,7 +103,11 @@
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
-  "events": [],
+  "events": [
+    {
+      "name": "text-27-3"
+    }
+  ],
   "conditionalResponses": [],
   "condition": "",
   "conditionalFollowupEvents": []
