@@ -2,24 +2,26 @@
   "id": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
   "name": "27-why did we skip-text1",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "text-27-1"
+  ],
   "responses": [
     {
       "resetContexts": false,
       "action": "saveToRepeat",
       "affectedContexts": [
         {
-          "name": "text-27",
+          "name": "multipart-text",
           "lifespan": 50
         },
         {
-          "name": "multipart-text",
-          "lifespan": 5
+          "name": "text-27-1",
+          "lifespan": 0
         }
       ],
       "parameters": [
         {
-          "id": "5d1577b6-b59f-4b7b-b2b7-9e0d23389637",
+          "id": "fb59ac99-dff6-4a6c-98a4-4ba682b5015f",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -33,7 +35,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "3cf7c491-4840-4b8f-a664-8cde11b883ae",
+          "id": "e29b1dce-06e0-45a9-beee-082a5df2b1ed",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -47,7 +49,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bc6ad59b-949c-4759-a24c-df279777a022",
+          "id": "c1354baa-12b6-4e90-befa-100a14c6069e",
           "name": "name-0",
           "required": true,
           "dataType": "@sys.any",
@@ -70,7 +72,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e94099a9-723d-4b9f-9a02-432c000a6373",
+          "id": "c05c7243-9cc5-409a-bb73-9b0b8e160fd0",
           "name": "number",
           "required": true,
           "dataType": "@sys.number-integer",
@@ -93,7 +95,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d9063e3b-6a6d-4c37-84b3-9e3d9b20d29f",
+          "id": "7a8bf78d-3c32-46fc-9eac-5b3f60ec327a",
           "name": "name-1",
           "required": true,
           "dataType": "@sys.any",
@@ -137,7 +139,7 @@
   "fallbackIntent": false,
   "events": [
     {
-      "name": "text-27"
+      "name": "text-27-1"
     }
   ],
   "conditionalResponses": [],

@@ -2,15 +2,30 @@
   "id": "654d7520-44bf-4610-b94b-62b81f22ff41",
   "name": "27-why did we skip-text3",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "text-27-3"
+  ],
   "responses": [
     {
       "resetContexts": false,
       "action": "saveToRepeat",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-27-3",
+          "lifespan": 0
+        },
+        {
+          "name": "text-27",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
       "parameters": [
         {
-          "id": "0f6ff184-a8de-4dc1-aa52-db630682faa4",
+          "id": "1254411e-c4e2-4f9d-b76e-5801c09f22df",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -23,7 +38,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "33def6f6-0283-4900-b569-e32838129203",
+          "id": "88362e0e-d597-47fe-ae1e-faaed788cb21",
           "name": "name-4",
           "required": true,
           "dataType": "@sys.any",
@@ -46,7 +61,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bc1082e2-4261-486e-8c28-2bf7bd614f57",
+          "id": "e0de991c-c4f9-444e-b40a-82ed170420ce",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -65,7 +80,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "40ae4a0c-32c8-4533-b4ce-894df7be0374",
+          "id": "a4f1a6d2-ce10-4c90-a173-5f949697545d",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -99,7 +114,7 @@
       "speech": []
     }
   ],
-  "priority": 500000,
+  "priority": 250000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
