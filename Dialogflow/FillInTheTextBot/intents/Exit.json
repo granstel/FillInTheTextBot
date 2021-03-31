@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "bf814564-b1ed-4e91-a45c-ea804664de7a",
+          "id": "52eecb69-06a5-46ec-b35a-f9d85b8777a5",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -62,5 +62,6 @@
   "events": [],
   "conditionalResponses": [],
   "condition": "",
-  "conditionalFollowupEvents": []
+  "conditionalFollowupEvents": [],
+  "endInteraction": true
 }

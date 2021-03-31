@@ -1,34 +1,26 @@
 {
-  "id": "1a458d34-22b4-47f9-b1d9-8ee291aed77c",
-  "name": "Yes",
+  "id": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "27-why did we skip",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-27",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
-          "id": "16199ede-e4dc-4231-8146-0ab34ed61561",
-          "name": "sberEmotion",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "igrivost",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "1658eea0-4003-4a1b-8a62-7cf74b4c9039",
+          "id": "004a7d2a-31f5-4736-95db-022d11ae01fc",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "#multipart-text.textKey",
+          "value": "text-27-1",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -45,9 +37,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Тогда приступим!",
-            "Приступим!",
-            "Отлично!"
+            "Давай придумаем,",
+            "Давай подумаем,"
           ],
           "condition": ""
         }

@@ -1,0 +1,197 @@
+[
+  {
+    "id": "fb00d0a5-d1cf-4913-9a9a-18982047b646",
+    "data": [
+      {
+        "text": "белого",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9de66127-1328-4d1f-9607-a63741cfaa52",
+    "data": [
+      {
+        "text": "красного",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "19df0927-0c9b-4bbe-b5eb-201ab2545db4",
+    "data": [
+      {
+        "text": "синего",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8b7daae5-8901-4460-9488-8e2e4217abf8",
+    "data": [
+      {
+        "text": "усидчивые",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4d7374e7-77c2-4f51-918a-2a9dd3edadfc",
+    "data": [
+      {
+        "text": "Тёплые",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "26925e5d-4cdd-464a-91d4-e33fb454c0aa",
+    "data": [
+      {
+        "text": "Мокрые",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c9cfc4ad-cfab-4ccc-a5ed-d9c001d38c48",
+    "data": [
+      {
+        "text": "Света",
+        "meta": "@sys.any",
+        "alias": "name-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8088b5cf-e568-451d-8592-be1aeef9979d",
+    "data": [
+      {
+        "text": "Юля",
+        "meta": "@sys.any",
+        "alias": "name-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ab7b3e02-c0b5-4b59-a8b0-35059d102fad",
+    "data": [
+      {
+        "text": "Марина",
+        "meta": "@sys.any",
+        "alias": "name-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2b4c2ff2-36bd-4228-876f-3578fb8f95f0",
+    "data": [
+      {
+        "text": "Вася",
+        "meta": "@sys.any",
+        "alias": "name-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b7592d6f-e6fe-484f-b7e7-13605d33701d",
+    "data": [
+      {
+        "text": "Саша",
+        "meta": "@sys.any",
+        "alias": "name-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "12600dd9-4ce3-4ea4-948c-6222cd32a7e9",
+    "data": [
+      {
+        "text": "Стёпа",
+        "meta": "@sys.any",
+        "alias": "name-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0caf7d81-40e1-4cb5-9888-35882d54c105",
+    "data": [
+      {
+        "text": "Степан",
+        "meta": "@sys.any",
+        "alias": "name-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
