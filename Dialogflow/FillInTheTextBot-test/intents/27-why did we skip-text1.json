@@ -26,11 +26,11 @@
       ],
       "parameters": [
         {
-          "id": "d0c18ba0-6bdd-4ee4-9cc2-e9db72111139",
+          "id": "2e4be471-73f3-452a-9741-1936292f80bb",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "почему они прогуляли. Эта история состоит из трёх частей, пойдём с первой.",
+          "value": "«почему они прогуляли». Эта история состоит из трёх частей, пойдём с первой.",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -40,7 +40,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "6d83b1e6-f1a6-43f0-b531-4dd0dcd5723d",
+          "id": "f0c3c140-2c1f-4e0e-8dce-15ada98f5af4",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -54,7 +54,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "4fac9d2e-342c-4f8f-8cf3-0518467930dc",
+          "id": "b850d2fb-9a02-4f5d-bc60-ccbb8b5b22a6",
           "name": "name-0",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +77,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "13696828-af08-4d79-8642-ca511c920af6",
+          "id": "2bd98484-7377-4bb7-b483-335687d8b90b",
           "name": "number",
           "required": true,
           "dataType": "@sys.number-integer",
@@ -100,7 +100,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9be8ad5f-d82a-47c5-afdb-50ff309be131",
+          "id": "86ea96d3-2dee-4097-8ba7-c4da13a01b83",
           "name": "name-1",
           "required": true,
           "dataType": "@sys.any",

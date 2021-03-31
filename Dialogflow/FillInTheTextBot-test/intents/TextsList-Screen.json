@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "90b3b1c1-8e5e-4ebe-87e5-faa9eef509c6",
+          "id": "4413b940-5f06-42d0-945e-844bbdae809a",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -34,19 +34,6 @@
         }
       ],
       "messages": [
-        {
-          "type": "1",
-          "platform": "facebook",
-          "title": "кнопки",
-          "buttons": [
-            {
-              "text": "Самый новый"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
         {
           "type": "1",
           "platform": "telegram",
@@ -148,19 +135,6 @@
           "title": "истории",
           "buttons": [
             {
-              "text": "Гороскоп для козерогов"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
-          "type": "1",
-          "platform": "telegram",
-          "title": "истории",
-          "buttons": [
-            {
               "text": "Гороскоп про водолеев"
             },
             {
@@ -222,6 +196,22 @@
             },
             {
               "text": "Гороскоп про стрельцов"
+            },
+            {
+              "text": "Гороскоп для козерогов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Самый новый"
             },
             {
               "text": "Любой"
