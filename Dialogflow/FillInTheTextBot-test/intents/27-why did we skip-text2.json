@@ -12,7 +12,7 @@
       "affectedContexts": [
         {
           "name": "multipart-text",
-          "lifespan": 5
+          "lifespan": 2
         },
         {
           "name": "text-27-2",
@@ -25,7 +25,7 @@
       ],
       "parameters": [
         {
-          "id": "e6644ee7-0e61-428c-991b-8d594c0d083f",
+          "id": "6d17d6cd-a2bc-40c4-92ff-d44d0fc8105d",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -39,7 +39,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e7e3920f-47ea-4197-88ac-21027694df91",
+          "id": "390e0500-1ff3-4d36-bbfb-d27cba633de6",
           "name": "name-3",
           "required": true,
           "dataType": "@sys.any",
@@ -62,7 +62,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "91180684-39ea-4c19-9a13-66431bfe3e1b",
+          "id": "0801fd5b-383f-4dc0-8a8d-d37e99916f8c",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -81,7 +81,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bf7be83b-e504-44b0-a6ce-aa0df7cd2e7f",
+          "id": "193994a3-9da6-4f44-a38e-b54abe443166",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -106,6 +106,17 @@
       ],
       "messages": [
         {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
@@ -119,7 +130,7 @@
       "speech": []
     }
   ],
-  "priority": 250000,
+  "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,

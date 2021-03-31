@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "ce4958e6-3617-4d63-984d-7679ea6a08d1",
+          "id": "90b3b1c1-8e5e-4ebe-87e5-faa9eef509c6",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -34,6 +34,19 @@
         }
       ],
       "messages": [
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "text": "Самый новый"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "1",
           "platform": "telegram",
@@ -119,6 +132,22 @@
               "text": "Про 8 марта"
             },
             {
+              "text": "Про кота Бориса"
+            },
+            {
+              "text": "Прогульщики"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
               "text": "Гороскоп для козерогов"
             }
           ],
@@ -196,19 +225,6 @@
             },
             {
               "text": "Любой"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
-          "type": "1",
-          "platform": "telegram",
-          "title": "истории",
-          "buttons": [
-            {
-              "text": "Самый новый"
             }
           ],
           "textToSpeech": "",

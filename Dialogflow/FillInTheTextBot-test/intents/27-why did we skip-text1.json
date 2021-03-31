@@ -12,7 +12,7 @@
       "affectedContexts": [
         {
           "name": "multipart-text",
-          "lifespan": 50
+          "lifespan": 2
         },
         {
           "name": "text-27-1",
@@ -25,7 +25,7 @@
       ],
       "parameters": [
         {
-          "id": "62c2c6c5-c661-44b7-b085-3e53fcab9ced",
+          "id": "d0c18ba0-6bdd-4ee4-9cc2-e9db72111139",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -39,7 +39,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e2ce213f-cc42-4936-8231-18718d93aac5",
+          "id": "6d83b1e6-f1a6-43f0-b531-4dd0dcd5723d",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -53,7 +53,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bd8815dc-211a-4eec-b376-ed68488f2388",
+          "id": "4fac9d2e-342c-4f8f-8cf3-0518467930dc",
           "name": "name-0",
           "required": true,
           "dataType": "@sys.any",
@@ -76,7 +76,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "3bfd1df6-46fe-4086-ab8c-584a0bc32cf4",
+          "id": "13696828-af08-4d79-8642-ca511c920af6",
           "name": "number",
           "required": true,
           "dataType": "@sys.number-integer",
@@ -99,7 +99,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "5f1bda95-967b-43b4-ab66-459c6d190cce",
+          "id": "9be8ad5f-d82a-47c5-afdb-50ff309be131",
           "name": "name-1",
           "required": true,
           "dataType": "@sys.any",
@@ -123,6 +123,17 @@
         }
       ],
       "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",

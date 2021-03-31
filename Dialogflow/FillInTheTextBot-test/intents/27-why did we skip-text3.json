@@ -25,7 +25,7 @@
       ],
       "parameters": [
         {
-          "id": "0bc9227b-44c5-41ac-adea-36df379164dd",
+          "id": "76916ca7-f0d5-4edd-8d4c-5b444f454c3c",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -38,7 +38,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bf0fddf9-67f5-491b-8920-7316f9775edd",
+          "id": "9c5a3a5e-6b2c-407e-809b-90feac084784",
           "name": "name-4",
           "required": true,
           "dataType": "@sys.any",
@@ -61,7 +61,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a4d5961b-d7b4-47b7-9571-38fc9f35522d",
+          "id": "ea51d1e7-a4cb-4ce4-b4aa-03d665094d53",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -80,7 +80,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "002af63a-527a-4e19-a566-80491fad329a",
+          "id": "24bf918e-d4dd-4c20-b496-3f3d54579b1a",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -101,6 +101,31 @@
       ],
       "messages": [
         {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Конечно!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Поблагодарить разработчиков"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
@@ -114,7 +139,7 @@
       "speech": []
     }
   ],
-  "priority": 250000,
+  "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
