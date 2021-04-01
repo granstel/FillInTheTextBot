@@ -26,7 +26,7 @@ namespace FillInTheTextBot.Api.DependencyModules
 
         private ScopesSelector<SessionsClient> RegisterSessionsClientBalancer(IComponentContext context)
         {
-            var configuration = context.Resolve<AppConfiguration>();
+            var configuration = context.Resolve<DialogflowConfiguration[]>();
 
             var scopeContexts = GetScopesContexts(configuration);
 
@@ -52,7 +52,7 @@ namespace FillInTheTextBot.Api.DependencyModules
 
         private ScopesSelector<ContextsClient> RegisterContextsClientBalancer(IComponentContext context)
         {
-            var configuration = context.Resolve<AppConfiguration>();
+            var configuration = context.Resolve<DialogflowConfiguration[]>();
 
             var contexts = GetScopesContexts(configuration);
 
@@ -76,15 +76,17 @@ namespace FillInTheTextBot.Api.DependencyModules
             return client;
         }
 
-        private ICollection<ScopeContext> GetScopesContexts(AppConfiguration configuration)
+        private ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowScopes)
         {
-            var scopeContexts = configuration.DialogflowInstances
+            var scopeContexts = dialogflowScopes.Where(i => !string.IsNullOrEmpty(i.ProjectId))
                 .Select(i =>
                 {
                     var context = new ScopeContext(i.ProjectId);
                     
                     context.Parameters.Add("ProjectId", i.ProjectId);
                     context.Parameters.Add("JsonPath", i.JsonPath);
+                    context.Parameters.Add("LogQuery", i.LogQuery.ToString());
+                    context.Parameters.Add("LanguageCode", i.LanguageCode);
 
                     return context;
                 })

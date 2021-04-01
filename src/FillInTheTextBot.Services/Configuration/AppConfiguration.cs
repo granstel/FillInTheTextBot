@@ -6,9 +6,7 @@
 
         public QnaConfiguration Qna { get; set; }
 
-        public DialogflowConfiguration Dialogflow { get; set; }
-
-        public DialogflowConfiguration[] DialogflowInstances { get; set; }
+        public DialogflowConfiguration[] DialogflowScopes { get; set; }
 
         public RedisConfiguration Redis { get; set; }
     }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Google.Cloud.Dialogflow.V2;
-using FillInTheTextBot.Services.Configuration;
 using NLog;
 using System.Linq;
 using GranSteL.Helpers.Redis.Extensions;
@@ -32,25 +31,22 @@ namespace FillInTheTextBot.Services
 
         private readonly Logger _log = LogManager.GetLogger(nameof(DialogflowService));
 
-        private readonly DialogflowConfiguration _configuration;
         private readonly ScopesSelector<SessionsClient> _sessionsClientBalancer;
         private readonly ScopesSelector<ContextsClient> _contextsClientBalancer;
         private readonly IMapper _mapper;
 
-        private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, EventInput>> _eventResolvers;
+        private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>> _eventResolvers;
 
         public DialogflowService(
             IMapper mapper,
-            DialogflowConfiguration configuration,
             ScopesSelector<SessionsClient> sessionsClientBalancer,
             ScopesSelector<ContextsClient> contextsClientBalancer)
         {
-            _configuration = configuration;
             _mapper = mapper;
             _sessionsClientBalancer = sessionsClientBalancer;
             _contextsClientBalancer = contextsClientBalancer;
 
-            _eventResolvers = new Dictionary<InternalModels.Source, Func<InternalModels.Request, EventInput>>
+            _eventResolvers = new Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>>
             {
                 {InternalModels.Source.Yandex, DefaultWelcomeEventResolve},
                 {InternalModels.Source.Sber, DefaultWelcomeEventResolve},
@@ -94,12 +90,14 @@ namespace FillInTheTextBot.Services
         {
             var intentRequest = CreateQuery(request, context);
 
-            if (_configuration.LogQuery)
+            bool.TryParse(context.Parameters["LogQuery"], out var isLogQuery);
+
+            if (isLogQuery)
                 _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
             DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest);
 
-            if (_configuration.LogQuery)
+            if (isLogQuery)
                 _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
 
             var queryResult = intentResponse.QueryResult;
@@ -131,7 +129,9 @@ namespace FillInTheTextBot.Services
         {
             var session = CreateSession(context.Parameters["ProjectId"], request.SessionId);
 
-            var eventInput = ResolveEvent(request);
+            var languageCode = context.Parameters["LanguageCode"];
+
+            var eventInput = ResolveEvent(request, languageCode);
 
             var text = request.Text;
 
@@ -145,7 +145,7 @@ namespace FillInTheTextBot.Services
                 Text = new TextInput
                 {
                     Text = text ?? string.Empty,
-                    LanguageCode = _configuration.LanguageCode
+                    LanguageCode = languageCode
                 }
             };
 
@@ -169,7 +169,7 @@ namespace FillInTheTextBot.Services
             return intentRequest;
         }
 
-        private EventInput ResolveEvent(InternalModels.Request request)
+        private EventInput ResolveEvent(InternalModels.Request request, string languageCode)
         {
             EventInput result;
 
@@ -177,17 +177,17 @@ namespace FillInTheTextBot.Services
 
             if (sourceMessenger != null && _eventResolvers.ContainsKey(sourceMessenger.Value))
             {
-                result = _eventResolvers[sourceMessenger.Value].Invoke(request);
+                result = _eventResolvers[sourceMessenger.Value].Invoke(request, languageCode);
             }
             else
             {
-                result = EventByCommand(request?.Text);
+                result = EventByCommand(request?.Text, languageCode);
             }
 
             return result;
         }
 
-        private EventInput EventByCommand(string requestText)
+        private EventInput EventByCommand(string requestText, string languageCode)
         {
             var result = default(EventInput);
 
@@ -202,22 +202,22 @@ namespace FillInTheTextBot.Services
 
             if (!string.IsNullOrEmpty(eventName))
             {
-                result = GetEvent(eventName);
+                result = GetEvent(eventName, languageCode);
             }
 
             return result;
         }
 
-        private EventInput GetEvent(string name)
+        private EventInput GetEvent(string name, string languageCode)
         {
             return new EventInput
             {
                 Name = name,
-                LanguageCode = _configuration.LanguageCode
+                LanguageCode = languageCode
             };
         }
 
-        private EventInput DefaultWelcomeEventResolve(InternalModels.Request request)
+        private EventInput DefaultWelcomeEventResolve(InternalModels.Request request, string languageCode)
         {
             EventInput result;
 
@@ -226,16 +226,16 @@ namespace FillInTheTextBot.Services
             {
                 if (request.IsOldUser)
                 {
-                    result = GetEvent(EasyWelcomeEventName);
+                    result = GetEvent(EasyWelcomeEventName, languageCode);
                 }
                 else
                 {
-                    result = GetEvent(WelcomeEventName);
+                    result = GetEvent(WelcomeEventName, languageCode);
                 }
             }
             else
             {
-                result = EventByCommand(request.Text);
+                result = EventByCommand(request.Text, languageCode);
             }
 
             return result;

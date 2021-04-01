@@ -2,13 +2,6 @@
 {
     public class DialogflowConfiguration : Configuration
     {
-        private string _token;
-        public virtual string Token
-        {
-            get => _token;
-            set => _token = ExpandVariable(value);
-        }
-
         private string _projectId;
         public virtual string ProjectId
         {
