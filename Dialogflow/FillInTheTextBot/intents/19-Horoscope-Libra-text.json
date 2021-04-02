@@ -157,6 +157,10 @@
           "title": "Кнопки",
           "buttons": [
             {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Проголосовать за занимательные истории"
+            },
+            {
               "postback": "https://vk.com/fillinthetextbot",
               "text": "Предложить свою идею текста"
             }

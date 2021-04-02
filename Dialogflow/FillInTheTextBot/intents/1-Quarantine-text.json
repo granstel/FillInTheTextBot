@@ -261,6 +261,10 @@
           "title": "Кнопки",
           "buttons": [
             {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Проголосовать за навык"
+            },
+            {
               "postback": "https://vk.com/fillinthetextbot",
               "text": "Следить за новостями"
             }

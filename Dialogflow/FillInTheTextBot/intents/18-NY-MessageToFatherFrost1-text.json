@@ -173,6 +173,10 @@
           "title": "Кнопки",
           "buttons": [
             {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Голосовать за занимательные истории"
+            },
+            {
               "postback": "https://vk.com/fillinthetextbot",
               "text": "Подписаться на новости в ВК"
             }
