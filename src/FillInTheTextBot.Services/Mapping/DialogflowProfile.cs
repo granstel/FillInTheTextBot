@@ -4,6 +4,7 @@ using AutoMapper;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.WellKnownTypes;
 using FillInTheTextBot.Models;
+using GranSteL.Helpers.Redis.Extensions;
 
 namespace FillInTheTextBot.Services.Mapping
 {
@@ -13,6 +14,7 @@ namespace FillInTheTextBot.Services.Mapping
         {
             CreateMap<QueryResult, Dialog>()
                 .ForMember(d => d.Parameters, m => m.MapFrom(s => GetParameters(s)))
+                .ForMember(d => d.Payload, m => m.MapFrom(s => ParsePayload(s)))
                 .ForMember(d => d.Response, m => m.MapFrom(s => s.FulfillmentText))
                 .ForMember(d => d.Buttons, m => m.MapFrom(s => GetButtons(s)))
                 .ForMember(d => d.ParametersIncomplete, m => m.MapFrom(s => !s.AllRequiredParamsPresent))
@@ -85,6 +87,15 @@ namespace FillInTheTextBot.Services.Mapping
             quickReplies.AddRange(cards);
 
             return quickReplies.ToArray();
+        }
+
+        private Payload ParsePayload(QueryResult queryResult)
+        {
+            var payload = queryResult?.FulfillmentMessages?
+                .Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.Payload)
+                .Select(m => m.Payload.ToString().Deserialize<Payload>()).FirstOrDefault();
+
+            return payload;
         }
     }
 }

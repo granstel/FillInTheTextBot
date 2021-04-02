@@ -24,6 +24,8 @@ namespace FillInTheTextBot.Models
 
         public string ScopeKey { get; set; }
 
+        public Payload Payload { get; set; }
+
         public IEnumerable<string> GetParameters(string key)
         {
             return Parameters?.Where(p => string.Equals(p.Key, key)).Select(p => p.Value);

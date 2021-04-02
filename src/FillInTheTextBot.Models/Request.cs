@@ -36,5 +36,7 @@ namespace FillInTheTextBot.Models
         public int NextTextIndex { get; set; }
 
         public string ScopeKey { get; set; }
+
+        public Appeal Appeal { get; set; }
     }
 }

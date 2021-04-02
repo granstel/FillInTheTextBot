@@ -74,6 +74,8 @@ namespace FillInTheTextBot.Services
 
             response.NextTextIndex = request.NextTextIndex;
 
+            response.Text = string.Format(response.Text, dialog.Payload.Words[request.Appeal]);
+
             return response;
         }
 

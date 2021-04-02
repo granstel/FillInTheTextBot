@@ -4,6 +4,8 @@ using AutoMapper;
 using FillInTheTextBot.Services.Mapping;
 using Sber.SmartApp.Models;
 using Sber.SmartApp.Models.Constants;
+using InternalModels = FillInTheTextBot.Models;
+using SberModels = Sber.SmartApp.Models;
 
 namespace FillInTheTextBot.Messengers.Sber
 {
@@ -14,7 +16,7 @@ namespace FillInTheTextBot.Messengers.Sber
     {
         public SberProfile()
         {
-            CreateMap<Request, Models.Request>()
+            CreateMap<Request, InternalModels.Request>()
                 .ForMember(d => d.ChatHash, m => m.ResolveUsing(s => s?.Payload?.AppInfo?.ProjectId.ToString()))
                 .ForMember(d => d.UserHash, m => m.ResolveUsing(s => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
                 .ForMember(d => d.Text, m => m.ResolveUsing(s => s?.Payload?.Message?.OriginalText))
@@ -23,24 +25,35 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.Language, m => m.Ignore())
                 .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false))
                 .ForMember(d => d.ClientId, m => m.ResolveUsing(s => s?.Payload?.Device?.Surface))
-                .ForMember(d => d.Source, m => m.UseValue(Models.Source.Sber))
+                .ForMember(d => d.Source, m => m.UseValue(InternalModels.Source.Sber))
+                .ForMember(d => d.Appeal, m => m.ResolveUsing(s =>
+                {
+                    var appeal = InternalModels.Appeal.NoOfficial;
+
+                    if (string.Equals(s.Payload?.Character?.Appeal, "official"))
+                    {
+                        appeal = InternalModels.Appeal.Official;
+                    }
+
+                    return appeal;
+                }))
                 .ForMember(d => d.RequiredContexts, m => m.Ignore())
                 .ForMember(d => d.IsOldUser, m => m.Ignore())
                 .ForMember(d => d.NextTextIndex, m => m.Ignore())
                 .ForMember(d => d.ScopeKey, m => m.Ignore());
 
-            CreateMap<Models.Response, Response>()
+            CreateMap<InternalModels.Response, Response>()
                 .ForMember(d => d.Payload, m => m.MapFrom(s => s))
                 ;
 
-            CreateMap<Models.Response, ResponsePayload>()
+            CreateMap<InternalModels.Response, ResponsePayload>()
                 .ForMember(d => d.PronounceText, m => m.MapFrom(s => s.Text))
                 .ForMember(d => d.PronounceTextType, m => m.UseValue("application/text"))
                 .ForMember(d => d.AutoListening, m => m.MapFrom(s => !s.Finished))
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
                 .ForMember(d => d.Emotion, m => m.ResolveUsing(s =>
                 {
-                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[Models.Source.Sber], out string emotionKey);
+                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[InternalModels.Source.Sber], out string emotionKey);
 
                     return emotionKey;
                 }))
@@ -51,17 +64,17 @@ namespace FillInTheTextBot.Messengers.Sber
             CreateMap<string, Emotion>()
                 .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
 
-            CreateMap<Models.Response, PayloadItem[]>().ConvertUsing(MapResponseToItem);
+            CreateMap<InternalModels.Response, PayloadItem[]>().ConvertUsing(MapResponseToItem);
 
-            CreateMap<IEnumerable<Models.Button>, Suggestion>().ConvertUsing(MapButtonsToSuggestion);
+            CreateMap<IEnumerable<InternalModels.Button>, Suggestion>().ConvertUsing(MapButtonsToSuggestion);
 
 
-            CreateMap<Models.Button, Button>()
+            CreateMap<InternalModels.Button, Button>()
                 .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
                 .ForMember(d => d.Action, m => m.MapFrom(s => s))
                 ;
 
-            CreateMap<Models.Button, Action>()
+            CreateMap<InternalModels.Button, SberModels.Action>()
                 .ForMember(d => d.Text, m => m.MapFrom(s => s.Text))
                 .ForMember(d => d.DeepLink, m => m.MapFrom(s => s.Url))
                 .ForMember(d => d.Type, m => m.ResolveUsing(s =>
@@ -89,7 +102,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 ;
         }
 
-        private PayloadItem[] MapResponseToItem(Models.Response source, PayloadItem[] destinations, ResolutionContext context)
+        private PayloadItem[] MapResponseToItem(InternalModels.Response source, PayloadItem[] destinations, ResolutionContext context)
         {
             var itemWithBubble = new PayloadItem
             {
@@ -131,7 +144,7 @@ namespace FillInTheTextBot.Messengers.Sber
                     }
                 };
 
-                var action = context.Mapper.Map<Action>(b);
+                var action = context.Mapper.Map<SberModels.Action>(b);
 
                 cardItem.Actions = new[] { action };
 
@@ -154,7 +167,7 @@ namespace FillInTheTextBot.Messengers.Sber
             return new[] { itemWithBubble, itemWithCard };
         }
 
-        private Suggestion MapButtonsToSuggestion(IEnumerable<Models.Button> source, Suggestion destination, ResolutionContext context)
+        private Suggestion MapButtonsToSuggestion(IEnumerable<InternalModels.Button> source, Suggestion destination, ResolutionContext context)
         {
             var buttons = context.Mapper.Map<Button[]>(source);
 
