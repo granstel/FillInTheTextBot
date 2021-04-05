@@ -145,7 +145,6 @@
           "platform": "telegram",
           "title": "Кнопки",
           "buttons": [
-		  
             {
               "postback": "https://t.me/yadialogsnews/170",
               "text": "Поддержать занимательные истории"
