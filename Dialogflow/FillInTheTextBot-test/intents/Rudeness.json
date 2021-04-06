@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "5d8dd6ff-ed4e-4f59-a9c8-592d395db127",
+          "id": "4c63139b-1e37-4775-8bfb-33cc1146ea93",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -26,6 +26,17 @@
       ],
       "messages": [
         {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Давай дальше"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
@@ -33,8 +44,25 @@
           "speech": [
             "Фу, как грубо!",
             "Это было грубо!",
-            "Не груби мне!"
+            "Не {0} мне!"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Words": {
+              "NoOfficial ": [
+                "груби"
+              ],
+              "Official": [
+                "грубите"
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],

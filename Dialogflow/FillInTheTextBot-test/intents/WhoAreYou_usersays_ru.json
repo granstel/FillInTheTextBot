@@ -1,5 +1,72 @@
 [
   {
+    "id": "b940777e-e4ad-46a1-86cb-462a930317fb",
+    "data": [
+      {
+        "text": "что ты такое",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e1a946ba-4b41-4a84-ac08-8d5a48520a90",
+    "data": [
+      {
+        "text": "сбер",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ты кто",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "55692860-6690-4ba8-a883-5f9c0dba02c9",
+    "data": [
+      {
+        "text": "джой",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " кто ты",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1fd7320a-7196-494b-a331-7de92e432fb0",
+    "data": [
+      {
+        "text": "афина",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ты кто",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "7b63e5e9-c475-42f2-bb2f-1c1231b47980",
     "data": [
       {
