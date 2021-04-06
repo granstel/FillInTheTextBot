@@ -6,11 +6,11 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
+      "action": "endConversation",
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "52eecb69-06a5-46ec-b35a-f9d85b8777a5",
+          "id": "2e0966af-142e-415b-908c-a2effa966cb4",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -49,10 +49,29 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Окей, возвращайся, буду ждать!",
-            "Если что, я всегда здесь, возвращайся!",
-            "Приходи ещё, я буду здесь!"
+            "Окей, {0}, буду ждать!",
+            "Если что, я всегда здесь, {0}!",
+            "{1} ещё, я буду здесь!"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Words": {
+              "NoOfficial ": [
+                "возвращайся",
+                "Приходи"
+              ],
+              "Official": [
+                "возвращайтесь",
+                "Приходите"
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],
