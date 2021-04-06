@@ -58,7 +58,7 @@ namespace FillInTheTextBot.Messengers.Sber
                     return emotionKey;
                 }))
                 .ForMember(d => d.Items, m => m.MapFrom(s => s))
-                .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.QuickReply)))
+                .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.IsQuickReply)))
                 ;
 
             CreateMap<string, Emotion>()
@@ -109,7 +109,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 Bubble = { Text = source.Text }
             };
 
-            var buttons = source.Buttons?.Where(b => !b.QuickReply).ToList();
+            var buttons = source.Buttons?.Where(b => !b.IsQuickReply).ToList();
 
             var cardItems = buttons?.Select(b =>
             {

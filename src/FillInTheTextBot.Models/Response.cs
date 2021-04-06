@@ -22,7 +22,7 @@ namespace FillInTheTextBot.Models
 
         public bool Finished { get; set; }
 
-        public Button[] Buttons { get; set; }
+        public ICollection<Button> Buttons { get; set; }
 
         public int NextTextIndex { get; set; }
 

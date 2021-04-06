@@ -5,6 +5,7 @@ namespace FillInTheTextBot.Models
     /// </summary>
     public enum Source
     {
+        Default,
         Yandex,
         Sber,
         Marusia

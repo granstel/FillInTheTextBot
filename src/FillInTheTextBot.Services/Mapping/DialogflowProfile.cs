@@ -73,7 +73,7 @@ namespace FillInTheTextBot.Services.Mapping
                             .SelectMany(m => m.QuickReplies.QuickReplies_.Select(r => new Button
                             {
                                 Text = r,
-                                QuickReply = true
+                                IsQuickReply = true
                             })).Where(r => r != null).ToList();
 
             var cards = s?.FulfillmentMessages

@@ -92,7 +92,7 @@ namespace FillInTheTextBot.Messengers
 
                 contexts.Add(new Context
                 {
-                    Name = $"source-{request.Source?.ToString()}",
+                    Name = $"source-{request.Source}",
                     LifeSpan = 2,
                     Parameters = parameters
                 });

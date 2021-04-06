@@ -11,7 +11,7 @@ namespace FillInTheTextBot.Models
 
         public static string IsOldUserKey => nameof(IsOldUser).ToUpper();
 
-        public Source? Source { get; set; }
+        public Source Source { get; set; }
 
         public string ChatHash { get; set; }
 

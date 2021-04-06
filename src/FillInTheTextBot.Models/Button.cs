@@ -6,6 +6,6 @@
 
         public string Url { get; set; }
 
-        public bool QuickReply { get; set; }
+        public bool IsQuickReply { get; set; }
     }
 }

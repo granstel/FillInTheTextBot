@@ -79,6 +79,8 @@ namespace FillInTheTextBot.Services
 
             response.Text = string.Format(response.Text ?? string.Empty, words);
 
+            response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
+
             return response;
         }
 
@@ -157,6 +159,26 @@ namespace FillInTheTextBot.Services
             }
 
             return result;
+        }
+
+        private ICollection<Button> AddButtonsFromPayload(ICollection<Button> responseButtons, Payload dialogPayload, Source requestSource)
+        {
+            var buttons = new List<Button>();
+            buttons.AddRange(responseButtons);
+
+            if (dialogPayload?.Buttons?.Any() == true)
+            {
+                buttons.AddRange(dialogPayload.Buttons);
+            }
+
+            var buttonsForSource = new List<Button>();
+            buttonsForSource = dialogPayload?.ButtonsForSource?.GetValueOrDefault(requestSource, buttonsForSource).ToList() ?? buttonsForSource;
+
+            buttons.AddRange(buttonsForSource);
+
+            buttons = buttons.Where(b => !string.IsNullOrEmpty(b.Text)).ToList();
+
+            return buttons;
         }
     }
 }
