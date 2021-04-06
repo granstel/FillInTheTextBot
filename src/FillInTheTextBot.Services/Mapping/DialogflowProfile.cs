@@ -19,13 +19,8 @@ namespace FillInTheTextBot.Services.Mapping
                 .ForMember(d => d.Buttons, m => m.MapFrom(s => GetButtons(s)))
                 .ForMember(d => d.ParametersIncomplete, m => m.MapFrom(s => !s.AllRequiredParamsPresent))
                 .ForMember(d => d.Action, m => m.MapFrom(s => s.Action))
-                .ForMember(d => d.EndConversation, m => m.Ignore())
-                .ForMember(d => d.ScopeKey, m => m.Ignore())
-                .AfterMap((s, d) =>
-                {
-                    d.EndConversation = s.DiagnosticInfo?.Fields?.Where(f => string.Equals(f.Key, "end_conversation"))
-                                            .Select(f => f.Value.BoolValue).FirstOrDefault() ?? false;
-                });
+                .ForMember(d => d.EndConversation, m => m.ResolveUsing(s => string.Equals(s?.Action, "endConversation")))
+                .ForMember(d => d.ScopeKey, m => m.Ignore());
         }
 
         private IDictionary<string, string> GetParameters(QueryResult queryResult)
