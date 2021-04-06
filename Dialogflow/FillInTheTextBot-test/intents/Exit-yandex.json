@@ -19,6 +19,10 @@
           "title": "кнопки",
           "buttons": [
             {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Проголосовать за навык"
+            },
+            {
               "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
               "text": "Поставить оценку"
             },

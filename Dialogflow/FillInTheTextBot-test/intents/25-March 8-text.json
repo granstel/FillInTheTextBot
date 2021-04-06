@@ -134,6 +134,10 @@
           "title": "Кнопки",
           "buttons": [
             {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Проголосовать за игру"
+            },
+            {
               "postback": "https://vk.com/fillinthetextbot",
               "text": "Новости навыка"
             }
