@@ -57,7 +57,7 @@ namespace FillInTheTextBot.Services
 
             response.NextTextIndex = request.NextTextIndex;
 
-            response.Text = GetResponseText(request.Appeal, response.Text, dialog);
+            response.Text = GetResponseText(request.Appeal, response.Text);
 
             response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
@@ -159,18 +159,21 @@ namespace FillInTheTextBot.Services
             return result;
         }
 
-        private string GetResponseText(Appeal appeal, string responseText, Dialog dialog)
+        private string GetResponseText(Appeal appeal, string responseText)
         {
-            var words = dialog?.Payload?.Words?.GetValueOrDefault(appeal);
+            _cache.TryGet($"AppealWords-{appeal}", out IDictionary<string, string> appealWords);
 
-            if (words?.Any() != true)
+            if (appealWords?.Any() != true)
             {
                 return responseText;
             }
 
-            var result = string.Format(responseText ?? string.Empty, words);
+            foreach (var appealWord in appealWords)
+            {
+                responseText = responseText.Replace(appealWord.Key, appealWord.Value);
+            }
 
-            return result;
+            return responseText;
         }
 
         private ICollection<Button> AddButtonsFromPayload(ICollection<Button> responseButtons, Payload dialogPayload, Source requestSource)
