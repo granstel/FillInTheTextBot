@@ -70,27 +70,20 @@ namespace FillInTheTextBot.Services
 
             if (string.IsNullOrEmpty(textKey))
             {
-                if (!_cache.TryGet("Texts", out string[] texts))
+                _cache.TryGet($"Texts-{request.Source}", out string[] texts);
+
+                if (texts?.Any() != true || !_cache.TryGet("Texts", out texts))
                 {
                     response.Text = "Что-то у меня не нашлось никаких текстов...";
 
                     return response;
                 }
 
-                var index = request.NextTextIndex++;
-
-                if (index >= texts.Length)
-                {
-                    textKey = "texts-over";
-                }
-                else
-                {
-                    textKey = texts[index];
-                }
+                textKey = GetTextKey(request, texts);
             }
 
             var eventName = $"event:{textKey}";
-            
+
 
             var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, textKey);
 
@@ -104,6 +97,24 @@ namespace FillInTheTextBot.Services
             response.ScopeKey = dialog?.ScopeKey;
 
             return response;
+        }
+
+        private string GetTextKey(Request request, string[] texts)
+        {
+            string textKey;
+
+            var index = request.NextTextIndex++;
+
+            if (index >= texts.Length)
+            {
+                textKey = "texts-over";
+            }
+            else
+            {
+                textKey = texts[index];
+            }
+
+            return textKey;
         }
 
         private IDictionary<string, string> GetEmotions(Dialog dialog)
