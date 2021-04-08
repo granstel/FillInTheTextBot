@@ -35,15 +35,7 @@ namespace FillInTheTextBot.Services
 
             };
 
-            if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
-            {
-                var parameters = new Dictionary<string, string>
-                {
-                    { "text", dialog?.Response }
-                };
-
-                _dialogflowService.SetContextAsync(request.SessionId, "savedText", 5, parameters).Forget();
-            }
+            TrySetSavedText(request.SessionId, dialog);
 
             var resetTextIndex = string.Empty;
 
@@ -61,23 +53,11 @@ namespace FillInTheTextBot.Services
                 response = await GetText(request, dialog?.Response, textKey);
             }
 
-            var deleteAllContexts = string.Empty;
-
-            var isGotDeleteParameter = dialog?.Parameters.TryGetValue("deleteAllContexts", out deleteAllContexts) ?? false;
-
-            if (isGotDeleteParameter && string.Equals(deleteAllContexts, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
-            {
-                _dialogflowService.DeleteAllContextsAsync(request).Forget();
-            }
-
             response.Emotions = GetEmotions(dialog);
 
             response.NextTextIndex = request.NextTextIndex;
 
-            var words = new string[0];
-            words = dialog?.Payload?.Words?.GetValueOrDefault(request.Appeal, words) ?? words;
-
-            response.Text = string.Format(response.Text ?? string.Empty, words);
+            response.Text = GetResponseText(request.Appeal, response.Text, dialog);
 
             response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
@@ -128,18 +108,8 @@ namespace FillInTheTextBot.Services
 
         private IDictionary<string, string> GetEmotions(Dialog dialog)
         {
-            var result = new Dictionary<string, string>();
-
-            foreach (var emotionKey in EmotionsKeysMap.SourceEmotionKeys.Values)
-            {
-                var emotion = dialog?.GetParameters(emotionKey).FirstOrDefault();
-
-                if (!string.IsNullOrEmpty(emotion))
-                {
-                    result.Add(emotionKey, emotion);
-                }
-            }
-
+            var result = GetEmotionsFromDialog(dialog);
+            
             var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
 
             if (result.Any() || dialog?.ParametersIncomplete == true || string.IsNullOrEmpty(textName))
@@ -157,6 +127,37 @@ namespace FillInTheTextBot.Services
                 
                 result.Add(emotionKey, emotion);
             }
+
+            return result;
+        }
+
+        private Dictionary<string, string> GetEmotionsFromDialog(Dialog dialog)
+        {
+            var result = new Dictionary<string, string>();
+
+            foreach (var emotionKey in EmotionsKeysMap.SourceEmotionKeys.Values)
+            {
+                var emotion = dialog?.GetParameters(emotionKey).FirstOrDefault();
+
+                if (!string.IsNullOrEmpty(emotion))
+                {
+                    result.Add(emotionKey, emotion);
+                }
+            }
+
+            return result;
+        }
+
+        private string GetResponseText(Appeal appeal, string responseText, Dialog dialog)
+        {
+            var words = dialog?.Payload?.Words?.GetValueOrDefault(appeal);
+
+            if (words?.Any() != true)
+            {
+                return responseText;
+            }
+
+            var result = string.Format(responseText ?? string.Empty, words);
 
             return result;
         }
@@ -179,6 +180,19 @@ namespace FillInTheTextBot.Services
             buttons = buttons.Where(b => !string.IsNullOrEmpty(b.Text)).ToList();
 
             return buttons;
+        }
+
+        private void TrySetSavedText(string sessionId, Dialog dialog)
+        {
+            if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
+            {
+                var parameters = new Dictionary<string, string>
+                {
+                    { "text", dialog?.Response }
+                };
+
+                _dialogflowService.SetContextAsync(sessionId, "savedText", 5, parameters).Forget();
+            }
         }
     }
 }
