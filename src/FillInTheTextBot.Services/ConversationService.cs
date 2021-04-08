@@ -72,7 +72,7 @@ namespace FillInTheTextBot.Services
             {
                 _cache.TryGet($"Texts-{request.Source}", out string[] texts);
 
-                if (texts?.Any() != true || !_cache.TryGet("Texts", out texts))
+                if (texts?.Any() != true && !_cache.TryGet("Texts", out texts))
                 {
                     response.Text = "Что-то у меня не нашлось никаких текстов...";
 
