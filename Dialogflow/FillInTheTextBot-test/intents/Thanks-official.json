@@ -1,8 +1,11 @@
 {
-  "id": "63f87fcf-2f80-44f7-9f28-46f204cea411",
-  "name": "Problems",
+  "id": "9082560f-c8ee-4b62-af72-af3e90566728",
+  "parentId": "f6f81db1-5acc-4e30-a397-38b47fc9d92b",
+  "name": "Thanks-official",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "official"
+  ],
   "responses": [
     {
       "resetContexts": false,
@@ -10,11 +13,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "114b584f-eff6-422b-aefe-bb2a2c503bbf",
+          "id": "ac469074-6d98-466c-a267-c539f72bc865",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
-          "value": "bespokoistvo",
+          "value": "simpatiya",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -26,13 +29,25 @@
       ],
       "messages": [
         {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да, давай!",
+            "Покажи список"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "1",
           "platform": "telegram",
-          "title": "Кнопки",
+          "title": "кнопки",
           "buttons": [
             {
               "postback": "https://vk.com/fillinthetextbot",
-              "text": "Рассказать о проблеме"
+              "text": "Подписаться на новости"
             }
           ],
           "textToSpeech": "",
@@ -45,8 +60,10 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Видимо, возникли какие-то проблемы. Можешь рассказать об этом в паблике ВК \"Занимательные истории голосовых помощников\", и меня исправят. Давай продолжим?",
-            "Наверно, были какие-то проблемы. Расскажи, пожалуйста, об этом в паблике ВК \"Занимательные истории голосовых помощников\", и скоро всё исправят. Продолжим?"
+            "Благодарю, мне тоже понравилось! Сочиним что-нибудь ещё?",
+            "И мне понравилось! Давайте ещё что-нибудь сочиним?",
+            "Благодарю! Сочиним что-нибудь ещё?",
+            "Благодарю! Давайте ещё что-нибудь сочиним?"
           ],
           "condition": ""
         }

@@ -1,0 +1,287 @@
+[
+  {
+    "id": "46e23df7-975d-4aca-abf3-c5e0f0ba6f5c",
+    "data": [
+      {
+        "text": "своё",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9098ba6a-daa2-4a7c-aef2-75342fa7afad",
+    "data": [
+      {
+        "text": "свою",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3e2ec663-546a-4e9b-8ed5-79ee4e3334bf",
+    "data": [
+      {
+        "text": "добавить",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e6156553-0507-4310-a6d4-d57bbc86127b",
+    "data": [
+      {
+        "text": "придумать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "52db5cde-dfa3-4a3a-a477-5fa6bd74a0e7",
+    "data": [
+      {
+        "text": "добавить новую историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9d2e4f9a-2f5a-460b-adb8-1e5b8de72532",
+    "data": [
+      {
+        "text": "хочу свою историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "47b2f7f7-e9ee-4c24-b9de-549ec75f3cb9",
+    "data": [
+      {
+        "text": "хочу что то свое придумать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a37be3e9-907c-4b6f-a2ef-d54748fa0c47",
+    "data": [
+      {
+        "text": "а можно я придумаю свой рассказ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "11322d05-6b13-4f40-8380-38308c71d13e",
+    "data": [
+      {
+        "text": "можно я придумаю свой текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b25b987f-35de-4de7-bbd7-b1b5cdc7414d",
+    "data": [
+      {
+        "text": "дай я создам сказку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6379b411-5756-4247-a32d-1a224cd03ef9",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " страшную историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "028aee10-f824-4c5f-8d9c-33e611b505fb",
+    "data": [
+      {
+        "text": "давай придумаем страшную историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a9322279-60bb-41d8-b565-5c7c29d95100",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " прочитай текст ",
+        "userDefined": false
+      },
+      {
+        "text": "андрея",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "da2a2f18-c3ce-42b6-9d9d-345df3f1503b",
+    "data": [
+      {
+        "text": "давай про",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "04062d9c-ab53-4f3d-84f0-ec8775770d61",
+    "data": [
+      {
+        "text": "давай сочиним про",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1a4d662b-0386-4090-9a91-4aa6f8730cf5",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " про ",
+        "userDefined": false
+      },
+      {
+        "text": "алису",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6ec4a9d9-a3cb-4985-ac48-e939e5f8a0ea",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " про случай в диалогах",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c2caa2e5-5cf1-4aee-820e-9347be2db5b2",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " стих",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

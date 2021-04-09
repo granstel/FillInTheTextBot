@@ -1,0 +1,63 @@
+{
+  "id": "73494ad2-57cc-4fe9-b4af-3b00e02264c7",
+  "parentId": "107880bb-3c11-4d19-a220-87e2798a81e4",
+  "rootParentId": "107880bb-3c11-4d19-a220-87e2798a81e4",
+  "name": "TextsOver-official",
+  "auto": true,
+  "contexts": [
+    "official"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "TextsOver-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Подписаться на новости"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Хотя подождите... Мы прошли все истории. Если хотите быстрее узнать об их появлении, или предложить свой текст, подпишитесь на паблик ВК \"Занимательные истории голосовых помощников\". Потом возвращайтесь сюда, буду ждать Вас. Сочиним ещё?",
+            "Хотя... Мы прошли всё, что у меня было. Чтобы раньше всех узнать о появлении новых текстов или предложить свой, подпишитесь на паблик ВК \"Занимательные истории голосовых помощников\". Потом возвращайтесь, буду ждать Вас здесь. Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "texts-over"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

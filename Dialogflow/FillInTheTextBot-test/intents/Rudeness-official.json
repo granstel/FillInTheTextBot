@@ -1,8 +1,11 @@
 {
-  "id": "75068ef9-6921-49dc-8ba8-17ed0d2688b4",
-  "name": "Rudeness",
+  "id": "80844f77-2149-4f0c-a39a-f4f529cdc078",
+  "parentId": "75068ef9-6921-49dc-8ba8-17ed0d2688b4",
+  "name": "Rudeness-official",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "official"
+  ],
   "responses": [
     {
       "resetContexts": false,
@@ -10,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "5d8dd6ff-ed4e-4f59-a9c8-592d395db127",
+          "id": "9a069cce-721d-47ba-bdcd-25f4a90152ad",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -31,9 +34,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Фу, как грубо!",
+            "Прошу Вас не грубить мне!",
             "Это было грубо!",
-            "Не груби мне!"
+            "Не грубите мне, пожалуйста!"
           ],
           "condition": ""
         }

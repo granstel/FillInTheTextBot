@@ -1,8 +1,11 @@
 {
-  "id": "fde2e319-7d8c-45d6-8e1e-8b496aafacce",
-  "name": "No",
+  "id": "f4ad7d8c-1e89-4952-ad7c-05a193e8518d",
+  "parentId": "fde2e319-7d8c-45d6-8e1e-8b496aafacce",
+  "name": "No-official",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "official"
+  ],
   "responses": [
     {
       "resetContexts": false,
@@ -11,26 +14,14 @@
       "parameters": [],
       "messages": [
         {
-          "type": "2",
-          "platform": "telegram",
-          "title": "",
-          "replies": [
-            "Давай",
-            "Хорошо"
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Ну давай! Будет весело!",
-            "Да ладно тебе, давай!",
-            "Будет весело, давай!"
+            "Ну давайте! Будет весело!",
+            "Да ладно Вам, давайте!",
+            "Будет весело, давайте!"
           ],
           "condition": ""
         }

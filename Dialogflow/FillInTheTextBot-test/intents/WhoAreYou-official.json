@@ -1,8 +1,11 @@
 {
-  "id": "75068ef9-6921-49dc-8ba8-17ed0d2688b4",
-  "name": "Rudeness",
+  "id": "41280ed5-51f8-4f9a-b820-ef5892bc1f17",
+  "parentId": "35add0b0-9b7f-4e36-82c5-86829a58059d",
+  "name": "WhoAreYou-official",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "official"
+  ],
   "responses": [
     {
       "resetContexts": false,
@@ -10,11 +13,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "5d8dd6ff-ed4e-4f59-a9c8-592d395db127",
+          "id": "d277f2fe-b82a-4715-945b-20be68d23b02",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
-          "value": "nedovolstvo",
+          "value": "nedoumenie",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -31,9 +34,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Фу, как грубо!",
-            "Это было грубо!",
-            "Не груби мне!"
+            "Давайте позже это обсудим, а сейчас лучше сочиним что-нибудь?",
+            "Давайте обсудим эту тему чуть позже, а сейчас что-нибудь сочиним?",
+            "Предлагаю обсудить это позже, а сейчас сочиним что-нибудь?"
           ],
           "condition": ""
         }
