@@ -11,46 +11,16 @@
       "parameters": [],
       "messages": [
         {
-          "type": "2",
-          "platform": "telegram",
-          "title": "",
-          "replies": [
-            "Да",
-            "Помощь",
-            "Выход"
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Не совсем понимаю, о чём {0}. Это мы уже сочиняем?",
+            "Не совсем понимаю, о чём ты. Это мы уже сочиняем?",
             "А вот это не совсем понятно. Это уже вставлять в текст?",
             "Что? Это мы уже сочиняем?",
             "Что-что? Это уже вставлять в текст?"
           ],
-          "condition": ""
-        },
-        {
-          "type": "4",
-          "title": "",
-          "payload": {
-            "Words": {
-              "Official": [
-                "вы"
-              ],
-              "NoOfficial ": [
-                "ты"
-              ]
-            }
-          },
-          "textToSpeech": "",
-          "lang": "ru",
           "condition": ""
         }
       ],
