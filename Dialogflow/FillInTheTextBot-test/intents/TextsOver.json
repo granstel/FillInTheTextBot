@@ -34,6 +34,17 @@
           "condition": ""
         },
         {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Давай"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
