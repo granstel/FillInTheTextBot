@@ -1,0 +1,48 @@
+{
+  "id": "c66232a9-003a-480b-bafa-2662772d1082",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "TextsList-sber",
+  "auto": true,
+  "contexts": [
+    "source-sber"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "TextsList-followup",
+          "lifespan": 2
+        },
+        {
+          "name": "TextsList-followup-2",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Я их сейчас озвучу, а если надоест - останови меня, и скажи «любой» или «новый». Итак, вот что у меня сейчас есть:\n— Случай на уроке.\n— Карантин.\n— Анекдот про енота.\n— Про Бориса-кота.\n— Прогульщики.\nЧто выберешь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
