@@ -79,13 +79,12 @@
     "data": [
       {
         "text": "большой",
-        "meta": "@sys.any",
-        "alias": "adjective-male-1",
+        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
     "isTemplate": false,
-    "count": 1,
+    "count": 3,
     "lang": "ru",
     "updated": 0
   },
@@ -94,8 +93,7 @@
     "data": [
       {
         "text": "пистолет",
-        "meta": "@sys.any",
-        "alias": "thing",
+        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -156,20 +154,6 @@
         "text": "птица",
         "meta": "@sys.any",
         "alias": "animal-female",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 1,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "dddea331-8b12-4c9c-a094-a5986b376de3",
-    "data": [
-      {
-        "text": "большой",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
