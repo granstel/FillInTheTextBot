@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>1.7.2</Version>
-    <PackageReleaseNotes>Marusia's own models, use session and user state</PackageReleaseNotes>
+    <Version>1.8.0</Version>
+    <PackageReleaseNotes>Buttons from payload, replace words for appeals, refactoring</PackageReleaseNotes>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
