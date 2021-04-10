@@ -6,11 +6,11 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
+      "action": "endConversation",
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "52eecb69-06a5-46ec-b35a-f9d85b8777a5",
+          "id": "dfe76377-454a-4ae2-85d2-151b6861de23",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
