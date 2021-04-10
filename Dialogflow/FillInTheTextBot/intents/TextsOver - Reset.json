@@ -2,7 +2,7 @@
   "id": "f23adb22-cd45-4c81-9c77-8376e4cfcccf",
   "parentId": "107880bb-3c11-4d19-a220-87e2798a81e4",
   "rootParentId": "107880bb-3c11-4d19-a220-87e2798a81e4",
-  "name": "TextsOver - Reset",
+  "name": "TextsOver-Reset",
   "auto": true,
   "contexts": [
     "TextsOver-followup"
