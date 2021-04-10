@@ -1,9 +1,49 @@
 [
   {
-    "id": "7b63e5e9-c475-42f2-bb2f-1c1231b47980",
+    "id": "84f21a8f-32c5-46c0-8a3f-05ad3ab37837",
     "data": [
       {
-        "text": "сколько тебе лет",
+        "text": "сбер",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cdaf8c58-b917-4986-a5ce-06ad04aded67",
+    "data": [
+      {
+        "text": "джой",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c57c1c2e-cbd8-4106-87fe-72f000a42604",
+    "data": [
+      {
+        "text": "что ты такое",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "77683b0e-0083-489d-9cf4-9f1d533f3559",
+    "data": [
+      {
+        "text": "ты кто",
         "userDefined": false
       }
     ],
@@ -22,6 +62,33 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0e7134b3-51c2-4784-aff9-4ae2d7263a4d",
+    "data": [
+      {
+        "text": "афина",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7b63e5e9-c475-42f2-bb2f-1c1231b47980",
+    "data": [
+      {
+        "text": "сколько тебе лет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
     "lang": "ru",
     "updated": 0
   },
