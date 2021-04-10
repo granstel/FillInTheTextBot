@@ -18,7 +18,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "Этот текст называется \"Парк развлечений\".",
+          "value": "Этот текст называется «Парк развлечений».",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -180,7 +180,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -199,7 +199,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Что сделали\"?"
+              "value": "«Что сделали»?"
             }
           ],
           "promptMessages": [],
@@ -218,7 +218,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какие\"?"
+              "value": "«Какие»?"
             }
           ],
           "promptMessages": [],
@@ -237,7 +237,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Что делать\"? (из нескольких слов)"
+              "value": "«Что делать»? (из нескольких слов)"
             }
           ],
           "promptMessages": [],
@@ -256,7 +256,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Ещё раз \"что делать\"?"
+              "value": "Ещё раз «что делать»?"
             }
           ],
           "promptMessages": [],

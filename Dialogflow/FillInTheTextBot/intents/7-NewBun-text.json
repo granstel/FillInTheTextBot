@@ -18,7 +18,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "Сейчас попробуем сочинить \"Новую сказку про колобка\".",
+          "value": "Сейчас попробуем сочинить «Новую сказку про колобка».",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -61,7 +61,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какая\"?"
+              "value": "«Какая»?"
             }
           ],
           "promptMessages": [],
@@ -103,7 +103,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -145,7 +145,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -164,7 +164,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Что сделал?\""
+              "value": "«Что сделал?»"
             }
           ],
           "promptMessages": [],
@@ -202,7 +202,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],

@@ -18,7 +18,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "Текст про \"Цирк\".",
+          "value": "Текст про «Цирк».",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -57,7 +57,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -95,7 +95,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"? В несколько слов"
+              "value": "«Какой»? В несколько слов"
             }
           ],
           "promptMessages": [],
@@ -133,7 +133,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],

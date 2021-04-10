@@ -18,7 +18,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "Сейчас будем придумывать \"объяснительную об опоздании\".",
+          "value": "Сейчас будем придумывать «объяснительную об опоздании».",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -103,7 +103,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Где\"?"
+              "value": "«Где?»"
             }
           ],
           "promptMessages": [],
@@ -141,7 +141,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Куда\"?"
+              "value": "«Куда»?"
             }
           ],
           "promptMessages": [],
