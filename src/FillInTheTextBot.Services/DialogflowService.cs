@@ -21,7 +21,7 @@ namespace FillInTheTextBot.Services
         private const string EasyWelcomeEventName = "EasyWelcome";
         private const string ErrorEventName = "Error";
 
-        private const int MaximumRequestLength = 30;
+        private const int MaximumRequestTextLength = 30;
 
         private readonly Dictionary<string, string> _commandDictionary = new Dictionary<string, string>
         {
@@ -135,9 +135,9 @@ namespace FillInTheTextBot.Services
 
             var text = request.Text;
 
-            if (text?.Length > MaximumRequestLength)
+            if (text?.Length > MaximumRequestTextLength)
             {
-                text = request.Text.Substring(0, MaximumRequestLength);
+                text = request.Text.Substring(0, MaximumRequestTextLength);
             }
 
             var query = new QueryInput
