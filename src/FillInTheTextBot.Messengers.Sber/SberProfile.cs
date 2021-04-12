@@ -19,7 +19,15 @@ namespace FillInTheTextBot.Messengers.Sber
             CreateMap<Request, InternalModels.Request>()
                 .ForMember(d => d.ChatHash, m => m.ResolveUsing(s => s?.Payload?.AppInfo?.ProjectId.ToString()))
                 .ForMember(d => d.UserHash, m => m.ResolveUsing(s => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
-                .ForMember(d => d.Text, m => m.ResolveUsing(s => s?.Payload?.Message?.OriginalText))
+                .ForMember(d => d.Text, m => m.ResolveUsing(s =>
+                {
+                    if (string.Equals(s?.Payload?.Message?.AsrNormalizedMessage, "***"))
+                    {
+                        return "кое-что";
+                    }
+
+                    return s?.Payload?.Message?.OriginalText;
+                }))
                 .ForMember(d => d.SessionId, m => m.Ignore())
                 .ForMember(d => d.NewSession, m => m.ResolveUsing(s => s?.Payload?.NewSession))
                 .ForMember(d => d.Language, m => m.Ignore())
