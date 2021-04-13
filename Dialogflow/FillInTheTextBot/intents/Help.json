@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "6a29db86-fe6e-4020-a9af-03aa054649ce",
+          "id": "152265c1-4b48-4f28-b942-bd0114fad113",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -44,7 +44,8 @@
           "platform": "telegram",
           "title": "",
           "replies": [
-            "Давай"
+            "Давай",
+            "Выход"
           ],
           "textToSpeech": "",
           "lang": "ru",

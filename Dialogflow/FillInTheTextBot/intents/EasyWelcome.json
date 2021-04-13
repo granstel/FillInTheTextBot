@@ -15,7 +15,7 @@
       ],
       "parameters": [
         {
-          "id": "74cbec18-7d3c-40a2-8b5e-afb48b054115",
+          "id": "59795c6a-553d-4a85-862c-ba1cdc19a005",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -36,7 +36,8 @@
           "title": "",
           "replies": [
             "Конечно!",
-            "Список историй"
+            "Список историй",
+            "Выход"
           ],
           "textToSpeech": "",
           "lang": "ru",

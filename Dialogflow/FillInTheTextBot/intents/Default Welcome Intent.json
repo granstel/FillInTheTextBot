@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "313173bd-db80-4c19-92e5-6f53fbaf9c76",
+          "id": "09e92228-34bf-4cf9-8957-31bbfd087f94",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -32,7 +32,8 @@
           "replies": [
             "Да!",
             "Список текстов",
-            "Ничего не понятно"
+            "Ничего не понятно",
+            "Выход"
           ],
           "textToSpeech": "",
           "lang": "ru",
