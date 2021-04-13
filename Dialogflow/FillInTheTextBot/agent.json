@@ -38,7 +38,7 @@
     "available": false,
     "useForDomains": false,
     "cloudFunctionsEnabled": false,
-    "cloudFunctionsInitialized": false
+    "cloudFunctionsInitialized": true
   },
   "isPrivate": true,
   "mlMinConfidence": 0.3,
