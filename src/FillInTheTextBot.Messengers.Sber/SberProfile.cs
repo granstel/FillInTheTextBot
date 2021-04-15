@@ -25,7 +25,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.UserHash, m => m.ResolveUsing(s => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
                 .ForMember(d => d.Text, m => m.ResolveUsing(s =>
                 {
-                    const string replacedObsceneWord = "кое-что";
+                    const string replacedObsceneWord = "РєРѕРµ-С‡С‚Рѕ";
                     const string stars = "***";
 
                     var asrNormalizedMessage = s?.Payload?.Message?.AsrNormalizedMessage;
