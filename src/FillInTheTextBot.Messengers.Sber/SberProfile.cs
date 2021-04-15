@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using FillInTheTextBot.Services.Mapping;
+using NLog;
 using Sber.SmartApp.Models;
 using Sber.SmartApp.Models.Constants;
 using InternalModels = FillInTheTextBot.Models;
@@ -14,6 +16,8 @@ namespace FillInTheTextBot.Messengers.Sber
     /// </summary>
     public class SberProfile : Profile
     {
+        private static Logger _log = LogManager.GetCurrentClassLogger();
+
         public SberProfile()
         {
             CreateMap<Request, InternalModels.Request>()
@@ -21,9 +25,28 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.UserHash, m => m.ResolveUsing(s => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
                 .ForMember(d => d.Text, m => m.ResolveUsing(s =>
                 {
-                    if (string.Equals(s?.Payload?.Message?.AsrNormalizedMessage, "***"))
+                    const string replacedObsceneWord = "кое-что";
+                    const string stars = "***";
+
+                    var asrNormalizedMessage = s?.Payload?.Message?.AsrNormalizedMessage;
+
+                    try
                     {
-                        return "кое-что";
+                        if (asrNormalizedMessage?.Contains(stars) == true)
+                        {
+                            return asrNormalizedMessage.Replace(stars, replacedObsceneWord);
+                        }
+
+                        var obsceneIndex = s?.Payload?.Annotations.CensorData.Classes.ToList().IndexOf("obscene") ?? 0;
+
+                        if (s?.Payload?.Annotations?.CensorData?.Probas[obsceneIndex] == 1.0)
+                        {
+                            return replacedObsceneWord;
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        _log.Error(e);
                     }
 
                     return s?.Payload?.Message?.OriginalText;
