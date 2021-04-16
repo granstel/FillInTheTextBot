@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Sber.SmartApp.Models" Version="0.0.1" />
+    <PackageReference Include="Sber.SmartApp.Models" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
