@@ -16,7 +16,7 @@ namespace FillInTheTextBot.Messengers.Sber
     /// </summary>
     public class SberProfile : Profile
     {
-        private static Logger _log = LogManager.GetCurrentClassLogger();
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         public SberProfile()
         {
@@ -46,7 +46,7 @@ namespace FillInTheTextBot.Messengers.Sber
                     }
                     catch (Exception e)
                     {
-                        _log.Error(e);
+                        Log.Error(e);
                     }
 
                     return s?.Payload?.Message?.OriginalText;
@@ -79,7 +79,7 @@ namespace FillInTheTextBot.Messengers.Sber
 
             CreateMap<InternalModels.Response, ResponsePayload>()
                 .ForMember(d => d.PronounceText, m => m.MapFrom(s => s.Text))
-                .ForMember(d => d.PronounceTextType, m => m.UseValue("application/text"))
+                .ForMember(d => d.PronounceTextType, m => m.UseValue(PronounceTextTypeValues.Text))
                 .ForMember(d => d.AutoListening, m => m.MapFrom(s => !s.Finished))
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
                 .ForMember(d => d.Emotion, m => m.ResolveUsing(s =>
@@ -112,14 +112,14 @@ namespace FillInTheTextBot.Messengers.Sber
                 {
                     if (!string.IsNullOrEmpty(s.Url))
                     {
-                        return ActionTypes.DeepLink;
+                        return ActionTypeValues.DeepLink;
                     }
 
-                    return ActionTypes.Text;
+                    return ActionTypeValues.Text;
                 }));
 
             CreateMap<Request, Response>()
-                .ForMember(d => d.MessageName, m => m.UseValue("ANSWER_TO_USER"))
+                .ForMember(d => d.MessageName, m => m.UseValue(MessageNameValues.AnswerToUser))
                 .ForMember(d => d.SessionId, m => m.MapFrom(s => s.SessionId))
                 .ForMember(d => d.MessageId, m => m.MapFrom(s => s.MessageId))
                 .ForMember(d => d.Uuid, m => m.MapFrom(s => s.Uuid))
@@ -144,34 +144,34 @@ namespace FillInTheTextBot.Messengers.Sber
 
             var cardItems = buttons?.Select(b =>
             {
-                var cardItem = new CardItem
+                var cardItem = new CardCell
                 {
-                    Type = "greeting_grid_item",
-                    TopText = new CardItemText
+                    Type = CellTypeValues.GreetingGridItem,
+                    TopText = new CardCellText
                     {
-                        Type = "text_cell_view",
+                        Type = CellTypeValues.TextCellView,
                         Text = string.Empty,
-                        Typeface = "caption",
-                        TextColor = "default"
+                        Typeface = TypefaceValues.Caption,
+                        TextColor = TextColorValues.Default
                     },
-                    BottomText = new CardItemText
+                    BottomText = new CardCellText
                     {
-                        Type = "left_right_cell_view",
+                        Type = CellTypeValues.LeftRightCellView,
                         Text = b.Text,
-                        Typeface = "button1",
-                        TextColor = "default",
+                        Typeface = TypefaceValues.Button1,
+                        TextColor = TextColorValues.Default,
                         MaxLines = 2,
                         Margins = new Margins
                         {
-                            Top = "0x",
+                            Top = IndentValues.X0
                         }
                     },
                     Paddings = new Paddings
                     {
-                        Top = "0x",
-                        Left = "6x",
-                        Right = "6x",
-                        Bottom = "16x"
+                        Top = IndentValues.X0,
+                        Left = IndentValues.X6,
+                        Right = IndentValues.X6,
+                        Bottom = IndentValues.X16
                     }
                 };
 
@@ -184,10 +184,10 @@ namespace FillInTheTextBot.Messengers.Sber
 
             var card = new Card
             {
-                Type = "grid_card",
+                Type = CardTypeValues.GridCard,
                 Items = cardItems,
                 Columns = 2,
-                ItemWidth = "resizable"
+                ItemWidth = ItemWidthValues.Resizable
             };
 
             var itemWithCard = new PayloadItem
