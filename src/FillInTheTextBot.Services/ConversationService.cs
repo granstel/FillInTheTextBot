@@ -179,7 +179,11 @@ namespace FillInTheTextBot.Services
         private ICollection<Button> AddButtonsFromPayload(ICollection<Button> responseButtons, Payload dialogPayload, Source requestSource)
         {
             var buttons = new List<Button>();
-            buttons.AddRange(responseButtons);
+
+            if (responseButtons?.Any() == true)
+            {
+                buttons.AddRange(responseButtons);
+            }
 
             if (dialogPayload?.Buttons?.Any() == true)
             {
