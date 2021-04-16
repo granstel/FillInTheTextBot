@@ -15,7 +15,7 @@
       ],
       "parameters": [
         {
-          "id": "59795c6a-553d-4a85-862c-ba1cdc19a005",
+          "id": "b92faa1c-4b04-4aa0-9f97-36ac0d39540e",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -44,24 +44,6 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Проголосовать за навык"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Узнать, что новенького"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
@@ -71,6 +53,41 @@
             "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
             "И вот пришло время занимательных историй! Давай сочиним что-нибудь?"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Проголосовать за навык",
+                  "IsQuickReply": false,
+                  "Url": "https://t.me/yadialogsnews/170"
+                },
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Узнать, что новенького"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false,
+                  "Text": "Проголосовать за навык"
+                },
+                {
+                  "Text": "Узнать, что новенького",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],

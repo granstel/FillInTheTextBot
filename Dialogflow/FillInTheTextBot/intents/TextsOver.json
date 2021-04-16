@@ -16,24 +16,6 @@
       "parameters": [],
       "messages": [
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Голосовать за навык"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Подписаться на новости"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "2",
           "platform": "telegram",
           "title": "",
@@ -54,6 +36,41 @@
             "Хотя... Мы прошли всё, что у меня было. Чтобы раньше всех узнать о появлении новых текстов или предложить свой, подпишись на паблик ВК «Занимательные истории голосовых помощников». Возвращайся потом, буду ждать тебя здесь. Сочиним ещё что-нибудь?",
             "Ээ, погоди... У меня пока закончились истории. Найди в ВК паблик «Занимательные истории голосовых помощников» и подпишись на него, чтобы раньше всех узнать об их появлении, или предложить свой текст. Потом возвращайся ко мне. Или сразу продолжим?"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Голосовать за навык",
+                  "IsQuickReply": false,
+                  "Url": "https://t.me/yadialogsnews/170"
+                },
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Подписаться на новости"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Голосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Подписаться на новости"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],

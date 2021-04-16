@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "fccad469-af8c-472e-ab8a-4c596a9000d6",
+          "id": "b528f1a3-c011-4c3b-85de-74ac6c63cf2a",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -38,24 +38,6 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Голосовать за навык"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Подписаться на новости"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
@@ -66,6 +48,46 @@
             "Давай сочиним ещё что-нибудь?",
             "Давай ещё что-нибудь сочиним?"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Marusia": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "Text": "Проголосовать за навык"
+                },
+                {
+                  "Text": "Следить за новостями",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ],
+              "Yandex": [
+                {
+                  "Text": "Проголосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "IsQuickReply": false,
+                  "Text": "Поставить оценку",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
+                },
+                {
+                  "IsQuickReply": false,
+                  "Text": "Следить за новостями",
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],
