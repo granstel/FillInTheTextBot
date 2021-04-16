@@ -37,7 +37,7 @@ namespace FillInTheTextBot.Messengers.Sber
                             return asrNormalizedMessage.Replace(stars, replacedObsceneWord);
                         }
 
-                        var obsceneIndex = s?.Payload?.Annotations.CensorData.Classes.ToList().IndexOf("obscene") ?? 0;
+                        var obsceneIndex = s?.Payload?.Annotations?.CensorData?.Classes?.ToList().IndexOf("obscene") ?? 0;
 
                         if (s?.Payload?.Annotations?.CensorData?.Probas[obsceneIndex] == 1.0)
                         {
