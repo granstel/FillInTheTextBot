@@ -271,19 +271,36 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "Кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Проголосовать за занимательные истории"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Что новенького?"
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Проголосовать за занимательные истории",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Что новенького?",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Проголосовать за занимательные истории",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Что новенького?",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
             }
-          ],
+          },
           "textToSpeech": "",
           "lang": "ru",
           "condition": ""

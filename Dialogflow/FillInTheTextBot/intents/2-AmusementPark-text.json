@@ -317,19 +317,36 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "Кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Голосовать за навык"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Предложить свой текст"
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Поддержать игру в голосовании",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel=-201360423"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Поддержать игру в голосовании",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel=-201360423"
+                }
+              ]
             }
-          ],
+          },
           "textToSpeech": "",
           "lang": "ru",
           "condition": ""
