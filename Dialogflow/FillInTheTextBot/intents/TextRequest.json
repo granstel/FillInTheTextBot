@@ -28,14 +28,14 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
+                  "Url": "https://vk.com/im?sel=-201360423",
                   "Text": "Предложить свой текст",
                   "IsQuickReply": false
                 }
               ],
               "Marusia": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
+                  "Url": "https://vk.com/im?sel=-201360423",
                   "Text": "Предложить свой текст",
                   "IsQuickReply": false
                 }
