@@ -31,7 +31,7 @@
           "id": "7ec1f250-3e30-4d25-8562-8ec87966b5a4",
           "name": "person-female",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person-female",
           "defaultValue": "",
           "isList": false,
@@ -73,7 +73,7 @@
           "id": "1b474c1c-9353-483d-baf4-ecd05f1ca08e",
           "name": "person-male",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person-male",
           "defaultValue": "",
           "isList": false,
@@ -265,6 +265,24 @@
           "replies": [
             "Повтори ещё раз",
             "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Проголосовать за занимательные истории"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Что новенького?"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

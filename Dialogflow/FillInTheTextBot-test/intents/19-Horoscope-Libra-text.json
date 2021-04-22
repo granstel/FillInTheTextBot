@@ -1,0 +1,198 @@
+{
+  "id": "8a700d7c-4c06-4474-9633-7dba03e62609",
+  "parentId": "9eff7040-8644-411c-b3e4-aed3be0a5948",
+  "name": "19-Horoscope-Libra-text",
+  "auto": true,
+  "contexts": [
+    "text-19"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "446e0a53-9c75-46b1-a7af-96e47571e090",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для весов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "84436c92-9d24-46d1-8e86-2c4ec418b51d",
+          "name": "month",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$month",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, когда у тебя День рождения?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, когда ты празднуешь День рождения?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "44ea2c40-4f8d-43b3-b478-68ee51bc41d2",
+          "name": "device",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$device",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, как называется самый большой предмет, который стоит у тебя на кухне?"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь - какой самый большой предмет есть у тебя на кухне?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2649b19a-dede-4960-8209-649c4c6f5465",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "\"Какой\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ac374fca-5d19-4846-bc14-04d6cc36b4b6",
+          "name": "vegetable",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$vegetable",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови пожалуйста какой-нибудь овощ или фрукт"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови какой-нибудь овощ или фрукт"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aabf0220-36c5-41b6-a926-a0f4aa34fe29",
+          "name": "eat",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$eat",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - назови самую невкусную еду"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний - какая самая невкусная еда?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Ещё раз",
+            "Давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Проголосовать за занимательные истории"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Предложить свою идею текста"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот какой гороскоп для весов у нас получился: тщательно взвешивайте все риски - а они всегда есть! Например, $month на голову может упасть $device, а это очень неприятно.\nУравновешенность - ваше главное достоинство. В спорах сохраняйте спокойствие и не кидайтесь чем попало, потому что $adjective $vegetable - это не аргумент.\nВнимание, $eat - вот что вам нужно есть три раза в день. Это воспитывает волю и увеличивает попу, а в наши дни усидчивость и равновесие всегда пригодятся.\nНе дёргайте за уши стражей порядка, и всё будет хорошо.\nПо-моему, очень забавно. Сочиним что-нибудь ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-19"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

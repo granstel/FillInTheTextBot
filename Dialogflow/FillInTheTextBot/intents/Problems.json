@@ -8,31 +8,57 @@
       "resetContexts": false,
       "action": "",
       "affectedContexts": [],
-      "parameters": [],
-      "messages": [
+      "parameters": [
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "Кнопки",
-          "buttons": [
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Рассказать о проблеме"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
+          "id": "3b009437-334d-4b6f-b477-082bce3dd164",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "bespokoistvo",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
         {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Видимо, возникли какие-то проблемы. Можешь рассказать об этом в паблике ВК \"Занимательные истории Алисы из Яндекса\", и меня исправят. Давай продолжим?",
-            "Наверно, были какие-то проблемы. Расскажи, пожалуйста, об этом в паблике ВК \"Занимательные истории Алисы из Яндекса\", и скоро всё исправят. Продолжим?"
+            "Видимо, возникли какие-то проблемы. Можешь рассказать об этом в паблике ВК «Занимательные истории голосовых помощников», и игру исправят. Давай продолжим?",
+            "Наверно, были какие-то проблемы. Расскажи, пожалуйста, об этом в паблике ВК «Занимательные истории голосовых помощников», и скоро всё исправят. Продолжим?"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Marusia": [
+                {
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false,
+                  "Text": "Рассказать о проблеме"
+                }
+              ],
+              "Yandex": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Рассказать о проблеме",
+                  "Url": "https://vk.com/im?sel=-201360423"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],

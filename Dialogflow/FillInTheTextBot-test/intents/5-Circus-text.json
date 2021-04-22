@@ -31,7 +31,7 @@
           "id": "bd5046a5-cab5-4051-be46-75407d39cf3d",
           "name": "person-1",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person-1",
           "defaultValue": "",
           "isList": false,
@@ -69,7 +69,7 @@
           "id": "836c330d-0769-4f3c-8c44-c9950bef9a4a",
           "name": "person-2",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person-2",
           "defaultValue": "",
           "isList": false,
@@ -188,6 +188,24 @@
           "replies": [
             "Прочитай ещё раз",
             "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Голосовать за игру"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Предложить свой текст"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

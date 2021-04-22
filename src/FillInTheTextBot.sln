@@ -19,13 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messengers", "Messengers", "{ECB31418-3F4F-411C-8AD4-65C342B46B94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Telegram", "FillInTheTextBot.Messengers.Telegram\FillInTheTextBot.Messengers.Telegram.csproj", "{36617591-6C39-4F8A-B413-17B5C63AC31A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Yandex", "FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj", "{83C2D5D6-F6B4-4D19-B72E-B1804D95CFAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Telegram.Tests", "FillInTheTextBot.Messengers.Telegram.Tests\FillInTheTextBot.Messengers.Telegram.Tests.csproj", "{5E2BCDFB-08B1-4405-ACCD-C766B01A3296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Yandex.Tests", "FillInTheTextBot.Messengers.Yandex.Tests\FillInTheTextBot.Messengers.Yandex.Tests.csproj", "{1A4C9866-AE25-4BDA-A27B-230FD5F12222}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Yandex", "FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj", "{83C2D5D6-F6B4-4D19-B72E-B1804D95CFAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Sber", "FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj", "{928C09CB-BF31-4126-987A-E4D7112E0A9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Yandex.Tests", "FillInTheTextBot.Messengers.Yandex.Tests\FillInTheTextBot.Messengers.Yandex.Tests.csproj", "{1A4C9866-AE25-4BDA-A27B-230FD5F12222}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers.Marusia", "FillInTheTextBot.Messengers.Marusia\FillInTheTextBot.Messengers.Marusia.csproj", "{D555A356-6BBF-426F-B7ED-A55CAC505753}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,14 +57,6 @@ Global
 		{F3415D07-3FF7-45FC-AB9E-278BC2EC6157}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3415D07-3FF7-45FC-AB9E-278BC2EC6157}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3415D07-3FF7-45FC-AB9E-278BC2EC6157}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36617591-6C39-4F8A-B413-17B5C63AC31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36617591-6C39-4F8A-B413-17B5C63AC31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36617591-6C39-4F8A-B413-17B5C63AC31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36617591-6C39-4F8A-B413-17B5C63AC31A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E2BCDFB-08B1-4405-ACCD-C766B01A3296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E2BCDFB-08B1-4405-ACCD-C766B01A3296}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E2BCDFB-08B1-4405-ACCD-C766B01A3296}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E2BCDFB-08B1-4405-ACCD-C766B01A3296}.Release|Any CPU.Build.0 = Release|Any CPU
 		{83C2D5D6-F6B4-4D19-B72E-B1804D95CFAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{83C2D5D6-F6B4-4D19-B72E-B1804D95CFAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83C2D5D6-F6B4-4D19-B72E-B1804D95CFAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -73,6 +65,14 @@ Global
 		{1A4C9866-AE25-4BDA-A27B-230FD5F12222}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A4C9866-AE25-4BDA-A27B-230FD5F12222}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A4C9866-AE25-4BDA-A27B-230FD5F12222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D555A356-6BBF-426F-B7ED-A55CAC505753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D555A356-6BBF-426F-B7ED-A55CAC505753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D555A356-6BBF-426F-B7ED-A55CAC505753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D555A356-6BBF-426F-B7ED-A55CAC505753}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,10 +81,10 @@ Global
 		{0460EC82-4E93-4C91-8372-BF1CEFA51D91} = {7550458D-AF2F-4233-BF54-49C36113F587}
 		{ED5525FF-28D9-48B7-8D0C-4125F63E12BD} = {7550458D-AF2F-4233-BF54-49C36113F587}
 		{F3415D07-3FF7-45FC-AB9E-278BC2EC6157} = {ECB31418-3F4F-411C-8AD4-65C342B46B94}
-		{36617591-6C39-4F8A-B413-17B5C63AC31A} = {ECB31418-3F4F-411C-8AD4-65C342B46B94}
-		{5E2BCDFB-08B1-4405-ACCD-C766B01A3296} = {7550458D-AF2F-4233-BF54-49C36113F587}
 		{83C2D5D6-F6B4-4D19-B72E-B1804D95CFAD} = {ECB31418-3F4F-411C-8AD4-65C342B46B94}
 		{1A4C9866-AE25-4BDA-A27B-230FD5F12222} = {7550458D-AF2F-4233-BF54-49C36113F587}
+		{928C09CB-BF31-4126-987A-E4D7112E0A9D} = {ECB31418-3F4F-411C-8AD4-65C342B46B94}
+		{D555A356-6BBF-426F-B7ED-A55CAC505753} = {ECB31418-3F4F-411C-8AD4-65C342B46B94}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F8B87A9C-C6A0-4ACE-A76D-013674B4D97A}

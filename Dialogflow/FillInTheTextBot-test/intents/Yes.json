@@ -8,7 +8,36 @@
       "resetContexts": false,
       "action": "GetText",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "4a1b7a3b-e309-4bc9-89b8-6759ee4dadb3",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "igrivost",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "236ea086-a66f-46cc-8ae1-a470c3693fed",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "#multipart-text.textKey",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "0",

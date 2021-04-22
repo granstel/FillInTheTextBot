@@ -1,0 +1,214 @@
+{
+  "id": "6b75739f-9a44-4d0e-9441-bd7f464d8985",
+  "parentId": "678363e4-59b6-45b4-81ce-835da5ce43ce",
+  "name": "18-NY-MessageToFatherFrost1-text",
+  "auto": true,
+  "contexts": [
+    "text-18"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "67ef9dac-a7c3-44ea-baef-7cd5adea1baa",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "письмо Дедушке Морозу!",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ca2c62c3-7fe3-4a6b-a5b9-3aafe4510bc7",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, каким был для тебя уходящий год?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, каким для тебя был этот год?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b720924e-a137-41b4-a33b-e61daa562f1b",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, какая твоя подруга?"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, какая у тебя подруга?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "50b4a0d6-4b03-45fb-8587-ce571a34195f",
+          "name": "adjective-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "А теперь просто ответь - \"Какие\"?"
+            },
+            {
+              "lang": "ru",
+              "value": "\"Какие\"?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "9d41ea94-d459-487e-ad5c-31721e1d564b",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови свой любимый цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови цвет, который тебе нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь скажи свой любимый цвет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "556c1a24-0ecf-4893-bf7b-ef4dffdeca5f",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос - как тебя зовут друзья?"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос - как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний - как тебя зовут друзья?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Голосовать за занимательные истории"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Подписаться на новости в ВК"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, вот какое письмо мы написали: \"Дорогой Дедушка Мороз! Мы с нетерпением ждём тебя. Новый год - это самый $adjective-1 праздник в году. Так не хочется говорить о учебе, потому что она такая $adjective-2. Но мы обещаем, что будем получать только лучшие оценки. Так что, открывай поскорее свой $color мешок и вручай нам $adjective-3 подарки. С уважением, $name и Алиса!\"\nПо-моему, у нас получилось очень милое письмо! Давай ещё что-нибудь сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-18"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

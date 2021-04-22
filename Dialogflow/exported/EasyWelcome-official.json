@@ -1,0 +1,121 @@
+{
+  "id": "52162657-210f-46be-a923-2e91bd10128f",
+  "name": "EasyWelcome-official",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "official"
+  ],
+  "contexts": [
+    "official"
+  ],
+  "endInteraction": false,
+  "events": [
+    {
+      "name": "EasyWelcome"
+    }
+  ],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "EasyWelcome-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "sberEmotion",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "radost",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "quick_reply",
+          "platform": "telegram",
+          "condition": "",
+          "replies": [
+            "Конечно!",
+            "Список историй"
+          ]
+        },
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "text": "Подписаться на новости",
+              "postback": "https://vk.com/fillinthetextbot"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Настало время занимательных историй! Продолжим?",
+            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
+            "И вот пришло время занимательных историй! Давайте сочиним что-нибудь?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "привет ",
+          "userDefined": false
+        },
+        {
+          "text": "алиса",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "fb9779f5-61eb-4748-90f3-e898430165c2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "здрасте",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4d292227-4e7f-4dba-bce8-f639b723ed24",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

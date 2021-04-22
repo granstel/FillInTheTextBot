@@ -317,6 +317,24 @@
           "condition": ""
         },
         {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Голосовать за навык"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Предложить свой текст"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",

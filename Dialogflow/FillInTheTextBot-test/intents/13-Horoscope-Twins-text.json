@@ -30,7 +30,7 @@
           "id": "deb1927d-e153-4676-9bbc-3c1e27cdc845",
           "name": "person-1",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person-1",
           "defaultValue": "",
           "isList": false,
@@ -76,7 +76,7 @@
           "id": "efa9647f-6f11-449b-9847-41f2692d0bd9",
           "name": "person-2",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person-2",
           "defaultValue": "",
           "isList": false,
@@ -146,6 +146,24 @@
           "replies": [
             "Ещё раз",
             "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Поддержать навык"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Предложить свою идею"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

@@ -1,43 +1,80 @@
 {
-  "id": "6e8b484d-6fbf-4f7e-9e45-88f583389453",
+  "id": "898d0ecd-bef7-48c9-a491-b268a3ba64f3",
   "name": "Exit",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
+      "action": "endConversation",
       "affectedContexts": [],
-      "parameters": [],
-      "messages": [
+      "parameters": [
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "кнопки",
-          "buttons": [
-            {
-              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-              "text": "Поставить оценку"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Подписаться на новости"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
+          "id": "1d7e1dcb-9d94-4fbf-812f-3669935b0b5b",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "zhdu_otvet",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
         {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Окей, возвращайся, будуж дать!",
+            "Окей, возвращайся, буду ждать!",
             "Если что, я всегда здесь, возвращайся!",
             "Приходи ещё, я буду здесь!"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Проголосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "Text": "Поставить оценку",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Следить за новостями",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ],
+              "Marusia": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Проголосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170"
+                },
+                {
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false,
+                  "Text": "Следить за новостями"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],
@@ -51,5 +88,6 @@
   "events": [],
   "conditionalResponses": [],
   "condition": "",
-  "conditionalFollowupEvents": []
+  "conditionalFollowupEvents": [],
+  "endInteraction": true
 }

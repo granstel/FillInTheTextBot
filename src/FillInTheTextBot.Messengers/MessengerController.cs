@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using FillInTheTextBot.Messengers.Extensions;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
+using FillInTheTextBot.Services.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Newtonsoft.Json;
 using NLog;
 
 namespace FillInTheTextBot.Messengers
@@ -15,7 +18,8 @@ namespace FillInTheTextBot.Messengers
         private readonly IMessengerService<TInput, TOutput> _messengerService;
         private readonly MessengerConfiguration _configuration;
         
-        private readonly Logger _log;
+        protected readonly Logger Log;
+        protected JsonSerializerSettings SerializerSettings;
 
         private const string TokenParameter = "token";
 
@@ -24,7 +28,7 @@ namespace FillInTheTextBot.Messengers
             _messengerService = messengerService;
             _configuration = configuration;
 
-            _log = LogManager.GetLogger(GetType().Name);
+            Log = LogManager.GetLogger(GetType().Name);
         }
 
         public override void OnActionExecuting(ActionExecutingContext context)
@@ -48,9 +52,14 @@ namespace FillInTheTextBot.Messengers
         [HttpPost("{token?}")]
         public virtual async Task<IActionResult> WebHook([FromBody]TInput input, string token)
         {
+            if (!ModelState.IsValid)
+            {
+                Log.Error(ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage)).JoinToString(Environment.NewLine));
+            }
+
             var response = await _messengerService.ProcessIncomingAsync(input);
 
-            return Json(response);
+            return Json(response, SerializerSettings);
         }
 
         [HttpPut("{token?}")]
@@ -85,7 +94,7 @@ namespace FillInTheTextBot.Messengers
                 return string.Equals(_configuration.IncomingToken, token, StringComparison.InvariantCultureIgnoreCase);
             }
 
-            return true;
+            return false;
         }
     }
 }

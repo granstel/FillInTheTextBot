@@ -1,0 +1,212 @@
+[
+  {
+    "id": "17a1ecc0-d99c-4064-b1f0-e00c97eda3ce",
+    "data": [
+      {
+        "text": "перцы",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ce640dd3-b00f-499c-8b49-5727c5306340",
+    "data": [
+      {
+        "text": "помидоры",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a0adfed4-b6b7-4810-9a67-75755447272b",
+    "data": [
+      {
+        "text": "дыни",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b1bda47a-ceda-4ab0-8348-000eb92c245a",
+    "data": [
+      {
+        "text": "груши",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "99ed40cb-eddd-4abb-8d7d-c2ca700a0397",
+    "data": [
+      {
+        "text": "фуражка",
+        "meta": "@sys.any",
+        "alias": "hat",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1cde4d2d-7a64-4b25-9fbc-cdb9171314b8",
+    "data": [
+      {
+        "text": "кепка",
+        "meta": "@sys.any",
+        "alias": "hat",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "78d186b3-6dc2-4b07-85b2-aa4fc4b8aa8c",
+    "data": [
+      {
+        "text": "шапка",
+        "meta": "@sys.any",
+        "alias": "hat",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c581ec48-8f36-47d8-a851-0d2434b2078c",
+    "data": [
+      {
+        "text": "чёрные",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4a185a2d-9f94-48e7-8e0c-c9981612ff57",
+    "data": [
+      {
+        "text": "цветущие",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a4b5bc68-d33c-4c96-9191-31c012eaa583",
+    "data": [
+      {
+        "text": "гнилые",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ec6a14c8-c39a-4c28-9e8d-92ce13cb22b8",
+    "data": [
+      {
+        "text": "спелые",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "df5b7a19-691e-4aa3-987a-24a6cdcbeae4",
+    "data": [
+      {
+        "text": "носки",
+        "meta": "@sys.any",
+        "alias": "footwear",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "66ea6dee-0ec7-4e3d-90b1-58ccaea04a71",
+    "data": [
+      {
+        "text": "сандали",
+        "meta": "@sys.any",
+        "alias": "footwear",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa337a65-f040-4edd-b0c3-bd3c2fc2f803",
+    "data": [
+      {
+        "text": "сапоги",
+        "meta": "@sys.any",
+        "alias": "footwear",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

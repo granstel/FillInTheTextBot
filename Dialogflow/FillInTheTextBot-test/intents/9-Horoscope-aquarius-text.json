@@ -88,7 +88,7 @@
           "id": "5498c706-1134-47b5-a35e-e01c627da806",
           "name": "person",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person",
           "defaultValue": "",
           "isList": false,
@@ -135,6 +135,24 @@
           "replies": [
             "Повтори пожалуйста",
             "Давай ещё!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Поддержать занимательные истории"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Предложить свой текст"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

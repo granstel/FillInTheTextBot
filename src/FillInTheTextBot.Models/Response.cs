@@ -1,9 +1,16 @@
+using System.Collections.Generic;
+
 namespace FillInTheTextBot.Models
 {
     public class Response
     {
         public static string NextTextIndexStorageKey => nameof(NextTextIndex).ToUpper();
         public static string ScopeStorageKey => nameof(ScopeKey).ToUpper();
+
+        public Response()
+        {
+            Emotions = new Dictionary<string, string>();
+        }
 
         public string ChatHash { get; set; }
 
@@ -15,10 +22,12 @@ namespace FillInTheTextBot.Models
 
         public bool Finished { get; set; }
 
-        public Button[] Buttons { get; set; }
+        public ICollection<Button> Buttons { get; set; }
 
         public int NextTextIndex { get; set; }
 
         public string ScopeKey { get; set; }
+        
+        public IDictionary<string, string> Emotions { get; set; }
     }
 }

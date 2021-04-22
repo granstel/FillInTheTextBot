@@ -8,16 +8,45 @@
       "resetContexts": false,
       "action": "",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "114b584f-eff6-422b-aefe-bb2a2c503bbf",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "bespokoistvo",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Рассказать о проблеме"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Видимо, возникли какие-то проблемы, но я что-нибудь придумаю. Давай продолжим?",
-            "Наверно, были какие-то проблемы, но их наверняка скоро исправят. Продолжим?"
+            "Видимо, возникли какие-то проблемы. Можешь рассказать об этом в паблике ВК «Занимательные истории голосовых помощников», и игру исправят. Давай продолжим?",
+            "Наверно, были какие-то проблемы. Расскажи, пожалуйста, об этом в паблике ВК «Занимательные истории голосовых помощников», и скоро всё исправят. Продолжим?"
           ],
           "condition": ""
         }

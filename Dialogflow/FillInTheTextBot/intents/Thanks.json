@@ -1,5 +1,5 @@
 {
-  "id": "40612716-d7fc-4185-9755-010820087f14",
+  "id": "f6f81db1-5acc-4e30-a397-38b47fc9d92b",
   "name": "Thanks",
   "auto": true,
   "contexts": [],
@@ -8,7 +8,22 @@
       "resetContexts": false,
       "action": "",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "b528f1a3-c011-4c3b-85de-74ac6c63cf2a",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "simpatiya",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "2",
@@ -23,24 +38,6 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "кнопки",
-          "buttons": [
-            {
-              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-              "text": "Поставить оценку"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Подписаться на новости"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
@@ -48,9 +45,49 @@
           "speech": [
             "Мне тоже понравилось! Сочиним что-нибудь ещё?",
             "И мне понравилось! Давай ещё что-нибудь сочиним?",
-            "Сочиним что-нибудь ещё?",
+            "Давай сочиним ещё что-нибудь?",
             "Давай ещё что-нибудь сочиним?"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Marusia": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "Text": "Проголосовать за навык"
+                },
+                {
+                  "Text": "Следить за новостями",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ],
+              "Yandex": [
+                {
+                  "Text": "Проголосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "IsQuickReply": false,
+                  "Text": "Поставить оценку",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
+                },
+                {
+                  "IsQuickReply": false,
+                  "Text": "Следить за новостями",
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],

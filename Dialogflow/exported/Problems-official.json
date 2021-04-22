@@ -1,0 +1,162 @@
+{
+  "id": "63f87fcf-2f80-44f7-9f28-46f204cea411",
+  "name": "Problems-official",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "official"
+  ],
+  "contexts": [
+    "official"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "sberEmotion",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "bespokoistvo",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "text": "Рассказать о проблеме",
+              "postback": "https://vk.com/fillinthetextbot"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Видимо, возникли какие-то проблемы. Расскажите об этом, пожалуйста, в паблике ВК \"Занимательные истории голосовых помощников\", и меня исправят. Давайте продолжим?",
+            "Наверно, были какие-то проблемы. Расскажите, пожалуйста, об этом в паблике ВК \"Занимательные истории голосовых помощников\", и скоро всё исправят. Продолжим?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "афина",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " не работает",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "fa4d6a0b-b537-436c-a2d9-4386c4c66d19",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "сбер",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " почему не работает",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "28fb1f75-62d8-4d1e-a8ef-851a8bf2dc1e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "что с тобой",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d0b19c65-047a-4790-baf6-685f37cd79a5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "диалог не отвечает",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "cced5e26-f013-4939-bc6b-7eb1d2f73f2e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "почему диалог не отвечает",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "654bcbec-713c-4c46-a5a8-1602e20532bc",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "алиса",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " почему ты говоришь диалог не отвечает",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "626f4bf1-f4f5-4edb-b85f-08d7b4197ff8",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

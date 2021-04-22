@@ -1,0 +1,216 @@
+{
+  "id": "d3f1db2e-9082-4b8a-99b6-c32dc2d929e7",
+  "parentId": "bf3b78d3-2cea-48a3-b008-d030a3f9429b",
+  "name": "26-Boris the cat and chocolate-text",
+  "auto": true,
+  "contexts": [
+    "text-26"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "d2a6147d-9d1a-4a33-8b91-92e9cfd34deb",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "текст от подписчика: про кота Бориса и шоколад.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "76e74d87-ecfb-4ecc-9fa3-71904d6b01ef",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови свой любимый цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, какой цвет тебе не нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, какой цвет нравится твоей подруге"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, какой цвет нравится твоему другу"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1c328246-cf65-4ae3-b7cb-b8897f358f32",
+          "name": "animal-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, какое, по-твоему, самое быстрое животное?"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови какое-нибудь быстрое животное"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ae7f1cd3-3d43-4204-9fb5-12a4df0e3eec",
+          "name": "animal-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Какое пушистое животное ты знаешь?"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови какое-нибудь пушистое животное"
+            },
+            {
+              "lang": "ru",
+              "value": "Напомни, какое животное самое пушистое в мире?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "711bd055-5e6e-4fdc-a3b8-1ae096d8f991",
+          "name": "big",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$big",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок — назови какую-нибудь планету"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — назови какую-нибудь большую планету"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний — назови самую большую планету"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний — назови какую-нибудь планету"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Поддержать игру в голосовании",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Выразить восхищение автору текста",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Поддержать игру в голосовании",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Выразить восхищение автору текста",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Внимание, вот что получилось: как-то раз кот Борис увидел $color прямоугольник. Любопытный кот подошёл ближе, и оказалось, что это шоколадка в заманчивой шуршащей обёртке! Котейка раскрыл её, и поскакал как $animal-1, хвост его распушился так, будто Борис — $animal-2, а глаза его были большие, как $big! Все потому, что ему попалась не просто шоколадка, а шоколадка с валерьянкой.\nУ тебя забавно получилось! Давай ещё что-нибудь сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-26"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

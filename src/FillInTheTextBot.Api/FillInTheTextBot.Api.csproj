@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>1.5.2</Version>
-    <PackageReleaseNotes>use GranSteL.Tools.ScopeSelector</PackageReleaseNotes>
+    <Version>1.8.2</Version>
+    <PackageReleaseNotes>Fix ArgumentNullException</PackageReleaseNotes>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
@@ -19,10 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FillInTheTextBot.Messengers.Marusia\FillInTheTextBot.Messengers.Marusia.csproj" />
+    <ProjectReference Include="..\FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj" />
+    <ProjectReference Include="..\FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Services\FillInTheTextBot.Services.csproj" />
-    <ProjectReference Include="..\FillInTheTextBot.Messengers.Telegram\FillInTheTextBot.Messengers.Telegram.csproj" />
-    <ProjectReference Include="..\FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,12 +33,6 @@
     <Content Update="Zidium.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="TestWebApp.pfx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

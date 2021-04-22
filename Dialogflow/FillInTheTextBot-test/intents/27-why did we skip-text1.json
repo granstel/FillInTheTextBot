@@ -1,0 +1,164 @@
+{
+  "id": "444ba58a-635c-4081-a2dd-ef07bbbf7eb0",
+  "parentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "name": "27-why did we skip-text1",
+  "auto": true,
+  "contexts": [
+    "text-27-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        },
+        {
+          "name": "text-27-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-27",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "9c4ea103-9e4c-4d30-bdbe-9a4443ebea77",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "«почему они прогуляли». Эта история состоит из трёх частей, пойдём с первой.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5bd328ad-ab40-414a-9e1b-9886cc83e5e7",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-27-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "778c503f-ccb4-4a87-a429-d0720115b0a0",
+          "name": "name-0",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-0",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сначала назови имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала назови имя своего друга"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "616f2c0c-1663-47e9-a8c1-ad532969fe3d",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи номер своей школы"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови номер своей школы"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d02cd618-75d1-4714-85f1-c8794f39e658",
+          "name": "name-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Последний вопрос — как зовут твою подругу?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний — как зовут твою одноклассницу?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "— Это кошмар какой-то! — директор школы №$number вошёл в кабинет, держа в руках стопку листов. — Этот класс уже вконец распоясался! Они вчера физику прогуляли, а сегодня принесли мне это! — директор помахал листами перед заместителем.\n— Это объяснительные? — спросил тот.\n— Именно, — ответил директор, поправляя свой парик. — Давайте я вам зачитаю парочку… О, вот например: «Я, ученик школы №$number $name-1, не пошёл на урок физики, потому что жираф $name-0 засунул ежа Иннокентия в унитаз, и мне пришлось немедленно его оттуда доставать». Вас ничего не смущает в этой объяснительной?\n— Мда, не думал, что жираф Виталий сможет так поступить... Они же с Иннокентием друзья с детства! — воскликнул заместитель.\n— Да причем тут жираф? Ничего, что девушка о себе в мужском роде пишет?\n— Ну, это в порядке вещей, у них мода сейчас такая.\n—…\n—…\nНачало хорошее, хочешь узнать, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-27-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

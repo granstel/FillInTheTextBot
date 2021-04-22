@@ -1,5 +1,5 @@
 {
-  "id": "40612716-d7fc-4185-9755-010820087f14",
+  "id": "f6f81db1-5acc-4e30-a397-38b47fc9d92b",
   "name": "Thanks",
   "auto": true,
   "contexts": [],
@@ -8,7 +8,22 @@
       "resetContexts": false,
       "action": "",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "9008194e-5836-4eac-b10d-0d171a841c5b",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "simpatiya",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "2",
@@ -17,6 +32,24 @@
           "replies": [
             "Да, давай!",
             "Покажи список"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Голосовать за навык"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Подписаться на новости"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

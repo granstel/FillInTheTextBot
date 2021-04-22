@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace FillInTheTextBot.Api
 {
@@ -42,12 +41,13 @@ namespace FillInTheTextBot.Api
         {
             app.UseMiddleware<ExceptionsMiddleware>();
 
+            app.UseRouting();
+
             if (configuration.HttpLog.Enabled)
             {
                 app.UseMiddleware<HttpLogMiddleware>();
             }
 
-            app.UseRouting();
             app.UseEndpoints(e => e.MapControllers());
         }
     }

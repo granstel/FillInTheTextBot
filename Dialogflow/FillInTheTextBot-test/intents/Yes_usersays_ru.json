@@ -1,5 +1,261 @@
 [
   {
+    "id": "e824f703-4b92-4729-84cf-edb46a8cb83e",
+    "data": [
+      {
+        "text": "а то",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c060fdf5-0754-421d-a11c-f898790a39be",
+    "data": [
+      {
+        "text": "ну да",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " а что",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b1b49add-e0f4-40b1-9e5c-10e4c62a80f0",
+    "data": [
+      {
+        "text": "ну да",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " сочиняем",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f4191a7b-e978-4eca-8e39-08c72fe3ba4f",
+    "data": [
+      {
+        "text": "возможно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "961c4873-3807-4cb0-9e15-6552a44877bb",
+    "data": [
+      {
+        "text": "можно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6d0b6632-3c61-4279-a694-9df41c842ab1",
+    "data": [
+      {
+        "text": "давай заново ",
+        "userDefined": false
+      },
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "14dee676-b282-4d71-89b5-4d354a0ac7e8",
+    "data": [
+      {
+        "text": "нужна",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "be4d74ef-c603-4995-bb2d-e6a5feaad396",
+    "data": [
+      {
+        "text": "любой текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5e3a8c43-4a55-42e7-9ff7-717a871446ad",
+    "data": [
+      {
+        "text": "далее",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "48088e7e-3b2c-46d0-b8d5-5b0af88ebcca",
+    "data": [
+      {
+        "text": "конечно ",
+        "userDefined": false
+      },
+      {
+        "text": "подруга",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8ff9388f-d8a4-405b-b2e2-31c35b23c2ad",
+    "data": [
+      {
+        "text": "алиса сочини",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2e1b3bc0-233f-4ffc-af97-649dcb739a26",
+    "data": [
+      {
+        "text": "историю алиса",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "643ae562-57bc-4c32-9f2e-cee4cc9d085e",
+    "data": [
+      {
+        "text": "идём дальше",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a503cf53-cde5-4e59-9cbd-881a290f7d1d",
+    "data": [
+      {
+        "text": "всё сделано",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "284c62fb-5046-4582-bcd5-0a0b58fdb0d3",
+    "data": [
+      {
+        "text": "всё ",
+        "userDefined": false
+      },
+      {
+        "text": "готово",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b9475aa1-40fa-4506-b446-fdb17903957f",
+    "data": [
+      {
+        "text": "Давай ещё!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dc100a7b-d9fa-4802-b3a9-42106eb7aec3",
+    "data": [
+      {
+        "text": "Давай ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": "!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "799d11dc-408f-42d5-9d3c-fee08dc4b802",
     "data": [
       {

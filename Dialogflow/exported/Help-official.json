@@ -1,0 +1,378 @@
+{
+  "id": "076a58e4-564e-4f23-9d4f-eeb92b24d523",
+  "name": "Help-official",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "official"
+  ],
+  "contexts": [
+    "official"
+  ],
+  "endInteraction": false,
+  "events": [
+    {
+      "name": "Help"
+    }
+  ],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "sberEmotion",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "zhdu_otvet",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "card",
+          "platform": "telegram",
+          "condition": "",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "text": "Подписаться на новости",
+              "postback": "https://vk.com/fillinthetextbot"
+            }
+          ]
+        },
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "В этом навыке мы вместе можем сочинить весьма занимательные истории. Вот как это работает: я буду просить поочереди называть разные слова, а потом добавлю их в текст, и прочитаю его. Кстати, если скажете название нужного текста, тогда сразу будем сочинять для него. Если передумаете сочинять по выбранному тексту - скажите \"отмена\", тогда можно будет выбрать другой. Если что-то пойдёт не так - просто попробуйте ещё раз, или найдите в ВК группу \"Занимательные истории голосовых помощников\", в ней можно связаться с разработчиками. Кстати, подпишитесь там же на новости, чтобы ничего не пропустить. Начнём?",
+            "Этот навык называется \"занимательные истории\", и в нём мы вместе можем сочинить какую-нибудь интересную историю. Для этого я буду поочереди задавать разные вопросы, а Ваши ответы добавлю в нужные места в тексте, и прочитаю то, что получилось. Кстати, если сразу скажете название нужного текста, то будем сочинять по нему. Если передумаете - скажите \"отмена\", тогда можно будет выбрать другой. Если вдруг навык сломается - просто попробуйте ещё раз, или найдите в ВК группу \"Занимательные истории голосовых помощников\", в ней можно связаться с разработчиками. Кстати, подпишитесь в ней же на новости, чтобы ничего не пропустить. Начинаем?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "сбер",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " что делать",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c2e8cf22-05dd-4c52-b0e6-88ad2393e4ae",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "афина",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " что делать",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8ccfbd82-79be-4db2-ae27-31f2d531cad1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "что от меня требуется",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a4e9fe5c-cc82-42cb-ad22-7e5bf392a9b4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "алиса",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " что делать если ты простудился",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "be476c44-c47f-4e14-aa83-b770573d9c8d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "правила",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "8f7c6824-1ab0-4318-8815-6b3d0049cd95",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Правила игры",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "d2daaf93-0f49-4afa-9774-dcfc2bd63ce0",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "расскажи правила",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "62e7b1c4-ac17-4e25-ac1b-fd10feb8feb7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "включи песню",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "0d07af0d-634b-47df-8481-a732f4a03d3a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "алиса",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " включи песню",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f857c913-b333-4382-8967-f26a9e15c1b2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "не понимаю",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "78d9ab42-cda4-4fa4-8f8b-325a7adad7a4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "не понятно",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2c9ba903-bf17-4169-8bbf-d5f8d0ba2791",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "непонятно",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b0f01b34-d3f7-4a78-b056-bf99bd9eb24d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "помоги мне",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "bb329739-4226-48c7-9fb0-2646e254ba6d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "у меня есть вопросы",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4c1ba4b9-088d-4eba-8a9e-0a05ab4efa72",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "что ты умеешь",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "9aad5c92-bd93-41d9-a4a6-884a05046a23",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "мне ничего не понятно",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "3cc1f46c-7288-479b-bc8e-75352e370cee",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "какие слова",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "2da442d5-6621-4c51-b496-9c218052bd4e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "что",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "77d7c37d-ca38-40d2-84c3-127b37d88c53",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "а как это работает",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "06edae13-ef24-4b64-b22f-e2aa45a8ef41",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "помощь",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c3357c63-662f-49fc-92d6-0e92c0b5f320",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Что ты умеешь",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "48a3d0c1-3c82-407f-8f44-d3c4996620cf",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "что ты такое",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "555fed4d-7c22-4ce5-93ae-01c6c295be70",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "что это",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "0a20aa06-766e-4131-8d5c-1b175e57385d",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

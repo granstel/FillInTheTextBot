@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
-using NLog;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
 
@@ -13,14 +13,8 @@ namespace FillInTheTextBot.Messengers.Yandex
     {
         private const string PingCommand = "ping";
         private const string PongResponse = "pong";
-        private const string ErrorCommand = "error";
-        private const string IsOldUserOldKey = "isOldUser";
-
-        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории Алисы из Яндекса\" и напиши об этом в личку";
 
         private readonly IMapper _mapper;
-
-        private readonly Logger _log = LogManager.GetLogger(nameof(YandexService));
 
         public YandexService(
             IConversationService conversationService,
@@ -32,53 +26,31 @@ namespace FillInTheTextBot.Messengers.Yandex
 
         protected override Models.Request Before(InputModel input)
         {
-            if (input == default)
-            {
-                _log.Error($"{nameof(InputModel)} is null");
+            var request = base.Before(input);
 
-                input = CreateErrorInput();
-            }
+            input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
 
-            var result = base.Before(input);
-
-            
-            if (!input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser))
-            {
-                input.TryGetFromUserState(IsOldUserOldKey, out isOldUser);//TODO: remove at next release
-            }
-
-            result.IsOldUser = isOldUser;
+            request.IsOldUser = isOldUser;
 
             if (input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex) != true)
             {
                 input.TryGetFromApplicationState(Models.Response.NextTextIndexStorageKey, out nextTextIndex);
             }
 
-            result.NextTextIndex = Convert.ToInt32(nextTextIndex);
+            request.NextTextIndex = Convert.ToInt32(nextTextIndex);
 
             input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
 
-            result.ScopeKey = scopeKey;
+            request.ScopeKey = scopeKey;
 
-            if (result.NewSession == true)
+            if (request.NewSession == true)
             {
-                SetContexts(input, result);
+                var contexts = GetContexts(input);
+
+                request.RequiredContexts.AddRange(contexts);
             }
 
-            return result;
-        }
-
-        private void SetContexts(InputModel input, Models.Request request)
-        {
-            if (input.IsNavigator())
-            {
-                DialogflowService.SetContextAsync(request.SessionId, "navigator", 50000).Forget();
-            }
-
-            if (input.IsCanShowAdvertising())
-            {
-                DialogflowService.SetContextAsync(request.SessionId, "advertising", 50000).Forget();
-            }
+            return request;
         }
 
         protected override Models.Response ProcessCommand(Models.Request request)
@@ -90,32 +62,7 @@ namespace FillInTheTextBot.Messengers.Yandex
                 response = new Models.Response { Text = PongResponse };
             }
 
-            if (ErrorCommand.Equals(request.Text, StringComparison.InvariantCultureIgnoreCase))
-            {
-                response = new Models.Response { Text = ErrorAnswer };
-            }
-
             return response;
-        }
-
-        public override async Task<OutputModel> ProcessIncomingAsync(InputModel input)
-        {
-            OutputModel result;
-
-            try
-            {
-                result = await base.ProcessIncomingAsync(input);
-            }
-            catch (Exception e)
-            {
-                _log.Error(e);
-
-                var response = new Models.Response { Text = ErrorAnswer };
-
-                result = await AfterAsync(input, response);
-            }
-
-            return result;
         }
 
         protected override async Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
@@ -123,8 +70,6 @@ namespace FillInTheTextBot.Messengers.Yandex
             var output = await base.AfterAsync(input, response);
 
             _mapper.Map(input, output);
-
-            output.AddToUserState(IsOldUserOldKey, null);//TODO: remove at next release
 
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 
@@ -136,17 +81,29 @@ namespace FillInTheTextBot.Messengers.Yandex
             return output;
         }
 
-        private InputModel CreateErrorInput()
+        private ICollection<Models.Context> GetContexts(InputModel input)
         {
-            return new InputModel
+            var contexts = new List<Models.Context>();
+
+            if (input.IsNavigator())
             {
-                Request = new Request
+                contexts.Add(new Models.Context
                 {
-                    OriginalUtterance = ErrorCommand
-                },
-                Session = new InputSession(),
-                Version = "1.0"
-            };
+                    Name = "navigator",
+                    LifeSpan = 50000
+                });
+            }
+
+            if (input.IsCanShowAdvertising())
+            {
+                contexts.Add(new Models.Context
+                {
+                    Name = "advertising",
+                    LifeSpan = 50000
+                });
+            }
+
+            return contexts;
         }
     }
 }

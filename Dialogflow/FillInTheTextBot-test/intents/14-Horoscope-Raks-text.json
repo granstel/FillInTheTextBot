@@ -53,7 +53,7 @@
           "id": "23cdc554-6338-4d8c-aa36-05dbdbecd360",
           "name": "person-1",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person-1",
           "defaultValue": "",
           "isList": false,
@@ -76,7 +76,7 @@
           "id": "823daa80-42ba-4b55-abc0-1084b511e6cd",
           "name": "color",
           "required": true,
-          "dataType": "@sys.color",
+          "dataType": "@sys.any",
           "value": "$color",
           "defaultValue": "",
           "isList": false,
@@ -146,6 +146,24 @@
           "replies": [
             "Повторить",
             "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Голосовать за игру"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Поделиться идеей текста"
+            }
           ],
           "textToSpeech": "",
           "lang": "ru",

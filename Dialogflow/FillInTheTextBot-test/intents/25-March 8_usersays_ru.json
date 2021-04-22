@@ -1,0 +1,123 @@
+[
+  {
+    "id": "c6d37595-d7f8-4608-876a-da5828bee82d",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "8 марта",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "443d407f-2db6-419f-9384-c273c2062deb",
+    "data": [
+      {
+        "text": "сочинение про ",
+        "userDefined": false
+      },
+      {
+        "text": "8 марта",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "43bc5dcd-f9be-4f55-89c6-a7f4c7a2207d",
+    "data": [
+      {
+        "text": "международный женский день",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8beee95a-f512-46e6-85c8-b445858a19ec",
+    "data": [
+      {
+        "text": "женский день",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9af64647-d77f-4b0f-baa8-893f2ded7806",
+    "data": [
+      {
+        "text": "поздравление для девушки",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "220147d5-4f47-46fd-a7d6-14cb7762fb0c",
+    "data": [
+      {
+        "text": "поздравление для девушек",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "064db59b-067c-43e1-99b2-dd3a1b129a33",
+    "data": [
+      {
+        "text": "поздравление с ",
+        "userDefined": false
+      },
+      {
+        "text": "8 марта",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2e3b31fe-8bee-4b92-8d14-ac33f65b3acf",
+    "data": [
+      {
+        "text": "8 марта",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

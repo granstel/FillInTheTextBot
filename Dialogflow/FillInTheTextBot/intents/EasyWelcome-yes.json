@@ -1,0 +1,83 @@
+{
+  "id": "513fd06f-2d29-4059-95ad-55af531f4927",
+  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
+  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
+  "name": "EasyWelcome-yes",
+  "auto": true,
+  "contexts": [
+    "EasyWelcome-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "6de494a6-860b-4abe-af60-669fb280569c",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bd138053-f3fd-471c-883d-348c03662d08",
+          "name": "resetTextIndex",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "false",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "fadf4f01-99bf-4eb9-b3c8-c4aca62e0c2e",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "predvkusheniye",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Хорошо!",
+            "Начинаем!",
+            "Приступим!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

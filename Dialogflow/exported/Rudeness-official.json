@@ -1,0 +1,341 @@
+{
+  "id": "75068ef9-6921-49dc-8ba8-17ed0d2688b4",
+  "name": "Rudeness-official",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "official"
+  ],
+  "contexts": [
+    "official"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "sberEmotion",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "nedovolstvo",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Прошу Вас не грубить мне!",
+            "Это было грубо!",
+            "Не грубите мне, пожалуйста!"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "нахуй ты нужна",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "12047c98-4a1d-4723-ac3e-fdf8d6592a56",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "алиса",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " она тупая",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b64610ce-9314-40c6-b45d-115f60a26b9a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "чушь",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "f8eb088f-6213-44de-9b65-1a05bfc0bfb4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "полная чушь",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b05cc8a1-9f6a-454a-b0f1-824696bfa52f",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "алиса",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " ты совсем что ",
+          "userDefined": false
+        },
+        {
+          "text": "ли",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " дурная",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "1b876ed9-7758-4076-b0c7-64cc2f115e34",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "обосрись",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "53d77551-af1a-4268-92e3-d8272196b4ae",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "обосрись вкладку твою мать",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5531acb9-4d29-461a-b2e5-69c42933dab2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "фигня",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "de952983-9858-4365-bb7a-935b469fe18b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "ну его нахер",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a7895b1d-28dd-444a-86b0-b909c96cee3b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "из говна получилось",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "aff180d9-5270-4816-b0ed-e19a56965624",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "что блядь",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f5be0264-142f-4037-b43d-6a0b394057d3",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "иди на хуй",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "5509e453-442d-4a26-a86f-61c61c111614",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "иди нафиг",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "cde6ab63-5d9c-4cde-b2a5-811ee0adbc62",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "пойти",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " нафиг",
+          "userDefined": false
+        }
+      ],
+      "count": 1,
+      "id": "eedacef7-8e00-4d80-98d1-66ac793a7787",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "дура",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "ea155293-f98d-49df-9f37-9993570b521e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "да ты дура",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "572388de-660e-449d-8c61-98494cdbc7b0",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "ты самая тупая",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4138918c-4dfc-4222-9934-7b2b05f49bea",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "тупая",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "096e0a93-8a10-49f5-b9ce-757ace739437",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "блять надо позвонить ему ",
+          "userDefined": false
+        },
+        {
+          "text": "хую",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        }
+      ],
+      "count": 0,
+      "id": "f1226775-df24-4084-acad-7e4daee40ebb",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "ты глупая",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "af8859e8-b702-48d2-bb1b-272f4ef0fcb9",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

@@ -57,7 +57,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -88,7 +88,7 @@
           "id": "5498c706-1134-47b5-a35e-e01c627da806",
           "name": "person",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person",
           "defaultValue": "",
           "isList": false,
@@ -114,11 +114,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И последнее - \"Какой\"?"
+              "value": "И последнее — «Какой»?"
             },
             {
               "lang": "ru",
-              "value": "И напоследок - \"Какой\"?"
+              "value": "И напоследок — «Какой»?"
             }
           ],
           "promptMessages": [],
@@ -141,12 +141,47 @@
           "condition": ""
         },
         {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Поддержать занимательные истории",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel=-201360423"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Поддержать занимательные истории",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel=-201360423"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Вот что получилось: Водолей - покровитель фонтанов, водопадов, газировки, и депутатов. Весной вы придумаете новый сорт пива - $adjective-1 $person, но его почему-то никто не захочет производить.\nЛетом вы поймёте: лучше $animal-1 в небе, чем $animal-2 в вашей квартире.\nОсенью вас наградят медалью \"Самый $adjective-2 Водолей мира\".\nЭто всё, что сказали звёзды. Давай ещё сочиним?"
+            "Вот что получилось: Водолей — покровитель фонтанов, водопадов, газировки, и депутатов. Весной вы придумаете новый сорт пива - $adjective-1 $person, но его почему-то никто не захочет производить.\nЛетом вы поймёте: лучше $animal-1 в небе, чем $animal-2 в вашей квартире.\nОсенью вас наградят медалью «Самый $adjective-2 Водолей мира».\nЭто всё, что сказали звёзды. Давай ещё сочиним?"
           ],
           "condition": ""
         }

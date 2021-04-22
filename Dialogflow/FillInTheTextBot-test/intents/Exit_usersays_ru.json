@@ -1,9 +1,9 @@
 [
   {
-    "id": "821048c5-3e39-4740-b071-5d20c37bbccd",
+    "id": "5866c8c4-d8f4-40f5-9165-e35f3db80ac3",
     "data": [
       {
-        "text": "до свидания",
+        "text": "выйти",
         "userDefined": false
       }
     ],
@@ -13,14 +13,10 @@
     "updated": 0
   },
   {
-    "id": "4c3a34c9-9543-4993-afdc-0cc557671fc7",
+    "id": "a6319c72-b376-4a6f-bda3-b12cac50efce",
     "data": [
       {
-        "text": "выключайся ",
-        "userDefined": false
-      },
-      {
-        "text": "алиса",
+        "text": "выход",
         "meta": "@sys.ignore",
         "userDefined": false
       }
@@ -31,15 +27,10 @@
     "updated": 0
   },
   {
-    "id": "f7c96453-15ae-4617-a8c8-1169f9bdd446",
+    "id": "eacb8053-9d18-4289-86e2-94cec12541be",
     "data": [
       {
-        "text": "хватит ",
-        "userDefined": false
-      },
-      {
-        "text": "алиса",
-        "meta": "@sys.ignore",
+        "text": "закончить",
         "userDefined": false
       }
     ],
@@ -49,15 +40,10 @@
     "updated": 0
   },
   {
-    "id": "8537d686-13f0-4cb9-a24e-4454523e12bc",
+    "id": "472e839d-e120-4dec-8ffb-4b948c11aefd",
     "data": [
       {
-        "text": "почему хватит ",
-        "userDefined": false
-      },
-      {
-        "text": "алиса",
-        "meta": "@sys.ignore",
+        "text": "я ухожу пока",
         "userDefined": false
       }
     ],
@@ -67,14 +53,62 @@
     "updated": 0
   },
   {
-    "id": "67a39051-b16e-4605-902e-c693d00aff40",
+    "id": "04fd23c2-3664-4d17-9585-0d95bff4fc4d",
     "data": [
       {
-        "text": "нет ",
+        "text": "заканчиваем",
         "userDefined": false
-      },
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "229d9b28-7262-470a-b238-a12cb5749aeb",
+    "data": [
       {
-        "text": "алиса",
+        "text": "заканчиваем истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5c9e5734-c3e8-4275-86bd-a9d7286c0009",
+    "data": [
+      {
+        "text": "нам пора спать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aeca4966-afc4-49f8-98ce-9bf5bbe53e66",
+    "data": [
+      {
+        "text": "пора спать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "37c422be-1883-46cf-94c3-d9cbe9ada7f2",
+    "data": [
+      {
+        "text": "нет",
         "meta": "@sys.ignore",
         "userDefined": false
       },
@@ -89,10 +123,10 @@
     "updated": 0
   },
   {
-    "id": "f1f76f06-c1d1-4fe9-8177-0fc462596acd",
+    "id": "25f49485-cbdc-4f59-9150-c3cdf59877d0",
     "data": [
       {
-        "text": "пора спать",
+        "text": "почему хватит",
         "userDefined": false
       }
     ],
@@ -102,15 +136,10 @@
     "updated": 0
   },
   {
-    "id": "a86775d3-24f7-4d6f-a41e-db4182d9ff09",
+    "id": "1967e189-0f37-49a1-9820-ca63da3d59fe",
     "data": [
       {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " нам пора спать",
+        "text": "хватит",
         "userDefined": false
       }
     ],
@@ -120,10 +149,10 @@
     "updated": 0
   },
   {
-    "id": "e55c4fb0-8ae9-445c-a7ef-22d4a05b3920",
+    "id": "f714724f-8b37-42ae-8caa-c0f881292a11",
     "data": [
       {
-        "text": "заканчиваем истории",
+        "text": "выключайся",
         "userDefined": false
       }
     ],
@@ -133,104 +162,10 @@
     "updated": 0
   },
   {
-    "id": "271206f6-9482-484c-9dee-daa43c94b2ee",
+    "id": "c677a9c6-714c-488c-9a55-f737c52b08d7",
     "data": [
       {
-        "text": "заканчиваем",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "cc08518d-011a-44b7-bda4-e2f8021aab36",
-    "data": [
-      {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " я ухожу пока",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "cc97e8cd-5aab-40ff-a8de-d7e45bfd6e08",
-    "data": [
-      {
-        "text": "закончить",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "3aa67018-459a-41f2-9892-3dee58712284",
-    "data": [
-      {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " выход",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "c9c8fb5b-35a9-4aa3-b932-01005e0baa2b",
-    "data": [
-      {
-        "text": "алиса",
-        "meta": "@sys.ignore",
-        "userDefined": false
-      },
-      {
-        "text": " выйти",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "60c813bc-bd21-474d-b815-7e91fffd32ab",
-    "data": [
-      {
-        "text": "выйти",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "a6403738-aa25-47e4-9916-fd502399c9d3",
-    "data": [
-      {
-        "text": "выход",
-        "meta": "@sys.ignore",
+        "text": "до свидания",
         "userDefined": false
       }
     ],

@@ -1,30 +1,88 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
-using FillInTheTextBot.Services.Extensions;
+using NLog;
 
 namespace FillInTheTextBot.Messengers
 {
     public abstract class MessengerService<TInput, TOutput> : IMessengerService<TInput, TOutput>
     {
+        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
+        private const string ErrorLink = "https://vk.com/fillinthetextbot";
+
         private readonly IConversationService _conversationService;
         private readonly IMapper _mapper;
         protected readonly IDialogflowService DialogflowService;
+
+        protected readonly Logger Log;
 
         protected MessengerService(IConversationService conversationService, IMapper mapper, IDialogflowService dialogflowService)
         {
             _conversationService = conversationService;
             _mapper = mapper;
             DialogflowService = dialogflowService;
+
+            Log = LogManager.GetLogger(GetType().Name);
         }
 
         protected virtual Request Before(TInput input)
         {
             var request = _mapper.Map<Request>(input);
 
-            if (request.NewSession == true)
+            var contexts = GetContexts(request);
+            request.RequiredContexts.AddRange(contexts);
+
+            return request;
+        }
+
+        public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
+        {
+            Response response;
+
+            try
+            {
+                var request = Before(input);
+
+                response = ProcessCommand(request);
+
+                if (response == null)
+                {
+                    response = await _conversationService.GetResponseAsync(request);
+                }
+
+                _mapper.Map(request, response);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+
+                response = new Response
+                {
+                    Text = ErrorAnswer,
+                    Buttons = new []
+                    {
+                        new Button
+                        {
+                            Text = "Сообщить об ошибке",
+                            Url = ErrorLink
+                        }
+                    }
+                };
+            }
+
+            var output = await AfterAsync(input, response);
+
+            return output;
+        }
+
+        private ICollection<Context> GetContexts(Request request)
+        {
+            var contexts = new List<Context>();
+
+            try
             {
                 var parameters = new Dictionary<string, string>
                 {
@@ -32,34 +90,28 @@ namespace FillInTheTextBot.Messengers
                     { nameof(request.ClientId), request.ClientId ?? string.Empty }
                 };
 
-                DialogflowService.SetContextAsync(request.SessionId, "UserInfo", 50000, parameters).Forget();
+                contexts.Add(new Context
+                {
+                    Name = $"source-{request.Source}",
+                    LifeSpan = 2,
+                    Parameters = parameters
+                });
 
                 if (request.HasScreen)
                 {
-                    DialogflowService.SetContextAsync(request.SessionId, "screen", 50000).Forget();
+                    contexts.Add(new Context
+                    {
+                        Name = "screen",
+                        LifeSpan = 2
+                    });
                 }
             }
-
-            return request;
-        }
-
-        public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
-        {
-            var request = Before(input);
-
-            var response = ProcessCommand(request);
-
-            // ReSharper disable once ConvertIfStatementToNullCoalescingExpression
-            if (response == null)
+            catch (Exception e)
             {
-                response = await _conversationService.GetResponseAsync(request);
+                Log.Error(e);
             }
 
-            _mapper.Map(request, response);
-
-            var output = await AfterAsync(input, response);
-
-            return output;
+            return contexts;
         }
 
         protected virtual Response ProcessCommand(Request request)

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "ee09ca00-ce86-4a11-aa59-98a2133df62a",
+    "data": [
+      {
+        "text": "список историй",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a10b1389-72f6-431e-bde8-65be82cfda78",
+    "data": [
+      {
+        "text": "покажи список историй",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4ec48f18-265e-4817-bf24-4f2488aa859d",
+    "data": [
+      {
+        "text": "покажи список",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "13c61a1b-9e3f-426a-8289-d538e8a73ace",
+    "data": [
+      {
+        "text": "что у тебя есть",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6c54ad19-967c-4d02-9d96-bd0a2cfdb7e9",
+    "data": [
+      {
+        "text": "прочитай список",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dd85d646-51b9-40c6-88b9-312af816d054",
+    "data": [
+      {
+        "text": "покажи список текстов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "252a9556-e616-4056-a5ef-05781a684e6a",
+    "data": [
+      {
+        "text": "список текстов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3c54ddf8-1822-4593-9824-c6305507e3d0",
+    "data": [
+      {
+        "text": "список",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "5faf8285-486c-4884-a2f1-acfceefe4f4d",
+    "data": [
+      {
+        "text": "оценка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f71dba73-161c-484d-a012-50f91cc6aa73",
+    "data": [
+      {
+        "text": "оценить навык",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ad857443-53f9-4f5c-a71e-b01a942cabb9",
+    "data": [
+      {
+        "text": "где поставить оценку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e5200527-df7c-4eba-8bcc-9ec3a4bf2693",
+    "data": [
+      {
+        "text": "хочу поставить тебе оценку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5bc3e432-e7f5-4814-9368-94d57f0b0764",
+    "data": [
+      {
+        "text": "поставить оценку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

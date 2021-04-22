@@ -164,6 +164,24 @@
           "condition": ""
         },
         {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Проголосовать за навык"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Ответы на оценки"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",

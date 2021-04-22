@@ -18,7 +18,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "Сейчас попробуем сочинить \"Новую сказку про колобка\".",
+          "value": "Сейчас попробуем сочинить «Новую сказку про колобка».",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -31,7 +31,7 @@
           "id": "7ec1f250-3e30-4d25-8562-8ec87966b5a4",
           "name": "person-female",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person-female",
           "defaultValue": "",
           "isList": false,
@@ -61,7 +61,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какая\"?"
+              "value": "«Какая»?"
             }
           ],
           "promptMessages": [],
@@ -73,7 +73,7 @@
           "id": "1b474c1c-9353-483d-baf4-ecd05f1ca08e",
           "name": "person-male",
           "required": true,
-          "dataType": "@sys.person",
+          "dataType": "@sys.any",
           "value": "$person-male",
           "defaultValue": "",
           "isList": false,
@@ -84,7 +84,7 @@
             },
             {
               "lang": "ru",
-              "value": "А теперь - имя друга"
+              "value": "А теперь — имя друга"
             }
           ],
           "promptMessages": [],
@@ -103,7 +103,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -145,7 +145,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -164,7 +164,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Что сделал?\""
+              "value": "«Что сделал?»"
             }
           ],
           "promptMessages": [],
@@ -202,7 +202,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -244,11 +244,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И последнее - \"Куда\"?"
+              "value": "И последнее — «Куда»?"
             },
             {
               "lang": "ru",
-              "value": "И наконец - \"Куда\"?"
+              "value": "И наконец — «Куда»?"
             }
           ],
           "promptMessages": [],
@@ -271,12 +271,47 @@
           "condition": ""
         },
         {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Проголосовать за занимательные истории",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Что новенького?",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Проголосовать за занимательные истории",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Что новенького?",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Итак, новая сказка про колобка: Однажды $adjective-female $person-female и $adjective-male-2 $person-male решили испечь $adjective-male-1 колобок. Сказано - сделано. Колобок получился ну очень $adjective-male-3. Покатился он по тропинке, и тут навстречу ему $animal. Сразу было видно, что $animal собирается съесть колобка. Но тот не испугался: он бросил в зверя то, что мы называем $thing, только в два раза больше, и бедолага $animal от страха $action-1. Колобок на радостях принялся $action-2, пока не устал, а потом покатился дальше, $where.\n- По-моему, здорово получилось! Давай ещё?"
+            "Итак, новая сказка про колобка: Однажды $adjective-female $person-female и $adjective-male-2 $person-male решили испечь $adjective-male-1 колобок. Сказано — сделано. Колобок получился ну очень $adjective-male-3. Покатился он по тропинке, и тут навстречу ему $animal. Сразу было видно, что $animal собирается съесть колобка. Но тот не испугался: он бросил в зверя то, что мы называем $thing, только в два раза больше, и бедолага $animal от страха $action-1. Колобок на радостях принялся $action-2, пока не устал, а потом покатился дальше, $where.\n- По-моему, здорово получилось! Давай ещё?"
           ],
           "condition": ""
         }

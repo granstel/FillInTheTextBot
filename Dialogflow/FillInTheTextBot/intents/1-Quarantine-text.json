@@ -1,7 +1,6 @@
 {
   "id": "003bde36-932f-4ec8-97d9-06b01f2a827f",
   "parentId": "e610614f-aa08-481d-bde2-4626c51b0565",
-  "rootParentId": "e610614f-aa08-481d-bde2-4626c51b0565",
   "name": "1-Quarantine-text",
   "auto": true,
   "contexts": [
@@ -14,11 +13,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "3e931995-e8e5-44a5-a5e3-79eecd91b5dc",
+          "id": "2109e5ec-7009-46d7-9acd-eff896e51a76",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "Будем сочинять про \"Карантин\". Отвечай на вопросы первое, что приходит в голову. Итак:",
+          "value": "Будем сочинять про «Карантин». Отвечай на вопросы первое, что приходит в голову. Итак:",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -28,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "2ef11fa0-4f2c-4abc-bd11-05febbec987b",
+          "id": "ea310d58-052b-4780-a75e-8905661b75f6",
           "name": "number-1",
           "required": true,
           "dataType": "@sys.number",
@@ -38,11 +37,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "назови любое число"
+              "value": "Назови любое число"
             },
             {
               "lang": "ru",
-              "value": "скажи любое число"
+              "value": "Скажи любое число"
             }
           ],
           "promptMessages": [],
@@ -51,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "3d9912c3-3f8c-4a4d-b7cd-723265e2ef4d",
+          "id": "61d96cf1-8821-4a8a-a469-83c553ddc013",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -61,7 +60,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какие\"?"
+              "value": "«Какие»?"
             }
           ],
           "promptMessages": [],
@@ -70,7 +69,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0dabd5cf-858c-467a-9bb3-0506342e7f38",
+          "id": "b78039d5-cc09-4273-86b9-57a612a91060",
           "name": "number-2",
           "required": true,
           "dataType": "@sys.number",
@@ -93,21 +92,21 @@
           "outputDialogContexts": []
         },
         {
-          "id": "c5fd182c-7946-4a11-bc8a-4cbb2201bb26",
-          "name": "thing",
+          "id": "03866e86-72f9-449b-bfea-85316e4f251f",
+          "name": "animal-male",
           "required": true,
           "dataType": "@sys.any",
-          "value": "$thing",
+          "value": "$animal-male",
           "defaultValue": "",
           "isList": false,
           "prompts": [
             {
               "lang": "ru",
-              "value": "Теперь назови предмет мужского рода"
+              "value": "Назови животное мужского рода"
             },
             {
               "lang": "ru",
-              "value": "Теперь - предмет мужского рода"
+              "value": "Теперь — животное мужского рода"
             }
           ],
           "promptMessages": [],
@@ -116,7 +115,26 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ba6fddd9-d53d-444b-b985-c3f1a03f3025",
+          "id": "d074dd6f-9db4-4c31-bac4-b0ad4fa49015",
+          "name": "adjective-male-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0cb729d1-d14b-421b-aacf-b82fbdb5d2ce",
           "name": "number-3",
           "required": true,
           "dataType": "@sys.number",
@@ -139,68 +157,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "eeb86509-6dc8-4a06-a503-786c395b86c6",
-          "name": "adjective-male-1",
-          "required": true,
-          "dataType": "@sys.any",
-          "value": "$adjective-male-1",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "\"Какой\"?"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "7f1e27ec-5f76-466e-9ee7-b4dcdb3fdaca",
-          "name": "animal-male",
-          "required": true,
-          "dataType": "@sys.any",
-          "value": "$animal-male",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "Назови животное мужского рода"
-            },
-            {
-              "lang": "ru",
-              "value": "Теперь - животное мужского рода"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "84a51dfb-6e90-47da-8bde-fbac0ff63697",
-          "name": "adjective-male-2",
-          "required": true,
-          "dataType": "@sys.any",
-          "value": "$adjective-male-2",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "\"Какой\"?"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "a5fb6954-e27d-4244-9719-80e2a95bb16a",
+          "id": "8c47fa15-7ade-44b4-aaff-799812c077ed",
           "name": "animal-female",
           "required": true,
           "dataType": "@sys.any",
@@ -223,7 +180,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "5023beab-d8e8-45c0-96a1-5c47d53ce696",
+          "id": "48aee0e4-212d-44f2-9bc5-8499ca6ff720",
           "name": "adjective-female",
           "required": true,
           "dataType": "@sys.any",
@@ -233,7 +190,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И наконец - \"Какая\"?"
+              "value": "И наконец — «Какая»?"
             }
           ],
           "promptMessages": [],
@@ -256,12 +213,47 @@
           "condition": ""
         },
         {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Проголосовать за игру",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Следить за новостями",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Проголосовать за игру",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Следить за новостями",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Слушай! У нас карантин: надо соблюдать дистанцию $number-1 м, не собираться больше $number-2 человек, не плевать на $number-3 м с разбега. За порядком следят $adjective-1 полицейские, и у каждого на поясе $adjective-male-1 $thing. Всё закрылось. Мне сказали, что я должен взять на прокорм какого-нибудь зверя, а то у зоопарка кончились деньги. Я позвонил туда и спросил: \"У вас есть $adjective-male-2 $animal-male? Я всегда мечтал о нём!\" Они сказали: \"Да, конечно, есть, сейчас привезём!\" Они привезли зверька, но оказалось, это совсем не $animal-male, а гигантская $adjective-female $animal-female! 5 минут она вела себя тихо, но потом съела всё съедобное в доме, и стала ходить по пятам за мной... Я убежал на улицу и спросил у полицейского: \"Вы можете мне помочь? У меня дома поселилась $adjective-female $animal-female. Идёмте, покажу.\" Я пропустил его вперёд (а сам не зашёл), запер за ним дверь, и ушёл. Всё равно квартира не моя, а съёмная. \n- По-моему отлично! Давай ещё сочиним?"
+            "Посвящается годовщине самоизоляции. У нас карантин: надо соблюдать дистанцию $number-1 м, не собираться больше $number-2 человек, не плевать на $number-3 м с разбега. За порядком следят $adjective-1 полицейские. Всё закрылось. Мне сказали, что я должен взять на прокорм какого-нибудь зверя, а то у зоопарка кончились деньги. Я позвонил туда и спросил: «У вас есть $adjective-male-2 $animal-male? Я всегда мечтал о нём!» Они сказали: «Да, конечно, есть, сейчас привезём!» Они привезли зверька, но оказалось, это совсем не $animal-male, а гигантская $adjective-female $animal-female! 5 минут она вела себя тихо, но потом съела всё съедобное в доме, и стала ходить по пятам за мной... Я убежал на улицу и спросил у полицейского: «Вы можете мне помочь? У меня дома поселилась $adjective-female $animal-female. Идёмте, покажу.» Я пропустил его вперёд (а сам не зашёл), запер за ним дверь, и ушёл. Всё равно квартира не моя, а съёмная. \n— По-моему отлично! Давай ещё сочиним?"
           ],
           "condition": ""
         }

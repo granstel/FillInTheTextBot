@@ -5,8 +5,9 @@ namespace FillInTheTextBot.Models
     /// </summary>
     public enum Source
     {
-        Chat2Desk,
-        Telegram,
-        Yandex
+        Default,
+        Yandex,
+        Sber,
+        Marusia
     }
 }

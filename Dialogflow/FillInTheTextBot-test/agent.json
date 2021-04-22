@@ -50,5 +50,6 @@
   "enabledKnowledgeBaseNames": [],
   "knowledgeServiceConfidenceAdjustment": -0.4,
   "dialogBuilderMode": false,
-  "baseActionPackagesUrl": ""
+  "baseActionPackagesUrl": "",
+  "enableSpellCorrection": false
 }

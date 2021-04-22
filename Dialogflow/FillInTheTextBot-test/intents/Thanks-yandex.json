@@ -1,0 +1,91 @@
+{
+  "id": "40612716-d7fc-4185-9755-010820087f14",
+  "parentId": "f6f81db1-5acc-4e30-a397-38b47fc9d92b",
+  "name": "Thanks-yandex",
+  "auto": true,
+  "contexts": [
+    "source-yandex"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "source-yandex",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "9596d6c9-8e8a-4d34-a5d6-b24c1ef81cd9",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "simpatiya",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да, давай!",
+            "Покажи список"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+              "text": "Поставить оценку"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Подписаться на новости"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Мне тоже понравилось! Сочиним что-нибудь ещё?",
+            "И мне понравилось! Давай ещё что-нибудь сочиним?",
+            "Сочиним что-нибудь ещё?",
+            "Давай ещё что-нибудь сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

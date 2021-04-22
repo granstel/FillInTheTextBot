@@ -68,7 +68,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какие?\""
+              "value": "«Какие?»"
             }
           ],
           "promptMessages": [],
@@ -114,19 +114,19 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И последнее - назови какие-нибудь фрукты"
+              "value": "И последнее — назови какие-нибудь фрукты"
             },
             {
               "lang": "ru",
-              "value": "И напоследок - назови какие-нибудь овощи"
+              "value": "И напоследок — назови какие-нибудь овощи"
             },
             {
               "lang": "ru",
-              "value": "И последнее - назови свои любимые фрукты"
+              "value": "И последнее — назови свои любимые фрукты"
             },
             {
               "lang": "ru",
-              "value": "И напоследок - назови свои любимые овощи"
+              "value": "И напоследок — назови свои любимые овощи"
             }
           ],
           "promptMessages": [],
@@ -144,6 +144,41 @@
             "Повтори пожалуйста",
             "Давай!"
           ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Голосовать за игру",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Голосовать за игру",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
           "textToSpeech": "",
           "lang": "ru",
           "condition": ""

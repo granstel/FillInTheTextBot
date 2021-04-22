@@ -1,0 +1,146 @@
+{
+  "id": "5c770a92-be69-4a57-9960-a012039cd358",
+  "parentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "name": "27-why did we skip-text2",
+  "auto": true,
+  "contexts": [
+    "text-27-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        },
+        {
+          "name": "text-27-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-27",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "b20e3406-0b39-4ab7-b2c6-0f7df16c00bc",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-27-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "f5ed9e84-9e26-44dc-afb2-baa95313778e",
+          "name": "name-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи пожалуйста имя мальчика, одноклассника, например"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови имя мальчика, одноклассника, например"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a7a2ee40-b7e8-465b-b135-578a3f02033e",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "f6719b7b-45ea-4c3b-b3ab-c754e95c999d",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И ещё один вопрос — что невозможно сделать?"
+            },
+            {
+              "lang": "ru",
+              "value": "И ещё один вопрос — что ты никогда не сможешь сделать?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "— А вот это гляньте: «Я, ученик школы №#text-27.number $name-3, не пошёл на $adjective-1 урок физики, так как помогал своей однокласснице, которую зовут #text-27.name-1, доставать ежа Иннокентия из туалета. Одна она не справлялась — Иннокентий плотно застрял, так что даже не мог $adjective-2»!\n— Вот она — настоящая дружба! Доставать ежа из унитаза, что может быть прекрасней?! - прослезился заместитель, то ли от умиления, то ли от смеха.\n—…\n—…\nДавай сочиним, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-27-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

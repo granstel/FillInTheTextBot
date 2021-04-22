@@ -1,0 +1,246 @@
+{
+  "id": "d291c001-eaf2-4136-853f-cbd2ef4cf13a",
+  "name": "TextsList-sber",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [
+    "source-sber"
+  ],
+  "contexts": [
+    "source-sber"
+  ],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "TextsList-followup",
+          "lifespan": 2
+        },
+        {
+          "name": "TextsList-followup-2",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Я их сейчас озвучу, а если надоест - останови меня, и скажи «любой». Итак, вот что у меня сейчас есть:\n— Случай на уроке.\n— Карантин.\n— Анекдот про енота.\n— Про Бориса-кота.\n— Прогульщики.\nЧто выберешь?"
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "покажи какие ты истории можешь",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c00c0984-af11-4966-912e-f73638b9942a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "покажи список историй",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f9d96664-64f2-47be-a5b9-484ec7884b6e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "список историй",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b765d09e-bf1b-4e90-93da-78870f6313a4",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "напомни список текстов",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d3010a9f-dcce-4077-b37e-8efd5c94f97d",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "говори список текстов",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "93c0f9e8-21d2-4d68-802c-c976317bcf0b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "напомни список",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "333dd6bd-f8ce-40a8-8730-4c13a5c80158",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "напомни тексты",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "76b4b9ba-f862-45ea-b94e-1b136bcb853c",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "перечисли тексты",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "576e88c8-3143-4ceb-a16e-587d2fe094c5",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "скажи список текстов",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "b3c624a1-e2a3-4b0f-8990-cddfbd962f53",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "напомни",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "4a2c4258-ad13-4dc3-bab3-b4d6485ae99a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "список",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "c1c9ee29-8057-45c1-b9cb-bf8bf3b6e73a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "тексты",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "fcb26a4d-ef9d-4fd3-a924-7bfca374d852",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "список текстов",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d6be4a21-7787-4387-8a88-be59c9eba2a6",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "покажи список текстов",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "5c02d908-0534-4823-96f3-cd8f05db4fb1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "какие у тебя есть тексты",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "dcaa6671-2e8d-4508-af10-4d4bb3b4c143",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "какие тексты",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "78e849ea-38be-4341-9c60-c61d6c25f737",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}

@@ -1,22 +1,55 @@
 {
-  "id": "6e8b484d-6fbf-4f7e-9e45-88f583389453",
+  "id": "898d0ecd-bef7-48c9-a491-b268a3ba64f3",
   "name": "Exit",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
+      "action": "endConversation",
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "dfe76377-454a-4ae2-85d2-151b6861de23",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "zhdu_otvet",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "кнопки",
+          "buttons": [
+            {
+              "postback": "https://t.me/yadialogsnews/170",
+              "text": "Голосовать за навык"
+            },
+            {
+              "postback": "https://vk.com/fillinthetextbot",
+              "text": "Следить за новостями"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Окей, возвращайся, будуж дать!",
+            "Окей, возвращайся, буду ждать!",
             "Если что, я всегда здесь, возвращайся!",
             "Приходи ещё, я буду здесь!"
           ],
@@ -33,5 +66,6 @@
   "events": [],
   "conditionalResponses": [],
   "condition": "",
-  "conditionalFollowupEvents": []
+  "conditionalFollowupEvents": [],
+  "endInteraction": true
 }

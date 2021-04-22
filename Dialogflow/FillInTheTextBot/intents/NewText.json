@@ -10,11 +10,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "10b99b1b-ff70-40f4-b4e7-2e20d7cd1d8b",
+          "id": "fd520304-48ff-4495-9f05-f35dc4795937",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "text-24",
+          "value": "text-27-1",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -31,7 +31,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история -"
+            "Самая свежая история —"
           ],
           "condition": ""
         }
