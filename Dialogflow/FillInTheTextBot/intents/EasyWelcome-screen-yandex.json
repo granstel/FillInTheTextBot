@@ -2,12 +2,11 @@
   "id": "90161c20-edd5-467e-b2be-380f18966273",
   "parentId": "52162657-210f-46be-a923-2e91bd10128f",
   "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome-screen-yandex,marusia",
+  "name": "EasyWelcome-screen-yandex",
   "auto": true,
   "contexts": [
     "screen",
-    "source-yandex",
-    "source-marusia"
+    "source-yandex"
   ],
   "responses": [
     {
@@ -21,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "fce76a04-9f35-422d-9837-3bb640539abe",
+          "id": "46e8e9c6-2089-436e-bb2e-a31fff24b7f1",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -69,8 +68,8 @@
               "Marusia": [
                 {
                   "Text": "Проголосовать за навык",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
+                  "IsQuickReply": false,
+                  "Url": "https://t.me/yadialogsnews/170"
                 },
                 {
                   "Text": "Подписаться на новости",
@@ -81,13 +80,13 @@
               "Yandex": [
                 {
                   "IsQuickReply": false,
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "Text": "Проголосовать за навык"
+                  "Text": "Проголосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170"
                 },
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Подписаться на новости",
-                  "IsQuickReply": false
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
                 }
               ]
             }
