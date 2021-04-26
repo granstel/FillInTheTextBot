@@ -200,7 +200,7 @@
                 {
                   "Text": "Поблагодарить разработчиков",
                   "IsQuickReply": false,
-                  "Url": "https://vk.com/im?sel=-201360423"
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
                 }
               ],
               "Marusia": [
@@ -212,7 +212,7 @@
                 {
                   "Text": "Поблагодарить разработчиков",
                   "IsQuickReply": false,
-                  "Url": "https://vk.com/im?sel=-201360423"
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
                 }
               ]
             }

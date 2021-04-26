@@ -43,7 +43,7 @@
             "ButtonsForSource": {
               "Marusia": [
                 {
-                  "Url": "https://vk.com/im?sel=-201360423",
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
                   "IsQuickReply": false,
                   "Text": "Рассказать о проблеме"
                 }
@@ -52,7 +52,7 @@
                 {
                   "IsQuickReply": false,
                   "Text": "Рассказать о проблеме",
-                  "Url": "https://vk.com/im?sel=-201360423"
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
                 }
               ]
             }
