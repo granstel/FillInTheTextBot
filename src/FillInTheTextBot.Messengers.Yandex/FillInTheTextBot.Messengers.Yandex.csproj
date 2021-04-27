@@ -5,14 +5,12 @@
     <OutputType>Library</OutputType>
   </PropertyGroup>
 
-
   <ItemGroup>
     <Content Include="appsettings.Yandex.json">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
 
   <ItemGroup>
     <PackageReference Include="Yandex.Dialogs.Models" Version="1.2.0" />
