@@ -18,8 +18,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
         public YandexService(
             IConversationService conversationService,
-            IMapper mapper,
-            IDialogflowService dialogflowService) : base(conversationService, mapper, dialogflowService)
+            IMapper mapper) : base(conversationService, mapper)
         {
             _mapper = mapper;
         }

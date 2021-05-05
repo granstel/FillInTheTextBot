@@ -15,15 +15,13 @@ namespace FillInTheTextBot.Messengers
 
         private readonly IConversationService _conversationService;
         private readonly IMapper _mapper;
-        protected readonly IDialogflowService DialogflowService;
 
         protected readonly Logger Log;
 
-        protected MessengerService(IConversationService conversationService, IMapper mapper, IDialogflowService dialogflowService)
+        protected MessengerService(IConversationService conversationService, IMapper mapper)
         {
             _conversationService = conversationService;
             _mapper = mapper;
-            DialogflowService = dialogflowService;
 
             Log = LogManager.GetLogger(GetType().Name);
         }

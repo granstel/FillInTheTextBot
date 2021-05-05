@@ -20,8 +20,7 @@ namespace FillInTheTextBot.Messengers.Marusia
         public MarusiaService(
             IConversationService conversationService,
             IMapper mapper,
-            IDialogflowService dialogflowService,
-            IRedisCacheService cache) : base(conversationService, mapper, dialogflowService)
+            IRedisCacheService cache) : base(conversationService, mapper)
         {
             _mapper = mapper;
             _cache = cache;
