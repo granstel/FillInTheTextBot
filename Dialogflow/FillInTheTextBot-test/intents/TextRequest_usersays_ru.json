@@ -1,5 +1,54 @@
 [
   {
+    "id": "9d39b24f-f7dc-4521-b8d7-442d40339c76",
+    "data": [
+      {
+        "text": "хочу предложить текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2ecb0d5f-b827-4f36-80b7-c13bb9b330be",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " рассказ дом за озером",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fa431ba4-3f09-4343-ac47-fd64ec8c4379",
+    "data": [
+      {
+        "text": "алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " рассказ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "46e23df7-975d-4aca-abf3-c5e0f0ba6f5c",
     "data": [
       {

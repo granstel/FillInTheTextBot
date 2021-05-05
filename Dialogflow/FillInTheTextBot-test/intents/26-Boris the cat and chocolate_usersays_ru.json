@@ -1,0 +1,136 @@
+[
+  {
+    "id": "ef2ef1c6-4998-4c63-863c-ee71e95a7bdf",
+    "data": [
+      {
+        "text": "кота ",
+        "userDefined": false
+      },
+      {
+        "text": "бориса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "97c28787-ee96-4401-a159-69b37d436185",
+    "data": [
+      {
+        "text": "бориса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " кота",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "50faa5ab-c5e6-4929-bb39-f042b6e74d62",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "бориса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "48e4fcf3-bbd9-4321-9c49-420773a2c261",
+    "data": [
+      {
+        "text": "про кота",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9d46062d-83b9-4d8b-9347-b51d48477dea",
+    "data": [
+      {
+        "text": "котика",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "82d88b5b-ca3f-4d3f-9cdf-66471b7ac3f8",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "бориса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " кота",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e3c08a84-26b1-4396-86d6-53aff136bef7",
+    "data": [
+      {
+        "text": "про кота и шоколадку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "352d0687-6b0e-44ce-a3db-b53d5cb789bc",
+    "data": [
+      {
+        "text": "про кота ",
+        "userDefined": false
+      },
+      {
+        "text": "бориса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  }
+]

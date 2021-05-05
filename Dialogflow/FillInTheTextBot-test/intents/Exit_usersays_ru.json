@@ -1,9 +1,22 @@
 [
   {
-    "id": "5866c8c4-d8f4-40f5-9165-e35f3db80ac3",
+    "id": "cbc8e24d-fab5-43c5-9c48-f596d83e9375",
     "data": [
       {
-        "text": "выйти",
+        "text": "говорю что хочу выйти",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4f1ce616-d5a3-4948-8f17-54292dffd551",
+    "data": [
+      {
+        "text": "захотел выйти",
         "userDefined": false
       }
     ],
@@ -23,6 +36,32 @@
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "137c9566-cef2-436e-a730-fed3d4f22bb8",
+    "data": [
+      {
+        "text": "хочу выйти",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5866c8c4-d8f4-40f5-9165-e35f3db80ac3",
+    "data": [
+      {
+        "text": "выйти",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
     "lang": "ru",
     "updated": 0
   },

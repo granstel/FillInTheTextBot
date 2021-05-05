@@ -68,19 +68,19 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             },
             {
               "lang": "ru",
-              "value": "\"Какая\"?"
+              "value": "«Какая»?"
             },
             {
               "lang": "ru",
-              "value": "\"Какие\"?"
+              "value": "«Какие»?"
             },
             {
               "lang": "ru",
-              "value": "\"Какое\"?"
+              "value": "«Какое»?"
             }
           ],
           "promptMessages": [],
@@ -122,15 +122,15 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И последнее - назови имя какого-нибудь божества или демона"
+              "value": "И последнее — назови имя какого-нибудь божества или демона"
             },
             {
               "lang": "ru",
-              "value": "Последний вопрос - назови имя какого-нибудь фэнтезийного персонажа"
+              "value": "Последний вопрос — назови имя какого-нибудь фэнтезийного персонажа"
             },
             {
               "lang": "ru",
-              "value": "И напоследок - назови имя какого-нибудь божества или демона"
+              "value": "И напоследок — назови имя какого-нибудь божества или демона"
             }
           ],
           "promptMessages": [],
@@ -153,19 +153,36 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "Кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Проголосовать за навык"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Предложить свою идею"
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Проголосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Предложить свою идею",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Проголосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Предложить свою идею",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
             }
-          ],
+          },
           "textToSpeech": "",
           "lang": "ru",
           "condition": ""

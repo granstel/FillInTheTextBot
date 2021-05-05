@@ -18,7 +18,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "Сейчас будем придумывать \"объяснительную об опоздании\".",
+          "value": "Сейчас будем придумывать «объяснительную об опоздании».",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -65,7 +65,7 @@
             },
             {
               "lang": "ru",
-              "value": "Теперь - животное мужского рода"
+              "value": "Теперь — животное мужского рода"
             }
           ],
           "promptMessages": [],
@@ -103,7 +103,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Где\"?"
+              "value": "«Где?»"
             }
           ],
           "promptMessages": [],
@@ -141,7 +141,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Куда\"?"
+              "value": "«Куда»?"
             }
           ],
           "promptMessages": [],
@@ -187,19 +187,36 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "Кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Поддержать игру"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Поблагодарить разработчиков"
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Поддержать игру в голосовании",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Поддержать игру в голосовании",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
             }
-          ],
+          },
           "textToSpeech": "",
           "lang": "ru",
           "condition": ""

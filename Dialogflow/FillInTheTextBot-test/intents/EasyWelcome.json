@@ -2,7 +2,9 @@
   "id": "52162657-210f-46be-a923-2e91bd10128f",
   "name": "EasyWelcome",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "olduser"
+  ],
   "responses": [
     {
       "resetContexts": false,
@@ -15,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "74cbec18-7d3c-40a2-8b5e-afb48b054115",
+          "id": "26d1e8bd-28cc-4e06-a554-97cb90f0b4b3",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -36,25 +38,8 @@
           "title": "",
           "replies": [
             "Конечно!",
-            "Список историй"
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
-          "type": "1",
-          "platform": "telegram",
-          "title": "кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Проголосовать за навык"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Узнать, что новенького"
-            }
+            "Список историй",
+            "Выход"
           ],
           "textToSpeech": "",
           "lang": "ru",
@@ -70,6 +55,41 @@
             "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
             "И вот пришло время занимательных историй! Давай сочиним что-нибудь?"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Проголосовать за навык",
+                  "IsQuickReply": false,
+                  "Url": "https://t.me/yadialogsnews/170"
+                },
+                {
+                  "Text": "Узнать, что новенького",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ],
+              "Marusia": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Проголосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170"
+                },
+                {
+                  "Text": "Узнать, что новенького",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],

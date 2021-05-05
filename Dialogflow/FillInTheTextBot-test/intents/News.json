@@ -11,24 +11,6 @@
       "parameters": [],
       "messages": [
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Голосовать за навык"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Подписаться на новости"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
@@ -38,11 +20,33 @@
             "Можно подписаться на новости игры во «Вконтакте», в группе «Занимательные истории голосовых помощников». Пойдём дальше?"
           ],
           "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Marusia": [
+                {
+                  "Text": "Подписаться на новости",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ],
+              "Yandex": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Подписаться на новости"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
         }
       ],
-      "defaultResponsePlatforms": {
-        "telegram": true
-      },
       "speech": []
     }
   ],

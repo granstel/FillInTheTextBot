@@ -2,7 +2,7 @@
   "id": "04d9fc78-464b-4ed3-be60-519187d30a67",
   "parentId": "52162657-210f-46be-a923-2e91bd10128f",
   "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome - no",
+  "name": "EasyWelcome-no",
   "auto": true,
   "contexts": [
     "EasyWelcome-followup"

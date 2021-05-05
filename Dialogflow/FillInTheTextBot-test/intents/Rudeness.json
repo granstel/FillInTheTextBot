@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "5d8dd6ff-ed4e-4f59-a9c8-592d395db127",
+          "id": "67d6c154-b2df-465d-bace-0aebf69e7392",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",

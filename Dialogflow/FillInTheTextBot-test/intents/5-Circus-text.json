@@ -18,7 +18,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "Текст про \"Цирк\".",
+          "value": "Текст про «Цирк».",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -57,7 +57,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -95,7 +95,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"? В несколько слов"
+              "value": "«Какой»? В несколько слов"
             }
           ],
           "promptMessages": [],
@@ -133,7 +133,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "\"Какой\"?"
+              "value": "«Какой»?"
             }
           ],
           "promptMessages": [],
@@ -171,7 +171,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И последний вопрос - \"Какой\"?"
+              "value": "И последний вопрос — «Какой»?"
             }
           ],
           "promptMessages": [],
@@ -194,19 +194,36 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "Кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Голосовать за игру"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Предложить свой текст"
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Text": "Голосовать за игру",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ],
+              "Marusia": [
+                {
+                  "Text": "Голосовать за игру",
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
             }
-          ],
+          },
           "textToSpeech": "",
           "lang": "ru",
           "condition": ""

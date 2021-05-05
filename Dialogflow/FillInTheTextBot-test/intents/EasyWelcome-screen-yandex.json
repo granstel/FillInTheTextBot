@@ -2,10 +2,11 @@
   "id": "90161c20-edd5-467e-b2be-380f18966273",
   "parentId": "52162657-210f-46be-a923-2e91bd10128f",
   "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
-  "name": "EasyWelcome-screen",
+  "name": "EasyWelcome-screen-yandex",
   "auto": true,
   "contexts": [
-    "screen"
+    "screen",
+    "source-yandex"
   ],
   "responses": [
     {
@@ -19,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "c1231e6b-3cf5-491d-8f9a-3fb9e9fc29c1",
+          "id": "46e8e9c6-2089-436e-bb2e-a31fff24b7f1",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -40,25 +41,8 @@
           "title": "",
           "replies": [
             "Конечно!",
-            "Список историй"
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
-          "type": "1",
-          "platform": "telegram",
-          "title": "кнопки",
-          "buttons": [
-            {
-              "postback": "https://t.me/yadialogsnews/170",
-              "text": "Проголосовать за навык"
-            },
-            {
-              "postback": "https://vk.com/fillinthetextbot",
-              "text": "Подписаться на новости"
-            }
+            "Список историй",
+            "Выход"
           ],
           "textToSpeech": "",
           "lang": "ru",
@@ -74,6 +58,41 @@
             "Пришла пора умопомрачительных повествований! Поддержи, пожалуйста, эту игру в голосовании за лучший навык в подборке к 1му апреля, кнопка внизу подскажет, как туда попасть. Сочиним что-нибудь?",
             "И вот пришло время занимательных историй! Поддержи, пожалуйста, этот навык в голосовании за лучший в подборке к 1му апреля! Кнопка внизу подскажет, как туда попасть. Сочиним что-нибудь?"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Marusia": [
+                {
+                  "Text": "Проголосовать за навык",
+                  "IsQuickReply": false,
+                  "Url": "https://t.me/yadialogsnews/170"
+                },
+                {
+                  "Text": "Подписаться на новости",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ],
+              "Yandex": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Проголосовать за навык",
+                  "Url": "https://t.me/yadialogsnews/170"
+                },
+                {
+                  "Text": "Подписаться на новости",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],
