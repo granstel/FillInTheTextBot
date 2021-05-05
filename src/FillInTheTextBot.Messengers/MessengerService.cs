@@ -30,9 +30,6 @@ namespace FillInTheTextBot.Messengers
         {
             var request = _mapper.Map<Request>(input);
 
-            var contexts = GetContexts(request);
-            request.RequiredContexts.AddRange(contexts);
-
             return request;
         }
 
@@ -43,6 +40,9 @@ namespace FillInTheTextBot.Messengers
             try
             {
                 var request = Before(input);
+
+                var contexts = GetContexts(request);
+                request.RequiredContexts.AddRange(contexts);
 
                 response = ProcessCommand(request);
 
@@ -100,6 +100,15 @@ namespace FillInTheTextBot.Messengers
                     contexts.Add(new Context
                     {
                         Name = "screen",
+                        LifeSpan = 2
+                    });
+                }
+
+                if (request.IsOldUser)
+                {
+                    contexts.Add(new Context
+                    {
+                        Name = "OldUser",
                         LifeSpan = 2
                     });
                 }
