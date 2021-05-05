@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "ac56f9bd-8d69-4362-9e84-a5d21006e573",
+          "id": "517c4bd2-a286-4007-b436-3bfcaf8beb69",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -57,16 +57,16 @@
             "ButtonsForSource": {
               "Marusia": [
                 {
-                  "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Предложить свой текст"
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false
                 }
               ],
               "Yandex": [
                 {
-                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Предложить свой текст",
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "IsQuickReply": false
                 }
               ]
             }

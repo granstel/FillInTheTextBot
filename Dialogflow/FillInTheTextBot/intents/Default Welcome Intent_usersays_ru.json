@@ -1,5 +1,66 @@
 [
   {
+    "id": "df95e7c0-8cbb-462d-8959-a4a821b3d86e",
+    "data": [
+      {
+        "text": "попроси занимательные истории сочинить что-нибудь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bc79f307-dccf-43bc-bd03-6aeaab52a28d",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " занимательные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9de4c43a-c295-4e50-8759-50ceca99bce6",
+    "data": [
+      {
+        "text": "включи занимательные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "68520665-4041-45be-b2bc-b2dbcce38b1f",
+    "data": [
+      {
+        "text": "запусти занимательные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "75c840f6-2b1e-41c1-b3cc-9da11ffde517",
     "data": [
       {
@@ -48,20 +109,7 @@
       }
     ],
     "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "68520665-4041-45be-b2bc-b2dbcce38b1f",
-    "data": [
-      {
-        "text": "запусти занимательные истории",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "lang": "ru",
     "updated": 0
   },

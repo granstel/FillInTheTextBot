@@ -1,5 +1,97 @@
 [
   {
+    "id": "a6b53770-6dfd-4637-93c8-9792c141fd51",
+    "data": [
+      {
+        "text": "хочу навык занимательные истор",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d958402d-1df0-4c4b-80f2-752be6d3a848",
+    "data": [
+      {
+        "text": "запусти навык занимательные ",
+        "userDefined": false
+      },
+      {
+        "text": "ис",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "686f9afd-75d0-465e-996f-245a60a9431a",
+    "data": [
+      {
+        "text": "попроси занимательные истории сочинить что-нибудь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8f90193d-3bc4-4f70-96eb-8b52c9633cd2",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " занимательные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c6d95498-a494-490e-b232-5fd128221fed",
+    "data": [
+      {
+        "text": "включи занимательные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a338df9f-1d3f-42af-ab71-60a65f0c69e1",
+    "data": [
+      {
+        "text": "запусти занимательные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "fb9779f5-61eb-4748-90f3-e898430165c2",
     "data": [
       {
