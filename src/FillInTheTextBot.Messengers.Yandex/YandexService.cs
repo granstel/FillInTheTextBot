@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Services;
@@ -15,16 +16,19 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string PongResponse = "pong";
 
         private readonly IMapper _mapper;
+        private readonly Stopwatch _stopwatch;
 
         public YandexService(
             IConversationService conversationService,
             IMapper mapper) : base(conversationService, mapper)
         {
             _mapper = mapper;
+            _stopwatch = new Stopwatch();
         }
 
         protected override Models.Request Before(InputModel input)
         {
+            _stopwatch.Start();
             var request = base.Before(input);
 
             input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
@@ -76,6 +80,12 @@ namespace FillInTheTextBot.Messengers.Yandex
             output.AddToApplicationState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
+
+            _stopwatch.Stop();
+
+            output.AddAnalyticsEvent("ElapsedTime", new Dictionary<string, object> { { "ElapsedMilliseconds", _stopwatch.ElapsedMilliseconds } });
+            output.AddAnalyticsEvent(Models.Response.ScopeStorageKey, new Dictionary<string, object> { { Models.Response.ScopeStorageKey, response.ScopeKey } });
+            output.AddAnalyticsEvent(Models.Request.IsOldUserKey, new Dictionary<string, object> { { Models.Request.IsOldUserKey, response.ScopeKey } });
 
             return output;
         }
