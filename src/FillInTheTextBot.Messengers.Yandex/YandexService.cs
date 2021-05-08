@@ -83,9 +83,12 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             _stopwatch.Stop();
 
-            output.AddAnalyticsEvent("ElapsedTime", new Dictionary<string, object> { { "ElapsedMilliseconds", _stopwatch.ElapsedMilliseconds } });
+            if (_stopwatch.ElapsedMilliseconds > 1000)
+            {
+                output.AddAnalyticsEvent("ElapsedTime", new Dictionary<string, object> { { "ElapsedMilliseconds", _stopwatch.ElapsedMilliseconds } });
+            }
+
             output.AddAnalyticsEvent(Models.Response.ScopeStorageKey, new Dictionary<string, object> { { Models.Response.ScopeStorageKey, response.ScopeKey } });
-            output.AddAnalyticsEvent(Models.Request.IsOldUserKey, new Dictionary<string, object> { { Models.Request.IsOldUserKey, response.ScopeKey } });
 
             return output;
         }
