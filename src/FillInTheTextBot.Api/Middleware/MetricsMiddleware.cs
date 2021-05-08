@@ -3,7 +3,6 @@ using NLog;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Zidium.Api;
 
 namespace FillInTheTextBot.Api.Middleware
 {
@@ -12,15 +11,12 @@ namespace FillInTheTextBot.Api.Middleware
         private readonly Logger _log = LogManager.GetLogger(nameof(MetricsMiddleware));
 
         private readonly RequestDelegate _next;
-        private readonly IComponentControl _component;
         private readonly Stopwatch _stopwatch;
 
         public MetricsMiddleware(RequestDelegate next)
         {
             _next = next;
 
-            var client = Client.Instance;
-            _component = client.GetDefaultComponentControl();
             _stopwatch = new Stopwatch();
         }
 
@@ -41,8 +37,6 @@ namespace FillInTheTextBot.Api.Middleware
             finally
             {
                 _stopwatch.Stop();
-
-                _component.SendMetric("ResponseTime", _stopwatch.ElapsedMilliseconds);
             }
         }
     }
