@@ -20,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "46e8e9c6-2089-436e-bb2e-a31fff24b7f1",
+          "id": "fc4a7698-9d9e-4054-b3d8-2e1b8e3b0b43",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -67,26 +67,26 @@
             "ButtonsForSource": {
               "Marusia": [
                 {
+                  "Url": "https://t.me/yadialogsnews/170",
                   "Text": "Проголосовать за навык",
-                  "IsQuickReply": false,
-                  "Url": "https://t.me/yadialogsnews/170"
+                  "IsQuickReply": false
                 },
                 {
                   "Text": "Подписаться на новости",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
                 }
               ],
               "Yandex": [
                 {
                   "IsQuickReply": false,
-                  "Text": "Проголосовать за навык",
-                  "Url": "https://t.me/yadialogsnews/170"
+                  "Url": "https://t.me/yadialogsnews/170",
+                  "Text": "Проголосовать за навык"
                 },
                 {
                   "Text": "Подписаться на новости",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
                 }
               ]
             }
@@ -99,7 +99,7 @@
       "speech": []
     }
   ],
-  "priority": 500000,
+  "priority": -1,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
