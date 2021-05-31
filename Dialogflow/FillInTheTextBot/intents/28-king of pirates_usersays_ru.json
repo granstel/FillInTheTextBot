@@ -1,0 +1,150 @@
+[
+  {
+    "id": "91924bd5-7a89-4908-9531-ed165db1e968",
+    "data": [
+      {
+        "text": "запусти навык занимательные истории про ",
+        "userDefined": false
+      },
+      {
+        "text": "пиратов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "39fbe029-1e7d-4cf7-a974-f468eea7e279",
+    "data": [
+      {
+        "text": "про луффи",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4fa63c6a-e88d-4f15-9abc-3975f13d6f36",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "пиратов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9f14bed3-1bb7-41bb-9f9c-cd5ae3497b44",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " занимательные истории про короля ",
+        "userDefined": false
+      },
+      {
+        "text": "пиратов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f4cac68b-da60-4dd8-9a52-ad6e42a0e889",
+    "data": [
+      {
+        "text": "запусти занимательные истории про короля ",
+        "userDefined": false
+      },
+      {
+        "text": "пиратов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bd3b5cfc-4ea2-40a7-bca4-00485805532d",
+    "data": [
+      {
+        "text": "запусти навык занимательные истории про короля ",
+        "userDefined": false
+      },
+      {
+        "text": "пиратов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1c58184c-6299-414c-9c48-e5662bba6330",
+    "data": [
+      {
+        "text": "про короля ",
+        "userDefined": false
+      },
+      {
+        "text": "пиратов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "298763b3-e4b8-4d96-af66-fcd21a512aac",
+    "data": [
+      {
+        "text": "король ",
+        "userDefined": false
+      },
+      {
+        "text": "пиратов",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

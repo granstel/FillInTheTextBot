@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "4413b940-5f06-42d0-945e-844bbdae809a",
+          "id": "dc39ab54-bb4a-479a-9b9b-cc74cd66bcb4",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -135,6 +135,19 @@
           "title": "истории",
           "buttons": [
             {
+              "text": "Про короля пиратов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
               "text": "Гороскоп про водолеев"
             },
             {
@@ -206,22 +219,6 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "истории",
-          "buttons": [
-            {
-              "text": "Самый новый"
-            },
-            {
-              "text": "Любой"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
@@ -230,6 +227,25 @@
             "Если не сможешь выбрать, просто скажи «любой» или «новый». Итак, вот что у меня сейчас есть:",
             "Вот они. Если трудно выбрать, просто скажи «любой» или «новый»"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Buttons": [
+              {
+                "Text": "Самый новый",
+                "IsQuickReply": false
+              },
+              {
+                "IsQuickReply": false,
+                "Text": "Любой"
+              }
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],

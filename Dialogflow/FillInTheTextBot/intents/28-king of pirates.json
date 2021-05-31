@@ -1,16 +1,22 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "cd3153e5-a994-491f-8fc3-286297a3932a",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "28-king of pirates",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-28",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
-          "id": "cd6f91d8-b808-4a79-be10-dcbaa21a41e8",
+          "id": "92ee54d6-5bc7-4d2a-8f58-75fb953cb049",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +37,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история —"
+            "Сейчас сочиним",
+            "Давай сочиним"
           ],
           "condition": ""
         }

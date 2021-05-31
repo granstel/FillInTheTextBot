@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "9eecd4d5-8603-44a8-b7b9-83fdf36f4696",
+          "id": "5967e8e2-de33-4e48-9f61-f235df413758",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -51,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Настало время занимательных историй! Продолжим?",
-            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
-            "И вот пришло время занимательных историй! Давай сочиним что-нибудь?"
+            "Настало время занимательных историй! Хочешь сочинить кое-что новенькое?",
+            "Пришла пора умопомрачительных повествований! Давай сочиним новую историю?",
+            "И вот пришло время занимательных историй! Давай сочиним что-нибудь новенькое?"
           ],
           "condition": ""
         },
@@ -64,25 +64,25 @@
             "ButtonsForSource": {
               "Marusia": [
                 {
+                  "Url": "https://t.me/yadialogsnews/170",
                   "Text": "Проголосовать за навык",
-                  "IsQuickReply": false,
-                  "Url": "https://t.me/yadialogsnews/170"
+                  "IsQuickReply": false
                 },
                 {
-                  "Text": "Узнать, что новенького",
+                  "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false
+                  "Text": "Узнать, что новенького"
                 }
               ],
               "Yandex": [
                 {
-                  "IsQuickReply": false,
                   "Url": "https://t.me/yadialogsnews/170",
+                  "IsQuickReply": false,
                   "Text": "Проголосовать за навык"
                 },
                 {
-                  "Text": "Узнать, что новенького",
                   "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Узнать, что новенького",
                   "IsQuickReply": false
                 }
               ]
