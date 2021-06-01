@@ -59,7 +59,7 @@
                 {
                   "IsQuickReply": false,
                   "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "Text": "Проголосовать за навык"
+                  "Text": "Новое голосование!"
                 },
                 {
                   "Text": "Следить за новостями",
@@ -69,7 +69,7 @@
               ],
               "Yandex": [
                 {
-                  "Text": "Проголосовать за навык",
+                  "Text": "Новое голосование!",
                   "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
                   "IsQuickReply": false
                 },

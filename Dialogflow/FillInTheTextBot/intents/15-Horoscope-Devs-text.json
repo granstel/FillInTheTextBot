@@ -143,7 +143,7 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Проголосовать за игру",
+                  "Text": "Проголосуй за меня!",
                   "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
                   "IsQuickReply": false
                 },
@@ -155,7 +155,7 @@
               ],
               "Marusia": [
                 {
-                  "Text": "Проголосовать за игру",
+                  "Text": "Проголосуй за меня!",
                   "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
                   "IsQuickReply": false
                 },
