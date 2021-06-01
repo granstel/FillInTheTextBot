@@ -166,7 +166,7 @@
             "ButtonsForSource": {
               "Marusia": [
                 {
-                  "Url": "https://t.me/yadialogsnews/170",
+                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
                   "Text": "Голосовать за навык",
                   "IsQuickReply": false
                 },
@@ -180,7 +180,7 @@
                 {
                   "Text": "Голосовать за навык",
                   "IsQuickReply": false,
-                  "Url": "https://t.me/yadialogsnews/170"
+                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/"
                 },
                 {
                   "IsQuickReply": false,
