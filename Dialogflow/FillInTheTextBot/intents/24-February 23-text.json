@@ -155,22 +155,12 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Голосуй за игру!",
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Поблагодарить разработчиков",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
               "Marusia": [
-                {
-                  "Text": "Голосуй за игру!",
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "IsQuickReply": false
-                },
                 {
                   "Text": "Поблагодарить разработчиков",
                   "IsQuickReply": false,

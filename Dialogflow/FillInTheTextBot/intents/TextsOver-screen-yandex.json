@@ -26,10 +26,6 @@
           "title": "кнопки",
           "buttons": [
             {
-              "postback": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-              "text": "Новое голосование!"
-            },
-            {
               "postback": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
               "text": "Поставить оценку"
             },

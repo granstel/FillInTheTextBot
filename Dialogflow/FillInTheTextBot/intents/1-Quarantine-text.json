@@ -219,22 +219,12 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Проголосуй за меня!",
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Следить за новостями",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
               "Marusia": [
-                {
-                  "Text": "Проголосуй за меня!",
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "IsQuickReply": false
-                },
                 {
                   "Text": "Следить за новостями",
                   "IsQuickReply": false,

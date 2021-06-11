@@ -159,22 +159,12 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Новое голосование!",
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Предложить свою идею",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/im?sel\u003d-201360423"
                 }
               ],
               "Marusia": [
-                {
-                  "Text": "Новое голосование!",
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "IsQuickReply": false
-                },
                 {
                   "Text": "Предложить свою идею",
                   "IsQuickReply": false,

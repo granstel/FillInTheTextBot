@@ -67,22 +67,12 @@
             "ButtonsForSource": {
               "Marusia": [
                 {
-                  "IsQuickReply": false,
-                  "Text": "Новое голосование!",
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/"
-                },
-                {
                   "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Подписаться на новости",
                   "IsQuickReply": false
                 }
               ],
               "Yandex": [
-                {
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "Text": "Новое голосование!",
-                  "IsQuickReply": false
-                },
                 {
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",

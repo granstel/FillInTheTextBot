@@ -44,11 +44,6 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Новое голосование!",
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "IsQuickReply": false
-                },
-                {
                   "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
                   "Text": "Поставить оценку",
                   "IsQuickReply": false
@@ -60,11 +55,6 @@
                 }
               ],
               "Marusia": [
-                {
-                  "IsQuickReply": false,
-                  "Text": "Новое голосование!",
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/"
-                },
                 {
                   "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false,
