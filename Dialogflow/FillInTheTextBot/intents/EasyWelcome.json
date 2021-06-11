@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "5967e8e2-de33-4e48-9f61-f235df413758",
+          "id": "8a3edc1e-4442-4370-9bdf-c9fa44f418f0",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -51,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Настало время занимательных историй! Хочешь сочинить кое-что новенькое?",
-            "Пришла пора умопомрачительных повествований! Давай сочиним новую историю?",
-            "И вот пришло время занимательных историй! Давай сочиним что-нибудь новенькое?"
+            "Настало время занимательных историй! Хочешь сочинить что-нибудь?",
+            "Пришла пора умопомрачительных повествований! Давай сочиним что-нибудь?",
+            "И вот пришло время занимательных историй! Давай сочиним что-нибудь?"
           ],
           "condition": ""
         },
@@ -62,28 +62,18 @@
           "title": "",
           "payload": {
             "ButtonsForSource": {
-              "Marusia": [
+              "Yandex": [
                 {
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "Text": "Новое голосование!",
+                  "Text": "Узнать, что новенького",
+                  "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false
-                },
+                }
+              ],
+              "Marusia": [
                 {
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Узнать, что новенького"
-                }
-              ],
-              "Yandex": [
-                {
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "IsQuickReply": false,
-                  "Text": "Новое голосование!"
-                },
-                {
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Узнать, что новенького",
-                  "IsQuickReply": false
                 }
               ]
             }

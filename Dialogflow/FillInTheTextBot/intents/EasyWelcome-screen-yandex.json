@@ -20,7 +20,7 @@
       ],
       "parameters": [
         {
-          "id": "fc4a7698-9d9e-4054-b3d8-2e1b8e3b0b43",
+          "id": "6da1c2c9-d013-4242-a202-9fd288942560",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -67,26 +67,26 @@
             "ButtonsForSource": {
               "Marusia": [
                 {
-                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
+                  "IsQuickReply": false,
                   "Text": "Новое голосование!",
-                  "IsQuickReply": false
+                  "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/"
                 },
                 {
-                  "Text": "Подписаться на новости",
                   "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Подписаться на новости",
                   "IsQuickReply": false
                 }
               ],
               "Yandex": [
                 {
-                  "IsQuickReply": false,
                   "Url": "https://forms.yandex.ru/surveys/10030699.a066cd287da6baadd91b91be8ce707c25181288d/",
-                  "Text": "Новое голосование!"
+                  "Text": "Новое голосование!",
+                  "IsQuickReply": false
                 },
                 {
-                  "Text": "Подписаться на новости",
+                  "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false
+                  "Text": "Подписаться на новости"
                 }
               ]
             }
@@ -99,7 +99,7 @@
       "speech": []
     }
   ],
-  "priority": 500000,
+  "priority": -1,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
