@@ -1,0 +1,171 @@
+{
+  "id": "a40c7db4-629b-44db-8870-032fd290205f",
+  "name": "29-late-text",
+  "auto": true,
+  "contexts": [
+    "text-29"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "04cdc7be-94af-440a-aafd-23124815f942",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "текст от подписчика: опоздательная в больницу.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bfe975b3-a215-4fe3-bb31-37b06a07204f",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови число от 2 до 4"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a23630c0-5985-4ed3-8b01-23aae54b5ac0",
+          "name": "character",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$character",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови своего любимого персонажа из какого-нибудь мультика"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови своего любимого персонажа из какого-нибудь мультика"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a496a741-35a6-408f-a2ee-896349e75ab5",
+          "name": "mult",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$mult",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "А теперь скажи... из какого мультика?)"
+            },
+            {
+              "lang": "ru",
+              "value": "А теперь скажи... название этого мультика)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "10ef3639-e242-46b7-bd9d-0b060399f537",
+          "name": "animals",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animals",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови, пожалуйста, лесное животное во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови, пожалуйста, лесное животное во множественном числе"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0cf31291-6d3d-478f-8050-def0c4eff4d2",
+          "name": "speed",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$speed",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — сколько тебе лет?"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос — сколько лет твоему другу?"
+            },
+            {
+              "lang": "ru",
+              "value": "Напоследок — сколько лет твоей подруге?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что получилось: $number месяца назад я шла в больницу, но внезапно на меня с дерева свалились $number шкафа, и я только успела крикнуть как $character из «$mult». Очнулась почему-то среди ночи в лесу. До утра я убегала от стаи животных (кажется, это были $animals) и, наконец, поймала такси. Я назвала водителю адрес больницы, но эта крыса почему-то повезла меня в Антарктиду, и оттуда я шла пешком, пока мне не предложили доехать на маршрутке, гнавшей под $number$speed километров в час. И несмотря на такую невероятную скорость, я добралась до больницы только через $number месяца.\nПо-моему, очень забавно! Давай ещё сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-29"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

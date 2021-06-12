@@ -1,0 +1,98 @@
+[
+  {
+    "id": "55482022-b87d-4dad-9925-93c2b68efa73",
+    "data": [
+      {
+        "text": "опоздательная в больницу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "987371ff-df91-4847-8bf4-ce4b5ffdf956",
+    "data": [
+      {
+        "text": "сочини историю про опоздание в больницу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "46ecf7df-1f7e-4fd0-ad33-313bd255e602",
+    "data": [
+      {
+        "text": "как ",
+        "userDefined": false
+      },
+      {
+        "text": "Маруся",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " опоздала в больницу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "29b9e129-d790-47cb-813b-ef4a72911479",
+    "data": [
+      {
+        "text": "как ",
+        "userDefined": false
+      },
+      {
+        "text": "Алиса",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " опоздала в больницу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9259a53c-ada4-4f1b-a03c-82c9112ab06d",
+    "data": [
+      {
+        "text": "опоздала в больницу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d8baf88e-2289-44cd-8e44-aa7defef2c3f",
+    "data": [
+      {
+        "text": "опоздательная",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

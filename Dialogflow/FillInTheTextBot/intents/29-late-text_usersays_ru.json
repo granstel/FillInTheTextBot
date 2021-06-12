@@ -1,0 +1,422 @@
+[
+  {
+    "id": "dc2e3a2f-1f40-4dd9-984d-f389d5834f28",
+    "data": [
+      {
+        "text": "четыре",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2f0b50ed-d596-4db5-b872-726f4ced141a",
+    "data": [
+      {
+        "text": "три",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9fc827cc-237b-419d-a9fb-c225a6800bfd",
+    "data": [
+      {
+        "text": "два",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "db3000e2-92d5-4539-9c09-044779eac9ab",
+    "data": [
+      {
+        "text": "двадцать один",
+        "meta": "@sys.any",
+        "alias": "speed",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0bdfa023-da2a-47a9-8936-ff757804247c",
+    "data": [
+      {
+        "text": "сорок пять",
+        "meta": "@sys.any",
+        "alias": "speed",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b50d0daf-bd53-45c6-868a-2619fa5b3667",
+    "data": [
+      {
+        "text": "двенадцать",
+        "meta": "@sys.any",
+        "alias": "speed",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b2710c7f-6caa-4427-96b9-5303ed841139",
+    "data": [
+      {
+        "text": "34",
+        "meta": "@sys.any",
+        "alias": "speed",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ae2b783a-6278-4652-830f-6846b6451671",
+    "data": [
+      {
+        "text": "25",
+        "meta": "@sys.any",
+        "alias": "speed",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5407c691-d205-4e6a-a291-3f36391e1806",
+    "data": [
+      {
+        "text": "29",
+        "meta": "@sys.any",
+        "alias": "speed",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4ffe1270-4291-4d70-9cf1-b1ff01e8a395",
+    "data": [
+      {
+        "text": "олени",
+        "meta": "@sys.any",
+        "alias": "animals",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7425ffe0-768f-43b8-82a3-3bba498498a6",
+    "data": [
+      {
+        "text": "лоси",
+        "meta": "@sys.any",
+        "alias": "animals",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0ddebbaf-66eb-4148-8f63-bc75fa75d393",
+    "data": [
+      {
+        "text": "кошки",
+        "meta": "@sys.any",
+        "alias": "animals",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1aeea5ce-b1b3-4d11-8aca-0f96c6a38bd4",
+    "data": [
+      {
+        "text": "волки",
+        "meta": "@sys.any",
+        "alias": "animals",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "144fcd33-ec0f-44d2-b47e-e06cff7d0a8d",
+    "data": [
+      {
+        "text": "король лев",
+        "meta": "@sys.any",
+        "alias": "mult",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2fba363e-1691-4f44-ab81-10059bbb985e",
+    "data": [
+      {
+        "text": "аватар",
+        "meta": "@sys.any",
+        "alias": "mult",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "79a0f0c3-d187-4f39-a14f-83d5cc42cc3a",
+    "data": [
+      {
+        "text": "джоджо",
+        "meta": "@sys.any",
+        "alias": "mult",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b986b902-0374-4d38-b7c4-c2f1e64b3bfd",
+    "data": [
+      {
+        "text": "ван пис",
+        "meta": "@sys.any",
+        "alias": "mult",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "86288418-5874-410f-89cd-96472136fd1f",
+    "data": [
+      {
+        "text": "Наруто",
+        "meta": "@sys.any",
+        "alias": "mult",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b0ef7b80-92ef-46fd-a4a1-85c8971a40d9",
+    "data": [
+      {
+        "text": "Красавица и чудовище",
+        "meta": "@sys.any",
+        "alias": "mult",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a6eab4de-61e7-4461-8487-34450f8dd29d",
+    "data": [
+      {
+        "text": "Том и Джерри",
+        "meta": "@sys.any",
+        "alias": "mult",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5487a785-d52a-4d1c-9ff5-6776b67d7a78",
+    "data": [
+      {
+        "text": "Усоп",
+        "meta": "@sys.any",
+        "alias": "character",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "559f17b7-9d4a-4a3a-8119-70274b8d5ed1",
+    "data": [
+      {
+        "text": "Зорро",
+        "meta": "@sys.any",
+        "alias": "character",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5ca43363-5024-422a-a20f-c6359b62b270",
+    "data": [
+      {
+        "text": "Луффи",
+        "meta": "@sys.any",
+        "alias": "character",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b936bcfb-3962-412d-8495-eb2b942beae0",
+    "data": [
+      {
+        "text": "Джерри",
+        "meta": "@sys.any",
+        "alias": "character",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4b13dd30-9f4a-4769-8c6c-30d5c72ce001",
+    "data": [
+      {
+        "text": "Том",
+        "meta": "@sys.any",
+        "alias": "character",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3663c340-b10a-4601-ac85-e7b22acea3cd",
+    "data": [
+      {
+        "text": "4",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc285171-570f-4237-94fa-d9da446eb7b5",
+    "data": [
+      {
+        "text": "3",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "58c81b4d-050c-4fce-923c-850cdcd9d2ba",
+    "data": [
+      {
+        "text": "2",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "id": "08cc5a8d-1e6a-47bf-ab39-d27496503ca3",
+  "name": "29-late",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-29",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "013983b4-426c-499b-8a30-6798f071f1e5",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-29",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Отлично! Сочиняем",
+            "Супер! Сейчас сочиним"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

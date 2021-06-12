@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "1d7e1dcb-9d94-4fbf-812f-3669935b0b5b",
+          "id": "c452097e-f898-42a1-b4c8-ad08f80ccdbc",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -42,23 +42,23 @@
           "title": "",
           "payload": {
             "ButtonsForSource": {
-              "Yandex": [
-                {
-                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-                  "Text": "Поставить оценку",
-                  "IsQuickReply": false
-                },
+              "Marusia": [
                 {
                   "Text": "Следить за новостями",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
-              "Marusia": [
+              "Yandex": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "Text": "Поставить оценку"
+                },
                 {
                   "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false,
-                  "Text": "Следить за новостями"
+                  "Text": "Следить за новостями",
+                  "IsQuickReply": false
                 }
               ]
             }
