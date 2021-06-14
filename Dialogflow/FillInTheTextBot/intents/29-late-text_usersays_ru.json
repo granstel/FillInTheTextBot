@@ -1,10 +1,40 @@
 [
   {
+    "id": "6eeae2a5-ab06-4650-9242-de5203053286",
+    "data": [
+      {
+        "text": "Щёлково",
+        "meta": "@sys.any",
+        "alias": "place",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "87d35574-ac35-49c5-9717-700341d263e3",
+    "data": [
+      {
+        "text": "антарктида",
+        "meta": "@sys.any",
+        "alias": "place",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "dc2e3a2f-1f40-4dd9-984d-f389d5834f28",
     "data": [
       {
         "text": "четыре",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "number",
         "userDefined": true
       }
@@ -19,7 +49,7 @@
     "data": [
       {
         "text": "три",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "number",
         "userDefined": true
       }
@@ -34,7 +64,7 @@
     "data": [
       {
         "text": "два",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "number",
         "userDefined": true
       }
@@ -49,7 +79,7 @@
     "data": [
       {
         "text": "двадцать один",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "speed",
         "userDefined": true
       }
@@ -64,7 +94,7 @@
     "data": [
       {
         "text": "сорок пять",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "speed",
         "userDefined": true
       }
@@ -79,7 +109,7 @@
     "data": [
       {
         "text": "двенадцать",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "speed",
         "userDefined": true
       }
@@ -94,7 +124,7 @@
     "data": [
       {
         "text": "34",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "speed",
         "userDefined": true
       }
@@ -109,7 +139,7 @@
     "data": [
       {
         "text": "25",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "speed",
         "userDefined": true
       }
@@ -124,7 +154,7 @@
     "data": [
       {
         "text": "29",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "speed",
         "userDefined": true
       }
@@ -379,7 +409,7 @@
     "data": [
       {
         "text": "4",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "number",
         "userDefined": true
       }
@@ -394,7 +424,7 @@
     "data": [
       {
         "text": "3",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "number",
         "userDefined": true
       }
@@ -409,7 +439,7 @@
     "data": [
       {
         "text": "2",
-        "meta": "@sys.any",
+        "meta": "@sys.number",
         "alias": "number",
         "userDefined": true
       }

@@ -12,7 +12,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "04cdc7be-94af-440a-aafd-23124815f942",
+          "id": "99262de2-d370-4c18-8abb-09e5015bd772",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -26,10 +26,10 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bfe975b3-a215-4fe3-bb31-37b06a07204f",
+          "id": "87595a3b-00e3-4dcb-8efb-77995328ce85",
           "name": "number",
           "required": true,
-          "dataType": "@sys.any",
+          "dataType": "@sys.number",
           "value": "$number",
           "defaultValue": "",
           "isList": false,
@@ -45,7 +45,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a23630c0-5985-4ed3-8b01-23aae54b5ac0",
+          "id": "e6eaf3ad-75a2-4c6c-9857-fe3301216aa2",
           "name": "character",
           "required": true,
           "dataType": "@sys.any",
@@ -68,7 +68,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a496a741-35a6-408f-a2ee-896349e75ab5",
+          "id": "55b8ec67-f956-4906-a1d1-818ef422f52e",
           "name": "mult",
           "required": true,
           "dataType": "@sys.any",
@@ -91,7 +91,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "10ef3639-e242-46b7-bd9d-0b060399f537",
+          "id": "afc75660-c1a1-4c85-b92c-6614c2a7aa3b",
           "name": "animals",
           "required": true,
           "dataType": "@sys.any",
@@ -114,10 +114,29 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0cf31291-6d3d-478f-8050-def0c4eff4d2",
-          "name": "speed",
+          "id": "0df577e6-38b7-4e20-a50b-ee76657bf7a6",
+          "name": "place",
           "required": true,
           "dataType": "@sys.any",
+          "value": "$place",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи, какое самое далёкое место ты знаешь?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "29ed8eb3-e44d-4ecf-9f4b-b6c7404b686b",
+          "name": "speed",
+          "required": true,
+          "dataType": "@sys.number",
           "value": "$speed",
           "defaultValue": "",
           "isList": false,
@@ -143,13 +162,50 @@
       ],
       "messages": [
         {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Конечно!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Вот что получилось: $number месяца назад я шла в больницу, но внезапно на меня с дерева свалились $number шкафа, и я только успела крикнуть как $character из «$mult». Очнулась почему-то среди ночи в лесу. До утра я убегала от стаи животных (кажется, это были $animals) и, наконец, поймала такси. Я назвала водителю адрес больницы, но эта крыса почему-то повезла меня в Антарктиду, и оттуда я шла пешком, пока мне не предложили доехать на маршрутке, гнавшей под $number$speed километров в час. И несмотря на такую невероятную скорость, я добралась до больницы только через $number месяца.\nПо-моему, очень забавно! Давай ещё сочиним?"
+            "Вот что получилось: $number месяца назад я шла в больницу, но внезапно на меня с дерева свалились $number шкафа, и я только успела крикнуть как $character из «$mult». Очнулась почему-то среди ночи в лесу. До утра я убегала от стаи животных (кажется, это были $animals) и, наконец, поймала такси. Я назвала водителю адрес больницы, но эта крыса почему-то повезла меня в место под названием $place, и оттуда я шла пешком, пока мне не предложили доехать на маршрутке, гнавшей под $number$speed километров в час. И несмотря на такую невероятную скорость, я добралась до больницы только через $number месяца.\nПо-моему, очень забавно! Давай ещё сочиним?"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Marusia": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Выразить восхищение автору текста"
+                }
+              ],
+              "Yandex": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Выразить восхищение автору текста",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],

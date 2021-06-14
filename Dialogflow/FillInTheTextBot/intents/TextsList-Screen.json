@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "dc39ab54-bb4a-479a-9b9b-cc74cd66bcb4",
+          "id": "cb128ebf-fc48-4308-924d-230fdfd70f5e",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -136,6 +136,9 @@
           "buttons": [
             {
               "text": "Про короля пиратов"
+            },
+            {
+              "text": "Опоздательная в больницу"
             }
           ],
           "textToSpeech": "",
@@ -235,12 +238,12 @@
           "payload": {
             "Buttons": [
               {
-                "Text": "Самый новый",
-                "IsQuickReply": false
+                "IsQuickReply": false,
+                "Text": "Самый новый"
               },
               {
-                "IsQuickReply": false,
-                "Text": "Любой"
+                "Text": "Любой",
+                "IsQuickReply": false
               }
             ]
           },
