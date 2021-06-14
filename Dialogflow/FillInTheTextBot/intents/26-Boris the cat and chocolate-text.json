@@ -1,6 +1,7 @@
 {
   "id": "d3f1db2e-9082-4b8a-99b6-c32dc2d929e7",
   "parentId": "bf3b78d3-2cea-48a3-b008-d030a3f9429b",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "26-Boris the cat and chocolate-text",
   "auto": true,
   "contexts": [
@@ -13,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "d2a6147d-9d1a-4a33-8b91-92e9cfd34deb",
+          "id": "84d0ef08-b037-42f1-8ec5-82a2f5a37d5f",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +28,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "76e74d87-ecfb-4ecc-9fa3-71904d6b01ef",
+          "id": "577ad096-4c72-4df6-aece-ed9f1ad1108b",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -58,7 +59,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1c328246-cf65-4ae3-b7cb-b8897f358f32",
+          "id": "03b537fb-9a0d-4810-8fc3-7bcb4b42197f",
           "name": "animal-1",
           "required": true,
           "dataType": "@sys.any",
@@ -81,7 +82,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ae7f1cd3-3d43-4204-9fb5-12a4df0e3eec",
+          "id": "18fa6cc6-4eef-4884-ad25-0411245afeae",
           "name": "animal-2",
           "required": true,
           "dataType": "@sys.any",
@@ -108,7 +109,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "711bd055-5e6e-4fdc-a3b8-1ae096d8f991",
+          "id": "439c096f-ec00-447f-9921-d4b077409da0",
           "name": "big",
           "required": true,
           "dataType": "@sys.any",
@@ -160,15 +161,15 @@
               "Yandex": [
                 {
                   "Text": "Выразить восхищение автору текста",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
                 }
               ],
               "Marusia": [
                 {
-                  "Text": "Выразить восхищение автору текста",
+                  "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Text": "Выразить восхищение автору текста"
                 }
               ]
             }

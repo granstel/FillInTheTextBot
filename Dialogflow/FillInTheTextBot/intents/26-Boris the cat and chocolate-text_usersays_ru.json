@@ -199,9 +199,9 @@
     "data": [
       {
         "text": "голубой",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -214,9 +214,9 @@
     "data": [
       {
         "text": "фиолетовый",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -229,9 +229,9 @@
     "data": [
       {
         "text": "бурмалиновый",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -244,9 +244,9 @@
     "data": [
       {
         "text": "зелёный",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -259,9 +259,9 @@
     "data": [
       {
         "text": "жёлтый",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -274,9 +274,9 @@
     "data": [
       {
         "text": "чёрный",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -289,7 +289,7 @@
     "data": [
       {
         "text": "красный",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
         "userDefined": true
       }
