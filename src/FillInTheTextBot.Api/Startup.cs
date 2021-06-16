@@ -45,35 +45,18 @@ namespace FillInTheTextBot.Api
                 var serviceName = _env.ApplicationName;
 
 
-                Environment.SetEnvironmentVariable("JAEGER_SERVICE_NAME", "my-store");
-                //Environment.SetEnvironmentVariable("JAEGER_AGENT_HOST", "192.168.2.27");
-                //Environment.SetEnvironmentVariable("JAEGER_AGENT_PORT", "6831");
-                //Environment.SetEnvironmentVariable("JAEGER_SAMPLER_TYPE", "const");                     
-                //Environment.SetEnvironmentVariable("JAEGER_REPORTER_LOG_SPANS", "false");
-                //Environment.SetEnvironmentVariable("JAEGER_SAMPLER_PARAM","1");
-                //Environment.SetEnvironmentVariable("JAEGER_SAMPLER_MANAGER_HOST_PORT", "5778");
-                //Environment.SetEnvironmentVariable("JAEGER_REPORTER_FLUSH_INTERVAL" , "1000");
-                //Environment.SetEnvironmentVariable("JAEGER_REPORTER_MAX_QUEUE_SIZE" , "100");
-                //application - server - id = server - x
-
-                var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
-
-                var sampler = new ConstSampler(sample: true);
+                var sampler = new ConstSampler(true);
                 var reporter = new RemoteReporter.Builder()
-                    .WithLoggerFactory(loggerFactory)
                     .WithSender(new UdpSender("localhost", 6831, 0))
                     .Build();
 
                 var tracer = new Tracer.Builder(serviceName)
-                    .WithLoggerFactory(loggerFactory)
                     .WithSampler(sampler)
                     .WithReporter(reporter)
                     .Build();
 
-                if (!GlobalTracer.IsRegistered())
-                {
-                    GlobalTracer.Register(tracer);
-                }
+                GlobalTracer.Register(tracer);
+
                 return tracer;
             });
             
