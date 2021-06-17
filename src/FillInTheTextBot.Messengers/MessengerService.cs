@@ -40,7 +40,12 @@ namespace FillInTheTextBot.Messengers
 
             try
             {
-                var request = Before(input);
+                Request request;
+
+                using (Tracing.Trace(operationName: "Before"))
+                {
+                    request = Before(input);
+                }
 
                 using (Tracing.Trace(s => s
                     .WithTag(nameof(request.UserHash), request.UserHash)
@@ -56,7 +61,10 @@ namespace FillInTheTextBot.Messengers
                         response = await _conversationService.GetResponseAsync(request);
                     }
 
-                    _mapper.Map(request, response);
+                    using (Tracing.Trace(operationName: "Map request to response"))
+                    {
+                        _mapper.Map(request, response);
+                    }
                 }
             }
             catch (Exception e)
@@ -66,7 +74,7 @@ namespace FillInTheTextBot.Messengers
                 response = new Response
                 {
                     Text = ErrorAnswer,
-                    Buttons = new []
+                    Buttons = new[]
                     {
                         new Button
                         {
@@ -77,9 +85,12 @@ namespace FillInTheTextBot.Messengers
                 };
             }
 
-            var output = await AfterAsync(input, response);
+            using (Tracing.Trace(operationName: "AfterAsync"))
+            {
+                var output = await AfterAsync(input, response);
 
-            return output;
+                return output;
+            }
         }
 
         private ICollection<Context> GetContexts(Request request)
