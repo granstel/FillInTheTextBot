@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FillInTheTextBot.Api.Exceptions;
+using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using Microsoft.AspNetCore.Http;
@@ -30,50 +31,52 @@ namespace FillInTheTextBot.Api.Middleware
         public async Task InvokeAsync(HttpContext context)
         {
             var queryId = Guid.NewGuid().ToString("N");
-
-            _log.SetProperty(QueryIdLogProperty, queryId);
-
-            if (_configuration.AddRequestIdHeader)
+            using (Tracing.Trace(s => s.WithTag(QueryIdLogProperty, queryId), "Http log"))
             {
-                if (!context.Request.Headers.ContainsKey(QueryIdHeaderName))
+                _log.SetProperty(QueryIdLogProperty, queryId);
+
+                if (_configuration.AddRequestIdHeader)
                 {
-                    context.Request.Headers.Add(QueryIdHeaderName, queryId);
+                    if (!context.Request.Headers.ContainsKey(QueryIdHeaderName))
+                    {
+                        context.Request.Headers.Add(QueryIdHeaderName, queryId);
+                    }
+
+                    if (!context.Response.Headers.ContainsKey(QueryIdHeaderName))
+                    {
+                        context.Response.Headers.Add(QueryIdHeaderName, queryId);
+                    }
                 }
 
-                if (!context.Response.Headers.ContainsKey(QueryIdHeaderName))
+                var isIncludeEndpoint = _configuration.IncludeEndpoints.Any(w =>
+                    context.Request.Path.Value.Contains(w, StringComparison.InvariantCultureIgnoreCase));
+
+                if (!isIncludeEndpoint)
                 {
-                    context.Response.Headers.Add(QueryIdHeaderName, queryId);
+                    await _next(context);
+
+                    return;
                 }
-            }
 
-            var isIncludeEndpoint = _configuration.IncludeEndpoints.Any(w =>
-                context.Request.Path.Value.Contains(w, StringComparison.InvariantCultureIgnoreCase));
+                await LogRequest(context.Request);
 
-            if (!isIncludeEndpoint)
-            {
-                await _next(context);
+                var responseBody = context.Response.Body;
 
-                return;
-            }
+                await using var stream = new MemoryStream();
+                context.Response.Body = stream;
 
-            await LogRequest(context.Request);
+                try
+                {
+                    await _next(context);
+                }
+                finally
+                {
+                    await LogResponse(context.Response);
 
-            var responseBody = context.Response.Body;
+                    await stream.CopyToAsync(responseBody);
 
-            await using var stream = new MemoryStream();
-            context.Response.Body = stream;
-
-            try
-            {
-                await _next(context);
-            }
-            finally
-            {
-                await LogResponse(context.Response);
-
-                await stream.CopyToAsync(responseBody);
-
-                context.Response.Body = responseBody;
+                    context.Response.Body = responseBody;
+                }
             }
         }
 
