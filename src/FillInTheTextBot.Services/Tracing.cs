@@ -7,7 +7,7 @@ namespace FillInTheTextBot.Services
 {
     public static class Tracing
     {
-        public static IScope Trace(Action<ISpanBuilder> spanBuilderAction, [CallerMemberName] string caller = null)
+        public static IScope Trace(Action<ISpanBuilder> spanBuilderAction = null, string operationName = null, [CallerMemberName] string caller = null)
         {
             var spanBuilder = GlobalTracer.Instance.BuildSpan(caller);
 

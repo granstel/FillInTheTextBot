@@ -48,9 +48,9 @@ namespace FillInTheTextBot.Services
 
             if (string.Equals(dialog?.Action, "GetText"))
             {
-                var textKey = dialog?.GetParameters("textKey").FirstOrDefault();
+                var textKey = dialog.GetParameters("textKey").FirstOrDefault();
 
-                response = await GetText(request, dialog?.Response, textKey);
+                response = await GetText(request, dialog.Response, textKey);
             }
 
             response.Emotions = GetEmotions(dialog);
@@ -70,16 +70,19 @@ namespace FillInTheTextBot.Services
 
             if (string.IsNullOrEmpty(textKey))
             {
-                _cache.TryGet($"Texts-{request.Source}", out string[] texts);
-
-                if (texts?.Any() != true && !_cache.TryGet("Texts", out texts))
+                using (Tracing.Trace(operationName: "Get texts from cache"))
                 {
-                    response.Text = "Что-то у меня не нашлось никаких текстов...";
+                    _cache.TryGet($"Texts-{request.Source}", out string[] texts);
 
-                    return response;
+                    if (texts?.Any() != true && !_cache.TryGet("Texts", out texts))
+                    {
+                        response.Text = "Что-то у меня не нашлось никаких текстов...";
+
+                        return response;
+                    }
+
+                    textKey = GetTextKey(request, texts);
                 }
-
-                textKey = GetTextKey(request, texts);
             }
 
             var eventName = $"event:{textKey}";
@@ -161,16 +164,19 @@ namespace FillInTheTextBot.Services
 
         private string GetResponseText(Appeal appeal, string responseText)
         {
-            _cache.TryGet($"AppealWords-{appeal}", out IDictionary<string, string> appealWords);
-
-            if (appealWords?.Any() != true)
+            using (Tracing.Trace(operationName: "Get appeal words from cache"))
             {
-                return responseText;
-            }
+                _cache.TryGet($"AppealWords-{appeal}", out IDictionary<string, string> appealWords);
 
-            foreach (var appealWord in appealWords)
-            {
-                responseText = responseText.Replace(appealWord.Key, appealWord.Value);
+                if (appealWords?.Any() != true)
+                {
+                    return responseText;
+                }
+
+                foreach (var appealWord in appealWords)
+                {
+                    responseText = responseText.Replace(appealWord.Key, appealWord.Value);
+                }
             }
 
             return responseText;
