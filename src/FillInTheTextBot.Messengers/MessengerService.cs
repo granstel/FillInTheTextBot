@@ -5,6 +5,7 @@ using AutoMapper;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using NLog;
+using OpenTracing.Util;
 
 namespace FillInTheTextBot.Messengers
 {
@@ -41,17 +42,23 @@ namespace FillInTheTextBot.Messengers
             {
                 var request = Before(input);
 
-                var contexts = GetContexts(request);
-                request.RequiredContexts.AddRange(contexts);
-
-                response = ProcessCommand(request);
-
-                if (response == null)
+                using (GlobalTracer.Instance
+                    .BuildSpan(nameof(ProcessIncomingAsync))
+                    .WithTag(nameof(request.UserHash), request.UserHash)
+                    .StartActive(true))
                 {
-                    response = await _conversationService.GetResponseAsync(request);
-                }
+                    var contexts = GetContexts(request);
+                    request.RequiredContexts.AddRange(contexts);
 
-                _mapper.Map(request, response);
+                    response = ProcessCommand(request);
+
+                    if (response == null)
+                    {
+                        response = await _conversationService.GetResponseAsync(request);
+                    }
+
+                    _mapper.Map(request, response);
+                }
             }
             catch (Exception e)
             {

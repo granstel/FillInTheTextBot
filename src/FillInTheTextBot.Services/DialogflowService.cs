@@ -7,6 +7,7 @@ using NLog;
 using System.Linq;
 using GranSteL.Helpers.Redis.Extensions;
 using GranSteL.Tools.ScopeSelector;
+using OpenTracing.Util;
 using InternalModels = FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Services
@@ -88,25 +89,31 @@ namespace FillInTheTextBot.Services
 
         private async Task<InternalModels.Dialog> GetResponseInternalAsync(InternalModels.Request request, SessionsClient client, ScopeContext context)
         {
-            var intentRequest = CreateQuery(request, context);
+            using (GlobalTracer.Instance
+                .BuildSpan(nameof(GetResponseInternalAsync))
+                .WithTag(nameof(context.ScopeId), context.ScopeId)
+                .StartActive(true))
+            {
+                var intentRequest = CreateQuery(request, context);
 
-            bool.TryParse(context.Parameters["LogQuery"], out var isLogQuery);
+                bool.TryParse(context.Parameters["LogQuery"], out var isLogQuery);
 
-            if (isLogQuery)
-                _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
+                if (isLogQuery)
+                    _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
-            DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest);
+                DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest);
 
-            if (isLogQuery)
-                _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
+                if (isLogQuery)
+                    _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
 
-            var queryResult = intentResponse.QueryResult;
+                var queryResult = intentResponse.QueryResult;
 
-            var response = _mapper.Map<InternalModels.Dialog>(queryResult);
+                var response = _mapper.Map<InternalModels.Dialog>(queryResult);
 
-            response.ScopeKey = context.Parameters["ProjectId"];
+                response.ScopeKey = context.Parameters["ProjectId"];
 
-            return response;
+                return response;
+            }
         }
 
         private Task DeleteAllContextsInternalAsync(string sessionId, string projectId, ContextsClient client)

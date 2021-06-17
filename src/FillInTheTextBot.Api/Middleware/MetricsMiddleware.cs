@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using NLog;
 using System;
-using System.Diagnostics;
 using System.Threading.Tasks;
 using OpenTracing;
 
@@ -24,7 +23,7 @@ namespace FillInTheTextBot.Api.Middleware
         {
             try
             {
-                using (var scope = _tracer.BuildSpan("waitingForValues").StartActive(finishSpanOnDispose: true))
+                using (var scope = _tracer.BuildSpan("waitingForValues").WithTag("test-tag","123").StartActive(finishSpanOnDispose: true))
                 {
                     scope.Span.Log(DateTimeOffset.Now, "event");
                     await _next(context);

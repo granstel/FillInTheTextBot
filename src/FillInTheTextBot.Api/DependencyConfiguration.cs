@@ -25,6 +25,7 @@ namespace FillInTheTextBot.Api
             containerBuilder.RegisterInstance(configuration.HttpLog).SingleInstance();
             containerBuilder.RegisterInstance(configuration.Redis).SingleInstance();
             containerBuilder.RegisterInstance(configuration.DialogflowScopes).SingleInstance();
+            containerBuilder.RegisterInstance(configuration.Tracing).SingleInstance();
 
             containerBuilder.RegisterModule<InternalServicesModule>();
             containerBuilder.RegisterModule<ExternalServicesModule>();
