@@ -42,10 +42,9 @@ namespace FillInTheTextBot.Messengers
             {
                 var request = Before(input);
 
-                using (GlobalTracer.Instance
-                    .BuildSpan(nameof(ProcessIncomingAsync))
+                using (Tracing.Trace(s => s
                     .WithTag(nameof(request.UserHash), request.UserHash)
-                    .StartActive(true))
+                    .WithTag(nameof(request.SessionId), request.SessionId)))
                 {
                     var contexts = GetContexts(request);
                     request.RequiredContexts.AddRange(contexts);

@@ -89,10 +89,7 @@ namespace FillInTheTextBot.Services
 
         private async Task<InternalModels.Dialog> GetResponseInternalAsync(InternalModels.Request request, SessionsClient client, ScopeContext context)
         {
-            using (GlobalTracer.Instance
-                .BuildSpan(nameof(GetResponseInternalAsync))
-                .WithTag(nameof(context.ScopeId), context.ScopeId)
-                .StartActive(true))
+            using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId)))
             {
                 var intentRequest = CreateQuery(request, context);
 

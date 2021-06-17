@@ -43,7 +43,6 @@ namespace FillInTheTextBot.Api
         // ReSharper disable once UnusedMember.Global
         public void Configure(IApplicationBuilder app, AppConfiguration configuration)
         {
-            app.UseMiddleware<MetricsMiddleware>();
             app.UseMiddleware<ExceptionsMiddleware>();
 
             app.UseRouting();
