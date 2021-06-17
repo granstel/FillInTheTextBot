@@ -5,7 +5,6 @@ using AutoMapper;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using NLog;
-using OpenTracing.Util;
 
 namespace FillInTheTextBot.Messengers
 {

@@ -7,7 +7,6 @@ using NLog;
 using System.Linq;
 using GranSteL.Helpers.Redis.Extensions;
 using GranSteL.Tools.ScopeSelector;
-using OpenTracing.Util;
 using InternalModels = FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Services
@@ -60,7 +59,7 @@ namespace FillInTheTextBot.Services
             var request = new InternalModels.Request
             {
                 Text = text,
-                SessionId = sessionId,
+                SessionId = sessionId
             };
 
             return await GetResponseAsync(request);
@@ -68,28 +67,27 @@ namespace FillInTheTextBot.Services
 
         public async Task<InternalModels.Dialog> GetResponseAsync(InternalModels.Request request)
         {
-            var dialog = await _sessionsClientBalancer.Invoke(request.SessionId,
-                (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
+            using (Tracing.Trace())
+            {
+                var dialog = await _sessionsClientBalancer.Invoke(request.SessionId,
+                    (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
 
-            return dialog;
-        }
-
-        public Task DeleteAllContextsAsync(InternalModels.Request request)
-        {
-            return _contextsClientBalancer.Invoke(request.SessionId,
-                (client, context) => DeleteAllContextsInternalAsync(request.SessionId, context.Parameters["ProjectId"], client),
-                    request.ScopeKey);
+                return dialog;
+            }
         }
 
         public Task SetContextAsync(string sessionId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
-            return _contextsClientBalancer.Invoke(sessionId,
-                (client, context) => SetContextInternalAsync(client, sessionId, context.Parameters["ProjectId"], contextName, lifeSpan, parameters));
+            using (Tracing.Trace())
+            {
+                return _contextsClientBalancer.Invoke(sessionId,
+                    (client, context) => SetContextInternalAsync(client, sessionId, context.Parameters["ProjectId"], contextName, lifeSpan, parameters));
+            }
         }
 
         private async Task<InternalModels.Dialog> GetResponseInternalAsync(InternalModels.Request request, SessionsClient client, ScopeContext context)
         {
-            using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId)))
+            using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
             {
                 var intentRequest = CreateQuery(request, context);
 
@@ -113,103 +111,108 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private Task DeleteAllContextsInternalAsync(string sessionId, string projectId, ContextsClient client)
-        {
-            var session = CreateSession(projectId, sessionId);
-
-            return client.DeleteAllContextsAsync(session);
-        }
-
         private Task SetContextInternalAsync(ContextsClient client, string sessionId, string projectId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
-            var session = CreateSession(projectId, sessionId);
+            using (Tracing.Trace())
+            {
+                var session = CreateSession(projectId, sessionId);
 
-            var context = GetContext(projectId, session, contextName, lifeSpan, parameters);
+                var context = GetContext(projectId, session, contextName, lifeSpan, parameters);
 
-            return client.CreateContextAsync(session, context);
+                return client.CreateContextAsync(session, context);
+            }
         }
 
         private DetectIntentRequest CreateQuery(InternalModels.Request request, ScopeContext context)
         {
-            var session = CreateSession(context.Parameters["ProjectId"], request.SessionId);
-
-            var languageCode = context.Parameters["LanguageCode"];
-
-            var eventInput = ResolveEvent(request, languageCode);
-
-            var text = request.Text;
-
-            if (text?.Length > MaximumRequestTextLength)
+            using (Tracing.Trace())
             {
-                text = request.Text.Substring(0, MaximumRequestTextLength);
-            }
+                var session = CreateSession(context.Parameters["ProjectId"], request.SessionId);
 
-            var query = new QueryInput
-            {
-                Text = new TextInput
+                var languageCode = context.Parameters["LanguageCode"];
+
+                var eventInput = ResolveEvent(request, languageCode);
+
+                var text = request.Text;
+
+                if (text?.Length > MaximumRequestTextLength)
                 {
-                    Text = text ?? string.Empty,
-                    LanguageCode = languageCode
+                    text = request.Text.Substring(0, MaximumRequestTextLength);
                 }
-            };
 
-            if (eventInput != null)
-            {
-                query.Event = eventInput;
+                var query = new QueryInput
+                {
+                    Text = new TextInput
+                    {
+                        Text = text ?? string.Empty,
+                        LanguageCode = languageCode
+                    }
+                };
+
+                if (eventInput != null)
+                {
+                    query.Event = eventInput;
+                }
+
+                var intentRequest = new DetectIntentRequest
+                {
+                    SessionAsSessionName = session,
+                    QueryInput = query,
+                    QueryParams = new QueryParameters()
+                };
+
+                var contexts = request.RequiredContexts.Select(c =>
+                    GetContext(context.Parameters["ProjectId"], session, c.Name, c.LifeSpan, c.Parameters)).ToList();
+
+                intentRequest.QueryParams.Contexts.AddRange(contexts);
+
+                return intentRequest;
             }
-
-            var intentRequest = new DetectIntentRequest
-            {
-                SessionAsSessionName = session,
-                QueryInput = query,
-                QueryParams = new QueryParameters()
-            };
-
-            var contexts = request.RequiredContexts.Select(c =>
-                GetContext(context.Parameters["ProjectId"], session, c.Name, c.LifeSpan, c.Parameters)).ToList();
-
-            intentRequest.QueryParams.Contexts.AddRange(contexts);
-
-            return intentRequest;
         }
 
         private EventInput ResolveEvent(InternalModels.Request request, string languageCode)
         {
-            EventInput result;
-
-            var sourceMessenger = request?.Source;
-
-            if (sourceMessenger != null && _eventResolvers.ContainsKey(sourceMessenger.Value))
+            using (Tracing.Trace())
             {
-                result = _eventResolvers[sourceMessenger.Value].Invoke(request, languageCode);
-            }
-            else
-            {
-                result = EventByCommand(request?.Text, languageCode);
-            }
+                EventInput result;
 
-            return result;
+                var sourceMessenger = request?.Source;
+
+                if (sourceMessenger != null && _eventResolvers.ContainsKey(sourceMessenger.Value))
+                {
+                    result = _eventResolvers[sourceMessenger.Value].Invoke(request, languageCode);
+                }
+                else
+                {
+                    result = EventByCommand(request?.Text, languageCode);
+                }
+
+                return result;
+            }
         }
 
         private EventInput EventByCommand(string requestText, string languageCode)
         {
-            var result = default(EventInput);
-
-            _commandDictionary.TryGetValue(requestText, out var eventName);
-
-            var splitted = requestText.Split(new[] { EventKey }, StringSplitOptions.None);
-
-            if (splitted.Length == 2)
+            using (Tracing.Trace())
             {
-                eventName = splitted.LastOrDefault();
-            }
+                var result = default(EventInput);
 
-            if (!string.IsNullOrEmpty(eventName))
-            {
-                result = GetEvent(eventName, languageCode);
-            }
+                _commandDictionary.TryGetValue(requestText, out var eventName);
 
-            return result;
+                var splitted = requestText.Split(new[] { EventKey }, StringSplitOptions.None);
+
+                if (splitted.Length == 2)
+                {
+                    eventName = splitted.LastOrDefault();
+                }
+
+                if (!string.IsNullOrEmpty(eventName))
+                {
+                    result = GetEvent(eventName, languageCode);
+                }
+
+                return result;
+            }
         }
 
         private EventInput GetEvent(string name, string languageCode)
@@ -223,26 +226,29 @@ namespace FillInTheTextBot.Services
 
         private EventInput DefaultWelcomeEventResolve(InternalModels.Request request, string languageCode)
         {
-            EventInput result;
-
-            // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
-            if (string.IsNullOrEmpty(request.Text))
+            using (Tracing.Trace())
             {
-                if (request.IsOldUser)
+                EventInput result;
+
+                // ReSharper disable once ConvertIfStatementToConditionalTernaryExpression
+                if (string.IsNullOrEmpty(request.Text))
                 {
-                    result = GetEvent(EasyWelcomeEventName, languageCode);
+                    if (request.IsOldUser)
+                    {
+                        result = GetEvent(EasyWelcomeEventName, languageCode);
+                    }
+                    else
+                    {
+                        result = GetEvent(WelcomeEventName, languageCode);
+                    }
                 }
                 else
                 {
-                    result = GetEvent(WelcomeEventName, languageCode);
+                    result = EventByCommand(request.Text, languageCode);
                 }
-            }
-            else
-            {
-                result = EventByCommand(request.Text, languageCode);
-            }
 
-            return result;
+                return result;
+            }
         }
 
         private SessionName CreateSession(string projectId, string sessionsId)
@@ -254,28 +260,31 @@ namespace FillInTheTextBot.Services
 
         private Context GetContext(string projectId, SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
-            var context = new Context
+            using (Tracing.Trace())
             {
-                ContextName = new ContextName(projectId, sessionName.SessionId, contextName),
-                LifespanCount = lifeSpan,
-            };
-
-            if (parameters?.Any() == true)
-            {
-                context.Parameters = new Google.Protobuf.WellKnownTypes.Struct();
-
-                foreach (var parameter in parameters)
+                var context = new Context
                 {
-                    var value = new Google.Protobuf.WellKnownTypes.Value
+                    ContextName = new ContextName(projectId, sessionName.SessionId, contextName),
+                    LifespanCount = lifeSpan
+                };
+
+                if (parameters?.Any() == true)
+                {
+                    context.Parameters = new Google.Protobuf.WellKnownTypes.Struct();
+
+                    foreach (var parameter in parameters)
                     {
-                        StringValue = parameter.Value
-                    };
+                        var value = new Google.Protobuf.WellKnownTypes.Value
+                        {
+                            StringValue = parameter.Value
+                        };
 
-                    context.Parameters.Fields.Add(parameter.Key, value);
+                        context.Parameters.Fields.Add(parameter.Key, value);
+                    }
                 }
-            }
 
-            return context;
+                return context;
+            }
         }
     }
 }
