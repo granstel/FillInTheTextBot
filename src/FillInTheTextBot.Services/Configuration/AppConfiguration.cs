@@ -7,5 +7,7 @@
         public DialogflowConfiguration[] DialogflowScopes { get; set; }
 
         public RedisConfiguration Redis { get; set; }
+
+        public TracingConfiguration Tracing { get; set; }
     }
 }

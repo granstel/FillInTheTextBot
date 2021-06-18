@@ -7,6 +7,13 @@ using Google.Cloud.Dialogflow.V2;
 using FillInTheTextBot.Services.Configuration;
 using GranSteL.Tools.ScopeSelector;
 using Grpc.Auth;
+using Jaeger;
+using Jaeger.Reporters;
+using Jaeger.Samplers;
+using Jaeger.Senders.Thrift;
+using Microsoft.AspNetCore.Hosting;
+using OpenTracing;
+using OpenTracing.Util;
 using RestSharp;
 using StackExchange.Redis;
 
@@ -22,6 +29,7 @@ namespace FillInTheTextBot.Api.DependencyModules
             builder.Register(RegisterContextsClientBalancer).As<ScopesSelector<ContextsClient>>().SingleInstance();
             builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
             builder.RegisterType<ScopeBindingStorage>().As<IScopeBindingStorage>().InstancePerLifetimeScope();
+            builder.Register(RegisterTracer).As<ITracer>().SingleInstance();
         }
 
         private ScopesSelector<SessionsClient> RegisterSessionsClientBalancer(IComponentContext context)
@@ -104,6 +112,27 @@ namespace FillInTheTextBot.Api.DependencyModules
             var dataBase = redisClient.GetDatabase();
 
             return dataBase;
+        }
+
+        private ITracer RegisterTracer(IComponentContext context)
+        {
+            var env = context.Resolve<IWebHostEnvironment>();
+            var configuration = context.Resolve<TracingConfiguration>();
+
+            var serviceName = env.ApplicationName;
+
+            var sampler = new ConstSampler(true);
+            var reporter = new RemoteReporter.Builder()
+                .WithSender(new UdpSender(configuration.Host, configuration.Port, 0))
+                .Build();
+
+            var tracer = new Tracer.Builder(serviceName)
+                .WithSampler(sampler)
+                .WithReporter(reporter)
+                .Build();
+
+            GlobalTracer.Register(tracer);
+            return tracer;
         }
     }
 }

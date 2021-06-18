@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using NLog;
 using System;
-using System.Diagnostics;
 using System.Threading.Tasks;
+using OpenTracing;
 
 namespace FillInTheTextBot.Api.Middleware
 {
@@ -11,32 +11,29 @@ namespace FillInTheTextBot.Api.Middleware
         private readonly Logger _log = LogManager.GetLogger(nameof(MetricsMiddleware));
 
         private readonly RequestDelegate _next;
-        private readonly Stopwatch _stopwatch;
+        private readonly ITracer _tracer;
 
-        public MetricsMiddleware(RequestDelegate next)
+        public MetricsMiddleware(RequestDelegate next, ITracer tracer)
         {
             _next = next;
-
-            _stopwatch = new Stopwatch();
+            _tracer = tracer;
         }
 
         public async Task InvokeAsync(HttpContext context)
         {
-            _stopwatch.Restart();
-
             try
             {
-                await _next(context);
+                using (var scope = _tracer.BuildSpan("waitingForValues").WithTag("test-tag","123").StartActive(finishSpanOnDispose: true))
+                {
+                    scope.Span.Log(DateTimeOffset.Now, "event");
+                    await _next(context);
+                }
             }
             catch (Exception ex)
             {
                 _log.Error(ex);
 
                 throw;
-            }
-            finally
-            {
-                _stopwatch.Stop();
             }
         }
     }

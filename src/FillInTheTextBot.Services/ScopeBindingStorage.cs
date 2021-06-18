@@ -20,7 +20,10 @@ namespace FillInTheTextBot.Services
         {
             var cacheKey = GetCacheKey(invocationKey);
 
-            return _cache.TryGet(cacheKey, out scopeKey);
+            using (Tracing.Trace(operationName: "Get scopeKey from cache"))
+            {
+                return _cache.TryGet(cacheKey, out scopeKey);
+            }
         }
 
         public void Add(string invocationKey, string scopeId)

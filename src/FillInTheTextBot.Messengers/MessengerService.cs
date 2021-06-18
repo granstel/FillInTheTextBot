@@ -39,19 +39,32 @@ namespace FillInTheTextBot.Messengers
 
             try
             {
-                var request = Before(input);
+                Request request;
 
-                var contexts = GetContexts(request);
-                request.RequiredContexts.AddRange(contexts);
-
-                response = ProcessCommand(request);
-
-                if (response == null)
+                using (Tracing.Trace(operationName: "Before"))
                 {
-                    response = await _conversationService.GetResponseAsync(request);
+                    request = Before(input);
                 }
 
-                _mapper.Map(request, response);
+                using (Tracing.Trace(s => s
+                    .WithTag(nameof(request.UserHash), request.UserHash)
+                    .WithTag(nameof(request.SessionId), request.SessionId)))
+                {
+                    var contexts = GetContexts(request);
+                    request.RequiredContexts.AddRange(contexts);
+
+                    response = ProcessCommand(request);
+
+                    if (response == null)
+                    {
+                        response = await _conversationService.GetResponseAsync(request);
+                    }
+
+                    using (Tracing.Trace(operationName: "Map request to response"))
+                    {
+                        _mapper.Map(request, response);
+                    }
+                }
             }
             catch (Exception e)
             {
@@ -60,7 +73,7 @@ namespace FillInTheTextBot.Messengers
                 response = new Response
                 {
                     Text = ErrorAnswer,
-                    Buttons = new []
+                    Buttons = new[]
                     {
                         new Button
                         {
@@ -71,9 +84,12 @@ namespace FillInTheTextBot.Messengers
                 };
             }
 
-            var output = await AfterAsync(input, response);
+            using (Tracing.Trace(operationName: "AfterAsync"))
+            {
+                var output = await AfterAsync(input, response);
 
-            return output;
+                return output;
+            }
         }
 
         private ICollection<Context> GetContexts(Request request)

@@ -48,9 +48,9 @@ namespace FillInTheTextBot.Services
 
             if (string.Equals(dialog?.Action, "GetText"))
             {
-                var textKey = dialog?.GetParameters("textKey").FirstOrDefault();
+                var textKey = dialog.GetParameters("textKey").FirstOrDefault();
 
-                response = await GetText(request, dialog?.Response, textKey);
+                response = await GetText(request, dialog.Response, textKey);
             }
 
             response.Emotions = GetEmotions(dialog);
@@ -66,37 +66,43 @@ namespace FillInTheTextBot.Services
 
         private async Task<Response> GetText(Request request, string startText, string textKey = null)
         {
-            var response = new Response();
-
-            if (string.IsNullOrEmpty(textKey))
+            using (Tracing.Trace())
             {
-                _cache.TryGet($"Texts-{request.Source}", out string[] texts);
+                var response = new Response();
 
-                if (texts?.Any() != true && !_cache.TryGet("Texts", out texts))
+                if (string.IsNullOrEmpty(textKey))
                 {
-                    response.Text = "Что-то у меня не нашлось никаких текстов...";
+                    using (Tracing.Trace(operationName: "Get texts from cache"))
+                    {
+                        _cache.TryGet($"Texts-{request.Source}", out string[] texts);
 
-                    return response;
+                        if (texts?.Any() != true && !_cache.TryGet("Texts", out texts))
+                        {
+                            response.Text = "Что-то у меня не нашлось никаких текстов...";
+
+                            return response;
+                        }
+
+                        textKey = GetTextKey(request, texts);
+                    }
                 }
 
-                textKey = GetTextKey(request, texts);
+                var eventName = $"event:{textKey}";
+
+
+                var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, textKey);
+
+
+                var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
+
+                var text = $"{startText} {textName} {dialog?.Response}";
+
+                response.Text = text;
+                response.Buttons = dialog?.Buttons;
+                response.ScopeKey = dialog?.ScopeKey;
+
+                return response;
             }
-
-            var eventName = $"event:{textKey}";
-
-
-            var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, textKey);
-
-
-            var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
-
-            var text = $"{startText} {textName} {dialog?.Response}";
-
-            response.Text = text;
-            response.Buttons = dialog?.Buttons;
-            response.ScopeKey = dialog?.ScopeKey;
-
-            return response;
         }
 
         private string GetTextKey(Request request, string[] texts)
@@ -119,58 +125,67 @@ namespace FillInTheTextBot.Services
 
         private IDictionary<string, string> GetEmotions(Dialog dialog)
         {
-            var result = GetEmotionsFromDialog(dialog);
-            
-            var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
-
-            if (result.Any() || dialog?.ParametersIncomplete == true || string.IsNullOrEmpty(textName))
+            using (Tracing.Trace())
             {
+                var result = GetEmotionsFromDialog(dialog);
+
+                var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
+
+                if (result.Any() || dialog?.ParametersIncomplete == true || string.IsNullOrEmpty(textName))
+                {
+                    return result;
+                }
+
+                foreach (var source in EmotionsToStoryMap.SourceEmotions.Keys)
+                {
+                    var emotions = EmotionsToStoryMap.SourceEmotions[source];
+
+                    var emotion = emotions.OrderBy(x => Random.Next()).FirstOrDefault();
+
+                    var emotionKey = EmotionsKeysMap.SourceEmotionKeys[source];
+
+                    result.Add(emotionKey, emotion);
+                }
+
                 return result;
             }
-
-            foreach (var source in EmotionsToStoryMap.SourceEmotions.Keys)
-            {
-                var emotions = EmotionsToStoryMap.SourceEmotions[source];
-
-                var emotion = emotions.OrderBy(x => Random.Next()).FirstOrDefault();
-
-                var emotionKey = EmotionsKeysMap.SourceEmotionKeys[source];
-                
-                result.Add(emotionKey, emotion);
-            }
-
-            return result;
         }
 
         private Dictionary<string, string> GetEmotionsFromDialog(Dialog dialog)
         {
-            var result = new Dictionary<string, string>();
-
-            foreach (var emotionKey in EmotionsKeysMap.SourceEmotionKeys.Values)
+            using (Tracing.Trace())
             {
-                var emotion = dialog?.GetParameters(emotionKey).FirstOrDefault();
+                var result = new Dictionary<string, string>();
 
-                if (!string.IsNullOrEmpty(emotion))
+                foreach (var emotionKey in EmotionsKeysMap.SourceEmotionKeys.Values)
                 {
-                    result.Add(emotionKey, emotion);
-                }
-            }
+                    var emotion = dialog?.GetParameters(emotionKey).FirstOrDefault();
 
-            return result;
+                    if (!string.IsNullOrEmpty(emotion))
+                    {
+                        result.Add(emotionKey, emotion);
+                    }
+                }
+
+                return result;
+            }
         }
 
         private string GetResponseText(Appeal appeal, string responseText)
         {
-            _cache.TryGet($"AppealWords-{appeal}", out IDictionary<string, string> appealWords);
-
-            if (appealWords?.Any() != true)
+            using (Tracing.Trace())
             {
-                return responseText;
-            }
+                _cache.TryGet($"AppealWords-{appeal}", out IDictionary<string, string> appealWords);
 
-            foreach (var appealWord in appealWords)
-            {
-                responseText = responseText.Replace(appealWord.Key, appealWord.Value);
+                if (appealWords?.Any() != true)
+                {
+                    return responseText;
+                }
+
+                foreach (var appealWord in appealWords)
+                {
+                    responseText = responseText.Replace(appealWord.Key, appealWord.Value);
+                }
             }
 
             return responseText;
@@ -178,26 +193,29 @@ namespace FillInTheTextBot.Services
 
         private ICollection<Button> AddButtonsFromPayload(ICollection<Button> responseButtons, Payload dialogPayload, Source requestSource)
         {
-            var buttons = new List<Button>();
-
-            if (responseButtons?.Any() == true)
+            using (Tracing.Trace())
             {
-                buttons.AddRange(responseButtons);
+                var buttons = new List<Button>();
+
+                if (responseButtons?.Any() == true)
+                {
+                    buttons.AddRange(responseButtons);
+                }
+
+                if (dialogPayload?.Buttons?.Any() == true)
+                {
+                    buttons.AddRange(dialogPayload.Buttons);
+                }
+
+                var buttonsForSource = new List<Button>();
+                buttonsForSource = dialogPayload?.ButtonsForSource?.GetValueOrDefault(requestSource, buttonsForSource).ToList() ?? buttonsForSource;
+
+                buttons.AddRange(buttonsForSource);
+
+                buttons = buttons.Where(b => !string.IsNullOrEmpty(b.Text)).ToList();
+
+                return buttons;
             }
-
-            if (dialogPayload?.Buttons?.Any() == true)
-            {
-                buttons.AddRange(dialogPayload.Buttons);
-            }
-
-            var buttonsForSource = new List<Button>();
-            buttonsForSource = dialogPayload?.ButtonsForSource?.GetValueOrDefault(requestSource, buttonsForSource).ToList() ?? buttonsForSource;
-
-            buttons.AddRange(buttonsForSource);
-
-            buttons = buttons.Where(b => !string.IsNullOrEmpty(b.Text)).ToList();
-
-            return buttons;
         }
 
         private void TrySetSavedText(string sessionId, Dialog dialog)
