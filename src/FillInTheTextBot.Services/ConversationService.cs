@@ -26,9 +26,9 @@ namespace FillInTheTextBot.Services
         {
             var dialog = await _dialogflowService.GetResponseAsync(request);
 
-            var response = new Response 
-            { 
-                Text = dialog?.Response, 
+            var response = new Response
+            {
+                Text = dialog?.Response,
                 Finished = dialog?.EndConversation ?? false,
                 Buttons = dialog?.Buttons,
                 ScopeKey = dialog?.ScopeKey
@@ -173,6 +173,11 @@ namespace FillInTheTextBot.Services
 
         private string GetResponseText(Appeal appeal, string responseText)
         {
+            if (appeal != Appeal.Official)
+            {
+                return responseText;
+            }
+
             using (Tracing.Trace())
             {
                 _cache.TryGet($"AppealWords-{appeal}", out IDictionary<string, string> appealWords);
@@ -182,9 +187,12 @@ namespace FillInTheTextBot.Services
                     return responseText;
                 }
 
-                foreach (var appealWord in appealWords)
+                using (Tracing.Trace(operationName: $"Replace words for appeal = '{appeal}'"))
                 {
-                    responseText = responseText.Replace(appealWord.Key, appealWord.Value);
+                    foreach (var appealWord in appealWords)
+                    {
+                        responseText = responseText.Replace(appealWord.Key, appealWord.Value);
+                    }
                 }
             }
 
