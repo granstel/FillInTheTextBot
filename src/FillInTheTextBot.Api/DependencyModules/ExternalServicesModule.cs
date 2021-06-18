@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Autofac;
 using FillInTheTextBot.Services;
 using Google.Apis.Auth.OAuth2;
@@ -19,7 +20,7 @@ using StackExchange.Redis;
 
 namespace FillInTheTextBot.Api.DependencyModules
 {
-    public class ExternalServicesModule : Module
+    public class ExternalServicesModule : Autofac.Module
     {
         protected override void Load(ContainerBuilder builder)
         {
@@ -120,6 +121,9 @@ namespace FillInTheTextBot.Api.DependencyModules
             var configuration = context.Resolve<TracingConfiguration>();
 
             var serviceName = env.ApplicationName;
+            var fullVersion = Assembly.GetExecutingAssembly().GetName().Version;
+
+            var version = $"{fullVersion?.Major}.{fullVersion?.Minor}.{fullVersion?.Build}";
 
             var sampler = new ConstSampler(true);
             var reporter = new RemoteReporter.Builder()
@@ -129,6 +133,7 @@ namespace FillInTheTextBot.Api.DependencyModules
             var tracer = new Tracer.Builder(serviceName)
                 .WithSampler(sampler)
                 .WithReporter(reporter)
+                .WithTag("Version", version)
                 .Build();
 
             GlobalTracer.Register(tracer);
