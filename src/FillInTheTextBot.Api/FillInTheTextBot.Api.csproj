@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>1.9.1</Version>
-    <PackageReleaseNotes>Fix metrics, remove zidium</PackageReleaseNotes>
+    <Version>1.10.0</Version>
+    <PackageReleaseNotes>Traces</PackageReleaseNotes>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
