@@ -30,26 +30,13 @@ namespace FillInTheTextBot.Messengers.Marusia
         {
             var request = base.Before(input);
 
-            var userStateCacheKey = GetCacheKey(request.UserHash);
-            _cache.TryGet(userStateCacheKey, out Models.UserState userState);
+            input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
 
-            if (input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool? isOldUser))
-            {
-                request.IsOldUser = isOldUser ?? userState?.IsOldUser ?? false;
-            }
-            else
-            {
-                request.IsOldUser = userState?.IsOldUser ?? false;
-            }
+            request.IsOldUser = isOldUser;
 
-            if (input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex))
-            {
-                request.NextTextIndex = Convert.ToInt32(nextTextIndex ?? userState?.NextTextIndex ?? 0);
-            }
-            else
-            {
-                request.NextTextIndex = Convert.ToInt32(userState?.NextTextIndex ?? 0);
-            }
+            input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex);
+
+            request.NextTextIndex = Convert.ToInt32(nextTextIndex);
 
             input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
 
@@ -77,25 +64,14 @@ namespace FillInTheTextBot.Messengers.Marusia
             _mapper.Map(input, output);
 
             output.AddToUserState(Models.Request.IsOldUserKey, true);
+
             output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
+
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 
-            var userState = new Models.UserState
-            {
-                IsOldUser = true,
-                NextTextIndex = response.NextTextIndex
-            };
-
-            var cacheKey = GetCacheKey(response.UserHash);
-
-            await _cache.TryAddAsync(cacheKey, userState, TimeSpan.FromDays(14));
+            _cache.AddAsync($"marusia:{response.UserHash}", string.Empty, TimeSpan.FromDays(14)).Forget();
 
             return output;
-        }
-
-        private string GetCacheKey(string key)
-        {
-            return $"marusia:{key}";
         }
     }
 }
