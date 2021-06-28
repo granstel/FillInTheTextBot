@@ -31,7 +31,8 @@ namespace FillInTheTextBot.Api
             services.AddExternalServices();
 
             var names = GetAssembliesNames();
-            containerBuilder.RegisterModule(new MappingModule(names));
+            services.AddMapping(names);
+
             RegisterFromMessengersAssemblies(containerBuilder, names);
 
             return containerBuilder.Build();
