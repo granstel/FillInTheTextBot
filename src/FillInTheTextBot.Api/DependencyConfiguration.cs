@@ -20,14 +20,15 @@ namespace FillInTheTextBot.Api
             containerBuilder.Populate(services);
 
             var configuration = appConfiguration.GetSection($"{nameof(AppConfiguration)}").Get<AppConfiguration>();
-            
-            containerBuilder.RegisterInstance(configuration).SingleInstance();
-            containerBuilder.RegisterInstance(configuration.HttpLog).SingleInstance();
-            containerBuilder.RegisterInstance(configuration.Redis).SingleInstance();
-            containerBuilder.RegisterInstance(configuration.DialogflowScopes).SingleInstance();
-            containerBuilder.RegisterInstance(configuration.Tracing).SingleInstance();
 
-            containerBuilder.RegisterModule<InternalServicesModule>();
+            services.AddSingleton(configuration);
+            services.AddSingleton(configuration.HttpLog);
+            services.AddSingleton(configuration.Redis);
+            services.AddSingleton(configuration.DialogflowScopes);
+            services.AddSingleton(configuration.Tracing);
+
+            services.AddInternalServices();
+
             containerBuilder.RegisterModule<ExternalServicesModule>();
 
             var names = GetAssembliesNames();
