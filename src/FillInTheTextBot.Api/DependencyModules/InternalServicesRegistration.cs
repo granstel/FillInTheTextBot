@@ -8,7 +8,7 @@ using StackExchange.Redis;
 
 namespace FillInTheTextBot.Api.DependencyModules
 {
-    public static class InternalServicesRegistration
+    internal static class InternalServicesRegistration
     {
         internal static void AddInternalServices(this IServiceCollection services)
         {

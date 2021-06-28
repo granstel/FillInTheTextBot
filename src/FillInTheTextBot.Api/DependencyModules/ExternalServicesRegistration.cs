@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Autofac;
@@ -13,39 +14,38 @@ using Jaeger.Reporters;
 using Jaeger.Samplers;
 using Jaeger.Senders.Thrift;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using OpenTracing;
 using OpenTracing.Util;
-using RestSharp;
 using StackExchange.Redis;
 
 namespace FillInTheTextBot.Api.DependencyModules
 {
-    public class ExternalServicesModule : Autofac.Module
+    internal static class ExternalServicesRegistration
     {
-        protected override void Load(ContainerBuilder builder)
+        internal static void AddExternalServices(this IServiceCollection services)
         {
-            builder.RegisterType<RestClient>().As<IRestClient>();
-            
-            builder.Register(RegisterSessionsClientBalancer).As<ScopesSelector<SessionsClient>>().SingleInstance();
-            builder.Register(RegisterContextsClientBalancer).As<ScopesSelector<ContextsClient>>().SingleInstance();
-            builder.Register(RegisterRedisClient).As<IDatabase>().SingleInstance();
-            builder.RegisterType<ScopeBindingStorage>().As<IScopeBindingStorage>().InstancePerLifetimeScope();
-            builder.Register(RegisterTracer).As<ITracer>().SingleInstance();
+            services.AddSingleton(RegisterSessionsClientScopes);
+            services.AddSingleton(RegisterContextsClientScopes);
+            services.AddSingleton(RegisterRedisClient);
+            services.AddSingleton(RegisterTracer);
+
+            services.AddScoped<IScopeBindingStorage, ScopeBindingStorage>();
         }
 
-        private ScopesSelector<SessionsClient> RegisterSessionsClientBalancer(IComponentContext context)
+        private static ScopesSelector<SessionsClient> RegisterSessionsClientScopes(IServiceProvider provider)
         {
-            var configuration = context.Resolve<DialogflowConfiguration[]>();
+            var configuration = provider.GetService<DialogflowConfiguration[]>();
 
             var scopeContexts = GetScopesContexts(configuration);
 
-            var storage = context.Resolve<IScopeBindingStorage>();
+            var storage = provider.GetService<IScopeBindingStorage>();
             var balancer = new ScopesSelector<SessionsClient>(storage, scopeContexts, CreateDialogflowSessionsClient);
 
             return balancer;
         }
 
-        private SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
+        private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
         {
             var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(SessionsClient.DefaultScopes);
 
@@ -59,19 +59,19 @@ namespace FillInTheTextBot.Api.DependencyModules
             return client;
         }
 
-        private ScopesSelector<ContextsClient> RegisterContextsClientBalancer(IComponentContext context)
+        private static ScopesSelector<ContextsClient> RegisterContextsClientScopes(IServiceProvider provider)
         {
-            var configuration = context.Resolve<DialogflowConfiguration[]>();
+            var configuration = provider.GetService<DialogflowConfiguration[]>();
 
             var contexts = GetScopesContexts(configuration);
 
-            var storage = context.Resolve<IScopeBindingStorage>();
+            var storage = provider.GetService<IScopeBindingStorage>();
             var balancer = new ScopesSelector<ContextsClient>(storage, contexts, CreateDialogflowContextsClient);
             
             return balancer;
         }
         
-        private ContextsClient CreateDialogflowContextsClient(ScopeContext context)
+        private static ContextsClient CreateDialogflowContextsClient(ScopeContext context)
         {
             var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(ContextsClient.DefaultScopes);
 
@@ -85,7 +85,7 @@ namespace FillInTheTextBot.Api.DependencyModules
             return client;
         }
 
-        private ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowScopes)
+        private static ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowScopes)
         {
             var scopeContexts = dialogflowScopes.Where(i => !string.IsNullOrEmpty(i.ProjectId))
                 .Select(i =>
@@ -104,9 +104,9 @@ namespace FillInTheTextBot.Api.DependencyModules
             return scopeContexts;
         }
 
-        private IDatabase RegisterRedisClient(IComponentContext context)
+        private static IDatabase RegisterRedisClient(IServiceProvider provider)
         {
-            var configuration = context.Resolve<RedisConfiguration>();
+            var configuration = provider.GetService<RedisConfiguration>();
 
             var redisClient = ConnectionMultiplexer.Connect(configuration.ConnectionString);
 
@@ -115,10 +115,10 @@ namespace FillInTheTextBot.Api.DependencyModules
             return dataBase;
         }
 
-        private ITracer RegisterTracer(IComponentContext context)
+        private static ITracer RegisterTracer(IServiceProvider provider)
         {
-            var env = context.Resolve<IWebHostEnvironment>();
-            var configuration = context.Resolve<TracingConfiguration>();
+            var env = provider.GetService<IWebHostEnvironment>();
+            var configuration = provider.GetService<TracingConfiguration>();
 
             var serviceName = env.ApplicationName;
             var fullVersion = Assembly.GetExecutingAssembly().GetName().Version;

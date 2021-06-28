@@ -28,8 +28,7 @@ namespace FillInTheTextBot.Api
             services.AddSingleton(configuration.Tracing);
 
             services.AddInternalServices();
-
-            containerBuilder.RegisterModule<ExternalServicesModule>();
+            services.AddExternalServices();
 
             var names = GetAssembliesNames();
             containerBuilder.RegisterModule(new MappingModule(names));

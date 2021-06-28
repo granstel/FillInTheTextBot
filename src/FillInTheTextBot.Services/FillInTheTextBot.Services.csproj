@@ -18,7 +18,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.*" />
     <PackageReference Include="NLog" Version="4.7.6" />
     <PackageReference Include="OpenTracing" Version="0.12.1" />
-    <PackageReference Include="RestSharp" Version="106.2.*" />
     <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
     <PackageReference Include="AutoMapper" Version="6.2.*" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.8.0" />
