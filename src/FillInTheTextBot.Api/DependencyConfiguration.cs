@@ -14,12 +14,8 @@ namespace FillInTheTextBot.Api
 {
     internal static class DependencyConfiguration
     {
-        internal static IContainer Configure(IServiceCollection services, IConfiguration appConfiguration)
+        internal static void Configure(IServiceCollection services, IConfiguration appConfiguration)
         {
-            var containerBuilder = new ContainerBuilder();
-
-            containerBuilder.Populate(services);
-
             var configuration = appConfiguration.GetSection($"{nameof(AppConfiguration)}").Get<AppConfiguration>();
 
             services.AddSingleton(configuration);
@@ -34,9 +30,7 @@ namespace FillInTheTextBot.Api
             var names = GetAssembliesNames();
             services.AddMapping(names);
 
-            RegisterFromMessengersAssemblies(containerBuilder, names);
-
-            return containerBuilder.Build();
+            //RegisterFromMessengersAssemblies(containerBuilder, names);
         }
 
         private static void RegisterFromMessengersAssemblies(ContainerBuilder containerBuilder, ICollection<string> names)

@@ -25,7 +25,7 @@ namespace FillInTheTextBot.Api
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // ReSharper disable once UnusedMember.Global
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services
                 .AddMvc()
@@ -33,9 +33,7 @@ namespace FillInTheTextBot.Api
 
             services.AddOpenTracing();
 
-            _applicationContainer = DependencyConfiguration.Configure(services, _configuration);
-
-            return new AutofacServiceProvider(_applicationContainer);
+            DependencyConfiguration.Configure(services, _configuration);
         }
 
 

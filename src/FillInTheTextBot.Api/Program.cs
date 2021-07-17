@@ -12,7 +12,11 @@ namespace FillInTheTextBot.Api
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+            WebHost
+            .CreateDefaultBuilder(args)
+            .UseSetting(WebHostDefaults.ApplicationKey, "HostingStartupApp")
+            .UseSetting(
+                    WebHostDefaults.PreventHostingStartupKey, "false")
                 .UseStartup<Startup>()
                 .UseNLog()
                 .Build();
