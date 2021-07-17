@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Linq;
 using System.Reflection;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using FillInTheTextBot.Api.DependencyModules;
 using FillInTheTextBot.Services.Configuration;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -38,7 +39,7 @@ namespace FillInTheTextBot.Api
             return containerBuilder.Build();
         }
 
-        private static void RegisterFromMessengersAssemblies(ContainerBuilder containerBuilder, string[] names)
+        private static void RegisterFromMessengersAssemblies(ContainerBuilder containerBuilder, ICollection<string> names)
         {
             foreach (var name in names)
             {
@@ -48,27 +49,15 @@ namespace FillInTheTextBot.Api
             }
         }
 
-        private static string[] GetAssembliesNames()
+        private static ICollection<string> GetAssembliesNames()
         {
-            var result = new List<string>();
+            var callingAssemble = Assembly.GetCallingAssembly();
 
-            var files = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "FillInTheTextBot*.dll");
+            var names = callingAssemble.GetCustomAttributes<ApplicationPartAttribute>()
+                .Where(a => a.AssemblyName.Contains("messenger", StringComparison.InvariantCultureIgnoreCase))
+                .Select(a => a.AssemblyName).ToList();
 
-            foreach (var file in files)
-            {
-                var info = new FileInfo(file);
-
-                var name = info.Name.Replace(info.Extension, string.Empty);
-
-                if (name.Equals(AppDomain.CurrentDomain.FriendlyName, StringComparison.InvariantCultureIgnoreCase))
-                {
-                    continue;
-                }
-
-                result.Add(name);
-            }
-
-            return result.ToArray();
+            return names;
         }
     }
 }
