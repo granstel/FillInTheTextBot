@@ -1,26 +1,20 @@
-﻿using System;
-using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using FillInTheTextBot.Api.Middleware;
+﻿using FillInTheTextBot.Api.Middleware;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Yandex.HostingStartup))]
 namespace FillInTheTextBot.Api
 {
     public class Startup
     {
         private readonly IConfiguration _configuration;
-        private readonly IWebHostEnvironment _env;
 
-        private IContainer _applicationContainer;
-
-        public Startup(IConfiguration configuration, IWebHostEnvironment env)
+        public Startup(IConfiguration configuration)
         {
             _configuration = configuration;
-            _env = env;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
