@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using NLog.Web;
 using System.Reflection;
+using System;
 
 namespace FillInTheTextBot.Api
 {
@@ -9,6 +10,13 @@ namespace FillInTheTextBot.Api
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES: " +
+                Environment.GetEnvironmentVariable("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES"));
+            Console.WriteLine("DOTNET_ADDITIONAL_DEPS: " +
+                Environment.GetEnvironmentVariable("DOTNET_ADDITIONAL_DEPS"));
+            Console.WriteLine("DOTNET_STARTUP_HOOKS: " +
+                Environment.GetEnvironmentVariable("DOTNET_STARTUP_HOOKS"));
+
             BuildWebHost(args).Run();
         }
 
