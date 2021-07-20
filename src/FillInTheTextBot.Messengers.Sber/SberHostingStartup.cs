@@ -1,9 +1,8 @@
-﻿using FillInTheTextBot.Messengers.Sber;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Yandex.SberHostingStartup))]
-namespace FillInTheTextBot.Messengers.Yandex
+[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Sber.SberHostingStartup))]
+namespace FillInTheTextBot.Messengers.Sber
 {
     public class SberHostingStartup : IHostingStartup
     {
