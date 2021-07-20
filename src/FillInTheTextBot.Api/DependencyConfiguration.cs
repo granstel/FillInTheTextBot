@@ -43,12 +43,12 @@ namespace FillInTheTextBot.Api
             }
         }
 
-        private static ICollection<string> GetAssembliesNames()
+        public static ICollection<string> GetAssembliesNames()
         {
             var callingAssemble = Assembly.GetCallingAssembly();
 
             var names = callingAssemble.GetCustomAttributes<ApplicationPartAttribute>()
-                .Where(a => a.AssemblyName.Contains("messenger", StringComparison.InvariantCultureIgnoreCase))
+                .Where(a => a.AssemblyName.Contains("FillInTheTextBot", StringComparison.InvariantCultureIgnoreCase))
                 .Select(a => a.AssemblyName).ToList();
 
             return names;

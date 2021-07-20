@@ -28,6 +28,13 @@ namespace FillInTheTextBot.Api
             var k = builder.GetSetting(WebHostDefaults.HostingStartupAssembliesKey);
             var k1 = builder.GetSetting(WebHostDefaults.PreventHostingStartupKey);
 
+            var names = DependencyConfiguration.GetAssembliesNames();
+            var concatenatedNames = string.Join(';', names);
+
+            var namesList = $"{k}{concatenatedNames}";
+
+            builder.UseSetting(WebHostDefaults.HostingStartupAssembliesKey, namesList);
+
             var builded = builder
             .UseSetting(WebHostDefaults.ApplicationKey, Assembly.GetEntryAssembly().GetName().Name)
             .UseSetting(

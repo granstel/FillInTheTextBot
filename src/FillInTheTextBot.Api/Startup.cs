@@ -1,12 +1,8 @@
 ﻿using FillInTheTextBot.Api.Middleware;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-#if yandex
-[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Yandex.HostingStartup))]
-#endif
 
 namespace FillInTheTextBot.Api
 {
