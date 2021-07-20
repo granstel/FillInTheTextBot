@@ -28,6 +28,7 @@ namespace FillInTheTextBot.Api
             var names = GetAssembliesNames();
             services.AddMapping(names);
         }
+
         public static ICollection<string> GetAssembliesNames()
         {
             var callingAssemble = Assembly.GetCallingAssembly();

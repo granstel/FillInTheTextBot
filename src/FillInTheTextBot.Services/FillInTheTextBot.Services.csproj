@@ -19,7 +19,7 @@
     <PackageReference Include="NLog" Version="4.7.6" />
     <PackageReference Include="OpenTracing" Version="0.12.1" />
     <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
-    <PackageReference Include="AutoMapper" Version="6.2.*" />
+    <PackageReference Include="AutoMapper" Version="10.1.*" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.8.0" />
     <PackageReference Include="System.ServiceModel.Http" Version="4.8.0" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.0" />
