@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using NLog.Web;
-using System.Reflection;
-using System;
+using System.Linq;
 
 namespace FillInTheTextBot.Api
 {
@@ -10,41 +9,28 @@ namespace FillInTheTextBot.Api
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES: " +
-                Environment.GetEnvironmentVariable("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES"));
-            Console.WriteLine("DOTNET_ADDITIONAL_DEPS: " +
-                Environment.GetEnvironmentVariable("DOTNET_ADDITIONAL_DEPS"));
-            Console.WriteLine("DOTNET_STARTUP_HOOKS: " +
-                Environment.GetEnvironmentVariable("DOTNET_STARTUP_HOOKS"));
-
             BuildWebHost(args).Run();
         }
 
         public static IWebHost BuildWebHost(string[] args)
         {
-            var builder = WebHost
-            .CreateDefaultBuilder(args);
+            var builder = WebHost.CreateDefaultBuilder(args);
 
-            var k = builder.GetSetting(WebHostDefaults.HostingStartupAssembliesKey);
-            var k1 = builder.GetSetting(WebHostDefaults.PreventHostingStartupKey);
+            var hostingStartupAssemblies = builder.GetSetting(WebHostDefaults.HostingStartupAssembliesKey);
+            var hostingStartupAssembliesList = hostingStartupAssemblies.Split(';');
 
             var names = DependencyConfiguration.GetAssembliesNames();
-            var concatenatedNames = string.Join(';', names);
-
-            var namesList = $"{k}{concatenatedNames}";
-
-            builder.UseSetting(WebHostDefaults.HostingStartupAssembliesKey, namesList);
+            var fullList = hostingStartupAssembliesList.Concat(names).Distinct().ToList();
+            var concatenatedNames = string.Join(';', fullList);
 
             var builded = builder
-            .UseSetting(WebHostDefaults.ApplicationKey, Assembly.GetEntryAssembly().GetName().Name)
-            .UseSetting(
-                    WebHostDefaults.PreventHostingStartupKey, "false")
+                .UseSetting(WebHostDefaults.HostingStartupAssembliesKey, concatenatedNames)
                 .UseStartup<Startup>()
                 .UseNLog()
                 .Build();
 
             return builded;
         }
-            
+
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using Autofac;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using GranSteL.Helpers.Redis;

@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Autofac;
-using Autofac.Extensions.DependencyInjection;
 using FillInTheTextBot.Api.DependencyModules;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
@@ -29,20 +27,7 @@ namespace FillInTheTextBot.Api
 
             var names = GetAssembliesNames();
             services.AddMapping(names);
-
-            //RegisterFromMessengersAssemblies(containerBuilder, names);
         }
-
-        private static void RegisterFromMessengersAssemblies(ContainerBuilder containerBuilder, ICollection<string> names)
-        {
-            foreach (var name in names)
-            {
-                var assembly = Assembly.Load(name);
-
-                containerBuilder.RegisterAssemblyModules(assembly);
-            }
-        }
-
         public static ICollection<string> GetAssembliesNames()
         {
             var callingAssemble = Assembly.GetCallingAssembly();
