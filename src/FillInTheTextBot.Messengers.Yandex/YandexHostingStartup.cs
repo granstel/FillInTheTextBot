@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 
 [assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Yandex.YandexHostingStartup))]
 namespace FillInTheTextBot.Messengers.Yandex
@@ -7,7 +8,12 @@ namespace FillInTheTextBot.Messengers.Yandex
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices(services => services.AddYandexServices());
+            builder.ConfigureServices(services =>
+            {
+                services.AddConfiguration<YandexConfiguration>("appsettings.Yandex.json");
+
+                services.AddTransient<IYandexService, YandexService>();
+            });
         }
     }
 }
