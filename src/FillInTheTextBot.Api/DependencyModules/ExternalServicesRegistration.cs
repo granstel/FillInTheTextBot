@@ -30,7 +30,7 @@ namespace FillInTheTextBot.Api.DependencyModules
             services.AddSingleton(RegisterRedisClient);
             services.AddSingleton(RegisterTracer);
 
-            services.AddScoped<IScopeBindingStorage, ScopeBindingStorage>();
+            services.AddSingleton<IScopeBindingStorage, ScopeBindingStorage>();
         }
 
         private static ScopesSelector<SessionsClient> RegisterSessionsClientScopes(IServiceProvider provider)

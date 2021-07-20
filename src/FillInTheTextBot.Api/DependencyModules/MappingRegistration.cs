@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FillInTheTextBot.Services.Mapping;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 
@@ -11,6 +12,9 @@ namespace FillInTheTextBot.Api.DependencyModules
             services.AddSingleton<IMapper>(p => new Mapper(new MapperConfiguration(c =>
             {
                 c.AddProfiles(names);
+
+                c.AddProfile<InternalProfile>();
+                c.AddProfile<DialogflowProfile>();
             })));
         }
     }
