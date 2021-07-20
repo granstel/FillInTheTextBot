@@ -18,12 +18,8 @@ namespace FillInTheTextBot.Messengers.Yandex
 
                 return config;
             });
-            //TODO: is it really needed? Maybe app.UseEndpoints(e => e.MapControllers()) is enough
-            //services.AddTransient<YandexController>();
 
             services.AddTransient<IYandexService, YandexService>();
-            //TODO: is it really needed? Maybe registration of profiles at MappingRegistration is enough
-            //services.AddTransient<YandexProfile>();
         }
 
         private const string Extension = ".json";
