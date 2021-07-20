@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 
-[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Yandex.HostingStartup))]
+[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Yandex.YandexHostingStartup))]
 namespace FillInTheTextBot.Messengers.Yandex
 {
-    public class HostingStartup : IHostingStartup
+    public class YandexHostingStartup : IHostingStartup
     {
         public void Configure(IWebHostBuilder builder)
         {
