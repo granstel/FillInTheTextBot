@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Yandex.YandexHostingStartup))]
+[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Yandex.YandexStartup))]
 namespace FillInTheTextBot.Messengers.Yandex
 {
-    public class YandexHostingStartup : IHostingStartup
+    public class YandexStartup : IHostingStartup
     {
         public void Configure(IWebHostBuilder builder)
         {

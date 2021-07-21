@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Marusia.MarusiaHostingStartup))]
+[assembly: HostingStartup(typeof(FillInTheTextBot.Messengers.Marusia.MarusiaStartup))]
 namespace FillInTheTextBot.Messengers.Marusia
 {
-    public class MarusiaHostingStartup : IHostingStartup
+    public class MarusiaStartup : IHostingStartup
     {
         public void Configure(IWebHostBuilder builder)
         {
