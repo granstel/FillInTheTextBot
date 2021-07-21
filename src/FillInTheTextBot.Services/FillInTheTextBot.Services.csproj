@@ -5,17 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Mapping\Rules\**" />
-    <EmbeddedResource Remove="Mapping\Rules\**" />
-    <None Remove="Mapping\Rules\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="3.2.0" />
     <PackageReference Include="GranSteL.Helpers.Redis" Version="1.0.9" />
     <PackageReference Include="GranSteL.Tools.ScopeSelector" Version="0.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.*" />
-    <PackageReference Include="NLog" Version="4.7.6" />
+    <PackageReference Include="NLog" Version="4.7.*" />
     <PackageReference Include="OpenTracing" Version="0.12.1" />
     <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
     <PackageReference Include="AutoMapper" Version="10.1.*" />
