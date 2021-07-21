@@ -23,13 +23,13 @@ namespace FillInTheTextBot.Api
             var fullList = hostingStartupAssembliesList.Concat(names).Distinct().ToList();
             var concatenatedNames = string.Join(';', fullList);
 
-            var builded = builder
+            var host = builder
                 .UseSetting(WebHostDefaults.HostingStartupAssembliesKey, concatenatedNames)
                 .UseStartup<Startup>()
                 .UseNLog()
                 .Build();
 
-            return builded;
+            return host;
         }
 
     }
