@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using FillInTheTextBot.Messengers.Extensions;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
@@ -44,7 +44,7 @@ namespace FillInTheTextBot.Messengers
         [HttpGet]
         public string GetInfo()
         {
-            var url = this.GetWebHookUrl();
+            var url = GetWebHookUrl(Request);
 
             return $"{DateTime.Now:F} {url}";
         }
@@ -65,7 +65,7 @@ namespace FillInTheTextBot.Messengers
         [HttpPut("{token?}")]
         public virtual async Task<IActionResult> CreateWebHook(string token)
         {
-            var url = this.GetWebHookUrl();
+            var url = GetWebHookUrl(Request);
 
             var result = await _messengerService.SetWebhookAsync(url);
 
@@ -95,6 +95,16 @@ namespace FillInTheTextBot.Messengers
             }
 
             return false;
+        }
+
+        private string GetWebHookUrl(HttpRequest request)
+        {
+            var pathBase = request.PathBase.Value;
+            var pathSegment = request.Path.Value;
+
+            var url = $"{request.Scheme}://{request.Host}{pathBase}{pathSegment}";
+
+            return url;
         }
     }
 }
