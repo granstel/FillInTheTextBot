@@ -6,7 +6,7 @@ using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.WellKnownTypes;
 using GranSteL.Helpers.Redis.Extensions;
 
-namespace FillInTheTextBot.Api.Mapping
+namespace FillInTheTextBot.Services.Mapping
 {
     public class DialogflowProfile : Profile
     {

@@ -1,6 +1,6 @@
 ﻿using Yandex.Dialogs.Models.Input;
 
-namespace FillInTheTextBot.Services.Extensions
+namespace FillInTheTextBot.Messengers.Yandex
 {
     public static class InputModelExtensions
     {
