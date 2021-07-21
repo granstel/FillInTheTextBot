@@ -16,7 +16,7 @@ namespace FillInTheTextBot.Api
         {
             var builder = WebHost.CreateDefaultBuilder(args);
 
-            var hostingStartupAssemblies = builder.GetSetting(WebHostDefaults.HostingStartupAssembliesKey);
+            var hostingStartupAssemblies = builder.GetSetting(WebHostDefaults.HostingStartupAssembliesKey) ?? string.Empty;
             var hostingStartupAssembliesList = hostingStartupAssemblies.Split(';');
 
             var names = DependencyConfiguration.GetAssembliesNames();
