@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using FillInTheTextBot.Models;
 
-namespace FillInTheTextBot.Services.Mapping
+namespace FillInTheTextBot.Api.Mapping
 {
     public class InternalProfile : Profile
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using FillInTheTextBot.Models;
 
-namespace FillInTheTextBot.Services.Mapping
+namespace FillInTheTextBot.Api.Mapping
 {
     /// <summary>
     /// Map emotion key to request source

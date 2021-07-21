@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
-using FillInTheTextBot.Services.Mapping;
+using FillInTheTextBot.Api.Mapping;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FillInTheTextBot.Api.DI
