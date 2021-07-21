@@ -5,7 +5,7 @@ using GranSteL.Helpers.Redis;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
 
-namespace FillInTheTextBot.Api.DependencyModules
+namespace FillInTheTextBot.Api.DI
 {
     internal static class InternalServicesRegistration
     {

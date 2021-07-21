@@ -1,9 +1,9 @@
-﻿using AutoMapper;
+﻿using System.Collections.Generic;
+using AutoMapper;
 using FillInTheTextBot.Services.Mapping;
 using Microsoft.Extensions.DependencyInjection;
-using System.Collections.Generic;
 
-namespace FillInTheTextBot.Api.DependencyModules
+namespace FillInTheTextBot.Api.DI
 {
     internal static class MappingRegistration
     {

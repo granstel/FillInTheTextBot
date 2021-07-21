@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using FillInTheTextBot.Api.DependencyModules;
+using FillInTheTextBot.Api.DI;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.Configuration;

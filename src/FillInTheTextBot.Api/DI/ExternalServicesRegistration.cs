@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Autofac;
 using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.Configuration;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
-using FillInTheTextBot.Services.Configuration;
 using GranSteL.Tools.ScopeSelector;
 using Grpc.Auth;
 using Jaeger;
@@ -19,7 +18,7 @@ using OpenTracing;
 using OpenTracing.Util;
 using StackExchange.Redis;
 
-namespace FillInTheTextBot.Api.DependencyModules
+namespace FillInTheTextBot.Api.DI
 {
     internal static class ExternalServicesRegistration
     {
