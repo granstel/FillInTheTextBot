@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using FillInTheTextBot.Models;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.WellKnownTypes;
-using FillInTheTextBot.Models;
 using GranSteL.Helpers.Redis.Extensions;
 
 namespace FillInTheTextBot.Services.Mapping
@@ -19,7 +19,7 @@ namespace FillInTheTextBot.Services.Mapping
                 .ForMember(d => d.Buttons, m => m.MapFrom(s => GetButtons(s)))
                 .ForMember(d => d.ParametersIncomplete, m => m.MapFrom(s => !s.AllRequiredParamsPresent))
                 .ForMember(d => d.Action, m => m.MapFrom(s => s.Action))
-                .ForMember(d => d.EndConversation, m => m.ResolveUsing(s => string.Equals(s?.Action, "endConversation")))
+                .ForMember(d => d.EndConversation, m => m.MapFrom((s, d) => string.Equals(s?.Action, "endConversation")))
                 .ForMember(d => d.ScopeKey, m => m.Ignore());
         }
 

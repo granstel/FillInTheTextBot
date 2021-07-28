@@ -96,7 +96,7 @@ namespace FillInTheTextBot.Services
                 if (isLogQuery)
                     _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
-                DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest);
+                DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest).ConfigureAwait(false);
 
                 if (isLogQuery)
                     _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");

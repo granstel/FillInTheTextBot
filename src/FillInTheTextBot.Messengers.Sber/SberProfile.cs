@@ -21,9 +21,9 @@ namespace FillInTheTextBot.Messengers.Sber
         public SberProfile()
         {
             CreateMap<Request, InternalModels.Request>()
-                .ForMember(d => d.ChatHash, m => m.ResolveUsing(s => s?.Payload?.AppInfo?.ProjectId.ToString()))
-                .ForMember(d => d.UserHash, m => m.ResolveUsing(s => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
-                .ForMember(d => d.Text, m => m.ResolveUsing(s =>
+                .ForMember(d => d.ChatHash, m => m.MapFrom((s, d) => s?.Payload?.AppInfo?.ProjectId.ToString()))
+                .ForMember(d => d.UserHash, m => m.MapFrom((s, d) => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
+                .ForMember(d => d.Text, m => m.MapFrom((s, d) =>
                 {
                     const string replacedObsceneWord = "кое-что";
                     const string stars = "***";
@@ -52,12 +52,12 @@ namespace FillInTheTextBot.Messengers.Sber
                     return s?.Payload?.Message?.OriginalText;
                 }))
                 .ForMember(d => d.SessionId, m => m.Ignore())
-                .ForMember(d => d.NewSession, m => m.ResolveUsing(s => s?.Payload?.NewSession))
+                .ForMember(d => d.NewSession, m => m.MapFrom((s, d) => s?.Payload?.NewSession))
                 .ForMember(d => d.Language, m => m.Ignore())
-                .ForMember(d => d.HasScreen, m => m.ResolveUsing(s => s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false))
-                .ForMember(d => d.ClientId, m => m.ResolveUsing(s => s?.Payload?.Device?.Surface))
-                .ForMember(d => d.Source, m => m.UseValue(InternalModels.Source.Sber))
-                .ForMember(d => d.Appeal, m => m.ResolveUsing(s =>
+                .ForMember(d => d.HasScreen, m => m.MapFrom((s, d) => s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false))
+                .ForMember(d => d.ClientId, m => m.MapFrom((s, d) => s?.Payload?.Device?.Surface))
+                .ForMember(d => d.Source, m => m.MapFrom(s => InternalModels.Source.Sber))
+                .ForMember(d => d.Appeal, m => m.MapFrom((s, d) =>
                 {
                     var appeal = InternalModels.Appeal.NoOfficial;
 
@@ -79,10 +79,10 @@ namespace FillInTheTextBot.Messengers.Sber
 
             CreateMap<InternalModels.Response, ResponsePayload>()
                 .ForMember(d => d.PronounceText, m => m.MapFrom(s => s.Text))
-                .ForMember(d => d.PronounceTextType, m => m.UseValue(PronounceTextTypeValues.Text))
+                .ForMember(d => d.PronounceTextType, m => m.MapFrom(s => PronounceTextTypeValues.Text))
                 .ForMember(d => d.AutoListening, m => m.MapFrom(s => !s.Finished))
                 .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
-                .ForMember(d => d.Emotion, m => m.ResolveUsing(s =>
+                .ForMember(d => d.Emotion, m => m.MapFrom((s, d) =>
                 {
                     s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[InternalModels.Source.Sber], out string emotionKey);
 
@@ -108,7 +108,7 @@ namespace FillInTheTextBot.Messengers.Sber
             CreateMap<InternalModels.Button, SberModels.Action>()
                 .ForMember(d => d.Text, m => m.MapFrom(s => s.Text))
                 .ForMember(d => d.DeepLink, m => m.MapFrom(s => s.Url))
-                .ForMember(d => d.Type, m => m.ResolveUsing(s =>
+                .ForMember(d => d.Type, m => m.MapFrom((s, d) =>
                 {
                     if (!string.IsNullOrEmpty(s.Url))
                     {
@@ -119,7 +119,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 }));
 
             CreateMap<Request, Response>()
-                .ForMember(d => d.MessageName, m => m.UseValue(MessageNameValues.AnswerToUser))
+                .ForMember(d => d.MessageName, m => m.MapFrom(s => MessageNameValues.AnswerToUser))
                 .ForMember(d => d.SessionId, m => m.MapFrom(s => s.SessionId))
                 .ForMember(d => d.MessageId, m => m.MapFrom(s => s.MessageId))
                 .ForMember(d => d.Uuid, m => m.MapFrom(s => s.Uuid))

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using NLog.Web;
+using System.Linq;
 
 namespace FillInTheTextBot.Api
 {
@@ -11,10 +12,25 @@ namespace FillInTheTextBot.Api
             BuildWebHost(args).Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            var builder = WebHost.CreateDefaultBuilder(args);
+
+            var hostingStartupAssemblies = builder.GetSetting(WebHostDefaults.HostingStartupAssembliesKey) ?? string.Empty;
+            var hostingStartupAssembliesList = hostingStartupAssemblies.Split(';');
+
+            var names = DependencyConfiguration.GetAssembliesNames();
+            var fullList = hostingStartupAssembliesList.Concat(names).Distinct().ToList();
+            var concatenatedNames = string.Join(';', fullList);
+
+            var host = builder
+                .UseSetting(WebHostDefaults.HostingStartupAssembliesKey, concatenatedNames)
                 .UseStartup<Startup>()
                 .UseNLog()
                 .Build();
+
+            return host;
+        }
+
     }
 }
