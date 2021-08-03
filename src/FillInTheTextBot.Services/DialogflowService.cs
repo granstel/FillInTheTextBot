@@ -70,7 +70,16 @@ namespace FillInTheTextBot.Services
             using (Tracing.Trace())
             {
                 var dialog = await _sessionsClientBalancer.Invoke(request.SessionId,
-                    (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
+                    async (scopeItemWrappers) =>
+                    {
+                        var tasks =  scopeItemWrappers.Select(itemWrapper =>
+                            GetResponseInternalAsync(request, itemWrapper.ScopeItem, itemWrapper.Context)).ToList();
+
+                        var result = await Task.WhenAny(tasks);
+
+                        return await result;
+
+                    }, request.ScopeKey);
 
                 return dialog;
             }
@@ -81,7 +90,13 @@ namespace FillInTheTextBot.Services
             using (Tracing.Trace())
             {
                 return _contextsClientBalancer.Invoke(sessionId,
-                    (client, context) => SetContextInternalAsync(client, sessionId, context.Parameters["ProjectId"], contextName, lifeSpan, parameters));
+                    (clients) =>
+                    {
+                        Parallel.ForEach(clients,
+                            client => SetContextInternalAsync(client.ScopeItem, sessionId,
+                                client.Context.Parameters["ProjectId"], contextName, lifeSpan, parameters));
+                        return Task.CompletedTask;
+                    });
             }
         }
 

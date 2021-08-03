@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
 using GranSteL.Tools.ScopeSelector;
@@ -16,7 +17,7 @@ namespace FillInTheTextBot.Services
             _expiration = TimeSpan.FromMinutes(5);
         }
 
-        public bool TryGet(string invocationKey, out string scopeKey)
+        public bool TryGet(string invocationKey, out ICollection<string> scopeKey)
         {
             var cacheKey = GetCacheKey(invocationKey);
 
@@ -26,7 +27,7 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        public void Add(string invocationKey, string scopeId)
+        public void Add(string invocationKey, params string[] scopeId)
         {
             var cacheKey = GetCacheKey(invocationKey);
 
