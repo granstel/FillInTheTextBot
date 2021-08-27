@@ -11,11 +11,11 @@ namespace FillInTheTextBot.Messengers
         {
             services.AddSingleton(context =>
             {
-                const string Extension = ".json";
+                const string extension = ".json";
 
-                if (fileName.IndexOf(Extension, StringComparison.InvariantCultureIgnoreCase) < 0)
+                if (fileName.IndexOf(extension, StringComparison.InvariantCultureIgnoreCase) < 0)
                 {
-                    fileName = $"{fileName}{Extension}";
+                    fileName = $"{fileName}{extension}";
                 }
 
                 var configurationBuilder = new ConfigurationBuilder()
