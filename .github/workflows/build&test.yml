@@ -17,9 +17,5 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore src/FillInTheTextBot.sln
-    - name: Build
-      run: dotnet build --no-restore -c Release src/FillInTheTextBot.sln
-    - name: Test
+    - name: Build and test
       run: dotnet test --no-build --verbosity normal src/FillInTheTextBot.sln
