@@ -22,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore -c Release src/FillInTheTextBot.sln
     - name: Test
-      run: dotnet test
+      run: dotnet test --no-build --verbosity normal src/FillInTheTextBot.sln
