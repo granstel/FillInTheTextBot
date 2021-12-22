@@ -4,7 +4,6 @@
     "data": [
       {
         "text": "второй",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -26,7 +25,6 @@
       },
       {
         "text": "два",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -83,7 +81,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -127,7 +124,6 @@
     "data": [
       {
         "text": "Карантин",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

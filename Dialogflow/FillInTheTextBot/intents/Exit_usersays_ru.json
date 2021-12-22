@@ -8,7 +8,6 @@
       },
       {
         "text": "завтра",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -48,7 +47,6 @@
     "data": [
       {
         "text": "выход",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -166,7 +164,6 @@
     "data": [
       {
         "text": "нет",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {

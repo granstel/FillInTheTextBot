@@ -21,7 +21,6 @@
       },
       {
         "text": "дев",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -39,7 +38,6 @@
       },
       {
         "text": "дев",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

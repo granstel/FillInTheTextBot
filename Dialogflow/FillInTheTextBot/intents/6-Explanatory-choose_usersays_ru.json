@@ -8,7 +8,6 @@
       },
       {
         "text": "семь",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -22,7 +21,6 @@
     "data": [
       {
         "text": "седьмой",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {

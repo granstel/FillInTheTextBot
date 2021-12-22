@@ -1,34 +1,34 @@
 {
-  "id": "1a458d34-22b4-47f9-b1d9-8ee291aed77c",
-  "name": "Yes",
+  "id": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "30-ein-baum-brennt",
   "auto": true,
-  "contexts": [],
+  "contexts": [
+    "TextsList-followup",
+    "TextsList-followup-2"
+  ],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
-      "parameters": [
+      "affectedContexts": [
         {
-          "id": "e3d667b0-dbac-49db-ab80-908d735e8614",
-          "name": "sberEmotion",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "igrivost",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "name": "text-30",
+          "lifespan": 50
         },
         {
-          "id": "b29d44ee-41f6-4d2a-b305-4d2cdc4e3038",
+          "name": "30-ein-baum-brennt-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "f6e76c00-ae0b-4001-a6f0-4ccdd4241456",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "#multipart-text.textKey",
+          "value": "text-30",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -45,9 +45,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Тогда приступим!",
-            "Приступим!",
-            "Отлично!"
+            "Ура! Давай сочиним",
+            "Класс! Сочиняем"
           ],
           "condition": ""
         }

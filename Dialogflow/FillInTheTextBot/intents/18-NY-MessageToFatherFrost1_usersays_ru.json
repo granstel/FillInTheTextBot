@@ -8,7 +8,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -30,7 +29,6 @@
       },
       {
         "text": "санте",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -48,7 +46,6 @@
       },
       {
         "text": "санте",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -57,7 +54,6 @@
       },
       {
         "text": "клаусу",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -75,7 +71,6 @@
       },
       {
         "text": "санте",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -93,7 +88,6 @@
       },
       {
         "text": "морозу",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -111,7 +105,6 @@
       },
       {
         "text": "мороза",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -129,7 +122,6 @@
       },
       {
         "text": "морозу",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -147,7 +139,6 @@
       },
       {
         "text": "морозу",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
