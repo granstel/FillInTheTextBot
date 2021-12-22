@@ -170,7 +170,7 @@ namespace FillInTheTextBot.Messengers.Sber
                     TopText = new CardCellText
                     {
                         Type = CellTypeValues.TextCellView,
-                        Text = string.Empty,
+                        Text = b.Text,
                         Typeface = TypefaceValues.Caption,
                         TextColor = TextColorValues.Default
                     },
@@ -210,12 +210,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 ItemWidth = ItemWidthValues.Resizable
             };
 
-            var itemWithCard = new PayloadItem
-            {
-                Card = card
-            };
-
-            result.Add(itemWithCard);
+            itemWithBubble.Card = card;
 
             return result.ToArray();
         }
