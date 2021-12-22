@@ -1,9 +1,9 @@
 [
   {
-    "id": "1142054f-c8c5-41cd-943e-a475eb242a38",
+    "id": "a901f38f-46aa-4ef2-9edd-7a043be7ebe1",
     "data": [
       {
-        "text": "рыбка",
+        "text": "про невероятную елку",
         "userDefined": false
       }
     ],
@@ -13,10 +13,10 @@
     "updated": 0
   },
   {
-    "id": "52d0fe70-1193-4129-a34b-244e38c0b3ce",
+    "id": "14cc585b-74bf-47e3-a54b-705c49cd4270",
     "data": [
       {
-        "text": "номер четыре",
+        "text": "про невероятную ёлку",
         "userDefined": false
       }
     ],
@@ -26,23 +26,10 @@
     "updated": 0
   },
   {
-    "id": "8c560fcf-f770-46d0-b714-f438162075e8",
+    "id": "a458ea2d-67f0-4378-b497-fb9ff8935aee",
     "data": [
       {
-        "text": "четвертый текст",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 1,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "4f810ae8-ebf1-4ae0-9b3a-835b3c376b33",
-    "data": [
-      {
-        "text": "текст про рыбку",
+        "text": "невероятная елка",
         "userDefined": false
       }
     ],
@@ -52,10 +39,10 @@
     "updated": 0
   },
   {
-    "id": "83af471c-019d-4282-9e7f-4c7950a52785",
+    "id": "8180d21b-1631-4b19-b502-66c7d003867f",
     "data": [
       {
-        "text": "текст про непростую рыбку",
+        "text": "невероятная ёлка",
         "userDefined": false
       }
     ],
@@ -65,10 +52,10 @@
     "updated": 0
   },
   {
-    "id": "67a21bcd-dd10-47ba-92d9-45fb90fc3897",
+    "id": "9dabe282-21e7-437f-bcf2-5816adc7bb6f",
     "data": [
       {
-        "text": "Непростая рыбка",
+        "text": "как ходили за елкой",
         "userDefined": false
       }
     ],
@@ -78,52 +65,66 @@
     "updated": 0
   },
   {
-    "id": "61edb93d-9957-4c86-bba7-c769abbbe918",
+    "id": "0cb585f4-2cc3-49f4-a53d-7b977812ba59",
     "data": [
       {
-        "text": "4",
+        "text": "как ходили за ёлкой",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "07139ee8-f2dc-4a69-9095-5e49e80b5fc3",
+    "data": [
+      {
+        "text": "про елку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d798d1af-1e38-4d44-a6e8-010b406fac36",
+    "data": [
+      {
+        "text": "про ёлку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d3251c1f-5fd1-488b-8a0f-a69ed6764c57",
+    "data": [
+      {
+        "text": "вот это елка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "84d5a313-ef56-4273-9dec-f8d09ec488f9",
+    "data": [
+      {
+        "text": "вот это ",
         "userDefined": false
       },
       {
-        "text": " текст",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "b204a11b-f7cb-4e3f-b9fc-48d00a11e11d",
-    "data": [
-      {
-        "text": "давай ",
-        "userDefined": false
-      },
-      {
-        "text": "четвёртый",
-        "userDefined": false
-      },
-      {
-        "text": " текст",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "e8d5fc7b-e912-4fed-bf83-6e146377795d",
-    "data": [
-      {
-        "text": "четвёртый",
-        "userDefined": false
-      },
-      {
-        "text": " текст",
+        "text": "ёлка",
         "userDefined": false
       }
     ],

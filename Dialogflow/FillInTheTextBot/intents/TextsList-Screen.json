@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "cb128ebf-fc48-4308-924d-230fdfd70f5e",
+          "id": "13081982-d036-4738-ab76-f4727bc37a21",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -139,6 +139,9 @@
             },
             {
               "text": "Опоздательная в больницу"
+            },
+            {
+              "text": "Вот это ёлка!"
             }
           ],
           "textToSpeech": "",

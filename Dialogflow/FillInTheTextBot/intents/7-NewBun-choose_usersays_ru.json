@@ -4,7 +4,6 @@
     "data": [
       {
         "text": "восьмой",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -26,7 +25,6 @@
       },
       {
         "text": "восемь",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

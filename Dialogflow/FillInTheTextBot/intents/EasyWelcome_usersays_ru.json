@@ -8,7 +8,6 @@
       },
       {
         "text": "ист",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -39,7 +38,6 @@
       },
       {
         "text": "ис",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -70,7 +68,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -118,7 +115,6 @@
       },
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

@@ -4,7 +4,6 @@
     "data": [
       {
         "text": "весовой",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -65,7 +64,6 @@
       },
       {
         "text": "весов",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

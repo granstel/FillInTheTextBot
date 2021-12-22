@@ -1,5 +1,48 @@
 [
   {
+    "id": "c10bef66-fff4-43fd-b10e-28b379b0a6ba",
+    "data": [
+      {
+        "text": "Начинаем",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9d0bdbdc-007f-40bb-bc0a-b3e636afb9a2",
+    "data": [
+      {
+        "text": "начинай",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "de4ac2a3-c80b-4796-9c55-9c40de8d0e71",
+    "data": [
+      {
+        "text": "алиса",
+        "userDefined": false
+      },
+      {
+        "text": " начинай",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "0b744f69-1203-4fe0-abd2-4b57da3d85b2",
     "data": [
       {
@@ -17,7 +60,6 @@
     "data": [
       {
         "text": "Сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -35,7 +77,6 @@
     "data": [
       {
         "text": "Сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -66,7 +107,6 @@
     "data": [
       {
         "text": "ну да",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -84,7 +124,6 @@
     "data": [
       {
         "text": "ну да",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -132,7 +171,6 @@
       },
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -172,7 +210,6 @@
     "data": [
       {
         "text": "далее",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -190,7 +227,6 @@
       },
       {
         "text": "подруга",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -260,7 +296,6 @@
       },
       {
         "text": "готово",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -291,7 +326,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -339,7 +373,6 @@
       },
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -361,7 +394,6 @@
       },
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -375,7 +407,6 @@
     "data": [
       {
         "text": "сочиняй",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -402,7 +433,6 @@
     "data": [
       {
         "text": "ес",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -429,7 +459,6 @@
     "data": [
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -456,7 +485,6 @@
     "data": [
       {
         "text": "дада",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -470,7 +498,6 @@
     "data": [
       {
         "text": "случайный",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -514,7 +541,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -558,7 +584,6 @@
     "data": [
       {
         "text": "игра",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -628,7 +653,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -655,7 +679,6 @@
     "data": [
       {
         "text": "угу",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -686,7 +709,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -704,7 +726,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -718,7 +739,6 @@
     "data": [
       {
         "text": "заново",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -736,7 +756,6 @@
       },
       {
         "text": "раз",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -771,7 +790,6 @@
       },
       {
         "text": "раз",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -841,7 +859,6 @@
     "data": [
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -872,7 +889,6 @@
     "data": [
       {
         "text": "ага",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -886,19 +902,6 @@
     "data": [
       {
         "text": "да",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 1,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "c10bef66-fff4-43fd-b10e-28b379b0a6ba",
-    "data": [
-      {
-        "text": "Начинаем",
         "userDefined": false
       }
     ],
@@ -925,7 +928,6 @@
     "data": [
       {
         "text": "погнали",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -1004,7 +1006,6 @@
     "data": [
       {
         "text": "lf",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -1018,25 +1019,11 @@
     "data": [
       {
         "text": "Поехали",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
     "isTemplate": false,
-    "count": 2,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "9d0bdbdc-007f-40bb-bc0a-b3e636afb9a2",
-    "data": [
-      {
-        "text": "начинай",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 3,
     "lang": "ru",
     "updated": 0
   },
@@ -1045,7 +1032,6 @@
     "data": [
       {
         "text": "Да",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -1137,7 +1123,6 @@
     "data": [
       {
         "text": "Вперёд",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

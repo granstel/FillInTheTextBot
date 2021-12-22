@@ -8,7 +8,6 @@
       },
       {
         "text": "три",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -35,7 +34,6 @@
     "data": [
       {
         "text": "третий",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -57,7 +55,6 @@
       },
       {
         "text": "парк",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -79,7 +76,6 @@
       },
       {
         "text": "парк",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -97,7 +93,6 @@
     "data": [
       {
         "text": "Парк",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
