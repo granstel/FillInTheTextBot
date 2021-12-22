@@ -1,6 +1,7 @@
 {
   "id": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
   "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "30-ein-baum-brennt",
   "auto": true,
   "contexts": [],
@@ -16,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "3cd93ec7-b494-47e9-941b-560612a61fca",
+          "id": "60b3d2fe-48d5-447e-a10b-7154db4232c4",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",

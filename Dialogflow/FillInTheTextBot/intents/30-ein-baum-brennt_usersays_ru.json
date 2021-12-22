@@ -1,13 +1,35 @@
 [
   {
+    "id": "a901f38f-46aa-4ef2-9edd-7a043be7ebe1",
+    "data": [
+      {
+        "text": "про невероятную елку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "14cc585b-74bf-47e3-a54b-705c49cd4270",
+    "data": [
+      {
+        "text": "про невероятную ёлку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "a458ea2d-67f0-4378-b497-fb9ff8935aee",
     "data": [
       {
-        "text": "невероятная ",
-        "userDefined": false
-      },
-      {
-        "text": "елка",
+        "text": "невероятная елка",
         "userDefined": false
       }
     ],
@@ -20,11 +42,7 @@
     "id": "8180d21b-1631-4b19-b502-66c7d003867f",
     "data": [
       {
-        "text": "невероятная ",
-        "userDefined": false
-      },
-      {
-        "text": "ёлка",
+        "text": "невероятная ёлка",
         "userDefined": false
       }
     ],
@@ -89,11 +107,7 @@
     "id": "d3251c1f-5fd1-488b-8a0f-a69ed6764c57",
     "data": [
       {
-        "text": "вот это ",
-        "userDefined": false
-      },
-      {
-        "text": "елка",
+        "text": "вот это елка",
         "userDefined": false
       }
     ],

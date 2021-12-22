@@ -1,6 +1,7 @@
 {
   "id": "70467fe1-7acc-4cfd-b8e9-741c3cf5b88e",
   "parentId": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "30-ein-baum-brennt-text",
   "auto": true,
   "contexts": [
@@ -13,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "ed1ca228-ab11-4157-9f2a-ee221db9f387",
+          "id": "00060a75-a421-4af5-93f6-0b43aaa2e5ce",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +28,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "b64f00e4-f8ed-4896-b6c1-b5389e63806c",
+          "id": "5ca6fdc6-f86e-449a-944c-6e7fa8f293c3",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -54,7 +55,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0f3e3584-153e-4074-84e3-fcda0d15b0bb",
+          "id": "37d4de41-6789-4269-bdf4-de73bb29a097",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +78,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "927e9921-240a-4b7f-983c-0d0af2cdb960",
+          "id": "51bcb020-019a-4b5a-af40-fb51ecc7c89b",
           "name": "name3",
           "required": true,
           "dataType": "@sys.any",
@@ -100,7 +101,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a4651e58-e714-4abe-9a7b-7c5b9c14d2da",
+          "id": "1b416e38-de75-4496-8138-22c373fe8ffb",
           "name": "fruits",
           "required": true,
           "dataType": "@sys.any",
@@ -110,11 +111,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Какие фрукты ты любишь?"
+              "value": "Назови пару фруктов, которые ты любишь"
             },
             {
               "lang": "ru",
-              "value": "Какие фрукты тебе нравятся?"
+              "value": "Назови пару фруктов, которые тебе нравятся"
             }
           ],
           "promptMessages": [],
@@ -123,7 +124,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "182f71fa-3b1c-47b9-bbfd-1ad95b1360ba",
+          "id": "998d4890-2848-4708-bc82-67ed17d5e222",
           "name": "anything",
           "required": true,
           "dataType": "@sys.any",
@@ -150,7 +151,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "427564a1-62e8-4486-8879-e14216bd6fd6",
+          "id": "450c23c2-dc5f-4b19-a03d-299d2aa97146",
           "name": "thing",
           "required": true,
           "dataType": "@sys.any",
@@ -169,7 +170,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "fb4728cf-63a3-46b6-8bd5-22d36318788f",
+          "id": "28ab3972-5099-4560-8d0d-dc038ed6b7fe",
           "name": "toy",
           "required": true,
           "dataType": "@sys.any",
@@ -192,7 +193,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "633d5f2a-0180-414a-8f95-f2d9b6524b9a",
+          "id": "dfc6294d-5b6a-4db1-85d2-d0bddd95d624",
           "name": "animal",
           "required": true,
           "dataType": "@sys.any",
@@ -234,7 +235,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Однажды $name1, $name2, и $name3 готовились к Новому году и решили сходить за ёлкой. Вот они взяли всё необходимое, и пошли в лес. Вдруг видят такую ёлку, на которой растут $fruits и $anything!\n— Вот это ёлка! — сказали они хором\nИдут к ней, достают пилу, но оказалось что это не пила, а $thing.\n— Беда — говорит $name2 — что же нам делать?\n— Не переживайте — говорит $name1 — у меня есть пила!\n$name1 достаёт свою пилу, но в руках оказалась игрушка — $toy.\n— Давайте руками вытаскивать ёлку! — предложил $name3.\n— Давайте! — сказали все, и стали её вытаскивать!\nВскоре они вытащили зелёную красавицу, но вдруг из под земли высунулся $animal и как крикнет человеческим голосом:\n— Вы чё мою ёлку вытащили?! А ну верните обратно!\nПришлось возвращать её на место.\n— Давайте лучше искусственную дома поставим — сказал $name3 — с ней не будет таких сюрпризов, да и природе так лучше.\nНа том и порешили.\nВот такая история! Сочиним ещё что-нибудь?"
+            "Однажды $name1, $name2, и $name3 готовились к Новому году и решили сходить за ёлкой. Вот они взяли всё необходимое, и пошли в лес. Вдруг видят такую ёлку, на которой растут $fruits и $anything!\n— Вот это ёлка! — сказали они хором.\nИдут к ней, достают пилу, но оказалось что это не пила, а $thing.\n— Беда — говорит $name2 — что же нам делать?\n— Не переживайте — говорит $name1 — у меня есть пила!\n$name1 достаёт свою пилу, но оказалось, что это $toy.\n— Давайте руками вытаскивать ёлку! — предложил $name3.\n— Давайте! — сказали все, и стали её вытаскивать!\nВскоре они вытащили зелёную красавицу, но вдруг из под земли высунулся $animal и как крикнет человеческим голосом:\n— Вы чё мою ёлку вытащили?! А ну верните обратно!\nПришлось возвращать её на место.\n— Давайте лучше искусственную дома поставим — сказал $name3 — с ней не будет таких сюрпризов, да и природе так лучше.\nНа том и порешили.\nВот такая история! Сочиним ещё что-нибудь?"
           ],
           "condition": ""
         },
@@ -243,18 +244,18 @@
           "title": "",
           "payload": {
             "ButtonsForSource": {
-              "Marusia": [
+              "Yandex": [
                 {
                   "Text": "Поблагодарить автора текста",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
-              "Yandex": [
+              "Marusia": [
                 {
+                  "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Поблагодарить автора текста",
-                  "IsQuickReply": false
+                  "Text": "Поблагодарить автора текста"
                 }
               ]
             }
