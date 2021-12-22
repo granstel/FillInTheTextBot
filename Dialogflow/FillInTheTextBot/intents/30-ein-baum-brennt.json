@@ -1,13 +1,8 @@
 {
   "id": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
-  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
-  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "30-ein-baum-brennt",
   "auto": true,
-  "contexts": [
-    "TextsList-followup",
-    "TextsList-followup-2"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
@@ -16,15 +11,11 @@
         {
           "name": "text-30",
           "lifespan": 50
-        },
-        {
-          "name": "30-ein-baum-brennt-followup",
-          "lifespan": 2
         }
       ],
       "parameters": [
         {
-          "id": "f6e76c00-ae0b-4001-a6f0-4ccdd4241456",
+          "id": "3cd93ec7-b494-47e9-941b-560612a61fca",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",

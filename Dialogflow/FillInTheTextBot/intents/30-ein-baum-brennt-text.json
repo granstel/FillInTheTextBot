@@ -1,12 +1,9 @@
 {
   "id": "70467fe1-7acc-4cfd-b8e9-741c3cf5b88e",
-  "parentId": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
-  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "30-ein-baum-brennt-text",
   "auto": true,
   "contexts": [
-    "text-30",
-    "30-ein-baum-brennt-followup"
+    "text-30"
   ],
   "responses": [
     {
@@ -15,7 +12,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "a7dc81b4-7e83-4530-94b5-ef7842076c07",
+          "id": "ed1ca228-ab11-4157-9f2a-ee221db9f387",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -29,7 +26,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "dca1150a-58e6-48ec-9875-67980dcc8cc5",
+          "id": "b64f00e4-f8ed-4896-b6c1-b5389e63806c",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -56,7 +53,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "cffd8b01-bce9-4f17-88b3-b55fc61349ec",
+          "id": "0f3e3584-153e-4074-84e3-fcda0d15b0bb",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -79,7 +76,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ba8c7ec7-64c4-4c6c-b1cd-5630cef05e18",
+          "id": "927e9921-240a-4b7f-983c-0d0af2cdb960",
           "name": "name3",
           "required": true,
           "dataType": "@sys.any",
@@ -102,7 +99,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "55add123-7a09-41d7-9bb4-3eda5d011c7b",
+          "id": "a4651e58-e714-4abe-9a7b-7c5b9c14d2da",
           "name": "fruits",
           "required": true,
           "dataType": "@sys.any",
@@ -125,7 +122,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "4e0ea8c1-d827-4a45-9a97-ce7b94e0ae2a",
+          "id": "182f71fa-3b1c-47b9-bbfd-1ad95b1360ba",
           "name": "anything",
           "required": true,
           "dataType": "@sys.any",
@@ -152,7 +149,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1dfe3aea-2149-4759-b5af-db5beacd0965",
+          "id": "427564a1-62e8-4486-8879-e14216bd6fd6",
           "name": "thing",
           "required": true,
           "dataType": "@sys.any",
@@ -171,7 +168,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "51177cea-efe6-4eff-b44d-31b3d73ce83d",
+          "id": "fb4728cf-63a3-46b6-8bd5-22d36318788f",
           "name": "toy",
           "required": true,
           "dataType": "@sys.any",
@@ -194,7 +191,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "10bab8e5-1d92-4ac5-a49b-55051e83023b",
+          "id": "633d5f2a-0180-414a-8f95-f2d9b6524b9a",
           "name": "animal",
           "required": true,
           "dataType": "@sys.any",
@@ -245,18 +242,18 @@
           "title": "",
           "payload": {
             "ButtonsForSource": {
-              "Yandex": [
+              "Marusia": [
                 {
-                  "IsQuickReply": false,
                   "Text": "Поблагодарить автора текста",
+                  "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
-              "Marusia": [
+              "Yandex": [
                 {
-                  "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Поблагодарить автора текста"
+                  "Text": "Поблагодарить автора текста",
+                  "IsQuickReply": false
                 }
               ]
             }
