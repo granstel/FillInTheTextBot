@@ -27,7 +27,7 @@
       ],
       "parameters": [
         {
-          "id": "dd4b1280-d6ae-45c0-96d1-549c68099726",
+          "id": "e3bc172b-08f3-4c78-b1db-c1bfec4fe160",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -41,7 +41,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bfcedf0d-4ea5-4098-ad84-fb4233f4c458",
+          "id": "571425e7-e288-4e20-86c0-a3b45662d251",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -55,7 +55,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "065c1023-0d06-4625-9d37-b16ed940eac0",
+          "id": "48cb974c-f19d-4f72-b6d2-2588f580d55d",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -82,7 +82,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "93cdd5d3-964e-4716-aa1c-a5aead384ea3",
+          "id": "58eac5e1-f7e8-4b8e-9252-da8532ae20f4",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -105,7 +105,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9b9e8af7-f28c-4543-be3c-ef7c1595180b",
+          "id": "bd01408a-5d62-4c02-ba78-976e41487274",
           "name": "name3",
           "required": true,
           "dataType": "@sys.any",
@@ -128,7 +128,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "91c6a53e-34b4-49a3-8ca9-37fc4f66401b",
+          "id": "1262706c-66cc-4d6e-ad20-9da6d718c57a",
           "name": "fruits",
           "required": true,
           "dataType": "@sys.any",
@@ -138,11 +138,7 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Назови пару фруктов, которые ты любишь"
-            },
-            {
-              "lang": "ru",
-              "value": "Назови пару фруктов, которые тебе нравятся"
+              "value": "Назови пару новогодних фруктов"
             }
           ],
           "promptMessages": [],
@@ -151,7 +147,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d5da9758-ae89-4ca4-89a5-3e96e828c78b",
+          "id": "2a359bfa-540d-49d5-9f7b-12db925e262b",
           "name": "anything",
           "required": true,
           "dataType": "@sys.any",
@@ -178,7 +174,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "5c1eb384-961a-4caa-8982-2bb09816b964",
+          "id": "67f1b71e-2746-419b-990a-37ed66716da1",
           "name": "thing",
           "required": true,
           "dataType": "@sys.any",
