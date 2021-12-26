@@ -27,7 +27,7 @@
       ],
       "parameters": [
         {
-          "id": "71b12857-4d78-4200-8f21-024f079b3ec9",
+          "id": "2de35a2a-dcb9-40c8-bd55-4ed46d84e894",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -40,7 +40,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "6075e0f6-f93d-4e19-97af-a5779ef6a225",
+          "id": "5f34d2aa-26a3-4813-88e6-e5c3be8abc05",
           "name": "toy",
           "required": true,
           "dataType": "@sys.any",
@@ -63,7 +63,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "3ac0f194-e2b6-4ffe-a73a-4dbec8608c5a",
+          "id": "67973528-d151-4eb3-a605-200b4b68a1b5",
           "name": "animal",
           "required": true,
           "dataType": "@sys.any",
@@ -115,16 +115,16 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false,
-                  "Text": "Поблагодарить автора текста"
+                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_302",
+                  "Text": "Поблагодарить автора текста",
+                  "IsQuickReply": false
                 }
               ],
               "Marusia": [
                 {
+                  "IsQuickReply": false,
                   "Text": "Поблагодарить автора текста",
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false
+                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_302"
                 }
               ]
             }
