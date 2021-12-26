@@ -27,7 +27,7 @@
       ],
       "parameters": [
         {
-          "id": "0ac5c6b4-5a59-4b8e-a3b7-7f23a4a325da",
+          "id": "dd4b1280-d6ae-45c0-96d1-549c68099726",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -41,7 +41,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ed96fbb4-8047-47eb-9fe7-77dcfcd5e449",
+          "id": "bfcedf0d-4ea5-4098-ad84-fb4233f4c458",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -55,7 +55,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "2b7d0b45-a82d-47db-85f8-5bf705ebf958",
+          "id": "065c1023-0d06-4625-9d37-b16ed940eac0",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -82,7 +82,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "014f00e3-14a8-45fe-a76f-7a259944f57c",
+          "id": "93cdd5d3-964e-4716-aa1c-a5aead384ea3",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -105,7 +105,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "cb9edb6e-990d-47c9-94bc-909dacce86f3",
+          "id": "9b9e8af7-f28c-4543-be3c-ef7c1595180b",
           "name": "name3",
           "required": true,
           "dataType": "@sys.any",
@@ -128,7 +128,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "e2805d2a-2d5b-4d69-b73b-fbd2e6b2d2e2",
+          "id": "91c6a53e-34b4-49a3-8ca9-37fc4f66401b",
           "name": "fruits",
           "required": true,
           "dataType": "@sys.any",
@@ -151,7 +151,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "8b630ce1-d8cf-4104-b937-30206f3347ab",
+          "id": "d5da9758-ae89-4ca4-89a5-3e96e828c78b",
           "name": "anything",
           "required": true,
           "dataType": "@sys.any",
@@ -178,7 +178,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "406b7883-78b5-4056-a58e-08c90a4b4be3",
+          "id": "5c1eb384-961a-4caa-8982-2bb09816b964",
           "name": "thing",
           "required": true,
           "dataType": "@sys.any",
@@ -215,7 +215,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Однажды $name1, $name2, и $name3 готовились к Новому году и решили сходить за ёлкой. Вот они взяли всё необходимое, и пошли в лес. Вдруг видят такую ёлку, на которой растут $fruits и $anything!\n— Вот это ёлка! — сказали они хором.\nИдут к ней, достают пилу, но оказалось что это не пила, а $thing.\n— Беда — говорит $name2 — что же нам делать?\n— Не переживайте — говорит $name1 — у меня есть пила!\nНачало хорошее. Хочешь узнать, что было дальше?"
+            "Итак, однажды $name1, $name2, и $name3 готовились к Новому году и решили сходить за ёлкой. Вот они взяли всё необходимое, и пошли в лес. Вдруг видят такую ёлку, на которой растут $fruits и $anything!\n— Вот это ёлка! — сказали они хором.\nИдут к ней, достают пилу, но оказалось что это не пила, а $thing.\n— Беда — говорит $name2 — что же нам делать?\n— Не переживайте — говорит $name1 — у меня есть пила!\nНачало хорошее. Хочешь узнать, что было дальше?"
           ],
           "condition": ""
         }

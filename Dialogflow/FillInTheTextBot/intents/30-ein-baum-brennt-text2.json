@@ -27,7 +27,7 @@
       ],
       "parameters": [
         {
-          "id": "904c6e4f-5092-46e7-bfa2-3d02355d7ad6",
+          "id": "aba09e0c-70f0-43a6-9443-2e2c6014fe3e",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -40,7 +40,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "b9f414a5-633b-405c-8a64-11939ae5c577",
+          "id": "70e106ee-8100-46b4-a578-ce842a3e0f41",
           "name": "toy",
           "required": true,
           "dataType": "@sys.any",
@@ -63,7 +63,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "165c0500-60ad-4367-a4e8-d4345ae93f48",
+          "id": "dbce9de7-a9d6-488e-b2b5-52469e3098c9",
           "name": "animal",
           "required": true,
           "dataType": "@sys.any",
@@ -73,11 +73,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И последнее - назови любое животное мужского рода"
+              "value": "Назови любое животное мужского рода"
             },
             {
               "lang": "ru",
-              "value": "И напоследок - какое животное мужского рода ты знаешь?"
+              "value": "Какое животное мужского рода ты знаешь?"
             }
           ],
           "promptMessages": [],
@@ -113,18 +113,18 @@
           "title": "",
           "payload": {
             "ButtonsForSource": {
+              "Marusia": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false,
+                  "Text": "Поблагодарить автора текста"
+                }
+              ],
               "Yandex": [
                 {
                   "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Поблагодарить автора текста",
-                  "IsQuickReply": false
-                }
-              ],
-              "Marusia": [
-                {
                   "IsQuickReply": false,
-                  "Text": "Поблагодарить автора текста",
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Text": "Поблагодарить автора текста"
                 }
               ]
             }
