@@ -7,10 +7,15 @@
     {
       "resetContexts": false,
       "action": "input.welcome",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "EasyWelcome-followup",
+          "lifespan": 2
+        }
+      ],
       "parameters": [
         {
-          "id": "9f7df8f0-9b6f-4b24-9715-8b200ab5f240",
+          "id": "f523142b-27ae-4ded-89fb-38aafe8e9672",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -48,31 +53,6 @@
             "Добро пожаловать! Давай вместе сочиним занимательные истории! Я буду просить называть слова, а ты отвечай первое, что придёт в голову. Потом я прочитаю историю, которая у нас получилась. Если что-то непонятно, или нужен список текстов — спрашивай. Захочешь выйти — так и скажи. Начнём?",
             "Добро пожаловать! Давай сочинять занимательные истории: я буду просить называть слова, а ты отвечай первое, что приходит в голову. Потом я прочитаю историю, которая у нас получится. Если есть вопросы, или нужно узнать список текстов — спрашивай! Если вдруг захочешь выйти — так и скажи. Начинаем?"
           ],
-          "condition": ""
-        },
-        {
-          "type": "4",
-          "title": "",
-          "payload": {
-            "ButtonsForSource": {
-              "Marusia": [
-                {
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false,
-                  "Text": "Предложить свой текст"
-                }
-              ],
-              "Yandex": [
-                {
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Предложить свой текст",
-                  "IsQuickReply": false
-                }
-              ]
-            }
-          },
-          "textToSpeech": "",
-          "lang": "ru",
           "condition": ""
         }
       ],
