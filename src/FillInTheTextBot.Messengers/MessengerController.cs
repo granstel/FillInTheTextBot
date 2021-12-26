@@ -63,14 +63,6 @@ namespace FillInTheTextBot.Messengers
             return Json(response, SerializerSettings);
         }
 
-        private string GetErrors(ModelStateDictionary modelState)
-        {
-            return ModelState?.Values
-                .SelectMany(v => v.Errors?.Select(e => e.ErrorMessage))
-                .Where(m => !string.IsNullOrEmpty(m))
-                .JoinToString(Environment.NewLine);
-        }
-
         [HttpPut("{token?}")]
         public virtual async Task<IActionResult> CreateWebHook(string token)
         {
@@ -114,6 +106,14 @@ namespace FillInTheTextBot.Messengers
             var url = $"{request.Scheme}://{request.Host}{pathBase}{pathSegment}";
 
             return url;
+        }
+
+        private string GetErrors(ModelStateDictionary modelState)
+        {
+            return modelState?.Values
+                .SelectMany(v => v.Errors?.Select(e => e.ErrorMessage))
+                .Where(m => !string.IsNullOrEmpty(m))
+                .JoinToString(Environment.NewLine);
         }
     }
 }
