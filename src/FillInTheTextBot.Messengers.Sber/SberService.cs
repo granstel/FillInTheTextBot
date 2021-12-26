@@ -5,6 +5,7 @@ using AutoMapper;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
+using Microsoft.Extensions.Logging;
 using Sber.SmartApp.Models;
 
 namespace FillInTheTextBot.Messengers.Sber
@@ -15,9 +16,10 @@ namespace FillInTheTextBot.Messengers.Sber
         private readonly IRedisCacheService _cache;
 
         public SberService(
+            ILogger<SberService> log,
             IConversationService conversationService,
             IMapper mapper,
-            IRedisCacheService cache) : base(conversationService, mapper)
+            IRedisCacheService cache) : base(log, conversationService, mapper)
         {
             _mapper = mapper;
             _cache = cache;
