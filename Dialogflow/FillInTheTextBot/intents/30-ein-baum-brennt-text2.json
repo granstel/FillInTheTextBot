@@ -27,7 +27,7 @@
       ],
       "parameters": [
         {
-          "id": "aba09e0c-70f0-43a6-9443-2e2c6014fe3e",
+          "id": "71b12857-4d78-4200-8f21-024f079b3ec9",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -40,7 +40,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "70e106ee-8100-46b4-a578-ce842a3e0f41",
+          "id": "6075e0f6-f93d-4e19-97af-a5779ef6a225",
           "name": "toy",
           "required": true,
           "dataType": "@sys.any",
@@ -50,11 +50,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "Продолжим. Скажи пожалуйста, какая у тебя любимая игрушка?"
+              "value": "Скажи пожалуйста, какая у тебя любимая игрушка?"
             },
             {
               "lang": "ru",
-              "value": "Продолжаем. Какая у тебя любимая игрушка?"
+              "value": "Какая у тебя любимая игрушка?"
             }
           ],
           "promptMessages": [],
@@ -63,7 +63,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "dbce9de7-a9d6-488e-b2b5-52469e3098c9",
+          "id": "3ac0f194-e2b6-4ffe-a73a-4dbec8608c5a",
           "name": "animal",
           "required": true,
           "dataType": "@sys.any",
@@ -113,18 +113,18 @@
           "title": "",
           "payload": {
             "ButtonsForSource": {
-              "Marusia": [
+              "Yandex": [
                 {
                   "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false,
                   "Text": "Поблагодарить автора текста"
                 }
               ],
-              "Yandex": [
+              "Marusia": [
                 {
+                  "Text": "Поблагодарить автора текста",
                   "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false,
-                  "Text": "Поблагодарить автора текста"
+                  "IsQuickReply": false
                 }
               ]
             }
