@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Services;
-using FillInTheTextBot.Services.Extensions;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
 
