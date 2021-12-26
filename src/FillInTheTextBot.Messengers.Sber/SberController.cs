@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Sber.SmartApp.Models;
 
 namespace FillInTheTextBot.Messengers.Sber
 {
-    [Produces("application/json")]
     public class SberController : MessengerController<Request, Response>
     {
         public SberController(ILogger<SberController> log, ISberService sberService, SberConfiguration configuration)
