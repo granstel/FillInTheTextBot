@@ -7,8 +7,9 @@ using FillInTheTextBot.Services.Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using NLog;
 
 namespace FillInTheTextBot.Messengers
 {
@@ -18,17 +19,16 @@ namespace FillInTheTextBot.Messengers
         private readonly IMessengerService<TInput, TOutput> _messengerService;
         private readonly MessengerConfiguration _configuration;
         
-        protected readonly Logger Log;
+        protected readonly ILogger Log;
         protected JsonSerializerSettings SerializerSettings;
 
         private const string TokenParameter = "token";
 
-        protected MessengerController(IMessengerService<TInput, TOutput> messengerService, MessengerConfiguration configuration)
+        protected MessengerController(ILogger log, IMessengerService<TInput, TOutput> messengerService, MessengerConfiguration configuration)
         {
+            Log = log;
             _messengerService = messengerService;
             _configuration = configuration;
-
-            Log = LogManager.GetLogger(GetType().Name);
         }
 
         public override void OnActionExecuting(ActionExecutingContext context)
@@ -54,12 +54,21 @@ namespace FillInTheTextBot.Messengers
         {
             if (!ModelState.IsValid)
             {
-                Log.Error(ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage)).JoinToString(Environment.NewLine));
+                var errors = GetErrors(ModelState);
+                Log.LogError(errors);
             }
 
             var response = await _messengerService.ProcessIncomingAsync(input);
 
             return Json(response, SerializerSettings);
+        }
+
+        private string GetErrors(ModelStateDictionary modelState)
+        {
+            return ModelState?.Values
+                .SelectMany(v => v.Errors?.Select(e => e.ErrorMessage))
+                .Where(m => !string.IsNullOrEmpty(m))
+                .JoinToString(Environment.NewLine);
         }
 
         [HttpPut("{token?}")]
