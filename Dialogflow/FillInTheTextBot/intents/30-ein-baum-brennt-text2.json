@@ -1,0 +1,150 @@
+{
+  "id": "7efe758c-dc4d-472c-b2a6-76a70e211a65",
+  "name": "30-ein-baum-brennt-text2",
+  "auto": true,
+  "contexts": [
+    "text-30-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        },
+        {
+          "name": "text-30-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-30",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "904c6e4f-5092-46e7-bfa2-3d02355d7ad6",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b9f414a5-633b-405c-8a64-11939ae5c577",
+          "name": "toy",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$toy",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Продолжим. Скажи пожалуйста, какая у тебя любимая игрушка?"
+            },
+            {
+              "lang": "ru",
+              "value": "Продолжаем. Какая у тебя любимая игрушка?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "165c0500-60ad-4367-a4e8-d4345ae93f48",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее - назови любое животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок - какое животное мужского рода ты знаешь?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что было дальше:\n#text-30.name1 достаёт свою пилу, но оказалось, что это $toy.\n— Давайте руками вытаскивать ёлку! — предложил #text-30.name3.\n— Давайте! — сказали все, и стали её вытаскивать!\nВскоре они вытащили зелёную красавицу, но вдруг из под земли высунулся $animal и как крикнет человеческим голосом:\n— Вы чё мою ёлку вытащили?! А ну верните обратно!\nПришлось возвращать её на место.\n— Давайте лучше искусственную дома поставим — сказал #text-30.name3 — с ней не будет таких сюрпризов, да и природе так лучше.\nНа том и порешили.\nВот такая история! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Yandex": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Поблагодарить автора текста",
+                  "IsQuickReply": false
+                }
+              ],
+              "Marusia": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Поблагодарить автора текста",
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-30-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

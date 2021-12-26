@@ -2,19 +2,32 @@
   "id": "70467fe1-7acc-4cfd-b8e9-741c3cf5b88e",
   "parentId": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
   "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
-  "name": "30-ein-baum-brennt-text",
+  "name": "30-ein-baum-brennt-text1",
   "auto": true,
   "contexts": [
-    "text-30"
+    "text-30-1"
   ],
   "responses": [
     {
       "resetContexts": false,
       "action": "saveToRepeat",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        },
+        {
+          "name": "text-30-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-30",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
-          "id": "00060a75-a421-4af5-93f6-0b43aaa2e5ce",
+          "id": "0ac5c6b4-5a59-4b8e-a3b7-7f23a4a325da",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -28,7 +41,21 @@
           "outputDialogContexts": []
         },
         {
-          "id": "5ca6fdc6-f86e-449a-944c-6e7fa8f293c3",
+          "id": "ed96fbb4-8047-47eb-9fe7-77dcfcd5e449",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-30-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2b7d0b45-a82d-47db-85f8-5bf705ebf958",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -55,7 +82,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "37d4de41-6789-4269-bdf4-de73bb29a097",
+          "id": "014f00e3-14a8-45fe-a76f-7a259944f57c",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -78,7 +105,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "51bcb020-019a-4b5a-af40-fb51ecc7c89b",
+          "id": "cb9edb6e-990d-47c9-94bc-909dacce86f3",
           "name": "name3",
           "required": true,
           "dataType": "@sys.any",
@@ -101,7 +128,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1b416e38-de75-4496-8138-22c373fe8ffb",
+          "id": "e2805d2a-2d5b-4d69-b73b-fbd2e6b2d2e2",
           "name": "fruits",
           "required": true,
           "dataType": "@sys.any",
@@ -124,7 +151,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "998d4890-2848-4708-bc82-67ed17d5e222",
+          "id": "8b630ce1-d8cf-4104-b937-30206f3347ab",
           "name": "anything",
           "required": true,
           "dataType": "@sys.any",
@@ -134,11 +161,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "А какие овощи ты знаешь?"
+              "value": "А какой овощ ты знаешь?"
             },
             {
               "lang": "ru",
-              "value": "А какие сладости тебе нравятся?"
+              "value": "А какая сладость тебе нравится?"
             },
             {
               "lang": "ru",
@@ -151,7 +178,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "450c23c2-dc5f-4b19-a03d-299d2aa97146",
+          "id": "406b7883-78b5-4056-a58e-08c90a4b4be3",
           "name": "thing",
           "required": true,
           "dataType": "@sys.any",
@@ -168,52 +195,6 @@
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
           "outputDialogContexts": []
-        },
-        {
-          "id": "28ab3972-5099-4560-8d0d-dc038ed6b7fe",
-          "name": "toy",
-          "required": true,
-          "dataType": "@sys.any",
-          "value": "$toy",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "Скажи пожалуйста, какая у тебя любимая игрушка?"
-            },
-            {
-              "lang": "ru",
-              "value": "Какая у тебя любимая игрушка?"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "dfc6294d-5b6a-4db1-85d2-d0bddd95d624",
-          "name": "animal",
-          "required": true,
-          "dataType": "@sys.any",
-          "value": "$animal",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "И последнее - назови любое животное мужского рода"
-            },
-            {
-              "lang": "ru",
-              "value": "И напоследок - какое животное мужского рода ты знаешь?"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
         }
       ],
       "messages": [
@@ -222,8 +203,7 @@
           "platform": "telegram",
           "title": "",
           "replies": [
-            "Повтори пожалуйста",
-            "Хочу ещё сочинять!"
+            "Конечно!"
           ],
           "textToSpeech": "",
           "lang": "ru",
@@ -235,33 +215,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Однажды $name1, $name2, и $name3 готовились к Новому году и решили сходить за ёлкой. Вот они взяли всё необходимое, и пошли в лес. Вдруг видят такую ёлку, на которой растут $fruits и $anything!\n— Вот это ёлка! — сказали они хором.\nИдут к ней, достают пилу, но оказалось что это не пила, а $thing.\n— Беда — говорит $name2 — что же нам делать?\n— Не переживайте — говорит $name1 — у меня есть пила!\n$name1 достаёт свою пилу, но оказалось, что это $toy.\n— Давайте руками вытаскивать ёлку! — предложил $name3.\n— Давайте! — сказали все, и стали её вытаскивать!\nВскоре они вытащили зелёную красавицу, но вдруг из под земли высунулся $animal и как крикнет человеческим голосом:\n— Вы чё мою ёлку вытащили?! А ну верните обратно!\nПришлось возвращать её на место.\n— Давайте лучше искусственную дома поставим — сказал $name3 — с ней не будет таких сюрпризов, да и природе так лучше.\nНа том и порешили.\nВот такая история! Сочиним ещё что-нибудь?"
+            "Однажды $name1, $name2, и $name3 готовились к Новому году и решили сходить за ёлкой. Вот они взяли всё необходимое, и пошли в лес. Вдруг видят такую ёлку, на которой растут $fruits и $anything!\n— Вот это ёлка! — сказали они хором.\nИдут к ней, достают пилу, но оказалось что это не пила, а $thing.\n— Беда — говорит $name2 — что же нам делать?\n— Не переживайте — говорит $name1 — у меня есть пила!\nНачало хорошее. Хочешь узнать, что было дальше?"
           ],
-          "condition": ""
-        },
-        {
-          "type": "4",
-          "title": "",
-          "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
-                {
-                  "Text": "Поблагодарить автора текста",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
-                }
-              ],
-              "Marusia": [
-                {
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Поблагодарить автора текста"
-                }
-              ]
-            }
-          },
-          "textToSpeech": "",
-          "lang": "ru",
           "condition": ""
         }
       ],
@@ -274,7 +229,7 @@
   "fallbackIntent": false,
   "events": [
     {
-      "name": "text-30"
+      "name": "text-30-1"
     }
   ],
   "conditionalResponses": [],
