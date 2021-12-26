@@ -5,6 +5,7 @@ using FillInTheTextBot.Messengers.Tests.Fixtures;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 
@@ -26,7 +27,8 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             _messengerService = MockRepository.Create<IMessengerService<InputFixture, OutputFixture>>();
             _configuration = MockRepository.Create<MessengerConfiguration>();
 
-            Target = new ControllerFixture(_messengerService.Object, _configuration.Object);
+            var log = Mock.Of<ILogger<ControllerFixture>>();
+            Target = new ControllerFixture(log, _messengerService.Object, _configuration.Object);
         }
 
         #region OnActionExecuting
