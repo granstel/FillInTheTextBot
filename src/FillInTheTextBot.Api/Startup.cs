@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
 
 namespace FillInTheTextBot.Api
 {
@@ -46,10 +48,16 @@ namespace FillInTheTextBot.Api
 
             if (configuration.HttpLog.Enabled)
             {
-                app.UseHttpLogging();
-                app.UseMiddleware<HttpLogMiddleware>();
+                app.MapWhen(context => configuration.HttpLog.IncludeEndpoints.Any(w =>
+                    context.Request.Path.Value.Contains(w, StringComparison.InvariantCultureIgnoreCase)), a =>
+                    {
+                        a.UseMiddleware<ExceptionsMiddleware>();
+                        a.UseRouting();
+                        a.UseHttpLogging();
+                        a.UseEndpoints(e => e.MapControllers());
+                    });
             }
-
+            
             app.UseEndpoints(e => e.MapControllers());
         }
     }
