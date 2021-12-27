@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Mapping;
 using Microsoft.Extensions.Logging;
 using Sber.SmartApp.Models;
@@ -18,9 +19,9 @@ namespace FillInTheTextBot.Messengers.Sber
     {
         private readonly ILogger<SberProfile> Log;
 
-        public SberProfile(ILogger<SberProfile> log)
+        public SberProfile()
         {
-            Log = log;
+            Log = InternalLoggerFactory.CreateLogger<SberProfile>();
 
             CreateMap<Request, InternalModels.Request>()
                 .ForMember(d => d.ChatHash, m => m.MapFrom((s, d) => s?.Payload?.AppInfo?.ProjectId.ToString()))
