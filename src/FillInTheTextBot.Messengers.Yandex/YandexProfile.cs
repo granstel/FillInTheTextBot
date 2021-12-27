@@ -9,7 +9,7 @@ using YandexModels = Yandex.Dialogs.Models;
 namespace FillInTheTextBot.Messengers.Yandex
 {
     /// <summary>
-    /// Probably, registered at MappingModule of "Services" project
+    /// Probably, registered at MappingRegistration of "Api" project
     /// </summary>
     public class YandexProfile : Profile
     {
