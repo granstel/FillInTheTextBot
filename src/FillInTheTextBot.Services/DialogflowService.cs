@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Google.Cloud.Dialogflow.V2;
-using NLog;
 using System.Linq;
 using GranSteL.Helpers.Redis.Extensions;
 using GranSteL.Tools.ScopeSelector;
 using InternalModels = FillInTheTextBot.Models;
+using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Services
 {
@@ -29,7 +29,7 @@ namespace FillInTheTextBot.Services
             {ErrorCommand, ErrorEventName}
         };
 
-        private readonly Logger _log = LogManager.GetLogger(nameof(DialogflowService));
+        private readonly ILogger<DialogflowService> _log;
 
         private readonly ScopesSelector<SessionsClient> _sessionsClientBalancer;
         private readonly ScopesSelector<ContextsClient> _contextsClientBalancer;
@@ -38,10 +38,12 @@ namespace FillInTheTextBot.Services
         private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>> _eventResolvers;
 
         public DialogflowService(
+            ILogger<DialogflowService> log,
             IMapper mapper,
             ScopesSelector<SessionsClient> sessionsClientBalancer,
             ScopesSelector<ContextsClient> contextsClientBalancer)
         {
+            _log = log;
             _mapper = mapper;
             _sessionsClientBalancer = sessionsClientBalancer;
             _contextsClientBalancer = contextsClientBalancer;
@@ -94,12 +96,12 @@ namespace FillInTheTextBot.Services
                 bool.TryParse(context.Parameters["LogQuery"], out var isLogQuery);
 
                 if (isLogQuery)
-                    _log.Trace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
+                    _log.LogTrace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
                 DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest).ConfigureAwait(false);
 
                 if (isLogQuery)
-                    _log.Trace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
+                    _log.LogTrace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
 
                 var queryResult = intentResponse.QueryResult;
 
