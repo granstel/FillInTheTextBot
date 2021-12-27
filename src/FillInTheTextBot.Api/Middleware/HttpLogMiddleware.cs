@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using Microsoft.AspNetCore.Http;
-using NLog;
+using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Api.Middleware
 {
@@ -19,10 +20,11 @@ namespace FillInTheTextBot.Api.Middleware
 
         private readonly RequestDelegate _next;
         private readonly HttpLogConfiguration _configuration;
-        private readonly Logger _log = LogManager.GetCurrentClassLogger();
+        private readonly ILogger<HttpLogMiddleware> _log;
 
-        public HttpLogMiddleware(RequestDelegate next, HttpLogConfiguration configuration)
+        public HttpLogMiddleware(ILogger<HttpLogMiddleware> log, RequestDelegate next, HttpLogConfiguration configuration)
         {
+            _log = log;
             _next = next;
             _configuration = configuration;
         }
@@ -33,8 +35,6 @@ namespace FillInTheTextBot.Api.Middleware
             var queryId = Guid.NewGuid().ToString("N");
             using (Tracing.Trace(s => s.WithTag(QueryIdLogProperty, queryId), "Http log"))
             {
-                _log.SetProperty(QueryIdLogProperty, queryId);
-
                 if (_configuration.AddRequestIdHeader)
                 {
                     if (!context.Request.Headers.ContainsKey(QueryIdHeaderName))
@@ -84,20 +84,13 @@ namespace FillInTheTextBot.Api.Middleware
         {
             var builder = new StringBuilder();
 
-            _log.SetProperty("Type", "Request");
+            builder.AppendLine("Request");
 
             var method = request.Method;
             var queryString = request.QueryString;
 
 
-            builder.AppendLine($"{method} {request.Path}{queryString}");
-            _log.SetProperty("Method", method);
-            _log.SetProperty("QueryString", queryString.Value);
-
-            var user = request.HttpContext?.User?.Identity?.Name;
-
-            _log.SetProperty("User", user);
-            builder.AppendLine($"User: {user}");
+            builder.AppendLine($"{method} {request.Path}{queryString.Value}");
 
             AddHeaders(builder, request.Headers);
 
@@ -118,21 +111,16 @@ namespace FillInTheTextBot.Api.Middleware
 
             var message = builder.ToString();
 
-            _log.Info(message);
-
-            ClearProperties(false);
+            _log.LogInformation(message);
         }
 
         private async Task LogResponse(HttpResponse response)
         {
             var builder = new StringBuilder();
 
-            _log.SetProperty("Type", "Response");
+            builder.AppendLine("Response");
 
-            var statusCode = response.StatusCode;
-
-            builder.AppendLine($"{statusCode}");
-            _log.SetProperty("StatusCode", statusCode);
+            builder.AppendLine($"{response.StatusCode}");
 
             builder.AppendLine($"{response.ContentType}");
 
@@ -155,9 +143,7 @@ namespace FillInTheTextBot.Api.Middleware
 
             var message = builder.ToString();
 
-            _log.Info(message);
-
-            ClearProperties(true);
+            _log.LogInformation(message);
         }
 
         private void AddHeaders(StringBuilder builder, IHeaderDictionary headers)
@@ -166,10 +152,6 @@ namespace FillInTheTextBot.Api.Middleware
             {
                 builder.AppendLine($"{header.Key}: {header.Value.JoinToString(" ")}");
             }
-
-            var dictionary = headers.ToDictionary(c => c.Key, c => c.Value.JoinToString(","));
-
-            _log.SetProperty("Headers", dictionary);
         }
 
         private async Task AddBodyAsync(StringBuilder builder, Stream body)
@@ -192,8 +174,6 @@ namespace FillInTheTextBot.Api.Middleware
 
                 builder.AppendLine("Body: ");
                 builder.AppendLine(content);
-
-                _log.SetProperty("Body", content);
             }
             catch (ExcludeBodyException)
             {
@@ -201,23 +181,7 @@ namespace FillInTheTextBot.Api.Middleware
             }
             catch (Exception e)
             {
-                _log.Error(e, "Не удалось записать тело в лог");
-            }
-        }
-
-        private void ClearProperties(bool clearRequestId)
-        {
-            _log.SetProperty("Type", null);
-            _log.SetProperty("Headers", null);
-            _log.SetProperty("Body", null);
-            _log.SetProperty("Method", null);
-            _log.SetProperty("QueryString", null);
-            _log.SetProperty("StatusCode", null);
-            _log.SetProperty("User", null);
-
-            if (clearRequestId)
-            {
-                _log.SetProperty(QueryIdLogProperty, null);
+                _log.LogError(e, "Error while add request body to log");
             }
         }
     }
