@@ -27,6 +27,10 @@ namespace FillInTheTextBot.Api
                 .AddNewtonsoftJson();
 
             services.AddOpenTracing();
+            services.AddHttpLogging(o =>
+            {
+                o.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;
+            });
 
             DependencyConfiguration.Configure(services, _configuration);
         }
@@ -42,6 +46,7 @@ namespace FillInTheTextBot.Api
 
             if (configuration.HttpLog.Enabled)
             {
+                app.UseHttpLogging();
                 app.UseMiddleware<HttpLogMiddleware>();
             }
 
