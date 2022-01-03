@@ -8,7 +8,7 @@ using MarusiaModels = MailRu.Marusia.Models;
 namespace FillInTheTextBot.Messengers.Marusia
 {
     /// <summary>
-    /// Probably, registered at MappingModule of "Services" project
+    /// Probably, registered at MappingRegistration of "Api" project
     /// </summary>
     public class MarusiaProfile : Profile
     {

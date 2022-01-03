@@ -2,6 +2,7 @@
 using AutoFixture;
 using AutoMapper;
 using FillInTheTextBot.Services;
+using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 using Yandex.Dialogs.Models;
@@ -28,8 +29,9 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             _conversationService = _mockRepository.Create<IConversationService>();
             _mapper = _mockRepository.Create<IMapper>();
+            var log = Mock.Of<ILogger<YandexService>>();
 
-            _target = new YandexService(_conversationService.Object, _mapper.Object);
+            _target = new YandexService(log, _conversationService.Object, _mapper.Object);
 
             _fixture = new Fixture();
         }

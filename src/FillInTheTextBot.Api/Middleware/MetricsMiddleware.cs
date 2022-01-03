@@ -1,20 +1,21 @@
 ﻿using Microsoft.AspNetCore.Http;
-using NLog;
 using System;
 using System.Threading.Tasks;
 using OpenTracing;
+using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Api.Middleware
 {
     public class MetricsMiddleware
     {
-        private readonly Logger _log = LogManager.GetLogger(nameof(MetricsMiddleware));
+        private readonly ILogger<MetricsMiddleware> _log;
 
         private readonly RequestDelegate _next;
         private readonly ITracer _tracer;
 
-        public MetricsMiddleware(RequestDelegate next, ITracer tracer)
+        public MetricsMiddleware(ILogger<MetricsMiddleware> log, RequestDelegate next, ITracer tracer)
         {
+            _log = log;
             _next = next;
             _tracer = tracer;
         }
@@ -31,7 +32,7 @@ namespace FillInTheTextBot.Api.Middleware
             }
             catch (Exception ex)
             {
-                _log.Error(ex);
+                _log.LogError(ex, "Error");
 
                 throw;
             }
