@@ -48,13 +48,10 @@ namespace FillInTheTextBot.Api
 
             if (configuration.HttpLog.Enabled)
             {
-                app.MapWhen(context => configuration.HttpLog.IncludeEndpoints.Any(w =>
+                app.UseWhen(context => configuration.HttpLog.IncludeEndpoints.Any(w =>
                     context.Request.Path.Value.Contains(w, StringComparison.InvariantCultureIgnoreCase)), a =>
                     {
-                        a.UseMiddleware<ExceptionsMiddleware>();
-                        a.UseRouting();
                         a.UseHttpLogging();
-                        a.UseEndpoints(e => e.MapControllers());
                     });
             }
             
