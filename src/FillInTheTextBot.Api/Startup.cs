@@ -54,7 +54,7 @@ namespace FillInTheTextBot.Api
                         a.UseHttpLogging();
                     });
             }
-            
+
             app.UseEndpoints(e => e.MapControllers());
         }
     }
