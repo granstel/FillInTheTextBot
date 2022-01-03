@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.Mapping;
 using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Messengers
@@ -39,7 +40,7 @@ namespace FillInTheTextBot.Messengers
             try
             {
                 Request request;
-
+                
                 using (Tracing.Trace(operationName: "Before"))
                 {
                     request = Before(input);
@@ -61,7 +62,7 @@ namespace FillInTheTextBot.Messengers
 
                     using (Tracing.Trace(operationName: "Map request to response"))
                     {
-                        _mapper.Map(request, response);
+                        response = request.ToResponse(response);
                     }
                 }
             }
