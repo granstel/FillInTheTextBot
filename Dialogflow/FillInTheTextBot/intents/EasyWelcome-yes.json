@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "53aaa54d-56e4-4806-ad47-ad242978b4d1",
+          "id": "0b05d745-7ada-4f03-aec3-407a9da94132",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -28,11 +28,11 @@
           "outputDialogContexts": []
         },
         {
-          "id": "683c02fb-8ab3-4517-8e95-77fb039e890f",
+          "id": "a5a73994-2090-426b-be72-99ea218a7e1a",
           "name": "resetTextIndex",
           "required": false,
           "dataType": "@sys.any",
-          "value": "true",
+          "value": "false",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -42,7 +42,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1afd9065-6366-4b99-8f9b-fd4994e6b116",
+          "id": "ec57b96a-e62f-4875-9023-e28453b3c3b0",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
