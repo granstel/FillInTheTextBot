@@ -13,7 +13,6 @@ namespace FillInTheTextBot.Api.DI
             {
                 c.AddMaps(names);
 
-                c.AddProfile<InternalProfile>();
                 c.AddProfile<DialogflowProfile>();
             })));
         }

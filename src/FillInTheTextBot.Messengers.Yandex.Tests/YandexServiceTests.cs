@@ -51,8 +51,6 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             _conversationService.Setup(s => s.GetResponseAsync(request)).ReturnsAsync(() => new Models.Response());
 
-            _mapper.Setup(m => m.Map(It.IsAny<Models.Request>(), It.IsAny<Models.Response>())).Returns(() => null);
-
             var output = _fixture.Build<OutputModel>()
                 .With(o => o.Session)
                 .OmitAutoProperties()

@@ -60,10 +60,6 @@ namespace FillInTheTextBot.Messengers
                         response = await _conversationService.GetResponseAsync(request);
                     }
 
-                    using (Tracing.Trace(operationName: "Map request to response"))
-                    {
-                        response = request.ToResponse(response);
-                    }
                 }
             }
             catch (Exception e)
