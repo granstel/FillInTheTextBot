@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "67ac59c4-688d-4bb3-9ed2-1b7a37e93ccf",
+          "id": "57100c34-8399-4464-a60f-ee41d6966253",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -51,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Настало время занимательных историй! Давай сочиним что-нибудь новенькое?",
-            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь новенькое?",
-            "И вот пришло время занимательных историй! Давай сочинять кое-что новенькое?"
+            "Настало время занимательных историй! Давай сочиним что-нибудь?",
+            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
+            "И вот пришло время занимательных историй! Давай сочиним кое-что?"
           ],
           "condition": ""
         },
@@ -62,17 +62,17 @@
           "title": "",
           "payload": {
             "ButtonsForSource": {
-              "Marusia": [
-                {
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Узнать, что новенького",
-                  "IsQuickReply": false
-                }
-              ],
               "Yandex": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false,
+                  "Text": "Узнать, что новенького",
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ],
+              "Marusia": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Узнать, что новенького"
                 }
               ]

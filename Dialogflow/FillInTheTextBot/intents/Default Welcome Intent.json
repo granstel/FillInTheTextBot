@@ -7,15 +7,10 @@
     {
       "resetContexts": false,
       "action": "input.welcome",
-      "affectedContexts": [
-        {
-          "name": "EasyWelcome-followup",
-          "lifespan": 2
-        }
-      ],
+      "affectedContexts": [],
       "parameters": [
         {
-          "id": "f523142b-27ae-4ded-89fb-38aafe8e9672",
+          "id": "7a3d7044-c440-4d59-a864-3c3408db0d38",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
