@@ -33,7 +33,7 @@ namespace FillInTheTextBot.Services.Mapping
         {
             var dictionary = new Dictionary<string, string>();
 
-            var fields = queryResult?.Parameters.Fields;
+            var fields = queryResult?.Parameters?.Fields;
 
             if (fields?.Any() != true)
             {
