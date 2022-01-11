@@ -8,6 +8,7 @@ namespace FillInTheTextBot.Models
         public Dialog()
         {
             Parameters = new Dictionary<string, string>();
+            Buttons = new Button[0];
         }
 
         public IDictionary<string, string> Parameters { get; set; }
