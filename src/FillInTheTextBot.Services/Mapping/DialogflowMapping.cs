@@ -10,22 +10,22 @@ namespace FillInTheTextBot.Services.Mapping
 {
     public static class DialogflowMapping
     {
-        public static Dialog ToDialog(this QueryResult s, Dialog d = null)
+        public static Dialog ToDialog(this QueryResult source, Dialog destination = null)
         {
-            if (d == null)
+            if (destination == null)
             {
-                d = new Dialog();
+                destination = new Dialog();
             }
 
-            d.Parameters = GetParameters(s);
-            d.Payload = ParsePayload(s);
-            d.Response = s.FulfillmentText;
-            d.Buttons = GetButtons(s);
-            d.ParametersIncomplete = !s.AllRequiredParamsPresent;
-            d.Action = s.Action;
-            d.EndConversation = string.Equals(s?.Action, "endConversation");
+            destination.Parameters = GetParameters(source);
+            destination.Payload = ParsePayload(source);
+            destination.Response = source.FulfillmentText;
+            destination.Buttons = GetButtons(source);
+            destination.ParametersIncomplete = !source.AllRequiredParamsPresent;
+            destination.Action = source.Action;
+            destination.EndConversation = string.Equals(source?.Action, "endConversation");
 
-            return d;
+            return destination;
         }
 
         private static IDictionary<string, string> GetParameters(QueryResult queryResult)
@@ -68,6 +68,8 @@ namespace FillInTheTextBot.Services.Mapping
 
         private static Button[] GetButtons(QueryResult s)
         {
+            var buttons = new List<Button>();
+
             var quickReplies = s?.FulfillmentMessages
                             ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.QuickReplies)
                             .SelectMany(m => m.QuickReplies.QuickReplies_.Select(r => new Button
@@ -75,6 +77,11 @@ namespace FillInTheTextBot.Services.Mapping
                                 Text = r,
                                 IsQuickReply = true
                             })).Where(r => r != null).ToList();
+
+            if (quickReplies?.Any() == true)
+            {
+                buttons.AddRange(quickReplies);
+            }
 
             var cards = s?.FulfillmentMessages
                             ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.Card)
@@ -84,9 +91,12 @@ namespace FillInTheTextBot.Services.Mapping
                                 Url = b.Postback
                             })).Where(b => b != null).ToList();
 
-            quickReplies.AddRange(cards);
+            if (cards?.Any() == true)
+            {
+                buttons.AddRange(cards);
+            }
 
-            return quickReplies.ToArray();
+            return buttons.ToArray();
         }
 
         private static Payload ParsePayload(QueryResult queryResult)
