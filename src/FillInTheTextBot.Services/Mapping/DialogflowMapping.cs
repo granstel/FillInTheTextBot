@@ -3,6 +3,7 @@ using System.Linq;
 using AutoMapper;
 using FillInTheTextBot.Models;
 using Google.Cloud.Dialogflow.V2;
+using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using GranSteL.Helpers.Redis.Extensions;
 
@@ -39,28 +40,49 @@ namespace FillInTheTextBot.Services.Mapping
                 return dictionary;
             }
 
+            dictionary = GetFieldsValues(fields);
+
+            return dictionary;
+        }
+
+        private static Dictionary<string,string> GetFieldsValues(MapField<string,Value> fields)
+        {
+            var dictionary = new Dictionary<string, string>();
+            
             foreach (var field in fields)
             {
                 if (field.Value.KindCase == Value.KindOneofCase.StringValue)
                 {
                     dictionary.Add(field.Key, field.Value.StringValue);
+
+                    continue;
                 }
-                else if (field.Value.KindCase == Value.KindOneofCase.StructValue)
+
+                dictionary = GetStructFieldValues(field);
+            }
+
+            return dictionary;
+        }
+
+        private static Dictionary<string,string> GetStructFieldValues(KeyValuePair<string,Value> field)
+        {
+            var dictionary = new Dictionary<string, string>();
+
+            if (field.Value.KindCase == Value.KindOneofCase.StructValue)
+            {
+                var stringValues = new List<string>();
+
+                foreach (var valueField in field.Value.StructValue.Fields)
                 {
-                    var stringValues = new List<string>();
-
-                    foreach (var valueField in field.Value.StructValue.Fields)
+                    if (valueField.Value.KindCase == Value.KindOneofCase.StringValue)
                     {
-                        if (valueField.Value.KindCase == Value.KindOneofCase.StringValue)
-                        {
-                            stringValues.Add(valueField.Value.StringValue);
-                        }
+                        stringValues.Add(valueField.Value.StringValue);
                     }
-
-                    var stringValue = string.Join("/", stringValues);
-
-                    dictionary.Add(field.Key, stringValue);
                 }
+
+                var stringValue = string.Join("/", stringValues);
+
+                dictionary.Add(field.Key, stringValue);
             }
 
             return dictionary;
