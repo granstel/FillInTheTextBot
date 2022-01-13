@@ -55,15 +55,20 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             source.Parameters = new Struct();
 
             var key = _fixture.Create<string>();
-            var value = _fixture.Create<string>();
 
             var structValue = new Struct();
             var stringValue = _fixture.Create<string>();
-            structValue.Fields.Add("anything", new Value
-                {
-                    StringValue = stringValue
-                });
-            
+            var anotherStringValue = _fixture.Create<string>();
+
+            structValue.Fields.Add("anything1", new Value
+            {
+                StringValue = stringValue
+            });
+            structValue.Fields.Add("anything2", new Value
+            {
+                StringValue = anotherStringValue
+            });
+
             source.Parameters.Fields.Add(key, new Value
             {
                 StructValue = structValue
@@ -73,7 +78,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             Assert.IsNotEmpty(dialog.Parameters, "Parameters should not be empty");
             Assert.True(dialog.Parameters.ContainsKey(key));
-            Assert.True(dialog.Parameters.Values.Contains(stringValue));
+            Assert.True(dialog.Parameters.Values.Contains(string.Join("/", stringValue, anotherStringValue)));
         }
     }
 }
