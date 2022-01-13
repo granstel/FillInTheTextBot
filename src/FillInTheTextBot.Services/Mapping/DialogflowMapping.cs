@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using FillInTheTextBot.Models;
+using FillInTheTextBot.Services.Extensions;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
-using GranSteL.Helpers.Redis.Extensions;
 
 namespace FillInTheTextBot.Services.Mapping
 {
