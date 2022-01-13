@@ -47,5 +47,33 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             Assert.True(dialog.Parameters.ContainsKey(key));
             Assert.True(dialog.Parameters.Values.Contains(value));
         }
+
+        [Test]
+        public void ToDialog_ParametersWithStructValue_ContainsKeyValuePairs()
+        {
+            var source = new QueryResult();
+            source.Parameters = new Struct();
+
+            var key = _fixture.Create<string>();
+            var value = _fixture.Create<string>();
+
+            var structValue = new Struct();
+            var stringValue = _fixture.Create<string>();
+            structValue.Fields.Add("anything", new Value
+                {
+                    StringValue = stringValue
+                });
+            
+            source.Parameters.Fields.Add(key, new Value
+            {
+                StructValue = structValue
+            });
+
+            var dialog = source.ToDialog();
+
+            Assert.IsNotEmpty(dialog.Parameters, "Parameters should not be empty");
+            Assert.True(dialog.Parameters.ContainsKey(key));
+            Assert.True(dialog.Parameters.Values.Contains(stringValue));
+        }
     }
 }
