@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using FillInTheTextBot.Models;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.Collections;
