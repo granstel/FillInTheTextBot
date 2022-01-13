@@ -12,10 +12,7 @@ namespace FillInTheTextBot.Services.Mapping
     {
         public static Dialog ToDialog(this QueryResult source, Dialog destination = null)
         {
-            if (destination == null)
-            {
-                destination = new Dialog();
-            }
+            destination ??= new Dialog();
 
             destination.Parameters = GetParameters(source);
             destination.Payload = ParsePayload(source);
