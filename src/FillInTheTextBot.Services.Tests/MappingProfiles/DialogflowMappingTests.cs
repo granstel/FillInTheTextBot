@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace FillInTheTextBot.Services.Tests.MappingProfiles
 {
-    internal class DialogflowMappingTests
+    public class DialogflowMappingTests
     {
         private Fixture _fixture;
 
@@ -29,8 +29,10 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         [Test]
         public void ToDialog_ParametersWithStringValue_ContainsKeyValuePair()
         {
-            var source = new QueryResult();
-            source.Parameters = new Struct();
+            var source = new QueryResult
+            {
+                Parameters = new Struct()
+            };
 
             var key = _fixture.Create<string>();
             var value = _fixture.Create<string>();
@@ -39,7 +41,6 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             {
                 StringValue = value
             });
-
 
             var dialog = source.ToDialog();
 
@@ -51,8 +52,10 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         [Test]
         public void ToDialog_ParametersWithStructValue_ContainsKeyValuePairs()
         {
-            var source = new QueryResult();
-            source.Parameters = new Struct();
+            var source = new QueryResult
+            {
+                Parameters = new Struct()
+            };
 
             var key = _fixture.Create<string>();
 
@@ -60,11 +63,11 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             var stringValue = _fixture.Create<string>();
             var anotherStringValue = _fixture.Create<string>();
 
-            structValue.Fields.Add("anything1", new Value
+            structValue.Fields.Add(_fixture.Create<string>(), new Value
             {
                 StringValue = stringValue
             });
-            structValue.Fields.Add("anything2", new Value
+            structValue.Fields.Add(_fixture.Create<string>(), new Value
             {
                 StringValue = anotherStringValue
             });
