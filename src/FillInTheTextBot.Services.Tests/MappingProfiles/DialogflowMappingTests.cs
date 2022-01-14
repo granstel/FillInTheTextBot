@@ -84,7 +84,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         }
 
         [Test]
-        public void ToDialog_Payload_CorrectValue()
+        public void ToDialog_Payload_CorrectButtonText()
         {
             var buttonsStruct = new Struct();
             var buttonText = _fixture.Create<string>();
@@ -115,6 +115,22 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             Assert.IsNotEmpty(dialog.Payload.Buttons, "Payload should not be empty");
             Assert.AreEqual(buttonText, dialog.Payload.Buttons.Select(b => b.Text).FirstOrDefault(), "Text shold be equal expected buttonText");
+        }
+
+
+        [Test]
+        public void ToDialog_Response_EqualsFulfillmentText()
+        {
+            var fulfillmentText = _fixture.Create<string>();
+
+            var source = new QueryResult
+            {
+                FulfillmentText = fulfillmentText
+            };
+
+            var dialog = source.ToDialog();
+
+            Assert.AreEqual(fulfillmentText, dialog.Response);
         }
     }
 }
