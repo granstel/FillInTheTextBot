@@ -1,8 +1,11 @@
 ﻿using AutoFixture;
+using FillInTheTextBot.Models;
 using FillInTheTextBot.Services.Mapping;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.WellKnownTypes;
+using GranSteL.Helpers.Redis.Extensions;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace FillInTheTextBot.Services.Tests.MappingProfiles
 {
@@ -82,6 +85,39 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             Assert.IsNotEmpty(dialog.Parameters, "Parameters should not be empty");
             Assert.True(dialog.Parameters.ContainsKey(key));
             Assert.True(dialog.Parameters.Values.Contains(string.Join("/", stringValue, anotherStringValue)));
+        }
+
+        [Test]
+        public void ToDialog_Payload_CorrectValue()
+        {
+            var source = new QueryResult();
+
+            var key = _fixture.Create<string>();
+            var value = _fixture.Create<string>();
+
+            var message = new Intent.Types.Message();
+            message.Payload = new Struct();
+
+            var buttons = new List<Button>
+            {
+                new Button
+                {
+                    Text = "test"
+                }
+            };
+
+            message.Payload.Fields.Add("Buttons", new Value
+            {
+                StringValue = buttons.Serialize()
+            });
+
+            source.FulfillmentMessages.Add(message);
+
+            var dialog = source.ToDialog();
+
+            Assert.IsNotEmpty(dialog.Parameters, "Parameters should not be empty");
+            Assert.True(dialog.Parameters.ContainsKey(key));
+            Assert.True(dialog.Parameters.Values.Contains(value));
         }
     }
 }
