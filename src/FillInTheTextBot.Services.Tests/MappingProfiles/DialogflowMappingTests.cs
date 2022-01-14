@@ -87,16 +87,18 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         [Test]
         public void ToDialog_Payload_CorrectValue()
         {
-            var source = new QueryResult();
-
-            var message = new Intent.Types.Message();
-            message.Payload = new Struct();
+            var message = new Intent.Types.Message
+            {
+                Payload = new Struct()
+            };
 
             var buttonsStruct = new Struct();
+            var buttonText = _fixture.Create<string>();
             buttonsStruct.Fields.Add("Text", new Value
             {
-                StringValue = "Test"
+                StringValue = buttonText
             });
+
             var listValue = new ListValue();
             listValue.Values.Add(new Value
             {
@@ -108,6 +110,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
                 ListValue = listValue
             });
 
+            var source = new QueryResult();
             source.FulfillmentMessages.Add(message);
 
             var dialog = source.ToDialog();
