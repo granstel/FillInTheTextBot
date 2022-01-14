@@ -29,14 +29,13 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         [Test]
         public void ToDialog_ParametersWithStringValue_ContainsKeyValuePair()
         {
+            var key = _fixture.Create<string>();
+            var value = _fixture.Create<string>();
+
             var source = new QueryResult
             {
                 Parameters = new Struct()
             };
-
-            var key = _fixture.Create<string>();
-            var value = _fixture.Create<string>();
-            
             source.Parameters.Fields.Add(key, new Value
             {
                 StringValue = value
@@ -52,11 +51,6 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         [Test]
         public void ToDialog_ParametersWithStructValue_ContainsKeyValuePairs()
         {
-            var source = new QueryResult
-            {
-                Parameters = new Struct()
-            };
-
             var key = _fixture.Create<string>();
 
             var structValue = new Struct();
@@ -72,6 +66,10 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
                 StringValue = anotherStringValue
             });
 
+            var source = new QueryResult
+            {
+                Parameters = new Struct()
+            };
             source.Parameters.Fields.Add(key, new Value
             {
                 StructValue = structValue
@@ -87,11 +85,6 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         [Test]
         public void ToDialog_Payload_CorrectValue()
         {
-            var message = new Intent.Types.Message
-            {
-                Payload = new Struct()
-            };
-
             var buttonsStruct = new Struct();
             var buttonText = _fixture.Create<string>();
             buttonsStruct.Fields.Add("Text", new Value
@@ -105,6 +98,10 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
                 StructValue = buttonsStruct
             });
 
+            var message = new Intent.Types.Message
+            {
+                Payload = new Struct()
+            };
             message.Payload.Fields.Add("Buttons", new Value
             {
                 ListValue = listValue
