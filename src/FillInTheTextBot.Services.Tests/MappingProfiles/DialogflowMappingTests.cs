@@ -154,5 +154,31 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             Assert.AreEqual(quickReplyText, result.Text);
             Assert.True(result.IsQuickReply);
         }
+
+        [Test]
+        public void ToDialog_Cards_ConvertedToButtons()
+        {
+            var buttonText = _fixture.Create<string>();
+
+            var message = new Intent.Types.Message
+            {
+                Card = new Intent.Types.Message.Types.Card()
+            };
+            message.Card.Buttons.Add(new Intent.Types.Message.Types.Card.Types.Button
+            {
+                Text = buttonText
+            });
+
+            var source = new QueryResult();
+            source.FulfillmentMessages.Add(message);
+
+            var dialog = source.ToDialog();
+
+            var result = dialog.Buttons.FirstOrDefault();
+
+            Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
+            Assert.AreEqual(buttonText, result.Text);
+            Assert.False(result.IsQuickReply);
+        }
     }
 }
