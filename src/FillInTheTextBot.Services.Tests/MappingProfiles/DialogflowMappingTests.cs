@@ -1,11 +1,8 @@
 ﻿using AutoFixture;
-using FillInTheTextBot.Models;
 using FillInTheTextBot.Services.Mapping;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.WellKnownTypes;
-using GranSteL.Helpers.Redis.Extensions;
 using NUnit.Framework;
-using System.Collections.Generic;
 
 namespace FillInTheTextBot.Services.Tests.MappingProfiles
 {
@@ -92,19 +89,8 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         {
             var source = new QueryResult();
 
-            var key = _fixture.Create<string>();
-            var value = _fixture.Create<string>();
-
             var message = new Intent.Types.Message();
             message.Payload = new Struct();
-
-            var buttons = new List<Button>
-            {
-                new Button
-                {
-                    Text = "test"
-                }
-            };
 
             var buttonsStruct = new Struct();
             buttonsStruct.Fields.Add("Text", new Value
