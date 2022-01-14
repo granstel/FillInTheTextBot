@@ -238,5 +238,18 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             Assert.AreEqual(source.Action, dialog.Action);
         }
+
+        [Test]
+        public void ToDialog_ActionIsEndConverstion_EndConversationIsTrue()
+        {
+            var source = new QueryResult
+            {
+                Action = "endConversation"
+            };
+
+            var dialog = source.ToDialog();
+
+            Assert.True(dialog.EndConversation);
+        }
     }
 }
