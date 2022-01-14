@@ -3,6 +3,7 @@ using FillInTheTextBot.Services.Mapping;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.WellKnownTypes;
 using NUnit.Framework;
+using System.Linq;
 
 namespace FillInTheTextBot.Services.Tests.MappingProfiles
 {
@@ -113,6 +114,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             var dialog = source.ToDialog();
 
             Assert.IsNotEmpty(dialog.Payload.Buttons, "Payload should not be empty");
+            Assert.AreEqual(buttonText, dialog.Payload.Buttons.Select(b => b.Text).FirstOrDefault(), "Text shold be equal expected buttonText");
         }
     }
 }
