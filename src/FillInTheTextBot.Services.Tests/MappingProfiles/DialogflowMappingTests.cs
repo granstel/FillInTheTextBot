@@ -106,18 +106,27 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
                 }
             };
 
+            var buttonsStruct = new Struct();
+            buttonsStruct.Fields.Add("Text", new Value
+            {
+                StringValue = "Test"
+            });
+            var listValue = new ListValue();
+            listValue.Values.Add(new Value
+            {
+                StructValue = buttonsStruct
+            });
+
             message.Payload.Fields.Add("Buttons", new Value
             {
-                StringValue = buttons.Serialize()
+                ListValue = listValue
             });
 
             source.FulfillmentMessages.Add(message);
 
             var dialog = source.ToDialog();
 
-            Assert.IsNotEmpty(dialog.Parameters, "Parameters should not be empty");
-            Assert.True(dialog.Parameters.ContainsKey(key));
-            Assert.True(dialog.Parameters.Values.Contains(value));
+            Assert.IsNotEmpty(dialog.Payload.Buttons, "Payload should not be empty");
         }
     }
 }
