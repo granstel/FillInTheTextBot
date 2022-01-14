@@ -212,5 +212,18 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             var expectedValues = new[] { quickReplyText, buttonText };
             Assert.True(dialog.Buttons.Select(b => b.Text).All(t => expectedValues.Contains(t)));
         }
+
+        [Test]
+        public void ToDialog_ParametersIncomplete_NotEqualsAllRequiredParamsPresent()
+        {
+            var source = new QueryResult
+            {
+                AllRequiredParamsPresent = _fixture.Create<bool>()
+            };
+
+            var dialog = source.ToDialog();
+
+            Assert.AreEqual(!source.AllRequiredParamsPresent, dialog.ParametersIncomplete);
+        }
     }
 }
