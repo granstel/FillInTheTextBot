@@ -114,9 +114,8 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             var dialog = source.ToDialog();
 
             Assert.IsNotEmpty(dialog.Payload.Buttons, "Payload should not be empty");
-            Assert.AreEqual(buttonText, dialog.Payload.Buttons.Select(b => b.Text).FirstOrDefault(), "Text shold be equal expected buttonText");
+            Assert.AreEqual(buttonText, dialog.Payload.Buttons.Select(b => b.Text).FirstOrDefault());
         }
-
 
         [Test]
         public void ToDialog_Response_EqualsFulfillmentText()
@@ -131,6 +130,29 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             var dialog = source.ToDialog();
 
             Assert.AreEqual(fulfillmentText, dialog.Response);
+        }
+
+        [Test]
+        public void ToDialog_QuickReplies_ConvertedToButtons()
+        {
+            var quickReplyText = _fixture.Create<string>();
+
+            var message = new Intent.Types.Message
+            {
+                QuickReplies = new Intent.Types.Message.Types.QuickReplies()
+            };
+            message.QuickReplies.QuickReplies_.Add(quickReplyText);
+
+            var source = new QueryResult();
+            source.FulfillmentMessages.Add(message);
+
+            var dialog = source.ToDialog();
+
+            var result = dialog.Buttons.FirstOrDefault();
+
+            Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
+            Assert.AreEqual(quickReplyText, result.Text);
+            Assert.True(result.IsQuickReply);
         }
     }
 }
