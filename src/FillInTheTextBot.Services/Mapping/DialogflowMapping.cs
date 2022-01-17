@@ -16,22 +16,22 @@ namespace FillInTheTextBot.Services.Mapping
 
             destination.Parameters = GetParameters(source);
             destination.Payload = ParsePayload(source);
-            destination.Response = source.FulfillmentText;
+            destination.Response = source?.FulfillmentText;
             destination.Buttons = GetButtons(source);
-            destination.ParametersIncomplete = !source.AllRequiredParamsPresent;
-            destination.Action = source.Action;
-            destination.EndConversation = string.Equals(source?.Action, "endConversation");
+            destination.ParametersIncomplete = !(source?.AllRequiredParamsPresent ?? false);
+            destination.Action = source?.Action;
+            destination.EndConversation = string.Equals(destination.Action, "endConversation");
 
             return destination;
         }
 
-        private static IDictionary<string, string> GetParameters(QueryResult queryResult)
+        private static IDictionary<string, string> GetParameters(QueryResult source)
         {
             var dictionary = new Dictionary<string, string>();
 
-            var fields = queryResult?.Parameters?.Fields;
+            var fields = source?.Parameters?.Fields;
 
-            if (fields?.Any() != true)
+            if (fields == null)
             {
                 return dictionary;
             }
@@ -44,7 +44,7 @@ namespace FillInTheTextBot.Services.Mapping
         private static Dictionary<string,string> GetFieldsValues(MapField<string,Value> fields)
         {
             var dictionary = new Dictionary<string, string>();
-            
+
             foreach (var field in fields)
             {
                 if (field.Value.KindCase == Value.KindOneofCase.StringValue)
@@ -84,29 +84,29 @@ namespace FillInTheTextBot.Services.Mapping
             return dictionary;
         }
 
-        private static Button[] GetButtons(QueryResult s)
+        private static Button[] GetButtons(QueryResult source)
         {
-            var quickReplies = GetQuickReplies(s);
+            var quickReplies = GetQuickReplies(source);
 
-            var cards = GetCards(s);
+            var cards = GetCards(source);
 
             var buttons = quickReplies.Concat(cards);
 
             return buttons.ToArray();
         }
 
-        private static Payload ParsePayload(QueryResult queryResult)
+        private static Payload ParsePayload(QueryResult source)
         {
-            var payload = queryResult?.FulfillmentMessages?
+            var payload = source?.FulfillmentMessages?
                 .Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.Payload)
                 .Select(m => m.Payload.ToString().Deserialize<Payload>()).FirstOrDefault();
 
             return payload;
         }
 
-        private static ICollection<Button> GetQuickReplies(QueryResult s)
+        private static ICollection<Button> GetQuickReplies(QueryResult source)
         {
-            var quickReplies = s?.FulfillmentMessages
+            var quickReplies = source?.FulfillmentMessages
                 ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.QuickReplies)
                 .SelectMany(m => m.QuickReplies.QuickReplies_.Select(r => new Button
                 {
@@ -117,9 +117,9 @@ namespace FillInTheTextBot.Services.Mapping
             return quickReplies;
         }
 
-        private static ICollection<Button> GetCards(QueryResult s)
+        private static ICollection<Button> GetCards(QueryResult source)
         {
-            var cards = s?.FulfillmentMessages
+            var cards = source?.FulfillmentMessages
                 ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.Card)
                 .SelectMany(m => m.Card.Buttons.Select(b => new Button
                 {

@@ -18,6 +18,23 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         }
 
         [Test]
+        public void ToDialog_NullSource_DefaultValues()
+        {
+            QueryResult source = null;
+
+            // ReSharper disable once ExpressionIsAlwaysNull
+            var dialog = source.ToDialog();
+
+            Assert.IsEmpty(dialog.Parameters);
+            Assert.IsFalse(dialog.EndConversation);
+            Assert.IsTrue(dialog.ParametersIncomplete);
+            Assert.IsNull(dialog.Response);
+            Assert.IsNull(dialog.Action);
+            Assert.IsEmpty(dialog.Buttons);
+            Assert.IsNull(dialog.Payload);
+        }
+
+        [Test]
         public void ToDialog_NullParameters_EmptyDictionary()
         {
             var source = new QueryResult();
@@ -148,8 +165,9 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            var result = dialog.Buttons.FirstOrDefault();
+            var result = dialog?.Buttons.FirstOrDefault();
 
+            Assert.IsNotNull(result);
             Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
             Assert.AreEqual(quickReplyText, result.Text);
             Assert.True(result.IsQuickReply);
@@ -176,6 +194,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var result = dialog.Buttons.FirstOrDefault();
 
+            Assert.IsNotNull(result);
             Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
             Assert.AreEqual(buttonText, result.Text);
             Assert.False(result.IsQuickReply);
@@ -195,14 +214,14 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             });
 
             var quickReplyText = _fixture.Create<string>();
-            var quickReplymessage = new Intent.Types.Message
+            var quickReplyMessage = new Intent.Types.Message
             {
                 QuickReplies = new Intent.Types.Message.Types.QuickReplies()
             };
-            quickReplymessage.QuickReplies.QuickReplies_.Add(quickReplyText);
+            quickReplyMessage.QuickReplies.QuickReplies_.Add(quickReplyText);
 
             var source = new QueryResult();
-            source.FulfillmentMessages.Add(quickReplymessage);
+            source.FulfillmentMessages.Add(quickReplyMessage);
             source.FulfillmentMessages.Add(cardMessage);
 
             var dialog = source.ToDialog();
@@ -240,7 +259,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         }
 
         [Test]
-        public void ToDialog_ActionIsEndConverstion_EndConversationIsTrue()
+        public void ToDialog_ActionIsEndConversation_EndConversationIsTrue()
         {
             var source = new QueryResult
             {
