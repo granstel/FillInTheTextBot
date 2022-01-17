@@ -86,15 +86,11 @@ namespace FillInTheTextBot.Services.Mapping
 
         private static Button[] GetButtons(QueryResult s)
         {
-            var buttons = new List<Button>();
-
             var quickReplies = GetQuickReplies(s);
-
-            buttons.AddRange(quickReplies);
 
             var cards = GetCards(s);
 
-            buttons.AddRange(cards);
+            var buttons = quickReplies.Concat(cards);
 
             return buttons.ToArray();
         }
