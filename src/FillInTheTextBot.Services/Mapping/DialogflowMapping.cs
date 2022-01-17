@@ -88,31 +88,13 @@ namespace FillInTheTextBot.Services.Mapping
         {
             var buttons = new List<Button>();
 
-            var quickReplies = s?.FulfillmentMessages
-                            ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.QuickReplies)
-                            .SelectMany(m => m.QuickReplies.QuickReplies_.Select(r => new Button
-                            {
-                                Text = r,
-                                IsQuickReply = true
-                            })).Where(r => r != null).ToList();
+            var quickReplies = GetQuickReplies(s);
 
-            if (quickReplies?.Any() == true)
-            {
-                buttons.AddRange(quickReplies);
-            }
+            buttons.AddRange(quickReplies);
 
-            var cards = s?.FulfillmentMessages
-                            ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.Card)
-                            .SelectMany(m => m.Card.Buttons.Select(b => new Button
-                            {
-                                Text = b.Text,
-                                Url = b.Postback
-                            })).Where(b => b != null).ToList();
+            var cards = GetCards(s);
 
-            if (cards?.Any() == true)
-            {
-                buttons.AddRange(cards);
-            }
+            buttons.AddRange(cards);
 
             return buttons.ToArray();
         }
@@ -124,6 +106,32 @@ namespace FillInTheTextBot.Services.Mapping
                 .Select(m => m.Payload.ToString().Deserialize<Payload>()).FirstOrDefault();
 
             return payload;
+        }
+
+        private static ICollection<Button> GetQuickReplies(QueryResult s)
+        {
+            var quickReplies = s?.FulfillmentMessages
+                ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.QuickReplies)
+                .SelectMany(m => m.QuickReplies.QuickReplies_.Select(r => new Button
+                {
+                    Text = r,
+                    IsQuickReply = true
+                })).Where(r => r != null).ToList() ?? new List<Button>();
+
+            return quickReplies;
+        }
+
+        private static ICollection<Button> GetCards(QueryResult s)
+        {
+            var cards = s?.FulfillmentMessages
+                ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.Card)
+                .SelectMany(m => m.Card.Buttons.Select(b => new Button
+                {
+                    Text = b.Text,
+                    Url = b.Postback
+                })).Where(b => b != null).ToList()  ?? new List<Button>();
+
+            return cards;
         }
     }
 }
