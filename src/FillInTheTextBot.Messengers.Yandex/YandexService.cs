@@ -15,7 +15,6 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string PingCommand = "ping";
         private const string PongResponse = "pong";
 
-        private readonly IMapper _mapper;
         private readonly Stopwatch _stopwatch;
 
         public YandexService(
@@ -23,14 +22,14 @@ namespace FillInTheTextBot.Messengers.Yandex
             IConversationService conversationService,
             IMapper mapper) : base(log, conversationService, mapper)
         {
-            _mapper = mapper;
             _stopwatch = new Stopwatch();
         }
 
         protected override Models.Request Before(InputModel input)
         {
             _stopwatch.Start();
-            var request = base.Before(input);
+
+            var request = input.ToRequest();
 
             input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
 
@@ -73,7 +72,7 @@ namespace FillInTheTextBot.Messengers.Yandex
         {
             var output = await base.AfterAsync(input, response);
 
-            _mapper.Map(input, output);
+            output = input.ToOutput(output);
 
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 
