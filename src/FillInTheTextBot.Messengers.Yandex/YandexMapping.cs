@@ -38,23 +38,27 @@ namespace FillInTheTextBot.Messengers.Yandex
             return destination;
         }
 
-        //CreateMap<Models.Response, OutputModel>()
-        //    .ForMember(d => d.Response, m => m.MapFrom(s => s))
-        //    .ForMember(d => d.Session, m => m.MapFrom(s => s))
-        //    .ForMember(d => d.Version, m => m.Ignore())
-        //    .ForMember(d => d.StartAccountLinking, m => m.Ignore())
-        //    .ForMember(d => d.UserStateUpdate, m => m.Ignore())
-        //    .ForMember(d => d.SessionState, m => m.Ignore())
-        //    .ForMember(d => d.ApplicationState, m => m.Ignore())
-        //    .ForMember(d => d.Analytics, m => m.Ignore());
+        public static OutputModel ToOutput(this Models.Response s, OutputModel d = null)
+        {
+            d ??= new OutputModel();
 
-        //CreateMap<Models.Response, YandexModels.Response>()
-        //    .ForMember(d => d.Text, m => m.MapFrom(s => s.Text.Replace(Environment.NewLine, "\n")))
-        //    .ForMember(d => d.Tts, m => m.MapFrom(s => s.AlternativeText.Replace(Environment.NewLine, "\n")))
-        //    .ForMember(d => d.EndSession, m => m.MapFrom(s => s.Finished))
-        //    .ForMember(d => d.Buttons, m => m.MapFrom(s => s.Buttons))
-        //    .ForMember(d => d.Card, m => m.Ignore())
-        //    .ForMember(d => d.Directives, m => m.Ignore());
+            d.Response = s.ToResponse();
+            //d.Session, m => m.MapFrom(s => s))
+
+            return d;
+        }
+
+        public static YandexModels.Response ToResponse(this Models.Response s, YandexModels.Response d = null)
+        {
+            d ??= new YandexModels.Response();
+
+            d.Text = s.Text.Replace(Environment.NewLine, "\n");
+            d.Tts = s.AlternativeText.Replace(Environment.NewLine, "\n");
+            d.EndSession = s.Finished;
+            //d.Buttons = s.Buttons.ToButtons();
+
+            return d;
+        }
 
         //CreateMap<Models.Response, Session>()
         //    .ForMember(d => d.UserId, m => m.MapFrom(s => s.UserHash))
