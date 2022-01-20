@@ -36,34 +36,37 @@ namespace FillInTheTextBot.Messengers.Yandex
             return destination;
         }
 
-        public static OutputModel ToOutput(this Models.Response s, OutputModel d = null)
+        public static OutputModel ToOutput(this Models.Response source)
         {
-            d ??= new OutputModel();
+            var destination = new OutputModel();
 
-            d.Response = s.ToResponse();
-            //d.Session, m => m.MapFrom(s => s))
+            destination.Response = source.ToResponse();
+            destination.Session = source.ToSession();
 
-            return d;
+            return destination;
         }
 
-        public static YandexModels.Response ToResponse(this Models.Response s, YandexModels.Response d = null)
+        public static YandexModels.Response ToResponse(this Models.Response source)
         {
-            d ??= new YandexModels.Response();
+            var destination = new YandexModels.Response();
 
-            d.Text = s.Text.Replace(Environment.NewLine, "\n");
-            d.Tts = s.AlternativeText.Replace(Environment.NewLine, "\n");
-            d.EndSession = s.Finished;
-            d.Buttons = s.Buttons.ToResponseButtons();
+            destination.Text = source.Text.Replace(Environment.NewLine, "\n");
+            destination.Tts = source.AlternativeText.Replace(Environment.NewLine, "\n");
+            destination.EndSession = source.Finished;
+            destination.Buttons = source.Buttons.ToResponseButtons();
 
-            return d;
+            return destination;
         }
 
-        //CreateMap<Models.Response, Session>()
-        //    .ForMember(d => d.UserId, m => m.MapFrom(s => s.UserHash))
-        //    .ForMember(d => d.MessageId, m => m.Ignore())
-        //    .ForMember(d => d.SessionId, m => m.Ignore())
-        //    .ForMember(d => d.Application, m => m.Ignore())
-        //    .ForMember(d => d.User, m => m.Ignore());
+        public static Session ToSession(this Models.Response source)
+        {
+            var destination = new Session
+            {
+                UserId = source.UserHash
+            };
+
+            return destination;
+        }
 
         public static ResponseButton[] ToResponseButtons(this ICollection<Models.Button> source)
         {
