@@ -12,8 +12,6 @@ namespace FillInTheTextBot.Api.DI
             services.AddSingleton<IMapper>(p => new Mapper(new MapperConfiguration(c =>
             {
                 c.AddMaps(names);
-
-                c.AddProfile<DialogflowProfile>();
             })));
         }
     }
