@@ -14,12 +14,12 @@ namespace FillInTheTextBot.Messengers.Yandex
         {
             destinaton ??= new Models.Request();
 
-            destinaton.ChatHash = source.Session?.SkillId;
-            destinaton.UserHash = source.Session?.UserId;
-            destinaton.Text = source.Request?.OriginalUtterance;
-            destinaton.SessionId = source.Session?.SessionId;
-            destinaton.NewSession = source.Session?.New;
-            destinaton.Language = source.Meta?.Locale;
+            destinaton.ChatHash = source?.Session?.SkillId;
+            destinaton.UserHash = source?.Session?.UserId;
+            destinaton.Text = source?.Request?.OriginalUtterance;
+            destinaton.SessionId = source?.Session?.SessionId;
+            destinaton.NewSession = source?.Session?.New;
+            destinaton.Language = source?.Meta?.Locale;
             destinaton.HasScreen = source?.Meta?.Interfaces?.Screen != null;
             destinaton.ClientId = source?.Meta?.ClientId;
             destinaton.Source = Source.Yandex;
@@ -30,8 +30,8 @@ namespace FillInTheTextBot.Messengers.Yandex
 
         public static OutputModel ToOutput(this InputModel source, OutputModel destination)
         {
-            destination.Session = source.Session;
-            destination.Version = source.Version;
+            destination.Session = source?.Session;
+            destination.Version = source?.Version;
 
             return destination;
         }
@@ -40,8 +40,8 @@ namespace FillInTheTextBot.Messengers.Yandex
         {
             var destination = new OutputModel();
 
-            destination.Response = source.ToResponse();
-            destination.Session = source.ToSession();
+            destination.Response = source?.ToResponse();
+            destination.Session = source?.ToSession();
 
             return destination;
         }
@@ -76,8 +76,8 @@ namespace FillInTheTextBot.Messengers.Yandex
             {
                 var responseButton = new ResponseButton();
 
-                responseButton.Title = button.Text;
-                responseButton.Url = !string.IsNullOrEmpty(button.Url) ? button.Url : null;
+                responseButton.Title = button?.Text;
+                responseButton.Url = !string.IsNullOrEmpty(button?.Url) ? button?.Url : null;
                 responseButton.Hide = button.IsQuickReply;
 
                 responseButtons.Add(responseButton);
