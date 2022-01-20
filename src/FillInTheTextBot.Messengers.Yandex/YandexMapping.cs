@@ -50,10 +50,10 @@ namespace FillInTheTextBot.Messengers.Yandex
         {
             var destination = new YandexModels.Response();
 
-            destination.Text = source.Text.Replace(Environment.NewLine, "\n");
-            destination.Tts = source.AlternativeText.Replace(Environment.NewLine, "\n");
-            destination.EndSession = source.Finished;
-            destination.Buttons = source.Buttons.ToResponseButtons();
+            destination.Text = source?.Text?.Replace(Environment.NewLine, "\n");
+            destination.Tts = source?.AlternativeText?.Replace(Environment.NewLine, "\n");
+            destination.EndSession = source?.Finished ?? false;
+            destination.Buttons = source?.Buttons?.ToResponseButtons();
 
             return destination;
         }

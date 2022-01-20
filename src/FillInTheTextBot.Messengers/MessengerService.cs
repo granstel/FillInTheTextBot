@@ -59,7 +59,6 @@ namespace FillInTheTextBot.Messengers
                     {
                         response = await _conversationService.GetResponseAsync(request);
                     }
-
                 }
             }
             catch (Exception e)
