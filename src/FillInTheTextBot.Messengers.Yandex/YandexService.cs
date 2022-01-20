@@ -70,7 +70,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
         protected override async Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
         {
-            var output = await base.AfterAsync(input, response);
+            var output = response.ToOutput();
 
             output = input.ToOutput(output);
 
