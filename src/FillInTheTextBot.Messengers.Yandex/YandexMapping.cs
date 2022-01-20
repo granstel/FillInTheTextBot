@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using FillInTheTextBot.Models;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Buttons;
@@ -7,9 +8,6 @@ using YandexModels = Yandex.Dialogs.Models;
 
 namespace FillInTheTextBot.Messengers.Yandex
 {
-    /// <summary>
-    /// Probably, registered at MappingRegistration of "Api" project
-    /// </summary>
     public static class YandexMapping
     {
         public static Models.Request ToRequest(this InputModel source, Models.Request destinaton = null)
@@ -55,7 +53,7 @@ namespace FillInTheTextBot.Messengers.Yandex
             d.Text = s.Text.Replace(Environment.NewLine, "\n");
             d.Tts = s.AlternativeText.Replace(Environment.NewLine, "\n");
             d.EndSession = s.Finished;
-            //d.Buttons = s.Buttons.ToButtons();
+            d.Buttons = s.Buttons.ToResponseButtons();
 
             return d;
         }
@@ -67,10 +65,22 @@ namespace FillInTheTextBot.Messengers.Yandex
         //    .ForMember(d => d.Application, m => m.Ignore())
         //    .ForMember(d => d.User, m => m.Ignore());
 
-        //CreateMap<Models.Button, ResponseButton>()
-        //    .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
-        //    .ForMember(d => d.Url, m => m.MapFrom(s => !string.IsNullOrEmpty(s.Url) ? s.Url : null))
-        //    .ForMember(d => d.Hide, m => m.MapFrom(s => s.IsQuickReply))
-        //    .ForMember(d => d.Payload, m => m.Ignore());
+        public static ResponseButton[] ToResponseButtons(this ICollection<Models.Button> source)
+        {
+            var responseButtons = new List<ResponseButton>();
+
+            foreach (var button in source)
+            {
+                var responseButton = new ResponseButton();
+
+                responseButton.Title = button.Text;
+                responseButton.Url = !string.IsNullOrEmpty(button.Url) ? button.Url : null;
+                responseButton.Hide = button.IsQuickReply;
+
+                responseButtons.Add(responseButton);
+            }
+
+            return responseButtons.ToArray();
+        }
     }
 }
