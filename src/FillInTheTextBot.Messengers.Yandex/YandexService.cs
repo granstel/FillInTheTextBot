@@ -68,7 +68,7 @@ namespace FillInTheTextBot.Messengers.Yandex
             return response;
         }
 
-        protected override async Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
+        protected override Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
         {
             var output = response.ToOutput();
 
@@ -90,7 +90,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             output.AddAnalyticsEvent(Models.Response.ScopeStorageKey, new Dictionary<string, object> { { Models.Response.ScopeStorageKey, response.ScopeKey } });
 
-            return output;
+            return Task.FromResult(output);
         }
 
         private ICollection<Models.Context> GetContexts(InputModel input)
