@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AutoMapper;
 using Google.Cloud.Dialogflow.V2;
 using System.Linq;
 using GranSteL.Helpers.Redis.Extensions;
 using GranSteL.Tools.ScopeSelector;
 using InternalModels = FillInTheTextBot.Models;
 using Microsoft.Extensions.Logging;
+using FillInTheTextBot.Services.Mapping;
 
 namespace FillInTheTextBot.Services
 {
@@ -33,18 +33,15 @@ namespace FillInTheTextBot.Services
 
         private readonly ScopesSelector<SessionsClient> _sessionsClientBalancer;
         private readonly ScopesSelector<ContextsClient> _contextsClientBalancer;
-        private readonly IMapper _mapper;
 
         private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>> _eventResolvers;
 
         public DialogflowService(
             ILogger<DialogflowService> log,
-            IMapper mapper,
             ScopesSelector<SessionsClient> sessionsClientBalancer,
             ScopesSelector<ContextsClient> contextsClientBalancer)
         {
             _log = log;
-            _mapper = mapper;
             _sessionsClientBalancer = sessionsClientBalancer;
             _contextsClientBalancer = contextsClientBalancer;
 
@@ -105,7 +102,7 @@ namespace FillInTheTextBot.Services
 
                 var queryResult = intentResponse.QueryResult;
 
-                var response = _mapper.Map<InternalModels.Dialog>(queryResult);
+                var response = queryResult.ToDialog();
 
                 response.ScopeKey = context.Parameters["ProjectId"];
 
