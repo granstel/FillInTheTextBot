@@ -1,6 +1,7 @@
 using System;
-using AutoMapper;
+using System.Collections.Generic;
 using FillInTheTextBot.Models;
+using MailRu.Marusia.Models;
 using MailRu.Marusia.Models.Buttons;
 using MailRu.Marusia.Models.Input;
 using MarusiaModels = MailRu.Marusia.Models;
@@ -12,27 +13,85 @@ namespace FillInTheTextBot.Messengers.Marusia
     /// </summary>
     public static class MarusiaMapping
     {
-        public static Request ToRequest(this InputModel s)
+        public static Models.Request ToRequest(this InputModel source)
         {
 
-            if (s == null) return null;
+            if (source == null) return null;
 
-            var destinaton = new Request();
+            var destinaton = new Models.Request();
 
-            destinaton.ChatHash = s.Session?.SkillId;
-            destinaton.UserHash = s.Session?.UserId;
-            destinaton.Text = s.Request?.OriginalUtterance;
-            destinaton.SessionId = s.Session?.SessionId;
-            destinaton.NewSession = s.Session?.New;
-            destinaton.Language = s.Meta?.Locale;
-            destinaton.HasScreen = string.Equals(s?.Session?.Application?.ApplicationType, MarusiaModels.ApplicationTypes.Mobile);
-            destinaton.ClientId = s?.Meta?.ClientId;
+            destinaton.ChatHash = source.Session?.SkillId;
+            destinaton.UserHash = source.Session?.UserId;
+            destinaton.Text = source.Request?.OriginalUtterance;
+            destinaton.SessionId = source.Session?.SessionId;
+            destinaton.NewSession = source.Session?.New;
+            destinaton.Language = source.Meta?.Locale;
+            destinaton.HasScreen = string.Equals(source?.Session?.Application?.ApplicationType, MarusiaModels.ApplicationTypes.Mobile);
+            destinaton.ClientId = source?.Meta?.ClientId;
             destinaton.Source = Source.Marusia;
             destinaton.Appeal = Appeal.NoOfficial;
 
             return destinaton;
         }
-            
+
+        public static OutputModel ToOutput(this Models.Response source)
+        {
+            if (source == null) return null;
+
+            var destination = new OutputModel();
+
+            destination.Response = source.ToResponse();
+            destination.Session = source.ToSession();
+
+            return destination;
+        }
+
+        public static MarusiaModels.Response ToResponse(this Models.Response source)
+        {
+            if (source == null) return null;
+
+            var destination = new MarusiaModels.Response();
+
+            destination.Text = source.Text?.Replace(Environment.NewLine, "\n");
+            destination.Tts = source.AlternativeText?.Replace(Environment.NewLine, "\n");
+            destination.EndSession = source.Finished;
+            destination.Buttons = source.Buttons?.ToResponseButtons();
+
+            return destination;
+        }
+
+        public static ResponseButton[] ToResponseButtons(this ICollection<Models.Button> source)
+        {
+            if (source == null) return null;
+
+            var responseButtons = new List<ResponseButton>();
+
+            foreach (var button in source)
+            {
+                var responseButton = new ResponseButton();
+
+                responseButton.Title = button?.Text;
+                responseButton.Url = !string.IsNullOrEmpty(button?.Url) ? button?.Url : null;
+                responseButton.Hide = button.IsQuickReply;
+
+                responseButtons.Add(responseButton);
+            }
+
+            return responseButtons.ToArray();
+        }
+
+        public static Session ToSession(this Models.Response source)
+        {
+            if (source == null) return null;
+
+            var destination = new Session
+            {
+                UserId = source.UserHash
+            };
+
+            return destination;
+        }
+
         //public MarusiaMapping()
         //{
         //    CreateMap<Response, MarusiaModels.OutputModel>()
