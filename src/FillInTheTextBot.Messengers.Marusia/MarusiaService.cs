@@ -57,7 +57,7 @@ namespace FillInTheTextBot.Messengers.Marusia
             return response;
         }
 
-        protected override async Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
+        protected override Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
         {
             var output = response.ToOutput();
 
@@ -71,7 +71,7 @@ namespace FillInTheTextBot.Messengers.Marusia
 
             _cache.AddAsync($"marusia:{response.UserHash}", string.Empty, TimeSpan.FromDays(14)).Forget();
 
-            return output;
+            return Task.FromResult(output);
         }
     }
 }
