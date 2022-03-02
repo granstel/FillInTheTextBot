@@ -15,7 +15,6 @@ namespace FillInTheTextBot.Messengers.Marusia
         private const string PingCommand = "ping";
         private const string PongResponse = "pong";
 
-        private readonly IMapper _mapper;
         private readonly IRedisCacheService _cache;
 
         public MarusiaService(
@@ -24,13 +23,12 @@ namespace FillInTheTextBot.Messengers.Marusia
             IMapper mapper,
             IRedisCacheService cache) : base(log, conversationService, mapper)
         {
-            _mapper = mapper;
             _cache = cache;
         }
 
         protected override Models.Request Before(InputModel input)
         {
-            var request = base.Before(input);
+            var request = input.ToRequest();
 
             input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
 
@@ -61,9 +59,9 @@ namespace FillInTheTextBot.Messengers.Marusia
 
         protected override async Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
         {
-            var output = await base.AfterAsync(input, response);
+            var output = response.ToOutput();
 
-            _mapper.Map(input, output);
+            output = input.FillOutput(output);
 
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 
