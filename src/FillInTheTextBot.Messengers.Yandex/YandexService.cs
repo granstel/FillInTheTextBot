@@ -72,7 +72,7 @@ namespace FillInTheTextBot.Messengers.Yandex
         {
             var output = response.ToOutput();
 
-            output = input.ToOutput(output);
+            output = input.FillOutput(output);
 
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 

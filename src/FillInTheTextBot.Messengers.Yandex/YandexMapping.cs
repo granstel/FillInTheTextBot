@@ -30,9 +30,10 @@ namespace FillInTheTextBot.Messengers.Yandex
             return destinaton;
         }
 
-        public static OutputModel ToOutput(this InputModel source, OutputModel destination)
+        public static OutputModel FillOutput(this InputModel source, OutputModel destination)
         {
             if (source == null) return null;
+            if (destination == null) return null;
 
             destination.Session = source.Session;
             destination.Version = source.Version;

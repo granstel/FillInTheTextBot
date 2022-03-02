@@ -1,11 +1,13 @@
 ﻿using AutoFixture;
 using AutoFixture.Kernel;
+using FillInTheTextBot.Models;
 using NUnit.Framework;
 using System.Linq;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Buttons;
 using Yandex.Dialogs.Models.Cards;
 using Yandex.Dialogs.Models.Input;
+using YandexModels = Yandex.Dialogs.Models;
 
 namespace FillInTheTextBot.Messengers.Yandex.Tests
 {
@@ -18,12 +20,65 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
         public void InitTest()
         {
             _fixture = new Fixture();
-            _fixture.Customizations.Add(new TypeRelay(typeof(Button), typeof(ResponseButton)));
+            _fixture.Customizations.Add(new TypeRelay(typeof(YandexModels.Buttons.Button), typeof(ResponseButton)));
             _fixture.Customizations.Add(new TypeRelay(typeof(ICard), typeof(ItemsListCard)));
         }
 
         [Test]
-        public void Map_InputToOutput()
+        public void ToRequest_NullSource_ResultIsNull()
+        {
+            InputModel source = null;
+
+            var result = source.ToRequest();
+
+            Assert.IsNull(result);
+        }
+
+        [Test]
+        public void ToRequest_AllProperties_MappedCorrectly()
+        {
+            var source = _fixture.Create<InputModel>();
+
+            var result = source.ToRequest();
+
+            Assert.IsNotNull(result);
+
+            Assert.AreEqual(source.Session.SkillId, result.ChatHash);
+            Assert.AreEqual(source.Session.UserId, result.UserHash);
+            Assert.AreEqual(source.Request.OriginalUtterance, result.Text);
+            Assert.AreEqual(source.Session.SessionId, result.SessionId);
+            Assert.AreEqual(source.Session.New, result.NewSession);
+            Assert.AreEqual(source.Meta.Locale, result.Language);
+            Assert.AreEqual(result.HasScreen, source.Meta.Interfaces.Screen != null);
+            Assert.AreEqual(result.ClientId, source.Meta.ClientId);
+            Assert.AreEqual(Source.Yandex, result.Source);
+            Assert.AreEqual(Appeal.NoOfficial, result.Appeal);
+        }
+
+        [Test]
+        public void FillOutput_NullSource_ResultIsNull()
+        {
+            InputModel source = null;
+            OutputModel destination = null;
+
+            var result = source.FillOutput(destination);
+
+            Assert.IsNull(result);
+        }
+
+        [Test]
+        public void FillOutput_NullDestination_ResultIsNull()
+        {
+            var source = new InputModel();
+            OutputModel destination = null;
+
+            var result = source.FillOutput(destination);
+
+            Assert.IsNull(result);
+        }
+
+        [Test]
+        public void FillOutput_AllParameters_MappedCorrectly()
         {
             var input = _fixture.Create<InputModel>();
 
@@ -33,7 +88,7 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
                 .Create();
 
 
-            output = input.ToOutput(output);
+            output = input.FillOutput(output);
 
 
             Assert.AreEqual(input.Session.SessionId, output.Session.SessionId);
