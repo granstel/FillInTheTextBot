@@ -1,0 +1,92 @@
+[
+  {
+    "id": "8d225160-4249-4d1b-a6b5-36e8e80e9b4f",
+    "data": [
+      {
+        "text": "крокодил",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c12636f2-b69f-4569-b4ff-2c9b556aed0c",
+    "data": [
+      {
+        "text": "пёс",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "09cee158-1a1a-464c-8877-d5d63ae9155a",
+    "data": [
+      {
+        "text": "собакен",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ac899b70-f5ec-4638-b4e2-8fb787d5997d",
+    "data": [
+      {
+        "text": "акула",
+        "meta": "@sys.any",
+        "alias": "toy",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7605b738-0e44-45cc-9116-056587f36040",
+    "data": [
+      {
+        "text": "кукла",
+        "meta": "@sys.any",
+        "alias": "toy",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9b9b3cb2-261b-414a-8718-4fa656a1f3cf",
+    "data": [
+      {
+        "text": "щенок",
+        "meta": "@sys.any",
+        "alias": "toy",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

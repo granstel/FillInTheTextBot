@@ -1,0 +1,58 @@
+{
+  "id": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "30-ein-baum-brennt",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-30",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "193ed552-9542-4629-8186-49f73f689c94",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-30-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Ура! Давай сочиним",
+            "Класс! Сочиняем"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
