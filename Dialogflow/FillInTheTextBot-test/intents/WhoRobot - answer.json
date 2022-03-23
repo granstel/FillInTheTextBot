@@ -1,0 +1,42 @@
+{
+  "id": "db6be86a-ea15-40fe-8434-98171ead7ad7",
+  "name": "WhoRobot - answer",
+  "auto": true,
+  "contexts": [
+    "whorobot"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "WhoRobot.WhoRobot-custom",
+      "affectedContexts": [
+        {
+          "name": "whorobot",
+          "lifespan": 500
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Браво! Вознагради себя за эту маленькую победу - через приложение закажи кофе в синем стаканчике в кофейне под белым китом. В приложении укажи, что твоё имя - \"робот\""
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

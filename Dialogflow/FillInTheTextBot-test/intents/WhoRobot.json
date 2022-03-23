@@ -1,0 +1,40 @@
+{
+  "id": "aba6c77c-27e3-4925-95f3-50a02333dacb",
+  "name": "WhoRobot",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "whorobot",
+          "lifespan": 500
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Я - робот. Вы в игре! Добро пожаловать в квест. В месте, посвящённом любимой книге Фёдора, есть самое уютное место во вселенной. Если хочешь познать мою тайну, тебе надо возвыситься (не забудь разуться). Расслабься, сядь, посмотри в окно. А теперь направо. Назови слово на третьей строке"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
