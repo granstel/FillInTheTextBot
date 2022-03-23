@@ -272,22 +272,12 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Голосовать за навык",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Поделиться идеей",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
               "Marusia": [
-                {
-                  "Text": "Голосовать за навык",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
                 {
                   "Text": "Поделиться идеей",
                   "IsQuickReply": false,

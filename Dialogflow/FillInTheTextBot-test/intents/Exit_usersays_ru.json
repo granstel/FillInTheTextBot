@@ -1,5 +1,22 @@
 [
   {
+    "id": "3345f1bc-3408-40ff-9788-2116050508f9",
+    "data": [
+      {
+        "text": "увидимся ",
+        "userDefined": false
+      },
+      {
+        "text": "завтра",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "cbc8e24d-fab5-43c5-9c48-f596d83e9375",
     "data": [
       {
