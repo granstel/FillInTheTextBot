@@ -17,7 +17,6 @@
     "data": [
       {
         "text": "десятый",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -39,7 +38,6 @@
       },
       {
         "text": "водолеев",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -70,7 +68,6 @@
       },
       {
         "text": "водолеев",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -114,7 +111,6 @@
       },
       {
         "text": "водолеев",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

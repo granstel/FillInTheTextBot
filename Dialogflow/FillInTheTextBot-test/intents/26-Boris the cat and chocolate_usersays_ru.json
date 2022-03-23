@@ -8,7 +8,6 @@
       },
       {
         "text": "бориса",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -22,7 +21,6 @@
     "data": [
       {
         "text": "бориса",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -44,7 +42,6 @@
       },
       {
         "text": "бориса",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -71,7 +68,6 @@
     "data": [
       {
         "text": "котика",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -89,7 +85,6 @@
       },
       {
         "text": "бориса",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -124,7 +119,6 @@
       },
       {
         "text": "бориса",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

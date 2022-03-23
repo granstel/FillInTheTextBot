@@ -17,7 +17,6 @@
     "data": [
       {
         "text": "близнецы",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -35,7 +34,6 @@
       },
       {
         "text": "близнецов",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -53,7 +51,6 @@
       },
       {
         "text": "близнецов",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -71,7 +68,6 @@
       },
       {
         "text": "близнецов",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -89,7 +85,6 @@
       },
       {
         "text": "близнецов",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -107,7 +102,6 @@
       },
       {
         "text": "четырнадцать",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -121,7 +115,6 @@
     "data": [
       {
         "text": "четырнадцатый",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
