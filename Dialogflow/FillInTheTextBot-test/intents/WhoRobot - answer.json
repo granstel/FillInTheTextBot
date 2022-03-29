@@ -15,7 +15,22 @@
           "lifespan": 500
         }
       ],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "86152f18-be96-49bc-a62f-fbc3838c1d64",
+          "name": "answer",
+          "required": false,
+          "dataType": "@answer",
+          "value": "$answer",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
       "messages": [
         {
           "type": "0",
@@ -23,7 +38,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Браво! Вознагради себя за эту маленькую победу - через приложение закажи кофе в синем стаканчике в кофейне под белым китом. В приложении укажи, что твоё имя - \"робот\""
+            "Это правильный ответ. Происходит бессмысленная попытка изменить курс компании, мы должны действовать через RND. У них появилась новая концепция, но не та что нам нужна. Киты не ходят на восток по суше"
           ],
           "condition": ""
         }

@@ -1,5 +1,48 @@
 [
   {
+    "id": "b7369736-f7ec-46c5-87f5-b4ca0e454ad1",
+    "data": [
+      {
+        "text": "сочинить про роботов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "33053dfb-e763-4d9f-8d7c-2600f1959bd6",
+    "data": [
+      {
+        "text": "роботы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cbb87ff0-2010-446c-bfb0-cdc12df56524",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "роботов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "965871a7-8e79-4afb-b07b-66f5dec1d1d9",
     "data": [
       {
