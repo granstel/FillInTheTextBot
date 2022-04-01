@@ -233,6 +233,24 @@ namespace FillInTheTextBot.Messengers.Sber
             return d;
         }
 
+        public static Response ToResponse(this Request s)
+        {
+            if (s == null) return null;
+
+            var d = new Response();
+
+            d.MessageName = MessageNameValues.AnswerToUser;
+            d.SessionId = s.SessionId;
+            d.MessageId = s.MessageId;
+            d.Uuid = s.Uuid;
+            d.Payload = new ResponsePayload
+            {
+                Device = s.Payload.Device
+            };
+
+            return d;
+        }
+
         public static void CreateSberMapping()
         {
             //Log = InternalLoggerFactory.CreateLogger<SberProfile>();
@@ -335,19 +353,19 @@ namespace FillInTheTextBot.Messengers.Sber
             //        return ActionTypeValues.Text;
             //    }));
 
-            CreateMap<Request, Response>()
-                .ForMember(d => d.MessageName, m => m.MapFrom(s => MessageNameValues.AnswerToUser))
-                .ForMember(d => d.SessionId, m => m.MapFrom(s => s.SessionId))
-                .ForMember(d => d.MessageId, m => m.MapFrom(s => s.MessageId))
-                .ForMember(d => d.Uuid, m => m.MapFrom(s => s.Uuid))
-                .ForMember(d => d.Payload, m => m.MapFrom(s => s.Payload))
-                ;
+            //CreateMap<Request, Response>()
+            //    .ForMember(d => d.MessageName, m => m.MapFrom(s => MessageNameValues.AnswerToUser))
+            //    .ForMember(d => d.SessionId, m => m.MapFrom(s => s.SessionId))
+            //    .ForMember(d => d.MessageId, m => m.MapFrom(s => s.MessageId))
+            //    .ForMember(d => d.Uuid, m => m.MapFrom(s => s.Uuid))
+            //    .ForMember(d => d.Payload, m => m.MapFrom(s => s.Payload))
+            //    ;
 
-            CreateMap<RequestPayload, ResponsePayload>()
-                .ForMember(d => d.Device, m => m.MapFrom(s => s.Device))
-                .ForMember(d => d.ProjectName, m => m.Ignore())
-                .ForMember(d => d.Intent, m => m.Ignore())
-                ;
+            //CreateMap<RequestPayload, ResponsePayload>()
+            //    .ForMember(d => d.Device, m => m.MapFrom(s => s.Device))
+            //    .ForMember(d => d.ProjectName, m => m.Ignore())
+            //    .ForMember(d => d.Intent, m => m.Ignore())
+            //    ;
         }
 
         //private PayloadItem[] MapResponseToItem(InternalModels.Response source, PayloadItem[] destinations, ResolutionContext context)
