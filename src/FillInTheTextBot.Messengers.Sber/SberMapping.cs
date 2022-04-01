@@ -14,7 +14,12 @@ namespace FillInTheTextBot.Messengers.Sber
 {
     public static class SberMapping
     {
-        private static readonly ILogger<SberProfile> Log;
+        private static readonly ILogger Log;
+
+        static SberMapping()
+        {
+            Log = InternalLoggerFactory.CreateLogger(typeof(SberMapping).Name);
+        }
 
         public static InternalModels.Request ToRequest(this Request s)
         {
