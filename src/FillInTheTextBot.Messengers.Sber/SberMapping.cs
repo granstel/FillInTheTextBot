@@ -78,6 +78,37 @@ namespace FillInTheTextBot.Messengers.Sber
             return s?.Payload?.Message?.OriginalText;
         }
 
+        public static Response ToRespopnse (this InternalModels.Response s)
+        {
+            if (s == null) return null;
+
+            var d = new Response();
+
+            d.Payload = GetPayload(s);
+
+            return d;
+        }
+
+        private static ResponsePayload GetPayload(InternalModels.Response s)
+        {
+            if (s == null) return null;
+
+            var d = new ResponsePayload();
+
+            d.PronounceText = s.Text;
+            d.PronounceTextType = PronounceTextTypeValues.Text;
+            d.AutoListening = !s.Finished;
+            d.Finished = s.Finished;
+                .ForMember(d => d.Emotion, m => m.MapFrom((s, d) =>
+                {
+                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[InternalModels.Source.Sber], out string emotionKey);
+
+                    return emotionKey;
+                }))
+                .ForMember(d => d.Items, m => m.MapFrom(s => s))
+                .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.IsQuickReply)))
+        }
+
         public static void CreateSberMapping()
         {
             //Log = InternalLoggerFactory.CreateLogger<SberProfile>();
@@ -135,24 +166,24 @@ namespace FillInTheTextBot.Messengers.Sber
             //    .ForMember(d => d.NextTextIndex, m => m.Ignore())
             //    .ForMember(d => d.ScopeKey, m => m.Ignore());
 
-            CreateMap<InternalModels.Response, Response>()
-                .ForMember(d => d.Payload, m => m.MapFrom(s => s))
-                ;
+            //CreateMap<InternalModels.Response, Response>()
+            //    .ForMember(d => d.Payload, m => m.MapFrom(s => s))
+            //    ;
 
-            CreateMap<InternalModels.Response, ResponsePayload>()
-                .ForMember(d => d.PronounceText, m => m.MapFrom(s => s.Text))
-                .ForMember(d => d.PronounceTextType, m => m.MapFrom(s => PronounceTextTypeValues.Text))
-                .ForMember(d => d.AutoListening, m => m.MapFrom(s => !s.Finished))
-                .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
-                .ForMember(d => d.Emotion, m => m.MapFrom((s, d) =>
-                {
-                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[InternalModels.Source.Sber], out string emotionKey);
+            //CreateMap<InternalModels.Response, ResponsePayload>()
+            //    .ForMember(d => d.PronounceText, m => m.MapFrom(s => s.Text))
+            //    .ForMember(d => d.PronounceTextType, m => m.MapFrom(s => PronounceTextTypeValues.Text))
+            //    .ForMember(d => d.AutoListening, m => m.MapFrom(s => !s.Finished))
+            //    .ForMember(d => d.Finished, m => m.MapFrom(s => s.Finished))
+            //    .ForMember(d => d.Emotion, m => m.MapFrom((s, d) =>
+            //    {
+            //        s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[InternalModels.Source.Sber], out string emotionKey);
 
-                    return emotionKey;
-                }))
-                .ForMember(d => d.Items, m => m.MapFrom(s => s))
-                .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.IsQuickReply)))
-                ;
+            //        return emotionKey;
+            //    }))
+            //    .ForMember(d => d.Items, m => m.MapFrom(s => s))
+            //    .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.IsQuickReply)))
+            //    ;
 
             CreateMap<string, Emotion>()
                 .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
