@@ -101,9 +101,32 @@ namespace FillInTheTextBot.Messengers.Sber
             d.Finished = s.Finished;
             d.Emotion = GetEmotion(s);
             d.Items = GetPayloadItems(s);
-                //.ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.IsQuickReply)))
+            d.Suggestions = GetSuggestions(s.Buttons.Where(b => b.IsQuickReply));
 
             return d;
+        }
+
+        private static Suggestion GetSuggestions(IEnumerable<InternalModels.Button> sourceButtons)
+        {
+            var buttons = new List<Button>();
+
+            foreach (var sourceButton in sourceButtons)
+            {
+                var button = new Button
+                {
+                    Title = sourceButton.Text,
+                    Action = GetAction(sourceButton)
+                };
+
+                buttons.Add(button);
+            }
+
+            var suggest = new Suggestion
+            {
+                Buttons = buttons.ToArray()
+            };
+
+            return suggest;
         }
 
         private static PayloadItem[] GetPayloadItems(InternalModels.Response source)
@@ -289,28 +312,28 @@ namespace FillInTheTextBot.Messengers.Sber
             //CreateMap<string, Emotion>()
             //    .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
 
-            CreateMap<InternalModels.Response, PayloadItem[]>().ConvertUsing(MapResponseToItem);
+            //CreateMap<InternalModels.Response, PayloadItem[]>().ConvertUsing(MapResponseToItem);
 
-            CreateMap<IEnumerable<InternalModels.Button>, Suggestion>().ConvertUsing(MapButtonsToSuggestion);
+            //CreateMap<IEnumerable<InternalModels.Button>, Suggestion>().ConvertUsing(MapButtonsToSuggestion);
 
 
-            CreateMap<InternalModels.Button, Button>()
-                .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
-                .ForMember(d => d.Action, m => m.MapFrom(s => s))
-                ;
+            //CreateMap<InternalModels.Button, Button>()
+            //    .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
+            //    .ForMember(d => d.Action, m => m.MapFrom(s => s))
+            //    ;
 
-            CreateMap<InternalModels.Button, SberModels.Action>()
-                .ForMember(d => d.Text, m => m.MapFrom(s => s.Text))
-                .ForMember(d => d.DeepLink, m => m.MapFrom(s => s.Url))
-                .ForMember(d => d.Type, m => m.MapFrom((s, d) =>
-                {
-                    if (!string.IsNullOrEmpty(s.Url))
-                    {
-                        return ActionTypeValues.DeepLink;
-                    }
+            //CreateMap<InternalModels.Button, SberModels.Action>()
+            //    .ForMember(d => d.Text, m => m.MapFrom(s => s.Text))
+            //    .ForMember(d => d.DeepLink, m => m.MapFrom(s => s.Url))
+            //    .ForMember(d => d.Type, m => m.MapFrom((s, d) =>
+            //    {
+            //        if (!string.IsNullOrEmpty(s.Url))
+            //        {
+            //            return ActionTypeValues.DeepLink;
+            //        }
 
-                    return ActionTypeValues.Text;
-                }));
+            //        return ActionTypeValues.Text;
+            //    }));
 
             CreateMap<Request, Response>()
                 .ForMember(d => d.MessageName, m => m.MapFrom(s => MessageNameValues.AnswerToUser))
@@ -392,16 +415,16 @@ namespace FillInTheTextBot.Messengers.Sber
         //    return new[] { itemWithBubble, itemWithCard };
         //}
 
-        private Suggestion MapButtonsToSuggestion(IEnumerable<InternalModels.Button> source, Suggestion destination, ResolutionContext context)
-        {
-            var buttons = context.Mapper.Map<Button[]>(source);
+        //private Suggestion MapButtonsToSuggestion(IEnumerable<InternalModels.Button> source, Suggestion destination, ResolutionContext context)
+        //{
+        //    var buttons = context.Mapper.Map<Button[]>(source);
 
-            var suggest = new Suggestion
-            {
-                Buttons = buttons
-            };
+        //    var suggest = new Suggestion
+        //    {
+        //        Buttons = buttons
+        //    };
 
-            return suggest;
-        }
+        //    return suggest;
+        //}
     }
 }
