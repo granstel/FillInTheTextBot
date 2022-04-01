@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AutoMapper;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
@@ -17,8 +16,7 @@ namespace FillInTheTextBot.Messengers.Sber
         public SberService(
             ILogger<SberService> log,
             IConversationService conversationService,
-            IMapper mapper,
-            IRedisCacheService cache) : base(log, conversationService, mapper)
+            IRedisCacheService cache) : base(log, conversationService)
         {
             _cache = cache;
         }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using AutoMapper;
 using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
 using Yandex.Dialogs.Models;
@@ -19,8 +18,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
         public YandexService(
             ILogger<YandexService> log,
-            IConversationService conversationService,
-            IMapper mapper) : base(log, conversationService, mapper)
+            IConversationService conversationService) : base(log, conversationService)
         {
             _stopwatch = new Stopwatch();
         }

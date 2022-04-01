@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using AutoFixture;
-using AutoMapper;
 using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -16,7 +15,6 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
         private MockRepository _mockRepository;
 
         private Mock<IConversationService> _conversationService;
-        private Mock<IMapper> _mapper;
 
         private YandexService _target;
 
@@ -28,10 +26,9 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
             _mockRepository = new MockRepository(MockBehavior.Strict);
 
             _conversationService = _mockRepository.Create<IConversationService>();
-            _mapper = _mockRepository.Create<IMapper>();
             var log = Mock.Of<ILogger<YandexService>>();
 
-            _target = new YandexService(log, _conversationService.Object, _mapper.Object);
+            _target = new YandexService(log, _conversationService.Object);
 
             _fixture = new Fixture();
         }

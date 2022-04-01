@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Mapping;
 using Microsoft.Extensions.Logging;

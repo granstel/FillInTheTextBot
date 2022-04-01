@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AutoMapper;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
@@ -20,8 +19,7 @@ namespace FillInTheTextBot.Messengers.Marusia
         public MarusiaService(
             ILogger<MarusiaService> log,
             IConversationService conversationService,
-            IMapper mapper,
-            IRedisCacheService cache) : base(log, conversationService, mapper)
+            IRedisCacheService cache) : base(log, conversationService)
         {
             _cache = cache;
         }

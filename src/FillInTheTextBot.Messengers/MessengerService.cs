@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AutoMapper;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
-using FillInTheTextBot.Services.Mapping;
 using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Messengers
@@ -15,15 +13,13 @@ namespace FillInTheTextBot.Messengers
         private const string ErrorLink = "https://vk.com/fillinthetextbot";
 
         private readonly IConversationService _conversationService;
-        private readonly IMapper _mapper;
 
         protected readonly ILogger Log;
 
-        protected MessengerService(ILogger log, IConversationService conversationService, IMapper mapper)
+        protected MessengerService(ILogger log, IConversationService conversationService)
         {
             Log = log;
             _conversationService = conversationService;
-            _mapper = mapper;
         }
 
         protected virtual Request Before(TInput input)
