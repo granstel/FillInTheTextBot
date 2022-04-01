@@ -26,7 +26,6 @@ namespace FillInTheTextBot.Api
             services.AddExternalServices();
 
             var names = GetAssembliesNames();
-            services.AddMapping(names);
         }
 
         public static ICollection<string> GetAssembliesNames()
