@@ -12,7 +12,6 @@ namespace FillInTheTextBot.Messengers.Sber
 {
     public class SberService : MessengerService<Request, Response>, ISberService
     {
-        private readonly IMapper _mapper;
         private readonly IRedisCacheService _cache;
 
         public SberService(
@@ -21,7 +20,6 @@ namespace FillInTheTextBot.Messengers.Sber
             IMapper mapper,
             IRedisCacheService cache) : base(log, conversationService, mapper)
         {
-            _mapper = mapper;
             _cache = cache;
         }
 
