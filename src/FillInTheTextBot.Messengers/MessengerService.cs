@@ -28,9 +28,7 @@ namespace FillInTheTextBot.Messengers
 
         protected virtual Request Before(TInput input)
         {
-            var request = _mapper.Map<Request>(input);
-
-            return request;
+            throw new NotImplementedException($"Need to override '{nameof(Before)}' method of base type");
         }
 
         public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
@@ -137,11 +135,9 @@ namespace FillInTheTextBot.Messengers
             return null;
         }
 
-        protected virtual async Task<TOutput> AfterAsync(TInput input, Response response)
+        protected virtual Task<TOutput> AfterAsync(TInput input, Response response)
         {
-            var output = _mapper.Map<TOutput>(response);
-
-            return await Task.FromResult(output);
+            throw new NotImplementedException($"Need to override '{nameof(AfterAsync)}' method of base type");
         }
 
         public virtual Task<bool> SetWebhookAsync(string url)
