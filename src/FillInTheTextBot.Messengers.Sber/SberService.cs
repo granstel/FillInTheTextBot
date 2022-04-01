@@ -27,7 +27,7 @@ namespace FillInTheTextBot.Messengers.Sber
 
         protected override Models.Request Before(Request input)
         {
-            var request = base.Before(input);
+            var request = input.ToRequest();
 
             var userStateCacheKey = GetCacheKey(request.UserHash);
 
@@ -47,9 +47,9 @@ namespace FillInTheTextBot.Messengers.Sber
 
         protected override async Task<Response> AfterAsync(Request input, Models.Response response)
         {
-            var output = await base.AfterAsync(input, response);
+            var output = response.ToRespopnse();
 
-            _mapper.Map(input, output);
+            input.FillResponse(output);
 
             var userState = new Models.UserState
             {

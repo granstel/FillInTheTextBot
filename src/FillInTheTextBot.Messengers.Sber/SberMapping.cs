@@ -230,11 +230,13 @@ namespace FillInTheTextBot.Messengers.Sber
             return d;
         }
 
-        public static Response ToResponse(this Request s)
+        public static Response FillResponse(this Request s, Response d)
         {
             if (s == null) return null;
-
-            var d = new Response();
+            if (d == null)
+            {
+                d = new Response();
+            }
 
             d.MessageName = MessageNameValues.AnswerToUser;
             d.SessionId = s.SessionId;
