@@ -99,14 +99,115 @@ namespace FillInTheTextBot.Messengers.Sber
             d.PronounceTextType = PronounceTextTypeValues.Text;
             d.AutoListening = !s.Finished;
             d.Finished = s.Finished;
-                .ForMember(d => d.Emotion, m => m.MapFrom((s, d) =>
-                {
-                    s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[InternalModels.Source.Sber], out string emotionKey);
+            d.Emotion = GetEmotion(s);
+            d.Items = GetPayloadItems(s);
+                //.ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.IsQuickReply)))
 
-                    return emotionKey;
-                }))
-                .ForMember(d => d.Items, m => m.MapFrom(s => s))
-                .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.IsQuickReply)))
+            return d;
+        }
+
+        private static PayloadItem[] GetPayloadItems(InternalModels.Response source)
+        {
+            var itemWithBubble = new PayloadItem
+            {
+                Bubble = { Text = source.Text }
+            };
+
+            var buttons = source.Buttons?.Where(b => !b.IsQuickReply).ToList();
+
+            var cardItems = buttons?.Select(b =>
+            {
+                var cardItem = new CardCell
+                {
+                    Type = CellTypeValues.GreetingGridItem,
+                    TopText = new CardCellText
+                    {
+                        Type = CellTypeValues.TextCellView,
+                        Text = string.Empty,
+                        Typeface = TypefaceValues.Caption,
+                        TextColor = TextColorValues.Default
+                    },
+                    BottomText = new CardCellText
+                    {
+                        Type = CellTypeValues.LeftRightCellView,
+                        Text = b.Text,
+                        Typeface = TypefaceValues.Button1,
+                        TextColor = TextColorValues.Default,
+                        MaxLines = 2,
+                        Margins = new Margins
+                        {
+                            Top = IndentValues.X0
+                        }
+                    },
+                    Paddings = new Paddings
+                    {
+                        Top = IndentValues.X0,
+                        Left = IndentValues.X6,
+                        Right = IndentValues.X6,
+                        Bottom = IndentValues.X16
+                    }
+                };
+
+                var action = GetAction(b);
+
+                cardItem.Actions = new[] { action };
+
+                return cardItem;
+            }).ToArray();
+
+            var card = new Card
+            {
+                Type = CardTypeValues.GridCard,
+                Items = cardItems,
+                Columns = 2,
+                ItemWidth = ItemWidthValues.Resizable
+            };
+
+            var itemWithCard = new PayloadItem
+            {
+                Card = card
+            };
+
+            return new[] { itemWithBubble, itemWithCard };
+        }
+
+        private static SberModels.Action GetAction(InternalModels.Button s)
+        {
+            if (s == null) return null;
+
+            var d = new SberModels.Action();
+
+            d.Text = s.Text;
+            d.DeepLink = s.Url;
+            d.Type = GetActionType(s);
+
+            return d;
+        }
+
+        private static string GetActionType(InternalModels.Button s)
+        {
+            if (!string.IsNullOrEmpty(s.Url))
+            {
+                return ActionTypeValues.DeepLink;
+            }
+
+            return ActionTypeValues.Text;
+        }
+
+        private static Emotion GetEmotion(InternalModels.Response s)
+        {
+            if (s == null) return null;
+
+            var d = new Emotion();
+
+            if (!s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[InternalModels.Source.Sber], out string emotionKey))
+            {
+                return null;
+            }
+
+            d.EmotionId = emotionKey;
+
+            return d;
         }
 
         public static void CreateSberMapping()
@@ -185,8 +286,8 @@ namespace FillInTheTextBot.Messengers.Sber
             //    .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.IsQuickReply)))
             //    ;
 
-            CreateMap<string, Emotion>()
-                .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
+            //CreateMap<string, Emotion>()
+            //    .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
 
             CreateMap<InternalModels.Response, PayloadItem[]>().ConvertUsing(MapResponseToItem);
 
@@ -226,70 +327,70 @@ namespace FillInTheTextBot.Messengers.Sber
                 ;
         }
 
-        private PayloadItem[] MapResponseToItem(InternalModels.Response source, PayloadItem[] destinations, ResolutionContext context)
-        {
-            var itemWithBubble = new PayloadItem
-            {
-                Bubble = { Text = source.Text }
-            };
+        //private PayloadItem[] MapResponseToItem(InternalModels.Response source, PayloadItem[] destinations, ResolutionContext context)
+        //{
+        //    var itemWithBubble = new PayloadItem
+        //    {
+        //        Bubble = { Text = source.Text }
+        //    };
 
-            var buttons = source.Buttons?.Where(b => !b.IsQuickReply).ToList();
+        //    var buttons = source.Buttons?.Where(b => !b.IsQuickReply).ToList();
 
-            var cardItems = buttons?.Select(b =>
-            {
-                var cardItem = new CardCell
-                {
-                    Type = CellTypeValues.GreetingGridItem,
-                    TopText = new CardCellText
-                    {
-                        Type = CellTypeValues.TextCellView,
-                        Text = string.Empty,
-                        Typeface = TypefaceValues.Caption,
-                        TextColor = TextColorValues.Default
-                    },
-                    BottomText = new CardCellText
-                    {
-                        Type = CellTypeValues.LeftRightCellView,
-                        Text = b.Text,
-                        Typeface = TypefaceValues.Button1,
-                        TextColor = TextColorValues.Default,
-                        MaxLines = 2,
-                        Margins = new Margins
-                        {
-                            Top = IndentValues.X0
-                        }
-                    },
-                    Paddings = new Paddings
-                    {
-                        Top = IndentValues.X0,
-                        Left = IndentValues.X6,
-                        Right = IndentValues.X6,
-                        Bottom = IndentValues.X16
-                    }
-                };
+        //    var cardItems = buttons?.Select(b =>
+        //    {
+        //        var cardItem = new CardCell
+        //        {
+        //            Type = CellTypeValues.GreetingGridItem,
+        //            TopText = new CardCellText
+        //            {
+        //                Type = CellTypeValues.TextCellView,
+        //                Text = string.Empty,
+        //                Typeface = TypefaceValues.Caption,
+        //                TextColor = TextColorValues.Default
+        //            },
+        //            BottomText = new CardCellText
+        //            {
+        //                Type = CellTypeValues.LeftRightCellView,
+        //                Text = b.Text,
+        //                Typeface = TypefaceValues.Button1,
+        //                TextColor = TextColorValues.Default,
+        //                MaxLines = 2,
+        //                Margins = new Margins
+        //                {
+        //                    Top = IndentValues.X0
+        //                }
+        //            },
+        //            Paddings = new Paddings
+        //            {
+        //                Top = IndentValues.X0,
+        //                Left = IndentValues.X6,
+        //                Right = IndentValues.X6,
+        //                Bottom = IndentValues.X16
+        //            }
+        //        };
 
-                var action = context.Mapper.Map<SberModels.Action>(b);
+        //        var action = context.Mapper.Map<SberModels.Action>(b);
 
-                cardItem.Actions = new[] { action };
+        //        cardItem.Actions = new[] { action };
 
-                return cardItem;
-            }).ToArray();
+        //        return cardItem;
+        //    }).ToArray();
 
-            var card = new Card
-            {
-                Type = CardTypeValues.GridCard,
-                Items = cardItems,
-                Columns = 2,
-                ItemWidth = ItemWidthValues.Resizable
-            };
+        //    var card = new Card
+        //    {
+        //        Type = CardTypeValues.GridCard,
+        //        Items = cardItems,
+        //        Columns = 2,
+        //        ItemWidth = ItemWidthValues.Resizable
+        //    };
 
-            var itemWithCard = new PayloadItem
-            {
-                Card = card
-            };
+        //    var itemWithCard = new PayloadItem
+        //    {
+        //        Card = card
+        //    };
 
-            return new[] { itemWithBubble, itemWithCard };
-        }
+        //    return new[] { itemWithBubble, itemWithCard };
+        //}
 
         private Suggestion MapButtonsToSuggestion(IEnumerable<InternalModels.Button> source, Suggestion destination, ResolutionContext context)
         {
