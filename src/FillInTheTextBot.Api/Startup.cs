@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
+using FillInTheTextBot.Api.DI;
 
 namespace FillInTheTextBot.Api
 {
@@ -34,7 +35,9 @@ namespace FillInTheTextBot.Api
                 o.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;
             });
 
-            DependencyConfiguration.Configure(services, _configuration);
+            services.AddAppConfiguration(_configuration);
+            services.AddInternalServices();
+            services.AddExternalServices();
         }
 
 

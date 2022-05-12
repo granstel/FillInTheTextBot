@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using NLog.Web;
 using System.Linq;
+using System.Reflection;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
 
 namespace FillInTheTextBot.Api
 {
@@ -19,7 +23,7 @@ namespace FillInTheTextBot.Api
             var hostingStartupAssemblies = builder.GetSetting(WebHostDefaults.HostingStartupAssembliesKey) ?? string.Empty;
             var hostingStartupAssembliesList = hostingStartupAssemblies.Split(';');
 
-            var names = DependencyConfiguration.GetAssembliesNames();
+            var names = GetAssembliesNames();
             var fullList = hostingStartupAssembliesList.Concat(names).Distinct().ToList();
             var concatenatedNames = string.Join(';', fullList);
 
@@ -32,5 +36,15 @@ namespace FillInTheTextBot.Api
             return host;
         }
 
+        private static ICollection<string> GetAssembliesNames()
+        {
+            var callingAssemble = Assembly.GetCallingAssembly();
+
+            var names = callingAssemble.GetCustomAttributes<ApplicationPartAttribute>()
+                .Where(a => a.AssemblyName.Contains("FillInTheTextBot", StringComparison.InvariantCultureIgnoreCase))
+                .Select(a => a.AssemblyName).ToList();
+
+            return names;
+        }
     }
 }
