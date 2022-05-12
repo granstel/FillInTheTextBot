@@ -6,6 +6,7 @@ using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
+using GranSteL.Helpers.Redis;
 using GranSteL.Tools.ScopeSelector;
 using Grpc.Auth;
 using Jaeger;
@@ -28,6 +29,7 @@ namespace FillInTheTextBot.Api.DI
             services.AddSingleton(RegisterContextsClientScopes);
             services.AddSingleton(RegisterRedisClient);
             services.AddSingleton(RegisterTracer);
+            services.AddSingleton(RegisterCacheService);
 
             services.AddSingleton<IScopeBindingStorage, ScopeBindingStorage>();
         }
@@ -137,6 +139,17 @@ namespace FillInTheTextBot.Api.DI
 
             GlobalTracer.Register(tracer);
             return tracer;
+        }
+        
+        private static IRedisCacheService RegisterCacheService(IServiceProvider provider)
+        {
+            var configuration = provider.GetService<RedisConfiguration>();
+
+            var db = provider.GetService<IDatabase>();
+
+            var service = new RedisCacheService(db, configuration?.KeyPrefix);
+
+            return service;
         }
     }
 }
