@@ -1,16 +1,23 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "30-ein-baum-brennt",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-30",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
-          "id": "62cc7de5-eda9-43cc-8eeb-e8cbf9206b70",
+          "id": "193ed552-9542-4629-8186-49f73f689c94",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +38,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история —"
+            "Ура! Давай сочиним",
+            "Класс! Сочиняем"
           ],
           "condition": ""
         }

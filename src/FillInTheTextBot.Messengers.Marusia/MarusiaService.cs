@@ -6,6 +6,7 @@ using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
 using MailRu.Marusia.Models;
 using MailRu.Marusia.Models.Input;
+using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Messengers.Marusia
 {
@@ -18,9 +19,10 @@ namespace FillInTheTextBot.Messengers.Marusia
         private readonly IRedisCacheService _cache;
 
         public MarusiaService(
+            ILogger<MarusiaService> log,
             IConversationService conversationService,
             IMapper mapper,
-            IRedisCacheService cache) : base(conversationService, mapper)
+            IRedisCacheService cache) : base(log, conversationService, mapper)
         {
             _mapper = mapper;
             _cache = cache;

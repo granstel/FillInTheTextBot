@@ -1,8 +1,12 @@
 ﻿using FillInTheTextBot.Api.Middleware;
+using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
 
 namespace FillInTheTextBot.Api
 {
@@ -10,9 +14,10 @@ namespace FillInTheTextBot.Api
     {
         private readonly IConfiguration _configuration;
 
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
         {
             _configuration = configuration;
+            InternalLoggerFactory.Factory = loggerFactory;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -24,6 +29,10 @@ namespace FillInTheTextBot.Api
                 .AddNewtonsoftJson();
 
             services.AddOpenTracing();
+            services.AddHttpLogging(o =>
+            {
+                o.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;
+            });
 
             DependencyConfiguration.Configure(services, _configuration);
         }
@@ -39,7 +48,11 @@ namespace FillInTheTextBot.Api
 
             if (configuration.HttpLog.Enabled)
             {
-                app.UseMiddleware<HttpLogMiddleware>();
+                app.UseWhen(context => configuration.HttpLog.IncludeEndpoints.Any(w =>
+                    context.Request.Path.Value.Contains(w, StringComparison.InvariantCultureIgnoreCase)), a =>
+                    {
+                        a.UseHttpLogging();
+                    });
             }
 
             app.UseEndpoints(e => e.MapControllers());

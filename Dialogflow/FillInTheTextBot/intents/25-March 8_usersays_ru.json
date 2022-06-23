@@ -8,7 +8,6 @@
       },
       {
         "text": "8 марта",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -26,7 +25,6 @@
       },
       {
         "text": "8 марта",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -40,7 +38,6 @@
     "data": [
       {
         "text": "международный женский день",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -97,7 +94,6 @@
       },
       {
         "text": "8 марта",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -111,7 +107,6 @@
     "data": [
       {
         "text": "8 марта",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

@@ -1,12 +1,17 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Threading.Tasks;
-using NLog;
 
 namespace FillInTheTextBot.Services.Extensions
 {
     public static class TasksExtensions
     {
-        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+        private static readonly ILogger Log;
+
+        static TasksExtensions()
+        {
+            Log = InternalLoggerFactory.CreateLogger(typeof(TaskExtensions).Name);
+        }
 
         /// <summary>
         /// Fire-and-forget
@@ -24,7 +29,7 @@ namespace FillInTheTextBot.Services.Extensions
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e, "Error while executing the task");
+                    Log?.LogError(e, "Error while executing the task");
                 }
             }).ConfigureAwait(false);
         }

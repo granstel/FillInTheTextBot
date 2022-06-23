@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Mapping;
-using NLog;
+using Microsoft.Extensions.Logging;
 using Sber.SmartApp.Models;
 using Sber.SmartApp.Models.Constants;
 using InternalModels = FillInTheTextBot.Models;
@@ -12,14 +13,16 @@ using SberModels = Sber.SmartApp.Models;
 namespace FillInTheTextBot.Messengers.Sber
 {
     /// <summary>
-    /// Probably, registered at MappingModule of "Services" project
+    /// Probably, registered at MappingRegistration of "Api" project
     /// </summary>
     public class SberProfile : Profile
     {
-        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+        private readonly ILogger<SberProfile> Log;
 
         public SberProfile()
         {
+            Log = InternalLoggerFactory.CreateLogger<SberProfile>();
+
             CreateMap<Request, InternalModels.Request>()
                 .ForMember(d => d.ChatHash, m => m.MapFrom((s, d) => s?.Payload?.AppInfo?.ProjectId.ToString()))
                 .ForMember(d => d.UserHash, m => m.MapFrom((s, d) => s?.Uuid?.Sub ?? s?.Uuid?.UserId))
@@ -46,7 +49,7 @@ namespace FillInTheTextBot.Messengers.Sber
                     }
                     catch (Exception e)
                     {
-                        Log.Error(e);
+                        Log.LogError(e, "Error while request mapping");
                     }
 
                     return s?.Payload?.Message?.OriginalText;

@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "84d0ef08-b037-42f1-8ec5-82a2f5a37d5f",
+          "id": "415ca372-0cc4-45c9-a300-739b7d2d9582",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -28,7 +28,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "577ad096-4c72-4df6-aece-ed9f1ad1108b",
+          "id": "8dd8b376-bbbe-457b-9d90-6d5a785ebe27",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -59,7 +59,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "03b537fb-9a0d-4810-8fc3-7bcb4b42197f",
+          "id": "e08e2a09-a95d-42ac-b527-3635a0d87a82",
           "name": "animal-1",
           "required": true,
           "dataType": "@sys.any",
@@ -82,7 +82,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "18fa6cc6-4eef-4884-ad25-0411245afeae",
+          "id": "7d658609-3c82-4cf0-bfdc-e9041203e57d",
           "name": "animal-2",
           "required": true,
           "dataType": "@sys.any",
@@ -109,7 +109,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "439c096f-ec00-447f-9921-d4b077409da0",
+          "id": "19693d40-61c9-413d-a76b-66d2fab29efc",
           "name": "big",
           "required": true,
           "dataType": "@sys.any",
@@ -161,15 +161,15 @@
               "Yandex": [
                 {
                   "Text": "Выразить восхищение автору текста",
-                  "Url": "https://vk.com/fillinthetextbot",
+                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_194",
                   "IsQuickReply": false
                 }
               ],
               "Marusia": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Выразить восхищение автору текста",
                   "IsQuickReply": false,
-                  "Text": "Выразить восхищение автору текста"
+                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_194"
                 }
               ]
             }
