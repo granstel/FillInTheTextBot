@@ -132,12 +132,21 @@ namespace FillInTheTextBot.Messengers.Sber
 
         private static PayloadItem[] GetPayloadItems(InternalModels.Response source)
         {
+            var result = new List<PayloadItem>();
+
             var itemWithBubble = new PayloadItem
             {
                 Bubble = { Text = source.Text }
             };
 
+            result.Add(itemWithBubble);
+
             var buttons = source.Buttons?.Where(b => !b.IsQuickReply).ToList();
+
+            if (buttons?.Any() != true)
+            {
+                return result.ToArray();
+            }
 
             var cardItems = buttons?.Select(b =>
             {
@@ -147,7 +156,7 @@ namespace FillInTheTextBot.Messengers.Sber
                     TopText = new CardCellText
                     {
                         Type = CellTypeValues.TextCellView,
-                        Text = string.Empty,
+                        Text = b.Text,
                         Typeface = TypefaceValues.Caption,
                         TextColor = TextColorValues.Default
                     },
@@ -187,12 +196,9 @@ namespace FillInTheTextBot.Messengers.Sber
                 ItemWidth = ItemWidthValues.Resizable
             };
 
-            var itemWithCard = new PayloadItem
-            {
-                Card = card
-            };
+            itemWithBubble.Card = card;
 
-            return new[] { itemWithBubble, itemWithCard };
+            return result.ToArray();
         }
 
         private static SberModels.Action GetAction(InternalModels.Button s)
