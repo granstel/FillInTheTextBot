@@ -24,7 +24,7 @@ namespace FillInTheTextBot.Messengers
 
         protected virtual Request Before(TInput input)
         {
-            throw new NotImplementedException($"Need to override '{nameof(Before)}' method of base type");
+            throw new NotImplementedException($"Need to convert {typeof(TInput)} type to {typeof(Request)} at overrided '{nameof(Before)}' method of {typeof(MessengerService<TInput, TOutput>)} type");
         }
 
         public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)

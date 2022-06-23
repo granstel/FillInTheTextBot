@@ -12,7 +12,6 @@ namespace FillInTheTextBot.Messengers.Marusia
     {
         public static Models.Request ToRequest(this InputModel source)
         {
-
             if (source == null) return null;
 
             var destinaton = new Models.Request();
