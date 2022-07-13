@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="4.0.0" />
+    <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="4.1.0" />
     <PackageReference Include="GranSteL.Helpers.Redis" Version="1.0.9" />
     <PackageReference Include="GranSteL.Tools.ScopeSelector" Version="0.0.3" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
