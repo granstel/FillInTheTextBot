@@ -77,8 +77,11 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.ScopeKey, m => m.Ignore());
 
             CreateMap<InternalModels.Response, Response>()
-                .ForMember(d => d.Payload, m => m.MapFrom(s => s))
-                ;
+                .ForMember(d => d.Payload, m => m.MapFrom(s => s)) // See CreateMap<InternalModels.Response, ResponsePayload>()
+                .ForMember(d => d.MessageName, m => m.Ignore())
+                .ForMember(d => d.SessionId, m => m.Ignore())
+                .ForMember(d => d.MessageId, m => m.Ignore())
+                .ForMember(d => d.Uuid, m => m.Ignore());
 
             CreateMap<InternalModels.Response, ResponsePayload>()
                 .ForMember(d => d.PronounceText, m => m.MapFrom(s => s.Text))
@@ -93,7 +96,9 @@ namespace FillInTheTextBot.Messengers.Sber
                 }))
                 .ForMember(d => d.Items, m => m.MapFrom(s => s))
                 .ForMember(d => d.Suggestions, m => m.MapFrom(s => s.Buttons.Where(b => b.IsQuickReply)))
-                ;
+                .ForMember(d => d.Intent, m => m.Ignore())
+                .ForMember(d => d.ProjectName, m => m.Ignore())
+                .ForMember(d => d.Device, m => m.Ignore());
 
             CreateMap<string, Emotion>()
                 .ForMember(d => d.EmotionId, m => m.MapFrom(s => s));
@@ -106,7 +111,7 @@ namespace FillInTheTextBot.Messengers.Sber
             CreateMap<InternalModels.Button, Button>()
                 .ForMember(d => d.Title, m => m.MapFrom(s => s.Text))
                 .ForMember(d => d.Action, m => m.MapFrom(s => s))
-                ;
+                .ForMember(d => d.Actions, m => m.Ignore());
 
             CreateMap<InternalModels.Button, SberModels.Action>()
                 .ForMember(d => d.Text, m => m.MapFrom(s => s.Text))
@@ -133,17 +138,32 @@ namespace FillInTheTextBot.Messengers.Sber
                 .ForMember(d => d.Device, m => m.MapFrom(s => s.Device))
                 .ForMember(d => d.ProjectName, m => m.Ignore())
                 .ForMember(d => d.Intent, m => m.Ignore())
-                ;
+                .ForMember(d => d.PronounceText, m => m.Ignore())
+                .ForMember(d => d.PronounceTextType, m => m.Ignore())
+                .ForMember(d => d.Emotion, m => m.Ignore())
+                .ForMember(d => d.Items, m => m.Ignore())
+                .ForMember(d => d.Suggestions, m => m.Ignore())
+                .ForMember(d => d.AutoListening, m => m.Ignore())
+                .ForMember(d => d.Finished, m => m.Ignore());
         }
 
         private PayloadItem[] MapResponseToItem(InternalModels.Response source, PayloadItem[] destinations, ResolutionContext context)
         {
+            var result = new List<PayloadItem>();
+
             var itemWithBubble = new PayloadItem
             {
                 Bubble = { Text = source.Text }
             };
 
+            result.Add(itemWithBubble);
+
             var buttons = source.Buttons?.Where(b => !b.IsQuickReply).ToList();
+
+            if (buttons?.Any() != true)
+            {
+                return result.ToArray();
+            }
 
             var cardItems = buttons?.Select(b =>
             {
@@ -153,7 +173,7 @@ namespace FillInTheTextBot.Messengers.Sber
                     TopText = new CardCellText
                     {
                         Type = CellTypeValues.TextCellView,
-                        Text = string.Empty,
+                        Text = " ",
                         Typeface = TypefaceValues.Caption,
                         TextColor = TextColorValues.Default
                     },
@@ -193,12 +213,9 @@ namespace FillInTheTextBot.Messengers.Sber
                 ItemWidth = ItemWidthValues.Resizable
             };
 
-            var itemWithCard = new PayloadItem
-            {
-                Card = card
-            };
+            itemWithBubble.Card = card;
 
-            return new[] { itemWithBubble, itemWithCard };
+            return result.ToArray();
         }
 
         private Suggestion MapButtonsToSuggestion(IEnumerable<InternalModels.Button> source, Suggestion destination, ResolutionContext context)
