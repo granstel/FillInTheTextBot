@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AutoMapper;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
@@ -15,22 +14,19 @@ namespace FillInTheTextBot.Messengers.Marusia
         private const string PingCommand = "ping";
         private const string PongResponse = "pong";
 
-        private readonly IMapper _mapper;
         private readonly IRedisCacheService _cache;
 
         public MarusiaService(
             ILogger<MarusiaService> log,
             IConversationService conversationService,
-            IMapper mapper,
-            IRedisCacheService cache) : base(log, conversationService, mapper)
+            IRedisCacheService cache) : base(log, conversationService)
         {
-            _mapper = mapper;
             _cache = cache;
         }
 
         protected override Models.Request Before(InputModel input)
         {
-            var request = base.Before(input);
+            var request = input.ToRequest();
 
             input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
 
@@ -59,11 +55,11 @@ namespace FillInTheTextBot.Messengers.Marusia
             return response;
         }
 
-        protected override async Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
+        protected override Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
         {
-            var output = await base.AfterAsync(input, response);
+            var output = response.ToOutput();
 
-            _mapper.Map(input, output);
+            output = input.FillOutput(output);
 
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 
@@ -73,7 +69,7 @@ namespace FillInTheTextBot.Messengers.Marusia
 
             _cache.AddAsync($"marusia:{response.UserHash}", string.Empty, TimeSpan.FromDays(14)).Forget();
 
-            return output;
+            return Task.FromResult(output);
         }
     }
 }

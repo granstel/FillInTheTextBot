@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AutoMapper;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
 using GranSteL.Helpers.Redis;
@@ -12,22 +11,19 @@ namespace FillInTheTextBot.Messengers.Sber
 {
     public class SberService : MessengerService<Request, Response>, ISberService
     {
-        private readonly IMapper _mapper;
         private readonly IRedisCacheService _cache;
 
         public SberService(
             ILogger<SberService> log,
             IConversationService conversationService,
-            IMapper mapper,
-            IRedisCacheService cache) : base(log, conversationService, mapper)
+            IRedisCacheService cache) : base(log, conversationService)
         {
-            _mapper = mapper;
             _cache = cache;
         }
 
         protected override Models.Request Before(Request input)
         {
-            var request = base.Before(input);
+            var request = input.ToRequest();
 
             var userStateCacheKey = GetCacheKey(request.UserHash);
 
@@ -47,9 +43,9 @@ namespace FillInTheTextBot.Messengers.Sber
 
         protected override async Task<Response> AfterAsync(Request input, Models.Response response)
         {
-            var output = await base.AfterAsync(input, response);
+            var output = response.ToResponse();
 
-            _mapper.Map(input, output);
+            output = input.FillResponse(output);
 
             var userState = new Models.UserState
             {

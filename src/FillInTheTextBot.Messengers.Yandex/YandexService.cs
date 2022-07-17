@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using AutoMapper;
 using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
 using Yandex.Dialogs.Models;
@@ -15,22 +14,20 @@ namespace FillInTheTextBot.Messengers.Yandex
         private const string PingCommand = "ping";
         private const string PongResponse = "pong";
 
-        private readonly IMapper _mapper;
         private readonly Stopwatch _stopwatch;
 
         public YandexService(
             ILogger<YandexService> log,
-            IConversationService conversationService,
-            IMapper mapper) : base(log, conversationService, mapper)
+            IConversationService conversationService) : base(log, conversationService)
         {
-            _mapper = mapper;
             _stopwatch = new Stopwatch();
         }
 
         protected override Models.Request Before(InputModel input)
         {
             _stopwatch.Start();
-            var request = base.Before(input);
+
+            var request = input.ToRequest();
 
             input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
 
@@ -69,11 +66,11 @@ namespace FillInTheTextBot.Messengers.Yandex
             return response;
         }
 
-        protected override async Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
+        protected override Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
         {
-            var output = await base.AfterAsync(input, response);
+            var output = response.ToOutput();
 
-            _mapper.Map(input, output);
+            output = input.FillOutput(output);
 
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 
@@ -91,7 +88,7 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             output.AddAnalyticsEvent(Models.Response.ScopeStorageKey, new Dictionary<string, object> { { Models.Response.ScopeStorageKey, response.ScopeKey } });
 
-            return output;
+            return Task.FromResult(output);
         }
 
         private ICollection<Models.Context> GetContexts(InputModel input)

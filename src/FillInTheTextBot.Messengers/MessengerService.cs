@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AutoMapper;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
@@ -14,22 +13,20 @@ namespace FillInTheTextBot.Messengers
         private const string ErrorLink = "https://vk.com/fillinthetextbot";
 
         private readonly IConversationService _conversationService;
-        private readonly IMapper _mapper;
 
         protected readonly ILogger Log;
 
-        protected MessengerService(ILogger log, IConversationService conversationService, IMapper mapper)
+        protected MessengerService(ILogger log, IConversationService conversationService)
         {
             Log = log;
             _conversationService = conversationService;
-            _mapper = mapper;
         }
 
         protected virtual Request Before(TInput input)
         {
-            var request = _mapper.Map<Request>(input);
-
-            return request;
+            throw new NotImplementedException($"Need to implement mapping from {typeof(TInput)} type to " +
+                                              $"{typeof(Request)} at overrided '{nameof(Before)}' method of " +
+                                              $"{typeof(MessengerService<TInput, TOutput>)} type");
         }
 
         public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
@@ -39,7 +36,7 @@ namespace FillInTheTextBot.Messengers
             try
             {
                 Request request;
-
+                
                 using (Tracing.Trace(operationName: "Before"))
                 {
                     request = Before(input);
@@ -57,11 +54,6 @@ namespace FillInTheTextBot.Messengers
                     if (response == null)
                     {
                         response = await _conversationService.GetResponseAsync(request);
-                    }
-
-                    using (Tracing.Trace(operationName: "Map request to response"))
-                    {
-                        _mapper.Map(request, response);
                     }
                 }
             }
@@ -141,11 +133,12 @@ namespace FillInTheTextBot.Messengers
             return null;
         }
 
-        protected virtual async Task<TOutput> AfterAsync(TInput input, Response response)
+        protected virtual Task<TOutput> AfterAsync(TInput input, Response response)
         {
-            var output = _mapper.Map<TOutput>(response);
-
-            return await Task.FromResult(output);
+            throw new NotImplementedException($"Need to implement mapping from {typeof(TInput)} and {typeof(Response)} " +
+                                              $"types to " +
+                                              $"{typeof(TOutput)} at overrided '{nameof(AfterAsync)}' method of " +
+                                              $"{typeof(MessengerService<TInput, TOutput>)} type");
         }
 
         public virtual Task<bool> SetWebhookAsync(string url)
