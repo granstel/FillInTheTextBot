@@ -252,10 +252,13 @@ namespace FillInTheTextBot.Messengers.Sber
             d.SessionId = s.SessionId;
             d.MessageId = s.MessageId;
             d.Uuid = s.Uuid;
-            d.Payload = new ResponsePayload
+
+            if (d.Payload == null)
             {
-                Device = s.Payload.Device
-            };
+                d.Payload = new ResponsePayload();
+            }
+
+            d.Payload.Device = s.Payload.Device;
 
             return d;
         }
