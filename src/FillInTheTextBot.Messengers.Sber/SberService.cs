@@ -45,7 +45,7 @@ namespace FillInTheTextBot.Messengers.Sber
         {
             var output = response.ToResponse();
 
-            input.FillResponse(output);
+            output = input.FillResponse(output);
 
             var userState = new Models.UserState
             {
