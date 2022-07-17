@@ -24,7 +24,9 @@ namespace FillInTheTextBot.Messengers
 
         protected virtual Request Before(TInput input)
         {
-            throw new NotImplementedException($"Need to convert {typeof(TInput)} type to {typeof(Request)} at overrided '{nameof(Before)}' method of {typeof(MessengerService<TInput, TOutput>)} type");
+            throw new NotImplementedException($"Need to implement mapping from {typeof(TInput)} type to " +
+                                              $"{typeof(Request)} at overrided '{nameof(Before)}' method of " +
+                                              $"{typeof(MessengerService<TInput, TOutput>)} type");
         }
 
         public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
@@ -133,7 +135,10 @@ namespace FillInTheTextBot.Messengers
 
         protected virtual Task<TOutput> AfterAsync(TInput input, Response response)
         {
-            throw new NotImplementedException($"Need to override '{nameof(AfterAsync)}' method of base type");
+            throw new NotImplementedException($"Need to implement mapping from {typeof(TInput)} and {typeof(Response)} " +
+                                              $"types to " +
+                                              $"{typeof(TOutput)} at overrided '{nameof(AfterAsync)}' method of " +
+                                              $"{typeof(MessengerService<TInput, TOutput>)} type");
         }
 
         public virtual Task<bool> SetWebhookAsync(string url)
