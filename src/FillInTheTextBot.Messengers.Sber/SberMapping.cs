@@ -156,7 +156,7 @@ namespace FillInTheTextBot.Messengers.Sber
                     TopText = new CardCellText
                     {
                         Type = CellTypeValues.TextCellView,
-                        Text = b.Text,
+                        Text = " ",
                         Typeface = TypefaceValues.Caption,
                         TextColor = TextColorValues.Default
                     },
