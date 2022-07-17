@@ -20,29 +20,29 @@ namespace FillInTheTextBot.Messengers.Sber
             Log = InternalLoggerFactory.CreateLogger(typeof(SberMapping).Name);
         }
 
-        public static InternalModels.Request ToRequest(this Request s)
+        public static InternalModels.Request ToRequest(this Request source)
         {
-            if (s == null) return null;
+            if (source == null) return null;
 
             var d = new InternalModels.Request();
 
-            d.ChatHash = s?.Payload?.AppInfo?.ProjectId.ToString();
-            d.UserHash = s?.Uuid?.Sub ?? s?.Uuid?.UserId;
-            d.Text = GetText(s);
-            d.NewSession = s?.Payload?.NewSession;
-            d.HasScreen = s?.Payload?.Device?.Capabilities?.Screen?.Available ?? false;
-            d.ClientId = s?.Payload?.Device?.Surface;
+            d.ChatHash = source.Payload?.AppInfo?.ProjectId.ToString();
+            d.UserHash = source.Uuid?.Sub ?? source.Uuid?.UserId;
+            d.Text = GetText(source);
+            d.NewSession = source.Payload?.NewSession;
+            d.HasScreen = source.Payload?.Device?.Capabilities?.Screen?.Available ?? false;
+            d.ClientId = source.Payload?.Device?.Surface;
             d.Source = InternalModels.Source.Sber;
-            d.Appeal = GetAppeal(s);
+            d.Appeal = GetAppeal(source);
 
             return d;
         }
 
-        private static InternalModels.Appeal GetAppeal(Request s)
+        private static InternalModels.Appeal GetAppeal(Request source)
         {
             var appeal = InternalModels.Appeal.NoOfficial;
 
-            if (string.Equals(s.Payload?.Character?.Appeal, "official"))
+            if (string.Equals(source.Payload?.Character?.Appeal, "official"))
             {
                 appeal = InternalModels.Appeal.Official;
             }
@@ -50,12 +50,12 @@ namespace FillInTheTextBot.Messengers.Sber
             return appeal;
         }
 
-        private static string GetText(Request s)
+        private static string GetText(Request source)
         {
             const string replacedObsceneWord = "кое-что";
             const string stars = "***";
 
-            var asrNormalizedMessage = s?.Payload?.Message?.AsrNormalizedMessage;
+            var asrNormalizedMessage = source.Payload?.Message?.AsrNormalizedMessage;
 
             try
             {
@@ -64,9 +64,9 @@ namespace FillInTheTextBot.Messengers.Sber
                     return asrNormalizedMessage.Replace(stars, replacedObsceneWord);
                 }
 
-                var obsceneIndex = s?.Payload?.Annotations?.CensorData?.Classes?.ToList().IndexOf("obscene") ?? 0;
+                var obsceneIndex = source.Payload?.Annotations?.CensorData?.Classes?.ToList().IndexOf("obscene") ?? 0;
 
-                if (s?.Payload?.Annotations?.CensorData?.Probas[obsceneIndex] == 1.0)
+                if (source.Payload?.Annotations?.CensorData?.Probas[obsceneIndex] == 1.0)
                 {
                     return replacedObsceneWord;
                 }
@@ -76,33 +76,33 @@ namespace FillInTheTextBot.Messengers.Sber
                 Log.LogError(e, "Error while request mapping");
             }
 
-            return s?.Payload?.Message?.OriginalText;
+            return source.Payload?.Message?.OriginalText;
         }
 
-        public static Response ToRespopnse (this InternalModels.Response s)
+        public static Response ToResponse (this InternalModels.Response source)
         {
-            if (s == null) return null;
+            if (source == null) return null;
 
             var d = new Response();
 
-            d.Payload = GetPayload(s);
+            d.Payload = GetPayload(source);
 
             return d;
         }
 
-        private static ResponsePayload GetPayload(InternalModels.Response s)
+        private static ResponsePayload GetPayload(InternalModels.Response source)
         {
-            if (s == null) return null;
+            if (source == null) return null;
 
             var d = new ResponsePayload();
 
-            d.PronounceText = s.Text;
+            d.PronounceText = source.Text;
             d.PronounceTextType = PronounceTextTypeValues.Text;
-            d.AutoListening = !s.Finished;
-            d.Finished = s.Finished;
-            d.Emotion = GetEmotion(s);
-            d.Items = GetPayloadItems(s);
-            d.Suggestions = GetSuggestions(s.Buttons.Where(b => b.IsQuickReply));
+            d.AutoListening = !source.Finished;
+            d.Finished = source.Finished;
+            d.Emotion = GetEmotion(source);
+            d.Items = GetPayloadItems(source);
+            d.Suggestions = GetSuggestions(source.Buttons.Where(b => b.IsQuickReply));
 
             return d;
         }
@@ -201,22 +201,22 @@ namespace FillInTheTextBot.Messengers.Sber
             return result.ToArray();
         }
 
-        private static SberModels.Action GetAction(InternalModels.Button s)
+        private static SberModels.Action GetAction(InternalModels.Button source)
         {
-            if (s == null) return null;
+            if (source == null) return null;
 
             var d = new SberModels.Action();
 
-            d.Text = s.Text;
-            d.DeepLink = s.Url;
-            d.Type = GetActionType(s);
+            d.Text = source.Text;
+            d.DeepLink = source.Url;
+            d.Type = GetActionType(source);
 
             return d;
         }
 
-        private static string GetActionType(InternalModels.Button s)
+        private static string GetActionType(InternalModels.Button source)
         {
-            if (!string.IsNullOrEmpty(s.Url))
+            if (!string.IsNullOrEmpty(source.Url))
             {
                 return ActionTypeValues.DeepLink;
             }
@@ -224,13 +224,13 @@ namespace FillInTheTextBot.Messengers.Sber
             return ActionTypeValues.Text;
         }
 
-        private static Emotion GetEmotion(InternalModels.Response s)
+        private static Emotion GetEmotion(InternalModels.Response source)
         {
-            if (s == null) return null;
+            if (source == null) return null;
 
             var d = new Emotion();
 
-            if (!s.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[InternalModels.Source.Sber], out string emotionKey))
+            if (!source.Emotions.TryGetValue(EmotionsKeysMap.SourceEmotionKeys[InternalModels.Source.Sber], out string emotionKey))
             {
                 return null;
             }
@@ -240,27 +240,27 @@ namespace FillInTheTextBot.Messengers.Sber
             return d;
         }
 
-        public static Response FillResponse(this Request s, Response d)
+        public static Response FillResponse(this Request source, Response destination)
         {
-            if (s == null) return null;
-            if (d == null)
+            if (source == null) return null;
+            if (destination == null)
             {
-                d = new Response();
+                destination = new Response();
             }
 
-            d.MessageName = MessageNameValues.AnswerToUser;
-            d.SessionId = s.SessionId;
-            d.MessageId = s.MessageId;
-            d.Uuid = s.Uuid;
+            destination.MessageName = MessageNameValues.AnswerToUser;
+            destination.SessionId = source.SessionId;
+            destination.MessageId = source.MessageId;
+            destination.Uuid = source.Uuid;
 
-            if (d.Payload == null)
+            if (destination.Payload == null)
             {
-                d.Payload = new ResponsePayload();
+                destination.Payload = new ResponsePayload();
             }
 
-            d.Payload.Device = s.Payload.Device;
+            destination.Payload.Device = source.Payload.Device;
 
-            return d;
+            return destination;
         }
     }
 }

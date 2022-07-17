@@ -43,7 +43,7 @@ namespace FillInTheTextBot.Messengers.Sber
 
         protected override async Task<Response> AfterAsync(Request input, Models.Response response)
         {
-            var output = response.ToRespopnse();
+            var output = response.ToResponse();
 
             input.FillResponse(output);
 
