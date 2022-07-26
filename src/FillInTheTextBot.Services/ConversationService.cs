@@ -61,8 +61,8 @@ namespace FillInTheTextBot.Services
             response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
             var (textWithSounds, textWithoutSounds) = AddSounds(dialog?.Payload, request.Source, response.Text);
-            response.Text = textWithSounds;
-            response.AlternativeText = textWithoutSounds;
+            response.Text = textWithoutSounds;
+            response.AlternativeText = textWithSounds;
 
             return response;
         }
