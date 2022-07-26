@@ -69,7 +69,7 @@ namespace FillInTheTextBot.Services
 
         private (string, string) AddSounds(Payload payload, Source source, string text)
         {
-            if (!payload.TryGetValue(source, out var value))
+            if (payload is null || !payload.TryGetValue(source, out var value))
             {
                 return (text, text);
             }
@@ -235,9 +235,13 @@ namespace FillInTheTextBot.Services
                 }
 
                 var buttonsForSource = new List<Button>();
-                buttonsForSource = dialogPayload.TryGetValue(requestSource, out var value) ? value.Buttons.ToList() : buttonsForSource;
 
-                buttons.AddRange(buttonsForSource);
+                if (dialogPayload is not null)
+                {
+                    buttonsForSource = dialogPayload.TryGetValue(requestSource, out var value)
+                        ? value.Buttons.ToList() : buttonsForSource;
+                    buttons.AddRange(buttonsForSource);
+                }
 
                 buttons = buttons.Where(b => !string.IsNullOrEmpty(b.Text)).ToList();
 
