@@ -4,7 +4,6 @@
     "data": [
       {
         "text": "стрельцов",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -18,7 +17,6 @@
     "data": [
       {
         "text": "стрельцами",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -32,7 +30,6 @@
     "data": [
       {
         "text": "стрельцы",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -50,7 +47,6 @@
       },
       {
         "text": "стрельцов",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -68,7 +64,6 @@
       },
       {
         "text": "стрельцов",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

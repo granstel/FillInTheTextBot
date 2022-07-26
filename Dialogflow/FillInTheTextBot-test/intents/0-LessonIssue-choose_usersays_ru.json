@@ -4,7 +4,6 @@
     "data": [
       {
         "text": "первый",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -22,7 +21,6 @@
     "data": [
       {
         "text": "номер один",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -40,7 +38,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -62,7 +59,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -71,7 +67,6 @@
       },
       {
         "text": "про школу",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -102,7 +97,6 @@
       },
       {
         "text": "первый",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -124,7 +118,6 @@
       },
       {
         "text": "первый",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {

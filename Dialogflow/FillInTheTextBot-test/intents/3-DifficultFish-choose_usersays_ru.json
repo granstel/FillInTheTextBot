@@ -4,7 +4,6 @@
     "data": [
       {
         "text": "рыбка",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -83,7 +82,6 @@
     "data": [
       {
         "text": "4",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -105,7 +103,6 @@
       },
       {
         "text": "четвёртый",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -123,7 +120,6 @@
     "data": [
       {
         "text": "четвёртый",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {

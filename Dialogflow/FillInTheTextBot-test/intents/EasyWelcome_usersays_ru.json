@@ -1,5 +1,52 @@
 [
   {
+    "id": "8cb8e014-8e6a-4298-8210-9c6cadb09609",
+    "data": [
+      {
+        "text": "включи навык занимательные ",
+        "userDefined": false
+      },
+      {
+        "text": "ист",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a6b53770-6dfd-4637-93c8-9792c141fd51",
+    "data": [
+      {
+        "text": "хочу навык занимательные истор",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d958402d-1df0-4c4b-80f2-752be6d3a848",
+    "data": [
+      {
+        "text": "запусти навык занимательные ",
+        "userDefined": false
+      },
+      {
+        "text": "ис",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "686f9afd-75d0-465e-996f-245a60a9431a",
     "data": [
       {
@@ -21,7 +68,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -69,7 +115,6 @@
       },
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

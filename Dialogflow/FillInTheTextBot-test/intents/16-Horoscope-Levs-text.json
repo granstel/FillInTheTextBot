@@ -146,22 +146,12 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Поддержать игру в голосовании",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Подписаться на группу ВК",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
               "Marusia": [
-                {
-                  "Text": "Поддержать игру в голосовании",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
                 {
                   "Text": "Подписаться на группу ВК",
                   "IsQuickReply": false,

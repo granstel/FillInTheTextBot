@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "26d1e8bd-28cc-4e06-a554-97cb90f0b4b3",
+          "id": "b91e64d8-418d-4dcb-8909-325a450e623a",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -51,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Настало время занимательных историй! Продолжим?",
-            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
-            "И вот пришло время занимательных историй! Давай сочиним что-нибудь?"
+            "\u003cS1\u003eНастало время занимательных историй! Давай сочиним что-нибудь?",
+            "\u003cS1\u003eПришла пора умопомрачительных повествований! Сочиним что-нибудь?",
+            "\u003cS1\u003eИ вот пришло время занимательных историй! Давай сочиним кое-что?"
           ],
           "condition": ""
         },
@@ -61,29 +61,24 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Yandex": {
+              "Buttons": [
                 {
-                  "Text": "Проголосовать за навык",
-                  "IsQuickReply": false,
-                  "Url": "https://t.me/yadialogsnews/170"
-                },
-                {
+                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Узнать, что новенького",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "IsQuickReply": false
                 }
               ],
-              "Marusia": [
+              "Sounds": {
+                "\u003cS1\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
+              }
+            },
+            "Marusia": {
+              "Buttons": [
                 {
-                  "IsQuickReply": false,
-                  "Text": "Проголосовать за навык",
-                  "Url": "https://t.me/yadialogsnews/170"
-                },
-                {
-                  "Text": "Узнать, что новенького",
                   "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false
+                  "IsQuickReply": false,
+                  "Text": "Узнать, что новенького"
                 }
               ]
             }

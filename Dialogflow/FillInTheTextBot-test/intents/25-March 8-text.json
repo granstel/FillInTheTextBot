@@ -135,22 +135,12 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Проголосовать за игру",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Новости навыка",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
               "Marusia": [
-                {
-                  "Text": "Проголосовать за игру",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
                 {
                   "Text": "Новости навыка",
                   "IsQuickReply": false,

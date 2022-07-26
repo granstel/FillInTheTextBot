@@ -8,7 +8,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -17,7 +16,6 @@
       },
       {
         "text": "новое",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -57,7 +55,6 @@
     "data": [
       {
         "text": "игра",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -88,7 +85,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -102,7 +98,6 @@
     "data": [
       {
         "text": "угу",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -133,7 +128,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -151,7 +145,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -334,7 +327,6 @@
     "data": [
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -365,7 +357,6 @@
     "data": [
       {
         "text": "ага",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -405,7 +396,6 @@
     "data": [
       {
         "text": "погнали",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -471,7 +461,6 @@
     "data": [
       {
         "text": "lf",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -485,7 +474,6 @@
     "data": [
       {
         "text": "Поехали",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -512,7 +500,6 @@
     "data": [
       {
         "text": "Да",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -604,7 +591,6 @@
     "data": [
       {
         "text": "Вперёд",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

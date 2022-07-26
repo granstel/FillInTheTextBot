@@ -19,7 +19,6 @@
     "data": [
       {
         "text": "крокодил",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -108,7 +107,6 @@
     "data": [
       {
         "text": "задумчивая",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],

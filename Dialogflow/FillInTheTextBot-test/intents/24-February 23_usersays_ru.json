@@ -8,7 +8,6 @@
       },
       {
         "text": "23 февраля",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -26,7 +25,6 @@
       },
       {
         "text": "про",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -35,7 +33,6 @@
       },
       {
         "text": "февраля",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -88,7 +85,6 @@
     "data": [
       {
         "text": "день защитника отечества",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -106,7 +102,6 @@
       },
       {
         "text": "мужиков",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -120,7 +115,6 @@
     "data": [
       {
         "text": "двадцать третье февраля",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -134,7 +128,6 @@
     "data": [
       {
         "text": "23 февраля",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

@@ -1,0 +1,227 @@
+[
+  {
+    "id": "37b65f72-b76a-4282-96be-6411c7a4d1c0",
+    "data": [
+      {
+        "text": "маленькими",
+        "meta": "@sys.any",
+        "alias": "adjective-9",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7d633c03-abc5-4634-94f8-20a60d885319",
+    "data": [
+      {
+        "text": "большими",
+        "meta": "@sys.any",
+        "alias": "adjective-9",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8fcea365-ca9f-4060-b144-fdb13a004e90",
+    "data": [
+      {
+        "text": "всякими",
+        "meta": "@sys.any",
+        "alias": "adjective-9",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "afd430de-7449-41f1-8e53-6b43d5eed18f",
+    "data": [
+      {
+        "text": "разными",
+        "meta": "@sys.any",
+        "alias": "adjective-9",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0c19f60d-98cc-48a2-8574-1a1e7753fe04",
+    "data": [
+      {
+        "text": "большую",
+        "meta": "@sys.any",
+        "alias": "adjective-8",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c1edc5a9-ca8b-45ab-b5ab-7bdab1d608e1",
+    "data": [
+      {
+        "text": "здоровую",
+        "meta": "@sys.any",
+        "alias": "adjective-8",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "52a7579a-16d6-46cf-a183-09cbebae24a7",
+    "data": [
+      {
+        "text": "бравую",
+        "meta": "@sys.any",
+        "alias": "adjective-8",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ad39241e-9f25-4626-b651-f7383e71270a",
+    "data": [
+      {
+        "text": "гоинг",
+        "meta": "@sys.any",
+        "alias": "adjective-7",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b949a6d4-1f29-408f-94c1-c3599e4fbb22",
+    "data": [
+      {
+        "text": "милая",
+        "meta": "@sys.any",
+        "alias": "adjective-7",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d52bd4cf-a30b-45e5-a6e0-d71f03b925c2",
+    "data": [
+      {
+        "text": "красивая",
+        "meta": "@sys.any",
+        "alias": "adjective-7",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "11e4c420-ca5d-4daa-9b22-cac81a850ed4",
+    "data": [
+      {
+        "text": "больничная",
+        "meta": "@sys.any",
+        "alias": "adjective-7",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4c4acdac-7c6c-49a7-ade6-e0253da82140",
+    "data": [
+      {
+        "text": "любую",
+        "meta": "@sys.any",
+        "alias": "adjective-6",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ed024017-3b6a-419d-bfd8-b199768fbc72",
+    "data": [
+      {
+        "text": "пшёную",
+        "meta": "@sys.any",
+        "alias": "adjective-6",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "19e5ecd8-d712-408c-8d49-77c8a451e453",
+    "data": [
+      {
+        "text": "гречневую",
+        "meta": "@sys.any",
+        "alias": "adjective-6",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8cdb0798-1646-4a2b-8475-35226e190487",
+    "data": [
+      {
+        "text": "манную",
+        "meta": "@sys.any",
+        "alias": "adjective-6",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

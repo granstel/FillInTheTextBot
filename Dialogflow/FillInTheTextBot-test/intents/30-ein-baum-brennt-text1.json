@@ -1,0 +1,234 @@
+{
+  "id": "70467fe1-7acc-4cfd-b8e9-741c3cf5b88e",
+  "parentId": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "30-ein-baum-brennt-text1",
+  "auto": true,
+  "contexts": [
+    "text-30-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        },
+        {
+          "name": "text-30-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-30",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "e3bc172b-08f3-4c78-b1db-c1bfec4fe160",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "текст от подписчика под названием «Вот это ёлка!»",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "571425e7-e288-4e20-86c0-a3b45662d251",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-30-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "48cb974c-f19d-4f72-b6d2-2588f580d55d",
+          "name": "name1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Напомни пожалуйста, как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва подскажи, как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва напомни, как твоё имя?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "58eac5e1-f7e8-4b8e-9252-da8532ae20f4",
+          "name": "name2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи имя своей подруги"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи пожалуйста имя своей мамы"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bd01408a-5d62-4c02-ba78-976e41487274",
+          "name": "name3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Подскажи пожалуйста имя своего папы"
+            },
+            {
+              "lang": "ru",
+              "value": "А теперь - имя своего друга"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1262706c-66cc-4d6e-ad20-9da6d718c57a",
+          "name": "fruits",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$fruits",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови пару новогодних фруктов"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2a359bfa-540d-49d5-9f7b-12db925e262b",
+          "name": "anything",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$anything",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "А какой овощ ты знаешь?"
+            },
+            {
+              "lang": "ru",
+              "value": "А какая сладость тебе нравится?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что ты хочешь получить на новый год?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "67f1b71e-2746-419b-990a-37ed66716da1",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь тупой предмет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Конечно!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, однажды $name1, $name2, и $name3 готовились к Новому году и решили сходить за ёлкой. Вот они взяли всё необходимое, и пошли в лес. Вдруг видят такую ёлку, на которой растут $fruits и $anything!\n— Вот это ёлка! — сказали они хором.\nИдут к ней, достают пилу, но оказалось что это не пила, а $thing.\n— Беда — говорит $name2 — что же нам делать?\n— Не переживайте — говорит $name1 — у меня есть пила!\nНачало хорошее. Хочешь узнать, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-30-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

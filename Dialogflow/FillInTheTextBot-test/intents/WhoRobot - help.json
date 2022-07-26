@@ -1,0 +1,42 @@
+{
+  "id": "9e226eac-45c3-49f8-824f-5f2f01761255",
+  "name": "WhoRobot - help",
+  "auto": true,
+  "contexts": [
+    "whorobot"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "WhoRobot.WhoRobot-custom",
+      "affectedContexts": [
+        {
+          "name": "whorobot",
+          "lifespan": 500
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Увы, я не могу ответить на все твои вопросы, но ты можешь попросить меня повторить загадку"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

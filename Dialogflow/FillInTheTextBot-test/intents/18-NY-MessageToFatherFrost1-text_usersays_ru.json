@@ -109,7 +109,7 @@
     "data": [
       {
         "text": "бурмалиновый",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
         "userDefined": true
       }
@@ -124,7 +124,7 @@
     "data": [
       {
         "text": "фиолетовый",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
         "userDefined": true
       }
@@ -138,8 +138,8 @@
     "id": "39fda7f7-9bc6-4b16-898d-2232d25febb7",
     "data": [
       {
-        "text": "зелёныйф",
-        "meta": "@sys.color",
+        "text": "зелёный",
+        "meta": "@sys.any",
         "alias": "color",
         "userDefined": true
       }
@@ -154,7 +154,7 @@
     "data": [
       {
         "text": "жёлтый",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
         "userDefined": true
       }
@@ -169,7 +169,7 @@
     "data": [
       {
         "text": "красный",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
         "userDefined": true
       }
@@ -184,7 +184,7 @@
     "data": [
       {
         "text": "синий",
-        "meta": "@sys.color",
+        "meta": "@sys.any",
         "alias": "color",
         "userDefined": true
       }

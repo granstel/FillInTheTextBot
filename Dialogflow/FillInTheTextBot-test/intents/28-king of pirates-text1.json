@@ -1,0 +1,191 @@
+{
+  "id": "bcc00034-197d-4db6-a630-d13a940947c5",
+  "parentId": "cd3153e5-a994-491f-8fc3-286297a3932a",
+  "name": "28-king of pirates-text1",
+  "auto": true,
+  "contexts": [
+    "text-28-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-28-1",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        },
+        {
+          "name": "text-28",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "6c4d4846-e736-4d51-b8ec-b15e190e70da",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про короля пиратов. Эта история состоит из двух частей.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "10250595-6ece-4464-a116-b2b388a43131",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-28-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0f24674f-805f-4428-bd24-9fca0b99cd34",
+          "name": "city",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$city",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, как называется город, в котором ты живёшь?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, как называется город, в котором ты хочешь жить?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, как называется город, в котором живёт твой друг?"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, как называется город, в котором живёт твоя подруга?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0da8fc86-9979-4182-994a-6fcdb420aaa3",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Какой цвет?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "91ef4fa9-b63f-49e9-9b53-706620e338af",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какого?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ff9f34b8-28d3-4dc8-bde6-0fc2ba190dfa",
+          "name": "adjective-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ae29c517-1a79-428b-8f45-37d7d31c72e1",
+          "name": "adjective-4",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Последний вопрос - «Какими?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Слушай первую часть: в городе $city жил мальчик, который мечтал стать королём пиратов. И однажды в таверну пришел один господин и сказал, что хочет нанять на свой $adjective-1 корабль команду, чтобы отправиться на поиски сокровищ. Мальчику удалось получить должность $adjective-2 юнги. И вот они отправились в плавание, и приплыли на $adjective-3 остров. Капитан достал карту, и вся команда, вооружившись $adjective-4 лопатами, отправилась на берег. Но они не знали, что на этом острове живет $adjective-3 $adjective-1 великан. Увидев гостей, он очень рассердился. Капитан корабля испугался и отдал ему мальчика, а сам со своими пиратами отправился искать клад…\nХочешь узнать, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-28-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

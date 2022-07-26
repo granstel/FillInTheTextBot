@@ -1,6 +1,7 @@
 {
   "id": "d3f1db2e-9082-4b8a-99b6-c32dc2d929e7",
   "parentId": "bf3b78d3-2cea-48a3-b008-d030a3f9429b",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "26-Boris the cat and chocolate-text",
   "auto": true,
   "contexts": [
@@ -13,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "d2a6147d-9d1a-4a33-8b91-92e9cfd34deb",
+          "id": "415ca372-0cc4-45c9-a300-739b7d2d9582",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +28,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "76e74d87-ecfb-4ecc-9fa3-71904d6b01ef",
+          "id": "8dd8b376-bbbe-457b-9d90-6d5a785ebe27",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -58,7 +59,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1c328246-cf65-4ae3-b7cb-b8897f358f32",
+          "id": "e08e2a09-a95d-42ac-b527-3635a0d87a82",
           "name": "animal-1",
           "required": true,
           "dataType": "@sys.any",
@@ -81,7 +82,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ae7f1cd3-3d43-4204-9fb5-12a4df0e3eec",
+          "id": "7d658609-3c82-4cf0-bfdc-e9041203e57d",
           "name": "animal-2",
           "required": true,
           "dataType": "@sys.any",
@@ -108,7 +109,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "711bd055-5e6e-4fdc-a3b8-1ae096d8f991",
+          "id": "19693d40-61c9-413d-a76b-66d2fab29efc",
           "name": "big",
           "required": true,
           "dataType": "@sys.any",
@@ -159,26 +160,16 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Поддержать игру в голосовании",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Выразить восхищение автору текста",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_194",
+                  "IsQuickReply": false
                 }
               ],
               "Marusia": [
                 {
-                  "Text": "Поддержать игру в голосовании",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Выразить восхищение автору текста",
                   "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_194"
                 }
               ]
             }
