@@ -58,10 +58,34 @@ namespace FillInTheTextBot.Services
             response.NextTextIndex = request.NextTextIndex;
 
             response.Text = GetResponseText(request.Appeal, response.Text);
-
             response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
+            var (textWithSounds, textWithoutSounds) = AddSounds(dialog?.Payload, request.Source, response.Text);
+            response.Text = textWithSounds;
+            response.AlternativeText = textWithoutSounds;
+
             return response;
+        }
+
+        private (string, string) AddSounds(Payload payload, Source source, string text)
+        {
+            if (!payload.TryGetValue(source, out var value))
+            {
+                return (text, text);
+            }
+
+            var sounds = value.Sounds;
+
+            var textWithSounds = text;
+            var textWithoutSounds = text;
+
+            foreach (var sound in sounds)
+            {
+                textWithSounds = text.Replace(sound.Key, sound.Value);
+                textWithoutSounds = text.Replace(sound.Key, string.Empty);
+            }
+
+            return (textWithSounds, textWithoutSounds);
         }
 
         private async Task<Response> GetText(Request request, string startText, string textKey = null)
@@ -210,13 +234,8 @@ namespace FillInTheTextBot.Services
                     buttons.AddRange(responseButtons);
                 }
 
-                if (dialogPayload?.Buttons?.Any() == true)
-                {
-                    buttons.AddRange(dialogPayload.Buttons);
-                }
-
                 var buttonsForSource = new List<Button>();
-                buttonsForSource = dialogPayload?.ButtonsForSource?.GetValueOrDefault(requestSource, buttonsForSource).ToList() ?? buttonsForSource;
+                buttonsForSource = dialogPayload.TryGetValue(requestSource, out var value) ? value.Buttons.ToList() : buttonsForSource;
 
                 buttons.AddRange(buttonsForSource);
 

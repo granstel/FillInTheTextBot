@@ -101,40 +101,6 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
         }
 
         [Test]
-        public void ToDialog_Payload_CorrectButtonText()
-        {
-            var buttonsStruct = new Struct();
-            var buttonText = _fixture.Create<string>();
-            buttonsStruct.Fields.Add("Text", new Value
-            {
-                StringValue = buttonText
-            });
-
-            var listValue = new ListValue();
-            listValue.Values.Add(new Value
-            {
-                StructValue = buttonsStruct
-            });
-
-            var message = new Intent.Types.Message
-            {
-                Payload = new Struct()
-            };
-            message.Payload.Fields.Add("Buttons", new Value
-            {
-                ListValue = listValue
-            });
-
-            var source = new QueryResult();
-            source.FulfillmentMessages.Add(message);
-
-            var dialog = source.ToDialog();
-
-            Assert.IsNotEmpty(dialog.Payload.Buttons, "Payload should not be empty");
-            Assert.AreEqual(buttonText, dialog.Payload.Buttons.Select(b => b.Text).FirstOrDefault());
-        }
-
-        [Test]
         public void ToDialog_Response_EqualsFulfillmentText()
         {
             var fulfillmentText = _fixture.Create<string>();
