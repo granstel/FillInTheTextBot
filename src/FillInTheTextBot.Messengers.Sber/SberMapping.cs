@@ -61,7 +61,7 @@ namespace FillInTheTextBot.Messengers.Sber
             {
                 if (string.Equals(source.MessageName, "RATING_RESULT"))
                 {
-                    return "event:next";
+                    return "event:rating_result";
                 }
 
                 if (asrNormalizedMessage?.Contains(stars) == true)
