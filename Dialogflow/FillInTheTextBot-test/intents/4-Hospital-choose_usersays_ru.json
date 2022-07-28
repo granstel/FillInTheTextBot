@@ -8,7 +8,6 @@
       },
       {
         "text": "пять",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -22,7 +21,6 @@
     "data": [
       {
         "text": "больница",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -62,7 +60,6 @@
     "data": [
       {
         "text": "5",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -80,7 +77,6 @@
     "data": [
       {
         "text": "пятый",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
