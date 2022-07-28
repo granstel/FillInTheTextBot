@@ -64,7 +64,6 @@
     "data": [
       {
         "text": "стёпа",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -78,7 +77,6 @@
     "data": [
       {
         "text": "саша",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -92,7 +90,6 @@
     "data": [
       {
         "text": "лёша",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -106,7 +103,6 @@
     "data": [
       {
         "text": "лёха",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -120,7 +116,6 @@
     "data": [
       {
         "text": "виталий",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -134,7 +129,6 @@
     "data": [
       {
         "text": "ёж",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -148,7 +142,6 @@
     "data": [
       {
         "text": "крыса",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -162,7 +155,6 @@
     "data": [
       {
         "text": "жираф",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],

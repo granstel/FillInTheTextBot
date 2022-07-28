@@ -1,0 +1,57 @@
+{
+  "id": "cd3153e5-a994-491f-8fc3-286297a3932a",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "28-king of pirates",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-28",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "92ee54d6-5bc7-4d2a-8f58-75fb953cb049",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-28-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Сейчас сочиним",
+            "Давай сочиним"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

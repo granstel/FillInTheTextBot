@@ -193,22 +193,12 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Поддержать игру в голосовании",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Поблагодарить разработчиков",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/im?sel\u003d-201360423"
                 }
               ],
               "Marusia": [
-                {
-                  "Text": "Поддержать игру в голосовании",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
                 {
                   "Text": "Поблагодарить разработчиков",
                   "IsQuickReply": false,

@@ -277,22 +277,12 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Проголосовать за занимательные истории",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Что новенького?",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
               "Marusia": [
-                {
-                  "Text": "Проголосовать за занимательные истории",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
                 {
                   "Text": "Что новенького?",
                   "IsQuickReply": false,

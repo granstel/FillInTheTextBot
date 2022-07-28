@@ -43,28 +43,24 @@
           "title": "",
           "payload": {
             "ButtonsForSource": {
-              "Yandex": [
-                {
-                  "Text": "Голосовать за навык",
-                  "IsQuickReply": false,
-                  "Url": "https://t.me/yadialogsnews/170"
-                },
-                {
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Подписаться на новости"
-                }
-              ],
               "Marusia": [
                 {
-                  "Text": "Голосовать за навык",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
-                  "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Подписаться на новости"
+                  "Text": "Подписаться на новости",
+                  "IsQuickReply": false
+                }
+              ],
+              "Sber": [
+                {
+                  "Text": "Оценить игру",
+                  "IsQuickReply": true
+                }
+              ],
+              "Yandex": [
+                {
+                  "Text": "Подписаться на новости",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
                 }
               ]
             }

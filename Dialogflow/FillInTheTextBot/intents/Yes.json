@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "e3d667b0-dbac-49db-ab80-908d735e8614",
+          "id": "c273413e-73a8-4c12-8c20-0cd6289a82b9",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -24,7 +24,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "b29d44ee-41f6-4d2a-b305-4d2cdc4e3038",
+          "id": "9465c9c7-453d-4527-8dc1-20e51aa16576",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
