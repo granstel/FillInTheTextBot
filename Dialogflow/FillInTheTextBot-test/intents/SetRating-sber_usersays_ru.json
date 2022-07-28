@@ -1,5 +1,22 @@
 [
   {
+    "id": "05cd5849-ee31-45ed-9144-cc17caf00550",
+    "data": [
+      {
+        "text": "оценить ",
+        "userDefined": false
+      },
+      {
+        "text": "игру",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "4fc00948-7b4a-4f33-9c4a-793f9e17c6c0",
     "data": [
       {
