@@ -17,7 +17,6 @@
     "data": [
       {
         "text": "девятый",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -35,7 +34,6 @@
     "data": [
       {
         "text": "козероги",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -75,7 +73,6 @@
     "data": [
       {
         "text": "годовой",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {

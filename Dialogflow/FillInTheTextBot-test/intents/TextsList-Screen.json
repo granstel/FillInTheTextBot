@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "4413b940-5f06-42d0-945e-844bbdae809a",
+          "id": "13081982-d036-4738-ab76-f4727bc37a21",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -135,6 +135,25 @@
           "title": "истории",
           "buttons": [
             {
+              "text": "Про короля пиратов"
+            },
+            {
+              "text": "Опоздательная в больницу"
+            },
+            {
+              "text": "Вот это ёлка!"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
               "text": "Гороскоп про водолеев"
             },
             {
@@ -206,22 +225,6 @@
           "condition": ""
         },
         {
-          "type": "1",
-          "platform": "telegram",
-          "title": "истории",
-          "buttons": [
-            {
-              "text": "Самый новый"
-            },
-            {
-              "text": "Любой"
-            }
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
-        {
           "type": "0",
           "title": "",
           "textToSpeech": "",
@@ -230,6 +233,25 @@
             "Если не сможешь выбрать, просто скажи «любой» или «новый». Итак, вот что у меня сейчас есть:",
             "Вот они. Если трудно выбрать, просто скажи «любой» или «новый»"
           ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Buttons": [
+              {
+                "IsQuickReply": false,
+                "Text": "Самый новый"
+              },
+              {
+                "Text": "Любой",
+                "IsQuickReply": false
+              }
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "ru",
           "condition": ""
         }
       ],

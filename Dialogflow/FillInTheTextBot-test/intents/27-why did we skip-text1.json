@@ -26,7 +26,7 @@
       ],
       "parameters": [
         {
-          "id": "9c4ea103-9e4c-4d30-bdbe-9a4443ebea77",
+          "id": "936de867-0422-4ff4-a9e9-e3e0c627f0aa",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -40,7 +40,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "5bd328ad-ab40-414a-9e1b-9886cc83e5e7",
+          "id": "8504523c-88b0-4a67-a7cd-9e0546dc3880",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -54,7 +54,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "778c503f-ccb4-4a87-a429-d0720115b0a0",
+          "id": "e7ccc36c-ae1a-45ba-ab16-ea5b5f629b56",
           "name": "name-0",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +77,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "616f2c0c-1663-47e9-a8c1-ad532969fe3d",
+          "id": "ff4073ea-8992-49ad-87c4-8b28f1dc171e",
           "name": "number",
           "required": true,
           "dataType": "@sys.number-integer",
@@ -100,7 +100,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d02cd618-75d1-4714-85f1-c8794f39e658",
+          "id": "fae74d68-02bf-4a3a-a138-afef92d0ac8d",
           "name": "name-1",
           "required": true,
           "dataType": "@sys.any",

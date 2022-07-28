@@ -1,6 +1,7 @@
 {
   "id": "6b75739f-9a44-4d0e-9441-bd7f464d8985",
   "parentId": "678363e4-59b6-45b4-81ce-835da5ce43ce",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "18-NY-MessageToFatherFrost1-text",
   "auto": true,
   "contexts": [
@@ -13,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "67ef9dac-a7c3-44ea-baef-7cd5adea1baa",
+          "id": "a7e4b727-cce3-41c0-957d-b824761b855e",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +28,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ca2c62c3-7fe3-4a6b-a5b9-3aafe4510bc7",
+          "id": "825c7647-732c-499e-9028-a37863074ba9",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -50,7 +51,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "b720924e-a137-41b4-a33b-e61daa562f1b",
+          "id": "c6306c58-f426-456b-a89c-83e21994b18a",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -73,7 +74,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "50b4a0d6-4b03-45fb-8587-ce571a34195f",
+          "id": "69c0f04a-a13c-487b-9638-2ba05f909a71",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -96,7 +97,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9d41ea94-d459-487e-ad5c-31721e1d564b",
+          "id": "eaa51053-b19b-426c-95a0-c8efb237f1e4",
           "name": "color",
           "required": true,
           "dataType": "@sys.any",
@@ -123,7 +124,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "556c1a24-0ecf-4893-bf7b-ef4dffdeca5f",
+          "id": "afe7f52d-1d78-4e26-ae34-fa574d25bb78",
           "name": "name",
           "required": true,
           "dataType": "@sys.any",
@@ -174,26 +175,16 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Голосовать за занимательные истории",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
-                  "Text": "Подписаться на новости в ВК",
                   "IsQuickReply": false,
+                  "Text": "Подписаться на новости в ВК",
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
               "Marusia": [
                 {
-                  "Text": "Голосовать за занимательные истории",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
-                  "Text": "Подписаться на новости в ВК",
+                  "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Text": "Подписаться на новости в ВК"
                 }
               ]
             }
@@ -208,7 +199,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Итак, вот какое письмо мы написали: «Дорогой Дедушка Мороз! Мы с нетерпением ждём тебя. Новый год — это самый $adjective-1 праздник в году. Так не хочется говорить о учебе, потому что она такая $adjective-2. Но мы обещаем, что будем получать только лучшие оценки. Так что, открывай поскорее свой $color мешок и вручай нам $adjective-3 подарки. С уважением, $name и Алиса!»\nПо-моему, у нас получилось очень милое письмо! Давай ещё что-нибудь сочиним?"
+            "Итак, вот какое письмо мы написали: «Дорогой Дедушка Мороз! Мы с нетерпением ждём тебя. Новый год — это самый $adjective-1 праздник в году. Так не хочется говорить о учебе, потому что она такая $adjective-2. Но мы обещаем, что будем получать только лучшие оценки. Так что, открывай поскорее свой $color мешок и вручай нам $adjective-3 подарки. С уважением, $name и самый лучший голосовой помощник!»\nПо-моему, у нас получилось очень милое письмо! Давай ещё что-нибудь сочиним?"
           ],
           "condition": ""
         }

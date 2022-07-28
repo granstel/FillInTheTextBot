@@ -17,7 +17,6 @@
     "data": [
       {
         "text": "новый",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -96,7 +95,6 @@
     "data": [
       {
         "text": "новинка",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],

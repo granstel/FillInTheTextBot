@@ -158,22 +158,12 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Поддержать навык",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Предложить свой текст",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/im?sel\u003d-201360423"
                 }
               ],
               "Marusia": [
-                {
-                  "Text": "Поддержать навык",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
                 {
                   "Text": "Предложить свой текст",
                   "IsQuickReply": false,

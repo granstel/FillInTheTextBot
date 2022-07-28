@@ -1,0 +1,203 @@
+{
+  "id": "802b21cf-570b-4d6c-a9af-0c47aefb92d7",
+  "parentId": "bcc00034-197d-4db6-a630-d13a940947c5",
+  "name": "28-king of pirates-text2",
+  "auto": true,
+  "contexts": [
+    "text-28-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-28-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-28",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "8e28a0f7-4bf2-445d-bf87-8def719bffe9",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a747569c-cffe-40d1-b62c-0af0face9636",
+          "name": "adjective-5",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "#text-28.adjective-3 #text-28.adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3287dc2f-7ae8-45d4-990e-eccc83737d45",
+          "name": "adjective-6",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-6",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Какую кашу ты не любишь?"
+            },
+            {
+              "lang": "ru",
+              "value": "Какую кашу ты любишь больше всего?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a99396c9-0efb-413a-89c6-a623c845dac9",
+          "name": "adjective-7",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-7",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какая?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "87e48ce7-0e51-4f49-be9b-41dcc5f58913",
+          "name": "adjective-8",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-8",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какую?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "56d13440-b065-471e-90e7-6af3adf70f35",
+          "name": "adjective-9",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-9",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Последний вопрос - «Какими?»"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос - «Какими?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Слушай, что бы дальше: #text-28.adjective-5 великан схватил мальчика и утащил его в $adjective-6 пещеру. Ночью мальчик прокрался мимо спящего великана, сел на #text-28.adjective-1 корабль и уплыл далеко-далеко. Вскоре он сам нашёл себе $adjective-8 команду, стал их капитаном, и всю жизнь плавал $adjective-9 морями и #text-28.adjective-4 океанами на своем корабле, который он назвал «$adjective-7 Мэри».\nОчень занимательная история! Хочешь ещё что-нибудь сочинить?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "ButtonsForSource": {
+              "Marusia": [
+                {
+                  "Text": "Подписаться на новости",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ],
+              "Yandex": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Подписаться на новости",
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-28-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

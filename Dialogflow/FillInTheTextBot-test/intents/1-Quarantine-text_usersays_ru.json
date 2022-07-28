@@ -79,7 +79,6 @@
     "data": [
       {
         "text": "большой",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -93,7 +92,6 @@
     "data": [
       {
         "text": "пистолет",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -167,7 +165,6 @@
     "data": [
       {
         "text": "самец",
-        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],

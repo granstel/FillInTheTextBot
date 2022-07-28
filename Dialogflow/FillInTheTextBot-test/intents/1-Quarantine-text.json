@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "2109e5ec-7009-46d7-9acd-eff896e51a76",
+          "id": "2664ca34-d623-47a5-a877-fd2dc1163a9d",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ea310d58-052b-4780-a75e-8905661b75f6",
+          "id": "38e0c014-8922-4b7d-9c8c-877d1c20af8d",
           "name": "number-1",
           "required": true,
           "dataType": "@sys.number",
@@ -50,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "61d96cf1-8821-4a8a-a469-83c553ddc013",
+          "id": "5c18da87-d188-4f8a-bca2-4a58267d8384",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -69,7 +69,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "b78039d5-cc09-4273-86b9-57a612a91060",
+          "id": "8139165d-210e-4d43-96f9-c8d22d48c9a8",
           "name": "number-2",
           "required": true,
           "dataType": "@sys.number",
@@ -92,7 +92,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "03866e86-72f9-449b-bfea-85316e4f251f",
+          "id": "fbebc6f5-0f8a-4560-a746-17f4a58be9bc",
           "name": "animal-male",
           "required": true,
           "dataType": "@sys.any",
@@ -115,7 +115,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d074dd6f-9db4-4c31-bac4-b0ad4fa49015",
+          "id": "647ebd2e-5a6a-4f36-bb93-f8df63abc3ab",
           "name": "adjective-male-2",
           "required": true,
           "dataType": "@sys.any",
@@ -134,7 +134,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0cb729d1-d14b-421b-aacf-b82fbdb5d2ce",
+          "id": "65e4b4ad-efa3-4fe9-8b19-94e8ad5c1ad8",
           "name": "number-3",
           "required": true,
           "dataType": "@sys.number",
@@ -157,7 +157,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "8c47fa15-7ade-44b4-aaff-799812c077ed",
+          "id": "08f97ec9-18a4-4bbd-b04c-5403235b2a47",
           "name": "animal-female",
           "required": true,
           "dataType": "@sys.any",
@@ -180,7 +180,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "48aee0e4-212d-44f2-9bc5-8499ca6ff720",
+          "id": "504cddc8-0295-4400-a0b2-e611780b40bc",
           "name": "adjective-female",
           "required": true,
           "dataType": "@sys.any",
@@ -219,26 +219,16 @@
             "ButtonsForSource": {
               "Yandex": [
                 {
-                  "Text": "Проголосовать за игру",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
                   "Text": "Следить за новостями",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
                 }
               ],
               "Marusia": [
                 {
-                  "Text": "Проголосовать за игру",
-                  "Url": "https://t.me/yadialogsnews/170",
-                  "IsQuickReply": false
-                },
-                {
-                  "Text": "Следить за новостями",
                   "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Следить за новостями"
                 }
               ]
             }
@@ -253,7 +243,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Посвящается годовщине самоизоляции. У нас карантин: надо соблюдать дистанцию $number-1 м, не собираться больше $number-2 человек, не плевать на $number-3 м с разбега. За порядком следят $adjective-1 полицейские. Всё закрылось. Мне сказали, что я должен взять на прокорм какого-нибудь зверя, а то у зоопарка кончились деньги. Я позвонил туда и спросил: «У вас есть $adjective-male-2 $animal-male? Я всегда мечтал о нём!» Они сказали: «Да, конечно, есть, сейчас привезём!» Они привезли зверька, но оказалось, это совсем не $animal-male, а гигантская $adjective-female $animal-female! 5 минут она вела себя тихо, но потом съела всё съедобное в доме, и стала ходить по пятам за мной... Я убежал на улицу и спросил у полицейского: «Вы можете мне помочь? У меня дома поселилась $adjective-female $animal-female. Идёмте, покажу.» Я пропустил его вперёд (а сам не зашёл), запер за ним дверь, и ушёл. Всё равно квартира не моя, а съёмная. \n— По-моему отлично! Давай ещё сочиним?"
+            "У нас карантин: надо соблюдать дистанцию $number-1 м, не собираться больше $number-2 человек, не плевать на $number-3 м с разбега. За порядком следят $adjective-1 полицейские. Всё закрылось. Мне сказали, что я должен взять на прокорм какого-нибудь зверя, а то у зоопарка кончились деньги. Я позвонил туда и спросил: «У вас есть $adjective-male-2 $animal-male? Я всегда мечтал о нём!» Они сказали: «Да, конечно, есть, сейчас привезём!» Они привезли зверька, но оказалось, это совсем не $animal-male, а гигантская $adjective-female $animal-female! 5 минут она вела себя тихо, но потом съела всё съедобное в доме, и стала ходить по пятам за мной... Я убежал на улицу и спросил у полицейского: «Вы можете мне помочь? У меня дома поселилась $adjective-female $animal-female. Идёмте, покажу.» Я пропустил его вперёд (а сам не зашёл), запер за ним дверь, и ушёл. Всё равно квартира не моя, а съёмная. \n— По-моему отлично! Давай ещё сочиним?"
           ],
           "condition": ""
         }

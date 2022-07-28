@@ -17,7 +17,6 @@
     "data": [
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -35,7 +34,6 @@
     "data": [
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -187,7 +185,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -218,7 +215,6 @@
     "data": [
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -227,7 +223,6 @@
       },
       {
         "text": "андрея",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -271,7 +266,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -280,7 +274,6 @@
       },
       {
         "text": "алису",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -298,7 +291,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -320,7 +312,6 @@
       },
       {
         "text": "сочиним",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {

@@ -1,0 +1,57 @@
+{
+  "id": "db6be86a-ea15-40fe-8434-98171ead7ad7",
+  "name": "WhoRobot - answer",
+  "auto": true,
+  "contexts": [
+    "whorobot"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "WhoRobot.WhoRobot-custom",
+      "affectedContexts": [
+        {
+          "name": "whorobot",
+          "lifespan": 500
+        }
+      ],
+      "parameters": [
+        {
+          "id": "79835988-25e7-435a-a127-bcaee0377853",
+          "name": "answer",
+          "required": false,
+          "dataType": "@answer",
+          "value": "$answer",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Это, детектив, правильный ответ. Теперь найди место, где Умами и его 4 брата создают что-то новое. Там ты найдешь что-то, что нельзя было съесть, но когда-то можно было выпить. Главное - не переходи черту. На этом моя роль исчерпана, удачи!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -34,7 +34,6 @@
       },
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -52,7 +51,6 @@
       },
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       },
       {
@@ -174,7 +172,6 @@
     "data": [
       {
         "text": "весело",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -240,7 +237,6 @@
     "data": [
       {
         "text": "ясно",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -284,7 +280,6 @@
       },
       {
         "text": "алиса",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -337,7 +332,6 @@
     "data": [
       {
         "text": "спасибо",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
@@ -364,7 +358,6 @@
     "data": [
       {
         "text": "Класс",
-        "meta": "@sys.ignore",
         "userDefined": false
       }
     ],
