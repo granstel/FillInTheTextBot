@@ -1,0 +1,38 @@
+{
+  "id": "cc64b63a-4ef6-4c2c-bafc-79404ffd77df",
+  "name": "SetRating-sber",
+  "auto": true,
+  "contexts": [
+    "source-sber"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "CALL_RATING",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Надеюсь, ты поставишь мне высокую оценку! А ещё подпишись на мой паблик в ВК \"Занимательные истории голосовых помощников\", чтобы увидеть ответ на свою оценку. Как закончишь — возвращайся!",
+            "Надеюсь, это будет высокая оценка! Кстати, подпишись на моё сообщество ВК \"Занимательные истории голосовых помощников\", чтобы не пропускать новости игры. Как закончишь — возвращайся!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

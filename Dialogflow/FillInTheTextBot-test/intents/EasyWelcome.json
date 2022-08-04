@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "b91e64d8-418d-4dcb-8909-325a450e623a",
+          "id": "57100c34-8399-4464-a60f-ee41d6966253",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -51,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "\u003cS1\u003eНастало время занимательных историй! Давай сочиним что-нибудь?",
-            "\u003cS1\u003eПришла пора умопомрачительных повествований! Сочиним что-нибудь?",
-            "\u003cS1\u003eИ вот пришло время занимательных историй! Давай сочиним кое-что?"
+            "Настало время занимательных историй! Давай сочиним что-нибудь?",
+            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
+            "И вот пришло время занимательных историй! Давай сочиним кое-что?"
           ],
           "condition": ""
         },
@@ -61,23 +61,18 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Yandex": {
-              "Buttons": [
+            "ButtonsForSource": {
+              "Yandex": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false,
                   "Text": "Узнать, что новенького",
-                  "IsQuickReply": false
+                  "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
-              "Sounds": {
-                "\u003cS1\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
-              }
-            },
-            "Marusia": {
-              "Buttons": [
+              "Marusia": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Узнать, что новенького"
                 }
               ]

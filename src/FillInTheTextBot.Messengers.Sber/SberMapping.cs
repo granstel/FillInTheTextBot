@@ -24,18 +24,18 @@ namespace FillInTheTextBot.Messengers.Sber
         {
             if (source == null) return null;
 
-            var d = new InternalModels.Request();
+            var destination = new InternalModels.Request();
 
-            d.ChatHash = source.Payload?.AppInfo?.ProjectId.ToString();
-            d.UserHash = source.Uuid?.Sub ?? source.Uuid?.UserId;
-            d.Text = GetText(source);
-            d.NewSession = source.Payload?.NewSession;
-            d.HasScreen = source.Payload?.Device?.Capabilities?.Screen?.Available ?? false;
-            d.ClientId = source.Payload?.Device?.Surface;
-            d.Source = InternalModels.Source.Sber;
-            d.Appeal = GetAppeal(source);
+            destination.ChatHash = source.Payload?.AppInfo?.ProjectId.ToString();
+            destination.UserHash = source.Uuid?.Sub ?? source.Uuid?.UserId;
+            destination.Text = GetText(source);
+            destination.NewSession = source.Payload?.NewSession;
+            destination.HasScreen = source.Payload?.Device?.Capabilities?.Screen?.Available ?? false;
+            destination.ClientId = source.Payload?.Device?.Surface;
+            destination.Source = InternalModels.Source.Sber;
+            destination.Appeal = GetAppeal(source);
 
-            return d;
+            return destination;
         }
 
         private static InternalModels.Appeal GetAppeal(Request source)
@@ -59,6 +59,11 @@ namespace FillInTheTextBot.Messengers.Sber
 
             try
             {
+                if (string.Equals(source.MessageName, "RATING_RESULT"))
+                {
+                    return "event:rating_result";
+                }
+
                 if (asrNormalizedMessage?.Contains(stars) == true)
                 {
                     return asrNormalizedMessage.Replace(stars, replacedObsceneWord);
@@ -83,11 +88,18 @@ namespace FillInTheTextBot.Messengers.Sber
         {
             if (source == null) return null;
 
-            var d = new Response();
+            var destination = new Response();
 
-            d.Payload = GetPayload(source);
+            destination.MessageName = MessageNameValues.AnswerToUser;
 
-            return d;
+            if (string.Equals(source.Text, "CALL_RATING"))
+            {
+                destination.MessageName = "CALL_RATING";
+            }
+            
+            destination.Payload = GetPayload(source);
+
+            return destination;
         }
 
         private static ResponsePayload GetPayload(InternalModels.Response source)
@@ -248,7 +260,6 @@ namespace FillInTheTextBot.Messengers.Sber
                 destination = new Response();
             }
 
-            destination.MessageName = MessageNameValues.AnswerToUser;
             destination.SessionId = source.SessionId;
             destination.MessageId = source.MessageId;
             destination.Uuid = source.Uuid;

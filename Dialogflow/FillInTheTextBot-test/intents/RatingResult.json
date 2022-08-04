@@ -1,34 +1,20 @@
 {
-  "id": "1a458d34-22b4-47f9-b1d9-8ee291aed77c",
-  "name": "Yes",
+  "id": "59f6bc01-8b6e-4793-97ef-46a56a30818d",
+  "name": "RatingResult",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "action": "GetText",
+      "action": "",
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c273413e-73a8-4c12-8c20-0cd6289a82b9",
+          "id": "0e7a1663-62c7-4a50-ab95-47682fd31ee6",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
-          "value": "igrivost",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
-          "id": "9465c9c7-453d-4527-8dc1-20e51aa16576",
-          "name": "textKey",
-          "required": false,
-          "dataType": "@sys.any",
-          "value": "#multipart-text.textKey",
+          "value": "radost",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -45,9 +31,10 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Тогда приступим!",
-            "Приступим!",
-            "Отлично!"
+            "Спасибо за оценку! Давай сочиним ещё что-нибудь?",
+            "Спасибо за оценку! Давай ещё что-нибудь сочиним?",
+            "Спасибо! Давай сочиним ещё что-нибудь?",
+            "Спасибо! Давай ещё что-нибудь сочиним?"
           ],
           "condition": ""
         }
@@ -59,7 +46,11 @@
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
-  "events": [],
+  "events": [
+    {
+      "name": "rating_result"
+    }
+  ],
   "conditionalResponses": [],
   "condition": "",
   "conditionalFollowupEvents": []

@@ -53,6 +53,11 @@ namespace FillInTheTextBot.Services
                 response = await GetText(request, dialog.Response, textKey);
             }
 
+            if (string.Equals(dialog?.Action, "CALL_RATING"))
+            {
+                response.Text = "CALL_RATING";
+            }
+
             response.Emotions = GetEmotions(dialog);
 
             response.NextTextIndex = request.NextTextIndex;

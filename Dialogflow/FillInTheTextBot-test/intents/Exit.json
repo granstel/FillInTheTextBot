@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c452097e-f898-42a1-b4c8-ad08f80ccdbc",
+          "id": "7e434b84-a29d-4dba-9a34-fbf11b1cf958",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -49,16 +49,22 @@
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ],
+              "Sber": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить игру"
+                }
+              ],
               "Yandex": [
                 {
+                  "Text": "Поставить оценку",
                   "IsQuickReply": false,
-                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-                  "Text": "Поставить оценку"
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
                 },
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Следить за новостями",
-                  "IsQuickReply": false
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
                 }
               ]
             }
