@@ -53,7 +53,7 @@ namespace FillInTheTextBot.Messengers.Sber
                 NextTextIndex = response.NextTextIndex
             };
 
-            var userStateCacheKey = GetCacheKey(response.UserHash);
+            var userStateCacheKey = GetCacheKey(input.Uuid?.Sub ?? input.Uuid?.UserId);
 
             await _cache.TryAddAsync(userStateCacheKey, userState, TimeSpan.FromDays(14));
 

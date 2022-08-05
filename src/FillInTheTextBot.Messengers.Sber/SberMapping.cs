@@ -108,8 +108,8 @@ namespace FillInTheTextBot.Messengers.Sber
 
             var d = new ResponsePayload();
 
-            d.PronounceText = source.Text;
-            d.PronounceTextType = PronounceTextTypeValues.Text;
+            d.PronounceText = source.AlternativeText;
+            d.PronounceTextType = PronounceTextTypeValues.Ssml;
             d.AutoListening = !source.Finished;
             d.Finished = source.Finished;
             d.Emotion = GetEmotion(source);
