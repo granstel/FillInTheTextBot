@@ -85,11 +85,8 @@ namespace FillInTheTextBot.Services
                 return texts;
             }
 
-            if (payload.TryGetValue(source, out var value) == false ||
-                payload.TryGetValue(Source.Default, out var defaultValue) == false)
-            {
-                return texts;
-            }
+            payload.TryGetValue(source, out var value);
+            payload.TryGetValue(Source.Default, out var defaultValue);
 
             var sounds = value?.Sounds ?? defaultValue?.Sounds;
 
@@ -97,7 +94,7 @@ namespace FillInTheTextBot.Services
             {
                 return texts;
             }
-            
+
             foreach (var sound in sounds)
             {
                 texts.Text = text.Replace(sound.Key, sound.Value);
