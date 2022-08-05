@@ -97,8 +97,8 @@ namespace FillInTheTextBot.Services
 
             foreach (var sound in sounds)
             {
-                texts.Text = text.Replace(sound.Key, sound.Value);
-                texts.AlternativeText = text.Replace(sound.Key, string.Empty);
+                texts.Text = text.Replace(sound.Key, string.Empty);
+                texts.AlternativeText = text.Replace(sound.Key, sound.Value);
             }
 
             return texts;
