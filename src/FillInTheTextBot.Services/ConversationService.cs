@@ -65,14 +65,14 @@ namespace FillInTheTextBot.Services
             response.Text = GetResponseText(request.Appeal, response.Text);
             response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
-            var texts = AddSounds(dialog?.Payload, request.Source, response.Text);
+            var texts = TryAddSounds(dialog?.Payload, request.Source, response.Text);
             response.Text = texts.Text;
             response.AlternativeText = texts.AlternativeText;
 
             return response;
         }
 
-        private Texts AddSounds(Payload payload, Source source, string text)
+        private Texts TryAddSounds(Payload payload, Source source, string text)
         {
             var texts = new Texts
             {
