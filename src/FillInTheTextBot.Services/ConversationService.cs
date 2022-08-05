@@ -65,32 +65,46 @@ namespace FillInTheTextBot.Services
             response.Text = GetResponseText(request.Appeal, response.Text);
             response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
-            var (textWithSounds, textWithoutSounds) = AddSounds(dialog?.Payload, request.Source, response.Text);
-            response.Text = textWithoutSounds;
-            response.AlternativeText = textWithSounds;
+            var texts = AddSounds(dialog?.Payload, request.Source, response.Text);
+            response.Text = texts.Text;
+            response.AlternativeText = texts.AlternativeText;
 
             return response;
         }
 
-        private (string, string) AddSounds(Payload payload, Source source, string text)
+        private Texts AddSounds(Payload payload, Source source, string text)
         {
-            if (payload is null || !payload.TryGetValue(source, out var value))
+            var texts = new Texts
             {
-                return (text, text);
+                Text = text,
+                AlternativeText = text
+            };
+
+            if (payload is null)
+            {
+                return texts;
             }
 
-            var sounds = value.Sounds;
+            if (payload.TryGetValue(source, out var value) == false ||
+                payload.TryGetValue(Source.Default, out var defaultValue) == false)
+            {
+                return texts;
+            }
 
-            var textWithSounds = text;
-            var textWithoutSounds = text;
+            var sounds = value?.Sounds ?? defaultValue?.Sounds;
 
+            if (sounds?.Any() != true)
+            {
+                return texts;
+            }
+            
             foreach (var sound in sounds)
             {
-                textWithSounds = text.Replace(sound.Key, sound.Value);
-                textWithoutSounds = text.Replace(sound.Key, string.Empty);
+                texts.Text = text.Replace(sound.Key, sound.Value);
+                texts.AlternativeText = text.Replace(sound.Key, string.Empty);
             }
 
-            return (textWithSounds, textWithoutSounds);
+            return texts;
         }
 
         private async Task<Response> GetText(Request request, string startText, string textKey = null)
