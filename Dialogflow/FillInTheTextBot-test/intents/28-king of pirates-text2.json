@@ -163,19 +163,29 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Marusia": [
+            "Yandex": {
+              "Buttons": [
                 {
                   "Text": "Подписаться на новости",
                   "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false
                 }
-              ],
-              "Yandex": [
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
                 {
-                  "IsQuickReply": false,
                   "Text": "Подписаться на новости",
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить игру",
+                  "IsQuickReply": true
                 }
               ]
             }
