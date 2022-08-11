@@ -64,19 +64,12 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Marusia": [
+            "Yandex": {
+              "Buttons": [
                 {
                   "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Подписаться на новости",
                   "IsQuickReply": false
-                }
-              ],
-              "Yandex": [
-                {
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Подписаться на новости"
                 }
               ]
             }
