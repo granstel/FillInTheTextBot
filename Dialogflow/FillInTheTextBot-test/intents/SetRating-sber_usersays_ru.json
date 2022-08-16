@@ -1,18 +1,40 @@
 [
   {
-    "id": "05cd5849-ee31-45ed-9144-cc17caf00550",
+    "id": "c2681ed4-2341-48c5-9883-596e32939f9b",
     "data": [
       {
-        "text": "оценить ",
-        "userDefined": false
-      },
-      {
-        "text": "игру",
+        "text": "оценить навык",
         "userDefined": false
       }
     ],
     "isTemplate": false,
     "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "05cd5849-ee31-45ed-9144-cc17caf00550",
+    "data": [
+      {
+        "text": "оценить игру",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a667924d-7378-4d6b-8428-cbdeb9005953",
+    "data": [
+      {
+        "text": "оценить историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
     "lang": "ru",
     "updated": 0
   },
@@ -25,20 +47,7 @@
       }
     ],
     "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "c2681ed4-2341-48c5-9883-596e32939f9b",
-    "data": [
-      {
-        "text": "оценить навык",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "lang": "ru",
     "updated": 0
   },

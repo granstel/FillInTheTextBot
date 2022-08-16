@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "02627f50-1240-454e-b381-b6d67f44a204",
+          "id": "4a42f684-7305-411f-99b0-349da62988cf",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -51,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "\u003cS1\u003eНастало время занимательных историй! Давай сочиним что-нибудь?",
-            "\u003cS1\u003eПришла пора умопомрачительных повествований! Сочиним что-нибудь?",
-            "\u003cS1\u003eИ вот пришло время занимательных историй! Давай сочиним кое-что?"
+            "Настало время занимательных историй! Давай сочиним что-нибудь?",
+            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
+            "И вот пришло время занимательных историй! Давай сочиним кое-что?"
           ],
           "condition": ""
         },
@@ -61,38 +61,38 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Sber": {
-              "Sounds": {
-                "\u003cS1\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
-              }
-            },
-            "Marusia": {
-              "Sounds": {
-                "\u003cS1\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
-              },
-              "Buttons": [
-                {
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false,
-                  "Text": "Узнать, что новенького"
-                }
-              ]
-            },
             "Yandex": {
               "Sounds": {
                 "\u003cS1\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
               },
               "Buttons": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Узнать, что новенького",
+                  "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false
                 }
               ]
             },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Узнать, что новенького"
+                }
+              ],
+              "Sounds": {
+                "\u003cS1\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
+              }
+            },
             "Default": {
               "Sounds": {
                 "\u003cS1\u003e": ""
+              }
+            },
+            "Sber": {
+              "Sounds": {
+                "\u003cS1\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
               }
             }
           },
