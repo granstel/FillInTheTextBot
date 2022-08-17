@@ -67,7 +67,7 @@ namespace FillInTheTextBot.Messengers.Marusia
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 
-            _cache.AddAsync($"marusia:{response.UserHash}", string.Empty, TimeSpan.FromDays(14)).Forget();
+            _cache.AddAsync($"marusia:{input.Session?.UserId}", string.Empty, TimeSpan.FromDays(14)).Forget();
 
             return Task.FromResult(output);
         }
