@@ -62,7 +62,7 @@
           "title": "",
           "payload": {
             "Yandex": {
-              "Sounds": {
+              "Replacements": {
                 "\u003cS1\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
               },
               "Buttons": [
@@ -81,17 +81,17 @@
                   "Text": "Узнать, что новенького"
                 }
               ],
-              "Sounds": {
+              "Replacements": {
                 "\u003cS1\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
               }
             },
             "Default": {
-              "Sounds": {
+              "Replacements": {
                 "\u003cS1\u003e": ""
               }
             },
             "Sber": {
-              "Sounds": {
+              "Replacements": {
                 "\u003cS1\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
               }
             }

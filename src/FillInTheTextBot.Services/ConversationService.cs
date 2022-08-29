@@ -65,14 +65,14 @@ namespace FillInTheTextBot.Services
             response.Text = GetResponseText(request.Appeal, response.Text);
             response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
-            var texts = TryAddSounds(dialog?.Payload, request.Source, response.Text);
+            var texts = TryAddReplacementsFromPayload(dialog?.Payload, request.Source, response.Text);
             response.Text = texts.Text;
             response.AlternativeText = texts.AlternativeText;
 
             return response;
         }
 
-        private Texts TryAddSounds(Payload payload, Source source, string text)
+        private Texts TryAddReplacementsFromPayload(Payload payload, Source source, string text)
         {
             var texts = new Texts
             {
@@ -88,17 +88,17 @@ namespace FillInTheTextBot.Services
             payload.TryGetValue(source, out var value);
             payload.TryGetValue(Source.Default, out var defaultValue);
 
-            var sounds = value?.Sounds ?? defaultValue?.Sounds;
+            var replacements = value?.Replacements ?? defaultValue?.Replacements;
 
-            if (sounds?.Any() != true)
+            if (replacements?.Any() != true)
             {
                 return texts;
             }
 
-            foreach (var sound in sounds)
+            foreach (var replacement in replacements)
             {
-                texts.Text = text.Replace(sound.Key, string.Empty);
-                texts.AlternativeText = text.Replace(sound.Key, sound.Value);
+                texts.Text = text.Replace(replacement.Key, string.Empty);
+                texts.AlternativeText = text.Replace(replacement.Key, replacement.Value);
             }
 
             return texts;

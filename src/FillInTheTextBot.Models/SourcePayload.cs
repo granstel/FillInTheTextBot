@@ -6,12 +6,12 @@ namespace FillInTheTextBot.Models
     {
         public ICollection<Button> Buttons { get; set; }
 
-        public IDictionary<string, string> Sounds { get; set; }
+        public IDictionary<string, string> Replacements { get; set; }
 
         public SourcePayload()
         {
             Buttons = new List<Button>();
-            Sounds = new Dictionary<string, string>();
+            Replacements = new Dictionary<string, string>();
         }
     }
 }
