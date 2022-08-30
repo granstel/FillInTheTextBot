@@ -63,7 +63,7 @@ namespace FillInTheTextBot.Services
             response.NextTextIndex = request.NextTextIndex;
 
             response.Text = GetResponseText(request.Appeal, response.Text);
-            response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
+            response.Buttons = GetButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
             var texts = TryAddReplacementsFromPayload(dialog?.Payload, request.Source, response.Text);
             response.Text = texts.Text;
@@ -239,7 +239,7 @@ namespace FillInTheTextBot.Services
             return responseText;
         }
 
-        private ICollection<Button> AddButtonsFromPayload(ICollection<Button> responseButtons, Payload dialogPayload, Source requestSource)
+        private ICollection<Button> GetButtonsFromPayload(ICollection<Button> responseButtons, Payload dialogPayload, Source requestSource)
         {
             using (Tracing.Trace())
             {
@@ -250,13 +250,17 @@ namespace FillInTheTextBot.Services
                     buttons.AddRange(responseButtons);
                 }
 
-                var buttonsForSource = new List<Button>();
+                var buttonsFromPayload = new List<Button>();
 
                 if (dialogPayload is not null)
                 {
-                    buttonsForSource = dialogPayload.TryGetValue(requestSource, out var value)
-                        ? value.Buttons.ToList() : buttonsForSource;
-                    buttons.AddRange(buttonsForSource);
+                    buttonsFromPayload = dialogPayload.TryGetValue(requestSource, out var value)
+                        ? value.Buttons.ToList() : buttonsFromPayload;
+                    buttons.AddRange(buttonsFromPayload);
+                    
+                    buttonsFromPayload = dialogPayload.TryGetValue(Source.Default, out var defaultValue)
+                        ? defaultValue.Buttons.ToList() : buttonsFromPayload;
+                    buttons.AddRange(buttonsFromPayload);
                 }
 
                 buttons = buttons.Where(b => !string.IsNullOrEmpty(b.Text)).ToList();
