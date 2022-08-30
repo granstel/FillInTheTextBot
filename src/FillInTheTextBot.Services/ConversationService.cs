@@ -97,8 +97,8 @@ namespace FillInTheTextBot.Services
 
             foreach (var replacement in replacements)
             {
-                texts.Text = text.Replace(replacement.Key, string.Empty);
-                texts.AlternativeText = text.Replace(replacement.Key, replacement.Value);
+                texts.Text = texts.Text.Replace(replacement.Key, string.Empty);
+                texts.AlternativeText = texts.AlternativeText.Replace(replacement.Key, replacement.Value);
             }
 
             return texts;
