@@ -239,16 +239,42 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Buttons": [
-              {
-                "IsQuickReply": false,
-                "Text": "Самый новый"
-              },
-              {
-                "Text": "Любой",
-                "IsQuickReply": false
-              }
-            ]
+            "Yandex": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Самый новый"
+                },
+                {
+                  "Text": "Любой",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Самый новый"
+                },
+                {
+                  "Text": "Любой",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Самый новый"
+                },
+                {
+                  "Text": "Любой",
+                  "IsQuickReply": false
+                }
+              ]
+            }
           },
           "textToSpeech": "",
           "lang": "ru",
