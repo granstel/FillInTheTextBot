@@ -36,7 +36,7 @@
       "messages": [
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
@@ -55,7 +55,7 @@
         },
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
@@ -74,7 +74,7 @@
         },
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
@@ -93,7 +93,7 @@
         },
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
@@ -112,7 +112,7 @@
         },
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
@@ -131,7 +131,7 @@
         },
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
@@ -150,7 +150,7 @@
         },
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
@@ -169,7 +169,7 @@
         },
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
@@ -188,7 +188,7 @@
         },
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
@@ -207,7 +207,7 @@
         },
         {
           "type": "1",
-          "platform": "facebook",
+          "platform": "telegram",
           "title": "истории",
           "buttons": [
             {
