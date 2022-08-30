@@ -258,9 +258,11 @@ namespace FillInTheTextBot.Services
                         ? value.Buttons.ToList() : buttonsFromPayload;
                     buttons.AddRange(buttonsFromPayload);
                     
-                    buttonsFromPayload = dialogPayload.TryGetValue(Source.Default, out var defaultValue)
-                        ? defaultValue.Buttons.ToList() : buttonsFromPayload;
-                    buttons.AddRange(buttonsFromPayload);
+                    if (dialogPayload.TryGetValue(Source.Default, out var defaultValue))
+                    {
+                        buttonsFromPayload = defaultValue.Buttons.ToList();
+                        buttons.AddRange(buttonsFromPayload);
+                    }
                 }
 
                 buttons = buttons.Where(b => !string.IsNullOrEmpty(b.Text)).ToList();
