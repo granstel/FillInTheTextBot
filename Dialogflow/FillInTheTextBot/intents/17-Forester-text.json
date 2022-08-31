@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c5fc6152-3947-4885-b746-e66cf92a1db6",
+          "id": "2ef9771b-f926-42f7-9601-cc2b1983c5e8",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "b5cf8106-946a-452d-a9b3-671766365798",
+          "id": "ee153515-07e0-4c8d-9117-4d3859d6a56c",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -58,7 +58,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "6ff226dd-1089-4573-ad3d-a12e0ebb46a1",
+          "id": "9af87563-79c9-48c1-8e3d-9d01e18ae4c6",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +77,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "8b796c53-208d-4185-91e9-31a44574543a",
+          "id": "eb75e32b-453e-4dff-8dbf-ad2ac5459ed6",
           "name": "action",
           "required": true,
           "dataType": "@sys.any",
@@ -108,7 +108,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "01d17339-0a42-4913-9e88-03cf90916f96",
+          "id": "fcc7451c-771b-4bda-89c8-74869184d83e",
           "name": "gun",
           "required": true,
           "dataType": "@sys.any",
@@ -162,6 +162,36 @@
           "type": "4",
           "title": "",
           "payload": {
+            "Sber": {
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить историю"
+                }
+              ],
+              "Replacements": {
+                "дорогой ": "\u003cspeak\u003eдоро\u0027гой\u003c/speak\u003e",
+                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "\u003c🐺\u003e": ""
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
+                  "Text": "Поблагодарить разработчиков"
+                }
+              ],
+              "Replacements": {
+                "дорогой ": "доро\u0027гой",
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
+              }
+            },
             "Yandex": {
               "Replacements": {
                 "\u003c🐺\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
@@ -173,36 +203,6 @@
                   "Text": "Оценить историю"
                 }
               ]
-            },
-            "Marusia": {
-              "Buttons": [
-                {
-                  "IsQuickReply": false,
-                  "Text": "Поблагодарить разработчиков",
-                  "Url": "https://vk.com/im?sel\u003d-201360423"
-                }
-              ],
-              "Replacements": {
-                "\u003c🐺\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e",
-                "дорогой": "доро\u0027гой"
-              }
-            },
-            "Default": {
-              "Replacements": {
-                "\u003c🐺\u003e": ""
-              }
-            },
-            "Sber": {
-              "Buttons": [
-                {
-                  "Text": "Оценить историю",
-                  "IsQuickReply": true
-                }
-              ],
-              "Replacements": {
-                "дорогой": "\u003cspeak\u003eдоро\u0027гой\u003c/speak\u003e",
-                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
-              }
             }
           },
           "textToSpeech": "",
