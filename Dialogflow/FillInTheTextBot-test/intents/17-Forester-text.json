@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "dab391ea-7e7d-4bd4-97da-8f6bffb5de53",
+          "id": "fb78fa3a-cee3-4354-aab7-03bba8ef84bc",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "4893147b-0ca0-439e-8900-84082bfe3ea6",
+          "id": "f2cf73d2-4df9-4b2d-a196-be3bff4155fe",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -58,7 +58,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "760800c1-d61c-49c3-a3b9-206f5375d27c",
+          "id": "4a440b0a-c57b-4cae-a434-76a2908e9bf7",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +77,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "4e1899c9-469e-4310-9983-759bf1fa7072",
+          "id": "5f4e4b89-9ae8-45fc-893f-8307580f1954",
           "name": "action",
           "required": true,
           "dataType": "@sys.any",
@@ -108,7 +108,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "a61f493a-7cfb-4063-8c80-d390827c2452",
+          "id": "41d4a176-2a23-45cb-8aa1-cbde40176af5",
           "name": "gun",
           "required": true,
           "dataType": "@sys.any",
@@ -150,28 +150,28 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Yandex": {
-              "Replacements": {
-                "\u003cкрик_человека\u003e": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/7c4e1df9-591d-4665-ab53-fda649179baf.opus\"\u003e",
-                "\u003c🐺\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
-              }
-            },
             "Sber": {
               "Replacements": {
-                "\u003cкрик человека\u003e": "",
-                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
+                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e",
+                "\u003cкрик человека\u003e": ""
               }
             },
             "Marusia": {
               "Replacements": {
-                "\u003cкрик человека\u003e": "",
-                "\u003c🐺\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e",
+                "\u003cкрик человека\u003e": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239066\"\u003e"
+              }
+            },
+            "Yandex": {
+              "Replacements": {
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e",
+                "\u003cкрик_человека\u003e": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/7c4e1df9-591d-4665-ab53-fda649179baf.opus\"\u003e"
               }
             },
             "Default": {
               "Replacements": {
-                "\u003c🐺\u003e": "",
-                "\u003cкрик человека\u003e": ""
+                "\u003cкрик человека\u003e": "",
+                "\u003c🐺\u003e": ""
               }
             }
           },
