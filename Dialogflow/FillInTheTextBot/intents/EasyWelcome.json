@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "4a42f684-7305-411f-99b0-349da62988cf",
+          "id": "df172b1d-8839-4db8-8ed7-e5ff860b2fa4",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -51,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Настало время занимательных историй! Давай сочиним что-нибудь?",
-            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
-            "И вот пришло время занимательных историй! Давай сочиним кое-что?"
+            "Настало время занимательных историй! Давай сочиним что-нибудь новенькое?",
+            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь новенькое?",
+            "И вот пришло время занимательных историй! Давай сочиним кое-что новенькое?"
           ],
           "condition": ""
         },
@@ -67,28 +67,28 @@
               },
               "Buttons": [
                 {
-                  "Text": "Узнать, что новенького",
                   "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false
-                }
-              ]
-            },
-            "Marusia": {
-              "Buttons": [
-                {
                   "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Узнать, что новенького"
                 }
-              ],
-              "Replacements": {
-                "\u003cS1\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
-              }
+              ]
             },
             "Default": {
               "Replacements": {
                 "\u003cS1\u003e": ""
               }
+            },
+            "Marusia": {
+              "Replacements": {
+                "\u003cS1\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
+              },
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Узнать, что новенького",
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
             },
             "Sber": {
               "Replacements": {
