@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "13fa39f0-acbd-4bfc-bb21-3c679896cadb",
+          "id": "e5ee6efd-f0b9-420d-bb9d-c57d19f7da38",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -142,6 +142,19 @@
             },
             {
               "text": "Вот это ёлка!"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Про лесника"
             }
           ],
           "textToSpeech": "",
