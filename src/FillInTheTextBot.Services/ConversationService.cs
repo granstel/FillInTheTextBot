@@ -35,8 +35,6 @@ namespace FillInTheTextBot.Services
 
             };
 
-            TrySetSavedText(request.SessionId, dialog);
-
             var resetTextIndex = string.Empty;
 
             var isGotResetParameter = dialog?.Parameters.TryGetValue("resetTextIndex", out resetTextIndex) ?? false;
@@ -68,6 +66,8 @@ namespace FillInTheTextBot.Services
             var texts = TryAddReplacementsFromPayload(dialog?.Payload, request.Source, response.Text);
             response.Text = texts.Text;
             response.AlternativeText = texts.AlternativeText;
+
+            TrySetSavedText(request.SessionId, dialog, texts);
 
             return response;
         }
@@ -271,13 +271,14 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private void TrySetSavedText(string sessionId, Dialog dialog)
+        private void TrySetSavedText(string sessionId, Dialog dialog, Texts texts)
         {
             if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
             {
                 var parameters = new Dictionary<string, string>
                 {
-                    { "text", dialog?.Response }
+                    { "text", texts.Text },
+                    { "alternativeText", texts.AlternativeText }
                 };
 
                 _dialogflowService.SetContextAsync(sessionId, "savedText", 5, parameters).Forget();
