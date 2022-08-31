@@ -13,7 +13,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "f0ff328f-9235-4380-8cf0-67b2696ef6fd",
+          "id": "55c5be72-f812-43bd-82ed-8b4f335486a5",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "deb1927d-e153-4676-9bbc-3c1e27cdc845",
+          "id": "0a2a407c-49eb-48d1-970b-3d3fb9d5a921",
           "name": "person-1",
           "required": true,
           "dataType": "@sys.any",
@@ -50,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ec2ff5c2-c879-4f42-8d7b-e1b442f90d4e",
+          "id": "1c678c2e-8d87-4406-bd5e-704ece9f9f63",
           "name": "action-1",
           "required": true,
           "dataType": "@sys.any",
@@ -73,7 +73,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "efa9647f-6f11-449b-9847-41f2692d0bd9",
+          "id": "2b320cf8-e757-4f6d-b824-09422c1b0dd6",
           "name": "person-2",
           "required": true,
           "dataType": "@sys.any",
@@ -96,7 +96,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "ce572d6d-9c11-41ef-ae68-a04a2b7ae873",
+          "id": "d6a54bb7-205a-4891-97ae-942b92dc4b8b",
           "name": "action-2",
           "required": true,
           "dataType": "@sys.any",
@@ -115,7 +115,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "61ae1b44-128c-4606-970e-de40c3170774",
+          "id": "141285a2-9d0c-401e-81a3-d32599bd2b1c",
           "name": "adjective",
           "required": true,
           "dataType": "@sys.any",
@@ -144,7 +144,7 @@
           "platform": "telegram",
           "title": "",
           "replies": [
-            "Ещё раз",
+            "Прочитай ещё раз",
             "Да!"
           ],
           "textToSpeech": "",
@@ -155,6 +155,14 @@
           "type": "4",
           "title": "",
           "payload": {
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить навык",
+                  "IsQuickReply": true
+                }
+              ]
+            },
             "Yandex": {
               "Buttons": [
                 {
@@ -167,17 +175,9 @@
             "Marusia": {
               "Buttons": [
                 {
-                  "Text": "Предложить свою идею",
                   "IsQuickReply": false,
+                  "Text": "Предложить свою идею",
                   "Url": "https://vk.com/im?sel\u003d-201360423"
-                }
-              ]
-            },
-            "Sber": {
-              "Buttons": [
-                {
-                  "Text": "Оценить навык",
-                  "IsQuickReply": true
                 }
               ]
             }
