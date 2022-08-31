@@ -41,21 +41,25 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Marusia": [
+            "Marusia": {
+              "Buttons": [
                 {
                   "Text": "Следить за новостями",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
-              ],
-              "Sber": [
+              ]
+            },
+            "Sber": {
+              "Buttons": [
                 {
                   "IsQuickReply": true,
                   "Text": "Оценить игру"
                 }
-              ],
-              "Yandex": [
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
                 {
                   "Text": "Поставить оценку",
                   "IsQuickReply": false,

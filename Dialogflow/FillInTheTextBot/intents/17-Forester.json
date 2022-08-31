@@ -1,16 +1,22 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "1e2bc43e-ac68-402d-9d79-40c81819759b",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "17-Forester",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-17",
+          "lifespan": 5
+        }
+      ],
       "parameters": [
         {
-          "id": "454adbeb-9388-40a7-a046-4ec3e86d981e",
+          "id": "acfd9f70-9e01-41ee-ad4d-4abcfa45dbef",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +37,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Давай сочиним новую,"
+            "Давай сочиним"
           ],
           "condition": ""
         }

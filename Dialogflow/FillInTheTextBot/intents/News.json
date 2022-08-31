@@ -25,15 +25,17 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Marusia": [
+            "Marusia": {
+              "Buttons": [
                 {
                   "Text": "Подписаться на новости",
                   "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false
                 }
-              ],
-              "Yandex": [
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
                 {
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",

@@ -40,15 +40,17 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Marusia": [
+            "Marusia": {
+              "Buttons": [
                 {
                   "Url": "https://vk.com/im?sel\u003d-201360423",
                   "IsQuickReply": false,
                   "Text": "Рассказать о проблеме"
                 }
-              ],
-              "Yandex": [
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
                 {
                   "IsQuickReply": false,
                   "Text": "Рассказать о проблеме",
