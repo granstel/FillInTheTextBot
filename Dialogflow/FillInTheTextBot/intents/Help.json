@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "bac50a6f-4d05-453e-a02d-e9a2dcb2db75",
+          "id": "ced4d187-9e1e-42a1-85b2-c1b4e5ec6d5d",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -52,19 +52,21 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Marusia": [
+            "Marusia": {
+              "Buttons": [
                 {
                   "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Подписаться на новости",
                   "IsQuickReply": false
                 }
-              ],
-              "Yandex": [
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
                 {
-                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Подписаться на новости",
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "IsQuickReply": false
                 }
               ]
             }

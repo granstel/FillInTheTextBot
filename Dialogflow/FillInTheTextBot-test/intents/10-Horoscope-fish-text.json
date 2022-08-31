@@ -148,19 +148,29 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Yandex": {
+              "Buttons": [
                 {
                   "Text": "Подписаться на новости",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
-              ],
-              "Marusia": [
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
                 {
                   "Text": "Подписаться на новости",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить навык",
+                  "IsQuickReply": true
                 }
               ]
             }

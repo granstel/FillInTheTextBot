@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "57100c34-8399-4464-a60f-ee41d6966253",
+          "id": "4a42f684-7305-411f-99b0-349da62988cf",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -61,21 +61,39 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Yandex": {
+              "Replacements": {
+                "\u003cS1\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
+              },
+              "Buttons": [
                 {
-                  "IsQuickReply": false,
                   "Text": "Узнать, что новенького",
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
                 }
-              ],
-              "Marusia": [
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
                 {
                   "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Узнать, что новенького"
                 }
-              ]
+              ],
+              "Replacements": {
+                "\u003cS1\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "\u003cS1\u003e": ""
+              }
+            },
+            "Sber": {
+              "Replacements": {
+                "\u003cS1\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
+              }
             }
           },
           "textToSpeech": "",

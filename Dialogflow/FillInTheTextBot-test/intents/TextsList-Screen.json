@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "13081982-d036-4738-ab76-f4727bc37a21",
+          "id": "b338eb9c-e8bb-4f4f-99cf-79042168fd0a",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -239,16 +239,18 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Buttons": [
-              {
-                "IsQuickReply": false,
-                "Text": "Самый новый"
-              },
-              {
-                "Text": "Любой",
-                "IsQuickReply": false
-              }
-            ]
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Самый новый",
+                  "IsQuickReply": false
+                },
+                {
+                  "IsQuickReply": false,
+                  "Text": "Любой"
+                }
+              ]
+            }
           },
           "textToSpeech": "",
           "lang": "ru",

@@ -120,6 +120,7 @@ namespace FillInTheTextBot.Services.Mapping
         private static ICollection<Button> GetCards(QueryResult source)
         {
             var cards = source?.FulfillmentMessages
+                .OrderBy(m => m.Platform)
                 ?.Where(m => m.MessageCase == Intent.Types.Message.MessageOneofCase.Card)
                 .SelectMany(m => m.Card.Buttons.Select(b => new Button
                 {

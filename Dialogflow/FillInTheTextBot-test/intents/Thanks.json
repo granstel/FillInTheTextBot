@@ -54,8 +54,25 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false,
+                  "Text": "Следить за новостями"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить игру"
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
                 {
                   "Text": "Поставить оценку",
                   "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
@@ -65,19 +82,6 @@
                   "Text": "Следить за новостями",
                   "Url": "https://vk.com/fillinthetextbot",
                   "IsQuickReply": false
-                }
-              ],
-              "Marusia": [
-                {
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false,
-                  "Text": "Следить за новостями"
-                }
-              ],
-              "Sber": [
-                {
-                  "IsQuickReply": true,
-                  "Text": "Оценить игру"
                 }
               ]
             }

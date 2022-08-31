@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "13081982-d036-4738-ab76-f4727bc37a21",
+          "id": "e5ee6efd-f0b9-420d-bb9d-c57d19f7da38",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -36,7 +36,7 @@
       "messages": [
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -55,7 +55,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -74,7 +74,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -93,7 +93,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -112,7 +112,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -131,7 +131,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -142,6 +142,19 @@
             },
             {
               "text": "Вот это ёлка!"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Про лесника"
             }
           ],
           "textToSpeech": "",
@@ -239,16 +252,18 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Buttons": [
-              {
-                "IsQuickReply": false,
-                "Text": "Самый новый"
-              },
-              {
-                "Text": "Любой",
-                "IsQuickReply": false
-              }
-            ]
+            "Default": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Самый новый"
+                },
+                {
+                  "IsQuickReply": false,
+                  "Text": "Любой"
+                }
+              ]
+            }
           },
           "textToSpeech": "",
           "lang": "ru",

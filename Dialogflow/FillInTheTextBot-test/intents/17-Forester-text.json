@@ -1,0 +1,198 @@
+{
+  "id": "a27db7f6-d857-4fcb-b46e-cbc1b22fa4d0",
+  "parentId": "1e2bc43e-ac68-402d-9d79-40c81819759b",
+  "name": "17-Forester-text",
+  "auto": true,
+  "contexts": [
+    "text-17"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "fb78fa3a-cee3-4354-aab7-03bba8ef84bc",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "жуткую историю про лесника.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "f2cf73d2-4df9-4b2d-a196-be3bff4155fe",
+          "name": "name1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва скажи имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала подскажи имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва подскажи своё имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала скажи своё имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "4a440b0a-c57b-4cae-a434-76a2908e9bf7",
+          "name": "name2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи имя какого-нибудь вредного мужика"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5f4e4b89-9ae8-45fc-893f-8307580f1954",
+          "name": "action",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как думаешь, чем он любит заниматься в свободное время?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что ему нравится делать в свободное время?"
+            },
+            {
+              "lang": "ru",
+              "value": "Чем он любит заниматься?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что ему нравится делать?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "41d4a176-2a23-45cb-8aa1-cbde40176af5",
+          "name": "gun",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$gun",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И наконец: назови какое-нибудь оружие"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок: назови какое-нибудь оружие"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее: назови самое мощное оружие"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Замученный дорогой $name1 шел ночью через лес. Впереди он заметил дом лесника и попросился на ночлег. С добродушной улыбкой старик $name2 впустил его и пригласил на ужин. За столом лесник болтал без умолку: рассказал о своей дружбе с лесными животными и что ему нравится $action в лесу и подкармливать волков.\nПосреди ночи за окном раздался волчий вой 🐺\u003c🐺\u003e, старик заулыбался и покинул дом. Вскоре он вернулся, держа в руках оружие «$gun», и сказал:\n— Друзья хотят покушать, пойдем-ка, $name1, в лес.\u003cкрик_человека\u003e\nКакая счастливая история. Для волков🐺\u003c🐺\u003e. Сочиним ещё одну?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Sber": {
+              "Replacements": {
+                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e",
+                "\u003cкрик человека\u003e": ""
+              }
+            },
+            "Marusia": {
+              "Replacements": {
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e",
+                "\u003cкрик человека\u003e": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239066\"\u003e"
+              }
+            },
+            "Yandex": {
+              "Replacements": {
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e",
+                "\u003cкрик_человека\u003e": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/7c4e1df9-591d-4665-ab53-fda649179baf.opus\"\u003e"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "\u003cкрик человека\u003e": "",
+                "\u003c🐺\u003e": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-17"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

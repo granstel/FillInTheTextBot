@@ -137,19 +137,29 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Yandex": {
+              "Buttons": [
                 {
                   "Text": "Рассказать свою идею",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/im?sel\u003d-201360423"
                 }
-              ],
-              "Marusia": [
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
                 {
                   "Text": "Рассказать свою идею",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить игру",
+                  "IsQuickReply": true
                 }
               ]
             }

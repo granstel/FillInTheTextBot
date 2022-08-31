@@ -157,19 +157,29 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Yandex": {
+              "Buttons": [
                 {
                   "Text": "Выразить восхищение автору текста",
                   "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_194",
                   "IsQuickReply": false
                 }
-              ],
-              "Marusia": [
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
                 {
                   "Text": "Выразить восхищение автору текста",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_194"
+                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_194",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
                 }
               ]
             }

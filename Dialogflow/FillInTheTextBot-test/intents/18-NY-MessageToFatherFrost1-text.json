@@ -172,19 +172,29 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Yandex": {
+              "Buttons": [
                 {
-                  "IsQuickReply": false,
                   "Text": "Подписаться на новости в ВК",
+                  "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
-              ],
-              "Marusia": [
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Подписаться на новости в ВК",
                   "IsQuickReply": false,
-                  "Text": "Подписаться на новости в ВК"
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить навык",
+                  "IsQuickReply": true
                 }
               ]
             }

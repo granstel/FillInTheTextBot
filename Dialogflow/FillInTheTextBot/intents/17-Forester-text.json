@@ -1,0 +1,229 @@
+{
+  "id": "a27db7f6-d857-4fcb-b46e-cbc1b22fa4d0",
+  "parentId": "1e2bc43e-ac68-402d-9d79-40c81819759b",
+  "name": "17-Forester-text",
+  "auto": true,
+  "contexts": [
+    "text-17"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "60834097-f08d-4305-8cf1-1a09bdd26239",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "жуткую историю про лесника.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "795c82af-0542-4022-914d-1a711615e4ef",
+          "name": "name1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва скажи имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала подскажи имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва подскажи своё имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала скажи своё имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "756ab388-9679-4cef-982c-5de2f4c63ddb",
+          "name": "name2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи имя какого-нибудь вредного мужика"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "547877a8-5441-4fbc-bcbe-19962e8ab472",
+          "name": "action",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как думаешь, чем он любит заниматься в свободное время?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что ему нравится делать в свободное время?"
+            },
+            {
+              "lang": "ru",
+              "value": "Чем он любит заниматься?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что ему нравится делать?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7138b150-4d0a-4d60-881f-d00c7afb0eb9",
+          "name": "gun",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$gun",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И наконец: назови какое-нибудь оружие"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок: назови какое-нибудь оружие"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее: назови самое мощное оружие"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Прочитай ещё раз",
+            "Да, конечно!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Замученный \u003cдорогой\u003e $name1 шел ночью через лес. Впереди он заметил дом лесника и попросился на ночлег. С добродушной улыбкой старик $name2 впустил его и пригласил на ужин. За столом лесник болтал без умолку: рассказал о своей дружбе с лесными животными и что ему нравится $action в лесу и подкармливать волков.\nПосреди ночи за окном раздался волчий вой \u003c🐺\u003e, старик заулыбался и покинул дом. Вскоре он вернулся, держа в руках оружие «$gun», и сказал:\n— Друзья хотят покушать, пойдем-ка, $name1, в лес.\nКакая счастливая история. Для волков \u003c🐺\u003e. Сочиним ещё одну?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Replacements": {
+                "\u003c🐺\u003e": ""
+              }
+            },
+            "Sber": {
+              "Replacements": {
+                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e",
+                "\u003cдорогой\u003e": "\u003cspeak\u003eдоро\u0027гой\u003c/speak\u003e"
+              },
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить историю"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "\u003cдорогой\u003e": "доро\u0027гой",
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
+              }
+            },
+            "Yandex": {
+              "Replacements": {
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e",
+                "\u003cдорогой\u003e": "дорогой"
+              },
+              "Buttons": [
+                {
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false,
+                  "Text": "Оценить историю"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-17"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

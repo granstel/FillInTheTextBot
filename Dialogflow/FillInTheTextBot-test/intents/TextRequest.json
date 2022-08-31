@@ -25,15 +25,17 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Yandex": {
+              "Buttons": [
                 {
                   "Url": "https://vk.com/im?sel\u003d-201360423",
                   "Text": "Предложить свой текст",
                   "IsQuickReply": false
                 }
-              ],
-              "Marusia": [
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
                 {
                   "Url": "https://vk.com/im?sel\u003d-201360423",
                   "Text": "Предложить свой текст",

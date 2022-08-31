@@ -14,10 +14,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "6d41dfb6-8afc-4a1d-83e4-481a8c2dcba8",
+          "id": "320d2513-4f7d-41f2-9861-4d89b8117bca",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
+          "value": "text-17",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -27,7 +28,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d11f1928-58a2-4250-ac70-acb3957d8d46",
+          "id": "55d9350d-9da0-43b4-ab5e-2d4a007c706b",
           "name": "resetTextIndex",
           "required": false,
           "dataType": "@sys.any",
@@ -41,7 +42,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "06c56609-bc1b-49d8-9b87-4aeb6043e756",
+          "id": "9f439776-3490-4ee8-b525-81c4f177a0bb",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -62,9 +63,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Хорошо!",
-            "Начинаем!",
-            "Приступим!"
+            "Хорошо! Будем сочинять новую,",
+            "Начинаем! Сейчас сочиним новую,",
+            "Приступим! Сейчас будем сочинять новую,"
           ],
           "condition": ""
         }

@@ -190,19 +190,29 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить навык",
+                  "IsQuickReply": false,
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
                 {
                   "Text": "Поблагодарить разработчиков",
                   "IsQuickReply": false,
                   "Url": "https://vk.com/im?sel\u003d-201360423"
                 }
-              ],
-              "Marusia": [
+              ]
+            },
+            "Sber": {
+              "Buttons": [
                 {
-                  "Text": "Поблагодарить разработчиков",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                  "Text": "Оценить навык",
+                  "IsQuickReply": true
                 }
               ]
             }

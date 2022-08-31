@@ -116,19 +116,29 @@
           "type": "4",
           "title": "",
           "payload": {
-            "ButtonsForSource": {
-              "Yandex": [
+            "Yandex": {
+              "Buttons": [
                 {
-                  "Text": "Поблагодарить разработчиков",
+                  "Text": "Оценить историю",
                   "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
                 }
-              ],
-              "Marusia": [
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
                 {
                   "Text": "Поблагодарить разработчиков",
                   "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
                 }
               ]
             }

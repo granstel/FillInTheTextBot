@@ -35,8 +35,6 @@ namespace FillInTheTextBot.Services
 
             };
 
-            TrySetSavedText(request.SessionId, dialog);
-
             var resetTextIndex = string.Empty;
 
             var isGotResetParameter = dialog?.Parameters.TryGetValue("resetTextIndex", out resetTextIndex) ?? false;
@@ -63,10 +61,48 @@ namespace FillInTheTextBot.Services
             response.NextTextIndex = request.NextTextIndex;
 
             response.Text = GetResponseText(request.Appeal, response.Text);
+            response.Buttons = GetButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
-            response.Buttons = AddButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
+            var texts = TryAddReplacementsFromPayload(dialog?.Payload, request.Source, response.Text);
+            response.Text = texts.Text;
+            response.AlternativeText = texts.AlternativeText;
+
+            TrySetSavedText(request.SessionId, dialog, texts);
 
             return response;
+        }
+
+        private Texts TryAddReplacementsFromPayload(Payload payload, Source source, string text)
+        {
+            var texts = new Texts
+            {
+                Text = text,
+                AlternativeText = text
+            };
+
+            if (payload is null)
+            {
+                return texts;
+            }
+
+            payload.TryGetValue(source, out var value);
+            payload.TryGetValue(Source.Default, out var defaultValue);
+
+            var replacements = value?.Replacements ?? defaultValue?.Replacements;
+
+            if (replacements?.Any() != true)
+            {
+                return texts;
+            }
+
+            foreach (var replacement in replacements)
+            {
+                var clearKey = replacement.Key.Replace("<", string.Empty).Replace(">", string.Empty);
+                texts.Text = texts.Text.Replace(replacement.Key, clearKey);
+                texts.AlternativeText = texts.AlternativeText.Replace(replacement.Key, replacement.Value);
+            }
+
+            return texts;
         }
 
         private async Task<Response> GetText(Request request, string startText, string textKey = null)
@@ -204,7 +240,7 @@ namespace FillInTheTextBot.Services
             return responseText;
         }
 
-        private ICollection<Button> AddButtonsFromPayload(ICollection<Button> responseButtons, Payload dialogPayload, Source requestSource)
+        private ICollection<Button> GetButtonsFromPayload(ICollection<Button> responseButtons, Payload dialogPayload, Source requestSource)
         {
             using (Tracing.Trace())
             {
@@ -215,15 +251,20 @@ namespace FillInTheTextBot.Services
                     buttons.AddRange(responseButtons);
                 }
 
-                if (dialogPayload?.Buttons?.Any() == true)
+                var buttonsFromPayload = new List<Button>();
+
+                if (dialogPayload is not null)
                 {
-                    buttons.AddRange(dialogPayload.Buttons);
+                    buttonsFromPayload = dialogPayload.TryGetValue(requestSource, out var value)
+                        ? value.Buttons.ToList() : buttonsFromPayload;
+                    buttons.AddRange(buttonsFromPayload);
+                    
+                    if (dialogPayload.TryGetValue(Source.Default, out var defaultValue))
+                    {
+                        buttonsFromPayload = defaultValue.Buttons.ToList();
+                        buttons.AddRange(buttonsFromPayload);
+                    }
                 }
-
-                var buttonsForSource = new List<Button>();
-                buttonsForSource = dialogPayload?.ButtonsForSource?.GetValueOrDefault(requestSource, buttonsForSource).ToList() ?? buttonsForSource;
-
-                buttons.AddRange(buttonsForSource);
 
                 buttons = buttons.Where(b => !string.IsNullOrEmpty(b.Text)).ToList();
 
@@ -231,13 +272,14 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private void TrySetSavedText(string sessionId, Dialog dialog)
+        private void TrySetSavedText(string sessionId, Dialog dialog, Texts texts)
         {
             if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
             {
                 var parameters = new Dictionary<string, string>
                 {
-                    { "text", dialog?.Response }
+                    { "text", texts.Text },
+                    { "alternativeText", texts.AlternativeText }
                 };
 
                 _dialogflowService.SetContextAsync(sessionId, "savedText", 5, parameters).Forget();
