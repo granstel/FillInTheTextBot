@@ -36,7 +36,7 @@
       "messages": [
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -55,7 +55,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -74,7 +74,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -93,7 +93,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -112,7 +112,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -131,7 +131,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
