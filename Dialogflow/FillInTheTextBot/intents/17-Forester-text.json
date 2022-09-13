@@ -13,11 +13,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "60834097-f08d-4305-8cf1-1a09bdd26239",
+          "id": "a2cd05de-81e2-403e-bc3d-1d2583def503",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "жуткую историю про лесника.",
+          "value": "Жуткая история про лесника.",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "795c82af-0542-4022-914d-1a711615e4ef",
+          "id": "8ba15281-f8e6-4edf-a034-7876f1bc09ce",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -58,7 +58,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "756ab388-9679-4cef-982c-5de2f4c63ddb",
+          "id": "c68dcd44-9a3b-4712-8a03-9c4f52dc4b75",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +77,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "547877a8-5441-4fbc-bcbe-19962e8ab472",
+          "id": "87ae6959-c01b-4d55-a839-9d9b05b8d63a",
           "name": "action",
           "required": true,
           "dataType": "@sys.any",
@@ -108,7 +108,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "7138b150-4d0a-4d60-881f-d00c7afb0eb9",
+          "id": "e533a50c-e1c1-440e-93ae-39c0e2364997",
           "name": "gun",
           "required": true,
           "dataType": "@sys.any",
@@ -167,24 +167,12 @@
                 "\u003c🐺\u003e": ""
               }
             },
-            "Sber": {
-              "Replacements": {
-                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e",
-                "\u003cдорогой\u003e": "\u003cspeak\u003eдоро\u0027гой\u003c/speak\u003e"
-              },
-              "Buttons": [
-                {
-                  "IsQuickReply": true,
-                  "Text": "Оценить историю"
-                }
-              ]
-            },
             "Marusia": {
               "Buttons": [
                 {
                   "Text": "Поблагодарить разработчиков",
-                  "Url": "https://vk.com/im?sel\u003d-201360423",
-                  "IsQuickReply": false
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
                 }
               ],
               "Replacements": {
@@ -193,17 +181,29 @@
               }
             },
             "Yandex": {
-              "Replacements": {
-                "\u003c🐺\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e",
-                "\u003cдорогой\u003e": "дорогой"
-              },
               "Buttons": [
                 {
-                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "Text": "Оценить историю",
                   "IsQuickReply": false,
-                  "Text": "Оценить историю"
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
                 }
-              ]
+              ],
+              "Replacements": {
+                "\u003cдорогой\u003e": "дорогой",
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "\u003cдорогой\u003e": "\u003cspeak\u003eдоро\u0027гой\u003c/speak\u003e",
+                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
+              }
             }
           },
           "textToSpeech": "",

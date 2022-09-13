@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "df172b1d-8839-4db8-8ed7-e5ff860b2fa4",
+          "id": "f9c114fe-0d9b-4460-82d5-56a7629268cd",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -51,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Настало время занимательных историй! Давай сочиним что-нибудь новенькое?",
-            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь новенькое?",
-            "И вот пришло время занимательных историй! Давай сочиним кое-что новенькое?"
+            "Настало время занимательных историй! Давай сочиним что-нибудь?",
+            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
+            "И вот пришло время занимательных историй! Давай сочиним кое-что?"
           ],
           "condition": ""
         },
@@ -67,16 +67,11 @@
               },
               "Buttons": [
                 {
-                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Узнать, что новенького",
                   "IsQuickReply": false,
-                  "Text": "Узнать, что новенького"
+                  "Url": "https://vk.com/fillinthetextbot"
                 }
               ]
-            },
-            "Default": {
-              "Replacements": {
-                "\u003cS1\u003e": ""
-              }
             },
             "Marusia": {
               "Replacements": {
@@ -84,8 +79,8 @@
               },
               "Buttons": [
                 {
-                  "IsQuickReply": false,
                   "Text": "Узнать, что новенького",
+                  "IsQuickReply": false,
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ]
@@ -93,6 +88,11 @@
             "Sber": {
               "Replacements": {
                 "\u003cS1\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "\u003cS1\u003e": ""
               }
             }
           },
