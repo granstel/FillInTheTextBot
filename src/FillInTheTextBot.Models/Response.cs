@@ -26,6 +26,8 @@ namespace FillInTheTextBot.Models
 
         public int NextTextIndex { get; set; }
 
+        public ICollection<string> PassedTexts { get; set; }
+
         public string ScopeKey { get; set; }
         
         public IDictionary<string, string> Emotions { get; set; }

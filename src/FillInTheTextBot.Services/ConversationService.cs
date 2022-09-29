@@ -15,11 +15,13 @@ namespace FillInTheTextBot.Services
 
         private readonly IDialogflowService _dialogflowService;
         private readonly IRedisCacheService _cache;
+        private readonly Random _random;
 
         public ConversationService(IDialogflowService dialogflowService, IRedisCacheService cache)
         {
             _dialogflowService = dialogflowService;
             _cache = cache;
+            _random = Random.Shared;
         }
 
         public async Task<Response> GetResponseAsync(Request request)
@@ -109,7 +111,10 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                var response = new Response();
+                var response = new Response
+                {
+                    PassedTexts = request.PassedTexts
+                };
 
                 if (string.IsNullOrEmpty(textKey))
                 {
@@ -124,7 +129,15 @@ namespace FillInTheTextBot.Services
                             return response;
                         }
 
-                        textKey = GetTextKey(request, texts);
+                        try
+                        {
+                            textKey = GetTextKey(request.PassedTexts, texts);
+                            response.PassedTexts.Add(textKey);
+                        }
+                        catch (TextsOverException e)
+                        {
+                            textKey = "texts-over";
+                        }
                     }
                 }
 
@@ -146,20 +159,18 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private string GetTextKey(Request request, string[] texts)
+        private string GetTextKey(ICollection<string> passedTexts, string[] texts)
         {
-            string textKey;
-
-            var index = request.NextTextIndex++;
-
-            if (index >= texts.Length)
+            if (passedTexts.Count == texts.Length)
             {
-                textKey = "texts-over";
+                throw new TextsOverException();
             }
-            else
-            {
-                textKey = texts[index];
-            }
+
+            var candidateTexts = texts.Except(passedTexts).ToList();
+
+            var candidateIndex = _random.Next(candidateTexts.Count);
+
+            var textKey = candidateTexts[candidateIndex];
 
             return textKey;
         }
