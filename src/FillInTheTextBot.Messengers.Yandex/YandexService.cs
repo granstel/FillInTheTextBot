@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.Extensions;
 using Microsoft.Extensions.Logging;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
@@ -30,26 +31,21 @@ namespace FillInTheTextBot.Messengers.Yandex
             var request = input.ToRequest();
 
             input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
-
             request.IsOldUser = isOldUser;
 
-            if (input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex) != true)
-            {
-                input.TryGetFromApplicationState(Models.Response.NextTextIndexStorageKey, out nextTextIndex);
-            }
-
+            input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out long nextTextIndex);
             request.NextTextIndex = Convert.ToInt32(nextTextIndex);
 
             input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
-
             request.ScopeKey = scopeKey;
 
-            if (request.NewSession == true)
-            {
-                var contexts = GetContexts(input);
+            input.TryGetFromUserState(Models.Response.PassedTextsKey, out object passedTexts);
+            request.PassedTexts = passedTexts.ToString().Deserialize<string[]>();
 
-                request.RequiredContexts.AddRange(contexts);
-            }
+            if (request.NewSession != true) return request;
+
+            var contexts = GetContexts(input);
+            request.RequiredContexts.AddRange(contexts);
 
             return request;
         }
@@ -75,7 +71,8 @@ namespace FillInTheTextBot.Messengers.Yandex
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 
             output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
-            output.AddToApplicationState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
+
+            output.AddToUserState(Models.Response.PassedTextsKey, response.PassedTexts);
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 

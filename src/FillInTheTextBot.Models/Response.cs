@@ -6,6 +6,7 @@ namespace FillInTheTextBot.Models
     {
         public static string NextTextIndexStorageKey => nameof(NextTextIndex).ToUpper();
         public static string ScopeStorageKey => nameof(ScopeKey).ToUpper();
+        public static string PassedTextsKey => nameof(PassedTexts).ToUpper();
 
         public Response()
         {
@@ -26,7 +27,7 @@ namespace FillInTheTextBot.Models
 
         public int NextTextIndex { get; set; }
 
-        public ICollection<string> PassedTexts { get; set; }
+        public IList<string> PassedTexts { get; set; }
 
         public string ScopeKey { get; set; }
         

@@ -33,8 +33,8 @@ namespace FillInTheTextBot.Services
                 Text = dialog?.Response,
                 Finished = dialog?.EndConversation ?? false,
                 Buttons = dialog?.Buttons,
-                ScopeKey = dialog?.ScopeKey
-
+                ScopeKey = dialog?.ScopeKey,
+                PassedTexts = request.PassedTexts.ToList()
             };
 
             var resetTextIndex = string.Empty;
@@ -113,7 +113,7 @@ namespace FillInTheTextBot.Services
             {
                 var response = new Response
                 {
-                    PassedTexts = request.PassedTexts
+                    PassedTexts = request.PassedTexts.ToList()
                 };
 
                 if (string.IsNullOrEmpty(textKey))
