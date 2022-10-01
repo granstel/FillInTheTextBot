@@ -163,7 +163,7 @@ namespace FillInTheTextBot.Services
 
         private string GetTextKey(ICollection<string> passedTexts, string[] texts)
         {
-            if (passedTexts.Count == texts.Length)
+            if (passedTexts.Count >= texts.Length)
             {
                 throw new TextsOverException();
             }
