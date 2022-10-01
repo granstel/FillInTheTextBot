@@ -33,9 +33,6 @@ namespace FillInTheTextBot.Messengers.Yandex
             input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
             request.IsOldUser = isOldUser;
 
-            input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out long nextTextIndex);
-            request.NextTextIndex = Convert.ToInt32(nextTextIndex);
-
             input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
             request.ScopeKey = scopeKey;
 
@@ -69,8 +66,6 @@ namespace FillInTheTextBot.Messengers.Yandex
             output = input.FillOutput(output);
 
             output.AddToUserState(Models.Request.IsOldUserKey, true);
-
-            output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
 
             output.AddToUserState(Models.Response.PassedTextsKey, response.PassedTexts);
 

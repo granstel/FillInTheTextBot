@@ -43,7 +43,6 @@ namespace FillInTheTextBot.Services
 
             if (isGotResetParameter && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
-                request.NextTextIndex = 0;
                 request.PassedTexts.Clear();
             }
 
@@ -60,8 +59,6 @@ namespace FillInTheTextBot.Services
             }
 
             response.Emotions = GetEmotions(dialog);
-
-            response.NextTextIndex = request.NextTextIndex;
 
             response.Text = GetResponseText(request.Appeal, response.Text);
             response.Buttons = GetButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
