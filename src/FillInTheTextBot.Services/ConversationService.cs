@@ -166,6 +166,11 @@ namespace FillInTheTextBot.Services
                 throw new TextsOverException();
             }
 
+            if (passedTexts.Count == 0)
+            {
+                return texts.FirstOrDefault();
+            }
+
             var candidateTexts = texts.Except(passedTexts).ToList();
 
             var candidateIndex = _random.Next(candidateTexts.Count);
