@@ -44,6 +44,7 @@ namespace FillInTheTextBot.Services
             if (isGotResetParameter && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
                 request.NextTextIndex = 0;
+                request.PassedTexts.Clear();
             }
 
             if (string.Equals(dialog?.Action, "GetText"))
@@ -137,6 +138,7 @@ namespace FillInTheTextBot.Services
                         catch (TextsOverException e)
                         {
                             textKey = "texts-over";
+                            response.PassedTexts.Clear();
                         }
                     }
                 }
