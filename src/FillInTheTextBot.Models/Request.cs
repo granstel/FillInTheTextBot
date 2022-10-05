@@ -35,6 +35,8 @@ namespace FillInTheTextBot.Models
 
         public int NextTextIndex { get; set; }
 
+        public string CurrentText { get; set; }
+
         public ICollection<string> PassedTexts { get; set; }
 
         public string ScopeKey { get; set; }

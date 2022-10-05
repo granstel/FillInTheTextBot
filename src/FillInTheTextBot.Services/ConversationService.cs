@@ -67,7 +67,7 @@ namespace FillInTheTextBot.Services
             response.Text = texts.Text;
             response.AlternativeText = texts.AlternativeText;
 
-            TrySetSavedText(request.SessionId, dialog, texts);
+            TrySetSavedText(request.SessionId, dialog, texts, response);
 
             return response;
         }
@@ -130,11 +130,16 @@ namespace FillInTheTextBot.Services
                         try
                         {
                             textKey = GetTextKey(request.PassedTexts, texts);
-                            response.PassedTexts.Add(textKey);
+
+                            response.CurrentText = textKey;
                         }
                         catch (TextsOverException e)
                         {
-                            textKey = "texts-over";
+                            if (!string.IsNullOrEmpty(request.CurrentText))
+                            {
+                                textKey = "texts-over";
+                            }
+
                             response.PassedTexts.Clear();
                         }
                     }
@@ -287,7 +292,7 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private void TrySetSavedText(string sessionId, Dialog dialog, Texts texts)
+        private void TrySetSavedText(string sessionId, Dialog dialog, Texts texts, Response response)
         {
             if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -298,6 +303,8 @@ namespace FillInTheTextBot.Services
                 };
 
                 _dialogflowService.SetContextAsync(sessionId, "savedText", 5, parameters).Forget();
+
+                response.PassedTexts.Add(response.CurrentText);
             }
         }
     }
