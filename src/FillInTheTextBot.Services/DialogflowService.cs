@@ -52,7 +52,7 @@ namespace FillInTheTextBot.Services
                 {InternalModels.Source.Marusia, DefaultWelcomeEventResolve}
             };
         }
-
+        //TODO: remove requiredContext
         public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null)
         {
             var request = new InternalModels.Request

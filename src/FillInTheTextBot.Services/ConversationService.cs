@@ -15,11 +15,13 @@ namespace FillInTheTextBot.Services
 
         private readonly IDialogflowService _dialogflowService;
         private readonly IRedisCacheService _cache;
+        private readonly Random _random;
 
         public ConversationService(IDialogflowService dialogflowService, IRedisCacheService cache)
         {
             _dialogflowService = dialogflowService;
             _cache = cache;
+            _random = Random.Shared;
         }
 
         public async Task<Response> GetResponseAsync(Request request)
@@ -31,8 +33,9 @@ namespace FillInTheTextBot.Services
                 Text = dialog?.Response,
                 Finished = dialog?.EndConversation ?? false,
                 Buttons = dialog?.Buttons,
-                ScopeKey = dialog?.ScopeKey
-
+                ScopeKey = dialog?.ScopeKey,
+                CurrentText = request.CurrentText,
+                PassedTexts = request.PassedTexts.ToList()
             };
 
             var resetTextIndex = string.Empty;
@@ -41,7 +44,7 @@ namespace FillInTheTextBot.Services
 
             if (isGotResetParameter && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
-                request.NextTextIndex = 0;
+                request.PassedTexts.Clear();
             }
 
             if (string.Equals(dialog?.Action, "GetText"))
@@ -58,8 +61,6 @@ namespace FillInTheTextBot.Services
 
             response.Emotions = GetEmotions(dialog);
 
-            response.NextTextIndex = request.NextTextIndex;
-
             response.Text = GetResponseText(request.Appeal, response.Text);
             response.Buttons = GetButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
@@ -67,7 +68,7 @@ namespace FillInTheTextBot.Services
             response.Text = texts.Text;
             response.AlternativeText = texts.AlternativeText;
 
-            TrySetSavedText(request.SessionId, dialog, texts);
+            TrySetSavedText(request.SessionId, dialog, texts, response);
 
             return response;
         }
@@ -109,7 +110,10 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                var response = new Response();
+                var response = new Response
+                {
+                    PassedTexts = request.PassedTexts.ToList()
+                };
 
                 if (string.IsNullOrEmpty(textKey))
                 {
@@ -124,7 +128,21 @@ namespace FillInTheTextBot.Services
                             return response;
                         }
 
-                        textKey = GetTextKey(request, texts);
+                        try
+                        {
+                            textKey = GetTextKey(request.PassedTexts, texts);
+
+                            response.CurrentText = textKey;
+                        }
+                        catch (TextsOverException e)
+                        {
+                            if (!string.IsNullOrEmpty(request.CurrentText))
+                            {
+                                textKey = "texts-over";
+                            }
+
+                            response.PassedTexts.Clear();
+                        }
                     }
                 }
 
@@ -146,20 +164,23 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private string GetTextKey(Request request, string[] texts)
+        private string GetTextKey(ICollection<string> passedTexts, string[] texts)
         {
-            string textKey;
-
-            var index = request.NextTextIndex++;
-
-            if (index >= texts.Length)
+            if (passedTexts.Count >= texts.Length)
             {
-                textKey = "texts-over";
+                throw new TextsOverException();
             }
-            else
+
+            if (passedTexts.Count == 0)
             {
-                textKey = texts[index];
+                return texts.FirstOrDefault();
             }
+
+            var candidateTexts = texts.Except(passedTexts).ToList();
+
+            var candidateIndex = _random.Next(candidateTexts.Count);
+
+            var textKey = candidateTexts[candidateIndex];
 
             return textKey;
         }
@@ -272,7 +293,7 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private void TrySetSavedText(string sessionId, Dialog dialog, Texts texts)
+        private void TrySetSavedText(string sessionId, Dialog dialog, Texts texts, Response response)
         {
             if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -283,6 +304,8 @@ namespace FillInTheTextBot.Services
                 };
 
                 _dialogflowService.SetContextAsync(sessionId, "savedText", 5, parameters).Forget();
+
+                response.PassedTexts.Add(response.CurrentText);
             }
         }
     }
