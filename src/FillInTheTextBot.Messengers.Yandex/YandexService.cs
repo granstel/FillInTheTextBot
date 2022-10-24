@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Extensions;
@@ -40,7 +41,8 @@ namespace FillInTheTextBot.Messengers.Yandex
             request.CurrentText = currentText;
 
             input.TryGetFromUserState(Models.Response.PassedTextsKey, out object passedTexts);
-            request.PassedTexts = passedTexts.ToString().Deserialize<string[]>();
+            request.PassedTexts = passedTexts.ToString().Deserialize<string[]>()
+                .Where(s => !string.IsNullOrEmpty(s)).ToList();
 
             if (request.NewSession != true) return request;
 

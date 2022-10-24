@@ -34,6 +34,7 @@ namespace FillInTheTextBot.Services
                 Finished = dialog?.EndConversation ?? false,
                 Buttons = dialog?.Buttons,
                 ScopeKey = dialog?.ScopeKey,
+                CurrentText = request.CurrentText,
                 PassedTexts = request.PassedTexts.ToList()
             };
 
