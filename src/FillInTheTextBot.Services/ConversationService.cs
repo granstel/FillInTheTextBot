@@ -296,28 +296,22 @@ namespace FillInTheTextBot.Services
         {
             var text = request.Text;
 
-            using (Tracing.Trace())
+            var response = new Response();
+
+            string[] words = {"помощь", "что ты умеешь"};
+
+            if (words?.Any(w => string.Equals(w, text, StringComparison.InvariantCultureIgnoreCase)) == false)
             {
-                var response = new Response();
-
-                using (Tracing.Trace(operationName: "Get help words from cache"))
-                {
-                    _cache.TryGet("help-words", out string[] words);
-
-                    if (words?.Any(w => string.Equals(w, text, StringComparison.InvariantCultureIgnoreCase)) == false)
-                    {
-                        return null;
-                    }
-                }
-
-                var dialog = await _dialogflowService.GetResponseAsync(text, $"{request.SessionId}-help");
-
-                response.Text = dialog?.Response;
-                response.Buttons = dialog?.Buttons;
-                response.ScopeKey = dialog?.ScopeKey;
-
-                return response;
+                return null;
             }
+
+            var dialog = await _dialogflowService.GetResponseAsync(text, $"{request.SessionId}-help");
+
+            response.Text = dialog?.Response;
+            response.Buttons = dialog?.Buttons;
+            response.ScopeKey = dialog?.ScopeKey;
+
+            return response;
         }
     }
 }
