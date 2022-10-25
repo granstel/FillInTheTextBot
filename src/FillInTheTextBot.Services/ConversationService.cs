@@ -24,6 +24,13 @@ namespace FillInTheTextBot.Services
 
         public async Task<Response> GetResponseAsync(Request request)
         {
+            var helpResponse = await TryGetHelpResponse(request);
+
+            if (helpResponse != null)
+            {
+                return helpResponse;
+            }
+            
             var dialog = await _dialogflowService.GetResponseAsync(request);
 
             var response = new Response
@@ -32,7 +39,6 @@ namespace FillInTheTextBot.Services
                 Finished = dialog?.EndConversation ?? false,
                 Buttons = dialog?.Buttons,
                 ScopeKey = dialog?.ScopeKey
-
             };
 
             var resetTextIndex = string.Empty;
@@ -283,6 +289,34 @@ namespace FillInTheTextBot.Services
                 };
 
                 _dialogflowService.SetContextAsync(sessionId, "savedText", 5, parameters).Forget();
+            }
+        }
+
+        private async Task<Response> TryGetHelpResponse(Request request)
+        {
+            var text = request.Text;
+
+            using (Tracing.Trace())
+            {
+                var response = new Response();
+
+                using (Tracing.Trace(operationName: "Get help words from cache"))
+                {
+                    _cache.TryGet("help-words", out string[] words);
+
+                    if (words?.Any(w => string.Equals(w, text, StringComparison.InvariantCultureIgnoreCase)) == false)
+                    {
+                        return null;
+                    }
+                }
+
+                var dialog = await _dialogflowService.GetResponseAsync(text, $"{request.SessionId}-help");
+
+                response.Text = dialog?.Response;
+                response.Buttons = dialog?.Buttons;
+                response.ScopeKey = dialog?.ScopeKey;
+
+                return response;
             }
         }
     }
