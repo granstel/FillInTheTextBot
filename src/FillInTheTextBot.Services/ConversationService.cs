@@ -24,12 +24,8 @@ namespace FillInTheTextBot.Services
 
         public async Task<Response> GetResponseAsync(Request request)
         {
-            var helpResponse = await TryGetHelpResponse(request);
+            await ResetContextsWhenHelpRequest(request);
 
-            if (helpResponse != null)
-            {
-                return helpResponse;
-            }
             
             var dialog = await _dialogflowService.GetResponseAsync(request);
 
@@ -292,26 +288,18 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private async Task<Response> TryGetHelpResponse(Request request)
+        private async Task ResetContextsWhenHelpRequest(Request request)
         {
             var text = request.Text;
 
-            var response = new Response();
-
-            string[] words = {"помощь", "что ты умеешь"};
+            string[] words = { "помощь", "что ты умеешь", "что ты умеешь?" };
 
             if (words?.Any(w => string.Equals(w, text, StringComparison.InvariantCultureIgnoreCase)) == false)
             {
-                return null;
+                return;
             }
 
-            var dialog = await _dialogflowService.GetResponseAsync(text, $"{request.SessionId}-help");
-
-            response.Text = dialog?.Response;
-            response.Buttons = dialog?.Buttons;
-            response.ScopeKey = dialog?.ScopeKey;
-
-            return response;
+            await _dialogflowService.DeleteAllContextsAsync(request.SessionId);
         }
     }
 }

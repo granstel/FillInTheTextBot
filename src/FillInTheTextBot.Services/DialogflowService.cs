@@ -84,6 +84,21 @@ namespace FillInTheTextBot.Services
             }
         }
 
+        public Task DeleteAllContextsAsync(string sessionId)
+        {
+            return _contextsClientBalancer.Invoke(sessionId, (client, context) => DeleteAllContextsInternalAsync(client, sessionId, context.Parameters["ProjectId"]));
+        }
+
+        private Task DeleteAllContextsInternalAsync(ContextsClient client, string sessionId, string projectId)
+        {
+            using (Tracing.Trace())
+            {
+                var session = CreateSession(projectId, sessionId);
+
+                return client.DeleteAllContextsAsync(session);
+            }
+        }
+        
         private async Task<InternalModels.Dialog> GetResponseInternalAsync(InternalModels.Request request, SessionsClient client, ScopeContext context)
         {
             using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
