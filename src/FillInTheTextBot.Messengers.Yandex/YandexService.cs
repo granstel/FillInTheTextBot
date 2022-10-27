@@ -44,12 +44,9 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             request.ScopeKey = scopeKey;
 
-            if (request.NewSession == true)
-            {
-                var contexts = GetContexts(input);
+            var contexts = GetContexts(input);
 
-                request.RequiredContexts.AddRange(contexts);
-            }
+            request.RequiredContexts.AddRange(contexts);
 
             return request;
         }
@@ -100,7 +97,7 @@ namespace FillInTheTextBot.Messengers.Yandex
                 contexts.Add(new Models.Context
                 {
                     Name = "navigator",
-                    LifeSpan = 50000
+                    LifeSpan = 2
                 });
             }
 
@@ -109,7 +106,7 @@ namespace FillInTheTextBot.Messengers.Yandex
                 contexts.Add(new Models.Context
                 {
                     Name = "advertising",
-                    LifeSpan = 50000
+                    LifeSpan = 2
                 });
             }
 
