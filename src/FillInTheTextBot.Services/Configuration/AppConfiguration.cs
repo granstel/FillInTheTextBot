@@ -10,6 +10,6 @@
 
         public TracingConfiguration Tracing { get; set; }
 
-        public ConversationConfiguration ConversationConfiguration { get; set; }
+        public ConversationConfiguration Conversation { get; set; }
     }
 }
