@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FillInTheTextBot.Models;
+using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using FillInTheTextBot.Services.Mapping;
 using GranSteL.Helpers.Redis;
@@ -13,13 +14,16 @@ namespace FillInTheTextBot.Services
     {
         private static readonly Random Random = new Random();
 
+        private readonly ConversationConfiguration _configuration;
         private readonly IDialogflowService _dialogflowService;
         private readonly IRedisCacheService _cache;
 
-        public ConversationService(IDialogflowService dialogflowService, IRedisCacheService cache)
+        public ConversationService(ConversationConfiguration configuration, IDialogflowService dialogflowService,
+            IRedisCacheService cache)
         {
             _dialogflowService = dialogflowService;
             _cache = cache;
+            _configuration = configuration;
         }
 
         public async Task<Response> GetResponseAsync(Request request)
@@ -291,22 +295,7 @@ namespace FillInTheTextBot.Services
         {
             var text = request.Text;
 
-            string[] words =
-            {
-                "помощь", 
-                "что ты умеешь", 
-                "что ты умеешь?",
-                "алиса, вернись", 
-                "алиса вернись",
-                "вернись", 
-                "алиса, хватит", 
-                "алиса хватит", 
-                "хватит", 
-                "стоп", 
-                "закончить", 
-                "выйти",
-                "выход",
-            };
+            string[] words =_configuration.HelpWords.Concat(_configuration.ExitWords).ToArray();
 
             if (words?.Any(w => string.Equals(w, text, StringComparison.InvariantCultureIgnoreCase)) is true)
             {
