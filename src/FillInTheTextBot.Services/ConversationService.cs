@@ -308,12 +308,10 @@ namespace FillInTheTextBot.Services
                 "выход",
             };
 
-            if (words?.Any(w => string.Equals(w, text, StringComparison.InvariantCultureIgnoreCase)) == false)
+            if (words?.Any(w => string.Equals(w, text, StringComparison.InvariantCultureIgnoreCase)) is true)
             {
-                return;
+                await _dialogflowService.DeleteAllContextsAsync(request.SessionId);
             }
-
-            await _dialogflowService.DeleteAllContextsAsync(request.SessionId);
         }
     }
 }
