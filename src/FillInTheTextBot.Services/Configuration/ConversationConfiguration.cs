@@ -6,11 +6,8 @@ public class ConversationConfiguration
 {
     public ConversationConfiguration()
     {
-        HelpWords = Array.Empty<string>();
-        ExitWords = Array.Empty<string>();
+        ResetContextWords = Array.Empty<string>();
     }
 
-    public string[] HelpWords { get; set; }
-
-    public string[] ExitWords { get; set; }
+    public string[] ResetContextWords { get; set; }
 }

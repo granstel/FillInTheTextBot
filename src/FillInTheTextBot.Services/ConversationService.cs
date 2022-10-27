@@ -295,9 +295,8 @@ namespace FillInTheTextBot.Services
         {
             var text = request.Text;
 
-            string[] words =_configuration.HelpWords.Concat(_configuration.ExitWords).ToArray();
-
-            if (words?.Any(w => string.Equals(w, text, StringComparison.InvariantCultureIgnoreCase)) is true)
+            if (_configuration?.ResetContextWords?.Any(word => 
+                    string.Equals(word, text, StringComparison.InvariantCultureIgnoreCase)) is true)
             {
                 await _dialogflowService.DeleteAllContextsAsync(request.SessionId);
             }
