@@ -24,9 +24,8 @@ namespace FillInTheTextBot.Services
 
         public async Task<Response> GetResponseAsync(Request request)
         {
-            await ResetContextsWhenHelpRequest(request);
+            await ResetContextsWhenHelpOrExitRequest(request);
 
-            
             var dialog = await _dialogflowService.GetResponseAsync(request);
 
             var response = new Response
@@ -288,11 +287,26 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private async Task ResetContextsWhenHelpRequest(Request request)
+        private async Task ResetContextsWhenHelpOrExitRequest(Request request)
         {
             var text = request.Text;
 
-            string[] words = { "помощь", "что ты умеешь", "что ты умеешь?" };
+            string[] words =
+            {
+                "помощь", 
+                "что ты умеешь", 
+                "что ты умеешь?",
+                "алиса, вернись", 
+                "алиса вернись",
+                "вернись", 
+                "алиса, хватит", 
+                "алиса хватит", 
+                "хватит", 
+                "стоп", 
+                "закончить", 
+                "выйти",
+                "выход",
+            };
 
             if (words?.Any(w => string.Equals(w, text, StringComparison.InvariantCultureIgnoreCase)) == false)
             {
