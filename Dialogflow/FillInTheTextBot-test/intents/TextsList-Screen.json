@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "b338eb9c-e8bb-4f4f-99cf-79042168fd0a",
+          "id": "e5ee6efd-f0b9-420d-bb9d-c57d19f7da38",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -36,7 +36,7 @@
       "messages": [
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -55,7 +55,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -74,7 +74,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -93,7 +93,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -112,7 +112,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -131,7 +131,7 @@
         },
         {
           "type": "1",
-          "platform": "telegram",
+          "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
@@ -142,6 +142,19 @@
             },
             {
               "text": "Вот это ёлка!"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Про лесника"
             }
           ],
           "textToSpeech": "",
@@ -242,8 +255,8 @@
             "Default": {
               "Buttons": [
                 {
-                  "Text": "Самый новый",
-                  "IsQuickReply": false
+                  "IsQuickReply": false,
+                  "Text": "Самый новый"
                 },
                 {
                   "IsQuickReply": false,

@@ -38,5 +38,7 @@ namespace FillInTheTextBot.Models
         public string ScopeKey { get; set; }
 
         public Appeal Appeal { get; set; }
+
+        public bool ResetContexts { get; set; }
     }
 }

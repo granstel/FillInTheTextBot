@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace FillInTheTextBot.Models
@@ -8,7 +9,7 @@ namespace FillInTheTextBot.Models
         public Dialog()
         {
             Parameters = new Dictionary<string, string>();
-            Buttons = new Button[0];
+            Buttons = Array.Empty<Button>();
         }
 
         public IDictionary<string, string> Parameters { get; set; }
@@ -26,6 +27,8 @@ namespace FillInTheTextBot.Models
         public string ScopeKey { get; set; }
 
         public Payload Payload { get; set; }
+
+        public bool CancelsSlotFilling { get; set; }
 
         public IEnumerable<string> GetParameters(string key)
         {

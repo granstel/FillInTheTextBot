@@ -157,7 +157,10 @@ namespace FillInTheTextBot.Services
                 {
                     SessionAsSessionName = session,
                     QueryInput = query,
-                    QueryParams = new QueryParameters()
+                    QueryParams = new QueryParameters
+                    {
+                        ResetContexts = request.ResetContexts
+                    }
                 };
 
                 var contexts = request.RequiredContexts.Select(c =>
