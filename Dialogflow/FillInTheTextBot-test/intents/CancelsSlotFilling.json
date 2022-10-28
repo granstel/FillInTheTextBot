@@ -1,0 +1,57 @@
+{
+  "id": "125ad095-a64a-46a5-9d9b-82d639b6a8ef",
+  "name": "CancelsSlotFilling",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Давай",
+            "Помощь",
+            "Список",
+            "Выход"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Может, сочиним другую историю?",
+            "Сочиним другую историю?",
+            "Давай сочиним другую историю?",
+            "Давай ещё что-нибудь сочиним?",
+            "Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "CancelsSlotFilling"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
