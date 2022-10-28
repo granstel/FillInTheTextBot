@@ -28,7 +28,7 @@ namespace FillInTheTextBot.Services
 
         public async Task<Response> GetResponseAsync(Request request)
         {
-            await ResetContextsWhenHelpOrExitRequest(request);
+            request = ResetContextsWhenHelpOrExitRequest(request);
 
             var dialog = await _dialogflowService.GetResponseAsync(request);
 
@@ -290,15 +290,14 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private async Task ResetContextsWhenHelpOrExitRequest(Request request)
+        private Request ResetContextsWhenHelpOrExitRequest(Request request)
         {
             var text = request.Text;
 
-            if (_configuration?.ResetContextWords?.Any(word => 
-                    string.Equals(word, text, StringComparison.InvariantCultureIgnoreCase)) is true)
-            {
-                await _dialogflowService.DeleteAllContextsAsync(request.SessionId);
-            }
+            request.ResetContexts = _configuration?.ResetContextWords?.Any(word =>
+                string.Equals(word, text, StringComparison.InvariantCultureIgnoreCase)) is true;
+
+            return request;
         }
 
         private async Task<Response> TryGetAnswerForCancelsSlotFilling(bool? isCancelsSlotFilling, Response response,
