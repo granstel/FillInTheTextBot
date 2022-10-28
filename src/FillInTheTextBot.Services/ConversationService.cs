@@ -46,19 +46,17 @@ namespace FillInTheTextBot.Services
             {
                 request.NextTextIndex = 0;
             }
-
             if (string.Equals(dialog?.Action, "GetText"))
             {
                 var textKey = dialog.GetParameters("textKey").FirstOrDefault();
                 response = await GetText(request, dialog.Response, textKey);
             }
+            response.NextTextIndex = request.NextTextIndex;
 
             if (string.Equals(dialog?.Action, "CALL_RATING"))
             {
                 response.Text = "CALL_RATING";
             }
-
-            response.NextTextIndex = request.NextTextIndex;
 
             response.Buttons = GetButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
