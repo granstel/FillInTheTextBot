@@ -41,9 +41,7 @@ namespace FillInTheTextBot.Services
             };
 
             var resetTextIndex = string.Empty;
-
             var isGotResetParameter = dialog?.Parameters.TryGetValue("resetTextIndex", out resetTextIndex) ?? false;
-
             if (isGotResetParameter && string.Equals(resetTextIndex, bool.TrueString, StringComparison.InvariantCultureIgnoreCase))
             {
                 request.NextTextIndex = 0;
@@ -52,7 +50,6 @@ namespace FillInTheTextBot.Services
             if (string.Equals(dialog?.Action, "GetText"))
             {
                 var textKey = dialog.GetParameters("textKey").FirstOrDefault();
-
                 response = await GetText(request, dialog.Response, textKey);
             }
 
@@ -61,16 +58,18 @@ namespace FillInTheTextBot.Services
                 response.Text = "CALL_RATING";
             }
 
-            response.Emotions = GetEmotions(dialog);
-
             response.NextTextIndex = request.NextTextIndex;
 
-            response.Text = GetResponseText(request.Appeal, response.Text);
             response.Buttons = GetButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
+
+            response = await TryGetAnswerForCancelsSlotFilling(dialog?.CancelsSlotFilling, response, request.SessionId);
+            response.Text = GetResponseText(request.Appeal, response.Text);
 
             var texts = TryAddReplacementsFromPayload(dialog?.Payload, request.Source, response.Text);
             response.Text = texts.Text;
             response.AlternativeText = texts.AlternativeText;
+
+            response.Emotions = GetEmotions(dialog);
 
             TrySetSavedText(request.SessionId, dialog, texts);
 
@@ -300,6 +299,23 @@ namespace FillInTheTextBot.Services
             {
                 await _dialogflowService.DeleteAllContextsAsync(request.SessionId);
             }
+        }
+
+        private async Task<Response> TryGetAnswerForCancelsSlotFilling(bool? isCancelsSlotFilling, Response response,
+            string sessionId)
+        {
+            if (isCancelsSlotFilling is not true)
+            {
+                return response;
+            }
+            
+            const string eventName = $"event:CancelsSlotFilling";
+
+            var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId);
+
+            response.Text = $"{response.Text} {cancelsSlotFillingDialog.Response}";
+            response.Buttons = cancelsSlotFillingDialog.Buttons;
+            return response;
         }
     }
 }

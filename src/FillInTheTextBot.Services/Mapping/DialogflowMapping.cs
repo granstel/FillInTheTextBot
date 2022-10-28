@@ -21,6 +21,7 @@ namespace FillInTheTextBot.Services.Mapping
             destination.ParametersIncomplete = !(source?.AllRequiredParamsPresent ?? false);
             destination.Action = source?.Action;
             destination.EndConversation = string.Equals(destination.Action, "endConversation");
+            destination.CancelsSlotFilling = source?.CancelsSlotFilling ?? false;
 
             return destination;
         }
