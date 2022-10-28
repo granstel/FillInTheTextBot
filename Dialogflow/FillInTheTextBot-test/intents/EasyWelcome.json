@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "4a42f684-7305-411f-99b0-349da62988cf",
+          "id": "f9c114fe-0d9b-4460-82d5-56a7629268cd",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -68,31 +68,31 @@
               "Buttons": [
                 {
                   "Text": "Узнать, что новенького",
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
                 }
               ]
             },
             "Marusia": {
-              "Buttons": [
-                {
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Узнать, что новенького"
-                }
-              ],
               "Replacements": {
                 "\u003cS1\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
+              },
+              "Buttons": [
+                {
+                  "Text": "Узнать, что новенького",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
+            "Sber": {
+              "Replacements": {
+                "\u003cS1\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
               }
             },
             "Default": {
               "Replacements": {
                 "\u003cS1\u003e": ""
-              }
-            },
-            "Sber": {
-              "Replacements": {
-                "\u003cS1\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
               }
             }
           },

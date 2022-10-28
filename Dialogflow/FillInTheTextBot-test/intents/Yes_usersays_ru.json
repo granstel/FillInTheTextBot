@@ -1,5 +1,44 @@
 [
   {
+    "id": "7f1bfa1c-0f1e-45b8-9684-a0df0121c07a",
+    "data": [
+      {
+        "text": "другую историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "86aed00b-9230-4ce5-893d-ab68eb417b34",
+    "data": [
+      {
+        "text": "другая история",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0b744f69-1203-4fe0-abd2-4b57da3d85b2",
+    "data": [
+      {
+        "text": "давай другую историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "c10bef66-fff4-43fd-b10e-28b379b0a6ba",
     "data": [
       {
@@ -29,29 +68,12 @@
     "id": "de4ac2a3-c80b-4796-9c55-9c40de8d0e71",
     "data": [
       {
-        "text": "алиса",
-        "userDefined": false
-      },
-      {
-        "text": " начинай",
+        "text": "алиса начинай",
         "userDefined": false
       }
     ],
     "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "0b744f69-1203-4fe0-abd2-4b57da3d85b2",
-    "data": [
-      {
-        "text": "давай другую историю",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
+    "count": 1,
     "lang": "ru",
     "updated": 0
   },
@@ -59,11 +81,7 @@
     "id": "033506cb-95c2-4c10-81a8-48cc71de779f",
     "data": [
       {
-        "text": "Сочиним",
-        "userDefined": false
-      },
-      {
-        "text": " ещё!",
+        "text": "Сочиним ещё!",
         "userDefined": false
       }
     ],
@@ -76,11 +94,7 @@
     "id": "46d4b266-ae04-418b-b0ea-6f5b82eafad8",
     "data": [
       {
-        "text": "Сочиним",
-        "userDefined": false
-      },
-      {
-        "text": " ещё",
+        "text": "Сочиним ещё",
         "userDefined": false
       }
     ],
@@ -106,11 +120,7 @@
     "id": "c060fdf5-0754-421d-a11c-f898790a39be",
     "data": [
       {
-        "text": "ну да",
-        "userDefined": false
-      },
-      {
-        "text": " а что",
+        "text": "ну да а что",
         "userDefined": false
       }
     ],
@@ -123,11 +133,7 @@
     "id": "b1b49add-e0f4-40b1-9e5c-10e4c62a80f0",
     "data": [
       {
-        "text": "ну да",
-        "userDefined": false
-      },
-      {
-        "text": " сочиняем",
+        "text": "ну да сочиняем",
         "userDefined": false
       }
     ],
