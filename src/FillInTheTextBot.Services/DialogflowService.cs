@@ -84,11 +84,6 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        public Task DeleteAllContextsAsync(string sessionId)
-        {
-            return _contextsClientBalancer.Invoke(sessionId, (client, context) => DeleteAllContextsInternalAsync(client, sessionId, context.Parameters["ProjectId"]));
-        }
-
         private Task DeleteAllContextsInternalAsync(ContextsClient client, string sessionId, string projectId)
         {
             using (Tracing.Trace())
