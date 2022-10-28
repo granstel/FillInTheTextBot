@@ -84,16 +84,6 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private Task DeleteAllContextsInternalAsync(ContextsClient client, string sessionId, string projectId)
-        {
-            using (Tracing.Trace())
-            {
-                var session = CreateSession(projectId, sessionId);
-
-                return client.DeleteAllContextsAsync(session);
-            }
-        }
-        
         private async Task<InternalModels.Dialog> GetResponseInternalAsync(InternalModels.Request request, SessionsClient client, ScopeContext context)
         {
             using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
