@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "f9c114fe-0d9b-4460-82d5-56a7629268cd",
+          "id": "6124b5e7-3115-4c77-9f68-b5a313a3bc72",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -62,9 +62,6 @@
           "title": "",
           "payload": {
             "Yandex": {
-              "Replacements": {
-                "\u003cS1\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
-              },
               "Buttons": [
                 {
                   "Text": "Узнать, что новенького",
@@ -74,26 +71,13 @@
               ]
             },
             "Marusia": {
-              "Replacements": {
-                "\u003cS1\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
-              },
               "Buttons": [
                 {
-                  "Text": "Узнать, что новенького",
                   "IsQuickReply": false,
+                  "Text": "Узнать, что новенького",
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ]
-            },
-            "Sber": {
-              "Replacements": {
-                "\u003cS1\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
-              }
-            },
-            "Default": {
-              "Replacements": {
-                "\u003cS1\u003e": ""
-              }
             }
           },
           "textToSpeech": "",
