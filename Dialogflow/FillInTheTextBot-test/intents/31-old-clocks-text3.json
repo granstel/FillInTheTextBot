@@ -30,6 +30,7 @@
           "name": "number3",
           "required": true,
           "dataType": "@sys.number-integer",
+          "value": "$number3",
           "defaultValue": "",
           "isList": false,
           "prompts": [
