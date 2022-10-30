@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "83681f5e-a7ed-4bfd-acb8-58f9b0d2ae92",
+          "id": "8e52d022-40e0-4bab-b5d2-006af8264405",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +31,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Давай сочиним новую,"
+            "Самая свежая история —"
           ],
           "condition": ""
         }

@@ -26,11 +26,11 @@
       ],
       "parameters": [
         {
-          "id": "21da880c-12f1-4f65-9b83-ad8e2cdcf7c2",
+          "id": "0b205a57-d92a-4437-8a6c-bf4415cb7b98",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "про старинные часы. Имей в виду, это страшная история.",
+          "value": "старинные часы. Имей в виду, это страшная история.",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -40,7 +40,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "67b56a2c-21e4-4fc9-bea0-fb917de4eaae",
+          "id": "b70550ec-8db5-4218-a404-a96d12501a22",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -54,7 +54,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "bbce3e67-57c6-44cb-9fc6-1e841b6f01ac",
+          "id": "b79214b0-d161-4926-95d2-ae36e7c5990e",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +77,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "6be01322-6ecc-4496-803b-badbb2c8b650",
+          "id": "a5f74384-4d8e-4985-9186-56c2f4bce641",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -100,7 +100,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "4be961be-3308-49fa-97e7-e54654e4e739",
+          "id": "de262401-fc24-4e2e-b693-eeccc5427787",
           "name": "number1",
           "required": true,
           "dataType": "@sys.any",
@@ -157,28 +157,28 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Marusia": {
-              "Replacements": {
-                "\u003cстрелки\u003e": "стр\u0027елки",
-                "🌳🦉🌲": "\u003cspeaker audio\u003dmarusia-sounds/animals-owl-2\u003e"
-              }
-            },
-            "Default": {
-              "Replacements": {
-                "🌳🦉🌲": "",
-                "\u003cстрелки\u003e": "стрелки"
-              }
-            },
-            "Yandex": {
-              "Replacements": {
-                "\u003cстрелки\u003e": "стр+елки",
-                "🌳🦉🌲": "\u003cspeaker audio\u003d\"alice-sounds-animals-owl-2.opus\"\u003e"
-              }
-            },
             "Sber": {
               "Replacements": {
                 "🌳🦉🌲": "\u003caudio text\u003d\"sm-sounds-animals-owl-2\"/\u003e",
                 "\u003cстрелки\u003e": "\u003cspeak\u003eстр\u0027елки\u003c/speak\u003e"
+              }
+            },
+            "Yandex": {
+              "Replacements": {
+                "🌳🦉🌲": "\u003cspeaker audio\u003d\"alice-sounds-animals-owl-2.opus\"\u003e",
+                "\u003cстрелки\u003e": "стр+елки"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "\u003cстрелки\u003e": "стрелки",
+                "🌳🦉🌲": ""
+              }
+            },
+            "Marusia": {
+              "Replacements": {
+                "\u003cстрелки\u003e": "стр\u0027елки",
+                "🌳🦉🌲": "\u003cspeaker audio\u003dmarusia-sounds/animals-owl-2\u003e"
               }
             }
           },
