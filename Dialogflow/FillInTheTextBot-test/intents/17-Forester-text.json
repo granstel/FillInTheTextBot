@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "89df72ee-f907-4dbb-a61b-ddbe5b61a28a",
+          "id": "eff7ae4f-a219-4628-a5ea-c5796a01c32c",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -28,7 +28,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d99bd999-134d-4be9-a311-56f974a812ff",
+          "id": "198782e9-66f4-4104-9f8d-5daba7a6ed54",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -59,7 +59,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "80199667-db78-4183-9896-b81278342939",
+          "id": "43d38042-7b0e-49c2-a7b2-d4cf43473b97",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -78,7 +78,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "2d1c3ddf-e4ba-4f85-92fb-87ddf6df94d0",
+          "id": "7c34e003-d116-4a94-a056-ebb4a9d77c13",
           "name": "action",
           "required": true,
           "dataType": "@sys.any",
@@ -109,7 +109,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "1f00a149-2cdf-4a61-9b36-ca60ca29455f",
+          "id": "65b5e055-6651-42dd-9323-2fc72aa2acb3",
           "name": "gun",
           "required": true,
           "dataType": "@sys.any",
@@ -167,26 +167,14 @@
               "Buttons": [
                 {
                   "IsQuickReply": false,
-                  "Text": "Поблагодарить разработчиков",
-                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
+                  "Text": "Поблагодарить разработчиков"
                 }
               ],
               "Replacements": {
-                "\u003cдорогой\u003e": "доро\u0027гой",
-                "\u003c🐺\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e",
+                "\u003cдорогой\u003e": "доро\u0027гой"
               }
-            },
-            "Sber": {
-              "Replacements": {
-                "\u003cдорогой\u003e": "\u003cspeak\u003eдоро\u0027гой\u003c/speak\u003e",
-                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
-              },
-              "Buttons": [
-                {
-                  "IsQuickReply": true,
-                  "Text": "Оценить историю"
-                }
-              ]
             },
             "Default": {
               "Replacements": {
@@ -195,16 +183,28 @@
             },
             "Yandex": {
               "Replacements": {
-                "\u003cдорогой\u003e": "дорогой",
-                "\u003c🐺\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
+                "\u003c🐺\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e",
+                "\u003cдорогой\u003e": "дорогой"
               },
               "Buttons": [
                 {
-                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
                   "IsQuickReply": false,
-                  "Text": "Оценить историю"
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
                 }
               ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "\u003cдорогой\u003e": "\u003cspeak\u003eдоро\u0027гой\u003c/speak\u003e",
+                "\u003c🐺\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
+              }
             }
           },
           "textToSpeech": "",
