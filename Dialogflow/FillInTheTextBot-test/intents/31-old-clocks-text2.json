@@ -1,0 +1,168 @@
+{
+  "id": "6f54eef2-6b34-4758-a9e3-dd37d1a1cbca",
+  "parentId": "4924b846-5e8b-4e19-85af-aa952e3bbf77",
+  "name": "31-old-clocks-text2",
+  "auto": true,
+  "contexts": [
+    "text-31-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-31-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-31",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "e824a7fc-69db-4a77-8e4f-dfb1725e1fff",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-31-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ed295c33-808e-4fb4-a437-110c0bd0820d",
+          "name": "number2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$number2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сколько стоит твой телефон?"
+            },
+            {
+              "lang": "ru",
+              "value": "Как думаешь, сколько стоит твой телефон?"
+            },
+            {
+              "lang": "ru",
+              "value": "Сколько денег у тебя есть?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ae88bf09-6650-49e0-b7dc-2940c613a27a",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь шёпотом назови страшное насекомое"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови страшное насекомое, но только очень тихо, чтобы оно не услышало"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь шёпотом назови маленького грызуна"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Конечно!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "#text-31.name1 предложил за часы внушительную сумму — $number2, но #text-31.name2 наотрез отказалась продавать их. \nОднако, позволила гостю остаться \u003cна ночь\u003e.\nКак только она уснула, в гостиную прошмыгнула фигура мужчины: ему не спалось, и чтобы скоротать время, он решил починить часы.\nНе сразу, но всё же он нашёл неисправность: в них что-то застряло, возможно $animal. Механизм ожил, стрелки сдвинулись с места, а колокол громко зазвонил на весь дом🔔\nИнтересно, что было дальше?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Sber": {
+              "Replacements": {
+                "🔔": "\u003caudio text\u003d\"sm-sounds-things-bell-2\"/\u003e",
+                "\u003cна ночь\u003e": "\u003cspeak\u003eн\u0027аночь\u003c/speak\u003e"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "🔔": "",
+                "\u003cна ночь\u003e": "на ночь"
+              }
+            },
+            "Marusia": {
+              "Replacements": {
+                "\u003cна ночь\u003e": "н\u0027аночь",
+                "🔔": "\u003cspeaker audio\u003dmarusia-sounds/things-bell-2\u003e"
+              }
+            },
+            "Yandex": {
+              "Replacements": {
+                "🔔": "\u003cspeaker audio\u003d\"alice-sounds-things-bell-2.opus\"\u003e",
+                "\u003cна ночь\u003e": "н+аночь"
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-31-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "c273413e-73a8-4c12-8c20-0cd6289a82b9",
+          "id": "988b1a95-50b7-474e-8a96-700a2171971f",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -24,7 +24,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "9465c9c7-453d-4527-8dc1-20e51aa16576",
+          "id": "0d8afa73-bcd3-459c-845a-08a4fdcb8435",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -45,8 +45,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Тогда приступим!",
-            "Приступим!",
+            "Класс!",
+            "Супер!",
             "Отлично!"
           ],
           "condition": ""

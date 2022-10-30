@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ceb068b8-b39a-4e37-89d7-193cc0000255",
+    "data": [
+      {
+        "text": "мышь",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d62a0b51-e8b2-4c9b-bb55-18af89fa5083",
+    "data": [
+      {
+        "text": "паук",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e357bfa3-f5c7-43d4-b28d-2130147d5941",
+    "data": [
+      {
+        "text": "10000 рублей",
+        "meta": "@sys.any",
+        "alias": "number2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ff182fd4-c3e6-420d-bfb4-664b2bfb8d10",
+    "data": [
+      {
+        "text": "10 000 рублей",
+        "meta": "@sys.any",
+        "alias": "number2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f092f6ee-9d85-4b04-94bd-9b33200b4ffd",
+    "data": [
+      {
+        "text": "10 000",
+        "meta": "@sys.any",
+        "alias": "number2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "32671a77-cd82-440f-9d8b-e78769a1cf04",
+    "data": [
+      {
+        "text": "10000",
+        "meta": "@sys.any",
+        "alias": "number2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5d64d892-9685-4615-9d60-c65b498e91bc",
+    "data": [
+      {
+        "text": "десять тысяч",
+        "meta": "@sys.any",
+        "alias": "number2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cdc49921-094d-4446-ae80-904c0621ffab",
+    "data": [
+      {
+        "text": "десять тысяч рублей",
+        "meta": "@sys.any",
+        "alias": "number2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

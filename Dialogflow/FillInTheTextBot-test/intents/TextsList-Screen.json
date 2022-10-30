@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "e5ee6efd-f0b9-420d-bb9d-c57d19f7da38",
+          "id": "15e2a722-aa0c-4202-be19-71ebdd07d079",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -155,6 +155,9 @@
           "buttons": [
             {
               "text": "Про лесника"
+            },
+            {
+              "text": "Старинные часы"
             }
           ],
           "textToSpeech": "",

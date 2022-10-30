@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "f9c114fe-0d9b-4460-82d5-56a7629268cd",
+          "id": "d6fa8f74-0083-4bfb-a708-401e3354e3fb",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -51,9 +51,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Настало время занимательных историй! Давай сочиним что-нибудь?",
-            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
-            "И вот пришло время занимательных историй! Давай сочиним кое-что?"
+            "Настало время занимательных историй! Давай сочиним что-нибудь новенькое?",
+            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь новенькое?",
+            "И вот пришло время занимательных историй! Давай сочиним кое-что новенькое?"
           ],
           "condition": ""
         },
@@ -61,22 +61,16 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Yandex": {
-              "Replacements": {
-                "\u003cS1\u003e": "\u003cspeaker audio\u003d\"alice-sounds-animals-wolf-1.opus\"\u003e"
-              },
-              "Buttons": [
-                {
-                  "Text": "Узнать, что новенького",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
-                }
-              ]
-            },
             "Marusia": {
-              "Replacements": {
-                "\u003cS1\u003e": "\u003cspeaker audio\u003dmarusia-sounds/animals-wolf-1\u003e"
-              },
+              "Buttons": [
+                {
+                  "Text": "Узнать, что новенького",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Yandex": {
               "Buttons": [
                 {
                   "Text": "Узнать, что новенького",
@@ -84,16 +78,6 @@
                   "Url": "https://vk.com/fillinthetextbot"
                 }
               ]
-            },
-            "Sber": {
-              "Replacements": {
-                "\u003cS1\u003e": "\u003caudio text\u003d\"sm-sounds-animals-wolf-1\"/\u003e"
-              }
-            },
-            "Default": {
-              "Replacements": {
-                "\u003cS1\u003e": ""
-              }
             }
           },
           "textToSpeech": "",
