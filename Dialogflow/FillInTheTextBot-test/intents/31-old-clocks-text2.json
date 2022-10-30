@@ -26,7 +26,7 @@
       ],
       "parameters": [
         {
-          "id": "c0f1233a-6716-4ec9-a061-b852b8d3bad7",
+          "id": "e824a7fc-69db-4a77-8e4f-dfb1725e1fff",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -40,7 +40,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "3222072b-af0e-48e9-8f4c-974ec6cf29f6",
+          "id": "ed295c33-808e-4fb4-a437-110c0bd0820d",
           "name": "number2",
           "required": true,
           "dataType": "@sys.any",
@@ -67,7 +67,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "b12155ce-2cac-4f5d-a179-b77c5acbe752",
+          "id": "ae88bf09-6650-49e0-b7dc-2940c613a27a",
           "name": "animal",
           "required": true,
           "dataType": "@sys.any",
@@ -120,10 +120,28 @@
           "type": "4",
           "title": "",
           "payload": {
+            "Sber": {
+              "Replacements": {
+                "🔔": "\u003caudio text\u003d\"sm-sounds-things-bell-2\"/\u003e",
+                "\u003cна ночь\u003e": "\u003cspeak\u003eн\u0027аночь\u003c/speak\u003e"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "🔔": "",
+                "\u003cна ночь\u003e": "на ночь"
+              }
+            },
+            "Marusia": {
+              "Replacements": {
+                "\u003cна ночь\u003e": "н\u0027аночь",
+                "🔔": "\u003cspeaker audio\u003dmarusia-sounds/things-bell-2\u003e"
+              }
+            },
             "Yandex": {
               "Replacements": {
-                "\u003cна ночь\u003e": "н+аночь",
-                "🔔": "\u003cspeaker audio\u003d\"alice-sounds-things-bell-2.opus\"\u003e"
+                "🔔": "\u003cspeaker audio\u003d\"alice-sounds-things-bell-2.opus\"\u003e",
+                "\u003cна ночь\u003e": "н+аночь"
               }
             }
           },

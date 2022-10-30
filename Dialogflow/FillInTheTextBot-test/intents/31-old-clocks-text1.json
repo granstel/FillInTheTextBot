@@ -26,7 +26,7 @@
       ],
       "parameters": [
         {
-          "id": "cea11367-0ac3-484e-bf24-dbd1aeea2189",
+          "id": "21da880c-12f1-4f65-9b83-ad8e2cdcf7c2",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
@@ -40,7 +40,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "91ace0b5-a492-4337-96f6-5632c5a49801",
+          "id": "67b56a2c-21e4-4fc9-bea0-fb917de4eaae",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -54,7 +54,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "126c034e-97db-4da7-bf91-63b0cbace9a6",
+          "id": "bbce3e67-57c6-44cb-9fc6-1e841b6f01ac",
           "name": "name1",
           "required": true,
           "dataType": "@sys.any",
@@ -77,7 +77,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0b224cb0-22b3-4c3b-ba0c-ee95e863d011",
+          "id": "6be01322-6ecc-4496-803b-badbb2c8b650",
           "name": "name2",
           "required": true,
           "dataType": "@sys.any",
@@ -100,7 +100,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "71bc1d08-fbe7-4c87-9999-f7543f6d13f0",
+          "id": "4be961be-3308-49fa-97e7-e54654e4e739",
           "name": "number1",
           "required": true,
           "dataType": "@sys.any",
@@ -157,10 +157,28 @@
           "type": "4",
           "title": "",
           "payload": {
+            "Marusia": {
+              "Replacements": {
+                "\u003cстрелки\u003e": "стр\u0027елки",
+                "🌳🦉🌲": "\u003cspeaker audio\u003dmarusia-sounds/animals-owl-2\u003e"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "🌳🦉🌲": "",
+                "\u003cстрелки\u003e": "стрелки"
+              }
+            },
             "Yandex": {
               "Replacements": {
-                "🌳🦉🌲": "\u003cspeaker audio\u003d\"alice-sounds-animals-owl-2.opus\"\u003e",
-                "\u003cстрелки\u003e": "стр+елки"
+                "\u003cстрелки\u003e": "стр+елки",
+                "🌳🦉🌲": "\u003cspeaker audio\u003d\"alice-sounds-animals-owl-2.opus\"\u003e"
+              }
+            },
+            "Sber": {
+              "Replacements": {
+                "🌳🦉🌲": "\u003caudio text\u003d\"sm-sounds-animals-owl-2\"/\u003e",
+                "\u003cстрелки\u003e": "\u003cspeak\u003eстр\u0027елки\u003c/speak\u003e"
               }
             }
           },
