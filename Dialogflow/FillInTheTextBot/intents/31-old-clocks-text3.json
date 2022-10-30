@@ -1,0 +1,143 @@
+{
+  "id": "bc7726a6-692f-47e4-826d-3f8482bc9769",
+  "parentId": "4924b846-5e8b-4e19-85af-aa952e3bbf77",
+  "name": "31-old-clocks-text3",
+  "auto": true,
+  "contexts": [
+    "text-31-3"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-31-3",
+          "lifespan": 0
+        },
+        {
+          "name": "text-31",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "d477f961-b4f0-4da7-a881-78e87c5259cf",
+          "name": "number3",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$number3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Остался лишь один вопрос: сколько тебе лет? Только ответь на него очень тихо, чтобы было слышно только мне"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Обрадованный #text-31.name1 вошёл в спальню хозяйки со словами «Я пробудил часы ото сна!»\nВ ответ #text-31.name2 захрипела, в её глазах читался дикий ужас😱. Пока часы звенели, она старела. С последним, $number3-м ударом, она превратилась в прах!🔔\nМужчина в ужасе хотел покинуть это место, но не смог: таинственная сила не выпускала его. А часы вновь остановились.\nТак #text-31.name1 стал новым обитателем особняка и хранителем старинных часов\u003c🔔\u003e\nНу, что могу сказать: не трогай чужие вещи без разрешения, чтобы не попасть в подобную ситуацию. Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Replacements": {
+                "😱": "",
+                "\u003c🔔\u003e": "",
+                "🔔": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить историю"
+                }
+              ],
+              "Replacements": {
+                "😱": "\u003caudio text\u003d\"sm:96887/96888/audio/H2rIRlLRvodg34tq.wav\"/\u003e",
+                "🔔": "\u003caudio text\u003d\"sm-sounds-things-bell-1\"/\u003e",
+                "\u003c🔔\u003e": "\u003caudio text\u003d\"sm-sounds-things-bell-2\"/\u003e"
+              }
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false,
+                  "Text": "Оценить историю"
+                }
+              ],
+              "Replacements": {
+                "\u003c🔔\u003e": "\u003cspeaker audio\u003d\"alice-sounds-things-bell-2.opus\"\u003e",
+                "😱": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/eb09f642-343a-4735-b089-6bf507de2126.opus\"\u003e",
+                "🔔": "\u003cspeaker audio\u003d\"alice-sounds-things-bell-1.opus\"\u003e"
+              }
+            },
+            "Marusia": {
+              "Replacements": {
+                "\u003c🔔\u003e": "\u003cspeaker audio\u003dmarusia-sounds/things-bell-2\u003e",
+                "🔔": "\u003cspeaker audio\u003dmarusia-sounds/things-bell-1\u003e",
+                "😱": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239067\"\u003e"
+              },
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-31-3"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

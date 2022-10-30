@@ -1,16 +1,22 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "4924b846-5e8b-4e19-85af-aa952e3bbf77",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "31-old-clocks",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-31",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
-          "id": "83681f5e-a7ed-4bfd-acb8-58f9b0d2ae92",
+          "id": "339112ef-0871-4355-a015-046b747c5718",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +37,8 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Давай сочиним новую,"
+            "Отлично! Сочиняем",
+            "Здорово! Давай сочиним"
           ],
           "condition": ""
         }
