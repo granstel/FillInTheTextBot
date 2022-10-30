@@ -1,0 +1,56 @@
+{
+  "id": "4924b846-5e8b-4e19-85af-aa952e3bbf77",
+  "name": "31-old-clocks",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-31",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "339112ef-0871-4355-a015-046b747c5718",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-31-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Отлично! Сочиняем",
+            "Здорово! Давай сочиним"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
