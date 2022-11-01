@@ -1,6 +1,7 @@
 {
   "id": "4924b846-5e8b-4e19-85af-aa952e3bbf77",
   "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "31-old-clocks",
   "auto": true,
   "contexts": [],
@@ -16,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "339112ef-0871-4355-a015-046b747c5718",
+          "id": "f6762a92-17e2-4c88-964a-5c7882be2881",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -38,7 +39,7 @@
           "lang": "ru",
           "speech": [
             "Отлично! Сочиняем",
-            "Здорово! Давай сочиним"
+            "Приступим! Давай сочиним"
           ],
           "condition": ""
         }
