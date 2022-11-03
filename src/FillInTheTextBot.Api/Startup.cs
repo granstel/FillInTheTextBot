@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using FillInTheTextBot.Api.DI;
+using Prometheus;
 
 namespace FillInTheTextBot.Api
 {
@@ -48,6 +49,8 @@ namespace FillInTheTextBot.Api
             app.UseMiddleware<ExceptionsMiddleware>();
 
             app.UseRouting();
+            app.UseHttpMetrics();
+            app.UseGrpcMetrics();
 
             if (configuration.HttpLog.Enabled)
             {
@@ -58,7 +61,11 @@ namespace FillInTheTextBot.Api
                     });
             }
 
-            app.UseEndpoints(e => e.MapControllers());
+            app.UseEndpoints(e =>
+            {
+                e.MapControllers();
+                e.MapMetrics();
+            });
         }
     }
 }
