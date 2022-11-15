@@ -255,7 +255,7 @@ namespace FillInTheTextBot.Services
 
         private SessionName CreateSession(string projectId, string sessionsId)
         {
-            var session = new SessionName(projectId, sessionsId);
+            var session = SessionName.FromProjectLocationSession(projectId, "europe-west1", sessionsId);
 
             return session;
         }
@@ -266,7 +266,7 @@ namespace FillInTheTextBot.Services
             {
                 var context = new Context
                 {
-                    ContextName = new ContextName(projectId, sessionName.SessionId, contextName),
+                    ContextName = ContextName.FromProjectLocationSessionContext(projectId, "europe-west1", sessionName.SessionId, contextName),
                     LifespanCount = lifeSpan
                 };
 

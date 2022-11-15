@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
+using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using GranSteL.Helpers.Redis;
@@ -52,7 +53,8 @@ namespace FillInTheTextBot.Api.DI
 
             var clientBuilder = new SessionsClientBuilder
             {
-                ChannelCredentials = credential.ToChannelCredentials()
+                ChannelCredentials = credential.ToChannelCredentials(),
+                Endpoint = $"europe-west1-{ContextsClient.DefaultEndpoint}"
             };
 
             var client = clientBuilder.Build();
@@ -74,11 +76,12 @@ namespace FillInTheTextBot.Api.DI
         
         private static ContextsClient CreateDialogflowContextsClient(ScopeContext context)
         {
-            var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(ContextsClient.DefaultScopes);
+            var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(SessionsClient.DefaultScopes);
 
             var clientBuilder = new ContextsClientBuilder
             {
-                ChannelCredentials = credential.ToChannelCredentials()
+                ChannelCredentials = credential.ToChannelCredentials(),
+                Endpoint = $"europe-west1-{ContextsClient.DefaultEndpoint}"
             };
 
             var client = clientBuilder.Build();
