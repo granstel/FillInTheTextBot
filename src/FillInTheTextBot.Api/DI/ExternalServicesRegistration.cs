@@ -41,8 +41,7 @@ namespace FillInTheTextBot.Api.DI
 
             var scopeContexts = GetScopesContexts(configuration);
 
-            var storage = provider.GetService<IScopeBindingStorage>();
-            var balancer = new ScopesSelector<SessionsClient>(storage, scopeContexts, CreateDialogflowSessionsClient);
+            var balancer = new ScopesSelector<SessionsClient>(scopeContexts, CreateDialogflowSessionsClient);
 
             return balancer;
         }
@@ -68,8 +67,7 @@ namespace FillInTheTextBot.Api.DI
 
             var contexts = GetScopesContexts(configuration);
 
-            var storage = provider.GetService<IScopeBindingStorage>();
-            var balancer = new ScopesSelector<ContextsClient>(storage, contexts, CreateDialogflowContextsClient);
+            var balancer = new ScopesSelector<ContextsClient>(contexts, CreateDialogflowContextsClient);
             
             return balancer;
         }

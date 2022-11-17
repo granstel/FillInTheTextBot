@@ -30,6 +30,7 @@ namespace FillInTheTextBot.Services
         };
 
         private readonly ILogger<DialogflowService> _log;
+        private readonly IScopeBindingStorage _scopeBindingStorage;
 
         private readonly ScopesSelector<SessionsClient> _sessionsClientBalancer;
         private readonly ScopesSelector<ContextsClient> _contextsClientBalancer;
@@ -38,10 +39,12 @@ namespace FillInTheTextBot.Services
 
         public DialogflowService(
             ILogger<DialogflowService> log,
+            IScopeBindingStorage scopeBindingStorage,
             ScopesSelector<SessionsClient> sessionsClientBalancer,
             ScopesSelector<ContextsClient> contextsClientBalancer)
         {
             _log = log;
+            _scopeBindingStorage = scopeBindingStorage;
             _sessionsClientBalancer = sessionsClientBalancer;
             _contextsClientBalancer = contextsClientBalancer;
 
@@ -68,8 +71,13 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                var dialog = await _sessionsClientBalancer.Invoke(request.SessionId,
-                    (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
+                var scopeKey = request.ScopeKey;
+                if (string.IsNullOrWhiteSpace(scopeKey))
+                {
+                    _scopeBindingStorage.TryGet(request.SessionId, out scopeKey);
+                }
+
+                var dialog = await _sessionsClientBalancer.Invoke((sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), scopeKey);
 
                 return dialog;
             }
@@ -79,8 +87,9 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                return _contextsClientBalancer.Invoke(sessionId,
-                    (client, context) => SetContextInternalAsync(client, sessionId, context.Parameters["ProjectId"], contextName, lifeSpan, parameters));
+                return _contextsClientBalancer.Invoke((client, context) => 
+                    SetContextInternalAsync(client, sessionId, context.Parameters["ProjectId"], 
+                        contextName, lifeSpan, parameters));
             }
         }
 
