@@ -24,5 +24,7 @@
         }
 
         public bool LogQuery { get; set; }
+
+        public bool DoNotAddToQueue { get; set; }
     }
 }

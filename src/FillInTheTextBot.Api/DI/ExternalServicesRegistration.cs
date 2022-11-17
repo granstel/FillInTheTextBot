@@ -4,7 +4,6 @@ using System.Linq;
 using System.Reflection;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
-using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using GranSteL.Helpers.Redis;
@@ -87,17 +86,17 @@ namespace FillInTheTextBot.Api.DI
             return client;
         }
 
-        private static ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowScopes)
+        private static ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowConfigurations)
         {
-            var scopeContexts = dialogflowScopes.Where(i => !string.IsNullOrEmpty(i.ProjectId))
-                .Select(i =>
+            var scopeContexts = dialogflowConfigurations.Where(s => !string.IsNullOrEmpty(s.ProjectId))
+                .Select(s =>
                 {
-                    var context = new ScopeContext(i.ProjectId);
+                    var context = new ScopeContext(s.ProjectId, s.DoNotAddToQueue);
                     
-                    context.Parameters.Add("ProjectId", i.ProjectId);
-                    context.Parameters.Add("JsonPath", i.JsonPath);
-                    context.Parameters.Add("LogQuery", i.LogQuery.ToString());
-                    context.Parameters.Add("LanguageCode", i.LanguageCode);
+                    context.Parameters.Add("ProjectId", s.ProjectId);
+                    context.Parameters.Add("JsonPath", s.JsonPath);
+                    context.Parameters.Add("LogQuery", s.LogQuery.ToString());
+                    context.Parameters.Add("LanguageCode", s.LanguageCode);
 
                     return context;
                 })
