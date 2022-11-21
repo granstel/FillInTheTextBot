@@ -1,30 +1,17 @@
 ﻿namespace FillInTheTextBot.Services.Configuration
 {
-    public class DialogflowConfiguration : Configuration
+    public class DialogflowConfiguration
     {
-        private string _projectId;
-        public virtual string ProjectId
-        {
-            get => _projectId;
-            set => _projectId = ExpandVariable(value);
-        }
+        public virtual string ProjectId { get; set; }
 
-        private string _languageCode;
-        public virtual string LanguageCode
-        {
-            get => _languageCode;
-            set => _languageCode = ExpandVariable(value);
-        }
+        public virtual string JsonPath { get; set; }
 
-        private string _jsonPath;
-        public virtual string JsonPath
-        {
-            get => _jsonPath;
-            set => _jsonPath = ExpandVariable(value);
-        }
+        public virtual string Region { get; set; }
+
+        public virtual string LanguageCode { get; set; } = "ru";
 
         public bool LogQuery { get; set; }
 
-        public bool DoNotAddToQueue { get; set; }
+        public bool DoNotUseForNewSessions { get; set; }
     }
 }

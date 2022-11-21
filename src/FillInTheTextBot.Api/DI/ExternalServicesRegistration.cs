@@ -34,6 +34,27 @@ namespace FillInTheTextBot.Api.DI
             services.AddSingleton<IScopeBindingStorage, ScopeBindingStorage>();
         }
 
+        private static ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowConfigurations)
+        {
+            var scopeContexts = dialogflowConfigurations
+                .Where(configuration => !string.IsNullOrEmpty(configuration.ProjectId))
+                .Select(configuration =>
+                {
+                    var context = new ScopeContext(configuration.ProjectId, configuration.DoNotUseForNewSessions);
+                    
+                    context.TryAddParameter("ProjectId", configuration.ProjectId);
+                    context.TryAddParameter("JsonPath", configuration.JsonPath);
+                    context.TryAddParameter("Region", configuration.Region);
+                    context.TryAddParameter("LanguageCode", configuration.LanguageCode);
+                    context.TryAddParameter("LogQuery", configuration.LogQuery.ToString());
+
+                    return context;
+                })
+                .ToList();
+
+            return scopeContexts;
+        }
+
         private static ScopesSelector<SessionsClient> RegisterSessionsClientScopes(IServiceProvider provider)
         {
             var configuration = provider.GetService<DialogflowConfiguration[]>();
@@ -47,12 +68,20 @@ namespace FillInTheTextBot.Api.DI
 
         private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
         {
-            var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(SessionsClient.DefaultScopes);
+            context.TryGetParameterValue("JsonPath", out string jsonPath);
+            var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(SessionsClient.DefaultScopes);
+
+            context.TryGetParameterValue("Region", out string region);
+            var endpoint = SessionsClient.DefaultEndpoint;
+            if (!string.IsNullOrWhiteSpace(region))
+            {
+                endpoint = $"europe-west1-{endpoint}";
+            }
 
             var clientBuilder = new SessionsClientBuilder
             {
                 ChannelCredentials = credential.ToChannelCredentials(),
-                Endpoint = $"europe-west1-{ContextsClient.DefaultEndpoint}"
+                Endpoint = endpoint
             };
 
             var client = clientBuilder.Build();
@@ -73,36 +102,25 @@ namespace FillInTheTextBot.Api.DI
         
         private static ContextsClient CreateDialogflowContextsClient(ScopeContext context)
         {
-            var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(SessionsClient.DefaultScopes);
+            context.TryGetParameterValue("JsonPath", out string jsonPath);
+            var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(ContextsClient.DefaultScopes);
+
+            context.TryGetParameterValue("Region", out string region);
+            var endpoint = ContextsClient.DefaultEndpoint;
+            if (!string.IsNullOrWhiteSpace(region))
+            {
+                endpoint = $"europe-west1-{endpoint}";
+            }
 
             var clientBuilder = new ContextsClientBuilder
             {
                 ChannelCredentials = credential.ToChannelCredentials(),
-                Endpoint = $"europe-west1-{ContextsClient.DefaultEndpoint}"
+                Endpoint = endpoint
             };
 
             var client = clientBuilder.Build();
 
             return client;
-        }
-
-        private static ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowConfigurations)
-        {
-            var scopeContexts = dialogflowConfigurations.Where(s => !string.IsNullOrEmpty(s.ProjectId))
-                .Select(s =>
-                {
-                    var context = new ScopeContext(s.ProjectId, s.DoNotAddToQueue);
-                    
-                    context.Parameters.Add("ProjectId", s.ProjectId);
-                    context.Parameters.Add("JsonPath", s.JsonPath);
-                    context.Parameters.Add("LogQuery", s.LogQuery.ToString());
-                    context.Parameters.Add("LanguageCode", s.LanguageCode);
-
-                    return context;
-                })
-                .ToList();
-
-            return scopeContexts;
         }
 
         private static IDatabase RegisterRedisClient(IServiceProvider provider)
