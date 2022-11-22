@@ -96,9 +96,11 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
             {
-                var intentRequest = CreateQuery(request, context);
-
+                context.TryGetParameterValue("ProjectId", out string projectId);
+                context.TryGetParameterValue("LanguageCode", out string languageCode);
                 context.TryGetParameterValue("LogQuery", out string logQuery);
+
+                var intentRequest = CreateQuery(request, projectId, languageCode);
 
                 bool.TryParse(logQuery, out var isLogQuery);
 
@@ -114,8 +116,6 @@ namespace FillInTheTextBot.Services
 
                 var response = queryResult.ToDialog();
 
-                context.TryGetParameterValue("ProjectId", out string projectId);
-                
                 response.ScopeKey = projectId;
 
                 return response;
@@ -136,13 +136,10 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private DetectIntentRequest CreateQuery(InternalModels.Request request, ScopeContext context)
+        private DetectIntentRequest CreateQuery(InternalModels.Request request, string projectId, string languageCode)
         {
             using (Tracing.Trace())
             {
-                context.TryGetParameterValue("ProjectId", out string projectId);
-                context.TryGetParameterValue("LanguageCode", out string languageCode);
-
                 var session = CreateSession(projectId, request.SessionId);
 
                 var eventInput = ResolveEvent(request, languageCode);
