@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Google.Cloud.Dialogflow.V2;
 using System.Linq;
-using GranSteL.Helpers.Redis.Extensions;
+using FillInTheTextBot.Services.Extensions;
 using GranSteL.Tools.ScopeSelector;
 using InternalModels = FillInTheTextBot.Models;
 using Microsoft.Extensions.Logging;
