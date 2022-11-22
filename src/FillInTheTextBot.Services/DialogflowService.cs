@@ -88,8 +88,7 @@ namespace FillInTheTextBot.Services
             using (Tracing.Trace())
             {
                 return _contextsClientBalancer.Invoke((client, context) => 
-                    SetContextInternalAsync(client, sessionId, context.Parameters["ProjectId"], 
-                        contextName, lifeSpan, parameters));
+                    SetContextInternalAsync(client, sessionId, context, contextName, lifeSpan, parameters));
             }
         }
 
@@ -99,7 +98,9 @@ namespace FillInTheTextBot.Services
             {
                 var intentRequest = CreateQuery(request, context);
 
-                bool.TryParse(context.Parameters["LogQuery"], out var isLogQuery);
+                context.TryGetParameterValue("LogQuery", out string logQuery);
+
+                bool.TryParse(logQuery, out var isLogQuery);
 
                 if (isLogQuery)
                     _log.LogTrace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
@@ -113,16 +114,20 @@ namespace FillInTheTextBot.Services
 
                 var response = queryResult.ToDialog();
 
-                response.ScopeKey = context.Parameters["ProjectId"];
+                context.TryGetParameterValue("ProjectId", out string projectId);
+                
+                response.ScopeKey = projectId;
 
                 return response;
             }
         }
 
-        private Task SetContextInternalAsync(ContextsClient client, string sessionId, string projectId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        private Task SetContextInternalAsync(ContextsClient client, string sessionId, ScopeContext scopeContext, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             using (Tracing.Trace())
             {
+                scopeContext.TryGetParameterValue("ProjectId", out string projectId);
+
                 var session = CreateSession(projectId, sessionId);
 
                 var context = GetContext(projectId, session, contextName, lifeSpan, parameters);
@@ -135,9 +140,10 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                var session = CreateSession(context.Parameters["ProjectId"], request.SessionId);
+                context.TryGetParameterValue("ProjectId", out string projectId);
+                context.TryGetParameterValue("LanguageCode", out string languageCode);
 
-                var languageCode = context.Parameters["LanguageCode"];
+                var session = CreateSession(projectId, request.SessionId);
 
                 var eventInput = ResolveEvent(request, languageCode);
 
@@ -173,7 +179,7 @@ namespace FillInTheTextBot.Services
                 };
 
                 var contexts = request.RequiredContexts.Select(c =>
-                    GetContext(context.Parameters["ProjectId"], session, c.Name, c.LifeSpan, c.Parameters)).ToList();
+                    GetContext(projectId, session, c.Name, c.LifeSpan, c.Parameters)).ToList();
 
                 intentRequest.QueryParams.Contexts.AddRange(contexts);
 
