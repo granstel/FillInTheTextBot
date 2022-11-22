@@ -4,7 +4,7 @@
     {
         public HttpLogConfiguration HttpLog { get; set; }
 
-        public DialogflowConfiguration[] DialogflowConfiguration { get; set; }
+        public DialogflowConfiguration[] Dialogflow { get; set; }
 
         public RedisConfiguration Redis { get; set; }
 

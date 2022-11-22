@@ -37,10 +37,10 @@ namespace FillInTheTextBot.Api.DI
         private static ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowConfigurations)
         {
             var scopeContexts = dialogflowConfigurations
-                .Where(configuration => !string.IsNullOrEmpty(configuration.ProjectId))
+                .Where(configuration => !string.IsNullOrEmpty(configuration.ScopeId))
                 .Select(configuration =>
                 {
-                    var context = new ScopeContext(configuration.ProjectId, configuration.DoNotUseForNewSessions);
+                    var context = new ScopeContext(configuration.ScopeId, configuration.DoNotUseForNewSessions);
                     
                     context.TryAddParameter("ProjectId", configuration.ProjectId);
                     context.TryAddParameter("JsonPath", configuration.JsonPath);
