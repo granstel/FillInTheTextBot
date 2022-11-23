@@ -58,6 +58,7 @@ namespace FillInTheTextBot.Services
 
         public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null)
         {
+            // TODO: прокинуть сюда skopeId
             var request = new InternalModels.Request
             {
                 Text = text,
