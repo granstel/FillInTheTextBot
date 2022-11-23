@@ -98,9 +98,10 @@ namespace FillInTheTextBot.Services
             {
                 context.TryGetParameterValue("ProjectId", out string projectId);
                 context.TryGetParameterValue("LanguageCode", out string languageCode);
+                context.TryGetParameterValue("Region", out string region);
                 context.TryGetParameterValue("LogQuery", out string logQuery);
 
-                var intentRequest = CreateQuery(request, projectId, languageCode);
+                var intentRequest = CreateQuery(request, projectId, languageCode, region);
 
                 bool.TryParse(logQuery, out var isLogQuery);
 
@@ -127,20 +128,22 @@ namespace FillInTheTextBot.Services
             using (Tracing.Trace())
             {
                 scopeContext.TryGetParameterValue("ProjectId", out string projectId);
+                scopeContext.TryGetParameterValue("Region", out string region);
 
-                var session = CreateSession(projectId, sessionId);
+                var session = SessionName.FromProjectLocationSession(projectId, region, sessionId);
 
-                var context = GetContext(projectId, session, contextName, lifeSpan, parameters);
+                var context = GetContext(projectId, region, session, contextName, lifeSpan, parameters);
 
                 return client.CreateContextAsync(session, context);
             }
         }
 
-        private DetectIntentRequest CreateQuery(InternalModels.Request request, string projectId, string languageCode)
+        private DetectIntentRequest CreateQuery(InternalModels.Request request, string projectId, string languageCode,
+            string region)
         {
             using (Tracing.Trace())
             {
-                var session = CreateSession(projectId, request.SessionId);
+                var session = SessionName.FromProjectLocationSession(projectId, region, request.SessionId);
 
                 var eventInput = ResolveEvent(request, languageCode);
 
@@ -176,7 +179,7 @@ namespace FillInTheTextBot.Services
                 };
 
                 var contexts = request.RequiredContexts.Select(c =>
-                    GetContext(projectId, session, c.Name, c.LifeSpan, c.Parameters)).ToList();
+                    GetContext(projectId, region, session, c.Name, c.LifeSpan, c.Parameters)).ToList();
 
                 intentRequest.QueryParams.Contexts.AddRange(contexts);
 
@@ -265,20 +268,14 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private SessionName CreateSession(string projectId, string sessionsId)
-        {
-            var session = SessionName.FromProjectLocationSession(projectId, "europe-west1", sessionsId);
-
-            return session;
-        }
-
-        private Context GetContext(string projectId, SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        private Context GetContext(string projectId, string region, SessionName sessionName, string contextName,
+            int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             using (Tracing.Trace())
             {
                 var context = new Context
                 {
-                    ContextName = ContextName.FromProjectLocationSessionContext(projectId, "europe-west1", sessionName.SessionId, contextName),
+                    ContextName = ContextName.FromProjectLocationSessionContext(projectId, region, sessionName.SessionId, contextName),
                     LifespanCount = lifeSpan
                 };
 
