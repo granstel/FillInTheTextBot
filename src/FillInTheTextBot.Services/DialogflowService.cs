@@ -130,7 +130,7 @@ namespace FillInTheTextBot.Services
                 scopeContext.TryGetParameterValue("ProjectId", out string projectId);
                 scopeContext.TryGetParameterValue("Region", out string region);
 
-                var session = SessionName.FromProjectLocationSession(projectId, region, sessionId);
+                var session = CreateSession(projectId, region, sessionId);
 
                 var context = GetContext(projectId, region, session, contextName, lifeSpan, parameters);
 
@@ -143,7 +143,7 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                var session = SessionName.FromProjectLocationSession(projectId, region, request.SessionId);
+                var session = CreateSession(projectId, region, request.SessionId);
 
                 var eventInput = ResolveEvent(request, languageCode);
 
@@ -268,14 +268,36 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private Context GetContext(string projectId, string region, SessionName sessionName, string contextName,
+        private SessionName CreateSession(string projectId, string locationId, string sessionId)
+        {
+            if (string.IsNullOrWhiteSpace(locationId))
+            {
+                return SessionName.FromProjectSession(projectId, sessionId);
+            }
+
+            return SessionName.FromProjectLocationSession(projectId, locationId, sessionId);
+        }
+
+        private ContextName CreateContext(string projectId, string locationId, string sessionId, string contextId)
+        {
+            if (string.IsNullOrWhiteSpace(locationId))
+            {
+                return ContextName.FromProjectSessionContext(projectId, sessionId, contextId);
+            }
+
+            return ContextName.FromProjectLocationSessionContext(projectId, locationId, sessionId, contextId);
+        }
+
+        private Context GetContext(string projectId, string region, SessionName sessionName, string contextId,
             int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             using (Tracing.Trace())
             {
+                var contextName = CreateContext(projectId, region, sessionName.SessionId, contextId);
+                
                 var context = new Context
                 {
-                    ContextName = ContextName.FromProjectLocationSessionContext(projectId, region, sessionName.SessionId, contextName),
+                    ContextName = contextName,
                     LifespanCount = lifeSpan
                 };
 
