@@ -117,7 +117,7 @@ namespace FillInTheTextBot.Services
 
                 var response = queryResult.ToDialog();
 
-                response.ScopeKey = projectId;
+                response.ScopeKey = context.ScopeId;
 
                 return response;
             }
