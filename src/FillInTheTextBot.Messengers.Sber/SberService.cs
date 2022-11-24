@@ -49,6 +49,8 @@ namespace FillInTheTextBot.Messengers.Sber
 
             output = input.FillResponse(output);
 
+            // TODO: ScopeKey должен меняться с сессией, надо сделать SessionState. И использовать его
+            // в других мессенджерах вместе с UserState
             var userState = new Models.UserState
             {
                 IsOldUser = true,
@@ -69,6 +71,7 @@ namespace FillInTheTextBot.Messengers.Sber
 
             _cache.TryGet(cacheKey, out string sessionId);
 
+            // TODO: создавать новую сессию не в этом методе (get)
             if (newSession == true || string.IsNullOrEmpty(sessionId))
             {
                 sessionId = Guid.NewGuid().ToString("N");
