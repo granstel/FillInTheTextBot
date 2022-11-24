@@ -69,7 +69,7 @@ namespace FillInTheTextBot.Services
 
             response.Emotions = GetEmotions(dialog);
 
-            TrySetSavedText(request.SessionId, dialog, texts);
+            TrySetSavedText(request.SessionId, request.ScopeKey, dialog, texts);
 
             return response;
         }
@@ -274,7 +274,7 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private void TrySetSavedText(string sessionId, Dialog dialog, Texts texts)
+        private void TrySetSavedText(string sessionId, string scopeKey, Dialog dialog, Texts texts)
         {
             if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -284,7 +284,7 @@ namespace FillInTheTextBot.Services
                     { "alternativeText", texts.AlternativeText }
                 };
 
-                _dialogflowService.SetContextAsync(sessionId, "savedText", 5, parameters).Forget();
+                _dialogflowService.SetContextAsync(sessionId, scopeKey, "savedText", 5, parameters).Forget();
             }
         }
 
