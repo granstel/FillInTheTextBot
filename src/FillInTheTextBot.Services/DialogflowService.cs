@@ -56,13 +56,13 @@ namespace FillInTheTextBot.Services
             };
         }
 
-        public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null)
+        public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string scopeKey)
         {
-            // TODO: прокинуть сюда skopeId
             var request = new InternalModels.Request
             {
                 Text = text,
-                SessionId = sessionId
+                SessionId = sessionId,
+                ScopeKey = scopeKey
             };
 
             return await GetResponseAsync(request);
@@ -73,6 +73,9 @@ namespace FillInTheTextBot.Services
             using (Tracing.Trace())
             {
                 var scopeKey = request.ScopeKey;
+                
+                // TODO: удалить, это хранилище нужно только для сбера, пусть это в кэше для него хранится.
+                // кол-во активных сессий надо сделать через метрики
                 if (string.IsNullOrWhiteSpace(scopeKey))
                 {
                     _scopeBindingStorage.TryGet(request.SessionId, out scopeKey);

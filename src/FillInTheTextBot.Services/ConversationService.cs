@@ -60,7 +60,7 @@ namespace FillInTheTextBot.Services
 
             response.Buttons = GetButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
-            response = await TryGetAnswerForCancelsSlotFilling(dialog?.CancelsSlotFilling, response, request.SessionId);
+            response = await TryGetAnswerForCancelsSlotFilling(dialog?.CancelsSlotFilling, response, request.SessionId, request.ScopeKey);
             response.Text = GetResponseText(request.Appeal, response.Text);
 
             var texts = TryAddReplacementsFromPayload(dialog?.Payload, request.Source, response.Text);
@@ -133,7 +133,7 @@ namespace FillInTheTextBot.Services
                 var eventName = $"event:{textKey}";
 
 
-                var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, textKey);
+                var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey);
 
 
                 var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
@@ -299,7 +299,7 @@ namespace FillInTheTextBot.Services
         }
 
         private async Task<Response> TryGetAnswerForCancelsSlotFilling(bool? isCancelsSlotFilling, Response response,
-            string sessionId)
+            string sessionId, string scopeKey)
         {
             if (isCancelsSlotFilling is not true)
             {
@@ -308,7 +308,7 @@ namespace FillInTheTextBot.Services
             
             const string eventName = $"event:CancelsSlotFilling";
 
-            var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId);
+            var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId, scopeKey);
 
             response.Text = $"{response.Text} {cancelsSlotFillingDialog.Response}";
             response.Buttons = cancelsSlotFillingDialog.Buttons;
