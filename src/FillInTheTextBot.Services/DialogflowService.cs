@@ -87,12 +87,13 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        public Task SetContextAsync(string sessionId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        public Task SetContextAsync(string sessionId, string scopeKey, string contextName, int lifeSpan = 1,
+            IDictionary<string, string> parameters = null)
         {
             using (Tracing.Trace())
             {
                 return _contextsClientBalancer.Invoke((client, context) => 
-                    SetContextInternalAsync(client, sessionId, context, contextName, lifeSpan, parameters));
+                    SetContextInternalAsync(client, sessionId, context, contextName, lifeSpan, parameters), scopeKey);
             }
         }
 
