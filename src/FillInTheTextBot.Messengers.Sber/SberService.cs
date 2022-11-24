@@ -33,6 +33,8 @@ namespace FillInTheTextBot.Messengers.Sber
 
             request.NextTextIndex = Convert.ToInt32(userState?.NextTextIndex ?? 0);
 
+            request.ScopeKey = userState?.ScopeKey;
+
             var contexts = GetContexts(input);
             request.RequiredContexts.AddRange(contexts);
 
@@ -50,7 +52,8 @@ namespace FillInTheTextBot.Messengers.Sber
             var userState = new Models.UserState
             {
                 IsOldUser = true,
-                NextTextIndex = response.NextTextIndex
+                NextTextIndex = response.NextTextIndex,
+                ScopeKey = response.ScopeKey
             };
 
             var userStateCacheKey = GetCacheKey(input.Uuid?.Sub ?? input.Uuid?.UserId);

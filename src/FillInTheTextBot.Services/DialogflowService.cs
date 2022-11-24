@@ -30,7 +30,6 @@ namespace FillInTheTextBot.Services
         };
 
         private readonly ILogger<DialogflowService> _log;
-        private readonly IScopeBindingStorage _scopeBindingStorage;
 
         private readonly ScopesSelector<SessionsClient> _sessionsClientBalancer;
         private readonly ScopesSelector<ContextsClient> _contextsClientBalancer;
@@ -39,12 +38,10 @@ namespace FillInTheTextBot.Services
 
         public DialogflowService(
             ILogger<DialogflowService> log,
-            IScopeBindingStorage scopeBindingStorage,
             ScopesSelector<SessionsClient> sessionsClientBalancer,
             ScopesSelector<ContextsClient> contextsClientBalancer)
         {
             _log = log;
-            _scopeBindingStorage = scopeBindingStorage;
             _sessionsClientBalancer = sessionsClientBalancer;
             _contextsClientBalancer = contextsClientBalancer;
 
@@ -73,13 +70,6 @@ namespace FillInTheTextBot.Services
             using (Tracing.Trace())
             {
                 var scopeKey = request.ScopeKey;
-                
-                // TODO: удалить, это хранилище нужно только для сбера, пусть это в кэше для него хранится.
-                // кол-во активных сессий надо сделать через метрики
-                if (string.IsNullOrWhiteSpace(scopeKey))
-                {
-                    _scopeBindingStorage.TryGet(request.SessionId, out scopeKey);
-                }
 
                 var dialog = await _sessionsClientBalancer.Invoke((sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), scopeKey);
 

@@ -30,8 +30,6 @@ namespace FillInTheTextBot.Api.DI
             services.AddSingleton(RegisterRedisClient);
             services.AddSingleton(RegisterTracer);
             services.AddSingleton(RegisterCacheService);
-
-            services.AddSingleton<IScopeBindingStorage, ScopeBindingStorage>();
         }
 
         private static ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowConfigurations)
