@@ -96,7 +96,7 @@ namespace FillInTheTextBot.Api.DI
             context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out string jsonPath);
             var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(ContextsClient.DefaultScopes);
 
-            var endpoint = GetEndpoint(context, SessionsClient.DefaultEndpoint);
+            var endpoint = GetEndpoint(context, ContextsClient.DefaultEndpoint);
 
             var clientBuilder = new ContextsClientBuilder
             {
