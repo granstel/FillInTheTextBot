@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
@@ -32,7 +31,7 @@ namespace FillInTheTextBot.Api.DI
             services.AddSingleton(RegisterCacheService);
         }
 
-        private static IEnumerable<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowConfigurations)
+        private static IEnumerable<ScopeContext> GetScopesContexts(IEnumerable<DialogflowConfiguration> dialogflowConfigurations)
         {
             var scopeContexts = dialogflowConfigurations
                 .Where(configuration => !string.IsNullOrEmpty(configuration.ScopeId))
@@ -40,11 +39,11 @@ namespace FillInTheTextBot.Api.DI
                 {
                     var context = new ScopeContext(configuration.ScopeId, configuration.DoNotUseForNewSessions);
 
-                    context.TryAddParameter("ProjectId", configuration.ProjectId);
-                    context.TryAddParameter("JsonPath", configuration.JsonPath);
-                    context.TryAddParameter("Region", configuration.Region);
-                    context.TryAddParameter("LanguageCode", configuration.LanguageCode);
-                    context.TryAddParameter("LogQuery", configuration.LogQuery.ToString());
+                    context.TryAddParameter(nameof(configuration.ProjectId), configuration.ProjectId);
+                    context.TryAddParameter(nameof(configuration.JsonPath), configuration.JsonPath);
+                    context.TryAddParameter(nameof(configuration.Region), configuration.Region);
+                    context.TryAddParameter(nameof(configuration.LanguageCode), configuration.LanguageCode);
+                    context.TryAddParameter(nameof(configuration.LogQuery), configuration.LogQuery.ToString());
 
                     return context;
                 });
@@ -65,15 +64,10 @@ namespace FillInTheTextBot.Api.DI
 
         private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
         {
-            context.TryGetParameterValue("JsonPath", out string jsonPath);
+            context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out string jsonPath);
             var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(SessionsClient.DefaultScopes);
 
-            context.TryGetParameterValue("Region", out string region);
-            var endpoint = SessionsClient.DefaultEndpoint;
-            if (!string.IsNullOrWhiteSpace(region))
-            {
-                endpoint = $"europe-west1-{endpoint}";
-            }
+            var endpoint = GetEndpoint(context, SessionsClient.DefaultEndpoint);
 
             var clientBuilder = new SessionsClientBuilder
             {
@@ -99,15 +93,10 @@ namespace FillInTheTextBot.Api.DI
 
         private static ContextsClient CreateDialogflowContextsClient(ScopeContext context)
         {
-            context.TryGetParameterValue("JsonPath", out string jsonPath);
+            context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out string jsonPath);
             var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(ContextsClient.DefaultScopes);
 
-            context.TryGetParameterValue("Region", out string region);
-            var endpoint = ContextsClient.DefaultEndpoint;
-            if (!string.IsNullOrWhiteSpace(region))
-            {
-                endpoint = $"europe-west1-{endpoint}";
-            }
+            var endpoint = GetEndpoint(context, SessionsClient.DefaultEndpoint);
 
             var clientBuilder = new ContextsClientBuilder
             {
@@ -120,8 +109,21 @@ namespace FillInTheTextBot.Api.DI
             return client;
         }
 
+        private static string GetEndpoint(ScopeContext context, string defaultEndpoint)
+        {
+            context.TryGetParameterValue(nameof(DialogflowConfiguration.Region), out string region);
+
+            if (string.IsNullOrWhiteSpace(region))
+            {
+                return defaultEndpoint;
+            }
+
+            return $"{region}-{defaultEndpoint}";
+        }
+
         private static IDatabase RegisterRedisClient(IServiceProvider provider)
         {
+            // TODO: get config as parameter
             var configuration = provider.GetService<RedisConfiguration>();
 
             var redisClient = ConnectionMultiplexer.Connect(configuration.ConnectionString);
