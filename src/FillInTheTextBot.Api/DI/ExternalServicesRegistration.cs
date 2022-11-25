@@ -134,6 +134,7 @@ namespace FillInTheTextBot.Api.DI
         private static ITracer RegisterTracer(IServiceProvider provider)
         {
             var env = provider.GetService<IWebHostEnvironment>();
+            // TODO: get config as parameter
             var configuration = provider.GetService<TracingConfiguration>();
 
             var serviceName = env.ApplicationName;
