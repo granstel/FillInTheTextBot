@@ -31,19 +31,19 @@ namespace FillInTheTextBot.Services
 
         private readonly ILogger<DialogflowService> _log;
 
-        private readonly ScopesSelector<SessionsClient> _sessionsClientBalancer;
-        private readonly ScopesSelector<ContextsClient> _contextsClientBalancer;
+        private readonly ScopesSelector<SessionsClient> _sessionsClientSelector;
+        private readonly ScopesSelector<ContextsClient> _contextsClientSelector;
 
         private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>> _eventResolvers;
 
         public DialogflowService(
             ILogger<DialogflowService> log,
-            ScopesSelector<SessionsClient> sessionsClientBalancer,
-            ScopesSelector<ContextsClient> contextsClientBalancer)
+            ScopesSelector<SessionsClient> sessionsClientSelector,
+            ScopesSelector<ContextsClient> contextsClientSelector)
         {
             _log = log;
-            _sessionsClientBalancer = sessionsClientBalancer;
-            _contextsClientBalancer = contextsClientBalancer;
+            _sessionsClientSelector = sessionsClientSelector;
+            _contextsClientSelector = contextsClientSelector;
 
             _eventResolvers = new Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>>
             {
@@ -71,7 +71,7 @@ namespace FillInTheTextBot.Services
             {
                 var scopeKey = request.ScopeKey;
 
-                var dialog = await _sessionsClientBalancer.Invoke((sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), scopeKey);
+                var dialog = await _sessionsClientSelector.Invoke((sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), scopeKey);
 
                 return dialog;
             }
@@ -82,7 +82,7 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                return _contextsClientBalancer.Invoke((client, context) => 
+                return _contextsClientSelector.Invoke((client, context) => 
                     SetContextInternalAsync(client, sessionId, context, contextName, lifeSpan, parameters), scopeKey);
             }
         }

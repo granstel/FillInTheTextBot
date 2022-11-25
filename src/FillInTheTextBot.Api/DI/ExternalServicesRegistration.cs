@@ -59,9 +59,9 @@ namespace FillInTheTextBot.Api.DI
 
             var scopeContexts = GetScopesContexts(configuration);
 
-            var balancer = new ScopesSelector<SessionsClient>(scopeContexts, CreateDialogflowSessionsClient);
+            var selector = new ScopesSelector<SessionsClient>(scopeContexts, CreateDialogflowSessionsClient);
 
-            return balancer;
+            return selector;
         }
 
         private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
@@ -93,11 +93,11 @@ namespace FillInTheTextBot.Api.DI
 
             var contexts = GetScopesContexts(configuration);
 
-            var balancer = new ScopesSelector<ContextsClient>(contexts, CreateDialogflowContextsClient);
-            
-            return balancer;
+            var selector = new ScopesSelector<ContextsClient>(contexts, CreateDialogflowContextsClient);
+
+            return selector;
         }
-        
+
         private static ContextsClient CreateDialogflowContextsClient(ScopeContext context)
         {
             context.TryGetParameterValue("JsonPath", out string jsonPath);
