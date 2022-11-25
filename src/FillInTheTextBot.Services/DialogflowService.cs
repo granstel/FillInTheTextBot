@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Google.Cloud.Dialogflow.V2;
 using System.Linq;
+using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using GranSteL.Tools.ScopeSelector;
 using InternalModels = FillInTheTextBot.Models;
@@ -69,9 +70,8 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                var scopeKey = request.ScopeKey;
-
-                var dialog = await _sessionsClientSelector.Invoke((sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), scopeKey);
+                var dialog = await _sessionsClientSelector.Invoke((sessionClient, context) 
+                    => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
 
                 return dialog;
             }
@@ -91,10 +91,10 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
             {
-                context.TryGetParameterValue("ProjectId", out string projectId);
-                context.TryGetParameterValue("LanguageCode", out string languageCode);
-                context.TryGetParameterValue("Region", out string region);
-                context.TryGetParameterValue("LogQuery", out string logQuery);
+                context.TryGetParameterValue(nameof(DialogflowConfiguration.ProjectId), out string projectId);
+                context.TryGetParameterValue(nameof(DialogflowConfiguration.LanguageCode), out string languageCode);
+                context.TryGetParameterValue(nameof(DialogflowConfiguration.Region), out string region);
+                context.TryGetParameterValue(nameof(DialogflowConfiguration.LogQuery), out string logQuery);
 
                 var intentRequest = CreateQuery(request, projectId, languageCode, region);
 
@@ -122,8 +122,8 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                scopeContext.TryGetParameterValue("ProjectId", out string projectId);
-                scopeContext.TryGetParameterValue("Region", out string region);
+                scopeContext.TryGetParameterValue(nameof(DialogflowConfiguration.ProjectId), out string projectId);
+                scopeContext.TryGetParameterValue(nameof(DialogflowConfiguration.Region), out string region);
 
                 var session = CreateSession(projectId, region, sessionId);
 
