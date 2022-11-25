@@ -32,14 +32,14 @@ namespace FillInTheTextBot.Api.DI
             services.AddSingleton(RegisterCacheService);
         }
 
-        private static ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowConfigurations)
+        private static IEnumerable<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowConfigurations)
         {
             var scopeContexts = dialogflowConfigurations
                 .Where(configuration => !string.IsNullOrEmpty(configuration.ScopeId))
                 .Select(configuration =>
                 {
                     var context = new ScopeContext(configuration.ScopeId, configuration.DoNotUseForNewSessions);
-                    
+
                     context.TryAddParameter("ProjectId", configuration.ProjectId);
                     context.TryAddParameter("JsonPath", configuration.JsonPath);
                     context.TryAddParameter("Region", configuration.Region);
@@ -47,8 +47,7 @@ namespace FillInTheTextBot.Api.DI
                     context.TryAddParameter("LogQuery", configuration.LogQuery.ToString());
 
                     return context;
-                })
-                .ToList();
+                });
 
             return scopeContexts;
         }
