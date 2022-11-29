@@ -25,7 +25,7 @@ namespace FillInTheTextBot.Services
 
         private const int MaximumRequestTextLength = 30;
 
-        private readonly Dictionary<string, string> _commandDictionary = new Dictionary<string, string>
+        private readonly Dictionary<string, string> _commandDictionary = new()
         {
             {StartCommand, WelcomeEventName},
             {ErrorCommand, ErrorEventName}
@@ -97,7 +97,7 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
             {
-                _statistics.WithLabels("dialogflow_scope", context.ScopeId).Inc();
+                _statistics.WithLabels("dialogflow_DetectIntent_scope", context.ScopeId).Inc();
 
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.ProjectId), out string projectId);
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.LanguageCode), out string languageCode);
@@ -136,6 +136,8 @@ namespace FillInTheTextBot.Services
                 var session = CreateSession(projectId, region, sessionId);
 
                 var context = GetContext(projectId, region, session, contextName, lifeSpan, parameters);
+
+                _statistics.WithLabels("dialogflow_CreateContext_scope", scopeContext.ScopeId).Inc();
 
                 return client.CreateContextAsync(session, context);
             }
