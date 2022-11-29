@@ -9,6 +9,7 @@ using GranSteL.Tools.ScopeSelector;
 using InternalModels = FillInTheTextBot.Models;
 using Microsoft.Extensions.Logging;
 using FillInTheTextBot.Services.Mapping;
+using Prometheus;
 
 namespace FillInTheTextBot.Services
 {
@@ -37,6 +38,8 @@ namespace FillInTheTextBot.Services
 
         private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>> _eventResolvers;
 
+        private readonly Gauge _statistics;
+
         public DialogflowService(
             ILogger<DialogflowService> log,
             ScopesSelector<SessionsClient> sessionsClientSelector,
@@ -52,6 +55,9 @@ namespace FillInTheTextBot.Services
                 {InternalModels.Source.Sber, DefaultWelcomeEventResolve},
                 {InternalModels.Source.Marusia, DefaultWelcomeEventResolve}
             };
+            
+            _statistics = Metrics
+                .CreateGauge("statistics", "Statistics", "statistic_name", "parameter");
         }
 
         public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string scopeKey)
@@ -91,6 +97,8 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
             {
+                _statistics.WithLabels("dialogflow_scope", context.ScopeId).Inc();
+
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.ProjectId), out string projectId);
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.LanguageCode), out string languageCode);
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.Region), out string region);
