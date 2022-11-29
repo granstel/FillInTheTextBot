@@ -117,9 +117,7 @@ namespace FillInTheTextBot.Services
                 {
                     using (Tracing.Trace(operationName: "Get texts from cache"))
                     {
-                        _cache.TryGet($"Texts-{request.Source}", out string[] texts);
-
-                        if (texts?.Any() != true && !_cache.TryGet("Texts", out texts))
+                        if (!_cache.TryGet("Texts", out string[] texts))
                         {
                             response.Text = "Что-то у меня не нашлось никаких текстов...";
 
