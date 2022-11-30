@@ -33,6 +33,8 @@ namespace FillInTheTextBot.Messengers.Sber
 
             request.NextTextIndex = Convert.ToInt32(userState?.NextTextIndex ?? 0);
 
+            request.ScopeKey = userState?.ScopeKey;
+
             var contexts = GetContexts(input);
             request.RequiredContexts.AddRange(contexts);
 
@@ -47,10 +49,13 @@ namespace FillInTheTextBot.Messengers.Sber
 
             output = input.FillResponse(output);
 
+            // TODO: ScopeKey должен меняться с сессией, надо сделать SessionState. И использовать его
+            // в других мессенджерах вместе с UserState
             var userState = new Models.UserState
             {
                 IsOldUser = true,
-                NextTextIndex = response.NextTextIndex
+                NextTextIndex = response.NextTextIndex,
+                ScopeKey = response.ScopeKey
             };
 
             var userStateCacheKey = GetCacheKey(input.Uuid?.Sub ?? input.Uuid?.UserId);
@@ -66,6 +71,7 @@ namespace FillInTheTextBot.Messengers.Sber
 
             _cache.TryGet(cacheKey, out string sessionId);
 
+            // TODO: создавать новую сессию не в этом методе (get)
             if (newSession == true || string.IsNullOrEmpty(sessionId))
             {
                 sessionId = Guid.NewGuid().ToString("N");

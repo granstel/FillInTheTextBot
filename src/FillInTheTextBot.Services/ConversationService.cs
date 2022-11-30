@@ -60,7 +60,7 @@ namespace FillInTheTextBot.Services
 
             response.Buttons = GetButtonsFromPayload(response.Buttons, dialog?.Payload, request.Source);
 
-            response = await TryGetAnswerForCancelsSlotFilling(dialog?.CancelsSlotFilling, response, request.SessionId);
+            response = await TryGetAnswerForCancelsSlotFilling(dialog?.CancelsSlotFilling, response, request.SessionId, request.ScopeKey);
             response.Text = GetResponseText(request.Appeal, response.Text);
 
             var texts = TryAddReplacementsFromPayload(dialog?.Payload, request.Source, response.Text);
@@ -69,7 +69,7 @@ namespace FillInTheTextBot.Services
 
             response.Emotions = GetEmotions(dialog);
 
-            TrySetSavedText(request.SessionId, dialog, texts);
+            TrySetSavedText(request.SessionId, request.ScopeKey, dialog, texts);
 
             return response;
         }
@@ -117,9 +117,7 @@ namespace FillInTheTextBot.Services
                 {
                     using (Tracing.Trace(operationName: "Get texts from cache"))
                     {
-                        _cache.TryGet($"Texts-{request.Source}", out string[] texts);
-
-                        if (texts?.Any() != true && !_cache.TryGet("Texts", out texts))
+                        if (!_cache.TryGet("Texts", out string[] texts))
                         {
                             response.Text = "Что-то у меня не нашлось никаких текстов...";
 
@@ -133,7 +131,7 @@ namespace FillInTheTextBot.Services
                 var eventName = $"event:{textKey}";
 
 
-                var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, textKey);
+                var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey);
 
 
                 var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
@@ -274,7 +272,7 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private void TrySetSavedText(string sessionId, Dialog dialog, Texts texts)
+        private void TrySetSavedText(string sessionId, string scopeKey, Dialog dialog, Texts texts)
         {
             if (dialog?.ParametersIncomplete != true && string.Equals(dialog?.Action ?? string.Empty, "saveToRepeat", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -284,7 +282,7 @@ namespace FillInTheTextBot.Services
                     { "alternativeText", texts.AlternativeText }
                 };
 
-                _dialogflowService.SetContextAsync(sessionId, "savedText", 5, parameters).Forget();
+                _dialogflowService.SetContextAsync(sessionId, scopeKey, "savedText", 5, parameters).Forget();
             }
         }
 
@@ -299,7 +297,7 @@ namespace FillInTheTextBot.Services
         }
 
         private async Task<Response> TryGetAnswerForCancelsSlotFilling(bool? isCancelsSlotFilling, Response response,
-            string sessionId)
+            string sessionId, string scopeKey)
         {
             if (isCancelsSlotFilling is not true)
             {
@@ -308,7 +306,7 @@ namespace FillInTheTextBot.Services
             
             const string eventName = $"event:CancelsSlotFilling";
 
-            var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId);
+            var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId, scopeKey);
 
             response.Text = $"{response.Text} {cancelsSlotFillingDialog.Response}";
             response.Buttons = cancelsSlotFillingDialog.Buttons;

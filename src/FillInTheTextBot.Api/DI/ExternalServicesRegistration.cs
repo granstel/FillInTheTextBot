@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
@@ -30,8 +29,26 @@ namespace FillInTheTextBot.Api.DI
             services.AddSingleton(RegisterRedisClient);
             services.AddSingleton(RegisterTracer);
             services.AddSingleton(RegisterCacheService);
+        }
 
-            services.AddSingleton<IScopeBindingStorage, ScopeBindingStorage>();
+        private static IEnumerable<ScopeContext> GetScopesContexts(IEnumerable<DialogflowConfiguration> dialogflowConfigurations)
+        {
+            var scopeContexts = dialogflowConfigurations
+                .Where(configuration => !string.IsNullOrEmpty(configuration.ScopeId))
+                .Select(configuration =>
+                {
+                    var context = new ScopeContext(configuration.ScopeId, configuration.DoNotUseForNewSessions);
+
+                    context.TryAddParameter(nameof(configuration.ProjectId), configuration.ProjectId);
+                    context.TryAddParameter(nameof(configuration.JsonPath), configuration.JsonPath);
+                    context.TryAddParameter(nameof(configuration.Region), configuration.Region);
+                    context.TryAddParameter(nameof(configuration.LanguageCode), configuration.LanguageCode);
+                    context.TryAddParameter(nameof(configuration.LogQuery), configuration.LogQuery.ToString());
+
+                    return context;
+                });
+
+            return scopeContexts;
         }
 
         private static ScopesSelector<SessionsClient> RegisterSessionsClientScopes(IServiceProvider provider)
@@ -40,19 +57,22 @@ namespace FillInTheTextBot.Api.DI
 
             var scopeContexts = GetScopesContexts(configuration);
 
-            var storage = provider.GetService<IScopeBindingStorage>();
-            var balancer = new ScopesSelector<SessionsClient>(storage, scopeContexts, CreateDialogflowSessionsClient);
+            var selector = new ScopesSelector<SessionsClient>(scopeContexts, CreateDialogflowSessionsClient);
 
-            return balancer;
+            return selector;
         }
 
         private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
         {
-            var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(SessionsClient.DefaultScopes);
+            context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out string jsonPath);
+            var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(SessionsClient.DefaultScopes);
+
+            var endpoint = GetEndpoint(context, SessionsClient.DefaultEndpoint);
 
             var clientBuilder = new SessionsClientBuilder
             {
-                ChannelCredentials = credential.ToChannelCredentials()
+                ChannelCredentials = credential.ToChannelCredentials(),
+                Endpoint = endpoint
             };
 
             var client = clientBuilder.Build();
@@ -66,19 +86,22 @@ namespace FillInTheTextBot.Api.DI
 
             var contexts = GetScopesContexts(configuration);
 
-            var storage = provider.GetService<IScopeBindingStorage>();
-            var balancer = new ScopesSelector<ContextsClient>(storage, contexts, CreateDialogflowContextsClient);
-            
-            return balancer;
+            var selector = new ScopesSelector<ContextsClient>(contexts, CreateDialogflowContextsClient);
+
+            return selector;
         }
-        
+
         private static ContextsClient CreateDialogflowContextsClient(ScopeContext context)
         {
-            var credential = GoogleCredential.FromFile(context.Parameters["JsonPath"]).CreateScoped(ContextsClient.DefaultScopes);
+            context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out string jsonPath);
+            var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(ContextsClient.DefaultScopes);
+
+            var endpoint = GetEndpoint(context, ContextsClient.DefaultEndpoint);
 
             var clientBuilder = new ContextsClientBuilder
             {
-                ChannelCredentials = credential.ToChannelCredentials()
+                ChannelCredentials = credential.ToChannelCredentials(),
+                Endpoint = endpoint
             };
 
             var client = clientBuilder.Build();
@@ -86,27 +109,21 @@ namespace FillInTheTextBot.Api.DI
             return client;
         }
 
-        private static ICollection<ScopeContext> GetScopesContexts(DialogflowConfiguration[] dialogflowScopes)
+        private static string GetEndpoint(ScopeContext context, string defaultEndpoint)
         {
-            var scopeContexts = dialogflowScopes.Where(i => !string.IsNullOrEmpty(i.ProjectId))
-                .Select(i =>
-                {
-                    var context = new ScopeContext(i.ProjectId);
-                    
-                    context.Parameters.Add("ProjectId", i.ProjectId);
-                    context.Parameters.Add("JsonPath", i.JsonPath);
-                    context.Parameters.Add("LogQuery", i.LogQuery.ToString());
-                    context.Parameters.Add("LanguageCode", i.LanguageCode);
+            context.TryGetParameterValue(nameof(DialogflowConfiguration.Region), out string region);
 
-                    return context;
-                })
-                .ToList();
+            if (string.IsNullOrWhiteSpace(region))
+            {
+                return defaultEndpoint;
+            }
 
-            return scopeContexts;
+            return $"{region}-{defaultEndpoint}";
         }
 
         private static IDatabase RegisterRedisClient(IServiceProvider provider)
         {
+            // TODO: get config as parameter
             var configuration = provider.GetService<RedisConfiguration>();
 
             var redisClient = ConnectionMultiplexer.Connect(configuration.ConnectionString);
@@ -119,6 +136,7 @@ namespace FillInTheTextBot.Api.DI
         private static ITracer RegisterTracer(IServiceProvider provider)
         {
             var env = provider.GetService<IWebHostEnvironment>();
+            // TODO: get config as parameter
             var configuration = provider.GetService<TracingConfiguration>();
 
             var serviceName = env.ApplicationName;

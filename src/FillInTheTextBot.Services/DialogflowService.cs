@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Google.Cloud.Dialogflow.V2;
 using System.Linq;
-using GranSteL.Helpers.Redis.Extensions;
+using FillInTheTextBot.Services.Configuration;
+using FillInTheTextBot.Services.Extensions;
 using GranSteL.Tools.ScopeSelector;
 using InternalModels = FillInTheTextBot.Models;
 using Microsoft.Extensions.Logging;
 using FillInTheTextBot.Services.Mapping;
+using Prometheus;
 
 namespace FillInTheTextBot.Services
 {
@@ -23,7 +25,7 @@ namespace FillInTheTextBot.Services
 
         private const int MaximumRequestTextLength = 30;
 
-        private readonly Dictionary<string, string> _commandDictionary = new Dictionary<string, string>
+        private readonly Dictionary<string, string> _commandDictionary = new()
         {
             {StartCommand, WelcomeEventName},
             {ErrorCommand, ErrorEventName}
@@ -31,19 +33,21 @@ namespace FillInTheTextBot.Services
 
         private readonly ILogger<DialogflowService> _log;
 
-        private readonly ScopesSelector<SessionsClient> _sessionsClientBalancer;
-        private readonly ScopesSelector<ContextsClient> _contextsClientBalancer;
+        private readonly ScopesSelector<SessionsClient> _sessionsClientSelector;
+        private readonly ScopesSelector<ContextsClient> _contextsClientSelector;
 
         private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>> _eventResolvers;
 
+        private readonly Gauge _statistics;
+
         public DialogflowService(
             ILogger<DialogflowService> log,
-            ScopesSelector<SessionsClient> sessionsClientBalancer,
-            ScopesSelector<ContextsClient> contextsClientBalancer)
+            ScopesSelector<SessionsClient> sessionsClientSelector,
+            ScopesSelector<ContextsClient> contextsClientSelector)
         {
             _log = log;
-            _sessionsClientBalancer = sessionsClientBalancer;
-            _contextsClientBalancer = contextsClientBalancer;
+            _sessionsClientSelector = sessionsClientSelector;
+            _contextsClientSelector = contextsClientSelector;
 
             _eventResolvers = new Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>>
             {
@@ -51,14 +55,18 @@ namespace FillInTheTextBot.Services
                 {InternalModels.Source.Sber, DefaultWelcomeEventResolve},
                 {InternalModels.Source.Marusia, DefaultWelcomeEventResolve}
             };
+            
+            _statistics = Metrics
+                .CreateGauge("statistics", "Statistics", "statistic_name", "parameter");
         }
 
-        public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string requiredContext = null)
+        public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string scopeKey)
         {
             var request = new InternalModels.Request
             {
                 Text = text,
-                SessionId = sessionId
+                SessionId = sessionId,
+                ScopeKey = scopeKey
             };
 
             return await GetResponseAsync(request);
@@ -68,19 +76,20 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace())
             {
-                var dialog = await _sessionsClientBalancer.Invoke(request.SessionId,
-                    (sessionClient, context) => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
+                var dialog = await _sessionsClientSelector.Invoke((sessionClient, context) 
+                    => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
 
                 return dialog;
             }
         }
 
-        public Task SetContextAsync(string sessionId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        public Task SetContextAsync(string sessionId, string scopeKey, string contextName, int lifeSpan = 1,
+            IDictionary<string, string> parameters = null)
         {
             using (Tracing.Trace())
             {
-                return _contextsClientBalancer.Invoke(sessionId,
-                    (client, context) => SetContextInternalAsync(client, sessionId, context.Parameters["ProjectId"], contextName, lifeSpan, parameters));
+                return _contextsClientSelector.Invoke((client, context) => 
+                    SetContextInternalAsync(client, sessionId, context, contextName, lifeSpan, parameters), scopeKey);
             }
         }
 
@@ -88,9 +97,16 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
             {
-                var intentRequest = CreateQuery(request, context);
+                _statistics.WithLabels("dialogflow_DetectIntent_scope", context.ScopeId).Inc();
 
-                bool.TryParse(context.Parameters["LogQuery"], out var isLogQuery);
+                context.TryGetParameterValue(nameof(DialogflowConfiguration.ProjectId), out string projectId);
+                context.TryGetParameterValue(nameof(DialogflowConfiguration.LanguageCode), out string languageCode);
+                context.TryGetParameterValue(nameof(DialogflowConfiguration.Region), out string region);
+                context.TryGetParameterValue(nameof(DialogflowConfiguration.LogQuery), out string logQuery);
+
+                var intentRequest = CreateQuery(request, projectId, languageCode, region);
+
+                bool.TryParse(logQuery, out var isLogQuery);
 
                 if (isLogQuery)
                     _log.LogTrace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
@@ -104,31 +120,35 @@ namespace FillInTheTextBot.Services
 
                 var response = queryResult.ToDialog();
 
-                response.ScopeKey = context.Parameters["ProjectId"];
+                response.ScopeKey = context.ScopeId;
 
                 return response;
             }
         }
 
-        private Task SetContextInternalAsync(ContextsClient client, string sessionId, string projectId, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        private Task SetContextInternalAsync(ContextsClient client, string sessionId, ScopeContext scopeContext, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             using (Tracing.Trace())
             {
-                var session = CreateSession(projectId, sessionId);
+                scopeContext.TryGetParameterValue(nameof(DialogflowConfiguration.ProjectId), out string projectId);
+                scopeContext.TryGetParameterValue(nameof(DialogflowConfiguration.Region), out string region);
 
-                var context = GetContext(projectId, session, contextName, lifeSpan, parameters);
+                var session = CreateSession(projectId, region, sessionId);
+
+                var context = GetContext(projectId, region, session, contextName, lifeSpan, parameters);
+
+                _statistics.WithLabels("dialogflow_CreateContext_scope", scopeContext.ScopeId).Inc();
 
                 return client.CreateContextAsync(session, context);
             }
         }
 
-        private DetectIntentRequest CreateQuery(InternalModels.Request request, ScopeContext context)
+        private DetectIntentRequest CreateQuery(InternalModels.Request request, string projectId, string languageCode,
+            string region)
         {
             using (Tracing.Trace())
             {
-                var session = CreateSession(context.Parameters["ProjectId"], request.SessionId);
-
-                var languageCode = context.Parameters["LanguageCode"];
+                var session = CreateSession(projectId, region, request.SessionId);
 
                 var eventInput = ResolveEvent(request, languageCode);
 
@@ -164,7 +184,7 @@ namespace FillInTheTextBot.Services
                 };
 
                 var contexts = request.RequiredContexts.Select(c =>
-                    GetContext(context.Parameters["ProjectId"], session, c.Name, c.LifeSpan, c.Parameters)).ToList();
+                    GetContext(projectId, region, session, c.Name, c.LifeSpan, c.Parameters)).ToList();
 
                 intentRequest.QueryParams.Contexts.AddRange(contexts);
 
@@ -253,20 +273,36 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private SessionName CreateSession(string projectId, string sessionsId)
+        private SessionName CreateSession(string projectId, string locationId, string sessionId)
         {
-            var session = new SessionName(projectId, sessionsId);
+            if (string.IsNullOrWhiteSpace(locationId))
+            {
+                return SessionName.FromProjectSession(projectId, sessionId);
+            }
 
-            return session;
+            return SessionName.FromProjectLocationSession(projectId, locationId, sessionId);
         }
 
-        private Context GetContext(string projectId, SessionName sessionName, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        private ContextName CreateContext(string projectId, string locationId, string sessionId, string contextId)
+        {
+            if (string.IsNullOrWhiteSpace(locationId))
+            {
+                return ContextName.FromProjectSessionContext(projectId, sessionId, contextId);
+            }
+
+            return ContextName.FromProjectLocationSessionContext(projectId, locationId, sessionId, contextId);
+        }
+
+        private Context GetContext(string projectId, string region, SessionName sessionName, string contextId,
+            int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             using (Tracing.Trace())
             {
+                var contextName = CreateContext(projectId, region, sessionName.SessionId, contextId);
+                
                 var context = new Context
                 {
-                    ContextName = new ContextName(projectId, sessionName.SessionId, contextName),
+                    ContextName = contextName,
                     LifespanCount = lifeSpan
                 };
 
