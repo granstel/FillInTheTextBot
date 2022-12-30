@@ -1,6 +1,7 @@
 {
   "id": "9b28994b-a77b-4f02-8407-ae3716097433",
   "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "TextsList - long stories - screen",
   "auto": true,
   "contexts": [
@@ -13,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "90dbb784-84ff-4757-82f6-0348f357330c",
+          "id": "62a9ecdd-b206-4374-8ca8-01314b967f29",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -28,19 +29,32 @@
         }
       ],
       "messages": [
-		{
+        {
           "type": "1",
           "platform": "facebook",
           "title": "истории",
           "buttons": [
             {
-              "text": "Гороскоп о скорпионах"
+              "text": "Прогульщики"
             },
             {
-              "text": "Гороскоп про стрельцов"
+              "text": "Про короля пиратов"
             },
             {
-              "text": "Гороскоп для козерогов"
+              "text": "Вот это ёлка!"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Старинные часы"
             }
           ],
           "textToSpeech": "",
