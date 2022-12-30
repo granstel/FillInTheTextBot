@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "f30fb3a3-d79f-435f-8e7c-cecf71109847",
+          "id": "0914293d-6afb-4923-a29b-e9c2a2fd8681",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -39,6 +39,7 @@
           "replies": [
             "Конечно!",
             "Список историй",
+            "Длинные истории",
             "Выход"
           ],
           "textToSpeech": "",
@@ -61,21 +62,21 @@
           "type": "4",
           "title": "",
           "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false,
+                  "Text": "Узнать, что новенького"
+                }
+              ]
+            },
             "Marusia": {
               "Buttons": [
                 {
                   "IsQuickReply": false,
-                  "Text": "Узнать, что новенького",
-                  "Url": "https://vk.com/fillinthetextbot"
-                }
-              ]
-            },
-            "Yandex": {
-              "Buttons": [
-                {
-                  "Text": "Узнать, что новенького",
                   "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false
+                  "Text": "Узнать, что новенького"
                 }
               ]
             }
