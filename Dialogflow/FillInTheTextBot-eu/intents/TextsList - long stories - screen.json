@@ -1,5 +1,6 @@
 {
   "id": "9b28994b-a77b-4f02-8407-ae3716097433",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "TextsList - long stories - screen",
   "auto": true,
   "contexts": [
@@ -27,6 +28,25 @@
         }
       ],
       "messages": [
+		{
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп о скорпионах"
+            },
+            {
+              "text": "Гороскоп про стрельцов"
+            },
+            {
+              "text": "Гороскоп для козерогов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
         {
           "type": "0",
           "title": "",
