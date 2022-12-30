@@ -1,0 +1,75 @@
+[
+  {
+    "id": "daab0ccf-0139-4cae-84eb-3ad5bc21d177",
+    "data": [
+      {
+        "text": "алиса",
+        "userDefined": false
+      },
+      {
+        "text": ", вернись",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f899f96c-1609-4269-b4fd-6ed4406ecf36",
+    "data": [
+      {
+        "text": "алиса",
+        "userDefined": false
+      },
+      {
+        "text": " вернись",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3f9543f7-fb4e-4f22-a9b5-358cb7b21060",
+    "data": [
+      {
+        "text": "вернись",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a8d87e5f-4cf0-4833-b74f-a069f3f6fe13",
+    "data": [
+      {
+        "text": "стоп",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7c7bf540-3907-44b2-b61a-b7a84a5b37b2",
+    "data": [
+      {
+        "text": "закончить",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
