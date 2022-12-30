@@ -1,5 +1,18 @@
 [
   {
+    "id": "40057aa5-7aa5-47e8-83f4-357aac13b68b",
+    "data": [
+      {
+        "text": "заткнись дура",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "26b86ac3-9ec6-4fbe-9244-b747d85b3ca9",
     "data": [
       {
@@ -68,11 +81,7 @@
     "id": "b64610ce-9314-40c6-b45d-115f60a26b9a",
     "data": [
       {
-        "text": "алиса",
-        "userDefined": false
-      },
-      {
-        "text": " она тупая",
+        "text": "алиса она тупая",
         "userDefined": false
       }
     ],
@@ -111,19 +120,7 @@
     "id": "1b876ed9-7758-4076-b0c7-64cc2f115e34",
     "data": [
       {
-        "text": "алиса",
-        "userDefined": false
-      },
-      {
-        "text": " ты совсем что ",
-        "userDefined": false
-      },
-      {
-        "text": "ли",
-        "userDefined": false
-      },
-      {
-        "text": " дурная",
+        "text": "алиса ты совсем что ли дурная",
         "userDefined": false
       }
     ],
