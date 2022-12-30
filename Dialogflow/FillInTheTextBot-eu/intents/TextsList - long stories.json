@@ -1,0 +1,35 @@
+{
+  "id": "0d0e7df2-c25a-4baa-9208-42ad2b8f1e6f",
+  "name": "TextsList - long stories",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот мои длинные истории:\n— Прогульщики.\n— Про короля пиратов.\n— Вот это ёлка!\n— Старинные часы\nЧто выберешь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

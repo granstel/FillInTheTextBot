@@ -1,0 +1,45 @@
+[
+  {
+    "id": "d8371eb1-c5c2-4efb-9311-c6e0dd2ac6e9",
+    "data": [
+      {
+        "text": "истории из нескольких частей",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d09c8967-5190-4a5c-a466-f6778a3213df",
+    "data": [
+      {
+        "text": "какие",
+        "userDefined": false
+      },
+      {
+        "text": " длинные истории у тебя есть?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "74e77267-7720-41f4-aa89-97110e5736af",
+    "data": [
+      {
+        "text": "покажи все длинные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

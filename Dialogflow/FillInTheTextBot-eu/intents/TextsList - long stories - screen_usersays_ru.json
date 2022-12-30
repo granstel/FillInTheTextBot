@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1575618d-ecd2-4950-8407-0160bb3a4c7a",
+    "data": [
+      {
+        "text": "какие",
+        "userDefined": false
+      },
+      {
+        "text": " длинные истории у тебя есть",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "487da2f7-4993-4824-87ff-e6504c68e9e2",
+    "data": [
+      {
+        "text": "покажи все длинные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dbd9ab3b-4b2b-45ff-9770-988319b4a9fb",
+    "data": [
+      {
+        "text": "покажи длинные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "46fce164-955b-498b-b6f3-c24a788e089e",
+    "data": [
+      {
+        "text": "Длинные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
