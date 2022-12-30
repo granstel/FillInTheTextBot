@@ -1,0 +1,60 @@
+{
+  "id": "ad2b5810-2971-42f0-91a1-07c17e85eeb2",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "11-Horoscope-Oven",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-11",
+          "lifespan": 50
+        },
+        {
+          "name": "11-Horoscope-Oven-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "57937215-6a19-48f6-90b7-d49c7f6740ba",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-11",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Сейчас звёзды поведают нам"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,215 @@
+{
+  "id": "cc56bf20-e6d8-4939-b067-7c99aeb1b26b",
+  "parentId": "7da34583-8945-4cb8-bb89-78748579b27f",
+  "name": "14-Horoscope-Raks-text",
+  "auto": true,
+  "contexts": [
+    "text-14"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "bfc09888-cbeb-4e0c-96d9-5b4465a33daf",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для раков.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b26f95fa-4526-4b3e-bfaa-231107348c2b",
+          "name": "furniture",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$furniture",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови свой любимый предмет мебели"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, какой у тебя самый любимый предмет мебели"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "23cdc554-6338-4d8c-aa36-05dbdbecd360",
+          "name": "person-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$person-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как зовут артиста, с которым тебе хотелось бы встретиться?"
+            },
+            {
+              "lang": "ru",
+              "value": "Как зовут знаменитого человека, с которым тебе хотелось бы встретиться?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "823daa80-42ba-4b55-abc0-1084b511e6cd",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови цвет, который тебе не очень нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, какой цвет тебе не нравится"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cf9252d1-b1ee-4fbd-bedf-1d9f97eacdb0",
+          "name": "insect",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$insect",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Какое насекомое мужского рода ты знаешь?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "172b09ba-1e2d-4996-a977-2046b5c7a6ee",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Последний вопрос — «Какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — «Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повторить",
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Поделиться идеей текста",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поделиться идеей текста",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить игру",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Звёзды говорят, что у Раков иногда возможны приступы лунатизма. Как-то раз зимой вы будете во сне слоняться по дому, наткнётесь на $furniture и, не просыпаясь, выбросите в окно! Как раз в это время мимо вашего дома будет возвращаться с вечеринки $adjective-1 $person-1, и ему придётся отменить все выступления до конца года.\nЛетом, чтобы организовать музыкальное трио «$color $insect», вы будете искать в качестве напарников знаки Зодиака Лебедь и Щука, но почему-то не найдёте таких.\nНе надо пятиться назад, и всё будет замечательно.\nПо-моему получилось здорово! Давай ещё сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-14"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

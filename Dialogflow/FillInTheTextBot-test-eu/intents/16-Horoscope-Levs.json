@@ -1,0 +1,60 @@
+{
+  "id": "f0f2dfde-faaa-4189-8cfd-5a1fd11e1b7b",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "16-Horoscope-Levs",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-16",
+          "lifespan": 5
+        },
+        {
+          "name": "16-Horoscope-Levs-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "96c81ecb-c4b9-45d5-a7f6-8fc02a3bf4d2",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-16",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Сейчас мы узнаем"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

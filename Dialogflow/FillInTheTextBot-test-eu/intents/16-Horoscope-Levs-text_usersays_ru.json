@@ -1,0 +1,242 @@
+[
+  {
+    "id": "c31a3d93-7c2e-4bbd-85dc-2eb406f3d07e",
+    "data": [
+      {
+        "text": "сто девятнадцать тысяч миллионов",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "33142107-98fa-45ca-b5a5-47354758072b",
+    "data": [
+      {
+        "text": "5345345345",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "662fe746-8db9-4e4a-b913-685c2e5a001b",
+    "data": [
+      {
+        "text": "15000",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "94f066ff-fa64-4669-ae3a-2475832ed0aa",
+    "data": [
+      {
+        "text": "молчащий",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "16dbdeed-eba6-4a34-8fde-7585f54b68dc",
+    "data": [
+      {
+        "text": "спящий",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "079ef63a-abb8-4fc4-8ac2-764f0ed3fa28",
+    "data": [
+      {
+        "text": "курящий",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "309f1be5-4f6a-498f-9a90-5bf65f985bd3",
+    "data": [
+      {
+        "text": "классный",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "befec0a0-e7f4-40f5-9ad7-4cbdb561fc67",
+    "data": [
+      {
+        "text": "красивый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0ca4ab91-f551-41db-ab1b-6c0780eee353",
+    "data": [
+      {
+        "text": "толстый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5c11d43f-cce5-4c78-8947-4a736695bb7e",
+    "data": [
+      {
+        "text": "ноутбук",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fbae062a-7b94-44d8-9fac-32e94a1b2dac",
+    "data": [
+      {
+        "text": "диван",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "19e41196-cf94-490b-93cd-ef3e27ecc2fd",
+    "data": [
+      {
+        "text": "комод",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dcb1df84-e559-43c1-8e0a-d2cd79740f7e",
+    "data": [
+      {
+        "text": "купаться",
+        "meta": "@sys.any",
+        "alias": "action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f257689c-d580-4795-8950-efa4d8c27e42",
+    "data": [
+      {
+        "text": "качать железо",
+        "meta": "@sys.any",
+        "alias": "action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0956ae54-336e-4986-8352-323c7c3741c0",
+    "data": [
+      {
+        "text": "загорать",
+        "meta": "@sys.any",
+        "alias": "action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "17f74d2a-559c-440c-b7de-57032c5b1874",
+    "data": [
+      {
+        "text": "читать книгу",
+        "meta": "@sys.any",
+        "alias": "action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

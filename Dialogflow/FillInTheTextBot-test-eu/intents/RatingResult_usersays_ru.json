@@ -1,0 +1,28 @@
+[
+  {
+    "id": "7d6a5bf4-0908-4838-b052-f21588b010b1",
+    "data": [
+      {
+        "text": "я поставила оценку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "58f7c56c-386c-48eb-ab3a-9b733230acdc",
+    "data": [
+      {
+        "text": "я поставил оценку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

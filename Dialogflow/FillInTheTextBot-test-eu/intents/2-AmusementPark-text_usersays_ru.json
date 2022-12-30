@@ -1,0 +1,422 @@
+[
+  {
+    "id": "057b0527-0a9e-4587-8439-49797932da47",
+    "data": [
+      {
+        "text": "получать по сопатке",
+        "meta": "@sys.any",
+        "alias": "actions-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c8d4c07b-af80-4aa2-bff7-d50a3426613a",
+    "data": [
+      {
+        "text": "бегать трусцой",
+        "meta": "@sys.any",
+        "alias": "actions-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3a06380a-6d55-42a2-bb22-7c9ea6b726e8",
+    "data": [
+      {
+        "text": "мурчать",
+        "meta": "@sys.any",
+        "alias": "actions-3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "378abcce-d544-48ae-98ec-6b90f154d591",
+    "data": [
+      {
+        "text": "на крыше",
+        "meta": "@sys.any",
+        "alias": "where",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "40584574-f543-4ebd-8bbe-07cd267e2189",
+    "data": [
+      {
+        "text": "линушка",
+        "meta": "@sys.any",
+        "alias": "human",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "739aeef7-350a-47b2-bc4d-33c4c45bd039",
+    "data": [
+      {
+        "text": "кубик",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d4a04e1c-a8e0-4230-b8e8-19c07b83116b",
+    "data": [
+      {
+        "text": "глаза",
+        "meta": "@sys.any",
+        "alias": "things",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "73206806-0bf8-4cf8-8a60-e4da3753298f",
+    "data": [
+      {
+        "text": "утки",
+        "meta": "@sys.any",
+        "alias": "animals",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c644285a-8867-461a-86df-ca3e94acd0a3",
+    "data": [
+      {
+        "text": "бегали",
+        "meta": "@sys.any",
+        "alias": "actions-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "be68e90c-a06b-44eb-8efa-ad4c79c5f838",
+    "data": [
+      {
+        "text": "красный",
+        "meta": "@sys.any",
+        "alias": "adjective-male",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "96daf59f-5635-489b-9c53-76bdb1ab2e2d",
+    "data": [
+      {
+        "text": "странные",
+        "meta": "@sys.any",
+        "alias": "adjectives-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "daa5a794-a3a0-4a1b-bee3-008d59cc0782",
+    "data": [
+      {
+        "text": "лежать лицом вниз",
+        "meta": "@sys.any",
+        "alias": "actions-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f8331edf-d3f8-4e2c-a4d1-da33c52a9986",
+    "data": [
+      {
+        "text": "лежать лицом вверх",
+        "meta": "@sys.any",
+        "alias": "actions-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a88a66c7-6d7a-4847-85b6-52e86c73259f",
+    "data": [
+      {
+        "text": "бегать",
+        "meta": "@sys.any",
+        "alias": "actions-5",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9d22f59c-4749-468f-8973-a26ba1870ca2",
+    "data": [
+      {
+        "text": "дома",
+        "meta": "@sys.any",
+        "alias": "where",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "441a5ac1-de99-4d12-8690-dbb9a0f5aa41",
+    "data": [
+      {
+        "text": "бросаться помидорами",
+        "meta": "@sys.any",
+        "alias": "actions-5",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5d65f8cc-be05-4816-851e-bc5c6c551df1",
+    "data": [
+      {
+        "text": "Кремле",
+        "meta": "@sys.any",
+        "alias": "where",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2025d3d1-3656-4398-a4e3-c807676538a9",
+    "data": [
+      {
+        "text": "сморкаться в скатерть",
+        "meta": "@sys.any",
+        "alias": "actions-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6b0c1862-4206-4f00-acdf-3c93a9c9c951",
+    "data": [
+      {
+        "text": "гоняться за кошками",
+        "meta": "@sys.any",
+        "alias": "actions-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f2be6fd0-f163-45b1-a86f-fed6c082cfea",
+    "data": [
+      {
+        "text": "портянки",
+        "meta": "@sys.any",
+        "alias": "things",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0b95233c-258c-446c-a878-a55133139c78",
+    "data": [
+      {
+        "text": "вислоухие",
+        "meta": "@sys.any",
+        "alias": "adjectives-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "95c0d634-9f44-4559-b585-19615bb17cc5",
+    "data": [
+      {
+        "text": "громко пукнули",
+        "meta": "@sys.any",
+        "alias": "actions-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2b7a2a5f-1237-4318-b33b-2164d4e81e93",
+    "data": [
+      {
+        "text": "сапог",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b8b4ddb1-780a-4bf6-9833-9beaaff15b29",
+    "data": [
+      {
+        "text": "электрический",
+        "meta": "@sys.any",
+        "alias": "adjective-male",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bfdf78a6-00bc-4e45-aada-61c8b2c2168a",
+    "data": [
+      {
+        "text": "тушканчики",
+        "meta": "@sys.any",
+        "alias": "animals",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6cfd5007-16ec-4713-b0c6-92ddebd7bec4",
+    "data": [
+      {
+        "text": "безобразно выражались",
+        "meta": "@sys.any",
+        "alias": "actions-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3bb9bd59-7668-48b5-9d6f-3433109c7d9e",
+    "data": [
+      {
+        "text": "замороженные",
+        "meta": "@sys.any",
+        "alias": "adjectives-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b57a1300-9c05-414e-bf8d-d33fff2921d7",
+    "data": [
+      {
+        "text": "Коля Басков",
+        "meta": "@sys.any",
+        "alias": "human",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

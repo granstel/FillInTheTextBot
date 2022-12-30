@@ -1,0 +1,329 @@
+{
+  "id": "634147c2-82a3-4146-9522-73bf2316ba1b",
+  "parentId": "7f42154b-e917-492a-8f8a-ee1b815734f0",
+  "name": "0-LessonIssue-text",
+  "auto": true,
+  "contexts": [
+    "text-0"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "9bb202a0-05ff-41cd-8f04-1668c571d0b9",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "Когда я буду задавать вопросы, отвечай первое, что приходит в голову. Итак, текст называется «Случай на уроке».",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8c845708-befa-4c99-913b-93cd10929c82",
+          "name": "boy",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$boy",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя мальчика (например, одноклассника)"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи имя мальчика (одноклассника, например)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8a7bd789-1e18-4b11-8f97-aa584c57baf7",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d6928546-2c18-43e2-b930-aba12100401b",
+          "name": "animal-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь — животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc49dee3-d1ac-4396-a6b2-16335d19951c",
+          "name": "teacher",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$teacher",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя учительницы"
+            },
+            {
+              "lang": "ru",
+              "value": "Следующее — имя учительницы"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "549337ed-d6b2-4176-b17c-4b06f69359de",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какая»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "04355ffa-4157-472a-bc28-e6919fcc7cf6",
+          "name": "animal-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Животное женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "6569faee-724f-4034-820c-e429a5e68a29",
+          "name": "animal-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Ещё одно животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Снова животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cb2c3f65-57bd-41f9-a30f-31e5fd1575da",
+          "name": "adjective-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2a904c0c-4dd6-4a42-9171-73fdf34efea1",
+          "name": "food",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$food",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Что-то съедобное, мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "eab38b40-adf3-4f26-9130-43e60cf9f7c6",
+          "name": "adjective-4",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Снова — «Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7c993298-11a3-44b0-ac01-001054f667d2",
+          "name": "animal-4",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И ещё одно животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Поделиться идеей",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поделиться идеей",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Внимание, вот что получилось: Вчера $boy принес на урок зверька, который называется карликовый $adjective-1 $animal-1. Тот сразу удрал из портфеля, подкрался к учительскому столу и укусил учительницу за ногу. $teacher закричала как $adjective-2 $animal-2 и вскочила на стол. «Уберите это чудовище! Это чей $adjective-3 $animal-3?» «Это не $adjective-3 $animal-3, — сказал $boy, — а $adjective-1 $animal-1. Я и не заметил дома, что он в портфель забрался!»\n$boy хотел поймать своего питомца, но тот быстро вскочил на шкаф и зарычал как $adjective-4 $animal-4. Ловили всем классом, еле поймали. $teacher достала из сумочки большой $food, откусила кусок и сказала: «Надо успокоиться!» Тут $animal-1 вырвался из наших рук, подбежал к ней, и тоже откусил кусок. Пальца. Такой забавный! \n— По-моему здорово получилось! Сочиним ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-0"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

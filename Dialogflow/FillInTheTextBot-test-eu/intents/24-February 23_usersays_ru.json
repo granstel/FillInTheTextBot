@@ -1,0 +1,139 @@
+[
+  {
+    "id": "81a3db14-cb85-4a8d-874b-2194739d0867",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "23 февраля",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8e0fbd19-4beb-418e-91b9-b28060041dd5",
+    "data": [
+      {
+        "text": "сочинить ",
+        "userDefined": false
+      },
+      {
+        "text": "про",
+        "userDefined": false
+      },
+      {
+        "text": " 23 ",
+        "userDefined": false
+      },
+      {
+        "text": "февраля",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d0b30d2d-d575-445c-89d4-65ae4f155452",
+    "data": [
+      {
+        "text": "отечества",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ff7bbe9e-d525-4d4a-873d-ad8b0af510a4",
+    "data": [
+      {
+        "text": "защитник",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4d93aaaa-307d-4d02-a0cf-79c2769dae69",
+    "data": [
+      {
+        "text": "защитник отечества",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cd84855d-9663-4f7e-9b1e-f33979b74c5e",
+    "data": [
+      {
+        "text": "день защитника отечества",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d6c1193a-4d55-4867-9380-af3cec93b61f",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "мужиков",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "faf52bd0-e019-4460-a3b7-bd01bb932c7b",
+    "data": [
+      {
+        "text": "двадцать третье февраля",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d61e6c69-cb10-48d1-8dc8-d8bc311746c0",
+    "data": [
+      {
+        "text": "23 февраля",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

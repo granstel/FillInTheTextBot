@@ -1,0 +1,105 @@
+{
+  "id": "f6f81db1-5acc-4e30-a397-38b47fc9d92b",
+  "name": "Thanks",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "b8910f3f-f21f-407c-96ce-ef2ffb6cae79",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "simpatiya",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да, давай!",
+            "Покажи список"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Мне тоже понравилось! Сочиним что-нибудь ещё?",
+            "И мне понравилось! Давай ещё что-нибудь сочиним?",
+            "Давай сочиним ещё что-нибудь?",
+            "Давай ещё что-нибудь сочиним?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false,
+                  "Text": "Следить за новостями"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить игру"
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Поставить оценку",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                },
+                {
+                  "Text": "Следить за новостями",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

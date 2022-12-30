@@ -1,0 +1,159 @@
+[
+  {
+    "id": "b23f379f-60e5-4301-b981-a3d885ff3eaa",
+    "data": [
+      {
+        "text": "первый",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f88e19a0-ace1-4d60-9d5a-3ee7ed9afd2e",
+    "data": [
+      {
+        "text": "номер один",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5241e22d-9109-4b26-93dd-a70b7dedecb7",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "userDefined": false
+      },
+      {
+        "text": " о школе",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f6b53645-d308-468e-bc67-386e7c257fbc",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "про школу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ffaecca6-d8a1-40b5-b223-5f933e08959e",
+    "data": [
+      {
+        "text": "случай на уроке",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "48a1599e-4958-42be-97c0-3bd6cda27655",
+    "data": [
+      {
+        "text": "давай самый ",
+        "userDefined": false
+      },
+      {
+        "text": "первый",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e4b8ddeb-a4ce-4853-88bb-45fa3f3eb35b",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "первый",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1ecc9c57-f16f-42a3-8f79-03ee51b712fb",
+    "data": [
+      {
+        "text": "давай случай на уроке",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bcca9938-dbfd-4e40-9159-076368493676",
+    "data": [
+      {
+        "text": "Включи случай на уроке",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

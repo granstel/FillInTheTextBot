@@ -1,0 +1,62 @@
+[
+  {
+    "id": "b6517849-06ad-4acb-924a-920da6aa0063",
+    "data": [
+      {
+        "text": "часы",
+        "userDefined": false
+      },
+      {
+        "text": " старого особняка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cb3f7ce5-6d6d-4ae6-84d9-aff3ff22075e",
+    "data": [
+      {
+        "text": "старые ",
+        "userDefined": false
+      },
+      {
+        "text": "часы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4c873490-8cce-4bf9-826e-6e2bb2d177cf",
+    "data": [
+      {
+        "text": "старинные часы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "29e218c3-f31f-4b26-90d6-2311f181603f",
+    "data": [
+      {
+        "text": "хозяйка старинных часов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

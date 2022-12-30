@@ -1,0 +1,57 @@
+{
+  "id": "96b316a9-f93f-4413-b309-59f1f24b3556",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "25-March 8",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-25",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "8cd55fb9-ae07-49b6-8b1f-cf40808c4757",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-25",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Сейчас мы сочиним",
+            "Сейчас придумаем"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "2cc82e9e-76b9-4358-aff5-f0b3c993388d",
+    "data": [
+      {
+        "text": "вонючего",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a3f1929c-df63-4d50-9c6e-ad128ba61fac",
+    "data": [
+      {
+        "text": "красного",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1945f67e-eab8-4ade-9ebc-9989c7975d59",
+    "data": [
+      {
+        "text": "умного",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1e29baf3-ebff-498c-8be7-18e401946fa3",
+    "data": [
+      {
+        "text": "кожаный",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "160b9656-c49b-4c68-b9b3-3dcd8fa6744a",
+    "data": [
+      {
+        "text": "черный",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dd5ce479-2de3-4348-801a-67d0dec6178d",
+    "data": [
+      {
+        "text": "тупой",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "75a541d7-ec5d-4e51-861b-83085c1b70d3",
+    "data": [
+      {
+        "text": "Вадим",
+        "meta": "@sys.any",
+        "alias": "name-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f48e425a-e03f-4186-b9c7-42f69e9b787c",
+    "data": [
+      {
+        "text": "Александр Петрович",
+        "meta": "@sys.any",
+        "alias": "name-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "459b8846-76af-4472-8386-2ab603159c73",
+    "data": [
+      {
+        "text": "Саша",
+        "meta": "@sys.any",
+        "alias": "name-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

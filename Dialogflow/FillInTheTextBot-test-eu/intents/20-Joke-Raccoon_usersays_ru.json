@@ -1,0 +1,71 @@
+[
+  {
+    "id": "1b537f99-b17b-4674-a7a3-df66c20a0399",
+    "data": [
+      {
+        "text": "Тупой анекдот про енота",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "182f6dcd-e060-452c-9d43-ecca3715b505",
+    "data": [
+      {
+        "text": "Анекдот про ",
+        "userDefined": false
+      },
+      {
+        "text": "енотов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a1fab4b2-d1cb-4729-82dc-a9554e5ee0ef",
+    "data": [
+      {
+        "text": "Анекдот про программиста",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "29b09434-d2e2-4e31-9c93-3294c51ed4eb",
+    "data": [
+      {
+        "text": "Анекдот про енота программиста",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "be46387b-9bc6-4a41-ace0-0b59ba4aea89",
+    "data": [
+      {
+        "text": "Анекдот про енота",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

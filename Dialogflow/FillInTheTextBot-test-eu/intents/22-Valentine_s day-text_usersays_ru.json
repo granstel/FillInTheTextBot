@@ -1,0 +1,212 @@
+[
+  {
+    "id": "d70697be-23f2-41d5-a488-505f9c1ca084",
+    "data": [
+      {
+        "text": "джагашвили",
+        "meta": "@sys.any",
+        "alias": "person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ca4f0f65-5a84-446c-8e9b-6687088b5800",
+    "data": [
+      {
+        "text": "азерот",
+        "meta": "@sys.any",
+        "alias": "person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "742e3c48-b6f5-4c64-8533-8b3a54483208",
+    "data": [
+      {
+        "text": "бургеромёт",
+        "meta": "@sys.any",
+        "alias": "person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5a2a0a8b-99ca-4843-9ffd-8be964e4a1bb",
+    "data": [
+      {
+        "text": "старый",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d7a09cb8-ef55-48dd-9490-996907c22032",
+    "data": [
+      {
+        "text": "Красивый",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a75ed18a-2a84-4aff-a145-95ab1f3deb41",
+    "data": [
+      {
+        "text": "Полезный",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8649f4c2-7c1b-4e69-bc56-dd3ecd0ed2db",
+    "data": [
+      {
+        "text": "Амир",
+        "meta": "@sys.any",
+        "alias": "name2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d150d640-580f-4a4b-bf72-9fa6d053d6e1",
+    "data": [
+      {
+        "text": "Мордочка",
+        "meta": "@sys.any",
+        "alias": "name2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2c02558b-2e1b-4730-8329-b0469f53c9dc",
+    "data": [
+      {
+        "text": "Стёпка",
+        "meta": "@sys.any",
+        "alias": "name2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cb09b3e4-4d5a-476d-9d39-60560837a71f",
+    "data": [
+      {
+        "text": "Ленусичий",
+        "meta": "@sys.any",
+        "alias": "name2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "479a617f-d86c-4bb6-a5cc-27a849780e74",
+    "data": [
+      {
+        "text": "Лена",
+        "meta": "@sys.any",
+        "alias": "name1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5a977ca4-9ec5-4802-a542-c798bcf66151",
+    "data": [
+      {
+        "text": "Полина",
+        "meta": "@sys.any",
+        "alias": "name1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "eb7c72cc-7ced-4f2c-bedb-8e275ee220ae",
+    "data": [
+      {
+        "text": "Степан",
+        "meta": "@sys.any",
+        "alias": "name1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d50d8a8f-3c85-4d1b-ba65-53192126ff42",
+    "data": [
+      {
+        "text": "Стёпа",
+        "meta": "@sys.any",
+        "alias": "name1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

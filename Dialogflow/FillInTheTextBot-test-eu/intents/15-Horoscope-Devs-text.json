@@ -1,0 +1,200 @@
+{
+  "id": "b74cc53d-2d5d-471d-9fbb-a05b13a1f3fe",
+  "parentId": "ad1b27be-e514-43e2-b957-5ca8457a9549",
+  "name": "15-Horoscope-Devs-text",
+  "auto": true,
+  "contexts": [
+    "text-15"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "a10b18fd-c666-40a5-9dd9-9bfce713caee",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для дев.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d4da9bf0-15f5-45ad-b557-fa7752ffe6e6",
+          "name": "number-1",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови большое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови какое-нибудь большое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "abed8e7e-aafc-45d1-8853-7af343391266",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "57662a10-2a69-49ee-8285-6fe93dd63f91",
+          "name": "number-2",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Чтобы гороскоп получился более точным, скажи, сколько тебе лет?"
+            },
+            {
+              "lang": "ru",
+              "value": "Чтобы гороскоп был точным, скажи, сколько тебе лет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e926fc82-33d0-4a46-96b9-c4cd53c1e929",
+          "name": "action",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — что ты любишь делать по ночам?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — что тебе нравится делать вечером?"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — чем ты любишь заниматься днём?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — что тебе нравится делать по утрам?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Да, давай ещё!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": false,
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что получилось: весной на вас внезапно свалятся деньги, потому что кто-то уронит с балкона свою копилку. В ней будет целое состояние — $number-1 р.!\nЛетом возможно лёгкое заболевание — $adjective насморк из всех отверстий.\nОсенью сбежавшая из секретной лаборатории крыса укусит вас, из-за чего появится супер-сила: вы сможете неистово $action $number-2 ч. подряд!\nБудьте проще, и люди к вам потянутся!\nПо-моему, отличный гороскоп! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-15"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

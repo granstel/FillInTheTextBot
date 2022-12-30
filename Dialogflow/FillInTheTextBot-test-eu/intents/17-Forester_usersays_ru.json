@@ -1,0 +1,71 @@
+[
+  {
+    "id": "071acd8a-ebfb-4904-82e3-09534dd77f3a",
+    "data": [
+      {
+        "text": "лесник и ",
+        "userDefined": false
+      },
+      {
+        "text": "путник",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d67bbf27-12f5-4ffe-a529-94143a476bbb",
+    "data": [
+      {
+        "text": "про лесника и путника",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c596ec09-e3d7-4ea2-89e8-c46ef4627bb5",
+    "data": [
+      {
+        "text": "ужастик про лесника и путника",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f50a136f-c8bf-43c0-9655-3cb6befcc8d4",
+    "data": [
+      {
+        "text": "лесник",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "82b7924f-b76a-473b-a1b4-dc54f780087d",
+    "data": [
+      {
+        "text": "про лесника",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

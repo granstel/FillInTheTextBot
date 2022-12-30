@@ -1,0 +1,176 @@
+{
+  "id": "654d7520-44bf-4610-b94b-62b81f22ff41",
+  "parentId": "c88e816c-5060-4eaf-80ed-9245ba7baca5",
+  "name": "27-why did we skip-text3",
+  "auto": true,
+  "contexts": [
+    "text-27-3"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-27-3",
+          "lifespan": 0
+        },
+        {
+          "name": "text-27",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "7b1ab7d1-c5af-403a-b427-952d258908de",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cbe6d2ae-42fb-4f2e-af40-74a3c2ec3f65",
+          "name": "name-4",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "Напомни, пожалуйста, своё имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b3138e2f-079d-461f-a077-d005cb5226c2",
+          "name": "adjective-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Что делал?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "fbcd2968-ebe2-4475-b3c2-f021607c9ec1",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И наконец — «какого цвета?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Конечно!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": false,
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "— Погодите! Вот продолжение нашего «зоопарка»: «Я, ученик школы №#text-27.number $name-4, не пошёл на урок физики, потому что сочинял занимательные истории про то, как #text-27.name-1 и #text-27.name-3 вытаскивали бедного ежа Иннокентия из $color унитаза. А коварный жираф #text-27.name-0 тихо смеялся в сторонке и $adjective-3».\n— О, Господи, ахаха, какая занимательная история! — сквозь смех проговорил заместитель. — $name-4, сочинишь для нас ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-27-3"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

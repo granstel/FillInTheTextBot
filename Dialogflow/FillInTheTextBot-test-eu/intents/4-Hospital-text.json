@@ -1,0 +1,242 @@
+{
+  "id": "ba5eb6bd-a653-4382-91fc-a26f0dc63f9a",
+  "parentId": "bd345de4-ce4e-4322-b6c0-6e7745d5b9e0",
+  "rootParentId": "bd345de4-ce4e-4322-b6c0-6e7745d5b9e0",
+  "name": "4-Hospital-text",
+  "auto": true,
+  "contexts": [
+    "text-4"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "f550fe9d-2061-4746-8669-4ac46cd1ac28",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "Этот текст про «Больницу».",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "800f4513-9ad4-4eee-8676-48bf44cc8aca",
+          "name": "number-1",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва назови любое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ab7c0727-0e49-4175-a099-f56bf2b88b87",
+          "name": "action",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь — «Что делали»? (из нескольких слов)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "fe7dc301-c906-4186-a172-5014175a97ea",
+          "name": "number-2",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови ещё одно любое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cf2dd0df-e2a3-4998-9293-b8ce0ae18c66",
+          "name": "person",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какого-нибудь знаменитого мужчину"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a0e70935-519a-423a-9e85-1cc2b557b2ef",
+          "name": "adjective-male",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "81b4047c-e87c-42dd-bbee-5e79b0e98ee0",
+          "name": "liquid",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$liquid",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови жидкость"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1b691125-6d3a-4d82-970d-99fa37318da8",
+          "name": "number-3",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — снова любое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Конечно давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Новости игры",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Новости игры",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить игру",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Слушай, что получилось: Катался на лыжах, сломал руку, ногу, нос, ухо, и угодил в больницу.\nВ больнице мне понравилось. В нашей палате было человек эдак $number-1. Некоторые играли в шахматы, другие в волейбол, третьи просто $action — в общем, было не скучно.\nС утра там процедуры: на выбор — либо капельница литров $number-2, либо клизма $number-3 л. Выжившие идут на завтрак.\nВо дворе флигель с вывеской над дверью: «Добро пожаловать!». В нём живёт $adjective-male патологоанатом $person.\n- Эй, новенький! Заходи! — закричал он мне, приветливо размахивая топором.\n- Как-нибудь потом! — сказал я и поковылял в процедурную.\n- Сделайте мне каких-нибудь уколов! — попросил я медсестру. — С детства их обожаю!\n- Тогда специально для вас — $liquid! — сказала сестра, наполнила шприц и сделала первый укол. Стало хорошо.\nПо-моему, забавно! Давай ещё один?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-4"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

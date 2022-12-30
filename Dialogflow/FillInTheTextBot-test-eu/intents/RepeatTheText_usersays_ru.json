@@ -1,0 +1,263 @@
+[
+  {
+    "id": "40733668-6382-4d3d-98e0-ca2298ec8479",
+    "data": [
+      {
+        "text": "прочитай",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b3ec8594-7a75-4325-8c8e-f2fd47651d88",
+    "data": [
+      {
+        "text": "расскажи эту историю еще ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9d32ffa7-464d-4e28-a4da-238f4dfb6c3f",
+    "data": [
+      {
+        "text": "заново расскажи эту историю",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3fee8337-2dc4-4396-bbe6-76ddb8eea040",
+    "data": [
+      {
+        "text": "ой",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f310f129-f48c-42ce-a5f2-7c057fac9c57",
+    "data": [
+      {
+        "text": "Расскажи ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ba4292cb-8722-4b44-8ce6-435072b8a3e4",
+    "data": [
+      {
+        "text": "ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8baf8d9f-9a1f-4057-8b26-033ff5e9bdf5",
+    "data": [
+      {
+        "text": "повтори ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "577344b1-3874-45fd-8d3f-43f5535c46b0",
+    "data": [
+      {
+        "text": "повтори",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ebeac668-16b5-4a4c-97c0-ba08041aca0f",
+    "data": [
+      {
+        "text": "прочти ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f3c510b6-6cc1-4d83-9885-4935668d154a",
+    "data": [
+      {
+        "text": "прочти ещё",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "998b34c8-ef76-4231-b691-0c749522d0da",
+    "data": [
+      {
+        "text": "прочитай ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3cfce740-5806-42e7-a2f4-02f608d4593e",
+    "data": [
+      {
+        "text": "повтори ",
+        "userDefined": false
+      },
+      {
+        "text": "чё",
+        "userDefined": false
+      },
+      {
+        "text": " сказала",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b5506689-88d1-42bd-8504-d3e0d2c5967e",
+    "data": [
+      {
+        "text": "повтори что сказала",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "da487b85-18cb-431a-b331-38a5b4efad0d",
+    "data": [
+      {
+        "text": "повтори последний текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "059a9a06-a717-4603-9cb5-3686e306c444",
+    "data": [
+      {
+        "text": "ну ка повтори что сказала",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6e0a7a6d-67a4-49f0-aff1-0ec6a04fc71c",
+    "data": [
+      {
+        "text": "повторить",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9917122a-2e7d-467d-92a5-6516827b9d51",
+    "data": [
+      {
+        "text": "расскажи ещё ",
+        "userDefined": false
+      },
+      {
+        "text": "раз",
+        "userDefined": false
+      },
+      {
+        "text": " пожалуйста",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  }
+]

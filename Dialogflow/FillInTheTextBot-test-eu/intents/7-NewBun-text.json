@@ -1,0 +1,334 @@
+{
+  "id": "38a29da9-8222-4930-8368-7e10c2022525",
+  "parentId": "5923396d-5407-433c-9c5f-44361de9762c",
+  "rootParentId": "5923396d-5407-433c-9c5f-44361de9762c",
+  "name": "7-NewBun-text",
+  "auto": true,
+  "contexts": [
+    "text-7"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "6fce4ac1-e6de-4b15-8a6e-7e206eb19f93",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "Сейчас попробуем сочинить «Новую сказку про колобка».",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7ec1f250-3e30-4d25-8562-8ec87966b5a4",
+          "name": "person-female",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$person-female",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва скажи имя своей подруги"
+            },
+            {
+              "lang": "ru",
+              "value": "Сначала назови имя своей подруги"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7af2ff09-a2cb-44fb-a099-efbf39b1ab9b",
+          "name": "adjective-female",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-female",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какая»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1b474c1c-9353-483d-baf4-ecd05f1ca08e",
+          "name": "person-male",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$person-male",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "А теперь — имя друга"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d391f228-58ff-42ed-ab47-29ccb45e5b25",
+          "name": "adjective-male-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "00ccfd29-b41b-405f-bc47-a74bea48fc8d",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Какой твой любимый зверёк?"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой зверёк тебе нравится?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "521176c3-1e83-4843-b8e9-2aad97ff2b25",
+          "name": "adjective-male-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2f159b73-1413-4586-ad67-08c1f127e7f6",
+          "name": "action-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Что сделал?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "12a775c7-bc81-4ca9-9b1e-d085a6c26184",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь тяжёлый предмет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "fd102e18-503c-484e-a98b-447facf006dd",
+          "name": "adjective-male-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a7cf770f-d9ba-40db-8c3e-f86d158bb110",
+          "name": "action-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Что ты любишь делать в свободное время?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что тебе нравится делать после обеда?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "debdeeac-2f4f-438f-931c-0581cc591930",
+          "name": "where",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$where",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — «Куда»?"
+            },
+            {
+              "lang": "ru",
+              "value": "И наконец — «Куда»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори ещё раз",
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Что новенького?",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Что новенького?",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить игру",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, новая сказка про колобка: Однажды $adjective-female $person-female и $adjective-male-2 $person-male решили испечь $adjective-male-1 колобок. Сказано — сделано. Колобок получился ну очень $adjective-male-3. Покатился он по тропинке, и тут навстречу ему $animal. Сразу было видно, что $animal собирается съесть колобка. Но тот не испугался: он бросил в зверя то, что мы называем $thing, только в два раза больше, и бедолага $animal от страха $action-1. Колобок на радостях принялся $action-2, пока не устал, а потом покатился дальше, $where.\n- По-моему, здорово получилось! Давай ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-7"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

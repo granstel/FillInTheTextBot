@@ -1,0 +1,32 @@
+[
+  {
+    "id": "fb9779f5-61eb-4748-90f3-e898430165c2",
+    "data": [
+      {
+        "text": "привет ",
+        "userDefined": false
+      },
+      {
+        "text": "алиса",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4d292227-4e7f-4dba-bce8-f639b723ed24",
+    "data": [
+      {
+        "text": "здрасте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

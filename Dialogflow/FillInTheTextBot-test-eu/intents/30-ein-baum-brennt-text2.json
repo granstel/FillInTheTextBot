@@ -1,0 +1,162 @@
+{
+  "id": "7efe758c-dc4d-472c-b2a6-76a70e211a65",
+  "parentId": "d8ae8ae4-79b4-4515-aa16-cd4a926e8e34",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "30-ein-baum-brennt-text2",
+  "auto": true,
+  "contexts": [
+    "text-30-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        },
+        {
+          "name": "text-30-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-30",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "2de35a2a-dcb9-40c8-bd55-4ed46d84e894",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5f34d2aa-26a3-4813-88e6-e5c3be8abc05",
+          "name": "toy",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$toy",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи пожалуйста, какая у тебя любимая игрушка?"
+            },
+            {
+              "lang": "ru",
+              "value": "Какая у тебя любимая игрушка?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "67973528-d151-4eb3-a605-200b4b68a1b5",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любое животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое животное мужского рода ты знаешь?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что было дальше:\n#text-30.name1 достаёт свою пилу, но оказалось, что это $toy.\n— Давайте руками вытаскивать ёлку! — предложил #text-30.name3.\n— Давайте! — сказали все, и стали её вытаскивать!\nВскоре они вытащили зелёную красавицу, но вдруг из под земли высунулся $animal и как крикнет человеческим голосом:\n— Вы чё мою ёлку вытащили?! А ну верните обратно!\nПришлось возвращать её на место.\n— Давайте лучше искусственную дома поставим — сказал #text-30.name3 — с ней не будет таких сюрпризов, да и природе так лучше.\nНа том и порешили.\nВот такая история! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_302",
+                  "Text": "Поблагодарить автора текста",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot?w\u003dwall-201360423_302",
+                  "Text": "Поблагодарить автора текста",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-30-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

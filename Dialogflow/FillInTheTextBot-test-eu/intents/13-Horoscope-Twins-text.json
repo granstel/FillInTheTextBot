@@ -1,0 +1,215 @@
+{
+  "id": "5cc2da99-c1d3-4687-bab3-6d08ea1e92f7",
+  "parentId": "4d371474-93fa-4ccf-ac8c-f963e5ab81f3",
+  "name": "13-Horoscope-Twins-text",
+  "auto": true,
+  "contexts": [
+    "text-13"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "55c5be72-f812-43bd-82ed-8b4f335486a5",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для близнецов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0a2a407c-49eb-48d1-970b-3d3fb9d5a921",
+          "name": "person-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$person-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови своего любимого актёра"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови своего любимого актёра"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1c678c2e-8d87-4406-bd5e-704ece9f9f63",
+          "name": "action-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Какое у этого человека любимое занятие?"
+            },
+            {
+              "lang": "ru",
+              "value": "Чем этот человек любит заниматься?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "2b320cf8-e757-4f6d-b824-09422c1b0dd6",
+          "name": "person-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$person-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови имя человека, который тебе не нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "Чтобы гороскоп получился точным, скажи имя человека, которого ты не любишь"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d6a54bb7-205a-4891-97ae-942b92dc4b8b",
+          "name": "action-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как думаешь, чем этот человек любит заниматься?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "141285a2-9d0c-401e-81a3-d32599bd2b1c",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок — какие люди тебя окружают?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее — какие люди тебя окружают?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Прочитай ещё раз",
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить навык",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Предложить свою идею",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Предложить свою идею",
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Весной вам вдруг покажется, что у вас раздвоение личности: вы вроде $person-1, и в то же время $person-2. Временами они будут ругаться и очень утомлять вас этим.\nОсенью у вас могут появиться вредные привычки: $action-1 ночью на крыше, $action-2 на Красной площади, ковырять в носу с криками \u0027Нашёл!\u0027.\nВ декабре в Кремле вам вручат золотую медаль «Лучшие $adjective Близнецы страны».\nПочаще советуйтесь со своим внутренним голосом, и всё будет отлично.\nЯ думаю, получилось очень занимательно! Давай ещё сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-13"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

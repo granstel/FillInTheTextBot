@@ -1,0 +1,63 @@
+{
+  "id": "ac46f58e-71a7-4e95-83fb-cfe1b82ac65c",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "3-DifficultFish-choose",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-3",
+          "lifespan": 50
+        },
+        {
+          "name": "3-DifficultFish-choose-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "56f7b44b-1df4-4e4e-a7ac-309321c5f472",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Начинаем!",
+            "Хорошо!",
+            "Отлично!"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

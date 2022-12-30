@@ -1,0 +1,380 @@
+{
+  "id": "3e96eaf5-ea88-442f-8e6a-0d4e94191736",
+  "parentId": "7d1e1eb3-e343-4809-b676-915d346f11a8",
+  "rootParentId": "7d1e1eb3-e343-4809-b676-915d346f11a8",
+  "name": "2-AmusementPark-text",
+  "auto": true,
+  "contexts": [
+    "text-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "e43fc3d4-7bc5-43c4-81d8-30fe7433f5be",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "Этот текст называется «Парк развлечений».",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d9d5acd3-1a7e-45f6-b9a3-2a24598d5bc8",
+          "name": "human",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$human",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови имя своего друга или известного артиста"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови имя своего друга или известного актёра"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи имя своего друга или известного актёра"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b4c123b1-2021-4ffe-b3d8-7a3eebeb62a3",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Предмет мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови предмет мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "036f204b-9118-4837-86a9-911d7b65f51b",
+          "name": "things",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$things",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Предмет во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови предмет во множественном числе"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "38982d6b-03a3-4d14-aabc-95981f15cd91",
+          "name": "animals",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animals",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови животное во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови животное во множественном числе"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "436859fc-35ee-4b48-ac9d-f5ac1ca050fb",
+          "name": "adjectives-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjectives-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь просто отвечай на вопросы первое, что приходит в голову. Итак — «какие»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь отвечай на вопросы первое, что приходит в голову. Итак — «какие»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c51cc6ed-2a95-4be7-a4db-7b6960e851c9",
+          "name": "actions-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$actions-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Что делали»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Дальше — «что делали»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1f6c6bc1-0257-4105-9894-18baa059ff07",
+          "name": "adjective-male",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c9581608-ff8a-4c4f-ba29-3c3f5c83961c",
+          "name": "actions-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$actions-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Что сделали»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bf873396-5d7b-416c-9709-af9d871468f6",
+          "name": "adjectives-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjectives-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какие»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "90e58692-684b-4fea-bf03-f59ac85554e7",
+          "name": "actions-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$actions-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Что делать»? (из нескольких слов)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d8b84321-fdec-4c28-a7dc-3f1f2fa44f2a",
+          "name": "actions-4",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$actions-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Ещё раз «что делать»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "56e1cb46-ab4b-4ed9-93dc-af10b0ac3040",
+          "name": "actions-5",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$actions-5",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Снова — «Что делать»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8746af25-c114-49c4-9c96-302c377c5a75",
+          "name": "where",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$where",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний — «Где»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори-ка",
+            "Конечно!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить навык",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Слушай, что получилось: В прошлом месяце я ездил в парк развлечений с другом по имени $human.\nТам были $adjectives-1 люди, которые повсюду $actions-1. Были там и чудаки в карнавальных костюмах — ну, настоящие $animals. Один из них надел мне на голову $adjective-male $thing, и мы $actions-2 от такого нахальства.\nПотом мы покатались на аттракционе $adjectives-2 горки, которые почему-то назывались Волшебные $things. $human совсем ошалел от этих горок, и мы решили $actions-3. Потом мы поехали в гостиницу и стали там $actions-4.\nЕще мне хочется отдохнуть $where. Поедем туда на следующий год и будем там вовсю $actions-5. По-моему, получилось весьма занимательно! Давай ещё один сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

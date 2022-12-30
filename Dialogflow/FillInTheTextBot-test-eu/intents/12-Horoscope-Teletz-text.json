@@ -1,0 +1,226 @@
+{
+  "id": "36e5ca2a-5d48-41a1-8874-ae66a81990a9",
+  "parentId": "0b0df3e5-e699-40b5-bb81-9b48e37cc01a",
+  "name": "12-Horoscope-Teletz-text",
+  "auto": true,
+  "contexts": [
+    "text-12"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "a2c49350-1d91-472e-8865-e20b15f3b93e",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "гороскоп для тельцов.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "f54bb5a6-3f4c-4756-a592-636aa0a7a947",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови своё любимое крупное животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "10cf9779-630a-4357-b264-c0a776984056",
+          "name": "drink",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$drink",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь — какой-нибудь напиток"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "06cd6706-cc07-42b5-ade5-9b8cbc54919d",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a69f58b1-4451-4813-a629-2681ab26f39a",
+          "name": "person",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя какой-нибудь кино-звезды"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "abbc38d0-7a43-4887-aa6b-887b48b34492",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь — большой предмет женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7510040a-c785-4777-92aa-8d93546fd6fe",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок, назови своё нелюбимое число"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее — назови число, которое тебе не нравится"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Давай ещё сочиним!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Ответы на оценки"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить историю"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Ответы на оценки",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, гороскоп для тельцов! Ваша любимая рифма: Телец — молодец. И это правда! Вам всё удаётся, и друзья, завидуя, называют вас $adjective-1 $animal.\nВесной вы поставите рекорд — выпьете залпом $number л своего любимого напитка — $drink. А ещё вы получите приглашение на телевидение, где вас будет ждать большая чугунная $thing, которую вручит $person!\nНе надо ни на кого бычиться, и всё у вас будет превосходно!\nПо-моему, отличный гороскоп! Давай сочиним что-то ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-12"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

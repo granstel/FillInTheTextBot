@@ -1,0 +1,60 @@
+{
+  "id": "ad1b27be-e514-43e2-b957-5ca8457a9549",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "15-Horoscope-Devs",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-15",
+          "lifespan": 50
+        },
+        {
+          "name": "15-Horoscope-Devs-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "76c77bca-a0df-4168-89b1-c411afabcae3",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-15",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Интересно, помогут ли звёзды составить"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

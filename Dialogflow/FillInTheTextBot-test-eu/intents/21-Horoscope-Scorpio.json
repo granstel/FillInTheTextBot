@@ -1,0 +1,58 @@
+{
+  "id": "70aacad2-80ed-4c96-a1b2-2c91d7aaa2bd",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "21-Horoscope-Scorpio",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-21",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "f4714208-3dc2-48b1-afff-839e64544a46",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-21",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Давай вместе составим",
+            "Сейчас мы вместе составим",
+            "Сейчас мы составим"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

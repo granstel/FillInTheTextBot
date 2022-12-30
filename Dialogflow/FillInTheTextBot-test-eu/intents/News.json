@@ -1,0 +1,63 @@
+{
+  "id": "bc0373b1-2dcb-4936-8d9c-b1ad3cbff961",
+  "name": "News",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Если хочешь подписаться на новости игры, найди во «Вконтакте» группу «Занимательные истории голосовых помощников». Продолжим?",
+            "Можно подписаться на новости игры во «Вконтакте», в группе «Занимательные истории голосовых помощников». Пойдём дальше?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Подписаться на новости",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Подписаться на новости"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
