@@ -1,0 +1,104 @@
+[
+  {
+    "id": "d0573011-0445-4346-a7f5-4879459a76f2",
+    "data": [
+      {
+        "text": "гороскоп про ",
+        "userDefined": false
+      },
+      {
+        "text": "тельцов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f007f1b0-224d-4c85-9c83-017f8c621103",
+    "data": [
+      {
+        "text": "гороскоп для ",
+        "userDefined": false
+      },
+      {
+        "text": "тельцов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "248de9da-4ff8-4e0b-bd58-cc0ab38722ff",
+    "data": [
+      {
+        "text": "для ",
+        "userDefined": false
+      },
+      {
+        "text": "тельцов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5157b389-ff13-49e5-8b81-fef457a23e85",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "тельцов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb5da9ba-247d-40cf-baf0-8e581bac63b9",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "тринадцать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5144090f-3440-421a-a98b-0827ce18ac5b",
+    "data": [
+      {
+        "text": "тринадцатый",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

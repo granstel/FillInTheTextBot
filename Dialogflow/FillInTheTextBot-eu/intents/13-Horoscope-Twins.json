@@ -1,0 +1,60 @@
+{
+  "id": "4d371474-93fa-4ccf-ac8c-f963e5ab81f3",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "13-Horoscope-Twins",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-13",
+          "lifespan": 50
+        },
+        {
+          "name": "13-Horoscope-Twins-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "03a072c1-95d7-4344-b1f7-bb1e2df320aa",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-13",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Звёзды помогут составить нам"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,69 @@
+{
+  "id": "e4adb0a6-a477-4f9e-9ae1-833c318c2f4e",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "7a3d7044-c440-4d59-a864-3c3408db0d38",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "predvkusheniye",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!",
+            "Список текстов",
+            "Ничего не понятно",
+            "Выход"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Добро пожаловать! Давай вместе сочиним занимательные истории! Я буду просить называть слова, а ты отвечай первое, что придёт в голову. Потом я прочитаю историю, которая у нас получилась. Если что-то непонятно, или нужен список текстов — спрашивай. Захочешь выйти — так и скажи. Начнём?",
+            "Добро пожаловать! Давай сочинять занимательные истории: я буду просить называть слова, а ты отвечай первое, что приходит в голову. Потом я прочитаю историю, которая у нас получится. Если есть вопросы, или нужно узнать список текстов — спрашивай! Если вдруг захочешь выйти — так и скажи. Начинаем?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

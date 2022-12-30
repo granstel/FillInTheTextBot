@@ -1,0 +1,58 @@
+[
+  {
+    "id": "d0b19c65-047a-4790-baf6-685f37cd79a5",
+    "data": [
+      {
+        "text": "что с тобой",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cced5e26-f013-4939-bc6b-7eb1d2f73f2e",
+    "data": [
+      {
+        "text": "диалог не отвечает",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "654bcbec-713c-4c46-a5a8-1602e20532bc",
+    "data": [
+      {
+        "text": "почему диалог не отвечает",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "626f4bf1-f4f5-4edb-b85f-08d7b4197ff8",
+    "data": [
+      {
+        "text": "алиса",
+        "userDefined": false
+      },
+      {
+        "text": " почему ты говоришь диалог не отвечает",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

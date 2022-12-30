@@ -1,0 +1,217 @@
+{
+  "id": "c1db2c40-1141-4d83-9505-2918bff26f66",
+  "parentId": "2431b79a-b75d-4419-9530-af76b5ef5574",
+  "name": "22-Valentine\u0027s day-text",
+  "auto": true,
+  "contexts": [
+    "text-22"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "ba1ea4b2-5679-4dbf-aa11-95c22d830798",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про День всех влюблённых.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c1156ab8-9fc0-44f3-8945-2285b1777238",
+          "name": "name2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови имя человека, который тебе нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи, как зовут человека, который тебе нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови имя своего любимого человека"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала скажи имя своего любимого человека"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a62fe67d-9228-4bec-97b1-56ae8b3b2fc3",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какая»?"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какие»?"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какое»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5d91cbe0-2e99-4412-b0ff-76313506ab4e",
+          "name": "name1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, как тебя зовут"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови своё имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "39caf204-ae3c-4a17-9e45-b2ad8fc70bbc",
+          "name": "person",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$person",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — назови имя какого-нибудь божества или демона"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос — назови имя какого-нибудь фэнтезийного персонажа"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — назови имя какого-нибудь божества или демона"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Давай ещё!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Предложить свою идею",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Предложить свою идею",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, история про любовь: Недавно $name1 и $name2 съехались и стали жить вместе. В преддверии дня всех влюблённых — 14 февраля, они решили заказать столик на двоих. Ночью они отлично провели время, собирая его… Ведь это был столик из икеи, который назывался $adjective$person.\nПо-моему, забавно! Давай ещё что-нибудь сочиним?",
+            "Итак, история про влюблённых: Однажды $name1 и $name2 съехались и стали жить вместе. В день всех влюблённых — 14 февраля, они заказали столик на двоих. Ночью они очень устали, собирая его… Ведь это был столик из икеи, под названием $adjective$person.\nПо-моему, забавно! Давай ещё что-нибудь сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-22"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

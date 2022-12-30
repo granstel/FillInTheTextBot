@@ -1,0 +1,334 @@
+{
+  "id": "59591f0e-dfe2-4810-ac28-686e23ac794f",
+  "parentId": "ac46f58e-71a7-4e95-83fb-cfe1b82ac65c",
+  "rootParentId": "ac46f58e-71a7-4e95-83fb-cfe1b82ac65c",
+  "name": "3-DifficultFish-text",
+  "auto": true,
+  "contexts": [
+    "text-3"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "1866075b-e9c1-49e7-840f-f5bb6cfd53b7",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "Этот текст про «Непростую рыбку».",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a0395223-516e-45e5-bf70-d6b1bc93cb2d",
+          "name": "animal-female",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-female",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови крупное животное женского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала назови крупное животное женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "621ce93d-df44-4140-8def-45d16ce573ab",
+          "name": "adjective-female-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-female-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какая»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e21b6961-79f8-496d-8b53-99555facf855",
+          "name": "action-female",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$action-female",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Что делала»? (из нескольких слов)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7c4f0d22-9fab-4048-955f-be785f5cd305",
+          "name": "big-thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$big-thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь — большой предмет или транспорт"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови большой предмет или транспорт"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "972cc158-e9ad-49ef-8c37-c4066c45dbd3",
+          "name": "adjective-male-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "f3fe9e2b-70ae-43a2-855d-1eaafe8922de",
+          "name": "furniture",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$furniture",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Предмет мебели мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — предмет мебели мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5182840d-6eec-4016-979a-6e176dc66679",
+          "name": "adjective-male-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "81c9d745-6ba3-4e4b-aa16-f9637d0a7e78",
+          "name": "animal-male-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-male-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови крупное животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — крупное животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови крупное животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ab9b8a5d-d028-46e1-9da5-af330bb94687",
+          "name": "adjective-male-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ef3b1753-5c95-4ef5-a944-4423e00e35ff",
+          "name": "animal-male-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal-male-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Крупный хищник мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3873f9aa-38d8-4740-aade-3c826fbecbb6",
+          "name": "adjective-male-4",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-male-4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — «Какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори ещё раз",
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Предложить свою идею",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Предложить свою идею",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить игру",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что у нас получилось: Жили-были старик со старухой у самого синего моря. Старуха $action-female, старик ловил рыбу. Однажды забросил он невод в море, вытащил его, а в нем странная золотая рыбка.\n- Ну, что молчишь? — молвила рыбка. — Говори желание!\n- Эх, корыто у старухи развалилось! Давай стиральную машину, что ли...\n- Будет тебе стиральная машина! — сказала рыбка. — А что еще?\n- Давай еще $adjective-male-1 $big-thing и $adjective-male-2 $furniture!\nОтпустил старик рыбку в море, пошел домой, и видит рядом со своей избушкой такую картину: стоит $adjective-male-3 $animal-male-1, на нём $$adjective-female-1 $animal-female, еще выше $adjective-male-4 $animal-male-2, а на самой верхушке стоит его старуха и боится пошевельнуться.\n«Что-то перепутала рыбка, — подумал старик. — Но прикольно получилось! Цирк, да и только!»\n- По-моему, отличная история! Сочиним ещё?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-3"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

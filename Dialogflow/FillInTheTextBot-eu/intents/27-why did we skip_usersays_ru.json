@@ -1,0 +1,80 @@
+[
+  {
+    "id": "bf0ef044-4ece-41a4-adaf-05589663ff09",
+    "data": [
+      {
+        "text": "история про прогульщиков",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f72e4806-3e07-4686-aea0-b1344e505dcb",
+    "data": [
+      {
+        "text": "почему мы прогуляли",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "900fa181-138e-4421-b656-390dad9b8ec3",
+    "data": [
+      {
+        "text": "почему они прогуляли",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "59456fc2-0ec5-40b9-9f30-a0b15bbf4114",
+    "data": [
+      {
+        "text": "про прогульщиков",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8b0b43ac-61a4-44cd-a23f-10d238e8eefe",
+    "data": [
+      {
+        "text": "прогульщики",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5fe27cc4-58ce-4010-b254-655a45f66e66",
+    "data": [
+      {
+        "text": "прогуляли урок",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  }
+]

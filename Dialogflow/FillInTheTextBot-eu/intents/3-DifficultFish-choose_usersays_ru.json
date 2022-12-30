@@ -1,0 +1,135 @@
+[
+  {
+    "id": "1142054f-c8c5-41cd-943e-a475eb242a38",
+    "data": [
+      {
+        "text": "рыбка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "52d0fe70-1193-4129-a34b-244e38c0b3ce",
+    "data": [
+      {
+        "text": "номер четыре",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8c560fcf-f770-46d0-b714-f438162075e8",
+    "data": [
+      {
+        "text": "четвертый текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4f810ae8-ebf1-4ae0-9b3a-835b3c376b33",
+    "data": [
+      {
+        "text": "текст про рыбку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "83af471c-019d-4282-9e7f-4c7950a52785",
+    "data": [
+      {
+        "text": "текст про непростую рыбку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "67a21bcd-dd10-47ba-92d9-45fb90fc3897",
+    "data": [
+      {
+        "text": "Непростая рыбка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "61edb93d-9957-4c86-bba7-c769abbbe918",
+    "data": [
+      {
+        "text": "4",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b204a11b-f7cb-4e3f-b9fc-48d00a11e11d",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "четвёртый",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e8d5fc7b-e912-4fed-bf83-6e146377795d",
+    "data": [
+      {
+        "text": "четвёртый",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

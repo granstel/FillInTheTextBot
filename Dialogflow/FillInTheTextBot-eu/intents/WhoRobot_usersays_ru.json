@@ -1,0 +1,101 @@
+[
+  {
+    "id": "b7369736-f7ec-46c5-87f5-b4ca0e454ad1",
+    "data": [
+      {
+        "text": "сочинить про роботов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "33053dfb-e763-4d9f-8d7c-2600f1959bd6",
+    "data": [
+      {
+        "text": "роботы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cbb87ff0-2010-446c-bfb0-cdc12df56524",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "роботов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "965871a7-8e79-4afb-b07b-66f5dec1d1d9",
+    "data": [
+      {
+        "text": "начать квест",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "11fb4cc7-f2ab-4c72-9a0a-f1f9884cad23",
+    "data": [
+      {
+        "text": "квест для ",
+        "userDefined": false
+      },
+      {
+        "text": "додо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c4c0c524-66f2-4f81-9638-52acf5caddca",
+    "data": [
+      {
+        "text": "я робот",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "189d324a-99a7-4f26-af49-6d7a9b8ace79",
+    "data": [
+      {
+        "text": "кто робот",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

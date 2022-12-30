@@ -1,0 +1,75 @@
+[
+  {
+    "id": "88d34ef6-c30e-4d8f-9080-0c01ea6c2347",
+    "data": [
+      {
+        "text": "стрельцов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "05e57b85-c3c5-4348-ad08-83e080f37605",
+    "data": [
+      {
+        "text": "стрельцами",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0fc6b99f-4a82-4959-82ad-560be7eacc22",
+    "data": [
+      {
+        "text": "стрельцы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b5182987-ecf0-45fb-aa26-404daca2d69f",
+    "data": [
+      {
+        "text": "гороскоп про ",
+        "userDefined": false
+      },
+      {
+        "text": "стрельцов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "58e51cc2-788b-4590-ae47-e28ae3449c7a",
+    "data": [
+      {
+        "text": "гороскоп для ",
+        "userDefined": false
+      },
+      {
+        "text": "стрельцов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

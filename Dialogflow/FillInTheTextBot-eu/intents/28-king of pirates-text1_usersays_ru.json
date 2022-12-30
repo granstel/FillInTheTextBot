@@ -1,0 +1,317 @@
+[
+  {
+    "id": "590171ec-a7f2-482a-a731-b9e9f8b023c1",
+    "data": [
+      {
+        "text": "длинными",
+        "meta": "@sys.any",
+        "alias": "adjective-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "289bfe3b-d12e-4515-bf09-55e3bb80ae6c",
+    "data": [
+      {
+        "text": "прикольными",
+        "meta": "@sys.any",
+        "alias": "adjective-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "922a56fa-4ea1-4ad7-9772-62c23a295d05",
+    "data": [
+      {
+        "text": "грязными",
+        "meta": "@sys.any",
+        "alias": "adjective-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "db9361ba-cdc8-4857-93f9-262d54b68628",
+    "data": [
+      {
+        "text": "орбитальный",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8eb25ad2-0331-445b-bba8-f637dbd92698",
+    "data": [
+      {
+        "text": "обитаемый",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d1634fdb-33b8-4438-aa6e-a48e3b1c5a40",
+    "data": [
+      {
+        "text": "необитаемый",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e191c02c-aab5-4194-8ff2-332918341c9f",
+    "data": [
+      {
+        "text": "разного",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3c95e0d5-6f54-4941-85f1-4aa613c71456",
+    "data": [
+      {
+        "text": "странного",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "83c2ae00-dc2b-4862-af21-c0504eb403f7",
+    "data": [
+      {
+        "text": "тупого",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2cf9d4d7-f4ce-400b-a6ca-cd0d4e07f8a7",
+    "data": [
+      {
+        "text": "умного",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "216e6170-2e58-4952-ba41-1ba6ca761cca",
+    "data": [
+      {
+        "text": "глупого",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b05970d9-3b24-4bae-ba68-a300aec28521",
+    "data": [
+      {
+        "text": "чёрный",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e1882a6a-31eb-419b-a78f-7e8d9bd1e114",
+    "data": [
+      {
+        "text": "прикольный",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "53f9905f-967e-47fd-9c8f-c702528a553e",
+    "data": [
+      {
+        "text": "большой",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3cae21d2-5015-427b-bcee-1ed559507f27",
+    "data": [
+      {
+        "text": "грязный",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7daade3f-d758-4dfb-81e4-d602ed0d77b3",
+    "data": [
+      {
+        "text": "пиратский",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b3a36429-14e2-42ca-ad96-67cc824b7d74",
+    "data": [
+      {
+        "text": "Ивантеевка",
+        "meta": "@sys.any",
+        "alias": "city",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb1040fb-6bce-44ac-b8b3-8dd6843d2e45",
+    "data": [
+      {
+        "text": "Щёлково",
+        "meta": "@sys.any",
+        "alias": "city",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b89afc30-7669-4a74-bed5-7ca4394e1cd8",
+    "data": [
+      {
+        "text": "Судак",
+        "meta": "@sys.any",
+        "alias": "city",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "577a1bf3-b327-4288-b7b2-17abf33980d5",
+    "data": [
+      {
+        "text": "Москва",
+        "meta": "@sys.any",
+        "alias": "city",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7a0453f7-4b75-4b26-98ad-ad43d350e2e3",
+    "data": [
+      {
+        "text": "Фрязино",
+        "meta": "@sys.any",
+        "alias": "city",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

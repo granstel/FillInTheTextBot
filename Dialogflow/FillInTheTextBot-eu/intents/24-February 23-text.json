@@ -1,0 +1,212 @@
+{
+  "id": "7a28273e-51a2-4284-81cb-1e0816973466",
+  "parentId": "0ecc6a94-51e0-45a1-9ac5-930369f894be",
+  "name": "24-February 23-text",
+  "auto": true,
+  "contexts": [
+    "text-24"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "e8cc9377-bc53-4e9b-b6cc-7757af25f497",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "поздравление с 23 февраля.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3372749d-2c8a-4a96-965f-4ef2c840f562",
+          "name": "footwear",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$footwear",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какую-нибудь обувь"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови обувь настоящего мужчины"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови свою любимую обувь"
+            },
+            {
+              "lang": "ru",
+              "value": "Как называется обувь, которую носит твой друг"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "3dd83e58-84d8-4dc0-9676-2b30052e2db6",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какие?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "6385eeb6-7b9b-498b-b8f6-3ac4618d803e",
+          "name": "hat",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$hat",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как называется солдатский головной убор?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что носят на голове офицеры?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что носят на голове настоящие мужики?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8ea7fa5c-b33c-4e7b-a4fb-43aa4e75be54",
+          "name": "fruits",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$fruits",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — назови какие-нибудь фрукты"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — назови какие-нибудь овощи"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее — назови свои любимые фрукты"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — назови свои любимые овощи"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить навык",
+                  "IsQuickReply": false,
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить навык",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Мужики, поздравляю с 23 февраля! Желаю $footwear денег, $hat с удачей, а дорога жизни пусть обходит изгибами горе и разочарования! $adjective девушки пускай висят на шее как $fruits, и всегда все будет прекрасно!\nПо-моему, классно получилось, сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-24"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

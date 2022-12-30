@@ -1,0 +1,63 @@
+{
+  "id": "66faf4c5-7d8c-45cc-a710-195384d0d6d4",
+  "name": "TextRequest",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Если хочешь предложить свой текст для истории, напиши в личку паблика ВК «Занимательные истории голосовых помощников», а потом возвращайся сюда ко мне. Давай пока сочиним про что-то ещё?",
+            "У меня ещё такого нет, но если хочешь предложить свой текст для истории, напиши в личку группы ВК «Занимательные истории голосовых помощников», а потом возвращайся, буду ждать тебя здесь. Продолжим?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
+                  "Text": "Предложить свой текст",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

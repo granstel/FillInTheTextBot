@@ -1,0 +1,232 @@
+{
+  "id": "6b75739f-9a44-4d0e-9441-bd7f464d8985",
+  "parentId": "678363e4-59b6-45b4-81ce-835da5ce43ce",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "18-NY-MessageToFatherFrost1-text",
+  "auto": true,
+  "contexts": [
+    "text-18"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "a7e4b727-cce3-41c0-957d-b824761b855e",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "письмо Дедушке Морозу!",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "825c7647-732c-499e-9028-a37863074ba9",
+          "name": "adjective-1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала скажи, каким был для тебя уходящий год?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, каким для тебя был этот год?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c6306c58-f426-456b-a89c-83e21994b18a",
+          "name": "adjective-2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, какая твоя подруга?"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь скажи, какая у тебя подруга?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "69c0f04a-a13c-487b-9638-2ba05f909a71",
+          "name": "adjective-3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "А теперь просто ответь — «Какие»?"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какие»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "eaa51053-b19b-426c-95a0-c8efb237f1e4",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови свой любимый цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови цвет, который тебе нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь скажи свой любимый цвет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "afe7f52d-1d78-4e26-ae34-fa574d25bb78",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — как тебя зовут друзья?"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос — как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний — как тебя зовут друзья?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори",
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Подписаться на новости в ВК",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Подписаться на новости в ВК",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить навык",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, вот какое письмо мы написали: «Дорогой Дедушка Мороз! Мы с нетерпением ждём тебя. Новый год — это самый $adjective-1 праздник в году. Так не хочется говорить о учебе, потому что она такая $adjective-2. Но мы обещаем, что будем получать только лучшие оценки. Так что, открывай поскорее свой $color мешок и вручай нам $adjective-3 подарки. С уважением, $name и самый лучший голосовой помощник!»\nПо-моему, у нас получилось очень милое письмо! Давай ещё что-нибудь сочиним?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-18"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

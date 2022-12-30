@@ -1,0 +1,150 @@
+[
+  {
+    "id": "cbab4183-fe86-4763-8ff8-762840a8a80f",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "userDefined": false
+      },
+      {
+        "text": " новогоднее письмо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4aec442f-773a-4fb7-b76e-9fa64c11c76c",
+    "data": [
+      {
+        "text": "телеграмма ",
+        "userDefined": false
+      },
+      {
+        "text": "санте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7e876dba-683b-41f5-beb0-aa579357fc32",
+    "data": [
+      {
+        "text": "сообщение ",
+        "userDefined": false
+      },
+      {
+        "text": "санте",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "клаусу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bf34e1e4-80b4-4ecc-a57e-730aac0c7365",
+    "data": [
+      {
+        "text": "сообщение ",
+        "userDefined": false
+      },
+      {
+        "text": "санте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ff6d5d55-d1d1-453b-bd1d-ec9d898c01b3",
+    "data": [
+      {
+        "text": "телеграмма деду ",
+        "userDefined": false
+      },
+      {
+        "text": "морозу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "74dcfcb8-e18c-47f0-9297-a66702c947b1",
+    "data": [
+      {
+        "text": "письмо для дедушки ",
+        "userDefined": false
+      },
+      {
+        "text": "мороза",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ca728f9c-cbf4-4baf-8405-c2756ee9599f",
+    "data": [
+      {
+        "text": "Новогоднее письмо деду ",
+        "userDefined": false
+      },
+      {
+        "text": "морозу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e8db4648-d987-4d56-b042-f4ca1724b977",
+    "data": [
+      {
+        "text": "Письмо деду ",
+        "userDefined": false
+      },
+      {
+        "text": "морозу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

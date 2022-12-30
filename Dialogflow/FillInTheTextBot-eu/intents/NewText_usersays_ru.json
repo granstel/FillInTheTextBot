@@ -1,0 +1,106 @@
+[
+  {
+    "id": "43a47383-e895-4ad6-8b2c-ee7795c411dc",
+    "data": [
+      {
+        "text": "последний текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ed07a6b3-a9cc-4d7b-9cd8-86daaa7d8079",
+    "data": [
+      {
+        "text": "новый",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "31f288b3-967c-4b86-b4d7-076c6bc61416",
+    "data": [
+      {
+        "text": "самый новый",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c50bb442-ed0e-44f3-baff-31ee416eabd3",
+    "data": [
+      {
+        "text": "самый последний",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1fffbd15-94f2-4ba1-b88c-0ca12c72046d",
+    "data": [
+      {
+        "text": "давай самый последний текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "20abe133-ae73-4f28-8450-4e11809c7059",
+    "data": [
+      {
+        "text": "давай самый новый текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1b908f4f-1f0e-4fad-a25b-27f7b33e7b16",
+    "data": [
+      {
+        "text": "давай новый текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "04db7072-6a49-4679-825e-060f8fc6959a",
+    "data": [
+      {
+        "text": "новинка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

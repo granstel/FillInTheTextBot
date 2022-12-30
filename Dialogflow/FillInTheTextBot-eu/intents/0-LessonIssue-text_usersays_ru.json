@@ -1,0 +1,512 @@
+[
+  {
+    "id": "85ae7911-87e9-48ad-bded-66e9bdfce8b7",
+    "data": [
+      {
+        "text": "марь иванна",
+        "meta": "@sys.person",
+        "alias": "teacher",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e46decc2-0b5c-4ec6-996f-06b6c23bb754",
+    "data": [
+      {
+        "text": "антон",
+        "meta": "@sys.person",
+        "alias": "boy",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2aac44a8-a13a-4c24-a6ad-897619088f37",
+    "data": [
+      {
+        "text": "скорый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9a7c55f5-22b8-46d2-9b85-ae8b7244857a",
+    "data": [
+      {
+        "text": "орел",
+        "meta": "@sys.any",
+        "alias": "animal-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ced55794-575e-4cba-96b7-eac21bf90166",
+    "data": [
+      {
+        "text": "марфа васильевна",
+        "meta": "@sys.person",
+        "alias": "teacher",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ae0dfe76-7eb5-40c9-b9e3-4123d7f4b005",
+    "data": [
+      {
+        "text": "мягкая",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a56ba728-b322-4e0e-9156-a945203f0a36",
+    "data": [
+      {
+        "text": "оранжевый",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9bf4ba37-d57a-4659-8bb0-da7e3c7f2d64",
+    "data": [
+      {
+        "text": "богомол",
+        "meta": "@sys.any",
+        "alias": "animal-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ea260e0c-c1e0-4670-b33a-2dbad4ab64b7",
+    "data": [
+      {
+        "text": "шерстистый",
+        "meta": "@sys.any",
+        "alias": "adjective-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "19cb7553-dbdd-40e2-9e81-e954c9df7b11",
+    "data": [
+      {
+        "text": "ихтиозавр",
+        "meta": "@sys.any",
+        "alias": "animal-3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4a048086-e8ed-4f7d-bbf7-22c81442c5f2",
+    "data": [
+      {
+        "text": "булочка",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "27461144-4052-4203-86b4-275701e0d16d",
+    "data": [
+      {
+        "text": "белый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d23783fe-e314-4fca-a9fa-37b6f048ba94",
+    "data": [
+      {
+        "text": "козел",
+        "meta": "@sys.any",
+        "alias": "animal-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9a3a2a44-7f0d-4286-960c-3276559118a9",
+    "data": [
+      {
+        "text": "антонина петровна",
+        "meta": "@sys.person",
+        "alias": "teacher",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8e19cfa9-32a3-4fcf-816a-f2e3a3a7f337",
+    "data": [
+      {
+        "text": "розовая",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e2f11d61-7a96-427e-a673-b4a6d0e9e915",
+    "data": [
+      {
+        "text": "улитка",
+        "meta": "@sys.any",
+        "alias": "animal-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c5cd4df0-20ee-4d50-9158-b8efa1331ec8",
+    "data": [
+      {
+        "text": "сильный",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f87a8d9c-5bf0-40f8-9337-980d85e4f72e",
+    "data": [
+      {
+        "text": "медведь",
+        "meta": "@sys.any",
+        "alias": "animal-3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3483fdc6-2475-4155-9a43-e888f16313db",
+    "data": [
+      {
+        "text": "красный",
+        "meta": "@sys.any",
+        "alias": "adjective-4",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f9dbb6f4-606d-4ec6-83b2-3f83f569b19c",
+    "data": [
+      {
+        "text": "олень",
+        "meta": "@sys.any",
+        "alias": "animal-4",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "de724837-675b-44d0-9128-9280f02a2fee",
+    "data": [
+      {
+        "text": "чебурек",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2fa5da40-fa34-4e0a-b03c-db3e1bee3fb7",
+    "data": [
+      {
+        "text": "пирог",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "49ce6b13-fc54-4aab-85a6-a31b97a4299b",
+    "data": [
+      {
+        "text": "арбуз",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7d67649f-d7be-42f6-8d30-9fcbf4d08dec",
+    "data": [
+      {
+        "text": "красивая",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d4c601bf-c272-43a2-885f-abb423ab1ac9",
+    "data": [
+      {
+        "text": "классная",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "34e3b86e-83a3-416a-a157-5bf901d8016d",
+    "data": [
+      {
+        "text": "пупырчатая",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e7a7dac4-8979-46eb-aff2-6d110bbef9ab",
+    "data": [
+      {
+        "text": "беспартийная",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d20bfd09-75ec-4b73-9c9d-61f2048e55ad",
+    "data": [
+      {
+        "text": "Людмила Петровна",
+        "meta": "@sys.person",
+        "alias": "teacher",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3bfdd6ce-1686-4ee4-af95-7a33985c6a75",
+    "data": [
+      {
+        "text": "Елена Александровна",
+        "meta": "@sys.person",
+        "alias": "teacher",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ee22b3bd-4a05-4881-b7f0-2c3235fe5db4",
+    "data": [
+      {
+        "text": "Ирина Анатольевна",
+        "meta": "@sys.person",
+        "alias": "teacher",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "29135372-a56a-4430-aa1b-464e20b43e45",
+    "data": [
+      {
+        "text": "Мария Ивановна",
+        "meta": "@sys.person",
+        "alias": "teacher",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9d913fe2-0f1f-44fd-ac33-7b6580968e31",
+    "data": [
+      {
+        "text": "гамадрил",
+        "meta": "@sys.any",
+        "alias": "animal-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9e120827-55c7-46e7-96cb-2eab0b897286",
+    "data": [
+      {
+        "text": "пупырчатый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d9aa1003-b494-4bd4-a3b7-96ab1fd2a44c",
+    "data": [
+      {
+        "text": "Лёха",
+        "meta": "@sys.person",
+        "alias": "boy",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

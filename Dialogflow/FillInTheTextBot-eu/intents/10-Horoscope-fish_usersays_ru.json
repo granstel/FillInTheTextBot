@@ -1,0 +1,84 @@
+[
+  {
+    "id": "fdf7de37-e0dc-4da4-a278-6c472936cb47",
+    "data": [
+      {
+        "text": "одиннадцатый текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c30cd5b7-c2d8-4a6a-be40-945dda93c7ee",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "одиннадцать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d0b05bf5-9fba-4358-83c7-74105724748f",
+    "data": [
+      {
+        "text": "для рыб",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "21d85589-4824-49b2-911f-3787bf733a0b",
+    "data": [
+      {
+        "text": "про рыб",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4d09b16e-27eb-47f1-b6ba-6fb037a94273",
+    "data": [
+      {
+        "text": "гороскоп про рыб",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5eb05878-aff8-413e-bbad-3f1a11b8ddb4",
+    "data": [
+      {
+        "text": "гороскоп для рыб",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

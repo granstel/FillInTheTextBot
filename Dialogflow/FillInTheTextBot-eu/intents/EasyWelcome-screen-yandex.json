@@ -1,0 +1,97 @@
+{
+  "id": "90161c20-edd5-467e-b2be-380f18966273",
+  "parentId": "52162657-210f-46be-a923-2e91bd10128f",
+  "rootParentId": "52162657-210f-46be-a923-2e91bd10128f",
+  "name": "EasyWelcome-screen-yandex",
+  "auto": true,
+  "contexts": [
+    "screen",
+    "source-yandex"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "EasyWelcome-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "6da1c2c9-d013-4242-a202-9fd288942560",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "radost",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Конечно!",
+            "Список историй",
+            "Выход"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Настало время занимательных историй! Поддержи, пожалуйста, этот навык в голосовании за лучший в подборке к 1му июня, кнопка внизу поможет туда попасть. Продолжим?",
+            "Пришла пора умопомрачительных повествований! Поддержи, пожалуйста, эту игру в голосовании за лучший навык в подборке к 1му июня, кнопка внизу подскажет, как туда попасть. Сочиним что-нибудь?",
+            "И вот пришло время занимательных историй! Поддержи, пожалуйста, этот навык в голосовании за лучший в подборке к 1му июня! Кнопка внизу подскажет, как туда попасть. Сочиним что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Подписаться на новости",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": -1,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "EasyWelcome"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

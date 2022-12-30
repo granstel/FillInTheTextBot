@@ -1,0 +1,77 @@
+[
+  {
+    "id": "28a56c5f-4164-4420-b2bb-c10e602c8ff8",
+    "data": [
+      {
+        "text": "трепещущий",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6d114ba0-57af-4f82-bc23-328d27f58555",
+    "data": [
+      {
+        "text": "валенок",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "20c576ec-2051-4e72-b76d-8edb826ec695",
+    "data": [
+      {
+        "text": "саблезубый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b7c35dab-87f5-4e5e-b9ba-1b82174ddc4b",
+    "data": [
+      {
+        "text": "тушканчик",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a472e747-809f-4a75-ac73-8f781c224886",
+    "data": [
+      {
+        "text": "диван",
+        "meta": "@sys.any",
+        "alias": "furniture",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

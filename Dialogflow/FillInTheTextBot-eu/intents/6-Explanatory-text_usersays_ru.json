@@ -1,0 +1,122 @@
+[
+  {
+    "id": "5af664e1-df1a-4c79-96bd-2c999da93da7",
+    "data": [
+      {
+        "text": "на работу",
+        "meta": "@sys.any",
+        "alias": "where-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6f628d5c-c994-4189-b4ed-340f45e759b2",
+    "data": [
+      {
+        "text": "червяк",
+        "meta": "@sys.any",
+        "alias": "animal-male-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "819b13e1-c395-438b-bbb9-1e1892530666",
+    "data": [
+      {
+        "text": "жужелица",
+        "meta": "@sys.any",
+        "alias": "animal-female-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b051911c-ee42-423d-9219-cd3b93f55cb0",
+    "data": [
+      {
+        "text": "в лифте",
+        "meta": "@sys.any",
+        "alias": "where-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a9d1a27e-0c88-4195-ba0d-a76b4b91d854",
+    "data": [
+      {
+        "text": "крабы",
+        "meta": "@sys.any",
+        "alias": "animals",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fa5e6044-ce6a-4aea-bf61-3c44543305ae",
+    "data": [
+      {
+        "text": "на улицу",
+        "meta": "@sys.any",
+        "alias": "where-3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6b9046b0-9dd7-4f68-bec5-ad57de519e70",
+    "data": [
+      {
+        "text": "тоша",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "edbb22a4-c4c5-4c55-8aed-bca58f7be6ce",
+    "data": [
+      {
+        "text": "Антон",
+        "meta": "@sys.person",
+        "alias": "person",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

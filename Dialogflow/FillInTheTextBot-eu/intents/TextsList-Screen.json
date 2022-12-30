@@ -1,0 +1,287 @@
+{
+  "id": "5554dffc-9562-47c6-8306-8b16c85741eb",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "TextsList-Screen",
+  "auto": true,
+  "contexts": [
+    "Screen"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "TextsList-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "15e2a722-aa0c-4202-be19-71ebdd07d079",
+          "name": "sberEmotion",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "zhdu_otvet",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Случай на уроке"
+            },
+            {
+              "text": "Карантин"
+            },
+            {
+              "text": "Парк развлечений"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Непростая рыбка"
+            },
+            {
+              "text": "Больница"
+            },
+            {
+              "text": "Про цирк"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Объяснительная"
+            },
+            {
+              "text": "Новый колобок"
+            },
+            {
+              "text": "Новогоднее письмо"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Анекдот про енота"
+            },
+            {
+              "text": "Про День всех влюблённых"
+            },
+            {
+              "text": "Про 23 февраля"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Про 8 марта"
+            },
+            {
+              "text": "Про кота Бориса"
+            },
+            {
+              "text": "Прогульщики"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Про короля пиратов"
+            },
+            {
+              "text": "Опоздательная в больницу"
+            },
+            {
+              "text": "Вот это ёлка!"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Про лесника"
+            },
+            {
+              "text": "Старинные часы"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп про водолеев"
+            },
+            {
+              "text": "Гороскоп для рыб"
+            },
+            {
+              "text": "Гороскоп овнов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп про тельцов"
+            },
+            {
+              "text": "Гороскоп близнецов"
+            },
+            {
+              "text": "Гороскоп для раков"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп о девах"
+            },
+            {
+              "text": "Гороскоп про львов"
+            },
+            {
+              "text": "Гороскоп для весов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Гороскоп о скорпионах"
+            },
+            {
+              "text": "Гороскоп про стрельцов"
+            },
+            {
+              "text": "Гороскоп для козерогов"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Если не сможешь выбрать, просто скажи «любой» или «новый». Итак, вот что у меня сейчас есть:",
+            "Вот они. Если трудно выбрать, просто скажи «любой» или «новый»"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Text": "Самый новый"
+                },
+                {
+                  "IsQuickReply": false,
+                  "Text": "Любой"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

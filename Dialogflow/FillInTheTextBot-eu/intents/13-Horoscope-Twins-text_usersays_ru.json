@@ -1,0 +1,216 @@
+[
+  {
+    "id": "6afd585f-2583-4f3c-b296-3f7c7abeeb51",
+    "data": [
+      {
+        "text": "Степан Гранкин",
+        "meta": "@sys.any",
+        "alias": "person-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f802cb3d-a71c-4ea8-bdf0-cec3bfa18157",
+    "data": [
+      {
+        "text": "доктор кто",
+        "meta": "@sys.any",
+        "alias": "person-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5cd348a0-1961-4305-9972-4147834f3f02",
+    "data": [
+      {
+        "text": "путешествовать во времени",
+        "meta": "@sys.any",
+        "alias": "action-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bf51bab6-ed6a-4186-83dc-7cb6d085d059",
+    "data": [
+      {
+        "text": "эмин",
+        "meta": "@sys.any",
+        "alias": "person-1",
+        "userDefined": true
+      },
+      {
+        "text": " давай соображай блин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "62fc8527-5598-4fe0-a110-cbd8758f8ab0",
+    "data": [
+      {
+        "text": "портит жизнь",
+        "meta": "@sys.any",
+        "alias": "action-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "57f225d3-90b1-481d-9429-c43076669897",
+    "data": [
+      {
+        "text": "упорот",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ce06044d-fa87-4a82-b222-52027e4b42d8",
+    "data": [
+      {
+        "text": "эми",
+        "meta": "@sys.any",
+        "alias": "person-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0376ea2e-ef48-42eb-b301-6860eeacaca7",
+    "data": [
+      {
+        "text": "бесить меня",
+        "meta": "@sys.any",
+        "alias": "action-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d3801891-637c-4713-85c0-641bb2578d89",
+    "data": [
+      {
+        "text": "упоротые",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "841a5a7d-baaa-4af8-b72a-3ba18193f56e",
+    "data": [
+      {
+        "text": "бешеные",
+        "meta": "@sys.any",
+        "alias": "adjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dce11979-9247-4821-a13a-9625befa0eea",
+    "data": [
+      {
+        "text": "Разводить кур",
+        "meta": "@sys.any",
+        "alias": "action-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d8c9dea8-73a7-4780-89e7-710312759e3e",
+    "data": [
+      {
+        "text": "Прыгать с шестом",
+        "meta": "@sys.any",
+        "alias": "action-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f3f68c31-b0b4-49cb-9bb4-fc2fb089a0c6",
+    "data": [
+      {
+        "text": "Иван Дурак",
+        "meta": "@sys.any",
+        "alias": "person-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1c5cc594-989e-4f2b-aaac-c11450bc1b41",
+    "data": [
+      {
+        "text": "Винни Пух",
+        "meta": "@sys.any",
+        "alias": "person-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

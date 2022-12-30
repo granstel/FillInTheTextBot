@@ -1,0 +1,92 @@
+[
+  {
+    "id": "e785ea6b-92b3-43dd-af4b-2ea2cc6441ce",
+    "data": [
+      {
+        "text": "15",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "74880081-b572-4cea-be81-e82cfa2bea14",
+    "data": [
+      {
+        "text": "самосвалина",
+        "meta": "@sys.any",
+        "alias": "thing",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "12bccdcc-668c-4d45-922f-75016156e9ca",
+    "data": [
+      {
+        "text": "Вася",
+        "meta": "@sys.any",
+        "alias": "person",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "12e0ae43-d067-489b-b3db-a7be41df9e40",
+    "data": [
+      {
+        "text": "жуткий",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "77749448-9a60-4f91-aa6d-c77e8962540e",
+    "data": [
+      {
+        "text": "кока-кола",
+        "meta": "@sys.any",
+        "alias": "drink",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "26521e7d-2a25-431d-baa4-7224c55a90b7",
+    "data": [
+      {
+        "text": "кенгуру",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

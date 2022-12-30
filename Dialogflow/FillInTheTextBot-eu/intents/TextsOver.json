@@ -1,0 +1,92 @@
+{
+  "id": "107880bb-3c11-4d19-a220-87e2798a81e4",
+  "name": "TextsOver",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "TextsOver-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Давай"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Хотя погоди... Мы прошли все истории. Если хочешь быстрее узнать об их появлении, или предложить свой текст, подпишись на паблик ВК «Занимательные истории голосовых помощников». Потом возвращайся ко мне сюда, буду ждать. Ну что, сочиним ещё?",
+            "Хотя... Мы прошли всё, что у меня было. Чтобы раньше всех узнать о появлении новых текстов или предложить свой, подпишись на паблик ВК «Занимательные истории голосовых помощников». Возвращайся потом, буду ждать тебя здесь. Сочиним ещё что-нибудь?",
+            "Ээ, погоди... У меня пока закончились истории. Найди в ВК паблик «Занимательные истории голосовых помощников» и подпишись на него, чтобы раньше всех узнать об их появлении, или предложить свой текст. Потом возвращайся ко мне. Или сразу продолжим?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "Text": "Подписаться на новости",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить игру",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Подписаться на новости",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "texts-over"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

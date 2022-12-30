@@ -1,0 +1,130 @@
+[
+  {
+    "id": "c880d1c2-8c19-46ff-91f5-2b7184aaa178",
+    "data": [
+      {
+        "text": "гороскоп для близнецов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5b226651-64ff-48ca-a9c2-320335cb3880",
+    "data": [
+      {
+        "text": "близнецы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cf18435f-fe73-47cb-956c-608c7cab1554",
+    "data": [
+      {
+        "text": "для ",
+        "userDefined": false
+      },
+      {
+        "text": "близнецов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "eaf8addb-a220-4a09-bbd2-d86b67a5dae4",
+    "data": [
+      {
+        "text": "гороскоп для ",
+        "userDefined": false
+      },
+      {
+        "text": "близнецов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "076c6522-c22c-49f8-8b74-cc760cecb27e",
+    "data": [
+      {
+        "text": "гороскоп про ",
+        "userDefined": false
+      },
+      {
+        "text": "близнецов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c913247d-ec6d-4259-994c-c03c04447854",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "близнецов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "276cff18-4276-4b20-b6cf-db2a08ff040f",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "четырнадцать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c24b590f-a7cd-41d9-a447-3d3dfde0a41a",
+    "data": [
+      {
+        "text": "четырнадцатый",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "560e46b4-3a6b-4af7-b314-c988568b4153",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "пять",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c511cf0e-c95c-4568-b1b9-c04504350f6b",
+    "data": [
+      {
+        "text": "больница",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "690f871a-765a-4c70-a4e4-d20b4d3b6658",
+    "data": [
+      {
+        "text": "про больницу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c5708ddf-aa0b-4fa6-a551-97fede830e84",
+    "data": [
+      {
+        "text": "текст про больницу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1e231afc-146f-420c-82d1-7693836652b2",
+    "data": [
+      {
+        "text": "5",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "69753fba-4aca-4c70-9405-b80c5ab598c3",
+    "data": [
+      {
+        "text": "пятый",
+        "userDefined": false
+      },
+      {
+        "text": " текст",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "id": "3aa6843e-d72f-429e-a3f6-0a0b02444ba5",
+    "data": [
+      {
+        "text": "раки",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0c74b2c0-cf0a-4c09-b5c4-39a03f99d800",
+    "data": [
+      {
+        "text": "для ",
+        "userDefined": false
+      },
+      {
+        "text": "раков",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1bc3a777-a73f-408e-b1c5-05de54d19d1e",
+    "data": [
+      {
+        "text": "гороскоп для ",
+        "userDefined": false
+      },
+      {
+        "text": "раков",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4b92f6db-aa7f-4d54-b67f-e6a55e75b735",
+    "data": [
+      {
+        "text": "гороскоп про ",
+        "userDefined": false
+      },
+      {
+        "text": "раков",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "628385f9-8bbe-43d4-94d5-03f2bda37421",
+    "data": [
+      {
+        "text": "текст про ",
+        "userDefined": false
+      },
+      {
+        "text": "раков",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9ade6332-69ad-4eb1-87a1-15e097451117",
+    "data": [
+      {
+        "text": "номер ",
+        "userDefined": false
+      },
+      {
+        "text": "пятнадцать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e42839d6-44ad-4afc-808e-549dabf1bb80",
+    "data": [
+      {
+        "text": "пятнадцатый",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

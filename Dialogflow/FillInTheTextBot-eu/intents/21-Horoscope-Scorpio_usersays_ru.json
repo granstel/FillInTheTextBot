@@ -1,0 +1,83 @@
+[
+  {
+    "id": "8b52bdb7-595f-4c4d-869c-8d715bd7a399",
+    "data": [
+      {
+        "text": "для скорпиошек",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a2cd02bc-b901-41e3-b1df-06ec93e9140a",
+    "data": [
+      {
+        "text": "гороскоп про ",
+        "userDefined": false
+      },
+      {
+        "text": "скорпионов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bc754de2-c115-4fa2-b27f-adf0ff5a1499",
+    "data": [
+      {
+        "text": "гороскоп для ",
+        "userDefined": false
+      },
+      {
+        "text": "скорпионов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7d41444b-4428-4095-9ee4-04b1855a0d0a",
+    "data": [
+      {
+        "text": "про ",
+        "userDefined": false
+      },
+      {
+        "text": "скорпионов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a4283cb1-4680-4748-b5cd-e77ae66827d7",
+    "data": [
+      {
+        "text": "для ",
+        "userDefined": false
+      },
+      {
+        "text": "скорпионов",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

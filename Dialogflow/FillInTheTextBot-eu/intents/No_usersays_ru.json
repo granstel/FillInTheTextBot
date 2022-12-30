@@ -1,0 +1,119 @@
+[
+  {
+    "id": "828a6205-8814-4bd5-b301-f759fbe04716",
+    "data": [
+      {
+        "text": "потом",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "711e6dd1-d717-4523-b4bd-50699973e753",
+    "data": [
+      {
+        "text": "нет я откажусь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6cc19eab-721f-4ff0-88ae-eccc04112e14",
+    "data": [
+      {
+        "text": "нет спасибо хватит",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f855419d-f1fd-4c5d-a7f8-142de4205d50",
+    "data": [
+      {
+        "text": "мне некогда спасибо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3d266999-eb08-42c0-94de-8eb00eaa6579",
+    "data": [
+      {
+        "text": "отказываюсь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5a6a69ea-2de5-4b64-b3f8-e2567ef93054",
+    "data": [
+      {
+        "text": "не стоит",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9aa2263a-1a9b-47e6-b783-8da2d64644da",
+    "data": [
+      {
+        "text": "ни в коем случае",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2da4e1c0-20fc-4d66-af13-24d6e788edab",
+    "data": [
+      {
+        "text": "не надо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7a6a91ab-cc75-4f7a-8866-a5a755ec5544",
+    "data": [
+      {
+        "text": "нет",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

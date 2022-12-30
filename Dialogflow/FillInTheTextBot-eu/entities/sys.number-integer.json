@@ -1,0 +1,9 @@
+{
+  "id": "f4c1372a-46be-4452-918f-2422e8bb6da7",
+  "name": "sys.number-integer",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

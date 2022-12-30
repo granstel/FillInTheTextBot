@@ -1,0 +1,227 @@
+[
+  {
+    "id": "ce9f0706-b1e7-4ef5-8fb4-cbf2215dbc8d",
+    "data": [
+      {
+        "text": "петр тэтгрен",
+        "meta": "@sys.person",
+        "alias": "person-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0f9d5829-7e0d-45c9-844f-58585b74a51e",
+    "data": [
+      {
+        "text": "волосатый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ecfcfcaa-b8b8-47e2-8a2a-b4cab558ece3",
+    "data": [
+      {
+        "text": "тиль линдеман",
+        "meta": "@sys.person",
+        "alias": "person-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "16f4224f-30d0-471a-ba88-c2bb043e40e6",
+    "data": [
+      {
+        "text": "пьянющий пьянющий",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a066847e-37c7-4dbe-b1f8-23ca8c14dd06",
+    "data": [
+      {
+        "text": "руль",
+        "meta": "@sys.any",
+        "alias": "thing-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "14d5eb9c-15e6-4267-a223-518903b3e6c2",
+    "data": [
+      {
+        "text": "фонарь",
+        "meta": "@sys.any",
+        "alias": "thing-2",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "65175447-68b9-4346-b6b9-98fcb3c2227a",
+    "data": [
+      {
+        "text": "светящийся",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "95c745d3-ea4e-4269-b5a9-eb931390bc2f",
+    "data": [
+      {
+        "text": "обгрызанный",
+        "meta": "@sys.any",
+        "alias": "adjective-4",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3e4b483d-1401-46b4-be5e-012745a827a9",
+    "data": [
+      {
+        "text": "горшок",
+        "meta": "@sys.any",
+        "alias": "thing-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ab52346f-9bd5-4940-b7c0-756e45186b5e",
+    "data": [
+      {
+        "text": "кремлёвский",
+        "meta": "@sys.any",
+        "alias": "adjective-3",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "07e73e2a-6858-4ea4-a17b-598afc1f18a6",
+    "data": [
+      {
+        "text": "капкан",
+        "meta": "@sys.any",
+        "alias": "thing-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e4cdcba9-fe2b-4f57-a492-925822b5231e",
+    "data": [
+      {
+        "text": "пьяный",
+        "meta": "@sys.any",
+        "alias": "adjective-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "33a6bbfb-ba61-4859-b032-d68b1177e7db",
+    "data": [
+      {
+        "text": "Тилль Линдеман",
+        "meta": "@sys.person",
+        "alias": "person-2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4ee6f3b9-3964-4d9c-8dff-bcf4fb34fe84",
+    "data": [
+      {
+        "text": "Белый",
+        "meta": "@sys.any",
+        "alias": "adjective-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9bf63e06-1ef0-43f2-9798-af9465a83ead",
+    "data": [
+      {
+        "text": "Пётр Тетгрен",
+        "meta": "@sys.person",
+        "alias": "person-1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
