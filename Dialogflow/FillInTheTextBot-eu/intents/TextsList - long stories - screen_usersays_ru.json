@@ -1,13 +1,22 @@
 [
   {
+    "id": "bf38509a-16d9-467a-9504-29ffca14dc46",
+    "data": [
+      {
+        "text": "истории из нескольких частей",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "1575618d-ecd2-4950-8407-0160bb3a4c7a",
     "data": [
       {
-        "text": "какие",
-        "userDefined": false
-      },
-      {
-        "text": " длинные истории у тебя есть",
+        "text": "какие длинные истории у тебя есть",
         "userDefined": false
       }
     ],

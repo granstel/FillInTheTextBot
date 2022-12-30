@@ -1,5 +1,18 @@
 [
   {
+    "id": "072a44ef-aa28-400e-8e6a-aad3f400fbfc",
+    "data": [
+      {
+        "text": "длинные истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
     "id": "d8371eb1-c5c2-4efb-9311-c6e0dd2ac6e9",
     "data": [
       {
@@ -16,11 +29,7 @@
     "id": "d09c8967-5190-4a5c-a466-f6778a3213df",
     "data": [
       {
-        "text": "какие",
-        "userDefined": false
-      },
-      {
-        "text": " длинные истории у тебя есть?",
+        "text": "какие длинные истории у тебя есть",
         "userDefined": false
       }
     ],
