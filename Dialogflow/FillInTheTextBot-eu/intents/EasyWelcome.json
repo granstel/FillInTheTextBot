@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "0914293d-6afb-4923-a29b-e9c2a2fd8681",
+          "id": "8cd57a7c-b05f-4702-b9db-435a1cf06119",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -52,9 +52,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "С наступающим Новым годом! Давай сочиним что-нибудь?",
-            "С наступающим! Сочиним что-нибудь?",
-            "С наступающим Новым годом! И вот пришло время занимательных историй! Давай сочиним кое-что?"
+            "С Новым годом! Давай сочиним что-нибудь?",
+            "С Новым годом! Сочиним что-нибудь?",
+            "С Новым годом! И вот пришло время занимательных историй! Давай сочиним кое-что?"
           ],
           "condition": ""
         },
@@ -62,21 +62,21 @@
           "type": "4",
           "title": "",
           "payload": {
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Узнать, что новенького",
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/fillinthetextbot"
+                }
+              ]
+            },
             "Yandex": {
               "Buttons": [
                 {
                   "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false,
-                  "Text": "Узнать, что новенького"
-                }
-              ]
-            },
-            "Marusia": {
-              "Buttons": [
-                {
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Узнать, что новенького"
+                  "Text": "Узнать, что новенького",
+                  "IsQuickReply": false
                 }
               ]
             }
