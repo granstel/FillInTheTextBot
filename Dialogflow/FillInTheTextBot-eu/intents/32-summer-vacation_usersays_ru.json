@@ -1,0 +1,45 @@
+[
+  {
+    "id": "3c5ad5df-c395-4c0d-8fc7-08e6877897bf",
+    "data": [
+      {
+        "text": "каникулы у ",
+        "userDefined": false
+      },
+      {
+        "text": "бабушки",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "68e854d1-29e1-4a96-a5d3-ed0690cf5643",
+    "data": [
+      {
+        "text": "летние каникулы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bf90c97e-968d-4e85-958d-3506aa1930ad",
+    "data": [
+      {
+        "text": "про летние каникулы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

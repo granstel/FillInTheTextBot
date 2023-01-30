@@ -1,0 +1,254 @@
+{
+  "id": "95d4eb00-734f-46d7-8576-54e0a40dd5c3",
+  "name": "32-summer-vacation-text1",
+  "auto": true,
+  "contexts": [
+    "text-32-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-32-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-32",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "46d9c9c9-39a0-4a6b-979b-1ad6b94f7359",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про летние каникулы!",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b9bcc4ea-ea21-4e59-ba30-6b40ddd2a147",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-32-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ebc73237-f62a-4e19-b98b-c2bbbc51f89e",
+          "name": "number1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$number1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала, назови число больше тридцати"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови, пожалуйста, число больше тридцати"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "45550b00-303c-4077-888b-a750e4300556",
+          "name": "sweet",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$sweet",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Что ты любишь есть летом?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что едят летом в жаркую погоду?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что ты ешь летом в жаркую погоду?"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови какую-нибудь летнюю сладость"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0ab141c6-db54-4b3d-8b72-2c36491e5ade",
+          "name": "direction",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$direction",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Выбери — «налево» или «направо»"
+            },
+            {
+              "lang": "ru",
+              "value": "«Налево» или «направо»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Выбери — «влево» или «вправо»"
+            },
+            {
+              "lang": "ru",
+              "value": "«Влево» или «вправо»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a5514ffa-ccbb-4c2c-8c83-71565f3c6b28",
+          "name": "work",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$work",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Чем ты не любишь заниматься?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что тебе не нравится делать?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что ты не любишь делать?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "87f00647-987e-4ecf-8d61-fdfe8d934839",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь дикое животное"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови какое-нибудь дикое животное"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Только представь, ты отдыхаешь у бабушки на летних каникулах! На улице очень жарко, градусов $number1, и она попросила тебя купить $sweet. Ты идёшь по пустынной улице, а солнце такое яркое, что сложно что-либо разглядеть! Ты оглядываешься и видишь, что вдалеке за тобой идёт странный человек. Ты сворачиваешь $direction — и этот человек тоже. Переходишь улицу — и человек тоже. Совершенно ясно — он преследует тебя!😨 Наверняка, чтобы похитить и заставить $work. Тогда ты изо всех сил бежишь на четвереньках и прыгаешь как $animal, чтобы оторваться от погони. Таинственный человек стал делать то же самое, но всё-таки он потерял тебя из виду...\nХочешь узнать, что было дальше?",
+            "Только представь, ты отдыхаешь у бабушки на летних каникулах! На улице очень жарко, градусов $number1, и она попросила тебя купить $sweet. Вечереет, ты идёшь по пустынной улице без единого фонаря, поэтому сложно что-либо разглядеть. Ты замечаешь, что вдалеке за тобой идёт странный человек. Ты сворачиваешь $direction — и этот человек тоже. Переходишь улицу — и человек тоже. Совершенно ясно — он преследует тебя!😨 Наверняка, чтобы похитить и заставить $work. Тогда ты изо всех сил бежишь на четвереньках и прыгаешь как $animal, чтобы оторваться от погони. Таинственный человек стал делать то же самое, но всё-таки он потерял тебя из виду...\nХочешь узнать, что было дальше?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Replacements": {
+                "😨": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/4297cf4e-6a95-4fb4-b005-20e2a16f085c.opus\"\u003e"
+              }
+            },
+            "Marusia": {
+              "Replacements": {
+                "😨": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239068\"\u003e"
+              }
+            },
+            "Sber": {
+              "Replacements": {
+                "😨": "\u003caudio text\u003d\"sm:96887/96888/audio/kZpA5lg7BBnXGBsC.wav\"/\u003e"
+              }
+            },
+            "Default": {
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Да!"
+                }
+              ],
+              "Replacements": {
+                "😨": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-32-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

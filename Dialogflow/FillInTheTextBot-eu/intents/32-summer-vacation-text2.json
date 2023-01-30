@@ -1,0 +1,144 @@
+{
+  "id": "750c2d69-5af0-4b24-999c-65ef786fc10a",
+  "name": "32-summer-vacation-text2",
+  "auto": true,
+  "contexts": [
+    "text-32-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "text-32-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-32",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "94d97a45-806d-4a43-8cd8-76308492e5dd",
+          "name": "number2",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Тогда скажи какое-нибудь число"
+            },
+            {
+              "lang": "ru",
+              "value": "Тогда назови число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "18f2e276-5bc1-4157-b7fa-3b4f459b244c",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напомни, пожалуйста, своё имя"
+            },
+            {
+              "lang": "ru",
+              "value": "И скажи своё имя"
+            },
+            {
+              "lang": "ru",
+              "value": "И ещё назови своё имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Кажется, похищение тебе больше не угрожает. Успокоившись, ты доходишь до магазина. И тут из-за угла выходит тот самый человек! 😱 Оказалось, это твоя бабушка! 🤯\n«За тобой не поспеешь, $name!» — сказала она. «В магазин я тебя отправила, а денег не дала, пришлось догонять!», — и вручила тебе $number2 р.\nЧуть позже дома вы с бабушкой ели #text-32.sweet и смеялись над этой историей.\nПо-моему, очень забавно получилось, давай ещё что-нибудь сочиним?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Marusia": {
+              "Replacements": {
+                "😱": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239069\"\u003e",
+                "🤯": ""
+              }
+            },
+            "Yandex": {
+              "Replacements": {
+                "😱": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/ce836709-ce10-4d38-aa99-65b6d4881eb8.opus\"\u003e",
+                "🤯": ""
+              }
+            },
+            "Sber": {
+              "Replacements": {
+                "🤯": "",
+                "😱": "\u003caudio text\u003d\"sm:96887/96888/audio/VFMcMlc9oHBxYm41.wav\"/\u003e"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "🤯": "",
+                "😱": ""
+              },
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Да!"
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-32-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,16 +1,21 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "4d8a5607-6a04-49f1-a12b-5c8e2569c8aa",
+  "name": "32-summer-vacation",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-32",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
-          "id": "c525daaf-40a6-41cd-9124-0753b0ff3db2",
+          "id": "8131cc99-4c1f-4cd7-a261-c56729b3a797",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +36,11 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история —"
+            "Здорово! Давай сочиним",
+            "Отлично! Теперь давай сочиним",
+            "Класс! Теперь сочиним",
+            "Здорово! Сочиняем",
+            "Отлично! Теперь"
           ],
           "condition": ""
         }
