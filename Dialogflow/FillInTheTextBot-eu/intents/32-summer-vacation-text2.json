@@ -1,6 +1,7 @@
 {
   "id": "750c2d69-5af0-4b24-999c-65ef786fc10a",
   "parentId": "4d8a5607-6a04-49f1-a12b-5c8e2569c8aa",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "name": "32-summer-vacation-text2",
   "auto": true,
   "contexts": [
@@ -9,7 +10,7 @@
   "responses": [
     {
       "resetContexts": false,
-      "action": "",
+      "action": "saveToRepeat",
       "affectedContexts": [
         {
           "name": "text-32-2",
@@ -26,7 +27,7 @@
       ],
       "parameters": [
         {
-          "id": "153d6104-fee6-4af2-8e84-33a6481322c3",
+          "id": "228c77e0-9c6f-411a-a97c-237c3c459ffc",
           "name": "number2",
           "required": true,
           "dataType": "@sys.number",
@@ -49,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "0569ffe6-e00d-48e4-b327-a7669bc4fcea",
+          "id": "68491bdf-3b71-4c98-9d1e-bb114ed9c81a",
           "name": "name",
           "required": true,
           "dataType": "@sys.any",
@@ -91,16 +92,15 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Yandex": {
+            "Default": {
               "Replacements": {
-                "😱": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/ce836709-ce10-4d38-aa99-65b6d4881eb8.opus\"\u003e",
-                "🤯": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/8bea37e8-5c48-48ff-a635-c1667e15dd28.opus\"\u003e"
+                "😱": "",
+                "🤯": ""
               },
               "Buttons": [
                 {
-                  "Text": "Оценить историю",
-                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-                  "IsQuickReply": false
+                  "IsQuickReply": true,
+                  "Text": "Да!"
                 }
               ]
             },
@@ -111,21 +111,22 @@
               },
               "Buttons": [
                 {
-                  "IsQuickReply": true,
-                  "Text": "Оценить историю"
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
                 }
               ]
             },
-            "Default": {
+            "Yandex": {
               "Buttons": [
                 {
-                  "IsQuickReply": true,
-                  "Text": "Да!"
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
                 }
               ],
               "Replacements": {
-                "🤯": "",
-                "😱": ""
+                "😱": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/ce836709-ce10-4d38-aa99-65b6d4881eb8.opus\"\u003e",
+                "🤯": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/8bea37e8-5c48-48ff-a635-c1667e15dd28.opus\"\u003e"
               }
             },
             "Marusia": {
@@ -135,9 +136,9 @@
               },
               "Buttons": [
                 {
-                  "Text": "Поблагодарить разработчиков",
                   "Url": "https://vk.com/im?sel\u003d-201360423",
-                  "IsQuickReply": false
+                  "IsQuickReply": false,
+                  "Text": "Поблагодарить разработчиков"
                 }
               ]
             }
