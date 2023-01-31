@@ -26,7 +26,7 @@
       ],
       "parameters": [
         {
-          "id": "94d97a45-806d-4a43-8cd8-76308492e5dd",
+          "id": "f3e9a90d-aeaa-460a-8ddd-c21a46c8b813",
           "name": "number2",
           "required": true,
           "dataType": "@sys.number",
@@ -49,7 +49,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "18f2e276-5bc1-4157-b7fa-3b4f459b244c",
+          "id": "4ef83065-036e-41d8-ad45-7edb5d1ed21f",
           "name": "name",
           "required": true,
           "dataType": "@sys.any",
@@ -91,35 +91,35 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Marusia": {
-              "Replacements": {
-                "😱": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239069\"\u003e",
-                "🤯": ""
-              }
-            },
             "Yandex": {
               "Replacements": {
-                "😱": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/ce836709-ce10-4d38-aa99-65b6d4881eb8.opus\"\u003e",
-                "🤯": ""
-              }
-            },
-            "Sber": {
-              "Replacements": {
-                "🤯": "",
-                "😱": "\u003caudio text\u003d\"sm:96887/96888/audio/VFMcMlc9oHBxYm41.wav\"/\u003e"
+                "🤯": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/8bea37e8-5c48-48ff-a635-c1667e15dd28.opus\"\u003e",
+                "😱": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/ce836709-ce10-4d38-aa99-65b6d4881eb8.opus\"\u003e"
               }
             },
             "Default": {
-              "Replacements": {
-                "🤯": "",
-                "😱": ""
-              },
               "Buttons": [
                 {
                   "IsQuickReply": true,
                   "Text": "Да!"
                 }
-              ]
+              ],
+              "Replacements": {
+                "🤯": "",
+                "😱": ""
+              }
+            },
+            "Sber": {
+              "Replacements": {
+                "🤯": "\u003caudio text\u003d\"sm:96887/96888/audio/2mbDu72YoFZVWv6R.wav\"/\u003e",
+                "😱": "\u003caudio text\u003d\"sm:96887/96888/audio/VFMcMlc9oHBxYm41.wav\"/\u003e"
+              }
+            },
+            "Marusia": {
+              "Replacements": {
+                "😱": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239069\"\u003e",
+                "🤯": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239070\"\u003e"
+              }
             }
           },
           "textToSpeech": "",
