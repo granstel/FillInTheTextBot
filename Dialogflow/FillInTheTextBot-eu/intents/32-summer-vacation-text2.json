@@ -26,7 +26,7 @@
       ],
       "parameters": [
         {
-          "id": "f3e9a90d-aeaa-460a-8ddd-c21a46c8b813",
+          "id": "153d6104-fee6-4af2-8e84-33a6481322c3",
           "name": "number2",
           "required": true,
           "dataType": "@sys.number",
@@ -49,7 +49,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "4ef83065-036e-41d8-ad45-7edb5d1ed21f",
+          "id": "0569ffe6-e00d-48e4-b327-a7669bc4fcea",
           "name": "name",
           "required": true,
           "dataType": "@sys.any",
@@ -93,9 +93,28 @@
           "payload": {
             "Yandex": {
               "Replacements": {
-                "🤯": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/8bea37e8-5c48-48ff-a635-c1667e15dd28.opus\"\u003e",
-                "😱": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/ce836709-ce10-4d38-aa99-65b6d4881eb8.opus\"\u003e"
-              }
+                "😱": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/ce836709-ce10-4d38-aa99-65b6d4881eb8.opus\"\u003e",
+                "🤯": "\u003cspeaker audio\u003d\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/8bea37e8-5c48-48ff-a635-c1667e15dd28.opus\"\u003e"
+              },
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Sber": {
+              "Replacements": {
+                "😱": "\u003caudio text\u003d\"sm:96887/96888/audio/VFMcMlc9oHBxYm41.wav\"/\u003e",
+                "🤯": "\u003caudio text\u003d\"sm:96887/96888/audio/2mbDu72YoFZVWv6R.wav\"/\u003e"
+              },
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить историю"
+                }
+              ]
             },
             "Default": {
               "Buttons": [
@@ -109,17 +128,18 @@
                 "😱": ""
               }
             },
-            "Sber": {
-              "Replacements": {
-                "🤯": "\u003caudio text\u003d\"sm:96887/96888/audio/2mbDu72YoFZVWv6R.wav\"/\u003e",
-                "😱": "\u003caudio text\u003d\"sm:96887/96888/audio/VFMcMlc9oHBxYm41.wav\"/\u003e"
-              }
-            },
             "Marusia": {
               "Replacements": {
                 "😱": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239069\"\u003e",
                 "🤯": "\u003cspeaker audio_vk_id\u003d\"2000512028_456239070\"\u003e"
-              }
+              },
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
+                  "IsQuickReply": false
+                }
+              ]
             }
           },
           "textToSpeech": "",
