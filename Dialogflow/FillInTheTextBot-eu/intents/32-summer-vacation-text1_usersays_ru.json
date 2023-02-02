@@ -1,0 +1,317 @@
+[
+  {
+    "id": "ce395301-e62e-443d-a4c3-a18b92b2b8ce",
+    "data": [
+      {
+        "text": "бегемот",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "61203a82-4f04-4a73-a964-45a9fd28b1fb",
+    "data": [
+      {
+        "text": "пума",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "35030ee6-c145-488d-a176-0123da5ea3bb",
+    "data": [
+      {
+        "text": "ягуар",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3c19b0f4-9a72-47db-ad18-67c3b7b19250",
+    "data": [
+      {
+        "text": "дикая кошка",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c244afd5-e1d9-4404-80df-6e21b6a8ce61",
+    "data": [
+      {
+        "text": "горный козёл",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e0bb64e7-bbe3-4fe6-9963-6feef61ef01b",
+    "data": [
+      {
+        "text": "козёл",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6dd62676-639b-4cb4-8892-45e51d9839be",
+    "data": [
+      {
+        "text": "убираться",
+        "meta": "@sys.any",
+        "alias": "work",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "43c6b818-d557-47fc-ad69-231bf2014e60",
+    "data": [
+      {
+        "text": "делать уроки",
+        "meta": "@sys.any",
+        "alias": "work",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c7752164-8977-4359-a1e5-d9b15f41dfaa",
+    "data": [
+      {
+        "text": "чистить картошку",
+        "meta": "@sys.any",
+        "alias": "work",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "44614fa9-d60f-4f6c-9527-e0cc5dc3cce0",
+    "data": [
+      {
+        "text": "вправо",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "31a6494d-571a-4453-8053-5c61ce2cfc76",
+    "data": [
+      {
+        "text": "направо",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "81402659-48f3-424f-a62c-9bfc3ce936d6",
+    "data": [
+      {
+        "text": "влево",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dd10a594-6e89-4770-b1d5-30d417582c6f",
+    "data": [
+      {
+        "text": "налево",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "97b326fa-5f7e-43b5-a9cc-52ce0988dd7a",
+    "data": [
+      {
+        "text": "виноград",
+        "meta": "@sys.any",
+        "alias": "sweet",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "09de9619-55e9-45f2-9949-01aa8369e775",
+    "data": [
+      {
+        "text": "дыню",
+        "meta": "@sys.any",
+        "alias": "sweet",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "90d4b559-a400-4ea6-b209-8fa920f0ec8a",
+    "data": [
+      {
+        "text": "арбуз",
+        "meta": "@sys.any",
+        "alias": "sweet",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "94dfbd57-da76-4bad-b584-4115337a6e9b",
+    "data": [
+      {
+        "text": "мороженое",
+        "meta": "@sys.any",
+        "alias": "sweet",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c120dfc2-8d97-4b48-bb91-2ba081c9bd74",
+    "data": [
+      {
+        "text": "40",
+        "meta": "@sys.any",
+        "alias": "number1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "65db7cec-3576-43b9-a87c-6093680eedad",
+    "data": [
+      {
+        "text": "35",
+        "meta": "@sys.any",
+        "alias": "number1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "20775fff-1b0d-4e89-a620-535d38673108",
+    "data": [
+      {
+        "text": "32",
+        "meta": "@sys.any",
+        "alias": "number1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4ca8164f-cc27-4a57-a190-2fcc2c77d4b2",
+    "data": [
+      {
+        "text": "31",
+        "meta": "@sys.any",
+        "alias": "number1",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "a4f10a16-b34f-468b-af92-cc97c8b36cb6",
+    "data": [
+      {
+        "text": "Дима",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d4909e06-238c-4a87-9a91-b89d46a89fb4",
+    "data": [
+      {
+        "text": "Тимур",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ae69c71d-d265-4eea-8801-6b10f4f07fd1",
+    "data": [
+      {
+        "text": "50",
+        "meta": "@sys.number",
+        "alias": "number2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "12c4e3d5-85e1-4262-b76c-73fcbf520ce7",
+    "data": [
+      {
+        "text": "1",
+        "meta": "@sys.number",
+        "alias": "number2",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

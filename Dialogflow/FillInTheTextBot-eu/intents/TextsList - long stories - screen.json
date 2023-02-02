@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "e187849c-7c1f-40b3-9221-b5bd8e32cf95",
+          "id": "9887949a-b7f2-4fbc-a0f6-59ce8c4994a4",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -55,6 +55,9 @@
           "buttons": [
             {
               "text": "Старинные часы"
+            },
+            {
+              "text": "Летние каникулы!"
             }
           ],
           "textToSpeech": "",

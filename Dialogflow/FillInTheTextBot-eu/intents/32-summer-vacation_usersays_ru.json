@@ -1,0 +1,87 @@
+[
+  {
+    "id": "83672da2-9da2-4065-993d-e528d31d71cb",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "userDefined": false
+      },
+      {
+        "text": " про каникулы у ",
+        "userDefined": false
+      },
+      {
+        "text": "бабушки",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3a3b52cd-5e0b-4863-9181-ca5cb46254f8",
+    "data": [
+      {
+        "text": "давай ",
+        "userDefined": false
+      },
+      {
+        "text": "сочиним",
+        "userDefined": false
+      },
+      {
+        "text": " про летние каникулы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3c5ad5df-c395-4c0d-8fc7-08e6877897bf",
+    "data": [
+      {
+        "text": "каникулы у бабушки",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "68e854d1-29e1-4a96-a5d3-ed0690cf5643",
+    "data": [
+      {
+        "text": "летние каникулы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bf90c97e-968d-4e85-958d-3506aa1930ad",
+    "data": [
+      {
+        "text": "про летние каникулы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
