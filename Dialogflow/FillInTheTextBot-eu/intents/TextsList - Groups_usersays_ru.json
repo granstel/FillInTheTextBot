@@ -1,0 +1,88 @@
+[
+  {
+    "id": "f5ac57d0-dad0-465d-b3f6-b19b94f9ca88",
+    "data": [
+      {
+        "text": "виды историй",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f518f8d1-e417-4b1e-8e45-75dfaa871160",
+    "data": [
+      {
+        "text": "что у тебя есть",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e83401fe-d385-4f0b-9a85-d0ecb9cf5b88",
+    "data": [
+      {
+        "text": "категории историй",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ab4f9e1a-b828-4024-ae3e-8356a2f7b419",
+    "data": [
+      {
+        "text": "группы историй",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "981b316d-2a2c-4d42-a3e5-b752d6eb5729",
+    "data": [
+      {
+        "text": "какие",
+        "userDefined": false
+      },
+      {
+        "text": " бывают истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bcadcf22-df88-483c-b6ad-b22d5fa7a3ae",
+    "data": [
+      {
+        "text": "Какие",
+        "userDefined": false
+      },
+      {
+        "text": " есть истории",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

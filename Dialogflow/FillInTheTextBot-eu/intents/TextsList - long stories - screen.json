@@ -14,7 +14,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "9887949a-b7f2-4fbc-a0f6-59ce8c4994a4",
+          "id": "3bc6dd5c-1c70-4566-9054-d624975b37f2",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -70,7 +70,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Вот они. Что выберешь?",
+            "Вот они. Какую будем сочинять?",
             "Вот они. Про что будем сочинять?"
           ],
           "condition": ""

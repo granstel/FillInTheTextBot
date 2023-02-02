@@ -1,8 +1,6 @@
 {
-  "id": "0d0e7df2-c25a-4baa-9208-42ad2b8f1e6f",
-  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
-  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
-  "name": "TextsList - long stories",
+  "id": "d675e872-e890-42cc-80e0-245d206e9d98",
+  "name": "TextsList - Groups",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -18,7 +16,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Вот мои длинные истории:\n— Прогульщики.\n— Про короля пиратов.\n— Вот это ёлка!\n— Старинные часы.\n— Летние каникулы!\nКакую будем сочинять"
+            "У меня есть:\n— Длинные истории.\n— Гороскопы.\n— Страшные истории.\n— Истории от подписчиков.\n— Остальные.\nЧто выберешь?"
           ],
           "condition": ""
         }
