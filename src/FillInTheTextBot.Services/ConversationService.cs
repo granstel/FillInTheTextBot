@@ -13,7 +13,7 @@ namespace FillInTheTextBot.Services
 {
     public class ConversationService : IConversationService
     {
-        private static readonly Random Random = new Random();
+        private static readonly Random Random = new();
 
         private readonly Gauge _statistics;
 

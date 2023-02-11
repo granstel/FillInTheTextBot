@@ -55,7 +55,7 @@ namespace FillInTheTextBot.Services
                 {InternalModels.Source.Sber, DefaultWelcomeEventResolve},
                 {InternalModels.Source.Marusia, DefaultWelcomeEventResolve}
             };
-            
+
             _statistics = Metrics
                 .CreateGauge("statistics", "Statistics", "statistic_name", "parameter");
         }
