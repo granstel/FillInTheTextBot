@@ -311,7 +311,7 @@ namespace FillInTheTextBot.Services
             }
 
             const string eventName = $"event:CancelsSlotFilling";
-            _statistics.WithLabels("CancelsSlotFilling_event").Inc();
+            _statistics.WithLabels("CancelsSlotFilling_event", string.Empty).Inc();
 
             var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId, scopeKey);
 
