@@ -1,0 +1,35 @@
+{
+  "id": "d675e872-e890-42cc-80e0-245d206e9d98",
+  "name": "TextsList - Groups",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "У меня есть:\n— Длинные истории.\n— Гороскопы.\n— Страшные истории.\n— Истории от подписчиков.\n— Остальные.\nЧто выберешь?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
