@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
+using Prometheus;
 
 namespace FillInTheTextBot.Messengers
 {
@@ -12,12 +13,16 @@ namespace FillInTheTextBot.Messengers
         private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
         private const string ErrorLink = "https://vk.com/fillinthetextbot";
 
+        private readonly Gauge _statistics;
+
         private readonly IConversationService _conversationService;
 
         protected readonly ILogger Log;
 
         protected MessengerService(ILogger log, IConversationService conversationService)
         {
+            _statistics = Metrics
+                .CreateGauge("statistics", "Statistics", "statistic_name", "parameter");
             Log = log;
             _conversationService = conversationService;
         }
@@ -40,6 +45,11 @@ namespace FillInTheTextBot.Messengers
                 using (Tracing.Trace(operationName: "Before"))
                 {
                     request = Before(input);
+                    if (request.NewSession is true)
+                    {
+                        _statistics.WithLabels($"{nameof(request.IsOldUser)}", request.IsOldUser.ToString())
+                            .Inc();
+                    }
                 }
 
                 using (Tracing.Trace(s => s
