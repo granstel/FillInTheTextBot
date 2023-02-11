@@ -83,6 +83,8 @@ namespace FillInTheTextBot.Messengers
                         }
                     }
                 };
+
+                _statistics.WithLabels("ErrorAnswer", string.Empty).Inc();
             }
 
             using (Tracing.Trace(operationName: "AfterAsync"))
