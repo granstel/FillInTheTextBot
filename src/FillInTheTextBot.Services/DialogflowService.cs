@@ -38,8 +38,6 @@ namespace FillInTheTextBot.Services
 
         private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>> _eventResolvers;
 
-        private readonly Gauge _statistics;
-
         public DialogflowService(
             ILogger<DialogflowService> log,
             ScopesSelector<SessionsClient> sessionsClientSelector,
@@ -55,9 +53,6 @@ namespace FillInTheTextBot.Services
                 {InternalModels.Source.Sber, DefaultWelcomeEventResolve},
                 {InternalModels.Source.Marusia, DefaultWelcomeEventResolve}
             };
-
-            _statistics = Metrics
-                .CreateGauge("statistics", "Statistics", "statistic_name", "parameter");
         }
 
         public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string scopeKey)
@@ -97,7 +92,7 @@ namespace FillInTheTextBot.Services
         {
             using (Tracing.Trace(s => s.WithTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
             {
-                _statistics.WithLabels("dialogflow_DetectIntent_scope", context.ScopeId).Inc();
+                MetricsCollector.Increment("dialogflow_DetectIntent_scope", context.ScopeId);
 
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.ProjectId), out string projectId);
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.LanguageCode), out string languageCode);
@@ -137,7 +132,7 @@ namespace FillInTheTextBot.Services
 
                 var context = GetContext(projectId, region, session, contextName, lifeSpan, parameters);
 
-                _statistics.WithLabels("dialogflow_CreateContext_scope", scopeContext.ScopeId).Inc();
+                MetricsCollector.Increment("dialogflow_CreateContext_scope", scopeContext.ScopeId);
 
                 return client.CreateContextAsync(session, context);
             }
