@@ -13,16 +13,12 @@ namespace FillInTheTextBot.Messengers
         private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
         private const string ErrorLink = "https://vk.com/fillinthetextbot";
 
-        private readonly Gauge _statistics;
-
         private readonly IConversationService _conversationService;
 
         protected readonly ILogger Log;
 
         protected MessengerService(ILogger log, IConversationService conversationService)
         {
-            _statistics = Metrics
-                .CreateGauge("statistics", "Statistics", "statistic_name", "parameter");
             Log = log;
             _conversationService = conversationService;
         }
@@ -47,8 +43,7 @@ namespace FillInTheTextBot.Messengers
                     request = Before(input);
                     if (request.NewSession is true)
                     {
-                        _statistics.WithLabels($"{nameof(request.IsOldUser)}", request.IsOldUser.ToString())
-                            .Inc();
+                        MetricsCollector.Increment($"{nameof(request.IsOldUser)}", request.IsOldUser.ToString());
                     }
                 }
 
@@ -84,7 +79,7 @@ namespace FillInTheTextBot.Messengers
                     }
                 };
 
-                _statistics.WithLabels("ErrorAnswer", string.Empty).Inc();
+                MetricsCollector.Increment("ErrorAnswer", string.Empty);
             }
 
             using (Tracing.Trace(operationName: "AfterAsync"))
