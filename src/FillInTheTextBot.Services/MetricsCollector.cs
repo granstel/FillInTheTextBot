@@ -4,16 +4,16 @@ namespace FillInTheTextBot.Services;
 
 public static class MetricsCollector
 {
-    private static readonly Gauge _statistics;
+    private static readonly Gauge Metrics;
 
     static MetricsCollector()
     {
-        _statistics = Metrics
-            .CreateGauge("statistics", "Statistics", "statistic_name", "parameter");
+        Metrics = Prometheus.Metrics
+            .CreateGauge("metrics", "Metrics", "metric_name", "parameter");
     }
 
     public static void Increment(string key, string value)
     {
-        _statistics.WithLabels(key, value).Inc();
+        Metrics.WithLabels(key, value).Inc();
     }
 }
