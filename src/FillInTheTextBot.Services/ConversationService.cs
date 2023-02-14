@@ -130,7 +130,7 @@ namespace FillInTheTextBot.Services
                 }
 
                 var eventName = $"event:{textKey}";
-                MetricsCollector.Increment("textKey_event", textKey);
+                MetricsCollector.Increment("event", textKey);
 
                 var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey);
 
@@ -305,8 +305,9 @@ namespace FillInTheTextBot.Services
                 return response;
             }
 
-            const string eventName = $"event:CancelsSlotFilling";
-            MetricsCollector.Increment("CancelsSlotFilling_event", string.Empty);
+            const string cancelsSlotFilling = "CancelsSlotFilling";
+            const string eventName = $"event:{cancelsSlotFilling}";
+            MetricsCollector.Increment("event", cancelsSlotFilling);
 
             var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId, scopeKey);
 
