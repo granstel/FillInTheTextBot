@@ -15,8 +15,6 @@ namespace FillInTheTextBot.Services
     {
         private static readonly Random Random = new();
 
-        private readonly Gauge _statistics;
-
         private readonly ConversationConfiguration _configuration;
         private readonly IDialogflowService _dialogflowService;
         private readonly IRedisCacheService _cache;
@@ -24,9 +22,6 @@ namespace FillInTheTextBot.Services
         public ConversationService(ConversationConfiguration configuration, IDialogflowService dialogflowService,
             IRedisCacheService cache)
         {
-            _statistics = Metrics
-                .CreateGauge("statistics", "Statistics", "statistic_name", "parameter");
-
             _dialogflowService = dialogflowService;
             _cache = cache;
             _configuration = configuration;
@@ -135,7 +130,7 @@ namespace FillInTheTextBot.Services
                 }
 
                 var eventName = $"event:{textKey}";
-                _statistics.WithLabels("textKey_event", textKey).Inc();
+                MetricsCollector.Increment("textKey_event", textKey);
 
                 var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey);
 
@@ -311,7 +306,7 @@ namespace FillInTheTextBot.Services
             }
 
             const string eventName = $"event:CancelsSlotFilling";
-            _statistics.WithLabels("CancelsSlotFilling_event", string.Empty).Inc();
+            MetricsCollector.Increment("CancelsSlotFilling_event", string.Empty);
 
             var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId, scopeKey);
 
