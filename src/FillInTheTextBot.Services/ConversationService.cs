@@ -7,7 +7,6 @@ using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using FillInTheTextBot.Services.Mapping;
 using GranSteL.Helpers.Redis;
-using Prometheus;
 
 namespace FillInTheTextBot.Services
 {

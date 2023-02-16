@@ -9,7 +9,6 @@ using GranSteL.Tools.ScopeSelector;
 using InternalModels = FillInTheTextBot.Models;
 using Microsoft.Extensions.Logging;
 using FillInTheTextBot.Services.Mapping;
-using Prometheus;
 
 namespace FillInTheTextBot.Services
 {

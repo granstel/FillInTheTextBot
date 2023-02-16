@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
-using Prometheus;
 
 namespace FillInTheTextBot.Messengers
 {
