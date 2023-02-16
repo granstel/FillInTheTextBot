@@ -41,10 +41,6 @@ namespace FillInTheTextBot.Messengers
                 using (Tracing.Trace(operationName: "Before"))
                 {
                     request = Before(input);
-                    if (request.NewSession is true)
-                    {
-                        MetricsCollector.Increment($"{nameof(request.IsOldUser)}", request.IsOldUser.ToString());
-                    }
                 }
 
                 using (Tracing.Trace(s => s
