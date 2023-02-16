@@ -12,7 +12,7 @@ namespace FillInTheTextBot.Services
 {
     public class ConversationService : IConversationService
     {
-        private static readonly Random Random = new Random();
+        private static readonly Random Random = new();
 
         private readonly ConversationConfiguration _configuration;
         private readonly IDialogflowService _dialogflowService;
@@ -129,7 +129,7 @@ namespace FillInTheTextBot.Services
                 }
 
                 var eventName = $"event:{textKey}";
-
+                MetricsCollector.Increment("event", textKey);
 
                 var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey);
 
@@ -303,8 +303,10 @@ namespace FillInTheTextBot.Services
             {
                 return response;
             }
-            
-            const string eventName = $"event:CancelsSlotFilling";
+
+            const string cancelsSlotFilling = "CancelsSlotFilling";
+            const string eventName = $"event:{cancelsSlotFilling}";
+            MetricsCollector.Increment("event", cancelsSlotFilling);
 
             var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId, scopeKey);
 
