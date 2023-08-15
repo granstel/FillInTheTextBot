@@ -17,7 +17,7 @@
       ],
       "parameters": [
         {
-          "id": "83a2b7a4-e831-4dce-a155-a9c0cdd5025c",
+          "id": "5a7abb76-886d-40ef-af3b-0c729d94a032",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -39,6 +39,7 @@
           "replies": [
             "Конечно!",
             "Список историй",
+            "Длинные истории",
             "Выход"
           ],
           "textToSpeech": "",
@@ -52,8 +53,8 @@
           "lang": "ru",
           "speech": [
             "Настало время занимательных историй! Давай сочиним что-нибудь?",
-            "Пришла пора умопомрачительных повествований! Сочиним что-нибудь?",
-            "И вот пришло время занимательных историй! Давай сочиним кое-что?"
+            "И вот пришло время занимательных историй! Сочиним что-нибудь?",
+            "Пришла пора умопомрачительных повествований! Давай сочиним кое-что?"
           ],
           "condition": ""
         },
@@ -61,21 +62,21 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Marusia": {
-              "Buttons": [
-                {
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Узнать, что новенького"
-                }
-              ]
-            },
             "Yandex": {
               "Buttons": [
                 {
+                  "Url": "https://vk.com/fillinthetextbot",
                   "Text": "Узнать, что новенького",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/fillinthetextbot"
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Узнать, что новенького",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
                 }
               ]
             }

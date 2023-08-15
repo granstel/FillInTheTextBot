@@ -19,7 +19,7 @@
       ],
       "parameters": [
         {
-          "id": "15e2a722-aa0c-4202-be19-71ebdd07d079",
+          "id": "21432dc5-23e5-4c45-bc02-5af2339a4905",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -158,6 +158,9 @@
             },
             {
               "text": "Старинные часы"
+            },
+            {
+              "text": "Летние каникулы"
             }
           ],
           "textToSpeech": "",
@@ -258,12 +261,12 @@
             "Default": {
               "Buttons": [
                 {
-                  "IsQuickReply": false,
-                  "Text": "Самый новый"
+                  "Text": "Самый новый",
+                  "IsQuickReply": false
                 },
                 {
-                  "IsQuickReply": false,
-                  "Text": "Любой"
+                  "Text": "Любой",
+                  "IsQuickReply": false
                 }
               ]
             }

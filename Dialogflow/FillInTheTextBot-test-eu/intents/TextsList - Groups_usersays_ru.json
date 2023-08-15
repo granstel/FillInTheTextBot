@@ -1,9 +1,9 @@
 [
   {
-    "id": "b7369736-f7ec-46c5-87f5-b4ca0e454ad1",
+    "id": "f5ac57d0-dad0-465d-b3f6-b19b94f9ca88",
     "data": [
       {
-        "text": "сочинить про роботов",
+        "text": "виды историй",
         "userDefined": false
       }
     ],
@@ -13,10 +13,10 @@
     "updated": 0
   },
   {
-    "id": "33053dfb-e763-4d9f-8d7c-2600f1959bd6",
+    "id": "f518f8d1-e417-4b1e-8e45-75dfaa871160",
     "data": [
       {
-        "text": "роботы",
+        "text": "что у тебя есть",
         "userDefined": false
       }
     ],
@@ -26,14 +26,40 @@
     "updated": 0
   },
   {
-    "id": "cbb87ff0-2010-446c-bfb0-cdc12df56524",
+    "id": "e83401fe-d385-4f0b-9a85-d0ecb9cf5b88",
     "data": [
       {
-        "text": "про ",
+        "text": "категории историй",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ab4f9e1a-b828-4024-ae3e-8356a2f7b419",
+    "data": [
+      {
+        "text": "группы историй",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "981b316d-2a2c-4d42-a3e5-b752d6eb5729",
+    "data": [
+      {
+        "text": "какие",
         "userDefined": false
       },
       {
-        "text": "роботов",
+        "text": " бывают истории",
         "userDefined": false
       }
     ],
@@ -43,53 +69,14 @@
     "updated": 0
   },
   {
-    "id": "965871a7-8e79-4afb-b07b-66f5dec1d1d9",
+    "id": "bcadcf22-df88-483c-b6ad-b22d5fa7a3ae",
     "data": [
       {
-        "text": "начать квест",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "11fb4cc7-f2ab-4c72-9a0a-f1f9884cad23",
-    "data": [
-      {
-        "text": "квест для ",
+        "text": "Какие",
         "userDefined": false
       },
       {
-        "text": "додо",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "c4c0c524-66f2-4f81-9638-52acf5caddca",
-    "data": [
-      {
-        "text": "я робот",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "189d324a-99a7-4f26-af49-6d7a9b8ace79",
-    "data": [
-      {
-        "text": "кто робот",
+        "text": " есть истории",
         "userDefined": false
       }
     ],

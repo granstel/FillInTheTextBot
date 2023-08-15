@@ -1,20 +1,13 @@
 {
-  "id": "9e226eac-45c3-49f8-824f-5f2f01761255",
-  "name": "WhoRobot - help",
+  "id": "4eb1d8ec-26c7-46a0-9dbc-03518516d6cd",
+  "name": "TextsList - Groups - screen",
   "auto": true,
-  "contexts": [
-    "whorobot"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "action": "WhoRobot.WhoRobot-custom",
-      "affectedContexts": [
-        {
-          "name": "whorobot",
-          "lifespan": 500
-        }
-      ],
+      "action": "",
+      "affectedContexts": [],
       "parameters": [],
       "messages": [
         {
@@ -23,7 +16,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Увы, я не могу ответить на все твои вопросы, но ты можешь попросить меня повторить загадку"
+            "Вот что у меня есть, что выберешь?"
           ],
           "condition": ""
         }

@@ -10,7 +10,7 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "83c88004-5830-4a19-ab12-af71c0802339",
+          "id": "cabe8f6c-7c1f-4144-9493-1013523bb482",
           "name": "sberEmotion",
           "required": false,
           "dataType": "@sys.any",
@@ -32,6 +32,7 @@
           "replies": [
             "Давай",
             "Покажи список",
+            "Длинные истории",
             "Выход"
           ],
           "textToSpeech": "",
@@ -56,9 +57,9 @@
             "Yandex": {
               "Buttons": [
                 {
+                  "IsQuickReply": false,
                   "Text": "Подписаться на новости",
-                  "Url": "https://vk.com/fillinthetextbot",
-                  "IsQuickReply": false
+                  "Url": "https://vk.com/fillinthetextbot"
                 }
               ]
             },
@@ -66,8 +67,8 @@
               "Buttons": [
                 {
                   "Url": "https://vk.com/fillinthetextbot",
-                  "Text": "Подписаться на новости",
-                  "IsQuickReply": false
+                  "IsQuickReply": false,
+                  "Text": "Подписаться на новости"
                 }
               ]
             }

@@ -1,9 +1,9 @@
 [
   {
-    "id": "4812f97a-98eb-4101-80fa-751937285e0e",
+    "id": "bf38509a-16d9-467a-9504-29ffca14dc46",
     "data": [
       {
-        "text": "что делать дальше",
+        "text": "истории из нескольких частей",
         "userDefined": false
       }
     ],
@@ -13,10 +13,10 @@
     "updated": 0
   },
   {
-    "id": "e73a477c-3a8c-4560-8351-c2a511ae56a6",
+    "id": "1575618d-ecd2-4950-8407-0160bb3a4c7a",
     "data": [
       {
-        "text": "что это значит",
+        "text": "какие длинные истории у тебя есть",
         "userDefined": false
       }
     ],
@@ -26,10 +26,10 @@
     "updated": 0
   },
   {
-    "id": "25999356-bc75-4a6c-a74f-b8b88e19861d",
+    "id": "487da2f7-4993-4824-87ff-e6504c68e9e2",
     "data": [
       {
-        "text": "ничего не понял",
+        "text": "покажи все длинные истории",
         "userDefined": false
       }
     ],
@@ -39,10 +39,10 @@
     "updated": 0
   },
   {
-    "id": "4b784e63-d3a5-4e74-ba28-e89903ff414b",
+    "id": "dbd9ab3b-4b2b-45ff-9770-988319b4a9fb",
     "data": [
       {
-        "text": "ничего не поняла",
+        "text": "покажи длинные истории",
         "userDefined": false
       }
     ],
@@ -52,23 +52,10 @@
     "updated": 0
   },
   {
-    "id": "1955f2f2-bd00-4f7f-a673-641f7046431f",
+    "id": "46fce164-955b-498b-b6f3-c24a788e089e",
     "data": [
       {
-        "text": "непонятно",
-        "userDefined": false
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "lang": "ru",
-    "updated": 0
-  },
-  {
-    "id": "6bfaca2e-1c9c-4bba-9a55-4ceb196d6afe",
-    "data": [
-      {
-        "text": "не понятно",
+        "text": "Длинные истории",
         "userDefined": false
       }
     ],

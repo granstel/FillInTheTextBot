@@ -13,11 +13,11 @@
       "affectedContexts": [],
       "parameters": [
         {
-          "id": "9bb202a0-05ff-41cd-8f04-1668c571d0b9",
+          "id": "a49013a3-ed37-47dc-85ab-41a9c378b499",
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "Когда я буду задавать вопросы, отвечай первое, что приходит в голову. Итак, текст называется «Случай на уроке».",
+          "value": "Итак, текст называется «Случай на уроке».",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
@@ -27,7 +27,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "8c845708-befa-4c99-913b-93cd10929c82",
+          "id": "e9f20ec0-1254-41d2-a6c2-67a180ffd697",
           "name": "boy",
           "required": true,
           "dataType": "@sys.any",
@@ -50,7 +50,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "8a7bd789-1e18-4b11-8f97-aa584c57baf7",
+          "id": "f5279003-3ebc-407b-b95b-45284ecd9e42",
           "name": "adjective-1",
           "required": true,
           "dataType": "@sys.any",
@@ -69,7 +69,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "d6928546-2c18-43e2-b930-aba12100401b",
+          "id": "feb085aa-95f9-4070-af84-59eb02fbe7a2",
           "name": "animal-1",
           "required": true,
           "dataType": "@sys.any",
@@ -92,7 +92,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "cc49dee3-d1ac-4396-a6b2-16335d19951c",
+          "id": "b6412833-9e6c-4548-9b7e-3ebdce35dd0f",
           "name": "teacher",
           "required": true,
           "dataType": "@sys.any",
@@ -115,7 +115,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "549337ed-d6b2-4176-b17c-4b06f69359de",
+          "id": "c5668c61-b68d-4e16-965b-6dc6e44475a6",
           "name": "adjective-2",
           "required": true,
           "dataType": "@sys.any",
@@ -134,7 +134,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "04355ffa-4157-472a-bc28-e6919fcc7cf6",
+          "id": "64fd389b-1dd1-449a-bec1-c9e7046a17eb",
           "name": "animal-2",
           "required": true,
           "dataType": "@sys.any",
@@ -153,7 +153,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "6569faee-724f-4034-820c-e429a5e68a29",
+          "id": "9c650e8a-c9fc-47b1-9fa9-2f70d800b158",
           "name": "animal-3",
           "required": true,
           "dataType": "@sys.any",
@@ -176,7 +176,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "cb2c3f65-57bd-41f9-a30f-31e5fd1575da",
+          "id": "c98d9626-2498-49bf-80f8-a0dc5bda77ba",
           "name": "adjective-3",
           "required": true,
           "dataType": "@sys.any",
@@ -195,7 +195,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "2a904c0c-4dd6-4a42-9171-73fdf34efea1",
+          "id": "f8f36825-402a-47f1-99f1-f6ce0aefc6b0",
           "name": "food",
           "required": true,
           "dataType": "@sys.any",
@@ -214,7 +214,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "eab38b40-adf3-4f26-9130-43e60cf9f7c6",
+          "id": "4742470a-82df-4f1f-97aa-4eda256064d5",
           "name": "adjective-4",
           "required": true,
           "dataType": "@sys.any",
@@ -233,7 +233,7 @@
           "outputDialogContexts": []
         },
         {
-          "id": "7c993298-11a3-44b0-ac01-001054f667d2",
+          "id": "e4d60e70-693d-4f2a-b582-323177a97394",
           "name": "animal-4",
           "required": true,
           "dataType": "@sys.any",
@@ -269,29 +269,29 @@
           "type": "4",
           "title": "",
           "payload": {
-            "Yandex": {
+            "Sber": {
               "Buttons": [
                 {
-                  "Text": "Поделиться идеей",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                  "IsQuickReply": true,
+                  "Text": "Оценить историю"
                 }
               ]
             },
             "Marusia": {
               "Buttons": [
                 {
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
                   "Text": "Поделиться идеей",
-                  "IsQuickReply": false,
-                  "Url": "https://vk.com/im?sel\u003d-201360423"
+                  "IsQuickReply": false
                 }
               ]
             },
-            "Sber": {
+            "Yandex": {
               "Buttons": [
                 {
-                  "Text": "Оценить историю",
-                  "IsQuickReply": true
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
+                  "Text": "Поделиться идеей",
+                  "IsQuickReply": false
                 }
               ]
             }

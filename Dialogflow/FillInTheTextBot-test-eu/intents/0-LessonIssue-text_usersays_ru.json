@@ -4,7 +4,7 @@
     "data": [
       {
         "text": "марь иванна",
-        "meta": "@sys.person",
+        "meta": "@sys.any",
         "alias": "teacher",
         "userDefined": true
       }
@@ -19,9 +19,9 @@
     "data": [
       {
         "text": "антон",
-        "meta": "@sys.person",
+        "meta": "@sys.any",
         "alias": "boy",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -64,9 +64,9 @@
     "data": [
       {
         "text": "марфа васильевна",
-        "meta": "@sys.person",
+        "meta": "@sys.any",
         "alias": "teacher",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -199,9 +199,9 @@
     "data": [
       {
         "text": "антонина петровна",
-        "meta": "@sys.person",
+        "meta": "@sys.any",
         "alias": "teacher",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -409,9 +409,9 @@
     "data": [
       {
         "text": "Людмила Петровна",
-        "meta": "@sys.person",
+        "meta": "@sys.any",
         "alias": "teacher",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -424,9 +424,9 @@
     "data": [
       {
         "text": "Елена Александровна",
-        "meta": "@sys.person",
+        "meta": "@sys.any",
         "alias": "teacher",
-        "userDefined": false
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -439,7 +439,7 @@
     "data": [
       {
         "text": "Ирина Анатольевна",
-        "meta": "@sys.person",
+        "meta": "@sys.any",
         "alias": "teacher",
         "userDefined": true
       }
@@ -454,7 +454,7 @@
     "data": [
       {
         "text": "Мария Ивановна",
-        "meta": "@sys.person",
+        "meta": "@sys.any",
         "alias": "teacher",
         "userDefined": true
       }
@@ -499,7 +499,7 @@
     "data": [
       {
         "text": "Лёха",
-        "meta": "@sys.person",
+        "meta": "@sys.any",
         "alias": "boy",
         "userDefined": true
       }

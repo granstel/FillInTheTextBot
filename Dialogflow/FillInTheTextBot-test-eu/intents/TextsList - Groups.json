@@ -1,19 +1,13 @@
 {
-  "id": "bb114609-e2a0-4471-a6ab-1cdd81db241d",
-  "name": "WhoRobot - fallback",
-  "contexts": [
-    "whorobot"
-  ],
+  "id": "d675e872-e890-42cc-80e0-245d206e9d98",
+  "name": "TextsList - Groups",
+  "auto": true,
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "action": "WhoRobot.WhoRobot-fallback",
-      "affectedContexts": [
-        {
-          "name": "whorobot",
-          "lifespan": 500
-        }
-      ],
+      "action": "",
+      "affectedContexts": [],
       "parameters": [],
       "messages": [
         {
@@ -22,8 +16,7 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Попробуй ещё",
-            "Это не то, что я хочу услышать"
+            "У меня есть:\n— Длинные истории.\n— Гороскопы.\n— Страшные истории.\n— Истории от подписчиков.\n— Остальные.\nЧто выберешь?"
           ],
           "condition": ""
         }
@@ -34,7 +27,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "fallbackIntent": true,
+  "fallbackIntent": false,
   "events": [],
   "conditionalResponses": [],
   "condition": "",
