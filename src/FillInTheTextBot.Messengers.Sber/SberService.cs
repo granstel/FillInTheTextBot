@@ -11,25 +11,19 @@ using Response = Sber.SmartApp.Models.Response;
 
 namespace FillInTheTextBot.Messengers.Sber;
 
-public class SberService : MessengerService<Request, Response>, ISberService
+public class SberService(
+    ILogger<SberService> log,
+    IConversationService conversationService,
+    IRedisCacheService cache)
+    : MessengerService<Request, Response>(log, conversationService), ISberService
 {
-    private readonly IRedisCacheService _cache;
-
-    public SberService(
-        ILogger<SberService> log,
-        IConversationService conversationService,
-        IRedisCacheService cache) : base(log, conversationService)
-    {
-        _cache = cache;
-    }
-
     protected override Models.Request Before(Request input)
     {
         var request = input.ToRequest();
 
         var userStateCacheKey = GetCacheKey(request.UserHash);
 
-        _cache.TryGet(userStateCacheKey, out UserState userState);
+        cache.TryGet(userStateCacheKey, out UserState userState);
 
         request.IsOldUser = userState?.IsOldUser ?? false;
 
@@ -62,7 +56,7 @@ public class SberService : MessengerService<Request, Response>, ISberService
 
         var userStateCacheKey = GetCacheKey(input.Uuid?.Sub ?? input.Uuid?.UserId);
 
-        await _cache.TryAddAsync(userStateCacheKey, userState, TimeSpan.FromDays(14));
+        await cache.TryAddAsync(userStateCacheKey, userState, TimeSpan.FromDays(14));
 
         return output;
     }
@@ -71,14 +65,14 @@ public class SberService : MessengerService<Request, Response>, ISberService
     {
         var cacheKey = GetSessionCacheKey(userHash);
 
-        _cache.TryGet(cacheKey, out string sessionId);
+        cache.TryGet(cacheKey, out string sessionId);
 
         // TODO: создавать новую сессию не в этом методе (get)
         if (newSession == true || string.IsNullOrEmpty(sessionId))
         {
             sessionId = Guid.NewGuid().ToString("N");
 
-            _cache.AddAsync(cacheKey, sessionId, TimeSpan.FromMinutes(5)).Forget();
+            cache.AddAsync(cacheKey, sessionId, TimeSpan.FromMinutes(5)).Forget();
         }
 
         return sessionId;

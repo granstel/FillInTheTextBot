@@ -10,27 +10,19 @@ using GranSteL.Helpers.Redis;
 
 namespace FillInTheTextBot.Services;
 
-public class ConversationService : IConversationService
+public class ConversationService(
+    ConversationConfiguration configuration,
+    IDialogflowService dialogflowService,
+    IRedisCacheService cache)
+    : IConversationService
 {
     private static readonly Random Random = new();
-    private readonly IRedisCacheService _cache;
-
-    private readonly ConversationConfiguration _configuration;
-    private readonly IDialogflowService _dialogflowService;
-
-    public ConversationService(ConversationConfiguration configuration, IDialogflowService dialogflowService,
-        IRedisCacheService cache)
-    {
-        _dialogflowService = dialogflowService;
-        _cache = cache;
-        _configuration = configuration;
-    }
 
     public async Task<Response> GetResponseAsync(Request request)
     {
         request = ResetContextsWhenHelpOrExitRequest(request);
 
-        var dialog = await _dialogflowService.GetResponseAsync(request);
+        var dialog = await dialogflowService.GetResponseAsync(request);
 
         var response = new Response
         {
@@ -108,7 +100,7 @@ public class ConversationService : IConversationService
             if (string.IsNullOrEmpty(textKey))
                 using (Tracing.Trace(operationName: "Get texts from cache"))
                 {
-                    if (!_cache.TryGet("Texts", out string[] texts))
+                    if (!cache.TryGet("Texts", out string[] texts))
                     {
                         response.Text = "Что-то у меня не нашлось никаких текстов...";
 
@@ -121,7 +113,7 @@ public class ConversationService : IConversationService
             var eventName = $"event:{textKey}";
             MetricsCollector.Increment("event", textKey);
 
-            var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey);
+            var dialog = await dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey);
 
 
             var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
@@ -198,7 +190,7 @@ public class ConversationService : IConversationService
 
         using (Tracing.Trace())
         {
-            _cache.TryGet($"AppealWords-{appeal}", out IDictionary<string, string> appealWords);
+            cache.TryGet($"AppealWords-{appeal}", out IDictionary<string, string> appealWords);
 
             if (appealWords?.Any() != true) return responseText;
 
@@ -254,7 +246,7 @@ public class ConversationService : IConversationService
                 { "alternativeText", texts.AlternativeText }
             };
 
-            _dialogflowService.SetContextAsync(sessionId, scopeKey, "savedText", 5, parameters).Forget();
+            dialogflowService.SetContextAsync(sessionId, scopeKey, "savedText", 5, parameters).Forget();
         }
     }
 
@@ -262,7 +254,7 @@ public class ConversationService : IConversationService
     {
         var text = request.Text;
 
-        request.ResetContexts = _configuration?.ResetContextWords?.Any(word =>
+        request.ResetContexts = configuration?.ResetContextWords?.Any(word =>
             string.Equals(word, text, StringComparison.InvariantCultureIgnoreCase)) is true;
 
         return request;
@@ -277,7 +269,7 @@ public class ConversationService : IConversationService
         const string eventName = $"event:{cancelsSlotFilling}";
         MetricsCollector.Increment("event", cancelsSlotFilling);
 
-        var cancelsSlotFillingDialog = await _dialogflowService.GetResponseAsync(eventName, sessionId, scopeKey);
+        var cancelsSlotFillingDialog = await dialogflowService.GetResponseAsync(eventName, sessionId, scopeKey);
 
         response.Text = $"{response.Text} {cancelsSlotFillingDialog.Response}";
         response.Buttons = cancelsSlotFillingDialog.Buttons;

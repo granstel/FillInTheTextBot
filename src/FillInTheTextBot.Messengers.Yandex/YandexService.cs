@@ -11,16 +11,13 @@ using Response = FillInTheTextBot.Models.Response;
 
 namespace FillInTheTextBot.Messengers.Yandex;
 
-public class YandexService : MessengerService<InputModel, OutputModel>, IYandexService
+public class YandexService(
+    ILogger<YandexService> log,
+    IConversationService conversationService)
+    : MessengerService<InputModel, OutputModel>(log, conversationService), IYandexService
 {
     private const string PingCommand = "ping";
     private const string PongResponse = "pong";
-
-    public YandexService(
-        ILogger<YandexService> log,
-        IConversationService conversationService) : base(log, conversationService)
-    {
-    }
 
     protected override Request Before(InputModel input)
     {

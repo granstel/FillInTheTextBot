@@ -5,26 +5,17 @@ using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Api.Middleware;
 
-public class ExceptionsMiddleware
+public class ExceptionsMiddleware(ILogger<ExceptionsMiddleware> log, RequestDelegate next)
 {
-    private readonly ILogger<ExceptionsMiddleware> _log;
-    private readonly RequestDelegate _next;
-
-    public ExceptionsMiddleware(ILogger<ExceptionsMiddleware> log, RequestDelegate next)
-    {
-        _log = log;
-        _next = next;
-    }
-
     public async Task InvokeAsync(HttpContext context)
     {
         try
         {
-            await _next(context);
+            await next(context);
         }
         catch (Exception ex)
         {
-            _log.LogError(ex, "Error while process request");
+            log.LogError(ex, "Error while process request");
 
             throw;
         }

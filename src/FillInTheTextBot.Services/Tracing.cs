@@ -7,30 +7,23 @@ namespace FillInTheTextBot.Services;
 public static class Tracing
 {
     // Создаем один экземпляр ActivitySource для всех вызовов
-    private static readonly ActivitySource _activitySource = new("FillInTheTextBot");
+    private static readonly ActivitySource ActivitySource = new("FillInTheTextBot");
 
     public static IDisposable Trace(Action<Activity> activityAction = null, string operationName = null,
         [CallerMemberName] string caller = null)
     {
-        var activity = _activitySource.StartActivity(operationName ?? caller);
+        var activity = ActivitySource.StartActivity(operationName ?? caller);
 
         activityAction?.Invoke(activity);
 
         return new ActivityScope(activity);
     }
 
-    private class ActivityScope : IDisposable
+    private class ActivityScope(Activity activity) : IDisposable
     {
-        private readonly Activity _activity;
-
-        public ActivityScope(Activity activity)
-        {
-            _activity = activity;
-        }
-
         public void Dispose()
         {
-            _activity?.Dispose();
+            activity?.Dispose();
         }
     }
 }

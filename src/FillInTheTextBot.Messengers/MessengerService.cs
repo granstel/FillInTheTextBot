@@ -7,22 +7,13 @@ using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Messengers;
 
-public abstract class MessengerService<TInput, TOutput> : IMessengerService<TInput, TOutput>
+public abstract class MessengerService<TInput, TOutput>(ILogger log, IConversationService conversationService)
+    : IMessengerService<TInput, TOutput>
 {
     private const string ErrorAnswer =
         "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
 
     private const string ErrorLink = "https://vk.com/fillinthetextbot";
-
-    private readonly IConversationService _conversationService;
-
-    protected readonly ILogger Log;
-
-    protected MessengerService(ILogger log, IConversationService conversationService)
-    {
-        Log = log;
-        _conversationService = conversationService;
-    }
 
     public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
     {
@@ -51,12 +42,12 @@ public abstract class MessengerService<TInput, TOutput> : IMessengerService<TInp
 
                 response = ProcessCommand(request);
 
-                if (response == null) response = await _conversationService.GetResponseAsync(request);
+                if (response == null) response = await conversationService.GetResponseAsync(request);
             }
         }
         catch (Exception e)
         {
-            Log.LogError(e, "Error while process incoming");
+            log.LogError(e, "Error while process incoming");
 
             response = new Response
             {
@@ -134,7 +125,7 @@ public abstract class MessengerService<TInput, TOutput> : IMessengerService<TInp
         }
         catch (Exception e)
         {
-            Log.LogError(e, "Error while get contexts");
+            log.LogError(e, "Error while get contexts");
         }
 
         return contexts;

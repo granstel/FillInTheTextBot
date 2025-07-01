@@ -15,22 +15,16 @@ namespace FillInTheTextBot.Messengers;
 
 [Route("[controller]")]
 [Produces("application/json")]
-public abstract class MessengerController<TInput, TOutput> : Controller
+public abstract class MessengerController<TInput, TOutput>(
+    ILogger log,
+    IMessengerService<TInput, TOutput> messengerService,
+    MessengerConfiguration configuration)
+    : Controller
 {
     private const string TokenParameter = "token";
-    private readonly MessengerConfiguration _configuration;
-    private readonly IMessengerService<TInput, TOutput> _messengerService;
 
-    protected readonly ILogger Log;
+    protected readonly ILogger Log = log;
     protected JsonSerializerSettings SerializerSettings;
-
-    protected MessengerController(ILogger log, IMessengerService<TInput, TOutput> messengerService,
-        MessengerConfiguration configuration)
-    {
-        Log = log;
-        _messengerService = messengerService;
-        _configuration = configuration;
-    }
 
     public override void OnActionExecuting(ActionExecutingContext context)
     {
@@ -56,7 +50,7 @@ public abstract class MessengerController<TInput, TOutput> : Controller
             Log.LogError(errors);
         }
 
-        var response = await _messengerService.ProcessIncomingAsync(input);
+        var response = await messengerService.ProcessIncomingAsync(input);
 
         return Json(response, SerializerSettings);
     }
@@ -66,7 +60,7 @@ public abstract class MessengerController<TInput, TOutput> : Controller
     {
         var url = GetWebHookUrl(Request);
 
-        var result = await _messengerService.SetWebhookAsync(url);
+        var result = await messengerService.SetWebhookAsync(url);
 
         return Json(result);
     }
@@ -74,20 +68,20 @@ public abstract class MessengerController<TInput, TOutput> : Controller
     [HttpDelete("{token?}")]
     public virtual async Task<IActionResult> DeleteWebHook(string token)
     {
-        var result = await _messengerService.DeleteWebhookAsync();
+        var result = await messengerService.DeleteWebhookAsync();
 
         return Json(result);
     }
 
     protected virtual bool IsValidRequest(ActionExecutingContext context)
     {
-        if (string.IsNullOrEmpty(_configuration.IncomingToken)) return true;
+        if (string.IsNullOrEmpty(configuration.IncomingToken)) return true;
 
         if (context.ActionArguments.TryGetValue(TokenParameter, out var value))
         {
             var token = value as string;
 
-            return string.Equals(_configuration.IncomingToken, token, StringComparison.InvariantCultureIgnoreCase);
+            return string.Equals(configuration.IncomingToken, token, StringComparison.InvariantCultureIgnoreCase);
         }
 
         return false;

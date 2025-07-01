@@ -11,20 +11,14 @@ using Response = FillInTheTextBot.Models.Response;
 
 namespace FillInTheTextBot.Messengers.Marusia;
 
-public class MarusiaService : MessengerService<InputModel, OutputModel>, IMarusiaService
+public class MarusiaService(
+    ILogger<MarusiaService> log,
+    IConversationService conversationService,
+    IRedisCacheService cache)
+    : MessengerService<InputModel, OutputModel>(log, conversationService), IMarusiaService
 {
     private const string PingCommand = "ping";
     private const string PongResponse = "pong";
-
-    private readonly IRedisCacheService _cache;
-
-    public MarusiaService(
-        ILogger<MarusiaService> log,
-        IConversationService conversationService,
-        IRedisCacheService cache) : base(log, conversationService)
-    {
-        _cache = cache;
-    }
 
     protected override Request Before(InputModel input)
     {
@@ -67,7 +61,7 @@ public class MarusiaService : MessengerService<InputModel, OutputModel>, IMarusi
 
         output.AddToSessionState(Response.ScopeStorageKey, response.ScopeKey);
 
-        _cache.AddAsync($"marusia:{input.Session?.UserId}", string.Empty, TimeSpan.FromDays(14)).Forget();
+        cache.AddAsync($"marusia:{input.Session?.UserId}", string.Empty, TimeSpan.FromDays(14)).Forget();
 
         return Task.FromResult(output);
     }
