@@ -1,4 +1,4 @@
-﻿using AutoFixture;
+using AutoFixture;
 using FillInTheTextBot.Services.Mapping;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf.WellKnownTypes;
@@ -25,13 +25,13 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             // ReSharper disable once ExpressionIsAlwaysNull
             var dialog = source.ToDialog();
 
-            Assert.IsEmpty(dialog.Parameters);
-            Assert.IsFalse(dialog.EndConversation);
-            Assert.IsTrue(dialog.ParametersIncomplete);
-            Assert.IsNull(dialog.Response);
-            Assert.IsNull(dialog.Action);
-            Assert.IsEmpty(dialog.Buttons);
-            Assert.IsNull(dialog.Payload);
+            Assert.That(dialog.Parameters, Is.Empty);
+            Assert.That(dialog.EndConversation, Is.False);
+            Assert.That(dialog.ParametersIncomplete, Is.True);
+            Assert.That(dialog.Response, Is.Null);
+            Assert.That(dialog.Action, Is.Null);
+            Assert.That(dialog.Buttons, Is.Empty);
+            Assert.That(dialog.Payload, Is.Null);
         }
 
         [Test]
@@ -61,9 +61,9 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.IsNotEmpty(dialog.Parameters, "Parameters should not be empty");
-            Assert.True(dialog.Parameters.ContainsKey(key));
-            Assert.True(dialog.Parameters.Values.Contains(value));
+            Assert.That(dialog.Parameters, Is.Not.Empty, "Parameters should not be empty");
+            Assert.That(dialog.Parameters.ContainsKey(key), Is.True);
+            Assert.That(dialog.Parameters.Values, Does.Contain(value));
         }
 
         [Test]
@@ -192,10 +192,10 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
+            Assert.That(dialog.Buttons, Is.Not.Empty, "Buttons should not be empty");
 
             var expectedValues = new[] { quickReplyText, buttonText };
-            Assert.True(dialog.Buttons.Select(b => b.Text).All(t => expectedValues.Contains(t)));
+            Assert.That(dialog.Buttons.Select(b => b.Text).All(t => expectedValues.Contains(t)), Is.True);
         }
 
         [Test]
