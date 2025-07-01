@@ -44,7 +44,7 @@ namespace FillInTheTextBot.Messengers
 
                 using (Tracing.Trace(s => 
                 {
-                    if (request != null)
+                    if (request != null && s != null)
                     {
                         s.SetTag(nameof(request.UserHash), request.UserHash);
                         s.SetTag(nameof(request.SessionId), request.SessionId);
