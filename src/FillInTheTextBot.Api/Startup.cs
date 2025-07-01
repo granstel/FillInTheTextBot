@@ -1,4 +1,4 @@
-﻿using FillInTheTextBot.Api.Middleware;
+using FillInTheTextBot.Api.Middleware;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -7,7 +7,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
+using System.Reflection;
 using FillInTheTextBot.Api.DI;
+using OpenTelemetry;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 using Prometheus;
 
 namespace FillInTheTextBot.Api
@@ -30,7 +34,21 @@ namespace FillInTheTextBot.Api
                 .AddMvc()
                 .AddNewtonsoftJson();
 
-            services.AddOpenTracing();
+            // Configure OpenTelemetry
+            var fullVersion = Assembly.GetExecutingAssembly().GetName().Version;
+            var version = $"{fullVersion?.Major}.{fullVersion?.Minor}.{fullVersion?.Build}";
+            
+            services.AddOpenTelemetry()
+                .WithTracing(builder => builder
+                    .SetResourceBuilder(ResourceBuilder.CreateDefault()
+                        .AddService("FillInTheTextBot", serviceVersion: version))
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddOtlpExporter(options =>
+                    {
+                        var tracingConfig = _configuration.GetSection("Tracing").Get<TracingConfiguration>();
+                        options.Endpoint = new Uri($"http://{tracingConfig.Host}:{tracingConfig.Port}");
+                    }));
             services.AddHttpLogging(o =>
             {
                 o.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;

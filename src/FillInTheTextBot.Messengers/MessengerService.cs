@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using FillInTheTextBot.Models;
@@ -42,9 +42,11 @@ namespace FillInTheTextBot.Messengers
                     request = Before(input);
                 }
 
-                using (Tracing.Trace(s => s
-                    .WithTag(nameof(request.UserHash), request.UserHash)
-                    .WithTag(nameof(request.SessionId), request.SessionId)))
+                using (Tracing.Trace(s => 
+                {
+                    s.SetTag(nameof(request.UserHash), request.UserHash);
+                    s.SetTag(nameof(request.SessionId), request.SessionId);
+                }))
                 {
                     var contexts = GetContexts(request);
                     request.RequiredContexts.AddRange(contexts);
