@@ -1,13 +1,18 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace FillInTheTextBot.Services
+namespace FillInTheTextBot.Services;
+
+public static class InternalLoggerFactory
 {
-    public static class InternalLoggerFactory
+    public static ILoggerFactory Factory { get; set; }
+
+    public static ILogger<T> CreateLogger<T>()
     {
-        public static ILoggerFactory Factory { get; set; }
+        return Factory?.CreateLogger<T>();
+    }
 
-        public static ILogger<T> CreateLogger<T>() => Factory?.CreateLogger<T>();
-
-        public static ILogger CreateLogger(string categoryName) => Factory?.CreateLogger(categoryName);
+    public static ILogger CreateLogger(string categoryName)
+    {
+        return Factory?.CreateLogger(categoryName);
     }
 }

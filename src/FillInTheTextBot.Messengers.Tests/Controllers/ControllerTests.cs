@@ -5,74 +5,73 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Moq;
 
-namespace FillInTheTextBot.Messengers.Tests.Controllers
+namespace FillInTheTextBot.Messengers.Tests.Controllers;
+
+public abstract class ControllerTests<T> where T : Controller
 {
-    public abstract class ControllerTests<T> where T : Controller
+    protected Fixture Fixture;
+    protected MockRepository MockRepository;
+
+    protected T Target;
+
+    protected void InitTestBase()
     {
-        protected MockRepository MockRepository;
+        MockRepository = new MockRepository(MockBehavior.Default);
 
-        protected T Target;
+        Fixture = new Fixture { OmitAutoProperties = true };
+    }
 
-        protected Fixture Fixture;
+    protected void SetControllerContext()
+    {
+        var path = string.Join("/", Fixture.CreateMany<string>());
 
-        protected void InitTestBase()
-        {
-            MockRepository = new MockRepository(MockBehavior.Default);
+        var pathString = new PathString($"/{path}");
 
-            Fixture = new Fixture { OmitAutoProperties = true };
-        }
+        var host = new HostString(Fixture.Create<string>());
+        var scheme = Fixture.Create<string>();
 
-        protected void SetControllerContext()
-        {
-            var path = string.Join("/", Fixture.CreateMany<string>());
+        var request = MockRepository.Create<HttpRequest>();
+        request.SetupGet(r => r.Path).Returns(pathString);
+        request.SetupGet(r => r.Host).Returns(host);
+        request.SetupGet(r => r.PathBase).Returns(pathString);
+        request.SetupGet(r => r.Scheme).Returns(scheme);
 
-            var pathString = new PathString($"/{path}");
+        var context = MockRepository.Create<HttpContext>();
+        context.SetupGet(c => c.Request).Returns(request.Object);
 
-            var host = new HostString(Fixture.Create<string>());
-            var scheme = Fixture.Create<string>();
+        Target.ControllerContext = Fixture.Build<ControllerContext>()
+            .With(c => c.HttpContext, context.Object)
+            .OmitAutoProperties()
+            .Create();
+    }
 
-            var request = MockRepository.Create<HttpRequest>();
-            request.SetupGet(r => r.Path).Returns(pathString);
-            request.SetupGet(r => r.Host).Returns(host);
-            request.SetupGet(r => r.PathBase).Returns(pathString);
-            request.SetupGet(r => r.Scheme).Returns(scheme);
+    protected string GetExpectedWebHookUrl()
+    {
+        var request = Target.Request;
 
-            var context = MockRepository.Create<HttpContext>();
-            context.SetupGet(c => c.Request).Returns(request.Object);
+        var pathBase = request.PathBase.Value;
+        var pathSegment = request.Path.Value;
 
-            Target.ControllerContext = Fixture.Build<ControllerContext>()
-                .With(c => c.HttpContext, context.Object)
-                .OmitAutoProperties()
-                .Create();
-        }
+        var expected = $"{request.Scheme}://{request.Host}{pathBase}{pathSegment}";
 
-        protected string GetExpectedWebHookUrl()
-        {
-            var request = Target.Request;
+        return expected;
+    }
 
-            var pathBase = request.PathBase.Value;
-            var pathSegment = request.Path.Value;
+    protected ActionExecutingContext GetActionContext(Dictionary<string, object> actionArguments)
+    {
+        var httpContext = MockRepository.Create<HttpContext>();
 
-            var expected = $"{request.Scheme}://{request.Host}{pathBase}{pathSegment}";
+        var actionContext = Fixture.Build<ActionContext>()
+            .With(c => c.HttpContext, httpContext.Object)
+            .With(c => c.RouteData)
+            .With(c => c.ActionDescriptor)
+            .Create();
 
-            return expected;
-        }
+        var filterMetadata = MockRepository.Create<IFilterMetadata>();
 
-        protected ActionExecutingContext GetActionContext(Dictionary<string, object> actionArguments)
-        {
-            var httpContext = MockRepository.Create<HttpContext>();
+        var context = new ActionExecutingContext(actionContext, new List<IFilterMetadata> { filterMetadata.Object },
+            actionArguments, Target);
 
-            var actionContext = Fixture.Build<ActionContext>()
-                .With(c => c.HttpContext, httpContext.Object)
-                .With(c => c.RouteData)
-                .With(c => c.ActionDescriptor)
-                .Create();
-
-            var filterMetadata = MockRepository.Create<IFilterMetadata>();
-
-            var context = new ActionExecutingContext(actionContext, new List<IFilterMetadata> { filterMetadata.Object }, actionArguments, Target);
-
-            return context;
-        }
+        return context;
     }
 }

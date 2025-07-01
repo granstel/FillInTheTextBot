@@ -1,27 +1,27 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <OutputType>Library</OutputType>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="4.22.0" />
-    <PackageReference Include="GranSteL.Helpers.Redis" Version="1.1.0" />
-    <PackageReference Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="OpenTracing" Version="0.12.1" />
-    <PackageReference Include="prometheus-net" Version="8.2.1" />
-    <PackageReference Include="StackExchange.Redis" Version="2.7.33" />
-    <PackageReference Include="System.ServiceModel.Duplex" Version="6.0.0" />
-    <PackageReference Include="System.ServiceModel.Http" Version="6.0.0" />
-    <PackageReference Include="System.ServiceModel.NetTcp" Version="6.0.0" />
-    <PackageReference Include="System.ServiceModel.Security" Version="6.0.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="4.22.0" />
+        <PackageReference Include="GranSteL.Helpers.Redis" Version="1.1.0" />
+        <PackageReference Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="OpenTracing" Version="0.12.1" />
+        <PackageReference Include="prometheus-net" Version="8.2.1" />
+        <PackageReference Include="StackExchange.Redis" Version="2.7.33" />
+        <PackageReference Include="System.ServiceModel.Duplex" Version="6.0.0" />
+        <PackageReference Include="System.ServiceModel.Http" Version="6.0.0" />
+        <PackageReference Include="System.ServiceModel.NetTcp" Version="6.0.0" />
+        <PackageReference Include="System.ServiceModel.Security" Version="6.0.0" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
+    </ItemGroup>
 
 </Project>

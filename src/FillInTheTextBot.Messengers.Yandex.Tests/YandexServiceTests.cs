@@ -6,54 +6,55 @@ using Moq;
 using NUnit.Framework;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
+using Request = FillInTheTextBot.Models.Request;
+using Response = FillInTheTextBot.Models.Response;
 
-namespace FillInTheTextBot.Messengers.Yandex.Tests
+namespace FillInTheTextBot.Messengers.Yandex.Tests;
+
+[TestFixture]
+public class YandexServiceTests
 {
-    [TestFixture]
-    public class YandexServiceTests
+    [SetUp]
+    public void InitTest()
     {
-        private MockRepository _mockRepository;
+        _mockRepository = new MockRepository(MockBehavior.Strict);
 
-        private Mock<IConversationService> _conversationService;
+        _conversationService = _mockRepository.Create<IConversationService>();
+        var log = Mock.Of<ILogger<YandexService>>();
 
-        private YandexService _target;
+        _target = new YandexService(log, _conversationService.Object);
 
-        private Fixture _fixture;
+        _fixture = new Fixture();
+    }
 
-        [SetUp]
-        public void InitTest()
-        {
-            _mockRepository = new MockRepository(MockBehavior.Strict);
+    private MockRepository _mockRepository;
 
-            _conversationService = _mockRepository.Create<IConversationService>();
-            var log = Mock.Of<ILogger<YandexService>>();
+    private Mock<IConversationService> _conversationService;
 
-            _target = new YandexService(log, _conversationService.Object);
+    private YandexService _target;
 
-            _fixture = new Fixture();
-        }
+    private Fixture _fixture;
 
-        [Test]
-        public async Task ProcessIncomingAsync_Invokations_Success()
-        {
-            var inputModel = _fixture.Build<InputModel>()
-                .OmitAutoProperties()
-                .Create();
+    [Test]
+    public async Task ProcessIncomingAsync_Invokations_Success()
+    {
+        var inputModel = _fixture.Build<InputModel>()
+            .OmitAutoProperties()
+            .Create();
 
-            _conversationService.Setup(s => s.GetResponseAsync(It.IsAny<Models.Request>())).ReturnsAsync(() => new Models.Response());
+        _conversationService.Setup(s => s.GetResponseAsync(It.IsAny<Request>())).ReturnsAsync(() => new Response());
 
-            var output = _fixture.Build<OutputModel>()
-                .With(o => o.Session)
-                .OmitAutoProperties()
-                .Create();
+        var output = _fixture.Build<OutputModel>()
+            .With(o => o.Session)
+            .OmitAutoProperties()
+            .Create();
 
 
-            var result = await _target.ProcessIncomingAsync(inputModel);
+        var result = await _target.ProcessIncomingAsync(inputModel);
 
 
-            _mockRepository.VerifyAll();
+        _mockRepository.VerifyAll();
 
-            Assert.NotNull(result);
-        }
+        Assert.NotNull(result);
     }
 }

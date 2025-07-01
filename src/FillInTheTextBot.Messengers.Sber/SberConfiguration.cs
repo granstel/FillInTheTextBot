@@ -1,9 +1,7 @@
 ﻿using FillInTheTextBot.Services.Configuration;
 
-namespace FillInTheTextBot.Messengers.Sber
+namespace FillInTheTextBot.Messengers.Sber;
+
+public class SberConfiguration : MessengerConfiguration
 {
-    public class SberConfiguration : MessengerConfiguration
-    {
-        
-    }
 }

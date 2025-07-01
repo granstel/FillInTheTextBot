@@ -4,13 +4,13 @@ namespace FillInTheTextBot.Models
 {
     public class Response
     {
-        public static string NextTextIndexStorageKey => nameof(NextTextIndex).ToUpper();
-        public static string ScopeStorageKey => nameof(ScopeKey).ToUpper();
-
         public Response()
         {
             Emotions = new Dictionary<string, string>();
         }
+
+        public static string NextTextIndexStorageKey => nameof(NextTextIndex).ToUpper();
+        public static string ScopeStorageKey => nameof(ScopeKey).ToUpper();
 
         public string ChatHash { get; set; }
 
@@ -27,7 +27,7 @@ namespace FillInTheTextBot.Models
         public int NextTextIndex { get; set; }
 
         public string ScopeKey { get; set; }
-        
+
         public IDictionary<string, string> Emotions { get; set; }
     }
 }

@@ -3,31 +3,30 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
-namespace FillInTheTextBot.Api.Middleware
+namespace FillInTheTextBot.Api.Middleware;
+
+public class ExceptionsMiddleware
 {
-    public class ExceptionsMiddleware
+    private readonly ILogger<ExceptionsMiddleware> _log;
+    private readonly RequestDelegate _next;
+
+    public ExceptionsMiddleware(ILogger<ExceptionsMiddleware> log, RequestDelegate next)
     {
-        private readonly ILogger<ExceptionsMiddleware> _log;
-        private readonly RequestDelegate _next;
+        _log = log;
+        _next = next;
+    }
 
-        public ExceptionsMiddleware(ILogger<ExceptionsMiddleware> log, RequestDelegate next)
+    public async Task InvokeAsync(HttpContext context)
+    {
+        try
         {
-            _log = log;
-            _next = next;
+            await _next(context);
         }
-
-        public async Task InvokeAsync(HttpContext context)
+        catch (Exception ex)
         {
-            try
-            {
-                await _next(context);
-            }
-            catch (Exception ex)
-            {
-                _log.LogError(ex, "Error while process request");
+            _log.LogError(ex, "Error while process request");
 
-                throw;
-            }
+            throw;
         }
     }
 }

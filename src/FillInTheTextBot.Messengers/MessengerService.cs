@@ -5,157 +5,151 @@ using FillInTheTextBot.Models;
 using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
 
-namespace FillInTheTextBot.Messengers
+namespace FillInTheTextBot.Messengers;
+
+public abstract class MessengerService<TInput, TOutput> : IMessengerService<TInput, TOutput>
 {
-    public abstract class MessengerService<TInput, TOutput> : IMessengerService<TInput, TOutput>
+    private const string ErrorAnswer =
+        "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
+
+    private const string ErrorLink = "https://vk.com/fillinthetextbot";
+
+    private readonly IConversationService _conversationService;
+
+    protected readonly ILogger Log;
+
+    protected MessengerService(ILogger log, IConversationService conversationService)
     {
-        private const string ErrorAnswer = "Прости, у меня какие-то проблемы... Давай попробуем ещё раз. Если повторится, найди в ВК паблик \"Занимательные истории голосовых помощников\" и напиши об этом в личку";
-        private const string ErrorLink = "https://vk.com/fillinthetextbot";
+        Log = log;
+        _conversationService = conversationService;
+    }
 
-        private readonly IConversationService _conversationService;
+    public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
+    {
+        Response response;
 
-        protected readonly ILogger Log;
-
-        protected MessengerService(ILogger log, IConversationService conversationService)
+        try
         {
-            Log = log;
-            _conversationService = conversationService;
-        }
+            Request request;
 
-        protected virtual Request Before(TInput input)
-        {
-            throw new NotImplementedException($"Need to implement mapping from {typeof(TInput)} type to " +
-                                              $"{typeof(Request)} at overrided '{nameof(Before)}' method of " +
-                                              $"{typeof(MessengerService<TInput, TOutput>)} type");
-        }
-
-        public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
-        {
-            Response response;
-
-            try
+            using (Tracing.Trace(operationName: "Before"))
             {
-                Request request;
-                
-                using (Tracing.Trace(operationName: "Before"))
-                {
-                    request = Before(input);
-                }
+                request = Before(input);
+            }
 
-                using (Tracing.Trace(s => 
+            using (Tracing.Trace(s =>
+                   {
+                       if (request != null && s != null)
+                       {
+                           s.SetTag(nameof(request.UserHash), request.UserHash);
+                           s.SetTag(nameof(request.SessionId), request.SessionId);
+                       }
+                   }))
+            {
+                var contexts = GetContexts(request);
+                request.RequiredContexts.AddRange(contexts);
+
+                response = ProcessCommand(request);
+
+                if (response == null) response = await _conversationService.GetResponseAsync(request);
+            }
+        }
+        catch (Exception e)
+        {
+            Log.LogError(e, "Error while process incoming");
+
+            response = new Response
+            {
+                Text = ErrorAnswer,
+                Buttons = new[]
                 {
-                    if (request != null && s != null)
+                    new Button
                     {
-                        s.SetTag(nameof(request.UserHash), request.UserHash);
-                        s.SetTag(nameof(request.SessionId), request.SessionId);
-                    }
-                }))
-                {
-                    var contexts = GetContexts(request);
-                    request.RequiredContexts.AddRange(contexts);
-
-                    response = ProcessCommand(request);
-
-                    if (response == null)
-                    {
-                        response = await _conversationService.GetResponseAsync(request);
+                        Text = "Сообщить об ошибке",
+                        Url = ErrorLink
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                Log.LogError(e, "Error while process incoming");
+            };
 
-                response = new Response
-                {
-                    Text = ErrorAnswer,
-                    Buttons = new[]
-                    {
-                        new Button
-                        {
-                            Text = "Сообщить об ошибке",
-                            Url = ErrorLink
-                        }
-                    }
-                };
-
-                MetricsCollector.Increment("ErrorAnswer", string.Empty);
-            }
-
-            using (Tracing.Trace(operationName: "AfterAsync"))
-            {
-                var output = await AfterAsync(input, response);
-
-                return output;
-            }
+            MetricsCollector.Increment("ErrorAnswer", string.Empty);
         }
 
-        private ICollection<Context> GetContexts(Request request)
+        using (Tracing.Trace(operationName: "AfterAsync"))
         {
-            var contexts = new List<Context>();
+            var output = await AfterAsync(input, response);
 
-            try
+            return output;
+        }
+    }
+
+    public virtual Task<bool> SetWebhookAsync(string url)
+    {
+        throw new NotImplementedException();
+    }
+
+    public virtual Task<bool> DeleteWebhookAsync()
+    {
+        throw new NotImplementedException();
+    }
+
+    protected virtual Request Before(TInput input)
+    {
+        throw new NotImplementedException($"Need to implement mapping from {typeof(TInput)} type to " +
+                                          $"{typeof(Request)} at overrided '{nameof(Before)}' method of " +
+                                          $"{typeof(MessengerService<TInput, TOutput>)} type");
+    }
+
+    private ICollection<Context> GetContexts(Request request)
+    {
+        var contexts = new List<Context>();
+
+        try
+        {
+            var parameters = new Dictionary<string, string>
             {
-                var parameters = new Dictionary<string, string>
-                {
-                    { nameof(request.UserHash), request.UserHash ?? string.Empty },
-                    { nameof(request.ClientId), request.ClientId ?? string.Empty }
-                };
+                { nameof(request.UserHash), request.UserHash ?? string.Empty },
+                { nameof(request.ClientId), request.ClientId ?? string.Empty }
+            };
 
+            contexts.Add(new Context
+            {
+                Name = $"source-{request.Source}",
+                LifeSpan = 2,
+                Parameters = parameters
+            });
+
+            if (request.HasScreen)
                 contexts.Add(new Context
                 {
-                    Name = $"source-{request.Source}",
-                    LifeSpan = 2,
-                    Parameters = parameters
+                    Name = "screen",
+                    LifeSpan = 2
                 });
 
-                if (request.HasScreen)
+            if (request.IsOldUser)
+                contexts.Add(new Context
                 {
-                    contexts.Add(new Context
-                    {
-                        Name = "screen",
-                        LifeSpan = 2
-                    });
-                }
-
-                if (request.IsOldUser)
-                {
-                    contexts.Add(new Context
-                    {
-                        Name = "OldUser",
-                        LifeSpan = 2
-                    });
-                }
-            }
-            catch (Exception e)
-            {
-                Log.LogError(e, "Error while get contexts");
-            }
-
-            return contexts;
+                    Name = "OldUser",
+                    LifeSpan = 2
+                });
         }
-
-        protected virtual Response ProcessCommand(Request request)
+        catch (Exception e)
         {
-            return null;
+            Log.LogError(e, "Error while get contexts");
         }
 
-        protected virtual Task<TOutput> AfterAsync(TInput input, Response response)
-        {
-            throw new NotImplementedException($"Need to implement mapping from {typeof(TInput)} and {typeof(Response)} " +
-                                              $"types to " +
-                                              $"{typeof(TOutput)} at overrided '{nameof(AfterAsync)}' method of " +
-                                              $"{typeof(MessengerService<TInput, TOutput>)} type");
-        }
+        return contexts;
+    }
 
-        public virtual Task<bool> SetWebhookAsync(string url)
-        {
-            throw new NotImplementedException();
-        }
+    protected virtual Response ProcessCommand(Request request)
+    {
+        return null;
+    }
 
-        public virtual Task<bool> DeleteWebhookAsync()
-        {
-            throw new NotImplementedException();
-        }
+    protected virtual Task<TOutput> AfterAsync(TInput input, Response response)
+    {
+        throw new NotImplementedException($"Need to implement mapping from {typeof(TInput)} and {typeof(Response)} " +
+                                          $"types to " +
+                                          $"{typeof(TOutput)} at overrided '{nameof(AfterAsync)}' method of " +
+                                          $"{typeof(MessengerService<TInput, TOutput>)} type");
     }
 }

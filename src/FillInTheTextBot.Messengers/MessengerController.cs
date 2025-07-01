@@ -11,110 +11,103 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace FillInTheTextBot.Messengers
+namespace FillInTheTextBot.Messengers;
+
+[Route("[controller]")]
+[Produces("application/json")]
+public abstract class MessengerController<TInput, TOutput> : Controller
 {
-    [Route("[controller]")]
-    [Produces("application/json")]
-    public abstract class MessengerController<TInput, TOutput> : Controller
+    private const string TokenParameter = "token";
+    private readonly MessengerConfiguration _configuration;
+    private readonly IMessengerService<TInput, TOutput> _messengerService;
+
+    protected readonly ILogger Log;
+    protected JsonSerializerSettings SerializerSettings;
+
+    protected MessengerController(ILogger log, IMessengerService<TInput, TOutput> messengerService,
+        MessengerConfiguration configuration)
     {
-        private readonly IMessengerService<TInput, TOutput> _messengerService;
-        private readonly MessengerConfiguration _configuration;
-        
-        protected readonly ILogger Log;
-        protected JsonSerializerSettings SerializerSettings;
+        Log = log;
+        _messengerService = messengerService;
+        _configuration = configuration;
+    }
 
-        private const string TokenParameter = "token";
+    public override void OnActionExecuting(ActionExecutingContext context)
+    {
+        var isValid = IsValidRequest(context);
 
-        protected MessengerController(ILogger log, IMessengerService<TInput, TOutput> messengerService, MessengerConfiguration configuration)
+        if (!isValid) context.Result = NotFound();
+    }
+
+    [HttpGet]
+    public string GetInfo()
+    {
+        var url = GetWebHookUrl(Request);
+
+        return $"{DateTime.Now:F} {url}";
+    }
+
+    [HttpPost("{token?}")]
+    public virtual async Task<IActionResult> WebHook([FromBody] TInput input, string token)
+    {
+        if (!ModelState.IsValid)
         {
-            Log = log;
-            _messengerService = messengerService;
-            _configuration = configuration;
+            var errors = GetErrors(ModelState);
+            Log.LogError(errors);
         }
 
-        public override void OnActionExecuting(ActionExecutingContext context)
-        {
-            var isValid = IsValidRequest(context);
+        var response = await _messengerService.ProcessIncomingAsync(input);
 
-            if (!isValid)
-            {
-                context.Result = NotFound();
-            }
+        return Json(response, SerializerSettings);
+    }
+
+    [HttpPut("{token?}")]
+    public virtual async Task<IActionResult> CreateWebHook(string token)
+    {
+        var url = GetWebHookUrl(Request);
+
+        var result = await _messengerService.SetWebhookAsync(url);
+
+        return Json(result);
+    }
+
+    [HttpDelete("{token?}")]
+    public virtual async Task<IActionResult> DeleteWebHook(string token)
+    {
+        var result = await _messengerService.DeleteWebhookAsync();
+
+        return Json(result);
+    }
+
+    protected virtual bool IsValidRequest(ActionExecutingContext context)
+    {
+        if (string.IsNullOrEmpty(_configuration.IncomingToken)) return true;
+
+        if (context.ActionArguments.TryGetValue(TokenParameter, out var value))
+        {
+            var token = value as string;
+
+            return string.Equals(_configuration.IncomingToken, token, StringComparison.InvariantCultureIgnoreCase);
         }
 
-        [HttpGet]
-        public string GetInfo()
-        {
-            var url = GetWebHookUrl(Request);
+        return false;
+    }
 
-            return $"{DateTime.Now:F} {url}";
-        }
+    private string GetWebHookUrl(HttpRequest request)
+    {
+        var pathBase = request.PathBase.Value;
+        var pathSegment = request.Path.Value;
 
-        [HttpPost("{token?}")]
-        public virtual async Task<IActionResult> WebHook([FromBody]TInput input, string token)
-        {
-            if (!ModelState.IsValid)
-            {
-                var errors = GetErrors(ModelState);
-                Log.LogError(errors);
-            }
+        var url = $"{request.Scheme}://{request.Host}{pathBase}{pathSegment}";
 
-            var response = await _messengerService.ProcessIncomingAsync(input);
+        return url;
+    }
 
-            return Json(response, SerializerSettings);
-        }
-
-        [HttpPut("{token?}")]
-        public virtual async Task<IActionResult> CreateWebHook(string token)
-        {
-            var url = GetWebHookUrl(Request);
-
-            var result = await _messengerService.SetWebhookAsync(url);
-
-            return Json(result);
-        }
-
-        [HttpDelete("{token?}")]
-        public virtual async Task<IActionResult> DeleteWebHook(string token)
-        {
-            var result = await _messengerService.DeleteWebhookAsync();
-
-            return Json(result);
-        }
-
-        protected virtual bool IsValidRequest(ActionExecutingContext context)
-        {
-            if (string.IsNullOrEmpty(_configuration.IncomingToken))
-            {
-                return true;
-            }
-
-            if (context.ActionArguments.TryGetValue(TokenParameter, out object value))
-            {
-                var token = value as string;
-
-                return string.Equals(_configuration.IncomingToken, token, StringComparison.InvariantCultureIgnoreCase);
-            }
-
-            return false;
-        }
-
-        private string GetWebHookUrl(HttpRequest request)
-        {
-            var pathBase = request.PathBase.Value;
-            var pathSegment = request.Path.Value;
-
-            var url = $"{request.Scheme}://{request.Host}{pathBase}{pathSegment}";
-
-            return url;
-        }
-
-        private string GetErrors(ModelStateDictionary modelState)
-        {
-            return modelState?.Values
-                .SelectMany(v => v.Errors?.Select(e => e.ErrorMessage))
-                .Where(m => !string.IsNullOrEmpty(m))
-                .JoinToString(Environment.NewLine);
-        }
+    private string GetErrors(ModelStateDictionary modelState)
+    {
+        return modelState?.Values
+            .SelectMany(v => v.Errors?.Select(e => e.ErrorMessage))
+            .Where(m => !string.IsNullOrEmpty(m))
+            .JoinToString(Environment.NewLine);
     }
 }

@@ -1,37 +1,36 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
-namespace FillInTheTextBot.Services.Extensions
+namespace FillInTheTextBot.Services.Extensions;
+
+public static class TasksExtensions
 {
-    public static class TasksExtensions
+    private static readonly ILogger Log;
+
+    static TasksExtensions()
     {
-        private static readonly ILogger Log;
+        Log = InternalLoggerFactory.CreateLogger(typeof(TaskExtensions).Name);
+    }
 
-        static TasksExtensions()
+    /// <summary>
+    ///     Fire-and-forget
+    ///     Позволяет не дожидаться завершения задачи.
+    ///     В случае ошибки исключение будет логировано.
+    /// </summary>
+    /// <param name="task"></param>
+    public static void Forget(this Task task)
+    {
+        Task.Factory.StartNew(async () =>
         {
-            Log = InternalLoggerFactory.CreateLogger(typeof(TaskExtensions).Name);
-        }
-
-        /// <summary>
-        /// Fire-and-forget
-        /// Позволяет не дожидаться завершения задачи.
-        /// В случае ошибки исключение будет логировано.
-        /// </summary>
-        /// <param name="task"></param>
-        public static void Forget(this Task task)
-        {
-            Task.Factory.StartNew(async () =>
+            try
             {
-                try
-                {
-                    await task.ConfigureAwait(false);
-                }
-                catch (Exception e)
-                {
-                    Log?.LogError(e, "Error while executing the task");
-                }
-            }).ConfigureAwait(false);
-        }
+                await task.ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                Log?.LogError(e, "Error while executing the task");
+            }
+        }).ConfigureAwait(false);
     }
 }

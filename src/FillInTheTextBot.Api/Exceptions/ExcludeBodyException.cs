@@ -1,19 +1,18 @@
-using System;
+﻿using System;
 
-namespace FillInTheTextBot.Api.Exceptions
+namespace FillInTheTextBot.Api.Exceptions;
+
+public class ExcludeBodyException : Exception
 {
-    public class ExcludeBodyException : Exception
+    public ExcludeBodyException()
     {
-        public ExcludeBodyException()
-        {
-        }
+    }
 
-        public ExcludeBodyException(string message) : base(message)
-        {
-        }
+    public ExcludeBodyException(string message) : base(message)
+    {
+    }
 
-        public ExcludeBodyException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
+    public ExcludeBodyException(string message, Exception innerException) : base(message, innerException)
+    {
     }
 }

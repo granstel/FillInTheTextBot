@@ -1,15 +1,14 @@
-﻿namespace FillInTheTextBot.Services.Configuration
+﻿namespace FillInTheTextBot.Services.Configuration;
+
+public class AppConfiguration
 {
-    public class AppConfiguration
-    {
-        public HttpLogConfiguration HttpLog { get; set; }
+    public HttpLogConfiguration HttpLog { get; set; }
 
-        public DialogflowConfiguration[] Dialogflow { get; set; }
+    public DialogflowConfiguration[] Dialogflow { get; set; }
 
-        public RedisConfiguration Redis { get; set; }
+    public RedisConfiguration Redis { get; set; }
 
-        public TracingConfiguration Tracing { get; set; }
+    public TracingConfiguration Tracing { get; set; }
 
-        public ConversationConfiguration Conversation { get; set; }
-    }
+    public ConversationConfiguration Conversation { get; set; }
 }

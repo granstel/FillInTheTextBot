@@ -28,7 +28,7 @@ namespace FillInTheTextBot.Models
         public List<Context> RequiredContexts { get; set; }
 
         public bool IsOldUser { get; set; }
-        
+
         public bool HasScreen { get; set; }
 
         public string ClientId { get; set; }

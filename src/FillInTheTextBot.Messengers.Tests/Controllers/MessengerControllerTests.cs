@@ -9,173 +9,168 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 
-namespace FillInTheTextBot.Messengers.Tests.Controllers
+namespace FillInTheTextBot.Messengers.Tests.Controllers;
+
+[TestFixture]
+public class MessengerControllerTests : ControllerTests<ControllerFixture>
 {
-    [TestFixture]
-    public class MessengerControllerTests : ControllerTests<ControllerFixture>
+    [SetUp]
+    public void InitTest()
     {
-        private Mock<IMessengerService<InputFixture, OutputFixture>> _messengerService;
-        private Mock<MessengerConfiguration> _configuration;
+        InitTestBase();
 
-        private readonly string _tokenParameter = "token";
+        _messengerService = MockRepository.Create<IMessengerService<InputFixture, OutputFixture>>();
+        _configuration = MockRepository.Create<MessengerConfiguration>();
 
-        [SetUp]
-        public void InitTest()
-        {
-            InitTestBase();
+        var log = Mock.Of<ILogger<ControllerFixture>>();
+        Target = new ControllerFixture(log, _messengerService.Object, _configuration.Object);
+    }
 
-            _messengerService = MockRepository.Create<IMessengerService<InputFixture, OutputFixture>>();
-            _configuration = MockRepository.Create<MessengerConfiguration>();
+    private Mock<IMessengerService<InputFixture, OutputFixture>> _messengerService;
+    private Mock<MessengerConfiguration> _configuration;
 
-            var log = Mock.Of<ILogger<ControllerFixture>>();
-            Target = new ControllerFixture(log, _messengerService.Object, _configuration.Object);
-        }
+    private readonly string _tokenParameter = "token";
 
-        #region OnActionExecuting
+    [Test]
+    public void OnActionExecuting_InvalidToken_NotFound()
+    {
+        var token = Fixture.Create<string>();
 
-        [Test]
-        public void OnActionExecuting_InvalidToken_NotFound()
-        {
-            var token = Fixture.Create<string>();
+        _configuration.SetupGet(c => c.IncomingToken).Returns(Fixture.Create<string>());
 
-            _configuration.SetupGet(c => c.IncomingToken).Returns(Fixture.Create<string>());
+        var actionArguments = new Dictionary<string, object> { { _tokenParameter, token } };
 
-            var actionArguments = new Dictionary<string, object> { { _tokenParameter, token } };
+        var context = GetActionContext(actionArguments);
 
-            var context = GetActionContext(actionArguments);
 
+        Target.OnActionExecuting(context);
 
-            Target.OnActionExecuting(context);
 
+        Assert.True(context.Result is NotFoundResult);
+    }
 
-            Assert.True(context.Result is NotFoundResult);
-        }
+    [Test]
+    public void OnActionExecuting_NullConfigurationToken_NullResult()
+    {
+        var token = Fixture.Create<string>();
 
-        [Test]
-        public void OnActionExecuting_NullConfigurationToken_NullResult()
-        {
-            var token = Fixture.Create<string>();
+        _configuration.SetupGet(c => c.IncomingToken).Returns(() => null);
 
-            _configuration.SetupGet(c => c.IncomingToken).Returns(() => null);
+        var actionArguments = new Dictionary<string, object> { { _tokenParameter, token } };
 
-            var actionArguments = new Dictionary<string, object> { { _tokenParameter, token } };
+        var context = GetActionContext(actionArguments);
 
-            var context = GetActionContext(actionArguments);
 
+        Target.OnActionExecuting(context);
 
-            Target.OnActionExecuting(context);
 
+        Assert.Null(context.Result);
+    }
 
-            Assert.Null(context.Result);
-        }
+    [Test]
+    public void OnActionExecuting_ValidToken_NullResult()
+    {
+        var token = Fixture.Create<string>();
 
-        [Test]
-        public void OnActionExecuting_ValidToken_NullResult()
-        {
-            var token = Fixture.Create<string>();
+        _configuration.SetupGet(c => c.IncomingToken).Returns(token);
 
-            _configuration.SetupGet(c => c.IncomingToken).Returns(token);
+        var actionArguments = new Dictionary<string, object> { { _tokenParameter, token } };
 
-            var actionArguments = new Dictionary<string, object> { { _tokenParameter, token } };
+        var context = GetActionContext(actionArguments);
 
-            var context = GetActionContext(actionArguments);
 
+        Target.OnActionExecuting(context);
 
-            Target.OnActionExecuting(context);
 
+        Assert.Null(context.Result);
+    }
 
-            Assert.Null(context.Result);
-        }
+    [Test]
+    public void OnActionExecuting_NullTokens_NullResult()
+    {
+        string token = null;
 
-        [Test]
-        public void OnActionExecuting_NullTokens_NullResult()
-        {
-            string token = null;
+        _configuration.SetupGet(c => c.IncomingToken).Returns(token);
 
-            _configuration.SetupGet(c => c.IncomingToken).Returns(token);
+        var actionArguments = new Dictionary<string, object> { { _tokenParameter, token } };
 
-            var actionArguments = new Dictionary<string, object> { { _tokenParameter, token } };
+        var context = GetActionContext(actionArguments);
 
-            var context = GetActionContext(actionArguments);
 
+        Target.OnActionExecuting(context);
 
-            Target.OnActionExecuting(context);
 
+        Assert.Null(context.Result);
+    }
 
-            Assert.Null(context.Result);
-        }
+    [Test]
+    public void Get_GetWebHookUrl_Success()
+    {
+        SetControllerContext();
 
-        #endregion OnActionExecuting
+        var expected = GetExpectedWebHookUrl();
 
-        [Test]
-        public void Get_GetWebHookUrl_Success()
-        {
-            SetControllerContext();
 
-            var expected = GetExpectedWebHookUrl();
+        var result = Target.GetInfo();
 
 
-            var result = Target.GetInfo();
+        Assert.True(result.Contains(expected));
+    }
 
+    [Test]
+    public async Task Post_ProcessIncomingAsync_Response()
+    {
+        var input = Fixture.Build<InputFixture>().Create();
 
-            Assert.True(result.Contains(expected));
-        }
+        var token = Fixture.Create<string>();
 
-        [Test]
-        public async Task Post_ProcessIncomingAsync_Response()
-        {
-            var input = Fixture.Build<InputFixture>().Create();
+        var expected = Fixture.Create<OutputFixture>();
 
-            var token = Fixture.Create<string>();
+        _messengerService.Setup(s => s.ProcessIncomingAsync(input)).ReturnsAsync(expected);
 
-            var expected = Fixture.Create<OutputFixture>();
 
-            _messengerService.Setup(s => s.ProcessIncomingAsync(input)).ReturnsAsync(expected);
+        var result = await Target.WebHook(input, token);
 
 
-            var result = await Target.WebHook(input, token);
+        MockRepository.VerifyAll();
+        var value = (result as JsonResult)?.Value;
+        Assert.AreEqual(expected, value);
+    }
 
+    [Test]
+    public async Task CreateWebHook_SetWebhookAsync_Response()
+    {
+        SetControllerContext();
 
-            MockRepository.VerifyAll();
-            var value = (result as JsonResult)?.Value;
-            Assert.AreEqual(expected, value);
-        }
+        var url = GetExpectedWebHookUrl();
 
-        [Test]
-        public async Task CreateWebHook_SetWebhookAsync_Response()
-        {
-            SetControllerContext();
+        var expected = true;
 
-            var url = GetExpectedWebHookUrl();
+        _messengerService.Setup(s => s.SetWebhookAsync(url)).ReturnsAsync(expected);
 
-            var expected = true;
 
-            _messengerService.Setup(s => s.SetWebhookAsync(url)).ReturnsAsync(expected);
+        var result = await Target.CreateWebHook(null);
 
 
-            var result = await Target.CreateWebHook(null);
+        MockRepository.VerifyAll();
 
+        var value = (result as JsonResult)?.Value;
+        Assert.AreEqual(expected, value);
+    }
 
-            MockRepository.VerifyAll();
+    [Test]
+    public async Task DeleteWebHook_DeleteWebHookAsync_Response()
+    {
+        var expected = true;
 
-            var value = (result as JsonResult)?.Value;
-            Assert.AreEqual(expected, value);
-        }
+        _messengerService.Setup(s => s.DeleteWebhookAsync()).ReturnsAsync(expected);
 
-        [Test]
-        public async Task DeleteWebHook_DeleteWebHookAsync_Response()
-        {
-            var expected = true;
+        var result = await Target.DeleteWebHook(null);
 
-            _messengerService.Setup(s => s.DeleteWebhookAsync()).ReturnsAsync(expected);
 
-            var result = await Target.DeleteWebHook(null);
+        MockRepository.VerifyAll();
 
-
-            MockRepository.VerifyAll();
-
-            var value = (result as JsonResult)?.Value;
-            Assert.AreEqual(expected, value);
-        }
+        var value = (result as JsonResult)?.Value;
+        Assert.AreEqual(expected, value);
     }
 }

@@ -1,66 +1,61 @@
+﻿using AutoFixture;
 using FillInTheTextBot.Services.Extensions;
-using AutoFixture;
 using NUnit.Framework;
 
-namespace FillInTheTextBot.Services.Tests.Extensions
+namespace FillInTheTextBot.Services.Tests.Extensions;
+
+[TestFixture]
+public class StringExtensionsTests
 {
-    [TestFixture]
-    public class StringExtensionsTests
+    private readonly Fixture _fixture = new();
+
+    [Test]
+    public void Sanitize_Null_Null()
     {
-        private readonly Fixture _fixture = new Fixture();
-
-        #region Sanitize
-
-        [Test]
-        public void Sanitize_Null_Null()
-        {
-            string expected = null;
+        string expected = null;
 
 
-            // ReSharper disable once ExpressionIsAlwaysNull
-            var result = expected.Sanitize();
+        // ReSharper disable once ExpressionIsAlwaysNull
+        var result = expected.Sanitize();
 
 
-            Assert.That(result, Is.Null);
-        }
+        Assert.That(result, Is.Null);
+    }
 
-        [Test]
-        public void Sanitize_Empty_Empty()
-        {
-            var expected = string.Empty;
-
-
-            var result = expected.Sanitize();
+    [Test]
+    public void Sanitize_Empty_Empty()
+    {
+        var expected = string.Empty;
 
 
-            Assert.That(string.IsNullOrEmpty(result), Is.True);
-        }
-                    
-        [Test]      
-        public void Sanitize_AnyString_Same()
-        {
-            var expected = _fixture.Create<string>();
+        var result = expected.Sanitize();
 
 
-            var result = expected.Sanitize();
+        Assert.That(string.IsNullOrEmpty(result), Is.True);
+    }
+
+    [Test]
+    public void Sanitize_AnyString_Same()
+    {
+        var expected = _fixture.Create<string>();
 
 
-            Assert.That(result, Is.EqualTo(expected));
-        }
-                    
-        [Test]      
-        public void Sanitize_QuotesAtAnswer_Success()
-        {
-            var tested = "This text is with &quot;quotes&quot;";
+        var result = expected.Sanitize();
 
 
-            var result = tested.Sanitize();
+        Assert.That(result, Is.EqualTo(expected));
+    }
+
+    [Test]
+    public void Sanitize_QuotesAtAnswer_Success()
+    {
+        var tested = "This text is with &quot;quotes&quot;";
 
 
-            var expected = "This text is with \"quotes\"";
-            Assert.That(result, Is.EqualTo(expected));
-        }
+        var result = tested.Sanitize();
 
-        #endregion Sanitize
+
+        var expected = "This text is with \"quotes\"";
+        Assert.That(result, Is.EqualTo(expected));
     }
 }

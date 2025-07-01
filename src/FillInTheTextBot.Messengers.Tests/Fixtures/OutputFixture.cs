@@ -1,6 +1,5 @@
-﻿namespace FillInTheTextBot.Messengers.Tests.Fixtures
+﻿namespace FillInTheTextBot.Messengers.Tests.Fixtures;
+
+public class OutputFixture
 {
-    public class OutputFixture
-    {
-    }
 }
