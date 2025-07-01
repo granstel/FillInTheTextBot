@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using FillInTheTextBot.Api.DI;
@@ -47,7 +48,17 @@ namespace FillInTheTextBot.Api
                     .AddOtlpExporter(options =>
                     {
                         var tracingConfig = _configuration.GetSection("Tracing").Get<TracingConfiguration>();
-                        options.Endpoint = new Uri($"http://{tracingConfig.Host}:{tracingConfig.Port}");
+                        if (tracingConfig != null)
+                        {
+                            var host = string.IsNullOrEmpty(tracingConfig.Host) ? "localhost" : tracingConfig.Host;
+                            var port = tracingConfig.Port > 0 ? tracingConfig.Port : 4317; // Стандартный порт OTLP
+                            options.Endpoint = new Uri($"http://{host}:{port}");
+                        }
+                        else
+                        {
+                            // Значения по умолчанию, если конфигурация не найдена
+                            options.Endpoint = new Uri("http://localhost:4317");
+                        }
                     }));
             services.AddHttpLogging(o =>
             {
@@ -64,6 +75,14 @@ namespace FillInTheTextBot.Api
         // ReSharper disable once UnusedMember.Global
         public void Configure(IApplicationBuilder app, AppConfiguration configuration)
         {
+            // Регистрируем ActivityListener для нашего ActivitySource
+            var listener = new ActivityListener
+            {
+                ShouldListenTo = source => source.Name == "FillInTheTextBot",
+                Sample = (ref ActivityCreationOptions<ActivityContext> options) => ActivitySamplingResult.AllData
+            };
+            ActivitySource.AddActivityListener(listener);
+
             app.UseMiddleware<ExceptionsMiddleware>();
 
             app.UseRouting();

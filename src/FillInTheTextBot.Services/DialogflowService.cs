@@ -89,7 +89,13 @@ namespace FillInTheTextBot.Services
 
         private async Task<InternalModels.Dialog> GetResponseInternalAsync(InternalModels.Request request, SessionsClient client, ScopeContext context)
         {
-            using (Tracing.Trace(s => s.SetTag(nameof(context.ScopeId), context.ScopeId), "Get response from Dialogflow"))
+            using (Tracing.Trace(s => 
+            {
+                if (context != null)
+                {
+                    s.SetTag(nameof(context.ScopeId), context.ScopeId);
+                }
+            }, "Get response from Dialogflow"))
             {
                 MetricsCollector.Increment("dialogflow_DetectIntent_scope", context.ScopeId);
 

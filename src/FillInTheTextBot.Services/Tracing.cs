@@ -6,10 +6,12 @@ namespace FillInTheTextBot.Services
 {
     public static class Tracing
     {
+        // Создаем один экземпляр ActivitySource для всех вызовов
+        private static readonly ActivitySource _activitySource = new ActivitySource("FillInTheTextBot");
+
         public static IDisposable Trace(Action<Activity> activityAction = null, string operationName = null, [CallerMemberName] string caller = null)
         {
-            var activitySource = new ActivitySource("FillInTheTextBot");
-            var activity = activitySource.StartActivity(operationName ?? caller);
+            var activity = _activitySource.StartActivity(operationName ?? caller);
 
             activityAction?.Invoke(activity);
 
