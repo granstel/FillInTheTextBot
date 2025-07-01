@@ -1,9 +1,7 @@
-﻿using System;
-using System.Runtime.Serialization;
+using System;
 
 namespace FillInTheTextBot.Api.Exceptions
 {
-    [Serializable]
     public class ExcludeBodyException : Exception
     {
         public ExcludeBodyException()
@@ -15,10 +13,6 @@ namespace FillInTheTextBot.Api.Exceptions
         }
 
         public ExcludeBodyException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
-
-        protected ExcludeBodyException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }
