@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
@@ -15,7 +15,7 @@
 
 
     <ItemGroup>
-        <PackageReference Include="MailRu.Marusia.Models" Version="1.1.0" />
+        <PackageReference Include="MailRu.Marusia.Models" />
     </ItemGroup>
 
     <ItemGroup>
