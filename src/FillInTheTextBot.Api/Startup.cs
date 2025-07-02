@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -11,9 +11,9 @@ using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
-using Prometheus;
 
 namespace FillInTheTextBot.Api;
 
@@ -39,10 +39,12 @@ public class Startup
         var fullVersion = Assembly.GetExecutingAssembly().GetName().Version;
         var version = $"{fullVersion?.Major}.{fullVersion?.Minor}.{fullVersion?.Build}";
 
+        var resourceBuilder = ResourceBuilder.CreateDefault()
+            .AddService("FillInTheTextBot", serviceVersion: version);
+
         services.AddOpenTelemetry()
             .WithTracing(builder => builder
-                .SetResourceBuilder(ResourceBuilder.CreateDefault()
-                    .AddService("FillInTheTextBot", serviceVersion: version))
+                .SetResourceBuilder(resourceBuilder)
                 .AddAspNetCoreInstrumentation()
                 .AddHttpClientInstrumentation()
                 .AddOtlpExporter(options =>
@@ -59,7 +61,14 @@ public class Startup
                         // Значения по умолчанию, если конфигурация не найдена
                         options.Endpoint = new Uri("http://localhost:4317");
                     }
-                }));
+                }))
+            .WithMetrics(builder => builder
+                .SetResourceBuilder(resourceBuilder)
+                .AddAspNetCoreInstrumentation()
+                .AddHttpClientInstrumentation()
+                .AddRuntimeInstrumentation()
+                .AddMeter(MetricsCollector.MeterName)
+                .AddPrometheusExporter());
         services.AddHttpLogging(o => { o.LoggingFields = HttpLoggingFields.All; });
 
         services.AddAppConfiguration(_configuration);
@@ -83,9 +92,7 @@ public class Startup
         app.UseMiddleware<ExceptionsMiddleware>();
 
         app.UseRouting();
-        app.UseHttpMetrics();
-        app.UseGrpcMetrics();
-
+        
         if (configuration.HttpLog.Enabled)
             app.UseWhen(context => configuration.HttpLog.IncludeEndpoints.Any(w =>
                     context.Request.Path.Value.Contains(w, StringComparison.InvariantCultureIgnoreCase)),
@@ -94,7 +101,7 @@ public class Startup
         app.UseEndpoints(e =>
         {
             e.MapControllers();
-            e.MapMetrics();
+            e.MapPrometheusScrapingEndpoint();
         });
     }
 }
