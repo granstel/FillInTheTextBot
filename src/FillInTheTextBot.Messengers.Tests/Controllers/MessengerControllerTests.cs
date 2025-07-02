@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoFixture;
 using FillInTheTextBot.Messengers.Tests.Fixtures;
@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
+using Assert = NUnit.Framework.Legacy.ClassicAssert;
+using NUnit.Framework.Legacy;
 
 namespace FillInTheTextBot.Messengers.Tests.Controllers;
 
