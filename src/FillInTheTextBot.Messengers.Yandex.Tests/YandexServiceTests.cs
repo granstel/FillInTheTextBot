@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using AutoFixture;
 using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
@@ -55,6 +55,6 @@ public class YandexServiceTests
 
         _mockRepository.VerifyAll();
 
-        Assert.NotNull(result);
+        Assert.That(result, Is.Not.Null);
     }
 }

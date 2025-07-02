@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using AutoFixture;
 using FillInTheTextBot.Services.Mapping;
 using Google.Cloud.Dialogflow.V2;
@@ -41,7 +41,7 @@ public class DialogflowMappingTests
 
         var dialog = source.ToDialog();
 
-        Assert.IsEmpty(dialog.Parameters);
+        Assert.That(dialog.Parameters, Is.Empty);
     }
 
     [Test]
@@ -95,9 +95,9 @@ public class DialogflowMappingTests
 
         var dialog = source.ToDialog();
 
-        Assert.IsNotEmpty(dialog.Parameters, "Parameters should not be empty");
-        Assert.True(dialog.Parameters.ContainsKey(key));
-        Assert.True(dialog.Parameters.Values.Contains(string.Join("/", stringValue, anotherStringValue)));
+        Assert.That(dialog.Parameters, Is.Not.Empty, "Parameters should not be empty");
+        Assert.That(dialog.Parameters.ContainsKey(key), Is.True);
+        Assert.That(dialog.Parameters.Values.Contains(string.Join("/", stringValue, anotherStringValue)), Is.True);
     }
 
     [Test]
@@ -112,7 +112,7 @@ public class DialogflowMappingTests
 
         var dialog = source.ToDialog();
 
-        Assert.AreEqual(fulfillmentText, dialog.Response);
+        Assert.That(dialog.Response, Is.EqualTo(fulfillmentText));
     }
 
     [Test]
@@ -133,10 +133,10 @@ public class DialogflowMappingTests
 
         var result = dialog?.Buttons.FirstOrDefault();
 
-        Assert.IsNotNull(result);
-        Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
-        Assert.AreEqual(quickReplyText, result.Text);
-        Assert.True(result.IsQuickReply);
+        Assert.That(result, Is.Not.Null);
+        Assert.That(dialog.Buttons, Is.Not.Empty, "Buttons should not be empty");
+        Assert.That(result.Text, Is.EqualTo(quickReplyText));
+        Assert.That(result.IsQuickReply, Is.True);
     }
 
     [Test]
@@ -160,10 +160,10 @@ public class DialogflowMappingTests
 
         var result = dialog.Buttons.FirstOrDefault();
 
-        Assert.IsNotNull(result);
-        Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
-        Assert.AreEqual(buttonText, result.Text);
-        Assert.False(result.IsQuickReply);
+        Assert.That(result, Is.Not.Null);
+        Assert.That(dialog.Buttons, Is.Not.Empty, "Buttons should not be empty");
+        Assert.That(result.Text, Is.EqualTo(buttonText));
+        Assert.That(result.IsQuickReply, Is.False);
     }
 
     [Test]
@@ -208,7 +208,7 @@ public class DialogflowMappingTests
 
         var dialog = source.ToDialog();
 
-        Assert.AreEqual(!source.AllRequiredParamsPresent, dialog.ParametersIncomplete);
+        Assert.That(dialog.ParametersIncomplete, Is.EqualTo(!source.AllRequiredParamsPresent));
     }
 
     [Test]
@@ -221,7 +221,7 @@ public class DialogflowMappingTests
 
         var dialog = source.ToDialog();
 
-        Assert.AreEqual(source.Action, dialog.Action);
+        Assert.That(dialog.Action, Is.EqualTo(source.Action));
     }
 
     [Test]
@@ -234,6 +234,6 @@ public class DialogflowMappingTests
 
         var dialog = source.ToDialog();
 
-        Assert.True(dialog.EndConversation);
+        Assert.That(dialog.EndConversation, Is.True);
     }
 }
