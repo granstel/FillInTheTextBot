@@ -8,8 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
-using Assert = NUnit.Framework.Legacy.ClassicAssert;
-using NUnit.Framework.Legacy;
 
 namespace FillInTheTextBot.Messengers.Tests.Controllers;
 
@@ -48,7 +46,7 @@ public class MessengerControllerTests : ControllerTests<ControllerFixture>
         Target.OnActionExecuting(context);
 
 
-        Assert.True(context.Result is NotFoundResult);
+        Assert.That(context.Result, Is.InstanceOf<NotFoundResult>());
     }
 
     [Test]
@@ -66,7 +64,7 @@ public class MessengerControllerTests : ControllerTests<ControllerFixture>
         Target.OnActionExecuting(context);
 
 
-        Assert.Null(context.Result);
+        Assert.That(context.Result, Is.Null);
     }
 
     [Test]
@@ -84,7 +82,7 @@ public class MessengerControllerTests : ControllerTests<ControllerFixture>
         Target.OnActionExecuting(context);
 
 
-        Assert.Null(context.Result);
+        Assert.That(context.Result, Is.Null);
     }
 
     [Test]
@@ -102,7 +100,7 @@ public class MessengerControllerTests : ControllerTests<ControllerFixture>
         Target.OnActionExecuting(context);
 
 
-        Assert.Null(context.Result);
+        Assert.That(context.Result, Is.Null);
     }
 
     [Test]
@@ -116,7 +114,7 @@ public class MessengerControllerTests : ControllerTests<ControllerFixture>
         var result = Target.GetInfo();
 
 
-        Assert.True(result.Contains(expected));
+        Assert.That(result, Does.Contain(expected));
     }
 
     [Test]
@@ -136,7 +134,7 @@ public class MessengerControllerTests : ControllerTests<ControllerFixture>
 
         MockRepository.VerifyAll();
         var value = (result as JsonResult)?.Value;
-        Assert.AreEqual(expected, value);
+        Assert.That(value, Is.EqualTo(expected));
     }
 
     [Test]
@@ -157,7 +155,7 @@ public class MessengerControllerTests : ControllerTests<ControllerFixture>
         MockRepository.VerifyAll();
 
         var value = (result as JsonResult)?.Value;
-        Assert.AreEqual(expected, value);
+        Assert.That(value, Is.EqualTo(expected));
     }
 
     [Test]
@@ -173,6 +171,6 @@ public class MessengerControllerTests : ControllerTests<ControllerFixture>
         MockRepository.VerifyAll();
 
         var value = (result as JsonResult)?.Value;
-        Assert.AreEqual(expected, value);
+        Assert.That(value, Is.EqualTo(expected));
     }
 }
