@@ -1,4 +1,4 @@
-<Solution>
+﻿<Solution>
   <Folder Name="/Messengers/">
     <Project Path="src\FillInTheTextBot.Messengers.Marusia\FillInTheTextBot.Messengers.Marusia.csproj" />
     <Project Path="src\FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj" />
@@ -6,7 +6,6 @@
     <Project Path="src\FillInTheTextBot.Messengers\FillInTheTextBot.Messengers.csproj" />
   </Folder>
   <Folder Name="/Tests/">
-    <Project Path="src\FillInTheTextBot.Api.E2ETests\FillInTheTextBot.Api.E2ETests.csproj" />
     <Project Path="src\FillInTheTextBot.Messengers.Tests\FillInTheTextBot.Messengers.Tests.csproj" />
     <Project Path="src\FillInTheTextBot.Messengers.Yandex.Tests\FillInTheTextBot.Messengers.Yandex.Tests.csproj" />
     <Project Path="src\FillInTheTextBot.Services.Tests\FillInTheTextBot.Services.Tests.csproj" />
