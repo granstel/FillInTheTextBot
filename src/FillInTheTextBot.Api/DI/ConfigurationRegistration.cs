@@ -1,4 +1,4 @@
-using FillInTheTextBot.Services.Configuration;
+﻿using FillInTheTextBot.Services.Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,8 +14,6 @@ internal static class ConfigurationRegistration
         services.AddSingleton(configuration.HttpLog);
         services.AddSingleton(configuration.Redis);
         services.AddSingleton(configuration.Dialogflow);
-        services.AddSingleton(configuration.Rasa ?? System.Array.Empty<RasaConfiguration>());
-        services.AddSingleton(configuration.Nlu ?? new NluConfiguration());
         services.AddSingleton(configuration.Tracing);
         services.AddSingleton(configuration.Conversation);
     }

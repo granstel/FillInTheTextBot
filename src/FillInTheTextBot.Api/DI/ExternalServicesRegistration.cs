@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using FillInTheTextBot.Services.Configuration;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
@@ -22,7 +21,6 @@ internal static class ExternalServicesRegistration
         
         services.AddSingleton(RegisterSessionsClientScopes);
         services.AddSingleton(RegisterContextsClientScopes);
-        services.AddSingleton(RegisterHttpClientScopes);
         services.AddSingleton(RegisterRedisConnectionMultiplexer);
         services.AddSingleton(RegisterRedisClient);
         services.AddSingleton(RegisterCacheService);
@@ -141,51 +139,5 @@ internal static class ExternalServicesRegistration
         var service = new RedisCacheService(db, configuration?.KeyPrefix);
 
         return service;
-    }
-
-    private static ScopesSelector<HttpClient> RegisterHttpClientScopes(IServiceProvider provider)
-    {
-        var httpClientFactory = provider.GetService<IHttpClientFactory>();
-        var rasaConfigurations = provider.GetService<RasaConfiguration[]>() ?? Array.Empty<RasaConfiguration>();
-        var dialogflowConfigurations = provider.GetService<DialogflowConfiguration[]>() ?? Array.Empty<DialogflowConfiguration>();
-        
-        var scopeContexts = new List<ScopeContext>();
-        
-        // Добавляем контексты из Rasa конфигурации
-        foreach (var config in rasaConfigurations.Where(c => !string.IsNullOrEmpty(c.ScopeId)))
-        {
-            var context = new ScopeContext(config.ScopeId, config.DoNotUseForNewSessions);
-            context.TryAddParameter(nameof(config.BaseUrl), config.BaseUrl);
-            context.TryAddParameter(nameof(config.LanguageCode), config.LanguageCode);
-            context.TryAddParameter(nameof(config.LogQuery), config.LogQuery.ToString());
-            scopeContexts.Add(context);
-        }
-        
-        // Добавляем контексты из Dialogflow конфигурации для совместимости
-        foreach (var config in dialogflowConfigurations.Where(c => !string.IsNullOrEmpty(c.ScopeId)))
-        {
-            // Проверяем, что уже не добавили контекст с таким же ScopeId
-            if (!scopeContexts.Any(sc => sc.ScopeId == config.ScopeId))
-            {
-                var context = new ScopeContext(config.ScopeId, config.DoNotUseForNewSessions);
-                context.TryAddParameter("IsDialogflow", "true");
-                scopeContexts.Add(context);
-            }
-        }
-        
-        // Если нет конфигураций, создаем дефолтный контекст
-        if (!scopeContexts.Any())
-        {
-            var context = new ScopeContext("default", false);
-            context.TryAddParameter(nameof(RasaConfiguration.BaseUrl), "http://localhost:5005");
-            context.TryAddParameter(nameof(RasaConfiguration.LanguageCode), "ru");
-            context.TryAddParameter(nameof(RasaConfiguration.LogQuery), "false");
-            scopeContexts.Add(context);
-        }
-
-        var selector = new ScopesSelector<HttpClient>(scopeContexts, 
-            context => httpClientFactory?.CreateClient() ?? new HttpClient());
-
-        return selector;
     }
 }
