@@ -1,0 +1,29 @@
+{
+  "name": "dialogflow-emulator",
+  "version": "1.0.0",
+  "description": "Simple Dialogflow V2 API emulator for local development",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "dialogflow",
+    "emulator",
+    "mock",
+    "local",
+    "development"
+  ],
+  "author": "FillInTheTextBot Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "@grpc/grpc-js": "^1.9.14",
+    "@grpc/proto-loader": "^0.7.10"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

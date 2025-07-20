@@ -1,13 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using GranSteL.Helpers.Redis;
 using GranSteL.Tools.ScopeSelector;
 using Grpc.Auth;
+using Grpc.Core;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using StackExchange.Redis;
 
 namespace FillInTheTextBot.Api.DI;
@@ -40,6 +44,7 @@ internal static class ExternalServicesRegistration
                 context.TryAddParameter(nameof(configuration.Region), configuration.Region);
                 context.TryAddParameter(nameof(configuration.LanguageCode), configuration.LanguageCode);
                 context.TryAddParameter(nameof(configuration.LogQuery), configuration.LogQuery.ToString());
+                context.TryAddParameter(nameof(configuration.EmulatorEndpoint), configuration.EmulatorEndpoint);
 
                 return context;
             });
@@ -62,20 +67,32 @@ internal static class ExternalServicesRegistration
 
     private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
     {
+        context.TryGetParameterValue(nameof(DialogflowConfiguration.EmulatorEndpoint), out var emulatorEndpoint);
+        
+        if (!string.IsNullOrWhiteSpace(emulatorEndpoint))
+        {
+            // Используем HTTP эмулятор
+            var httpClient = new HttpClient();
+            var baseUrl = emulatorEndpoint.StartsWith("http") ? emulatorEndpoint : $"http://{emulatorEndpoint}";
+            
+            // Создаем наш HTTP клиент-эмулятор (без логгера для простоты)
+            return new DialogflowEmulatorClient(httpClient, baseUrl);
+        }
+        
+        // Обычное подключение к Google Dialogflow
         context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out var jsonPath);
         var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(SessionsClient.DefaultScopes);
 
         var endpoint = GetEndpoint(context, SessionsClient.DefaultEndpoint);
 
-        var clientBuilder = new SessionsClientBuilder
+        var standardClientBuilder = new SessionsClientBuilder
         {
             ChannelCredentials = credential.ToChannelCredentials(),
             Endpoint = endpoint
         };
 
-        var client = clientBuilder.Build();
-
-        return client;
+        var standardClient = standardClientBuilder.Build();
+        return standardClient;
     }
 
     private static ScopesSelector<ContextsClient> RegisterContextsClientScopes(IServiceProvider provider)
@@ -93,20 +110,29 @@ internal static class ExternalServicesRegistration
 
     private static ContextsClient CreateDialogflowContextsClient(ScopeContext context)
     {
+        context.TryGetParameterValue(nameof(DialogflowConfiguration.EmulatorEndpoint), out var emulatorEndpoint);
+        
+        if (!string.IsNullOrWhiteSpace(emulatorEndpoint))
+        {
+            // Используем HTTP эмулятор для контекстов
+            var baseUrl = emulatorEndpoint.StartsWith("http") ? emulatorEndpoint : $"http://{emulatorEndpoint}";
+            return new DialogflowEmulatorContextsClient(baseUrl);
+        }
+        
+        // Обычное подключение к Google Dialogflow
         context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out var jsonPath);
         var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(ContextsClient.DefaultScopes);
 
         var endpoint = GetEndpoint(context, ContextsClient.DefaultEndpoint);
 
-        var clientBuilder = new ContextsClientBuilder
+        var standardClientBuilder = new ContextsClientBuilder
         {
             ChannelCredentials = credential.ToChannelCredentials(),
             Endpoint = endpoint
         };
 
-        var client = clientBuilder.Build();
-
-        return client;
+        var standardClient = standardClientBuilder.Build();
+        return standardClient;
     }
 
     private static string GetEndpoint(ScopeContext context, string defaultEndpoint)

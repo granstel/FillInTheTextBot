@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  dialogflow-emulator:
+    build:
+      context: .
+      dockerfile: dialogflow-emulator/Dockerfile
+    container_name: fillinthetextbot-dialogflow-emulator
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./Dialogflow/FillInTheTextBot-eu:/app/agent:ro
+    environment:
+      - PROJECT_ID=fillinthetextbot-vyyaxp
+      - LANGUAGE_CODE=ru
+      - AGENT_PATH=/app/agent
+      - PORT=3000
+    restart: unless-stopped
+    networks:
+      - dialogflow-net
+
+networks:
+  dialogflow-net:
+    driver: bridge
