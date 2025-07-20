@@ -1,0 +1,73 @@
+
+
+services:
+  # Конвертер Dialogflow в Rasa
+  dialogflow-converter:
+    build: 
+      context: ./converter
+      dockerfile: Dockerfile
+    container_name: fillinthetextbot-converter
+    volumes:
+      - ./Dialogflow/FillInTheTextBot-eu:/data/dialogflow:ro
+      - ./rasa_bot:/data/rasa
+      - ./rasa_base_files:/app/base_files:ro
+    command: ["/data/dialogflow", "/data/rasa"]
+    networks:
+      - rasa-network
+
+  # Rasa server
+  rasa-server:
+    image: rasa/rasa:latest
+    container_name: fillinthetextbot-rasa
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./rasa_bot:/app
+    working_dir: /app
+    entrypoint: ["/bin/bash", "-c"]
+    command: >
+      "echo 'Ждем завершения конвертации...' &&
+       while [ ! -f /app/domain.yml ]; do sleep 2; done &&
+       echo 'Конвертация завершена, начинаем обучение...' &&
+       rasa train --force &&
+       echo 'Обучение завершено, запускаем сервер...' &&
+       rasa run --cors '*' --enable-api --debug"
+    environment:
+      - RASA_TELEMETRY_ENABLED=false
+    depends_on:
+      - dialogflow-converter
+    networks:
+      - rasa-network
+
+  # Rasa Action Server
+  rasa-actions:
+    image: rasa/rasa-sdk:latest
+    container_name: fillinthetextbot-actions
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./rasa_bot:/app
+    working_dir: /app
+    entrypoint: []
+    command: >
+      bash -c "echo 'Ждем создания файлов проекта...' &&
+               while [ ! -f /app/domain.yml ]; do sleep 2; done &&
+               echo 'Запускаем action server...' &&
+               python -m rasa_sdk --actions actions --debug"
+    depends_on:
+      - dialogflow-converter
+    networks:
+      - rasa-network
+
+  # Redis для хранения сессий
+  redis:
+    image: redis:7-alpine
+    container_name: fillinthetextbot-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - rasa-network
+
+networks:
+  rasa-network:
+    driver: bridge

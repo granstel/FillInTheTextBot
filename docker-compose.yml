@@ -1,0 +1,106 @@
+version: '3.8'
+
+services:
+  # Rasa server
+  rasa-server:
+    image: rasa/rasa:3.6.20
+    container_name: fillinthetextbot-rasa
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./rasa_bot:/app
+    working_dir: /app
+    command: >
+      bash -c "rasa train --force &&
+               rasa run --cors '*' --enable-api --debug"
+    environment:
+      - RASA_TELEMETRY_ENABLED=false
+    depends_on:
+      - redis
+    networks:
+      - rasa-network
+
+  # Rasa Action Server
+  rasa-actions:
+    image: rasa/rasa-sdk:3.6.20
+    container_name: fillinthetextbot-actions
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./rasa_bot/actions:/app/actions
+    working_dir: /app
+    command: ["rasa", "run", "actions", "--debug"]
+    networks:
+      - rasa-network
+
+  # Redis для хранения сессий
+  redis:
+    image: redis:7-alpine
+    container_name: fillinthetextbot-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - rasa-network
+
+  # Rasa X для веб-интерфейса (опционально)
+  rasa-x:
+    image: rasa/rasa-x:1.2.0
+    container_name: fillinthetextbot-rasa-x
+    ports:
+      - "8080:5002"
+    volumes:
+      - ./rasa_bot:/app
+    environment:
+      - RASA_MODEL_SERVER=http://rasa-server:5005
+      - RASA_X_HOST=0.0.0.0
+      - RASA_USER_APP=http://rasa-server:5005
+      - RASA_PRODUCTION_HOST=http://rasa-server:5005
+      - RASA_TOKEN=${RASA_TOKEN:-test_token}
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_DATABASE=rasa
+      - DB_USERNAME=rasa
+      - DB_PASSWORD=rasa
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=1
+      - REDIS_PASSWORD=""
+    depends_on:
+      - postgres
+      - redis
+      - rasa-server
+    networks:
+      - rasa-network
+
+  # PostgreSQL для Rasa X
+  postgres:
+    image: postgres:13
+    container_name: fillinthetextbot-postgres
+    environment:
+      - POSTGRES_USER=rasa
+      - POSTGRES_PASSWORD=rasa
+      - POSTGRES_DB=rasa
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - rasa-network
+
+  # Nginx для проксирования (опционально)
+  nginx:
+    image: nginx:alpine
+    container_name: fillinthetextbot-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - rasa-server
+    networks:
+      - rasa-network
+
+volumes:
+  postgres_data:
+
+networks:
+  rasa-network:
+    driver: bridge
