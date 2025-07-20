@@ -78,6 +78,7 @@ public class Startup
         services.AddHttpLogging(o => { o.LoggingFields = HttpLoggingFields.All; });
 
         services.AddAppConfiguration(_configuration);
+        services.ConfigureNluProvider(_configuration.GetSection("AppConfiguration"));
         services.AddInternalServices();
         services.AddExternalServices();
     }
