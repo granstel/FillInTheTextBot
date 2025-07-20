@@ -74,9 +74,12 @@ public class DialogflowService : IDialogflowService
     {
         using (Tracing.Trace())
         {
+            MemoryDiagnostics.LogMemoryUsage("DialogflowService.GetResponseAsync - Start");
+            
             var dialog = await _sessionsClientSelector.Invoke((sessionClient, context)
                 => GetResponseInternalAsync(request, sessionClient, context), request.ScopeKey);
 
+            MemoryDiagnostics.LogMemoryUsage("DialogflowService.GetResponseAsync - End");
             return dialog;
         }
     }

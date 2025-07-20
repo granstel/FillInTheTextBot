@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
@@ -21,7 +21,8 @@ public static class TasksExtensions
     /// <param name="task"></param>
     public static void Forget(this Task task)
     {
-        Task.Factory.StartNew(async () =>
+        // Используем Task.Run вместо Task.Factory.StartNew для лучшего управления памятью
+        Task.Run(async () =>
         {
             try
             {
@@ -31,6 +32,6 @@ public static class TasksExtensions
             {
                 Log?.LogError(e, "Error while executing the task");
             }
-        }).ConfigureAwait(false);
+        });
     }
 }

@@ -16,8 +16,12 @@ internal static class ExternalServicesRegistration
 {
     internal static void AddExternalServices(this IServiceCollection services)
     {
+        // Регистрируем менеджер gRPC клиентов как Singleton для правильного управления жизненным циклом
+        services.AddSingleton<GrpcClientManager>();
+        
         services.AddSingleton(RegisterSessionsClientScopes);
         services.AddSingleton(RegisterContextsClientScopes);
+        services.AddSingleton(RegisterRedisConnectionMultiplexer);
         services.AddSingleton(RegisterRedisClient);
         services.AddSingleton(RegisterCacheService);
     }
@@ -46,10 +50,12 @@ internal static class ExternalServicesRegistration
     private static ScopesSelector<SessionsClient> RegisterSessionsClientScopes(IServiceProvider provider)
     {
         var configuration = provider.GetService<DialogflowConfiguration[]>();
+        var grpcManager = provider.GetService<GrpcClientManager>();
 
         var scopeContexts = GetScopesContexts(configuration);
 
-        var selector = new ScopesSelector<SessionsClient>(scopeContexts, CreateDialogflowSessionsClient);
+        var selector = new ScopesSelector<SessionsClient>(scopeContexts, 
+            context => grpcManager.GetOrCreateSessionsClient(context, CreateDialogflowSessionsClient));
 
         return selector;
     }
@@ -75,10 +81,12 @@ internal static class ExternalServicesRegistration
     private static ScopesSelector<ContextsClient> RegisterContextsClientScopes(IServiceProvider provider)
     {
         var configuration = provider.GetService<DialogflowConfiguration[]>();
+        var grpcManager = provider.GetService<GrpcClientManager>();
 
         var contexts = GetScopesContexts(configuration);
 
-        var selector = new ScopesSelector<ContextsClient>(contexts, CreateDialogflowContextsClient);
+        var selector = new ScopesSelector<ContextsClient>(contexts, 
+            context => grpcManager.GetOrCreateContextsClient(context, CreateDialogflowContextsClient));
 
         return selector;
     }
@@ -110,16 +118,16 @@ internal static class ExternalServicesRegistration
         return $"{region}-{defaultEndpoint}";
     }
 
+    private static IConnectionMultiplexer RegisterRedisConnectionMultiplexer(IServiceProvider provider)
+    {
+        var configuration = provider.GetService<RedisConfiguration>();
+        return ConnectionMultiplexer.Connect(configuration.ConnectionString);
+    }
+
     private static IDatabase RegisterRedisClient(IServiceProvider provider)
     {
-        // TODO: get config as parameter
-        var configuration = provider.GetService<RedisConfiguration>();
-
-        var redisClient = ConnectionMultiplexer.Connect(configuration.ConnectionString);
-
-        var dataBase = redisClient.GetDatabase();
-
-        return dataBase;
+        var redisClient = provider.GetService<IConnectionMultiplexer>();
+        return redisClient.GetDatabase();
     }
 
     private static IRedisCacheService RegisterCacheService(IServiceProvider provider)

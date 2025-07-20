@@ -25,6 +25,12 @@ public class Startup
     {
         _configuration = configuration;
         InternalLoggerFactory.Factory = loggerFactory;
+        
+        // Инициализируем диагностику памяти
+        MemoryDiagnostics.Initialize();
+        
+        // Запускаем периодический мониторинг памяти (каждые 5 минут)
+        MemoryDiagnostics.StartPeriodicMemoryLogging(TimeSpan.FromMinutes(5));
     }
 
     // This method gets called by the runtime. Use this method to add services to the container.
@@ -88,8 +94,21 @@ public class Startup
             Sample = (ref ActivityCreationOptions<ActivityContext> options) => ActivitySamplingResult.AllData
         };
         ActivitySource.AddActivityListener(listener);
+        
+        // Обеспечиваем освобождение listener при завершении приложения
+        var applicationLifetime = app.ApplicationServices.GetRequiredService<Microsoft.Extensions.Hosting.IHostApplicationLifetime>();
+        applicationLifetime.ApplicationStopping.Register(() =>
+        {
+            MemoryLeakAnalyzer.AnalyzeMemoryUsage("Application shutdown - before cleanup");
+            listener?.Dispose();
+            MemoryDiagnostics.ForceGarbageCollectionAndLog("Application shutdown");
+            MemoryLeakAnalyzer.ForceGCAndAnalyze("Application shutdown - final analysis");
+        });
 
         app.UseMiddleware<ExceptionsMiddleware>();
+        
+        // Добавляем мониторинг памяти для каждого запроса
+        app.UseMiddleware<MemoryMonitoringMiddleware>();
 
         app.UseRouting();
         
