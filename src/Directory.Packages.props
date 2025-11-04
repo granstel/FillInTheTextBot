@@ -2,64 +2,52 @@
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
-  
   <ItemGroup>
     <!-- Microsoft Packages -->
-    <PackageVersion Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.7" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.7" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.7" />
-    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="9.0.7" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.7" />
-    <PackageVersion Include="Microsoft.Extensions.Logging" Version="9.0.7" />
-    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.7" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
-    
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="9.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Logging" Version="9.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.10" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
     <!-- Newtonsoft -->
-    <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
-    
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
     <!-- Logging -->
-    <PackageVersion Include="NLog" Version="6.0.1" />
-    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.0.1" />
-    
+    <PackageVersion Include="NLog" Version="6.0.5" />
+    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.0.5" />
     <!-- OpenTelemetry -->
-    <PackageVersion Include="OpenTelemetry" Version="1.12.0" />
-    <PackageVersion Include="OpenTelemetry.Api" Version="1.12.0" />
-    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.12.0" />
-    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.12.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.12.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.12.0" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.12.0" />
+    <PackageVersion Include="OpenTelemetry" Version="1.13.1" />
+    <PackageVersion Include="OpenTelemetry.Api" Version="1.13.1" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.13.1" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.13.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.13.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.13.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.13.0" />
     <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.12.0-beta.1" />
     <PackageVersion Include="OpenTracing" Version="0.12.1" />
-    
     <!-- Google -->
     <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.26.0" />
-    
     <!-- GranSteL -->
     <PackageVersion Include="GranSteL.Helpers.Redis" Version="1.1.0" />
     <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
-    
     <!-- Redis -->
-    <PackageVersion Include="StackExchange.Redis" Version="2.8.47" />
-    
+    <PackageVersion Include="StackExchange.Redis" Version="2.9.32" />
     <!-- System.ServiceModel -->
     <PackageVersion Include="System.ServiceModel.Duplex" Version="6.0.0" />
     <PackageVersion Include="System.ServiceModel.Http" Version="8.1.2" />
     <PackageVersion Include="System.ServiceModel.NetTcp" Version="8.1.2" />
     <PackageVersion Include="System.ServiceModel.Security" Version="6.0.0" />
-    
     <!-- Testing -->
     <PackageVersion Include="AutoFixture" Version="4.18.1" />
     <PackageVersion Include="Moq" Version="4.20.72" />
-    <PackageVersion Include="nunit" Version="4.3.2" />
-    <PackageVersion Include="NUnit3TestAdapter" Version="5.0.0" />
-    
+    <PackageVersion Include="nunit" Version="4.4.0" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="5.2.0" />
     <!-- Yandex -->
     <PackageVersion Include="Yandex.Dialogs.Models" Version="1.4.0" />
-    
     <!-- Sber -->
     <PackageVersion Include="Sber.SmartApp.Models" Version="1.0.0" />
-    
     <!-- MailRu -->
     <PackageVersion Include="MailRu.Marusia.Models" Version="1.1.0" />
   </ItemGroup>
