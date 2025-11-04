@@ -3,6 +3,7 @@ namespace Dialogflow.Emulator.IntegrationTests;
 using DotNet.Testcontainers.Builders;
 using DotNet.Testcontainers.Containers;
 using DotNet.Testcontainers.Images;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Dialogflow.V2;
 using NUnit.Framework;
 
@@ -49,7 +50,7 @@ public class DialogflowEmulatorIntegrationTests
         await _emulatorContainer.StartAsync();
 
         var hostPort = _emulatorContainer.GetMappedPublicPort(EmulatorPort);
-        _emulatorEndpoint = $"localhost:{hostPort}";
+        _emulatorEndpoint = $"http://localhost:{hostPort}";
     }
 
     [OneTimeTearDown]
@@ -77,7 +78,12 @@ public class DialogflowEmulatorIntegrationTests
         var client = new SessionsClientBuilder
         {
             Endpoint = _emulatorEndpoint,
-            ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
+            ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure,
+            GrpcAdapter = GrpcNetClientAdapter.Default,
+            // GrpcChannelOptions = new GrpcChannelOptions
+            // {
+            //     HttpHandler = new SocketsHttpHandler { Http2UnencryptedSupport = true }
+            // }
         }.Build();
 
         var sessionId = Guid.NewGuid().ToString();
@@ -114,7 +120,12 @@ public class DialogflowEmulatorIntegrationTests
         var client = new SessionsClientBuilder
         {
             Endpoint = _emulatorEndpoint,
-            ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
+            ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure,
+            GrpcAdapter = GrpcNetClientAdapter.Default,
+            // GrpcChannelOptions = new GrpcChannelOptions
+            // {
+            //     HttpHandler = new SocketsHttpHandler { Http2UnencryptedSupport = true }
+            // }
         }.Build();
 
         var sessionId = Guid.NewGuid().ToString();
@@ -150,7 +161,12 @@ public class DialogflowEmulatorIntegrationTests
         var client = new SessionsClientBuilder
         {
             Endpoint = _emulatorEndpoint,
-            ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
+            ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure,
+            GrpcAdapter = GrpcNetClientAdapter.Default,
+            // GrpcChannelOptions = new GrpcChannelOptions
+            // {
+            //     HttpHandler = new SocketsHttpHandler { Http2UnencryptedSupport = true }
+            // }
         }.Build();
 
         var sessionId = Guid.NewGuid().ToString();
