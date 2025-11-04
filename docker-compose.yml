@@ -1,18 +1,17 @@
 services:
-  dialogflow-emulator:
+  dialogflow-emulator-grpc:
     build:
       context: .
-      dockerfile: dialogflow-emulator/Dockerfile
-    container_name: fillinthetextbot-dialogflow-emulator
+      dockerfile: src/Dialogflow.Emulator/Dockerfile
+    container_name: fillinthetextbot-dialogflow-emulator-grpc
     ports:
-      - "3000:3000"
+      - "7195:8080"  # gRPC port mapping
     volumes:
       - ./Dialogflow/FillInTheTextBot-eu:/app/agent:ro
     environment:
-      - PROJECT_ID=fillinthetextbot-vyyaxp
-      - LANGUAGE_CODE=ru
       - AGENT_PATH=/app/agent
-      - PORT=3000
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_ENVIRONMENT=Development
     restart: unless-stopped
     networks:
       - dialogflow-net
