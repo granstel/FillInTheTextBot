@@ -14,7 +14,8 @@ public record IntentResponse(
 );
 
 public record ResponseMessage(
-    [property: JsonPropertyName("speech")] IReadOnlyList<string> Speech
+    [property: JsonPropertyName("type")] string Type,
+    [property: JsonPropertyName("speech")] IReadOnlyList<string>? Speech
 );
 
 public record IntentEvent(

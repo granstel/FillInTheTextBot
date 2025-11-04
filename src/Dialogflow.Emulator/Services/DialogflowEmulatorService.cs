@@ -36,7 +36,8 @@ public class DialogflowEmulatorService(
     private DetectIntentResponse CreateDetectIntentResponse(Models.Intent? intent, string queryText, string sessionId)
     {
         var fulfillmentText = "Ответ не найден.";
-        if (intent?.Responses.FirstOrDefault()?.Messages.FirstOrDefault()?.Speech.FirstOrDefault() is { } speech)
+        var textMessage = intent?.Responses.FirstOrDefault()?.Messages.FirstOrDefault(m => m.Type == "0");
+        if (textMessage?.Speech?.FirstOrDefault() is { } speech)
         {
             fulfillmentText = speech;
         }
