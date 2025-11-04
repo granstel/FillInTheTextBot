@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
@@ -11,7 +9,6 @@ using GranSteL.Tools.ScopeSelector;
 using Grpc.Auth;
 using Grpc.Core;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using StackExchange.Redis;
 
 namespace FillInTheTextBot.Api.DI;
@@ -71,12 +68,14 @@ internal static class ExternalServicesRegistration
         
         if (!string.IsNullOrWhiteSpace(emulatorEndpoint))
         {
-            // Используем HTTP эмулятор
-            var httpClient = new HttpClient();
-            var baseUrl = emulatorEndpoint.StartsWith("http") ? emulatorEndpoint : $"http://{emulatorEndpoint}";
+            // Используем gRPC эмулятор
+            var sessionsClientBuilder = new SessionsClientBuilder
+            {
+                Endpoint = emulatorEndpoint,
+                ChannelCredentials = ChannelCredentials.Insecure // Для локальной отладки без TLS
+            };
             
-            // Создаем наш HTTP клиент-эмулятор (без логгера для простоты)
-            return new DialogflowEmulatorClient(httpClient, baseUrl);
+            return sessionsClientBuilder.Build();
         }
         
         // Обычное подключение к Google Dialogflow
@@ -114,9 +113,14 @@ internal static class ExternalServicesRegistration
         
         if (!string.IsNullOrWhiteSpace(emulatorEndpoint))
         {
-            // Используем HTTP эмулятор для контекстов
-            var baseUrl = emulatorEndpoint.StartsWith("http") ? emulatorEndpoint : $"http://{emulatorEndpoint}";
-            return new DialogflowEmulatorContextsClient(baseUrl);
+            // Используем gRPC эмулятор для контекстов
+            var contextsClientBuilder = new ContextsClientBuilder
+            {
+                Endpoint = emulatorEndpoint,
+                ChannelCredentials = ChannelCredentials.Insecure // Для локальной отладки без TLS
+            };
+            
+            return contextsClientBuilder.Build();
         }
         
         // Обычное подключение к Google Dialogflow
