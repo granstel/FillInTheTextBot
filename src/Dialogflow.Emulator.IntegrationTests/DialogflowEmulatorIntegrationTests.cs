@@ -20,13 +20,16 @@ public class DialogflowEmulatorIntegrationTests
         // Получаем путь к корню решения
         var solutionRoot = GetSolutionRoot();
         var dialogflowPath = Path.Combine(solutionRoot, "Dialogflow", "FillInTheTextBot-test-eu");
-        var dockerfilePath = Path.Combine(solutionRoot, "src", "Dialogflow.Emulator");
+        var dockerfileDirectory = Path.Combine(solutionRoot, "src", "Dialogflow.Emulator");
 
         // Сначала собираем образ из Dockerfile
+        // Добавляем уникальный идентификатор к имени образа для избежания конфликтов
+        var imageTag = $"dialogflow-emulator-test:{Guid.NewGuid():N}";
         _emulatorImage = new ImageFromDockerfileBuilder()
-            .WithDockerfileDirectory(dockerfilePath)
             .WithDockerfile("Dockerfile")
-            .WithName("dialogflow-emulator-test:latest")
+            .WithDockerfileDirectory(dockerfileDirectory)
+            .WithContextDirectory(solutionRoot)
+            .WithName(imageTag)
             .WithCleanUp(true)
             .Build();
 
@@ -37,8 +40,10 @@ public class DialogflowEmulatorIntegrationTests
             .WithImage(_emulatorImage)
             .WithPortBinding(EmulatorPort, true)
             .WithEnvironment("AGENT_PATH", "/app/agent")
+            .WithEnvironment("Kestrel__Endpoints__Grpc__Url", "http://0.0.0.0:8080")
+            .WithEnvironment("Kestrel__Endpoints__Grpc__Protocols", "Http2")
             .WithBindMount(dialogflowPath, "/app/agent")
-            .WithWaitStrategy(Wait.ForUnixContainer().UntilHttpRequestIsSucceeded(r => r.ForPort(EmulatorPort)))
+            .WithWaitStrategy(Wait.ForUnixContainer().UntilMessageIsLogged("Now listening on"))
             .Build();
 
         await _emulatorContainer.StartAsync();
@@ -60,6 +65,9 @@ public class DialogflowEmulatorIntegrationTests
         {
             await _emulatorImage.DeleteAsync().ConfigureAwait(false);
         }
+
+        // Ensure all default gRPC channels created by SessionsClient are shut down to avoid locked testhost processes.
+        await SessionsClient.ShutdownDefaultChannelsAsync().ConfigureAwait(false);
     }
 
     [Test]
