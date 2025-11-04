@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddGrpc();
 builder.Services.AddSingleton<IAgentStorage, AgentStorage>();
+builder.Services.AddScoped<IIntentMatcher, IntentMatcher>();
 
 var app = builder.Build();
 
