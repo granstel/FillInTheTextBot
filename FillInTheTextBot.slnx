@@ -10,6 +10,7 @@
     <Project Path="src\FillInTheTextBot.Messengers.Yandex.Tests\FillInTheTextBot.Messengers.Yandex.Tests.csproj" />
     <Project Path="src\FillInTheTextBot.Services.Tests\FillInTheTextBot.Services.Tests.csproj" />
   </Folder>
+  <Project Path="src\Dialogflow.Emulator\Dialogflow.Emulator.csproj" Type="Classic C#" />
   <Project Path="src\FillInTheTextBot.Api\FillInTheTextBot.Api.csproj" />
   <Project Path="src\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
   <Project Path="src\FillInTheTextBot.Services\FillInTheTextBot.Services.csproj" />

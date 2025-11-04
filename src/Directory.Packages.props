@@ -29,6 +29,8 @@
     <PackageVersion Include="OpenTracing" Version="0.12.1" />
     <!-- Google -->
     <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.26.0" />
+    <!-- gRPC -->
+    <PackageVersion Include="Grpc.AspNetCore" Version="2.70.0" />
     <!-- GranSteL -->
     <PackageVersion Include="GranSteL.Helpers.Redis" Version="1.1.0" />
     <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
