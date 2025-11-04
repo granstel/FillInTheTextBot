@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   dialogflow-emulator:
     build:
@@ -15,6 +13,15 @@ services:
       - LANGUAGE_CODE=ru
       - AGENT_PATH=/app/agent
       - PORT=3000
+    restart: unless-stopped
+    networks:
+      - dialogflow-net
+  
+  redis:
+    image: redis:alpine
+    container_name: fillinthetextbot-redis
+    ports:
+      - "6379:6379"
     restart: unless-stopped
     networks:
       - dialogflow-net
