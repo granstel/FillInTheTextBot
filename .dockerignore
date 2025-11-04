@@ -73,4 +73,3 @@ bld/
 *.nupkg
 *.snupkg
 .nuget/
-packages/

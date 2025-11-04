@@ -12,6 +12,7 @@ services:
       - AGENT_PATH=/app/agent
       - ASPNETCORE_URLS=http://+:8080
       - ASPNETCORE_ENVIRONMENT=Development
+      - Kestrel__Endpoints__Grpc__Url=http://127.0.0.1:8080
     restart: unless-stopped
     networks:
       - dialogflow-net
