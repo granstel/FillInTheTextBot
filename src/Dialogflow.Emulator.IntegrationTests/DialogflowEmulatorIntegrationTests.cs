@@ -25,32 +25,32 @@ public class DialogflowEmulatorIntegrationTests
 
         // Сначала собираем образ из Dockerfile
         // Добавляем уникальный идентификатор к имени образа для избежания конфликтов
-        // var imageTag = $"dialogflow-emulator-test:{Guid.NewGuid():N}";
-        // _emulatorImage = new ImageFromDockerfileBuilder()
-        //     .WithDockerfile("Dockerfile")
-        //     .WithDockerfileDirectory(dockerfileDirectory)
-        //     .WithContextDirectory(solutionRoot)
-        //     .WithName(imageTag)
-        //     .WithCleanUp(true)
-        //     .Build();
-        //
-        // await _emulatorImage.CreateAsync().ConfigureAwait(false);
+        var imageTag = $"dialogflow-emulator-test:{Guid.NewGuid():N}";
+        _emulatorImage = new ImageFromDockerfileBuilder()
+            .WithDockerfile("Dockerfile")
+            .WithDockerfileDirectory(dockerfileDirectory)
+            .WithContextDirectory(solutionRoot)
+            .WithName(imageTag)
+            .WithCleanUp(true)
+            .Build();
+        
+        await _emulatorImage.CreateAsync().ConfigureAwait(false);
 
         // Создаём контейнер с эмулятором
-        // _emulatorContainer = new ContainerBuilder()
-        //     .WithImage(_emulatorImage)
-        //     .WithPortBinding(EmulatorPort, true)
-        //     .WithEnvironment("AGENT_PATH", "/app/agent")
-        //     .WithEnvironment("Kestrel__Endpoints__Grpc__Url", "http://0.0.0.0:8080")
-        //     .WithEnvironment("Kestrel__Endpoints__Grpc__Protocols", "Http2")
-        //     .WithBindMount(dialogflowPath, "/app/agent")
-        //     .WithWaitStrategy(Wait.ForUnixContainer().UntilMessageIsLogged("Now listening on"))
-        //     .Build();
-        //
-        // await _emulatorContainer.StartAsync();
-        //
-        // var hostPort = _emulatorContainer.GetMappedPublicPort(EmulatorPort);
-        _emulatorEndpoint = $"http://localhost:{7195}";
+        _emulatorContainer = new ContainerBuilder()
+            .WithImage(_emulatorImage)
+            .WithPortBinding(EmulatorPort, true)
+            .WithEnvironment("AGENT_PATH", "/app/agent")
+            .WithEnvironment("Kestrel__Endpoints__Grpc__Url", "http://0.0.0.0:8080")
+            .WithEnvironment("Kestrel__Endpoints__Grpc__Protocols", "Http2")
+            .WithBindMount(dialogflowPath, "/app/agent")
+            .WithWaitStrategy(Wait.ForUnixContainer().UntilMessageIsLogged("Now listening on"))
+            .Build();
+        
+        await _emulatorContainer.StartAsync();
+        
+        var hostPort = _emulatorContainer.GetMappedPublicPort(EmulatorPort);
+        _emulatorEndpoint = $"http://localhost:{hostPort}";
     }
 
     [OneTimeTearDown]
