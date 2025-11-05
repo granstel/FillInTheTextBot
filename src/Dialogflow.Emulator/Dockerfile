@@ -4,7 +4,6 @@ WORKDIR /src
 # Копируем файлы управления пакетами
 COPY ["src/Directory.Packages.props", "src/"]
 COPY ["nuget.config", "./"]
-COPY ["packages/", "./packages"]
 
 # Копируем файлы проектов
 COPY ["src/Dialogflow.Emulator/Dialogflow.Emulator.csproj", "src/Dialogflow.Emulator/"]
