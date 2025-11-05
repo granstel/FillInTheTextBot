@@ -10,15 +10,18 @@ var endpoint = Environment.GetEnvironmentVariable("EMULATOR_ENDPOINT") ?? "http:
 Console.WriteLine($"Using endpoint: {endpoint}");
 
 // Enable HTTP/2 over plaintext for local emulator
-AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+// AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
-var sessionsClient = new SessionsClientBuilder
+var builder = new SessionsClientBuilder
 {
     Endpoint = endpoint,
     ChannelCredentials = ChannelCredentials.Insecure,
-    GrpcAdapter = GrpcNetClientAdapter.Default
-        .WithAdditionalOptions(o => o.HttpHandler = new SocketsHttpHandler { UseProxy = false })
-}.Build();
+    GrpcAdapter = GrpcNetClientAdapter.Default.WithAdditionalOptions(o => o.HttpHandler = new SocketsHttpHandler
+    {
+        UseProxy = false
+    })
+};
+    var sessionsClient = await builder.BuildAsync();
 
 var sessionId = Guid.NewGuid().ToString("N");
 var session = new SessionName("test-project", sessionId);
