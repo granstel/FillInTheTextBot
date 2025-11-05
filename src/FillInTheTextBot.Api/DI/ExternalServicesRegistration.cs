@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using FillInTheTextBot.Services.Configuration;
+using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using GranSteL.Helpers.Redis;
@@ -72,7 +74,11 @@ internal static class ExternalServicesRegistration
             var sessionsClientBuilder = new SessionsClientBuilder
             {
                 Endpoint = emulatorEndpoint,
-                ChannelCredentials = ChannelCredentials.Insecure // Для локальной отладки без TLS
+                ChannelCredentials = ChannelCredentials.Insecure, // Для локальной отладки без TLS
+                GrpcAdapter = GrpcNetClientAdapter.Default.WithAdditionalOptions(o => o.HttpHandler = new SocketsHttpHandler
+                {
+                    UseProxy = false
+                })
             };
             
             return sessionsClientBuilder.Build();
@@ -117,7 +123,11 @@ internal static class ExternalServicesRegistration
             var contextsClientBuilder = new ContextsClientBuilder
             {
                 Endpoint = emulatorEndpoint,
-                ChannelCredentials = ChannelCredentials.Insecure // Для локальной отладки без TLS
+                ChannelCredentials = ChannelCredentials.Insecure, // Для локальной отладки без TLS
+                GrpcAdapter = GrpcNetClientAdapter.Default.WithAdditionalOptions(o => o.HttpHandler = new SocketsHttpHandler
+                {
+                    UseProxy = false
+                })
             };
             
             return contextsClientBuilder.Build();
