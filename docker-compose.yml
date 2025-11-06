@@ -9,7 +9,7 @@ services:
       - ./Dialogflow/FillInTheTextBot-test-eu:/app/agent:ro
     environment:
       - AGENT_PATH=/app/agent
-      - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:8080
+      - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:7195
   
   redis:
     image: redis:alpine

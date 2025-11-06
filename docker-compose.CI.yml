@@ -7,7 +7,10 @@ services:
       - ./Dialogflow/FillInTheTextBot-test-eu:/app/agent:ro
     environment:
       - AGENT_PATH=/app/agent
-      - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:8080
+      - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:8195
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
   
   redis:
     image: redis:alpine
@@ -15,6 +18,16 @@ services:
     ports:
       - "6379"
 
-networks:
-  dialogflow-net:
-    driver: bridge
+  FillInTheTextBot:
+    image: FillInTheTextBot:latest
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_ENVIRONMENT=CI
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    depends_on:
+      dialogflow-emulator:
+        condition: service_started
+      redis:
+        condition: service_started
