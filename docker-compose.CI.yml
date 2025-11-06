@@ -1,0 +1,20 @@
+services:
+  dialogflow-emulator:
+    build:
+      context: .
+      dockerfile: src/Dialogflow.Emulator/Dockerfile
+    volumes:
+      - ./Dialogflow/FillInTheTextBot-test-eu:/app/agent:ro
+    environment:
+      - AGENT_PATH=/app/agent
+      - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:8080
+  
+  redis:
+    image: redis:alpine
+    container_name: fillinthetextbot-redis
+    ports:
+      - "6379"
+
+networks:
+  dialogflow-net:
+    driver: bridge
