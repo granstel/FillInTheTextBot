@@ -1,31 +1,18 @@
 services:
-  dialogflow-emulator-grpc:
+  dialogflow-emulator:
     build:
       context: .
       dockerfile: src/Dialogflow.Emulator/Dockerfile
-    container_name: fillinthetextbot-dialogflow-emulator-grpc
     ports:
-      - "7195:8080"  # gRPC port mapping
+      - "7195:8080"
     volumes:
-      - ./Dialogflow/FillInTheTextBot-eu:/app/agent:ro
+      - ./Dialogflow/FillInTheTextBot-test-eu:/app/agent:ro
     environment:
       - AGENT_PATH=/app/agent
-      - ASPNETCORE_ENVIRONMENT=Development
       - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:8080
-      - Kestrel__Endpoints__Grpc__Protocols=Http2
-    restart: unless-stopped
-    networks:
-      - dialogflow-net
   
   redis:
     image: redis:alpine
     container_name: fillinthetextbot-redis
     ports:
       - "6379:6379"
-    restart: unless-stopped
-    networks:
-      - dialogflow-net
-
-networks:
-  dialogflow-net:
-    driver: bridge
