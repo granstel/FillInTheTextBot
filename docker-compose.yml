@@ -4,11 +4,10 @@ services:
       context: .
       dockerfile: src/Dialogflow.Emulator/Dockerfile
     ports:
-      - "7195:8080"
+      - "7195:7195"
     volumes:
       - ./Dialogflow/FillInTheTextBot-test-eu:/app/agent:ro
     environment:
-      - ASPNETCORE_URLS=http://+:8080
       - AGENT_PATH=/app/agent
       - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:7195
   
