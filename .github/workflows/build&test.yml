@@ -12,10 +12,72 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
+
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 9.0.x
+
     - name: Build and test
       run: dotnet test --verbosity normal FillInTheTextBot.slnx
+
+    - name: Publish
+      run: dotnet publish --configuration Release --output ./output src/FillInTheTextBot.Api/FillInTheTextBot.Api.csproj
+
+    - name: Build image
+      uses: docker/build-push-action@v6.18.0
+      with:
+        tags: granstel/FillInTheTextBot:latest
+        load: true
+        push: false
+        context: .
+        file: src/FillInTheTextBot.Api/Dockerfile
+
+    - name: Compose
+      uses: hoverkraft-tech/compose-action@3846bcd61da338e9eaaf83e7ed0234a12b099b72
+      with:
+        compose-file: docker-compose.CI.yaml
+        up-flags: --build
+
+    - name: Collect per-service logs
+      if: always()
+      run: |
+        mkdir -p compose-logs
+        for s in $(docker compose -f docker-compose.CI.yaml config --services); do
+          echo "Collecting logs for $s"
+          docker compose -f docker-compose.CI.yaml logs --no-color -t "$s" > "compose-logs/${s}.log" || true
+        done
+
+    - name: Upload per-service logs folder
+      if: failure()
+      uses: actions/upload-artifact@v4.6.2
+      with:
+        name: compose-logs
+        path: compose-logs
+        retention-days: 7
+
+    - name: Collect docker-compose.log
+      if: always()
+      run: docker compose -f docker-compose.CI.yaml logs -t >> docker-compose.log || true
+    - name: Upload docker-compose.log
+      if: always()
+      uses: actions/upload-artifact@v4.6.2
+      with:
+        name: docker-compose.log
+        path: docker-compose.log
+        retention-days: 7
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Push to hub
+      if: ${{ github.ref == 'refs/heads/main' }}
+      uses: docker/build-push-action@v6.18.0
+      with:
+        context: .
+        tags: granstel/FillInTheTextBot:latest
+        push: true

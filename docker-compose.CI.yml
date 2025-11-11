@@ -19,7 +19,7 @@ services:
       - "6379"
 
   FillInTheTextBot:
-    image: FillInTheTextBot:latest
+    image: granstel/FillInTheTextBot:latest
     environment:
       - ASPNETCORE_URLS=http://+:8080
       - ASPNETCORE_ENVIRONMENT=CI
