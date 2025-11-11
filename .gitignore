@@ -11,7 +11,6 @@
 **/Keys/
 **/deploy/
 **/.config/
-**/Properties/
 /src/FillInTheTextBot.Api/FillInTheTextBot.Api.csproj.user
 /src/FillInTheTextBot.Api/fillinthetextbot-test-bctxpk-bb6ea1e87cd1.json
 /src/FillInTheTextBot.Api/fillinthetextbot-vyyaxp-c062f43624f6.json
