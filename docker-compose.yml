@@ -10,6 +10,9 @@ services:
     environment:
       - AGENT_PATH=/app/agent
       - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:7195
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
   
   redis:
     image: redis:alpine
