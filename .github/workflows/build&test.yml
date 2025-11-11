@@ -28,7 +28,7 @@ jobs:
     - name: Build image
       uses: docker/build-push-action@v6.18.0
       with:
-        tags: granstel/FillInTheTextBot:latest
+        tags: granstel/fillinthetextbot:latest
         load: true
         push: false
         context: .
@@ -79,5 +79,5 @@ jobs:
       uses: docker/build-push-action@v6.18.0
       with:
         context: .
-        tags: granstel/FillInTheTextBot:latest
+        tags: granstel/fillinthetextbot:latest
         push: true
