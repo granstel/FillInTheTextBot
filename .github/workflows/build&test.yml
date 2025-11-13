@@ -37,16 +37,16 @@ jobs:
     - name: Compose
       uses: hoverkraft-tech/compose-action@3846bcd61da338e9eaaf83e7ed0234a12b099b72
       with:
-        compose-file: docker-compose.ci.yaml
+        compose-file: docker-compose.ci.yml
         up-flags: --build
 
     - name: Collect per-service logs
       if: always()
       run: |
         mkdir -p compose-logs
-        for s in $(docker compose -f docker-compose.CI.yaml config --services); do
+        for s in $(docker compose -f docker-compose.ci.yml config --services); do
           echo "Collecting logs for $s"
-          docker compose -f docker-compose.CI.yaml logs --no-color -t "$s" > "compose-logs/${s}.log" || true
+          docker compose -f docker-compose.ci.yml logs --no-color -t "$s" > "compose-logs/${s}.log" || true
         done
 
     - name: Upload per-service logs folder
@@ -59,7 +59,7 @@ jobs:
 
     - name: Collect docker-compose.log
       if: always()
-      run: docker compose -f docker-compose.CI.yaml logs -t >> docker-compose.log || true
+      run: docker compose -f docker-compose.ci.yml logs -t >> docker-compose.log || true
     - name: Upload docker-compose.log
       if: always()
       uses: actions/upload-artifact@v4.6.2
