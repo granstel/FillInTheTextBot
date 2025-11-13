@@ -37,6 +37,7 @@ jobs:
     - name: Compose
       uses: hoverkraft-tech/compose-action@3846bcd61da338e9eaaf83e7ed0234a12b099b72
       with:
+        context: .
         compose-file: docker-compose.CI.yaml
         up-flags: --build
 
