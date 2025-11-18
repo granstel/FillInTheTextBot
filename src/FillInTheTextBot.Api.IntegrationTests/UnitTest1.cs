@@ -1,13 +1,101 @@
-using Yandex.Dialogs.Models;
+using System.Net;
+using System.Net.Http.Json;
+using DotNet.Testcontainers.Builders;
+using DotNet.Testcontainers.Containers;
+using DotNet.Testcontainers.Images;
+using Microsoft.AspNetCore.TestHost;
 using Newtonsoft.Json;
-using System;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Api.IntegrationTests;
 
 public class Tests
 {
+    private TestServer _server;
+    private HttpClient _client;
+
+    [OneTimeSetUp]
+    public async Task OneTimeSetUp()
+    {
+        await EmulatorSetup();
+
+        Environment.SetEnvironmentVariable("AppConfiguration__Dialogflow__EmulatorEndpoint", _emulatorEndpoint);
+        _server = new HostBuilder()
+            .ConfigureWebHost(webHostBuilder =>
+            {
+                webHostBuilder
+                    .UseTestServer()
+                    .ConfigureLogging(logging => logging.AddConsole())
+                    .UseEnvironment("Development")
+                    .UseStartup<Startup>();
+            })
+            .Build().GetTestServer();
+        _client = _server.CreateClient();
+    }
+
+    
+    private IContainer? _emulatorContainer;
+    private IFutureDockerImage? _emulatorImage;
+    private const int EmulatorPort = 8080;
+    private string? _emulatorEndpoint;
+    
+    public async Task EmulatorSetup()
+    {
+        // Получаем путь к корню решения
+        var solutionRoot = GetSolutionRoot();
+        var dialogflowPath = Path.Combine(solutionRoot, "Dialogflow", "FillInTheTextBot-test-eu");
+        var dockerfileDirectory = Path.Combine(solutionRoot, "src", "Dialogflow.Emulator");
+
+        // Сначала собираем образ из Dockerfile
+        // Добавляем уникальный идентификатор к имени образа для избежания конфликтов
+        var imageTag = "dialogflow-emulator-test";
+        _emulatorImage = new ImageFromDockerfileBuilder()
+            .WithDockerfile("Dockerfile")
+            .WithDockerfileDirectory(dockerfileDirectory)
+            .WithContextDirectory(solutionRoot)
+            .WithName(imageTag)
+            .WithCleanUp(true)
+            .Build();
+        
+        await _emulatorImage.CreateAsync().ConfigureAwait(false);
+
+        // Создаём контейнер с эмулятором
+        _emulatorContainer = new ContainerBuilder()
+            .WithImage(_emulatorImage)
+            .WithPortBinding(EmulatorPort, true)
+            .WithEnvironment("AGENT_PATH", "/app/agent")
+            .WithEnvironment("Kestrel__Endpoints__Grpc__Url", "http://0.0.0.0:8080")
+            .WithEnvironment("Kestrel__Endpoints__Grpc__Protocols", "Http2")
+            .WithBindMount(dialogflowPath, "/app/agent")
+            .WithWaitStrategy(Wait.ForUnixContainer().UntilMessageIsLogged("Now listening on"))
+            .Build();
+        
+        await _emulatorContainer.StartAsync();
+        
+        var hostPort = _emulatorContainer.GetMappedPublicPort(EmulatorPort);
+        _emulatorEndpoint = $"localhost:{hostPort}";
+    }
+
+    private static string GetSolutionRoot()
+    {
+        var directory = TestContext.CurrentContext.TestDirectory;
+        while (directory != null && !File.Exists(Path.Combine(directory, "FillInTheTextBot.slnx")))
+        {
+            directory = Directory.GetParent(directory)?.FullName;
+        }
+
+        if (directory == null)
+        {
+            throw new InvalidOperationException("Could not find solution root directory");
+        }
+
+        return directory;
+    }
+    
     [Test]
-    public void Happy_path_test()
+    public async Task Happy_path_test()
     {
         var rnd = new Random();
 
@@ -58,9 +146,8 @@ public class Tests
             version = "1.0"
         };
 
-        var json = JsonConvert.SerializeObject(payload);
-        var input = JsonConvert.DeserializeObject<Yandex.Dialogs.Models.Input.InputModel>(json);
-
-        Assert.That(input, Is.Not.Null);
+        var jsonContent = JsonContent.Create(payload);
+        var response = await _client.PostAsync("/yandex", jsonContent);
+        Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
     }
 }
