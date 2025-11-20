@@ -37,4 +37,8 @@
         </Content>
     </ItemGroup>
 
+    <ItemGroup>
+        <InternalsVisibleTo Include="FillInTheTextBot.Api.IntegrationTests" />
+    </ItemGroup>
+
 </Project>

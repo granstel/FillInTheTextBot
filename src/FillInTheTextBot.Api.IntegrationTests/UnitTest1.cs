@@ -4,8 +4,8 @@ using DotNet.Testcontainers.Builders;
 using DotNet.Testcontainers.Containers;
 using DotNet.Testcontainers.Images;
 using Microsoft.AspNetCore.TestHost;
-using Newtonsoft.Json;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -21,6 +21,11 @@ public class Tests
     {
         await EmulatorSetup();
 
+        StartFitbWithWebApplicationFactory();
+    }
+
+    private void StartFitbWithTestServer()
+    {
         Environment.SetEnvironmentVariable("AppConfiguration__Dialogflow__EmulatorEndpoint", _emulatorEndpoint);
         _server = new HostBuilder()
             .ConfigureWebHost(webHostBuilder =>
@@ -35,7 +40,20 @@ public class Tests
         _client = _server.CreateClient();
     }
 
-    
+    private void StartFitbWithWebApplicationFactory()
+    {
+        // Environment.SetEnvironmentVariable("AppConfiguration__Dialogflow__EmulatorEndpoint", _emulatorEndpoint);
+
+        var factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
+        {
+            builder.UseEnvironment("Development");
+            builder.UseSetting("AppConfiguration:Dialogflow:0:EmulatorEndpoint", _emulatorEndpoint);
+        });
+        
+
+        _client = factory.CreateClient();
+    }
+
     private IContainer? _emulatorContainer;
     private IFutureDockerImage? _emulatorImage;
     private const int EmulatorPort = 8080;
@@ -50,16 +68,15 @@ public class Tests
 
         // Сначала собираем образ из Dockerfile
         // Добавляем уникальный идентификатор к имени образа для избежания конфликтов
-        var imageTag = "dialogflow-emulator-test";
+        var imageTag = "dialogflow-emulator-test:latest";
         _emulatorImage = new ImageFromDockerfileBuilder()
             .WithDockerfile("Dockerfile")
             .WithDockerfileDirectory(dockerfileDirectory)
             .WithContextDirectory(solutionRoot)
             .WithName(imageTag)
-            .WithCleanUp(true)
             .Build();
         
-        await _emulatorImage.CreateAsync().ConfigureAwait(false);
+         await _emulatorImage.CreateAsync().ConfigureAwait(false);
 
         // Создаём контейнер с эмулятором
         _emulatorContainer = new ContainerBuilder()
