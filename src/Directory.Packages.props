@@ -49,7 +49,7 @@
     <PackageVersion Include="Moq" Version="4.20.72" />
     <PackageVersion Include="nunit" Version="4.4.0" />
     <PackageVersion Include="NUnit3TestAdapter" Version="5.2.0" />
-    <PackageVersion Include="Testcontainers" Version="4.8.1" />
+    <PackageVersion Include="Testcontainers" Version="4.9.0" />
     <!-- Yandex -->
     <PackageVersion Include="Yandex.Dialogs.Models" Version="1.4.0" />
     <!-- Sber -->
