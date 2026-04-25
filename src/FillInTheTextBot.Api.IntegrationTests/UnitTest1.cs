@@ -22,6 +22,7 @@ public class Tests
     public async Task OneTimeSetUp()
     {
         await EmulatorSetup();
+        await RedisSetup();
 
         StartFitbWithWebApplicationFactory();
     }
@@ -33,6 +34,12 @@ public class Tests
         if (_factory != null)
         {
             await _factory.DisposeAsync();
+        }
+
+        if (_redisContainer != null)
+        {
+            await _redisContainer.StopAsync();
+            await _redisContainer.DisposeAsync();
         }
 
         if (_emulatorContainer != null)
@@ -72,6 +79,13 @@ public class Tests
         {
             builder.UseEnvironment("Development");
             builder.UseSetting("AppConfiguration:Dialogflow:0:EmulatorEndpoint", _emulatorEndpoint);
+            builder.UseSetting("AppConfiguration:Redis:ConnectionString", _redisConnectionString);
+            builder.ConfigureLogging(logging =>
+            {
+                logging.ClearProviders();
+                logging.AddConsole();
+                logging.SetMinimumLevel(LogLevel.Debug);
+            });
         });
 
         _client = _factory.CreateClient();
@@ -81,6 +95,24 @@ public class Tests
     private IFutureDockerImage? _emulatorImage;
     private const int EmulatorPort = 8080;
     private string? _emulatorEndpoint;
+
+    private IContainer? _redisContainer;
+    private const int RedisPort = 6379;
+    private string? _redisConnectionString;
+
+    private async Task RedisSetup()
+    {
+        _redisContainer = new ContainerBuilder()
+            .WithImage("redis:7-alpine")
+            .WithPortBinding(RedisPort, true)
+            .WithWaitStrategy(Wait.ForUnixContainer().UntilMessageIsLogged("Ready to accept connections"))
+            .Build();
+
+        await _redisContainer.StartAsync();
+
+        var hostPort = _redisContainer.GetMappedPublicPort(RedisPort);
+        _redisConnectionString = $"localhost:{hostPort}";
+    }
     
     public async Task EmulatorSetup()
     {
@@ -189,6 +221,9 @@ public class Tests
 
         var jsonContent = JsonContent.Create(payload);
         var response = await _client.PostAsync("/yandex", jsonContent);
-        Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        var body = await response.Content.ReadAsStringAsync();
+        TestContext.WriteLine($"Status: {response.StatusCode}");
+        TestContext.WriteLine($"Body:   {body}");
+        Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK), body);
     }
 }
