@@ -3,6 +3,7 @@ using System.Net.Http.Json;
 using DotNet.Testcontainers.Builders;
 using DotNet.Testcontainers.Containers;
 using DotNet.Testcontainers.Images;
+using Google.Cloud.Dialogflow.V2;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -15,6 +16,7 @@ public class Tests
 {
     private TestServer _server;
     private HttpClient _client;
+    private WebApplicationFactory<Program>? _factory;
 
     [OneTimeSetUp]
     public async Task OneTimeSetUp()
@@ -24,9 +26,33 @@ public class Tests
         StartFitbWithWebApplicationFactory();
     }
 
+    [OneTimeTearDown]
+    public async Task OneTimeTearDown()
+    {
+        _client?.Dispose();
+        if (_factory != null)
+        {
+            await _factory.DisposeAsync();
+        }
+
+        if (_emulatorContainer != null)
+        {
+            await _emulatorContainer.StopAsync();
+            await _emulatorContainer.DisposeAsync();
+        }
+
+        if (_emulatorImage != null)
+        {
+            await _emulatorImage.DeleteAsync().ConfigureAwait(false);
+        }
+
+        await SessionsClient.ShutdownDefaultChannelsAsync().ConfigureAwait(false);
+        await ContextsClient.ShutdownDefaultChannelsAsync().ConfigureAwait(false);
+    }
+
     private void StartFitbWithTestServer()
     {
-        Environment.SetEnvironmentVariable("AppConfiguration__Dialogflow__EmulatorEndpoint", _emulatorEndpoint);
+        System.Environment.SetEnvironmentVariable("AppConfiguration__Dialogflow__EmulatorEndpoint", _emulatorEndpoint);
         _server = new HostBuilder()
             .ConfigureWebHost(webHostBuilder =>
             {
@@ -42,16 +68,13 @@ public class Tests
 
     private void StartFitbWithWebApplicationFactory()
     {
-        // Environment.SetEnvironmentVariable("AppConfiguration__Dialogflow__EmulatorEndpoint", _emulatorEndpoint);
-
-        var factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
+        _factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
         {
             builder.UseEnvironment("Development");
             builder.UseSetting("AppConfiguration:Dialogflow:0:EmulatorEndpoint", _emulatorEndpoint);
         });
-        
 
-        _client = factory.CreateClient();
+        _client = _factory.CreateClient();
     }
 
     private IContainer? _emulatorContainer;
@@ -68,15 +91,16 @@ public class Tests
 
         // Сначала собираем образ из Dockerfile
         // Добавляем уникальный идентификатор к имени образа для избежания конфликтов
-        var imageTag = "dialogflow-emulator-test:latest";
+        var imageTag = $"dialogflow-emulator-test:{Guid.NewGuid():N}";
         _emulatorImage = new ImageFromDockerfileBuilder()
             .WithDockerfile("Dockerfile")
             .WithDockerfileDirectory(dockerfileDirectory)
             .WithContextDirectory(solutionRoot)
             .WithName(imageTag)
+            .WithCleanUp(true)
             .Build();
-        
-         await _emulatorImage.CreateAsync().ConfigureAwait(false);
+
+        await _emulatorImage.CreateAsync().ConfigureAwait(false);
 
         // Создаём контейнер с эмулятором
         _emulatorContainer = new ContainerBuilder()
