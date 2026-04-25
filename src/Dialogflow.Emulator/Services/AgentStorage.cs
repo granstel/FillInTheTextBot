@@ -42,7 +42,8 @@ public class AgentStorage(ILogger<AgentStorage> logger) : IAgentStorage
     public Intent? GetIntent(string name) => _intents.GetValueOrDefault(name);
 
     public Intent? FindIntentByEvent(string eventName) =>
-        _intents.Values.FirstOrDefault(i => i.Events?.Any(e => e.Name == eventName) ?? false);
+        _intents.Values.FirstOrDefault(i =>
+            i.Events?.Any(e => string.Equals(e.Name, eventName, StringComparison.OrdinalIgnoreCase)) ?? false);
 
     public IEnumerable<Intent> GetAllIntents() => _intents.Values;
 }
