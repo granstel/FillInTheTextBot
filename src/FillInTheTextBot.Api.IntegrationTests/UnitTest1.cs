@@ -167,12 +167,16 @@ public class Tests
         return directory;
     }
     
-    [Test]
-    public async Task Happy_path_test()
+    private static object BuildYandexPayload(
+        string sessionId,
+        string skillId,
+        string userId,
+        string applicationId,
+        bool isNewSession,
+        string command,
+        int messageId)
     {
-        var rnd = new Random();
-
-        var payload = new
+        return new
         {
             meta = new
             {
@@ -189,18 +193,18 @@ public class Tests
             },
             session = new
             {
-                message_id = rnd.Next(0, 1000),
-                session_id = Guid.NewGuid().ToString("N"),
-                skill_id = Guid.NewGuid().ToString("N"),
-                user = new { user_id = Guid.NewGuid().ToString("N") },
-                application = new { application_id = Guid.NewGuid().ToString("N") },
-                user_id = Guid.NewGuid().ToString("N"),
-                @new = true
+                message_id = messageId,
+                session_id = sessionId,
+                skill_id = skillId,
+                user = new { user_id = userId },
+                application = new { application_id = applicationId },
+                user_id = userId,
+                @new = isNewSession
             },
             request = new
             {
-                command = string.Empty,
-                original_utterance = string.Empty,
+                command,
+                original_utterance = command,
                 nlu = new
                 {
                     tokens = Array.Empty<string>(),
@@ -218,12 +222,34 @@ public class Tests
             },
             version = "1.0"
         };
+    }
 
-        var jsonContent = JsonContent.Create(payload);
-        var response = await _client.PostAsync("/yandex", jsonContent);
+    private async Task<string> PostYandexAsync(object payload)
+    {
+        var response = await _client.PostAsync("/yandex", JsonContent.Create(payload));
         var body = await response.Content.ReadAsStringAsync();
         TestContext.WriteLine($"Status: {response.StatusCode}");
         TestContext.WriteLine($"Body:   {body}");
         Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK), body);
+        return body;
+    }
+
+    [Test]
+    public async Task Happy_path_test()
+    {
+        var sessionId = Guid.NewGuid().ToString("N");
+        var skillId = Guid.NewGuid().ToString("N");
+        var userId = Guid.NewGuid().ToString("N");
+        var applicationId = Guid.NewGuid().ToString("N");
+
+        var welcomeBody = await PostYandexAsync(
+            BuildYandexPayload(sessionId, skillId, userId, applicationId, isNewSession: true, command: string.Empty, messageId: 0));
+        Assert.That(welcomeBody, Does.Contain("Добро пожаловать"),
+            "Welcome event must trigger Default Welcome Intent");
+
+        var startGameBody = await PostYandexAsync(
+            BuildYandexPayload(sessionId, skillId, userId, applicationId, isNewSession: false, command: "да", messageId: 1));
+        Assert.That(startGameBody, Does.Contain("время").Or.Contain("Класс").Or.Contain("Супер").Or.Contain("Отлично"),
+            "After 'да' bot should proceed to start the game (EasyWelcome or Yes intent reply)");
     }
 }
