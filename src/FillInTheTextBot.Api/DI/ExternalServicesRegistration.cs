@@ -86,7 +86,7 @@ internal static class ExternalServicesRegistration
         
         // Обычное подключение к Google Dialogflow
         context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out var jsonPath);
-        var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(SessionsClient.DefaultScopes);
+        var credential = LoadServiceAccountCredential(jsonPath, SessionsClient.DefaultScopes);
 
         var endpoint = GetEndpoint(context, SessionsClient.DefaultEndpoint);
 
@@ -99,6 +99,11 @@ internal static class ExternalServicesRegistration
         var standardClient = standardClientBuilder.Build();
         return standardClient;
     }
+
+    private static GoogleCredential LoadServiceAccountCredential(string jsonPath, IEnumerable<string> scopes) =>
+        CredentialFactory.FromFile<ServiceAccountCredential>(jsonPath)
+            .ToGoogleCredential()
+            .CreateScoped(scopes);
 
     private static ScopesSelector<ContextsClient> RegisterContextsClientScopes(IServiceProvider provider)
     {
@@ -135,7 +140,7 @@ internal static class ExternalServicesRegistration
         
         // Обычное подключение к Google Dialogflow
         context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out var jsonPath);
-        var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(ContextsClient.DefaultScopes);
+        var credential = LoadServiceAccountCredential(jsonPath, ContextsClient.DefaultScopes);
 
         var endpoint = GetEndpoint(context, ContextsClient.DefaultEndpoint);
 
