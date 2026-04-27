@@ -10,8 +10,6 @@
     <ItemGroup>
         <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
-        <PackageReference Include="Microsoft.Extensions.Logging" />
         <PackageReference Include="Newtonsoft.Json" />
         <PackageReference Include="NLog" />
         <PackageReference Include="NLog.Web.AspNetCore" />
