@@ -2,9 +2,9 @@ name: .NET
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ master ]
+    branches: [ main, master ]
 
 jobs:
   build:
@@ -12,12 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v4
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 9.0.x
+        dotnet-version: 10.0.x
+        dotnet-quality: preview
 
     - name: Build and test
       run: dotnet test --verbosity normal FillInTheTextBot.slnx
@@ -34,49 +35,15 @@ jobs:
         context: .
         file: src/FillInTheTextBot.Api/Dockerfile
 
-    - name: Compose
-      uses: hoverkraft-tech/compose-action@3846bcd61da338e9eaaf83e7ed0234a12b099b72
-      with:
-        compose-file: docker-compose.ci.yml
-        up-flags: --build
-
-    - name: Collect per-service logs
-      if: always()
-      run: |
-        mkdir -p compose-logs
-        for s in $(docker compose -f docker-compose.ci.yml config --services); do
-          echo "Collecting logs for $s"
-          docker compose -f docker-compose.ci.yml logs --no-color -t "$s" > "compose-logs/${s}.log" || true
-        done
-
-    - name: Upload per-service logs folder
-      if: failure()
-      uses: actions/upload-artifact@v4.6.2
-      with:
-        name: compose-logs
-        path: compose-logs
-        retention-days: 7
-
-    - name: Collect docker-compose.log
-      if: always()
-      run: docker compose -f docker-compose.ci.yml logs -t >> docker-compose.log || true
-    - name: Upload docker-compose.log
-      if: always()
-      uses: actions/upload-artifact@v4.6.2
-      with:
-        name: docker-compose.log
-        path: docker-compose.log
-        retention-days: 7
-
     - name: Login to Docker Hub
-      if: ${{ github.ref == 'refs/heads/main' }}
-      uses: docker/login-action@v2
+      if: ${{ github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') }}
+      uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Push to hub
-      if: ${{ github.ref == 'refs/heads/main' }}
+      if: ${{ github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') }}
       uses: docker/build-push-action@v6.18.0
       with:
         context: .
