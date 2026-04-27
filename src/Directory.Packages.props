@@ -38,7 +38,7 @@
     <PackageVersion Include="GranSteL.Helpers.Redis" Version="1.1.0" />
     <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
     <!-- Redis -->
-    <PackageVersion Include="StackExchange.Redis" Version="2.10.1" />
+    <PackageVersion Include="StackExchange.Redis" Version="2.12.14" />
     <!-- System.ServiceModel -->
     <PackageVersion Include="System.ServiceModel.Duplex" Version="6.0.0" />
     <PackageVersion Include="System.ServiceModel.Http" Version="8.1.2" />
