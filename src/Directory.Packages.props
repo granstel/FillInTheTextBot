@@ -30,10 +30,10 @@
     <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.12.0-beta.1" />
     <PackageVersion Include="OpenTracing" Version="0.12.1" />
     <!-- Google -->
-    <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.27.0" />
+    <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.29.0" />
     <!-- gRPC -->
-    <PackageVersion Include="Grpc.AspNetCore" Version="2.71.0" />
-    <PackageVersion Include="Grpc.Net.Client" Version="2.71.0" />
+    <PackageVersion Include="Grpc.AspNetCore" Version="2.76.0" />
+    <PackageVersion Include="Grpc.Net.Client" Version="2.76.0" />
     <!-- GranSteL -->
     <PackageVersion Include="GranSteL.Helpers.Redis" Version="1.1.0" />
     <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
