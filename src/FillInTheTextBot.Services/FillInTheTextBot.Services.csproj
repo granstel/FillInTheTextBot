@@ -15,10 +15,6 @@
         <PackageReference Include="OpenTelemetry" />
         <PackageReference Include="OpenTelemetry.Api" />
         <PackageReference Include="StackExchange.Redis" />
-        <PackageReference Include="System.ServiceModel.Duplex" />
-        <PackageReference Include="System.ServiceModel.Http" />
-        <PackageReference Include="System.ServiceModel.NetTcp" />
-        <PackageReference Include="System.ServiceModel.Security" />
     </ItemGroup>
 
     <ItemGroup>
