@@ -17,8 +17,8 @@
     <!-- Newtonsoft -->
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
     <!-- Logging -->
-    <PackageVersion Include="NLog" Version="6.0.6" />
-    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.0.6" />
+    <PackageVersion Include="NLog" Version="6.1.2" />
+    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.1.2" />
     <!-- OpenTelemetry -->
     <PackageVersion Include="OpenTelemetry" Version="1.15.3" />
     <PackageVersion Include="OpenTelemetry.Api" Version="1.15.3" />
