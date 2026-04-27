@@ -12,13 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6.0.2
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5.2.0
       with:
         dotnet-version: 10.0.x
-        dotnet-quality: preview
 
     - name: Build and test
       run: dotnet test --verbosity normal FillInTheTextBot.slnx
@@ -27,7 +26,7 @@ jobs:
       run: dotnet publish --configuration Release --output ./output src/FillInTheTextBot.Api/FillInTheTextBot.Api.csproj
 
     - name: Build image
-      uses: docker/build-push-action@v6.18.0
+      uses: docker/build-push-action@v7.1.0
       with:
         tags: granstel/fillinthetextbot:latest
         load: true
@@ -44,7 +43,7 @@ jobs:
 
     - name: Push to hub
       if: ${{ github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') }}
-      uses: docker/build-push-action@v6.18.0
+      uses: docker/build-push-action@v7.1.0
       with:
         context: .
         tags: granstel/fillinthetextbot:latest
