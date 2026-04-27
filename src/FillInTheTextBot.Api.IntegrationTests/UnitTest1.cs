@@ -4,18 +4,15 @@ using DotNet.Testcontainers.Builders;
 using DotNet.Testcontainers.Containers;
 using DotNet.Testcontainers.Images;
 using Google.Cloud.Dialogflow.V2;
-using Microsoft.AspNetCore.TestHost;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Api.IntegrationTests;
 
 public class Tests
 {
-    private TestServer _server;
-    private HttpClient _client;
+    private HttpClient? _client;
     private WebApplicationFactory<Program>? _factory;
 
     [OneTimeSetUp]
@@ -57,22 +54,6 @@ public class Tests
         await ContextsClient.ShutdownDefaultChannelsAsync().ConfigureAwait(false);
     }
 
-    private void StartFitbWithTestServer()
-    {
-        System.Environment.SetEnvironmentVariable("AppConfiguration__Dialogflow__EmulatorEndpoint", _emulatorEndpoint);
-        _server = new HostBuilder()
-            .ConfigureWebHost(webHostBuilder =>
-            {
-                webHostBuilder
-                    .UseTestServer()
-                    .ConfigureLogging(logging => logging.AddConsole())
-                    .UseEnvironment("Development")
-                    .UseStartup<Startup>();
-            })
-            .Build().GetTestServer();
-        _client = _server.CreateClient();
-    }
-
     private void StartFitbWithWebApplicationFactory()
     {
         _factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
@@ -102,8 +83,7 @@ public class Tests
 
     private async Task RedisSetup()
     {
-        _redisContainer = new ContainerBuilder()
-            .WithImage("redis:7-alpine")
+        _redisContainer = new ContainerBuilder("redis:7-alpine")
             .WithPortBinding(RedisPort, true)
             .WithWaitStrategy(Wait.ForUnixContainer().UntilMessageIsLogged("Ready to accept connections"))
             .Build();
@@ -135,8 +115,7 @@ public class Tests
         await _emulatorImage.CreateAsync().ConfigureAwait(false);
 
         // Создаём контейнер с эмулятором
-        _emulatorContainer = new ContainerBuilder()
-            .WithImage(_emulatorImage)
+        _emulatorContainer = new ContainerBuilder(_emulatorImage)
             .WithPortBinding(EmulatorPort, true)
             .WithEnvironment("AGENT_PATH", "/app/agent")
             .WithEnvironment("Kestrel__Endpoints__Grpc__Url", "http://0.0.0.0:8080")
@@ -226,7 +205,7 @@ public class Tests
 
     private async Task<string> PostYandexAsync(object payload)
     {
-        var response = await _client.PostAsync("/yandex", JsonContent.Create(payload));
+        var response = await _client!.PostAsync("/yandex", JsonContent.Create(payload));
         var body = await response.Content.ReadAsStringAsync();
         TestContext.WriteLine($"Status: {response.StatusCode}");
         TestContext.WriteLine($"Body:   {body}");

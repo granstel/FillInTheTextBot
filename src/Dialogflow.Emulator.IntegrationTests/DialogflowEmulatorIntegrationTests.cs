@@ -37,8 +37,7 @@ public class DialogflowEmulatorIntegrationTests
         await _emulatorImage.CreateAsync().ConfigureAwait(false);
 
         // Создаём контейнер с эмулятором
-        _emulatorContainer = new ContainerBuilder()
-            .WithImage(_emulatorImage)
+        _emulatorContainer = new ContainerBuilder(_emulatorImage)
             .WithPortBinding(EmulatorPort, true)
             .WithEnvironment("AGENT_PATH", "/app/agent")
             .WithEnvironment("Kestrel__Endpoints__Grpc__Url", "http://0.0.0.0:8080")
