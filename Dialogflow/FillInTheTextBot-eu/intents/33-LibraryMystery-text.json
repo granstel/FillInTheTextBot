@@ -1,0 +1,357 @@
+{
+  "id": "aa330002-2222-4abc-8def-330000000002",
+  "parentId": "aa330001-1111-4abc-8def-330000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "33-LibraryMystery-text",
+  "auto": true,
+  "contexts": [
+    "text-33"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "тайна библиотеки.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p1",
+          "name": "name1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови женское имя — например, имя своей учительницы"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва назови какое-нибудь женское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови имя девочки или женщины"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p2",
+          "name": "adj1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adj1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови какое-нибудь прилагательное, отвечающее на вопрос «какая?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи прилагательное — «какая?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови, пожалуйста, прилагательное, которое отвечает на вопрос «какая?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p3",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой твой любимый цвет?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, какой цвет первым приходит тебе в голову"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p4",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови любое число от десяти до тысячи"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови, пожалуйста, число от 10 до 1000"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи какое-нибудь число от десяти до тысячи"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p5",
+          "name": "schoolItem",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$schoolItem",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь школьный предмет — то, что лежит у тебя в портфеле (мужского рода)"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови, пожалуйста, какую-нибудь школьную вещь мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, что обычно носят с собой в школу — мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p6",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, какое животное мужского рода тебе нравится"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p7",
+          "name": "adj2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adj2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи прилагательное, отвечающее на вопрос «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови прилагательное — «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови, пожалуйста, прилагательное, которое отвечает на вопрос «какой?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p8",
+          "name": "name2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови мужское имя — например, имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи имя мальчика"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p9",
+          "name": "food",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$food",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови что-нибудь съедобное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, какую вкусняшку мужского рода ты любишь"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какую-нибудь еду мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000pA",
+          "name": "adj3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adj3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — ещё одно прилагательное, отвечающее на вопрос «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Напоследок — ещё одно прилагательное «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее — назови ещё одно прилагательное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Внимание, вот что получилось:\nОднажды $name1 засиделась в школьной библиотеке после уроков и вдруг заметила, что между стеллажами есть странная $adj1 книга, которую раньше никто никогда не видел. На обложке золотыми буквами было написано: «$color книга. Открой — и узнаешь тайну». $name1 открыла — а внутри ровно $number пустых страниц! И только на самой последней — короткая записка: «Принеси сюда $schoolItem ровно в полночь. И никому ни слова».\n\n$name1 страшно заинтересовалась и в полночь тайком пробралась обратно в библиотеку. Едва она положила $schoolItem на стол, как из-за шкафа вышел $adj2 $animal! 🦌 $animal посмотрел на $name1 печальными глазами и заговорил человеческим голосом:\n\n— Здравствуй! Меня зовут $name2, я учусь в твоей школе. А заколдовал меня злой библиотекарь — за то, что я съел его $food. Очень уж он $adj3 оказался.\n\n— А как тебя расколдовать? — испугалась $name1.\n\n— Очень просто. Нужно вернуть библиотекарю $food. Положи его в $schoolItem и принеси утром.\n\nТак $name1 и сделала. Утром она торжественно вручила библиотекарю $food — и $name2 тут же снова стал мальчиком! 🎉 Правда, рога почему-то остались. Зато теперь он самый $adj2 мальчик в классе, а на физкультуре с ним вообще никто не может сравниться — особенно в прыжках через козла.\nПо-моему, отличная тайна получилась! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-33"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

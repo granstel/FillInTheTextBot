@@ -169,6 +169,19 @@
         },
         {
           "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Тайна библиотеки"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
           "platform": "telegram",
           "title": "истории",
           "buttons": [
