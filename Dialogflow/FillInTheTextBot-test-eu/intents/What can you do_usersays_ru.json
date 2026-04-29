@@ -1,0 +1,214 @@
+[
+  {
+    "id": "87831bde-20ea-41a5-b707-862c3be8a5c5",
+    "data": [
+      {
+        "text": "что это",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a1f7050c-29c5-45e9-8c50-409a888be4f8",
+    "data": [
+      {
+        "text": "что ты такое",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1acc7a14-b57e-4533-b31f-0a8cd04cd077",
+    "data": [
+      {
+        "text": "что ты умеешь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "92a39f43-6d9b-460b-adde-7df1f4cbcc85",
+    "data": [
+      {
+        "text": "а как это работает",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b13fba5f-3a65-42f7-b1c1-07abbe27eb55",
+    "data": [
+      {
+        "text": "мне ничего не понятно",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6c723a8f-1170-4768-b6f1-d931e391bb8f",
+    "data": [
+      {
+        "text": "алиса",
+        "userDefined": false
+      },
+      {
+        "text": " включи песню",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "eb9225db-f99f-4b8c-8317-2fa89b1976ce",
+    "data": [
+      {
+        "text": "включи песню",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "103469cc-42c8-4206-9fbe-fd4ea31eeb68",
+    "data": [
+      {
+        "text": "расскажи правила",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f8d43d74-f3c0-4019-9855-7c625b37d96b",
+    "data": [
+      {
+        "text": "Правила игры",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fda3758f-9441-4118-9479-82a1532a1dea",
+    "data": [
+      {
+        "text": "правила",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1e2a8c51-acaf-44ae-b094-953260710131",
+    "data": [
+      {
+        "text": "что делать",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d6778f9d-5495-42dd-9c43-86c90f8e5c41",
+    "data": [
+      {
+        "text": "что от меня требуется",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f0700ccc-7d95-41e6-b3d8-5d1acc73571b",
+    "data": [
+      {
+        "text": "что ты такое?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ce26425c-2cfc-41c1-a606-6372429a3055",
+    "data": [
+      {
+        "text": "а что ты умеешь?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cb7569b2-1c25-4ec3-8f7f-66eed37a18d8",
+    "data": [
+      {
+        "text": "да что мы можешь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6f8c55b7-bfab-4bc6-8134-5585cf78dc3e",
+    "data": [
+      {
+        "text": "Что ты умеешь?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
