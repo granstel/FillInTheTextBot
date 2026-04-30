@@ -29,7 +29,7 @@
       "speech": []
     }
   ],
-  "priority": -1,
+  "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
