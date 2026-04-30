@@ -1,16 +1,23 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "aa330001-1111-4abc-8def-330000000001",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "33-LibraryMystery",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-33",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
-          "id": "c525daaf-40a6-41cd-9124-0753b0ff3db2",
+          "id": "aa330001-1111-4abc-8def-3300000000a1",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +38,10 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история —"
+            "Отлично! Сочиняем",
+            "Здорово! Давай сочиним",
+            "Класс! Сейчас придумаем",
+            "Супер! Теперь сочиним "
           ],
           "condition": ""
         }

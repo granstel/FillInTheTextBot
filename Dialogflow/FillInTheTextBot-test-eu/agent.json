@@ -26,7 +26,7 @@
     "voiceType": "MALE_1",
     "capabilities": [],
     "env": "",
-    "protocolVersion": "V2",
+    "protocolVersion": "PROTOCOL_VERSION_UNSPECIFIED",
     "autoPreviewEnabled": false,
     "isDeviceAgent": false
   },

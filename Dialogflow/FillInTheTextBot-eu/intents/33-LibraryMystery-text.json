@@ -1,0 +1,282 @@
+{
+  "id": "aa330002-2222-4abc-8def-330000000002",
+  "parentId": "aa330001-1111-4abc-8def-330000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "33-LibraryMystery-text",
+  "auto": true,
+  "contexts": [
+    "text-33"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про тайну библиотеки.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p1",
+          "name": "woman_name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$woman_name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя девочки (например, одноклассницы)"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь женское имя — это будет наша главная героиня"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай имя для девочки"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p3",
+          "name": "color_fem",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color_fem",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь цвет в женском роде"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — какой-нибудь цвет в женском роде"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи название любого цвета в женском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p4",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови число от 10 до 1000"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число между 10 и 1000"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь число до тысячи (но больше десяти)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p6",
+          "name": "adj_masc_1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adj_masc_1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — «какой?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p7",
+          "name": "animal_masc",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal_masc",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Любой зверь — главное, чтобы слово было мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь животное в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p8",
+          "name": "boy_name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$boy_name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя мальчика (например, друга или одноклассника)"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай имя для мальчика"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa330002-2222-4abc-8def-3300000000p9",
+          "name": "food_masc",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$food_masc",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови что-нибудь съедобное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какая-нибудь еда — в мужском роде"
+            },
+            {
+              "lang": "ru",
+              "value": "Что-то, что можно съесть, в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Внимание, вот что получилось:\nОднажды $woman_name засиделась в библиотеке после уроков и вдруг заметила между стеллажами странную книгу. На её синей обложке было написано: «$color_fem книга. Открой — и узнаешь тайну». $woman_name открыла — а внутри ровно $number пустых страниц! А на самой последней — записка: «Приходи сюда ровно в полночь. И никому ни слова!».\n$woman_name страшно заинтересовалась и в полночь тайком пробралась обратно в библиотеку. Едва она пришла на то же место, как из-за шкафа вышел $adj_masc_1 $animal_masc! Он посмотрел на неё и заговорил человеческим голосом:\n— Здравствуй! Меня зовут $boy_name, я учусь в твоей школе. Меня заколдовал библиотекарь — за то, что я съел его $food_masc. Очень уж он вкусный оказался!\n— А как тебя расколдовать? — испугалась $woman_name.\n— Очень просто. Нужно вернуть библиотекарю $food_masc.\nТак $woman_name и сделала. Утром она торжественно вручила библиотекарю $food_masc — и $boy_name тут же снова стал мальчиком! 🎉\nПравда, $adj_masc_1 хвост почему-то остался.\nПо-моему, отличная тайна получилась! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Replacements": {
+                "🎉": "<speaker audio=\"alice-sounds-human-kids-1.opus\">"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "🎉": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-33"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
