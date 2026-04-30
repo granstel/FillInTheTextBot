@@ -240,6 +240,16 @@
           "type": "4",
           "title": "",
           "payload": {
+            "Yandex": {
+              "Replacements": {
+                "🎉": "<speaker audio=\"alice-sounds-human-kids-1.opus\">"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "🎉": ""
+              }
+            },
             "Sber": {
               "Buttons": [
                 {
