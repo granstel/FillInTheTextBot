@@ -242,7 +242,7 @@
           "payload": {
             "Yandex": {
               "Replacements": {
-                "🎉": "<speaker audio=\"alice-sounds-human-kids-1.opus\">"
+                "🎉": "\u003cspeaker audio\u003d\"alice-sounds-human-kids-1.opus\"\u003e"
               }
             },
             "Default": {
