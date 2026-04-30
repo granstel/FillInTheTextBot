@@ -1,0 +1,33 @@
+services:
+  dialogflow-emulator:
+    build:
+      context: .
+      dockerfile: src/Dialogflow.Emulator/Dockerfile
+    volumes:
+      - ./Dialogflow/FillInTheTextBot-test-eu:/app/agent:ro
+    environment:
+      - AGENT_PATH=/app/agent
+      - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:8195
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+  
+  redis:
+    image: redis:alpine
+    container_name: fillinthetextbot-redis
+    ports:
+      - "6379"
+
+  FillInTheTextBot:
+    image: granstel/fillinthetextbot:latest
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_ENVIRONMENT=CI
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    depends_on:
+      dialogflow-emulator:
+        condition: service_started
+      redis:
+        condition: service_started

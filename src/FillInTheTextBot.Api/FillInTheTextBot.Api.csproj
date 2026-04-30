@@ -1,37 +1,42 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <Version>1.22.0</Version>
-    <PackageReleaseNotes>Optimized interaction with Dialogflow</PackageReleaseNotes>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <Version>1.24.0</Version>
+        <PackageReleaseNotes>Updated to .NET 10.0</PackageReleaseNotes>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Jaeger" Version="1.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.7" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="NLog" Version="5.0.1" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="5.0.0" />
-    <PackageReference Include="OpenTracing" Version="0.12.1" />
-    <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.8.0" />
-    <PackageReference Include="prometheus-net" Version="7.0.0" />
-    <PackageReference Include="prometheus-net.AspNetCore" Version="7.0.0" />
-    <PackageReference Include="prometheus-net.AspNetCore.Grpc" Version="7.0.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="NLog" />
+        <PackageReference Include="NLog.Web.AspNetCore" />
+        <PackageReference Include="OpenTelemetry" />
+        <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.Http" />
+        <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FillInTheTextBot.Messengers.Marusia\FillInTheTextBot.Messengers.Marusia.csproj" />
-    <ProjectReference Include="..\FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj" />
-    <ProjectReference Include="..\FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj" />
-    <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
-    <ProjectReference Include="..\FillInTheTextBot.Services\FillInTheTextBot.Services.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\FillInTheTextBot.Messengers.Marusia\FillInTheTextBot.Messengers.Marusia.csproj" />
+        <ProjectReference Include="..\FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj" />
+        <ProjectReference Include="..\FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj" />
+        <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
+        <ProjectReference Include="..\FillInTheTextBot.Services\FillInTheTextBot.Services.csproj" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <Content Update="nlog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
+    <ItemGroup>
+        <Content Update="nlog.config">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="FillInTheTextBot.Api.IntegrationTests" />
+    </ItemGroup>
 
 </Project>

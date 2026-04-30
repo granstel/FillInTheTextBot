@@ -8,6 +8,6 @@ namespace FillInTheTextBot.Models
     {
         Default,
         NoOfficial,
-        Official,
+        Official
     }
 }

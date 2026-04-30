@@ -1,21 +1,36 @@
-﻿using System;
+using System;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using OpenTracing;
-using OpenTracing.Util;
 
-namespace FillInTheTextBot.Services
+namespace FillInTheTextBot.Services;
+
+public static class Tracing
 {
-    public static class Tracing
+    // Создаем один экземпляр ActivitySource для всех вызовов
+    private static readonly ActivitySource ActivitySource = new("FillInTheTextBot");
+
+    // Статический деструктор для освобождения ресурсов при завершении приложения
+    static Tracing()
     {
-        public static IScope Trace(Action<ISpanBuilder> spanBuilderAction = null, string operationName = null, [CallerMemberName] string caller = null)
+        AppDomain.CurrentDomain.ProcessExit += (_, _) => ActivitySource?.Dispose();
+        AppDomain.CurrentDomain.DomainUnload += (_, _) => ActivitySource?.Dispose();
+    }
+
+    public static IDisposable Trace(Action<Activity> activityAction = null, string operationName = null,
+        [CallerMemberName] string caller = null)
+    {
+        var activity = ActivitySource.StartActivity(operationName ?? caller);
+
+        activityAction?.Invoke(activity);
+
+        return new ActivityScope(activity);
+    }
+
+    private class ActivityScope(Activity activity) : IDisposable
+    {
+        public void Dispose()
         {
-            var spanBuilder = GlobalTracer.Instance.BuildSpan(operationName ?? caller);
-
-            spanBuilderAction?.Invoke(spanBuilder);
-
-            var scope = spanBuilder.StartActive(true);
-
-            return scope;
+            activity?.Dispose();
         }
     }
 }

@@ -1,0 +1,50 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Microsoft Packages -->
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="10.0.7" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.7" />
+    <PackageVersion Include="Microsoft.AspNetCore.TestHost" Version="10.0.7" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.7" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.4.0" />
+    <!-- Newtonsoft -->
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
+    <!-- Logging -->
+    <PackageVersion Include="NLog" Version="6.1.2" />
+    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.1.2" />
+    <!-- OpenTelemetry -->
+    <PackageVersion Include="OpenTelemetry" Version="1.15.3" />
+    <PackageVersion Include="OpenTelemetry.Api" Version="1.15.3" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.15.3" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.15.3" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.15.2" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.15.1" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.15.1" />
+    <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.12.0-beta.1" />
+    <PackageVersion Include="OpenTracing" Version="0.12.1" />
+    <!-- Google -->
+    <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.29.0" />
+    <!-- gRPC -->
+    <PackageVersion Include="Grpc.AspNetCore" Version="2.76.0" />
+    <PackageVersion Include="Grpc.Net.Client" Version="2.76.0" />
+    <!-- GranSteL -->
+    <PackageVersion Include="GranSteL.Helpers.Redis" Version="1.1.0" />
+    <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
+    <!-- Redis -->
+    <PackageVersion Include="StackExchange.Redis" Version="2.12.14" />
+    <!-- Testing -->
+    <PackageVersion Include="AutoFixture" Version="4.18.1" />
+    <PackageVersion Include="Moq" Version="4.20.72" />
+    <PackageVersion Include="nunit" Version="4.5.1" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="6.2.0" />
+    <PackageVersion Include="Testcontainers" Version="4.11.0" />
+    <!-- Yandex -->
+    <PackageVersion Include="Yandex.Dialogs.Models" Version="1.4.0" />
+    <!-- Sber -->
+    <PackageVersion Include="Sber.SmartApp.Models" Version="1.0.0" />
+    <!-- MailRu -->
+    <PackageVersion Include="MailRu.Marusia.Models" Version="1.1.0" />
+  </ItemGroup>
+</Project>

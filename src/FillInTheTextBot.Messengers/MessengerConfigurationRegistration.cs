@@ -3,31 +3,29 @@ using FillInTheTextBot.Services.Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FillInTheTextBot.Messengers
+namespace FillInTheTextBot.Messengers;
+
+public static class MessengerConfigurationRegistration
 {
-    public static class MessengerConfigurationRegistration
+    public static void AddConfiguration<T>(this IServiceCollection services, string fileName)
+        where T : MessengerConfiguration
     {
-        public static void AddConfiguration<T>(this IServiceCollection services, string fileName) where T : MessengerConfiguration
+        services.AddSingleton(context =>
         {
-            services.AddSingleton(context =>
-            {
-                const string extension = ".json";
+            const string extension = ".json";
 
-                if (fileName.IndexOf(extension, StringComparison.InvariantCultureIgnoreCase) < 0)
-                {
-                    fileName = $"{fileName}{extension}";
-                }
+            if (fileName.IndexOf(extension, StringComparison.InvariantCultureIgnoreCase) < 0)
+                fileName = $"{fileName}{extension}";
 
-                var configurationBuilder = new ConfigurationBuilder()
-                    .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                    .AddJsonFile(fileName, true, false);
+            var configurationBuilder = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile(fileName, true, false);
 
-                var configurationRoot = configurationBuilder.Build();
+            var configurationRoot = configurationBuilder.Build();
 
-                var configuration = configurationRoot.Get<T>();
+            var configuration = configurationRoot.Get<T>();
 
-                return configuration;
-            });
-        }
+            return configuration;
+        });
     }
 }

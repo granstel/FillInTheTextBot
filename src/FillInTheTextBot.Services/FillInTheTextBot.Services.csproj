@@ -1,27 +1,24 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <OutputType>Library</OutputType>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="4.4.0" />
-    <PackageReference Include="GranSteL.Helpers.Redis" Version="1.1.0" />
-    <PackageReference Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="OpenTracing" Version="0.12.1" />
-    <PackageReference Include="prometheus-net" Version="7.0.0" />
-    <PackageReference Include="StackExchange.Redis" Version="2.6.80" />
-    <PackageReference Include="System.ServiceModel.Duplex" Version="4.9.0" />
-    <PackageReference Include="System.ServiceModel.Http" Version="4.9.0" />
-    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.9.0" />
-    <PackageReference Include="System.ServiceModel.Security" Version="4.9.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Google.Cloud.Dialogflow.V2" />
+        <PackageReference Include="GranSteL.Helpers.Redis" />
+        <PackageReference Include="GranSteL.Tools.ScopeSelector" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="OpenTracing" />
+        <PackageReference Include="OpenTelemetry" />
+        <PackageReference Include="OpenTelemetry.Api" />
+        <PackageReference Include="StackExchange.Redis" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
+    </ItemGroup>
 
 </Project>

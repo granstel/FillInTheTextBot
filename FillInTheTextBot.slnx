@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/Messengers/">
+    <Project Path="src\FillInTheTextBot.Messengers.Marusia\FillInTheTextBot.Messengers.Marusia.csproj" />
+    <Project Path="src\FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj" />
+    <Project Path="src\FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj" />
+    <Project Path="src\FillInTheTextBot.Messengers\FillInTheTextBot.Messengers.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="src/FillInTheTextBot.Api.IntegrationTests/FillInTheTextBot.Api.IntegrationTests.csproj" />
+    <Project Path="src\Dialogflow.Emulator.IntegrationTests\Dialogflow.Emulator.IntegrationTests.csproj" />
+    <Project Path="src\FillInTheTextBot.Messengers.Tests\FillInTheTextBot.Messengers.Tests.csproj" />
+    <Project Path="src\FillInTheTextBot.Messengers.Yandex.Tests\FillInTheTextBot.Messengers.Yandex.Tests.csproj" />
+    <Project Path="src\FillInTheTextBot.Services.Tests\FillInTheTextBot.Services.Tests.csproj" />
+  </Folder>
+  <Project Path="src\Dialogflow.Emulator.Client\Dialogflow.Emulator.Client.csproj" Type="C#" />
+  <Project Path="src\Dialogflow.Emulator\Dialogflow.Emulator.csproj" Type="C#" />
+  <Project Path="src\FillInTheTextBot.Api\FillInTheTextBot.Api.csproj" />
+  <Project Path="src\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
+  <Project Path="src\FillInTheTextBot.Services\FillInTheTextBot.Services.csproj" />
+</Solution>

@@ -1,9 +1,8 @@
 ﻿using FillInTheTextBot.Services;
 using Sber.SmartApp.Models;
 
-namespace FillInTheTextBot.Messengers.Sber
+namespace FillInTheTextBot.Messengers.Sber;
+
+public interface ISberService : IMessengerService<Request, Response>
 {
-    public interface ISberService : IMessengerService<Request, Response>
-    {
-    }
 }

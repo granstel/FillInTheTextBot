@@ -6,13 +6,7 @@ namespace FillInTheTextBot.Models
 {
     public class Dialog
     {
-        public Dialog()
-        {
-            Parameters = new Dictionary<string, string>();
-            Buttons = Array.Empty<Button>();
-        }
-
-        public IDictionary<string, string> Parameters { get; set; }
+        public IDictionary<string, string> Parameters { get; set; } = new Dictionary<string, string>();
 
         public bool EndConversation { get; set; }
 
@@ -22,7 +16,7 @@ namespace FillInTheTextBot.Models
 
         public string Action { get; set; }
 
-        public Button[] Buttons { get; set; }
+        public Button[] Buttons { get; set; } = Array.Empty<Button>();
 
         public string ScopeKey { get; set; }
 

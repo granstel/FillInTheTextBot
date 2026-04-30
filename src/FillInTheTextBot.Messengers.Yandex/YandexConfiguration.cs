@@ -1,9 +1,7 @@
 ﻿using FillInTheTextBot.Services.Configuration;
 
-namespace FillInTheTextBot.Messengers.Yandex
+namespace FillInTheTextBot.Messengers.Yandex;
+
+public class YandexConfiguration : MessengerConfiguration
 {
-    public class YandexConfiguration : MessengerConfiguration
-    {
-        
-    }
 }

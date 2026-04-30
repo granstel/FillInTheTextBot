@@ -1,120 +1,119 @@
-﻿using AutoFixture;
+using System.Linq;
+using AutoFixture;
 using AutoFixture.Kernel;
 using FillInTheTextBot.Models;
 using NUnit.Framework;
-using System.Linq;
-using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Buttons;
 using Yandex.Dialogs.Models.Cards;
 using Yandex.Dialogs.Models.Input;
+using Button = Yandex.Dialogs.Models.Buttons.Button;
 using YandexModels = Yandex.Dialogs.Models;
 
-namespace FillInTheTextBot.Messengers.Yandex.Tests
+namespace FillInTheTextBot.Messengers.Yandex.Tests;
+
+[TestFixture]
+public class YandexMappingTests
 {
-    [TestFixture]
-    public class YandexMappingTests
+    [SetUp]
+    public void InitTest()
     {
-        private Fixture _fixture;
+        _fixture = new Fixture();
+        _fixture.Customizations.Add(new TypeRelay(typeof(Button), typeof(ResponseButton)));
+        _fixture.Customizations.Add(new TypeRelay(typeof(ICard), typeof(ItemsListCard)));
+    }
 
-        [SetUp]
-        public void InitTest()
-        {
-            _fixture = new Fixture();
-            _fixture.Customizations.Add(new TypeRelay(typeof(YandexModels.Buttons.Button), typeof(ResponseButton)));
-            _fixture.Customizations.Add(new TypeRelay(typeof(ICard), typeof(ItemsListCard)));
-        }
+    private Fixture _fixture;
 
-        [Test]
-        public void ToRequest_NullSource_ResultIsNull()
-        {
-            InputModel source = null;
+    [Test]
+    public void ToRequest_NullSource_ResultIsNull()
+    {
+        InputModel source = null;
 
-            var result = source.ToRequest();
+        var result = source.ToRequest();
 
-            Assert.IsNull(result);
-        }
+        Assert.That(result, Is.Null);
+    }
 
-        [Test]
-        public void ToRequest_AllProperties_MappedCorrectly()
-        {
-            var source = _fixture.Create<InputModel>();
+    [Test]
+    public void ToRequest_AllProperties_MappedCorrectly()
+    {
+        var source = _fixture.Create<InputModel>();
 
-            var result = source.ToRequest();
+        var result = source.ToRequest();
 
-            Assert.IsNotNull(result);
+        Assert.That(result, Is.Not.Null);
 
-            Assert.AreEqual(source.Session.SkillId, result.ChatHash);
-            Assert.AreEqual(source.Session.UserId, result.UserHash);
-            Assert.AreEqual(source.Request.OriginalUtterance, result.Text);
-            Assert.AreEqual(source.Session.SessionId, result.SessionId);
-            Assert.AreEqual(source.Session.New, result.NewSession);
-            Assert.AreEqual(source.Meta.Locale, result.Language);
-            Assert.AreEqual(result.HasScreen, source.Meta.Interfaces.Screen != null);
-            Assert.AreEqual(result.ClientId, source.Meta.ClientId);
-            Assert.AreEqual(Source.Yandex, result.Source);
-            Assert.AreEqual(Appeal.NoOfficial, result.Appeal);
-        }
+        Assert.That(result.ChatHash, Is.EqualTo(source.Session.SkillId));
+        Assert.That(result.UserHash, Is.EqualTo(source.Session.UserId));
+        Assert.That(result.Text, Is.EqualTo(source.Request.OriginalUtterance));
+        Assert.That(result.SessionId, Is.EqualTo(source.Session.SessionId));
+        Assert.That(result.NewSession, Is.EqualTo(source.Session.New));
+        Assert.That(result.Language, Is.EqualTo(source.Meta.Locale));
+        Assert.That(result.HasScreen, Is.EqualTo(source.Meta.Interfaces.Screen != null));
+        Assert.That(result.ClientId, Is.EqualTo(source.Meta.ClientId));
+        Assert.That(result.Source, Is.EqualTo(Source.Yandex));
+        Assert.That(result.Appeal, Is.EqualTo(Appeal.NoOfficial));
+    }
 
-        [Test]
-        public void FillOutput_NullSource_ResultIsNull()
-        {
-            InputModel source = null;
-            OutputModel destination = null;
+    [Test]
+    public void FillOutput_NullSource_ResultIsNull()
+    {
+        InputModel source = null;
+        YandexModels.OutputModel destination = null;
 
-            var result = source.FillOutput(destination);
+        var result = source.FillOutput(destination);
 
-            Assert.IsNull(result);
-        }
+        Assert.That(result, Is.Null);
+    }
 
-        [Test]
-        public void FillOutput_NullDestination_ResultIsNull()
-        {
-            var source = new InputModel();
-            OutputModel destination = null;
+    [Test]
+    public void FillOutput_NullDestination_ResultIsNull()
+    {
+        var source = new InputModel();
+        YandexModels.OutputModel destination = null;
 
-            var result = source.FillOutput(destination);
+        var result = source.FillOutput(destination);
 
-            Assert.IsNull(result);
-        }
+        Assert.That(result, Is.Null);
+    }
 
-        [Test]
-        public void FillOutput_AllParameters_MappedCorrectly()
-        {
-            var input = _fixture.Create<InputModel>();
+    [Test]
+    public void FillOutput_AllParameters_MappedCorrectly()
+    {
+        var input = _fixture.Create<InputModel>();
 
-            var output = _fixture.Build<OutputModel>()
-                .Without(o => o.Session)
-                .Without(o => o.Version)
-                .Create();
+        var output = _fixture.Build<YandexModels.OutputModel>()
+            .Without(o => o.Session)
+            .Without(o => o.Version)
+            .Create();
 
 
-            output = input.FillOutput(output);
+        output = input.FillOutput(output);
 
 
-            Assert.AreEqual(input.Session.SessionId, output.Session.SessionId);
-            Assert.AreEqual(input.Session.MessageId, output.Session.MessageId);
-            Assert.AreEqual(input.Version, output.Version);
-            Assert.NotNull(output.Response);
-        }
+        Assert.That(output.Session.SessionId, Is.EqualTo(input.Session.SessionId));
+        Assert.That(output.Session.MessageId, Is.EqualTo(input.Session.MessageId));
+        Assert.That(output.Version, Is.EqualTo(input.Version));
+        Assert.That(output.Response, Is.Not.Null);
+    }
 
-        [Test]
-        public void Map_ResponseWithButtons_Response()
-        {
-            var buttons = _fixture.Build<Models.Button>()
-                .With(b => b.Text)
-                .With(b => b.Url)
-                .CreateMany().ToArray();
+    [Test]
+    public void Map_ResponseWithButtons_Response()
+    {
+        var buttons = _fixture.Build<Models.Button>()
+            .With(b => b.Text)
+            .With(b => b.Url)
+            .CreateMany().ToArray();
 
-            var input = _fixture.Build<Models.Response>()
-                .With(r => r.Buttons, buttons)
-                .Create();
-
-
-            var result = input.ToResponse();
+        var input = _fixture.Build<Response>()
+            .With(r => r.Buttons, buttons)
+            .Create();
 
 
-            Assert.NotNull(result?.Buttons);
-            Assert.AreEqual(buttons.Length, result?.Buttons?.Length);
-        }
+        var result = input.ToResponse();
+
+
+        Assert.That(result?.Buttons, Is.Not.Null);
+        Assert.That(result?.Buttons?.Length, Is.EqualTo(buttons.Length));
     }
 }
