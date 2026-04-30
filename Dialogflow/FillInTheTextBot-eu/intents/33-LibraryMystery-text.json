@@ -18,7 +18,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "тайну библиотеки.",
+          "value": "про тайну библиотеки.",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
