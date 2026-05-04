@@ -21,3 +21,4 @@
 *.pfx
 *.user
 **/.etc
+**/.claude
