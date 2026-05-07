@@ -1,0 +1,60 @@
+{
+  "id": "aa340001-1111-4abc-8def-340000000001",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "34-LibrarianMystery",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-34",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa340001-1111-4abc-8def-3400000000a1",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-34-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Отлично! Сочиняем",
+            "Здорово! Давай сочиним",
+            "Класс! Сейчас придумаем",
+            "Супер! Теперь сочиним"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

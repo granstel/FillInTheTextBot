@@ -1,0 +1,150 @@
+{
+  "id": "aa340003-3333-4abc-8def-340000000003",
+  "parentId": "aa340001-1111-4abc-8def-340000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "34-LibrarianMystery-text2",
+  "auto": true,
+  "contexts": [
+    "text-34-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-34-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-34",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa340003-3333-4abc-8def-3400000000d1",
+          "name": "pretend_book_title",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$pretend_book_title",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Придумай название какой-нибудь книги — настоящей или выдуманной"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любую книгу"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь название книги (одно слово или несколько)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340003-3333-4abc-8def-3400000000d2",
+          "name": "spell_word",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$spell_word",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Придумай волшебное слово или заклинание (одно слово или короткая фраза)"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любое заклинание — настоящее или выдуманное"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь магическое слово (можно выдумать)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Долго ждать не пришлось. Уже после уроков какая-то девочка нашла мою книжку. Я сделал вид, что углублён в книгу «$pretend_book_title», а сам наблюдал: открыла, прочитала, ахнула, унесла домой думать.\n\nРовно в полночь девочка прокралась обратно в библиотеку. Я спрятался за шкафом, а с другой стороны к ней вышел мой пленник — тот самый #text-34.animal_masc. Мальчишка разыграл всё как по нотам: грустные глаза, человеческий голос, история про злого библиотекаря (что обед мой он сам съел, скромно умолчал — ну да ладно).\n\nУтром девочка торжественно вручила мне свежий #text-34.food_masc! Я махнул рукой, прошептал заклинание «$spell_word» — и мальчишка снова стал самим собой. Правда, хвост почему-то остался. Ну, пусть будет — для памяти.\n\nА #text-34.food_masc, между прочим, оказался даже вкуснее первого.\n\n— По-моему, неплохая история получилась! Сочиним ещё что-нибудь? 📚"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Replacements": {
+                "📚": ""
+              },
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-34-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
