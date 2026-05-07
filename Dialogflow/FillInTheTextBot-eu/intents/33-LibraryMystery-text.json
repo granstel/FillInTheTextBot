@@ -11,7 +11,12 @@
     {
       "resetContexts": false,
       "action": "saveToRepeat",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-33",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
           "id": "aa330002-2222-4abc-8def-3300000000c0",
