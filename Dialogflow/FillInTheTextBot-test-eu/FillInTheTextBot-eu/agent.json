@@ -4,7 +4,7 @@
   "shortDescription": "",
   "examples": "",
   "linkToDocs": "",
-  "displayName": "FillInTheTextBot-test-eu",
+  "displayName": "FillInTheTextBot-eu",
   "disableInteractionLogs": false,
   "disableStackdriverLogs": true,
   "googleAssistant": {
@@ -45,7 +45,7 @@
   "supportedLanguages": [],
   "enableOnePlatformApi": true,
   "onePlatformApiVersion": "v2",
-  "secondaryKey": "6adcd1afde664dae841668dde85adb74",
+  "secondaryKey": "6b8263a54a6c4b8f98693a7e8b5bb795",
   "analyzeQueryTextSentiment": false,
   "enabledKnowledgeBaseNames": [],
   "knowledgeServiceConfidenceAdjustment": -0.4,
