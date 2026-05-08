@@ -18,7 +18,7 @@
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "text-34",
+          "value": "text-34-1",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
