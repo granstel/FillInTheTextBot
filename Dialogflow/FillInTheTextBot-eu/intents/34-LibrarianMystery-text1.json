@@ -1,0 +1,308 @@
+{
+  "id": "aa340002-2222-4abc-8def-340000000002",
+  "parentId": "aa340001-1111-4abc-8def-340000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "34-LibrarianMystery-text1",
+  "auto": true,
+  "contexts": [
+    "text-34-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-34-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-34",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000c0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про тайну библиотекаря. Эта история состоит из двух частей, начнём с первой.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000c1",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-34-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000c2",
+          "name": "librarian_name_patronymic",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$librarian_name_patronymic",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя и отчество какого-нибудь взрослого мужчины (например, учителя или соседа)"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь мужское имя с отчеством"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай имя и отчество для мужчины"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000c5",
+          "name": "magic_books_count",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$magic_books_count",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови число от 5 до 100"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь число побольше пяти, но не больше ста"
+            },
+            {
+              "lang": "ru",
+              "value": "Загадай число от 5 до 100"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000c6",
+          "name": "wave_count",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$wave_count",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Ещё одно любое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови ещё одно любое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Ещё какое-нибудь число, любое"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000c7",
+          "name": "food_masc",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "#text-33-carry.food_masc",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови что-нибудь съедобное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какая-нибудь еда — в мужском роде"
+            },
+            {
+              "lang": "ru",
+              "value": "Что-то, что можно съесть, в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000c8",
+          "name": "adj_masc_1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "#text-33-carry.adj_masc_1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь прилагательное в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000c9",
+          "name": "animal_masc",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "#text-33-carry.animal_masc",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Любой зверь — главное, чтобы слово было мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь животное в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000ca",
+          "name": "color_fem",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "#text-33-carry.color_fem",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь цвет в женском роде"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — какой-нибудь цвет в женском роде"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи название любого цвета в женском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa340002-2222-4abc-8def-3400000000cb",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "#text-33-carry.number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови число от 10 до 1000"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число между 10 и 1000"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь число до тысячи (но больше десяти)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что получилось:\nМеня зовут $librarian_name_patronymic, я работаю библиотекарем. Мало кто знает, что в дальнем углу, между двумя толстыми энциклопедиями, у меня припрятано $magic_books_count книг по магии. Так, для личных нужд.\nОднажды утром я принёс на работу свой обед — $food_masc. Только положил на стол, как из-за шкафа выскочил $adj_masc_1 мальчишка, схватил его и съел прямо у меня на глазах!\nВозмутился я страшно. Достал книгу заклинаний, взмахнул ею ровно $wave_count раз — и вот передо мной уже стоит $adj_masc_1 $animal_masc!\nНо к вечеру совесть меня загрызла. Расколдовать его я мог только одним способом: если мне принесут такой же свежий $food_masc. А самому просить нельзя — магия не сработает.\nТогда я схватил с полки особенную книгу: у неё внутри ровно $number пустых страниц. На последней я нацарапал записку про полночь и тайну и сунул книгу между стеллажами — на самое видное место.\nХочешь узнать, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-34-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb0001",
+    "data": [
+      {
+        "text": "Война и мир",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb0002",
+    "data": [
+      {
+        "text": "Колобок",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb0003",
+    "data": [
+      {
+        "text": "Гарри Поттер",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb0004",
+    "data": [
+      {
+        "text": "Незнайка на Луне",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb0005",
+    "data": [
+      {
+        "text": "Анна Каренина",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb0006",
+    "data": [
+      {
+        "text": "Алиса в Стране чудес",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb0007",
+    "data": [
+      {
+        "text": "Три поросёнка",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb0008",
+    "data": [
+      {
+        "text": "Мёртвые души",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb0009",
+    "data": [
+      {
+        "text": "Преступление и наказание",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000bbb000a",
+    "data": [
+      {
+        "text": "Винни-Пух",
+        "meta": "@sys.any",
+        "alias": "pretend_book_title",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc0001",
+    "data": [
+      {
+        "text": "абракадабра",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc0002",
+    "data": [
+      {
+        "text": "симсалабим",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc0003",
+    "data": [
+      {
+        "text": "трах-тибидох",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc0004",
+    "data": [
+      {
+        "text": "крибле-крабле-бумс",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc0005",
+    "data": [
+      {
+        "text": "шурум-бурум",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc0006",
+    "data": [
+      {
+        "text": "вуаля",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc0007",
+    "data": [
+      {
+        "text": "фокус-покус",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc0008",
+    "data": [
+      {
+        "text": "ахалай-махалай",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc0009",
+    "data": [
+      {
+        "text": "сезам, откройся",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa340003-3333-4abc-8def-34000ccc000a",
+    "data": [
+      {
+        "text": "опа-на",
+        "meta": "@sys.any",
+        "alias": "spell_word",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
