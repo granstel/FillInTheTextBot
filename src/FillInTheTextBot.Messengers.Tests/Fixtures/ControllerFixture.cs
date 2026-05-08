@@ -2,13 +2,10 @@
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace FillInTheTextBot.Messengers.Tests.Fixtures
-{
-    public class ControllerFixture : MessengerController<InputFixture, OutputFixture>
-    {
-        public ControllerFixture(ILogger<ControllerFixture> log, IMessengerService<InputFixture, OutputFixture> messengerService, MessengerConfiguration configuration)
-            : base(log, messengerService, configuration)
-        {
-        }
-    }
-}
+namespace FillInTheTextBot.Messengers.Tests.Fixtures;
+
+public class ControllerFixture(
+    ILogger<ControllerFixture> log,
+    IMessengerService<InputFixture, OutputFixture> messengerService,
+    MessengerConfiguration configuration)
+    : MessengerController<InputFixture, OutputFixture>(log, messengerService, configuration);

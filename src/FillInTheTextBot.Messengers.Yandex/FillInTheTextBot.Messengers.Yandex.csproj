@@ -1,23 +1,23 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <OutputType>Library</OutputType>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="appsettings.Yandex.json">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
+    <ItemGroup>
+        <Content Include="appsettings.Yandex.json">
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Yandex.Dialogs.Models" Version="1.4.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Yandex.Dialogs.Models" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FillInTheTextBot.Messengers\FillInTheTextBot.Messengers.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\FillInTheTextBot.Messengers\FillInTheTextBot.Messengers.csproj" />
+    </ItemGroup>
 
 </Project>

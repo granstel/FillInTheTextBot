@@ -1,13 +1,12 @@
 ﻿using System.Threading.Tasks;
 
-namespace FillInTheTextBot.Services
+namespace FillInTheTextBot.Services;
+
+public interface IMessengerService<TInput, TOutput>
 {
-    public interface IMessengerService<TInput, TOutput>
-    {
-        Task<TOutput> ProcessIncomingAsync(TInput input);
+    Task<TOutput> ProcessIncomingAsync(TInput input);
 
-        Task<bool> SetWebhookAsync(string url);
+    Task<bool> SetWebhookAsync(string url);
 
-        Task<bool> DeleteWebhookAsync();
-    }
+    Task<bool> DeleteWebhookAsync();
 }

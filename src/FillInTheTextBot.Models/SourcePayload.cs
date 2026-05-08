@@ -4,14 +4,8 @@ namespace FillInTheTextBot.Models
 {
     public class SourcePayload
     {
-        public ICollection<Button> Buttons { get; set; }
+        public ICollection<Button> Buttons { get; set; } = new List<Button>();
 
-        public IDictionary<string, string> Replacements { get; set; }
-
-        public SourcePayload()
-        {
-            Buttons = new List<Button>();
-            Replacements = new Dictionary<string, string>();
-        }
+        public IDictionary<string, string> Replacements { get; set; } = new Dictionary<string, string>();
     }
 }

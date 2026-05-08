@@ -6,70 +6,63 @@ using GranSteL.Helpers.Redis;
 using MailRu.Marusia.Models;
 using MailRu.Marusia.Models.Input;
 using Microsoft.Extensions.Logging;
+using Request = FillInTheTextBot.Models.Request;
+using Response = FillInTheTextBot.Models.Response;
 
-namespace FillInTheTextBot.Messengers.Marusia
+namespace FillInTheTextBot.Messengers.Marusia;
+
+public class MarusiaService(
+    ILogger<MarusiaService> log,
+    IConversationService conversationService,
+    IRedisCacheService cache)
+    : MessengerService<InputModel, OutputModel>(log, conversationService), IMarusiaService
 {
-    public class MarusiaService : MessengerService<InputModel, OutputModel>, IMarusiaService
+    private const string PingCommand = "ping";
+    private const string PongResponse = "pong";
+
+    protected override Request Before(InputModel input)
     {
-        private const string PingCommand = "ping";
-        private const string PongResponse = "pong";
+        var request = input.ToRequest();
 
-        private readonly IRedisCacheService _cache;
+        input.TryGetFromUserState(Request.IsOldUserKey, out bool isOldUser);
 
-        public MarusiaService(
-            ILogger<MarusiaService> log,
-            IConversationService conversationService,
-            IRedisCacheService cache) : base(log, conversationService)
-        {
-            _cache = cache;
-        }
+        request.IsOldUser = isOldUser;
 
-        protected override Models.Request Before(InputModel input)
-        {
-            var request = input.ToRequest();
+        input.TryGetFromUserState(Response.NextTextIndexStorageKey, out object nextTextIndex);
 
-            input.TryGetFromUserState(Models.Request.IsOldUserKey, out bool isOldUser);
+        request.NextTextIndex = Convert.ToInt32(nextTextIndex);
 
-            request.IsOldUser = isOldUser;
+        input.TryGetFromSessionState(Response.ScopeStorageKey, out string scopeKey);
 
-            input.TryGetFromUserState(Models.Response.NextTextIndexStorageKey, out object nextTextIndex);
+        request.ScopeKey = scopeKey;
 
-            request.NextTextIndex = Convert.ToInt32(nextTextIndex);
+        return request;
+    }
 
-            input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
+    protected override Response ProcessCommand(Request request)
+    {
+        Response response = null;
 
-            request.ScopeKey = scopeKey;
+        if (PingCommand.Equals(request.Text, StringComparison.InvariantCultureIgnoreCase))
+            response = new Response { Text = PongResponse };
 
-            return request;
-        }
+        return response;
+    }
 
-        protected override Models.Response ProcessCommand(Models.Request request)
-        {
-            Models.Response response = null;
+    protected override Task<OutputModel> AfterAsync(InputModel input, Response response)
+    {
+        var output = response.ToOutput();
 
-            if (PingCommand.Equals(request.Text, StringComparison.InvariantCultureIgnoreCase))
-            {
-                response = new Models.Response { Text = PongResponse };
-            }
+        output = input.FillOutput(output);
 
-            return response;
-        }
+        output.AddToUserState(Request.IsOldUserKey, true);
 
-        protected override Task<OutputModel> AfterAsync(InputModel input, Models.Response response)
-        {
-            var output = response.ToOutput();
+        output.AddToUserState(Response.NextTextIndexStorageKey, response.NextTextIndex);
 
-            output = input.FillOutput(output);
+        output.AddToSessionState(Response.ScopeStorageKey, response.ScopeKey);
 
-            output.AddToUserState(Models.Request.IsOldUserKey, true);
+        cache.AddAsync($"marusia:{input.Session?.UserId}", string.Empty, TimeSpan.FromDays(14)).Forget();
 
-            output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
-
-            output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
-
-            _cache.AddAsync($"marusia:{input.Session?.UserId}", string.Empty, TimeSpan.FromDays(14)).Forget();
-
-            return Task.FromResult(output);
-        }
+        return Task.FromResult(output);
     }
 }

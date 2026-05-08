@@ -1,0 +1,12 @@
+﻿{
+  "profiles": {
+    "FillInTheTextBot.Api": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:1402",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

@@ -1,30 +1,26 @@
 ﻿using Newtonsoft.Json;
 
-namespace FillInTheTextBot.Services.Extensions
+namespace FillInTheTextBot.Services.Extensions;
+
+public static class SerializationExtensions
 {
-    public static class SerializationExtensions
+    internal static string Serialize(this object obj, JsonSerializerSettings settings = null)
     {
-        internal static string Serialize(this object obj, JsonSerializerSettings settings = null)
-        {
-            if (!(obj is string result))
-            {
-                result = JsonConvert.SerializeObject(obj, settings);
-            }
+        if (!(obj is string result)) result = JsonConvert.SerializeObject(obj, settings);
 
-            return result;
-        }
+        return result;
+    }
 
-        public static T Deserialize<T>(this object obj, JsonSerializerSettings settings = null)
+    public static T Deserialize<T>(this object obj, JsonSerializerSettings settings = null)
+    {
+        switch (obj)
         {
-            switch (obj)
-            {
-                case T deserialize:
-                    return deserialize;
-                case string serialized:
-                    return JsonConvert.DeserializeObject<T>(serialized, settings);
-                default:
-                    return default;
-            }
+            case T deserialize:
+                return deserialize;
+            case string serialized:
+                return JsonConvert.DeserializeObject<T>(serialized, settings);
+            default:
+                return default;
         }
     }
 }
