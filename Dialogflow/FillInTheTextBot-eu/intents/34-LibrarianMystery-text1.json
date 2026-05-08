@@ -140,7 +140,7 @@
           "name": "food_masc",
           "required": true,
           "dataType": "@sys.any",
-          "value": "#text-33.food_masc",
+          "value": "#text-33-carry.food_masc",
           "defaultValue": "",
           "isList": false,
           "prompts": [
@@ -167,7 +167,7 @@
           "name": "adj_masc_1",
           "required": true,
           "dataType": "@sys.any",
-          "value": "#text-33.adj_masc_1",
+          "value": "#text-33-carry.adj_masc_1",
           "defaultValue": "",
           "isList": false,
           "prompts": [
@@ -194,7 +194,7 @@
           "name": "animal_masc",
           "required": true,
           "dataType": "@sys.any",
-          "value": "#text-33.animal_masc",
+          "value": "#text-33-carry.animal_masc",
           "defaultValue": "",
           "isList": false,
           "prompts": [
@@ -221,7 +221,7 @@
           "name": "color_fem",
           "required": true,
           "dataType": "@sys.any",
-          "value": "#text-33.color_fem",
+          "value": "#text-33-carry.color_fem",
           "defaultValue": "",
           "isList": false,
           "prompts": [
@@ -248,7 +248,7 @@
           "name": "number",
           "required": true,
           "dataType": "@sys.number",
-          "value": "#text-33.number",
+          "value": "#text-33-carry.number",
           "defaultValue": "",
           "isList": false,
           "prompts": [

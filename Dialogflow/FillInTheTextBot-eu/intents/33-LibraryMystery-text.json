@@ -14,6 +14,10 @@
       "affectedContexts": [
         {
           "name": "text-33",
+          "lifespan": 0
+        },
+        {
+          "name": "text-33-carry",
           "lifespan": 50
         }
       ],
