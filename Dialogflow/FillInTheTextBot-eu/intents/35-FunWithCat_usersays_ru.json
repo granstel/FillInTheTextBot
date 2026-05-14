@@ -1,0 +1,132 @@
+[
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e01",
+    "data": [
+      {
+        "text": "веселье и кошка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e02",
+    "data": [
+      {
+        "text": "про кошку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e03",
+    "data": [
+      {
+        "text": "сочини историю про кошку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e04",
+    "data": [
+      {
+        "text": "про вечеринку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e05",
+    "data": [
+      {
+        "text": "история про кошку и праздник",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e06",
+    "data": [
+      {
+        "text": "соседская кошка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e07",
+    "data": [
+      {
+        "text": "кошка на вечеринке",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e08",
+    "data": [
+      {
+        "text": "веселая история про кошку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e09",
+    "data": [
+      {
+        "text": "про домашний праздник",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa350001-1111-4abc-8def-350000000e10",
+    "data": [
+      {
+        "text": "кошка с колпаком",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
