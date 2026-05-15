@@ -1,0 +1,367 @@
+{
+  "id": "aa350002-2222-4abc-8def-350000000002",
+  "parentId": "aa350001-1111-4abc-8def-350000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "35-FunWithCat-text",
+  "auto": true,
+  "contexts": [
+    "text-35"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-35",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000n0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про веселье и кошку.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000p1",
+          "name": "friend_name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$friend_name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя своей подруги"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь женское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Имя девочки, например — одноклассницы"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000p2",
+          "name": "colorful",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$colorful",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какие?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови прилагательное во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — «какие?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000p3",
+          "name": "cat_name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$cat_name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь женское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай женское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Любое имя в женском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000p4",
+          "name": "cat_appearance",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$cat_appearance",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какая?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови прилагательное в женском роде"
+            },
+            {
+              "lang": "ru",
+              "value": "Любое прилагательное в женском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000p5",
+          "name": "hat_color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$hat_color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "«Какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — прилагательное в мужском роде"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь прилагательное в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000p6",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови животное во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь животное — но во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Любой зверь, главное — слово во множественном числе"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000p7",
+          "name": "speed",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$speed",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Снова — «какая?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Ещё одно прилагательное в женском роде"
+            },
+            {
+              "lang": "ru",
+              "value": "Снова любое прилагательное в женском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000p8",
+          "name": "height",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$height",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь число"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa350002-2222-4abc-8def-3500000000p9",
+          "name": "treat",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$treat",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок — что-нибудь съедобное"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний: назови съедобное"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — какая-нибудь еда"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста",
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Однажды в выходной я решила устроить дома вечеринку и пригласила свою подругу по имени $friend_name. Мы повесили $colorful гирлянды по всей комнате и включили весёлую музыку.\nВдруг в дверь вбежала соседская кошка! Её звали $cat_name, она была очень $cat_appearance, а на её голове красовался $hat_color колпак!\n$cat_name запрыгнула на стол и начала лизать наш торт! Потом схватила печенье в зубы и помчалась по всей квартире! $friend_name и я бегали за ней как $animal, но так и не смогли её поймать — кошка была слишком $speed!\nОна прыгала на $height сантиметров в высоту — просто чемпионка по прыжкам! Когда кошка, наконец, устала, в миске для неё уже лежало угощение: $treat, для кошки это точно полезнее торта.\nВот такой получился необычный, весёлый и смешной праздник! 🎉\nДавай сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "🎉": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "🎉": "<speaker audio=\"alice-sounds-animals-cat-3.opus\">"
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-35"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
