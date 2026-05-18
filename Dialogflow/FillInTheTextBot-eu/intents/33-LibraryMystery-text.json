@@ -118,29 +118,6 @@
           "outputDialogContexts": []
         },
         {
-          "id": "26b974c9-111f-452b-be8b-b43b243a5ddd",
-          "name": "adj_masc_1",
-          "required": true,
-          "dataType": "@sys.any",
-          "value": "$adj_masc_1",
-          "defaultValue": "",
-          "isList": false,
-          "prompts": [
-            {
-              "lang": "ru",
-              "value": "«Какой?»"
-            },
-            {
-              "lang": "ru",
-              "value": "Теперь — «какой?»"
-            }
-          ],
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": []
-        },
-        {
           "id": "e775c5af-dca6-4755-b5bc-507085835dae",
           "name": "animal_masc",
           "required": true,

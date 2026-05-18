@@ -167,7 +167,7 @@
           "name": "adj_masc_1",
           "required": true,
           "dataType": "@sys.any",
-          "value": "#text-33-carry.adj_masc_1",
+          "value": "$adj_masc_1",
           "defaultValue": "",
           "isList": false,
           "prompts": [
