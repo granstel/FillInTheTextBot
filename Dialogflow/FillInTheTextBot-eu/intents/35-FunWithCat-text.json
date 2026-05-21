@@ -282,8 +282,7 @@
           "platform": "telegram",
           "title": "",
           "replies": [
-            "Повтори пожалуйста",
-            "Да!"
+            "Повтори пожалуйста"
           ],
           "textToSpeech": "",
           "lang": "ru",
