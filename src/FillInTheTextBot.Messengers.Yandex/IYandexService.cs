@@ -2,9 +2,8 @@
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
 
-namespace FillInTheTextBot.Messengers.Yandex
+namespace FillInTheTextBot.Messengers.Yandex;
+
+public interface IYandexService : IMessengerService<InputModel, OutputModel>
 {
-    public interface IYandexService : IMessengerService<InputModel, OutputModel>
-    {
-    }
 }

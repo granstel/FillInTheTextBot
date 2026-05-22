@@ -1,10 +1,9 @@
 ﻿using System.Threading.Tasks;
 using FillInTheTextBot.Models;
 
-namespace FillInTheTextBot.Services
+namespace FillInTheTextBot.Services;
+
+public interface IConversationService
 {
-    public interface IConversationService
-    {
-        Task<Response> GetResponseAsync(Request request);
-    }
+    Task<Response> GetResponseAsync(Request request);
 }

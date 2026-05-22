@@ -3,17 +3,17 @@ using Newtonsoft.Json;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
 
-namespace FillInTheTextBot.Messengers.Yandex
+namespace FillInTheTextBot.Messengers.Yandex;
+
+public class YandexController : MessengerController<InputModel, OutputModel>
 {
-    public class YandexController : MessengerController<InputModel, OutputModel>
+    public YandexController(ILogger<YandexController> log, IYandexService yandexService,
+        YandexConfiguration configuration)
+        : base(log, yandexService, configuration)
     {
-        public YandexController(ILogger<YandexController> log, IYandexService yandexService, YandexConfiguration configuration)
-            : base(log, yandexService, configuration)
+        SerializerSettings = new JsonSerializerSettings
         {
-            SerializerSettings = new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore
-            };
-        }
+            NullValueHandling = NullValueHandling.Ignore
+        };
     }
 }

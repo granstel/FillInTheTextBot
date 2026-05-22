@@ -1,9 +1,7 @@
 ﻿using FillInTheTextBot.Services.Configuration;
 
-namespace FillInTheTextBot.Messengers.Marusia
+namespace FillInTheTextBot.Messengers.Marusia;
+
+public class MarusiaConfiguration : MessengerConfiguration
 {
-    public class MarusiaConfiguration : MessengerConfiguration
-    {
-        
-    }
 }

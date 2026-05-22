@@ -1,50 +1,43 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using NLog.Web;
 using System.Linq;
 using System.Reflection;
+using FillInTheTextBot.Api;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using NLog.Web;
 
-namespace FillInTheTextBot.Api
+var existingHostingStartupAssemblies = Environment.GetEnvironmentVariable("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES") ?? string.Empty;
+var hostingStartupAssembliesList = existingHostingStartupAssemblies.Split(';', StringSplitOptions.RemoveEmptyEntries);
+var fullList = hostingStartupAssembliesList.Concat(GetAssembliesNames()).Distinct().ToList();
+Environment.SetEnvironmentVariable("ASPNETCORE_HOSTINGSTARTUPASSEMBLIES", string.Join(';', fullList));
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseNLog();
+
+var startup = new Startup(builder.Configuration, Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory.Instance);
+startup.ConfigureServices(builder.Services);
+
+var app = builder.Build();
+
+FillInTheTextBot.Services.InternalLoggerFactory.Factory = app.Services.GetRequiredService<ILoggerFactory>();
+
+var appConfiguration = app.Services.GetRequiredService<FillInTheTextBot.Services.Configuration.AppConfiguration>();
+startup.Configure(app, appConfiguration);
+
+app.Run();
+
+static ICollection<string> GetAssembliesNames()
 {
-    public static class Program
-    {
-        public static void Main(string[] args)
-        {
-            BuildWebHost(args).Run();
-        }
+    var callingAssembly = Assembly.GetCallingAssembly();
 
-        public static IWebHost BuildWebHost(string[] args)
-        {
-            var builder = WebHost.CreateDefaultBuilder(args);
-
-            var hostingStartupAssemblies = builder.GetSetting(WebHostDefaults.HostingStartupAssembliesKey) ?? string.Empty;
-            var hostingStartupAssembliesList = hostingStartupAssemblies.Split(';');
-
-            var names = GetAssembliesNames();
-            var fullList = hostingStartupAssembliesList.Concat(names).Distinct().ToList();
-            var concatenatedNames = string.Join(';', fullList);
-
-            var host = builder
-                .UseSetting(WebHostDefaults.HostingStartupAssembliesKey, concatenatedNames)
-                .UseStartup<Startup>()
-                .UseNLog()
-                .Build();
-
-            return host;
-        }
-
-        private static ICollection<string> GetAssembliesNames()
-        {
-            var callingAssemble = Assembly.GetCallingAssembly();
-
-            var names = callingAssemble.GetCustomAttributes<ApplicationPartAttribute>()
-                .Where(a => a.AssemblyName.Contains("FillInTheTextBot", StringComparison.InvariantCultureIgnoreCase))
-                .Select(a => a.AssemblyName).ToList();
-
-            return names;
-        }
-    }
+    return callingAssembly.GetCustomAttributes<ApplicationPartAttribute>()
+        .Where(a => a.AssemblyName.Contains("FillInTheTextBot", StringComparison.InvariantCultureIgnoreCase))
+        .Select(a => a.AssemblyName)
+        .ToList();
 }
+
+public partial class Program;
