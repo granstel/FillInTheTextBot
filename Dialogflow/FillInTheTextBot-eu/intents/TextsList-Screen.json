@@ -188,6 +188,19 @@
         },
         {
           "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Сахарная вата"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
           "platform": "telegram",
           "title": "истории",
           "buttons": [

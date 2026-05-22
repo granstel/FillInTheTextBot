@@ -1,0 +1,258 @@
+{
+  "id": "aa360002-2222-4abc-8def-360000000002",
+  "parentId": "aa360001-1111-4abc-8def-360000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "36-CottonCandy-text",
+  "auto": true,
+  "contexts": [
+    "text-36"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-36",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa360002-2222-4abc-8def-3600000000n0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про сахарную вату.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa360002-2222-4abc-8def-3600000000p1",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сначала скажи: «какая?» — назови любое прилагательное"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какая?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любое прилагательное в женском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa360002-2222-4abc-8def-3600000000p2",
+          "name": "big_thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$big_thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови какой-нибудь большой предмет"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой-нибудь большой предмет"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови что-нибудь большое"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa360002-2222-4abc-8def-3600000000p3",
+          "name": "altitude",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$altitude",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь число побольше"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число побольше"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь большое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa360002-2222-4abc-8def-3600000000p4",
+          "name": "friend_name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$friend_name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи имя мальчика, например, одноклассника"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Имя мальчика, например — одноклассника"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa360002-2222-4abc-8def-3600000000p5",
+          "name": "sweet",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$sweet",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — назови что-нибудь сладкое"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — что-нибудь сладкое"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос: любое сладкое лакомство"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Только представь — ты идёшь по ярмарке и видишь огромный лоток с сахарной ватой. Тебе достаётся самая большая — пышная, $adjective и размером как $big_thing! Только собираешься откусить кусочек, как вдруг налетает сильный ветер и уносит тебя вместе с ватой в небо! 🌬\nТы летишь всё выше, вокруг только облака — наверное, метров $altitude над землёй уже! И тут видишь — навстречу летит твой друг $friend_name.\n— Не бойся! — кричит он. — Я улетел ещё вчера и уже разобрался. Главное — откусывай понемногу, иначе быстро шлёпнешься!\nВы плывёте вдвоём над крышами, и ты замечаешь, что вата у тебя с начинкой! Откусываешь кусочек — а там $sweet. Странно, но очень вкусно!\nПостепенно ты доедаешь вату и плавно приземляешься обратно... И тут вдруг просыпаешься! Оказывается, ты спишь прямо на скамейке у ярмарки, а в руке у тебя та самая вата — только с откусанным кусочком, как будто кто-то всё-таки её попробовал!\nПо-моему, очень сладко получилось! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "🌬": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "🌬": "<speaker audio=\"alice-sounds-nature-wind-1.opus\">"
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-36"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

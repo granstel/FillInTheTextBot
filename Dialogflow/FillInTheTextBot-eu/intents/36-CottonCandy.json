@@ -1,8 +1,8 @@
 {
-  "id": "aa350001-1111-4abc-8def-350000000001",
+  "id": "aa360001-1111-4abc-8def-360000000001",
   "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
   "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
-  "name": "35-FunWithCat",
+  "name": "36-CottonCandy",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -11,17 +11,17 @@
       "action": "GetText",
       "affectedContexts": [
         {
-          "name": "text-35",
+          "name": "text-36",
           "lifespan": 50
         }
       ],
       "parameters": [
         {
-          "id": "aa350001-1111-4abc-8def-3500000000a1",
+          "id": "aa360001-1111-4abc-8def-3600000000a1",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
-          "value": "text-35",
+          "value": "text-36",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
