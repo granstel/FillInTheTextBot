@@ -222,14 +222,14 @@
                 }
               ],
               "Replacements": {
-                "🌬": "<speaker audio=\"alice-sounds-nature-wind-1.opus\">"
+                "🌬": "\u003cspeaker audio\u003d\"alice-sounds-nature-wind-1.opus\"\u003e"
               }
             },
             "Marusia": {
               "Buttons": [
                 {
                   "Text": "Поблагодарить разработчиков",
-                  "Url": "https://vk.com/im?sel=-201360423",
+                  "Url": "https://vk.com/im?sel\u003d-201360423",
                   "IsQuickReply": false
                 }
               ]
