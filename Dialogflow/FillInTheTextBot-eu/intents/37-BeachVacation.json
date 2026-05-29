@@ -1,0 +1,61 @@
+{
+  "id": "bb370001-1111-4abc-8def-370000000001",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "37-BeachVacation",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-37",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "bb370001-1111-4abc-8def-3700000000a1",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-37-1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Здорово! Давай сочиним",
+            "Отлично! Теперь давай сочиним",
+            "Класс! Теперь сочиним",
+            "Здорово! Сочиняем",
+            "Супер! Сейчас сочиним"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

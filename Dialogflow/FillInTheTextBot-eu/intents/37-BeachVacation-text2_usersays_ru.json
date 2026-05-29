@@ -1,0 +1,19 @@
+[
+  { "id": "bb370003-3333-4abc-8def-37000d5b0001", "data": [ { "text": "синий", "meta": "@sys.any", "alias": "color1", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0002", "data": [ { "text": "оранжевый", "meta": "@sys.any", "alias": "color1", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0003", "data": [ { "text": "розовый", "meta": "@sys.any", "alias": "color1", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0004", "data": [ { "text": "зелёный", "meta": "@sys.any", "alias": "color1", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0005", "data": [ { "text": "фиолетовый", "meta": "@sys.any", "alias": "color1", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0006", "data": [ { "text": "жёлтый", "meta": "@sys.any", "alias": "color1", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0007", "data": [ { "text": "красный", "meta": "@sys.any", "alias": "color1", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0008", "data": [ { "text": "голубой", "meta": "@sys.any", "alias": "color1", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+
+  { "id": "bb370003-3333-4abc-8def-37000d5b0011", "data": [ { "text": "розовый", "meta": "@sys.any", "alias": "color2", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0012", "data": [ { "text": "золотой", "meta": "@sys.any", "alias": "color2", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0013", "data": [ { "text": "фиолетовый", "meta": "@sys.any", "alias": "color2", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0014", "data": [ { "text": "оранжевый", "meta": "@sys.any", "alias": "color2", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0015", "data": [ { "text": "малиновый", "meta": "@sys.any", "alias": "color2", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0016", "data": [ { "text": "бирюзовый", "meta": "@sys.any", "alias": "color2", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0017", "data": [ { "text": "красный", "meta": "@sys.any", "alias": "color2", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "bb370003-3333-4abc-8def-37000d5b0018", "data": [ { "text": "лиловый", "meta": "@sys.any", "alias": "color2", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 }
+]

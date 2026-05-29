@@ -1,0 +1,254 @@
+{
+  "id": "bb370002-2222-4abc-8def-370000000002",
+  "parentId": "bb370001-1111-4abc-8def-370000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "37-BeachVacation-text1",
+  "auto": true,
+  "contexts": [
+    "text-37-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-37-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-37",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "bb370002-2222-4abc-8def-3700000000c0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про каникулы на пляже. Эта история состоит из двух частей, начнём с первой.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bb370002-2222-4abc-8def-3700000000c1",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-37-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bb370002-2222-4abc-8def-3700000000c2",
+          "name": "name1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови своё имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала — как тебя зовут?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bb370002-2222-4abc-8def-3700000000c3",
+          "name": "daysLeft",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "#summer-days.daysLeft",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови число больше десяти"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число побольше десяти"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь число больше десяти"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bb370002-2222-4abc-8def-3700000000c4",
+          "name": "animal1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь дикое животное"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — какое-нибудь дикое животное"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой-нибудь дикий зверь"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bb370002-2222-4abc-8def-3700000000c5",
+          "name": "food1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$food1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови что-нибудь съедобное"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — что-нибудь съедобное"
+            },
+            {
+              "lang": "ru",
+              "value": "Что-нибудь вкусное, что можно съесть"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bb370002-2222-4abc-8def-3700000000c6",
+          "name": "name2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя мальчика (например, младшего братика)"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь мужское имя — например, младшего брата"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай имя для мальчика"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bb370002-2222-4abc-8def-3700000000c7",
+          "name": "adj1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adj1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — какой?"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — какое-нибудь прилагательное в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "$name1 просыпается ещё до будильника. За окном маленького домика шумит море, и этот звук лучше любой музыки. Каникулы в самом разгаре, а до конца лета — целых $daysLeft дней солнца, песка и солёного ветра!\nСхватив панамку и надувной круг (а на нём — $animal1!), $name1 бежит на пляж. Песок с утра ещё прохладный и приятно щекочет пятки. Папа уже расставляет зонтик, а мама раскладывает полотенца и достаёт из сумки $food1.\n— Кто последний до воды — тот моет посуду весь отпуск! — кричит младший брат $name2 и несётся к волнам.\nВода тёплая, как парное молоко. Они вдвоём ныряют, брызгаются и ищут на дне разноцветные камешки. Один совсем особенный — гладкий, почти прозрачный, с маленькой дырочкой посередине. «$adj1», — решает $name1 и прячет его в карман.\nСочиним, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-37-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
