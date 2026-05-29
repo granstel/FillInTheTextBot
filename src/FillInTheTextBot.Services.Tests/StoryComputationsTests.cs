@@ -48,6 +48,36 @@ namespace FillInTheTextBot.Services.Tests
         }
 
         [Test]
+        public void TryBuildContext_SeasonStart_May29_FillsContext()
+        {
+            // 29 мая — старт сезона: до 30 августа 93 дня
+            var result = StoryComputations.TryBuildContext(BeachVacationFirstPart, new DateTime(2026, 5, 29), out var context);
+
+            Assert.True(result);
+            Assert.AreEqual("93", context.Parameters["daysLeft"]);
+        }
+
+        [Test]
+        public void TryBuildContext_BeforeSeason_FallbackNoContext()
+        {
+            // 28 мая — ещё до старта сезона → фоллбэк-вопрос
+            var result = StoryComputations.TryBuildContext(BeachVacationFirstPart, new DateTime(2026, 5, 28), out var context);
+
+            Assert.False(result);
+            Assert.Null(context);
+        }
+
+        [Test]
+        public void TryBuildContext_NewYear_FallbackNoContext()
+        {
+            // 1 января — вне сезона → значение не передаётся, бот спрашивает число
+            var result = StoryComputations.TryBuildContext(BeachVacationFirstPart, new DateTime(2027, 1, 1), out var context);
+
+            Assert.False(result);
+            Assert.Null(context);
+        }
+
+        [Test]
         public void TryBuildContext_DayBeforeEnd_One()
         {
             var result = StoryComputations.TryBuildContext(BeachVacationFirstPart, new DateTime(2026, 8, 29), out var context);
