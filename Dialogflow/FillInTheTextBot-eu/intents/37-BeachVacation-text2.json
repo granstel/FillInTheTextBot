@@ -64,11 +64,11 @@
           "prompts": [
             {
               "lang": "ru",
-              "value": "И последний вопрос — назови какой-нибудь цвет"
+              "value": "И последний вопрос — назови какой-нибудь яркий цвет"
             },
             {
               "lang": "ru",
-              "value": "И напоследок — какой-нибудь цвет"
+              "value": "И напоследок — какой-нибудь яркий цвет"
             }
           ],
           "promptMessages": [],
@@ -78,17 +78,6 @@
         }
       ],
       "messages": [
-        {
-          "type": "2",
-          "platform": "telegram",
-          "title": "",
-          "replies": [
-            "Да!"
-          ],
-          "textToSpeech": "",
-          "lang": "ru",
-          "condition": ""
-        },
         {
           "type": "0",
           "title": "",
@@ -108,6 +97,11 @@
                 {
                   "Text": "Да!",
                   "IsQuickReply": true
+                },
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
                 }
               ]
             },
@@ -124,15 +118,6 @@
                 {
                   "Text": "Оценить историю",
                   "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
-                  "IsQuickReply": false
-                }
-              ]
-            },
-            "Marusia": {
-              "Buttons": [
-                {
-                  "Text": "Поблагодарить разработчиков",
-                  "Url": "https://vk.com/im?sel=-201360423",
                   "IsQuickReply": false
                 }
               ]
