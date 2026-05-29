@@ -11,28 +11,20 @@ namespace FillInTheTextBot.Services
     /// и едет вместе с запросом рендера (без отдельного сетевого вызова), а в тексте подставляется через #context.
     /// Срабатывает при любом способе запуска истории (по названию, как «самая свежая», случайно и т.п.),
     /// потому что textKey — общий для всех точек входа.
-    /// Если вычислитель вернул null, контекст не создаётся — в Dialogflow срабатывает фоллбэк
-    /// (у параметра пустой defaultValue и заданы prompts), и значение спрашивается у игрока.
+    /// Если вычислитель вернул null или упал с исключением, контекст не создаётся — в Dialogflow срабатывает
+    /// фоллбэк (у параметра пустой defaultValue и заданы prompts), и значение спрашивается у игрока.
     /// </summary>
     public static class StoryComputations
     {
         /// <summary>Московское смещение (UTC+3, без перехода на летнее время).</summary>
         private static readonly TimeSpan MoscowOffset = TimeSpan.FromHours(3);
 
-        private sealed class Definition
-        {
-            public string ContextName { get; init; }
-            public string ParameterName { get; init; }
-            public int LifeSpan { get; init; }
-            public Func<DateTime, string> Compute { get; init; }
-        }
-
         /// <summary>Ключ — textKey истории, значение — что и куда вычислять.</summary>
-        private static readonly IReadOnlyDictionary<string, Definition> Definitions =
-            new Dictionary<string, Definition>(StringComparer.OrdinalIgnoreCase)
+        private static readonly IReadOnlyDictionary<string, StoryComputationDefinition> Definitions =
+            new Dictionary<string, StoryComputationDefinition>(StringComparer.OrdinalIgnoreCase)
             {
                 // Каникулы на пляже: «сколько дней до конца лета» вместо вопроса игроку.
-                ["text-37-1"] = new Definition
+                ["text-37-1"] = new()
                 {
                     ContextName = "summer-days",
                     ParameterName = "daysLeft",
@@ -50,7 +42,10 @@ namespace FillInTheTextBot.Services
             return TryBuildContext(textKey, MoscowToday(), out context);
         }
 
-        /// <summary>Перегрузка с явной датой — для тестов.</summary>
+        /// <summary>
+        /// Перегрузка с явной датой — для тестов. Никогда не бросает исключений: любая ошибка вычисления
+        /// логируется метрикой и приводит к false/null (то есть к фоллбэку с вопросом игроку).
+        /// </summary>
         public static bool TryBuildContext(string textKey, DateTime today, out Context context)
         {
             context = null;
@@ -60,24 +55,36 @@ namespace FillInTheTextBot.Services
                 return false;
             }
 
-            var value = definition.Compute(today);
-
-            if (value == null)
+            try
             {
+                var value = definition.Compute(today);
+
+                if (value == null)
+                {
+                    return false;
+                }
+
+                context = new Context
+                {
+                    Name = definition.ContextName,
+                    LifeSpan = definition.LifeSpan,
+                    Parameters = new Dictionary<string, string>
+                    {
+                        [definition.ParameterName] = value
+                    }
+                };
+
+                return true;
+            }
+            catch (Exception)
+            {
+                // Вычисление не должно ломать ответ пользователю — деградируем до фоллбэка.
+                MetricsCollector.Increment("computation_error", textKey);
+
+                context = null;
+
                 return false;
             }
-
-            context = new Context
-            {
-                Name = definition.ContextName,
-                LifeSpan = definition.LifeSpan,
-                Parameters = new Dictionary<string, string>
-                {
-                    [definition.ParameterName] = value
-                }
-            };
-
-            return true;
         }
 
         /// <summary>Текущая дата по Москве (UTC+3).</summary>
