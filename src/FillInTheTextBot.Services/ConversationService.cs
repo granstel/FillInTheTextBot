@@ -131,7 +131,14 @@ namespace FillInTheTextBot.Services
                 var eventName = $"event:{textKey}";
                 MetricsCollector.Increment("event", textKey);
 
-                var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey);
+                // Для отдельных историй значение считается встроенным вычислителем и едет в Dialogflow
+                // контекстом внутри этого же запроса (без отдельного сетевого вызова). Если вычислитель
+                // неприменим (например, лето уже прошло), контекст не передаётся (null) и срабатывает фоллбэк-вопрос.
+                var requiredContexts = StoryComputations.TryBuildContext(textKey, out var computedContext)
+                    ? new[] { computedContext }
+                    : null;
+
+                var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey, requiredContexts);
 
 
                 var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();

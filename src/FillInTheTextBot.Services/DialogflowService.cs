@@ -22,7 +22,7 @@ namespace FillInTheTextBot.Services
         private const string EasyWelcomeEventName = "EasyWelcome";
         private const string ErrorEventName = "Error";
 
-        private const int MaximumRequestTextLength = 30;
+        private const int MaximumRequestTextLength = 25;
 
         private readonly Dictionary<string, string> _commandDictionary = new()
         {
@@ -54,7 +54,13 @@ namespace FillInTheTextBot.Services
             };
         }
 
-        public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string scopeKey)
+        public Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string scopeKey)
+        {
+            return GetResponseAsync(text, sessionId, scopeKey, null);
+        }
+
+        public async Task<InternalModels.Dialog> GetResponseAsync(string text, string sessionId, string scopeKey,
+            IEnumerable<InternalModels.Context> requiredContexts)
         {
             var request = new InternalModels.Request
             {
@@ -62,6 +68,11 @@ namespace FillInTheTextBot.Services
                 SessionId = sessionId,
                 ScopeKey = scopeKey
             };
+
+            if (requiredContexts != null)
+            {
+                request.RequiredContexts.AddRange(requiredContexts);
+            }
 
             return await GetResponseAsync(request);
         }

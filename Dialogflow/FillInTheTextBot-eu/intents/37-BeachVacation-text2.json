@@ -1,0 +1,146 @@
+{
+  "id": "bb370003-3333-4abc-8def-370000000003",
+  "parentId": "bb370001-1111-4abc-8def-370000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "37-BeachVacation-text2",
+  "auto": true,
+  "contexts": [
+    "text-37-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-37-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-37",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "bb370003-3333-4abc-8def-3700000000d3",
+          "name": "castleHeight",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$castleHeight",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь число"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bb370003-3333-4abc-8def-3700000000d1",
+          "name": "color1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — назови какой-нибудь яркий цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — какой-нибудь яркий цвет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что было дальше:\nПосле обеда они строят огромный замок из песка — с башнями, рвами и мостами. А когда набегает шальная волна и слизывает одну из башен, ребята не расстраиваются и строят новую, ещё выше — целых $castleHeight метров!\nВечером, уставшие и загорелые, они сидят на берегу и смотрят, как солнце медленно тонет в море, окрашивая небо в $color1, розовый и золотой.\n— Хочу, чтобы этот день никогда не кончался, — шепчет #text-37.name1, сжимая в ладони тот самый счастливый камешек.\nИ знаешь что? Впереди ещё целых #text-37.daysLeft дней лета, а это почти бесконечно!\nПо-моему, отличные каникулы получились! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                },
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/fillinthetextbot",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-37-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

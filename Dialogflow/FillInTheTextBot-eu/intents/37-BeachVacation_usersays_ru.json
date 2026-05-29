@@ -1,0 +1,132 @@
+[
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e01",
+    "data": [
+      {
+        "text": "каникулы на пляже",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e02",
+    "data": [
+      {
+        "text": "сочини историю про пляж",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e03",
+    "data": [
+      {
+        "text": "про пляж",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e04",
+    "data": [
+      {
+        "text": "про море",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e05",
+    "data": [
+      {
+        "text": "история про каникулы на море",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e06",
+    "data": [
+      {
+        "text": "каникулы на море",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e07",
+    "data": [
+      {
+        "text": "сочини про отдых на море",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e08",
+    "data": [
+      {
+        "text": "пляжные каникулы",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e09",
+    "data": [
+      {
+        "text": "отдых на пляже",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bb370001-1111-4abc-8def-370000000e10",
+    "data": [
+      {
+        "text": "про летний пляж",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
