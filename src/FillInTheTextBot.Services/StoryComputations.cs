@@ -95,15 +95,24 @@ namespace FillInTheTextBot.Services
 
         /// <summary>
         /// Сколько дней осталось до конца лета (30 августа) от указанной даты.
-        /// Возвращает null, если осталось меньше одного дня (лето уже прошло).
+        /// Считается только в пределах сезона — с 29 мая по 29 августа. Вне этого окна
+        /// (в том числе зимой и осенью) возвращает null, и значение спрашивается у игрока.
         /// </summary>
         private static string SummerDaysLeft(DateTime today)
         {
-            var endOfSummer = new DateTime(today.Year, 8, 30);
+            var date = today.Date;
 
-            var daysLeft = (endOfSummer - today.Date).Days;
+            var seasonStart = new DateTime(date.Year, 5, 29);
+            var endOfSummer = new DateTime(date.Year, 8, 30);
 
-            return daysLeft < 1 ? null : daysLeft.ToString(CultureInfo.InvariantCulture);
+            var daysLeft = (endOfSummer - date).Days;
+
+            if (date < seasonStart || daysLeft < 1)
+            {
+                return null;
+            }
+
+            return daysLeft.ToString(CultureInfo.InvariantCulture);
         }
     }
 }

@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <Version>1.23.0</Version>
-    <PackageReleaseNotes>Optimized interaction with Dialogflow</PackageReleaseNotes>
+    <Version>1.23.1</Version>
+    <PackageReleaseNotes>Added new texts and computes</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
