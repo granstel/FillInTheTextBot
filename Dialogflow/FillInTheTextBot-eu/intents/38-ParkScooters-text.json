@@ -1,0 +1,312 @@
+{
+  "id": "aa380002-2222-4abc-8def-380000000002",
+  "parentId": "aa380001-1111-4abc-8def-380000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "38-ParkScooters-text",
+  "auto": true,
+  "contexts": [
+    "text-38"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-38",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa380002-2222-4abc-8def-3800000000n0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про прогулку на самокатах.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa380002-2222-4abc-8def-3800000000p1",
+          "name": "friend_name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$friend_name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи какое-нибудь имя — например, своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови чьё-нибудь имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Имя приятеля или подруги"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa380002-2222-4abc-8def-3800000000p2",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови свой любимый цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой-нибудь цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любой цвет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa380002-2222-4abc-8def-3800000000p3",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любое прилагательное, отвечающее на вопрос «какой»"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое прилагательное в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa380002-2222-4abc-8def-3800000000p4",
+          "name": "speed",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$speed",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови число побольше — например, больше пятидесяти"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь большое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число побольше"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa380002-2222-4abc-8def-3800000000p5",
+          "name": "direction",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$direction",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Выбери — «налево» или «направо»"
+            },
+            {
+              "lang": "ru",
+              "value": "«Налево» или «направо»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи «налево» или «направо»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa380002-2222-4abc-8def-3800000000p6",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь дикое животное"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь дикое животное"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи название любого зверя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa380002-2222-4abc-8def-3800000000p7",
+          "name": "artist",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$artist",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — назови своего любимого артиста"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — любой артист или певец"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос: назови какого-нибудь известного артиста"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Поехали вы как-то с другом по имени $friend_name кататься на самокате по парку! У вас классный $color самокат, один на двоих.\nВы обожаете скорость и несётесь как $adjective гонщик, разогнавшись до $speed километров в час. Виляете по дорожке, не глядя по сторонам, а прохожие ругаются вам вслед.\nДаже $animal в кустах от вас шарахается! И вдруг прямо посреди дорожки стоит $artist (видимо, тоже любит гулять в этом парке — вот так встреча!). От неожиданности $friend_name дёргает руль $direction, вы теряете равновесие и валитесь в кусты. 🌳 Самокат с хрустом ломается пополам.\n$artist помогает вам подняться и качает головой: «Вот что бывает, когда гоняешь вдвоём и не смотришь по сторонам!» Вы потираете ушибы и понимаете — а ведь $artist дело говорит.\nС тех пор вы катаетесь только медленно, по одному и уступаете дорогу прохожим. Ведь на самокате, как и везде, главное — соблюдать правила и быть вежливыми!\nНу и поездка! Хорошо, что всё обошлось. Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "🌳": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "🌳": ""
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-38"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
