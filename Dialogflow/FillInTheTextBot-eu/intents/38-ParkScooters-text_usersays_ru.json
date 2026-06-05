@@ -170,56 +170,56 @@
   {
     "id": "aa380002-2222-4abc-8def-38000000sp01",
     "data": [
-      { "text": "90", "meta": "@sys.number", "alias": "speed", "userDefined": true }
+      { "text": "90", "meta": "@sys.any", "alias": "speed", "userDefined": true }
     ],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
     "id": "aa380002-2222-4abc-8def-38000000sp02",
     "data": [
-      { "text": "100", "meta": "@sys.number", "alias": "speed", "userDefined": true }
+      { "text": "100", "meta": "@sys.any", "alias": "speed", "userDefined": true }
     ],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
     "id": "aa380002-2222-4abc-8def-38000000sp03",
     "data": [
-      { "text": "60", "meta": "@sys.number", "alias": "speed", "userDefined": true }
+      { "text": "60", "meta": "@sys.any", "alias": "speed", "userDefined": true }
     ],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
     "id": "aa380002-2222-4abc-8def-38000000sp04",
     "data": [
-      { "text": "120", "meta": "@sys.number", "alias": "speed", "userDefined": true }
+      { "text": "120", "meta": "@sys.any", "alias": "speed", "userDefined": true }
     ],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
     "id": "aa380002-2222-4abc-8def-38000000sp05",
     "data": [
-      { "text": "75", "meta": "@sys.number", "alias": "speed", "userDefined": true }
+      { "text": "75", "meta": "@sys.any", "alias": "speed", "userDefined": true }
     ],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
     "id": "aa380002-2222-4abc-8def-38000000sp06",
     "data": [
-      { "text": "200", "meta": "@sys.number", "alias": "speed", "userDefined": true }
+      { "text": "200", "meta": "@sys.any", "alias": "speed", "userDefined": true }
     ],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
     "id": "aa380002-2222-4abc-8def-38000000sp07",
     "data": [
-      { "text": "80", "meta": "@sys.number", "alias": "speed", "userDefined": true }
+      { "text": "80", "meta": "@sys.any", "alias": "speed", "userDefined": true }
     ],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
     "id": "aa380002-2222-4abc-8def-38000000sp08",
     "data": [
-      { "text": "150", "meta": "@sys.number", "alias": "speed", "userDefined": true }
+      { "text": "150", "meta": "@sys.any", "alias": "speed", "userDefined": true }
     ],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },

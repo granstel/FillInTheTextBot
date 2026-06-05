@@ -117,7 +117,7 @@
           "id": "aa380002-2222-4abc-8def-3800000000p4",
           "name": "speed",
           "required": true,
-          "dataType": "@sys.number",
+          "dataType": "@sys.any",
           "value": "$speed",
           "defaultValue": "",
           "isList": false,
