@@ -1,0 +1,132 @@
+[
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e01",
+    "data": [
+      {
+        "text": "прогулка на самокатах",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e02",
+    "data": [
+      {
+        "text": "про самокаты",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e03",
+    "data": [
+      {
+        "text": "сочини историю про самокат",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e04",
+    "data": [
+      {
+        "text": "про прогулку по парку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e05",
+    "data": [
+      {
+        "text": "история про катание на самокате",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e06",
+    "data": [
+      {
+        "text": "один самокат на двоих",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e07",
+    "data": [
+      {
+        "text": "про правила движения",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e08",
+    "data": [
+      {
+        "text": "история про парк",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e09",
+    "data": [
+      {
+        "text": "катание по парку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa380001-1111-4abc-8def-380000000e10",
+    "data": [
+      {
+        "text": "про поездку на самокате",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
