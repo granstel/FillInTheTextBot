@@ -1,0 +1,602 @@
+[
+  {
+    "id": "cc390002-2222-4abc-8def-39000aaa0001",
+    "data": [
+      {
+        "text": "13",
+        "meta": "@sys.number-integer",
+        "alias": "plotNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000aaa0002",
+    "data": [
+      {
+        "text": "7",
+        "meta": "@sys.number-integer",
+        "alias": "plotNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000aaa0003",
+    "data": [
+      {
+        "text": "44",
+        "meta": "@sys.number-integer",
+        "alias": "plotNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000aaa0004",
+    "data": [
+      {
+        "text": "66",
+        "meta": "@sys.number-integer",
+        "alias": "plotNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000aaa0005",
+    "data": [
+      {
+        "text": "21",
+        "meta": "@sys.number-integer",
+        "alias": "plotNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000aaa0006",
+    "data": [
+      {
+        "text": "99",
+        "meta": "@sys.number-integer",
+        "alias": "plotNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000aaa0007",
+    "data": [
+      {
+        "text": "3",
+        "meta": "@sys.number-integer",
+        "alias": "plotNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000aaa0008",
+    "data": [
+      {
+        "text": "50",
+        "meta": "@sys.number-integer",
+        "alias": "plotNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000bbb0001",
+    "data": [
+      {
+        "text": "полосатые",
+        "meta": "@sys.any",
+        "alias": "adjPlural",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000bbb0002",
+    "data": [
+      {
+        "text": "золотые",
+        "meta": "@sys.any",
+        "alias": "adjPlural",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000bbb0003",
+    "data": [
+      {
+        "text": "гигантские",
+        "meta": "@sys.any",
+        "alias": "adjPlural",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000bbb0004",
+    "data": [
+      {
+        "text": "пушистые",
+        "meta": "@sys.any",
+        "alias": "adjPlural",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000bbb0005",
+    "data": [
+      {
+        "text": "квадратные",
+        "meta": "@sys.any",
+        "alias": "adjPlural",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000bbb0006",
+    "data": [
+      {
+        "text": "блестящие",
+        "meta": "@sys.any",
+        "alias": "adjPlural",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000bbb0007",
+    "data": [
+      {
+        "text": "невидимые",
+        "meta": "@sys.any",
+        "alias": "adjPlural",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000bbb0008",
+    "data": [
+      {
+        "text": "колючие",
+        "meta": "@sys.any",
+        "alias": "adjPlural",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ccc0001",
+    "data": [
+      {
+        "text": "яблоки",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ccc0002",
+    "data": [
+      {
+        "text": "груши",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ccc0003",
+    "data": [
+      {
+        "text": "сливы",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ccc0004",
+    "data": [
+      {
+        "text": "арбузы",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ccc0005",
+    "data": [
+      {
+        "text": "персики",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ccc0006",
+    "data": [
+      {
+        "text": "ананасы",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ccc0007",
+    "data": [
+      {
+        "text": "бананы",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ccc0008",
+    "data": [
+      {
+        "text": "вишни",
+        "meta": "@sys.any",
+        "alias": "fruits",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ddd0001",
+    "data": [
+      {
+        "text": "Дима",
+        "meta": "@sys.any",
+        "alias": "friendName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ddd0002",
+    "data": [
+      {
+        "text": "Саша",
+        "meta": "@sys.any",
+        "alias": "friendName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ddd0003",
+    "data": [
+      {
+        "text": "Витя",
+        "meta": "@sys.any",
+        "alias": "friendName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ddd0004",
+    "data": [
+      {
+        "text": "Лёша",
+        "meta": "@sys.any",
+        "alias": "friendName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ddd0005",
+    "data": [
+      {
+        "text": "Миша",
+        "meta": "@sys.any",
+        "alias": "friendName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ddd0006",
+    "data": [
+      {
+        "text": "Петя",
+        "meta": "@sys.any",
+        "alias": "friendName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ddd0007",
+    "data": [
+      {
+        "text": "Коля",
+        "meta": "@sys.any",
+        "alias": "friendName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000ddd0008",
+    "data": [
+      {
+        "text": "Серёжа",
+        "meta": "@sys.any",
+        "alias": "friendName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000eee0001",
+    "data": [
+      {
+        "text": "Витька",
+        "meta": "@sys.any",
+        "alias": "vitkaName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000eee0002",
+    "data": [
+      {
+        "text": "Гриша",
+        "meta": "@sys.any",
+        "alias": "vitkaName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000eee0003",
+    "data": [
+      {
+        "text": "Федя",
+        "meta": "@sys.any",
+        "alias": "vitkaName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000eee0004",
+    "data": [
+      {
+        "text": "Стёпа",
+        "meta": "@sys.any",
+        "alias": "vitkaName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000eee0005",
+    "data": [
+      {
+        "text": "Андрюша",
+        "meta": "@sys.any",
+        "alias": "vitkaName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000eee0006",
+    "data": [
+      {
+        "text": "Вова",
+        "meta": "@sys.any",
+        "alias": "vitkaName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000eee0007",
+    "data": [
+      {
+        "text": "Тёма",
+        "meta": "@sys.any",
+        "alias": "vitkaName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cc390002-2222-4abc-8def-39000eee0008",
+    "data": [
+      {
+        "text": "Денис",
+        "meta": "@sys.any",
+        "alias": "vitkaName",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

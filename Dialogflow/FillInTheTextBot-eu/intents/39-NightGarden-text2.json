@@ -1,0 +1,170 @@
+{
+  "id": "cc390003-3333-4abc-8def-390000000003",
+  "parentId": "cc390001-1111-4abc-8def-390000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "39-NightGarden-text2",
+  "auto": true,
+  "contexts": [
+    "text-39-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-39-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-39",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cc390003-3333-4abc-8def-3900000000d1",
+          "name": "adjNeuter",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjNeuter",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Тогда скажи — «какое»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь прилагательное в среднем роде — «какое»?"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какое»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc390003-3333-4abc-8def-3900000000d2",
+          "name": "neighborName",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$neighborName",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — назови шёпотом имя взрослого мужчины (например, соседа), чтобы ОНО не услышало"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — какое-нибудь мужское имя, только шёпотом, чтобы было слышно только мне"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее: скажи имя для взрослого мужчины, только шёпотом, чтобы ОНО не услышало"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "ОНО вышло на лунный свет. Огромное, горбатое, с блестящими выпуклыми глазами и вдобавок какое-то $adjNeuter! ОНО повернуло к нам безликую голову, со свистом втянуло воздух и произнесло глухим утробным голосом:\n— Ребята... помогите маску снять. Резинка в волосах запуталась.\nЭто оказался дядя $neighborName с одиннадцатого участка! 🤯 В стареньком противогазе и с садовым опрыскивателем за спиной — это он дышал со свистом, потому что насос травил!\nОказалось, дядя $neighborName тайком ухаживает за тем садом: сорт редкий, жалко, если пропадёт. А противогаз надевает для маскировки — чтобы никто не лез с вопросами.\n— А #text-39.vitkaName почему поседел? — спрашиваю я.\n— Так я его сам перепугался! И заорал. 😱 И он заорал. Мы так друг на друга и орали, пока я маску не снял...\nДомой мы вернулись с полными карманами — дядя $neighborName сам насыпал. Сказал, что одному в противогазе столько не съесть!\nПо-моему, отличная страшилка получилась! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Replacements": {
+                "🤯": "",
+                "😱": ""
+              },
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Да!"
+                }
+              ]
+            },
+            "Sber": {
+              "Replacements": {
+                "🤯": "<audio text=\"sm:96887/96888/audio/2mbDu72YoFZVWv6R.wav\"/>",
+                "😱": ""
+              },
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Replacements": {
+                "🤯": "<speaker audio=\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/8bea37e8-5c48-48ff-a635-c1667e15dd28.opus\">",
+                "😱": "<speaker audio=\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/37170704-3063-4567-8c28-1595fc8423a9.opus\">"
+              },
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Marusia": {
+              "Replacements": {
+                "🤯": "<speaker audio_vk_id=\"2000512028_456239070\">",
+                "😱": ""
+              },
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-39-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
