@@ -1,0 +1,251 @@
+{
+  "id": "cc390002-2222-4abc-8def-390000000002",
+  "parentId": "cc390001-1111-4abc-8def-390000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "39-NightGarden-text1",
+  "auto": true,
+  "contexts": [
+    "text-39-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-39-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-39",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cc390002-2222-4abc-8def-3900000000c0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про дачную страшилку. Эта история состоит из двух частей, начнём с первой.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc390002-2222-4abc-8def-3900000000c1",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-39-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc390002-2222-4abc-8def-3900000000c2",
+          "name": "plotNumber",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$plotNumber",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови число от 1 до 100"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови, пожалуйста, число от 1 до 100"
+            },
+            {
+              "lang": "ru",
+              "value": "Загадай число от 1 до 100"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc390002-2222-4abc-8def-3900000000c3",
+          "name": "adjPlural",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjPlural",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь — «какие»? Прилагательное во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь прилагательное во множественном числе — «какие»?"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какие»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc390002-2222-4abc-8def-3900000000c4",
+          "name": "fruits",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$fruits",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какие-нибудь фрукты или ягоды — во множественном числе"
+            },
+            {
+              "lang": "ru",
+              "value": "Какие-нибудь фрукты или ягоды (во множественном числе)"
+            },
+            {
+              "lang": "ru",
+              "value": "Любые фрукты или ягоды — во множественном числе"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc390002-2222-4abc-8def-3900000000c5",
+          "name": "vitkaName",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$vitkaName",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови имя мальчика"
+            },
+            {
+              "lang": "ru",
+              "value": "Имя какого-нибудь мальчика"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай имя для мальчика"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc390002-2222-4abc-8def-3900000000c6",
+          "name": "friendName",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$friendName",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — назови имя ещё одного мальчика (например, друга)"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — имя ещё одного мальчика"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Все знали: к заброшенному участку номер $plotNumber лучше не лезть. Хозяина там давно никто не видел, дом стоит заколоченный, а сад каждое лето ломится от плодов: $adjPlural $fruits, крупные, как кулак. И никто их не берёт!\nПотому что однажды за ними полез $vitkaName с шестого участка. Наутро он вернулся наполовину седой и только повторял: «Оно дышит. Оно там дышит». 😨\nКонечно, мы с другом по имени $friendName решили всё проверить. Ночь выдалась правильная — душная, тихая, безветренная. Мы перелезли через забор. Трава по пояс, мокрая от росы, а $adjPlural $fruits светятся в темноте, как маленькие луны...\nИ вдруг мы услышали дыхание! Тяжёлое, со свистом. Кто-то большой шёл через траву прямо к нам, и по траве расходились волны, хотя ветра не было! $friendName прошептал: «Бежим!» — но ноги у нас будто приросли к земле. И тут ОНО вышло на лунный свет...\nХочешь узнать, что было дальше?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Replacements": {
+                "😨": "<speaker audio=\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/4297cf4e-6a95-4fb4-b005-20e2a16f085c.opus\">"
+              }
+            },
+            "Marusia": {
+              "Replacements": {
+                "😨": "<speaker audio_vk_id=\"2000512028_456239068\">"
+              }
+            },
+            "Sber": {
+              "Replacements": {
+                "😨": "<audio text=\"sm:96887/96888/audio/kZpA5lg7BBnXGBsC.wav\"/>"
+              }
+            },
+            "Default": {
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Да!"
+                }
+              ],
+              "Replacements": {
+                "😨": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-39-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

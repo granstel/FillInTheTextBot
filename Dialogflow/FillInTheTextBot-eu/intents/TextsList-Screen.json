@@ -207,6 +207,19 @@
         },
         {
           "type": "1",
+          "platform": "facebook",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Дачная страшилка"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
           "platform": "telegram",
           "title": "истории",
           "buttons": [
