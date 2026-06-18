@@ -1,0 +1,482 @@
+[
+  {
+    "id": "aa400002-2222-4abc-8def-40000000cl01",
+    "data": [
+      {
+        "text": "красный",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000cl02",
+    "data": [
+      {
+        "text": "синий",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000cl03",
+    "data": [
+      {
+        "text": "зелёный",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000cl04",
+    "data": [
+      {
+        "text": "жёлтый",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000cl05",
+    "data": [
+      {
+        "text": "голубой",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000cl06",
+    "data": [
+      {
+        "text": "оранжевый",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000cl07",
+    "data": [
+      {
+        "text": "фиолетовый",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000cl08",
+    "data": [
+      {
+        "text": "белый",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nm01",
+    "data": [
+      {
+        "text": "Дима",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nm02",
+    "data": [
+      {
+        "text": "Саша",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nm03",
+    "data": [
+      {
+        "text": "Петя",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nm04",
+    "data": [
+      {
+        "text": "Ваня",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nm05",
+    "data": [
+      {
+        "text": "Миша",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nm06",
+    "data": [
+      {
+        "text": "Коля",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nm07",
+    "data": [
+      {
+        "text": "Андрей",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nm08",
+    "data": [
+      {
+        "text": "Серёжа",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000gf01",
+    "data": [
+      {
+        "text": "велосипед",
+        "meta": "@sys.any",
+        "alias": "gift",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000gf02",
+    "data": [
+      {
+        "text": "телефон",
+        "meta": "@sys.any",
+        "alias": "gift",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000gf03",
+    "data": [
+      {
+        "text": "самокат",
+        "meta": "@sys.any",
+        "alias": "gift",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000gf04",
+    "data": [
+      {
+        "text": "приставка",
+        "meta": "@sys.any",
+        "alias": "gift",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000gf05",
+    "data": [
+      {
+        "text": "собака",
+        "meta": "@sys.any",
+        "alias": "gift",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000gf06",
+    "data": [
+      {
+        "text": "ноутбук",
+        "meta": "@sys.any",
+        "alias": "gift",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000gf07",
+    "data": [
+      {
+        "text": "конструктор",
+        "meta": "@sys.any",
+        "alias": "gift",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000gf08",
+    "data": [
+      {
+        "text": "мяч",
+        "meta": "@sys.any",
+        "alias": "gift",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nb01",
+    "data": [
+      {
+        "text": "5",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nb02",
+    "data": [
+      {
+        "text": "10",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nb03",
+    "data": [
+      {
+        "text": "100",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nb04",
+    "data": [
+      {
+        "text": "50",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nb05",
+    "data": [
+      {
+        "text": "7",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nb06",
+    "data": [
+      {
+        "text": "1000",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nb07",
+    "data": [
+      {
+        "text": "25",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa400002-2222-4abc-8def-40000000nb08",
+    "data": [
+      {
+        "text": "8",
+        "meta": "@sys.any",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
