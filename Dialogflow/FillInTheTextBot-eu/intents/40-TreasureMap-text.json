@@ -1,0 +1,229 @@
+{
+  "id": "aa400002-2222-4abc-8def-400000000002",
+  "parentId": "aa400001-1111-4abc-8def-400000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "40-TreasureMap-text",
+  "auto": true,
+  "contexts": [
+    "text-40"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-40",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa400002-2222-4abc-8def-4000000000n0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про настоящее сокровище.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa400002-2222-4abc-8def-4000000000p1",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любой цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой-нибудь цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи свой любимый цвет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa400002-2222-4abc-8def-4000000000p2",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя — например, одноклассника"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи чьё-нибудь имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Имя приятеля или одноклассника"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa400002-2222-4abc-8def-4000000000p3",
+          "name": "gift",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$gift",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Что ты хочешь получить в подарок больше всего?"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови, что ты хочешь получить в подарок"
+            },
+            {
+              "lang": "ru",
+              "value": "Что ты хочешь получить в подарок?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa400002-2222-4abc-8def-4000000000p4",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — назови любое число от 5 до 20"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — скажи какое-нибудь число от 5 до 20"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос: назови любое число от 5 до 20"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Однажды Костя получил от почтальона $color конверт. Внутри была карта с отметкой и записка: «Иди в указанное место, там найдёшь сокровище. И лопату захвати!». Совсем рядом! Мальчик схватил лопату и побежал туда.\nМесто оказалось обычным огородом. У калитки топтался другой мальчишка с такой же картой. К ним вышел хозяин:\n— Что, сокровище искать пришли? — усмехнулся он. — Ну тогда перекопайте грядки и найдёте, что ищете.\nПознакомились — мальчишку звали $name — и взялись за дело: копали сообща, болтали и гадали, что они найдут — старые монеты или $gift? Хозяин подбадривал ребят и рассказывал занимательные истории. Не заметили, как пролетело время: часов $number, не меньше!\nКогда вскопали последнюю грядку, ребята поняли, какое сокровище нашли — настоящую дружбу✨\nПотом Костя и $name часто забегали к хозяину — помочь с огородом и послушать истории.\nПо-моему, отлично получилось! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {}
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {}
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {}
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {}
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-40"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
