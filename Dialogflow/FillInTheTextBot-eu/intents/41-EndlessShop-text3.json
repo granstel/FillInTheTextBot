@@ -29,7 +29,7 @@
           "id": "2fe01ba5-2084-49e3-ab54-92c2cbdfe09f",
           "name": "number",
           "required": true,
-          "dataType": "@sys.any",
+          "dataType": "@sys.number-integer",
           "value": "$number",
           "defaultValue": "",
           "isList": false,
