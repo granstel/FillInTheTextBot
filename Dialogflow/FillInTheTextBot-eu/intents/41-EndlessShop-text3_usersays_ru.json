@@ -118,5 +118,125 @@
     "count": 0,
     "lang": "ru",
     "updated": 0
+  },
+  {
+    "id": "23dbf812-9691-431b-94f9-973e4cb16c8e",
+    "data": [
+      {
+        "text": "красная",
+        "meta": "@sys.any",
+        "alias": "colorf",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "382d542c-4a73-487e-8cb2-dcd91af2c03e",
+    "data": [
+      {
+        "text": "синяя",
+        "meta": "@sys.any",
+        "alias": "colorf",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ae3c227e-9dd5-4184-a503-f9445e68a806",
+    "data": [
+      {
+        "text": "зелёная",
+        "meta": "@sys.any",
+        "alias": "colorf",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8d35f49a-b374-4ab6-8977-c835eaf79d2a",
+    "data": [
+      {
+        "text": "жёлтая",
+        "meta": "@sys.any",
+        "alias": "colorf",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c9f50f65-fd9e-47c2-9c1f-6b8036c90154",
+    "data": [
+      {
+        "text": "голубая",
+        "meta": "@sys.any",
+        "alias": "colorf",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5bb696f0-18ae-41d2-9827-5d73a02fa788",
+    "data": [
+      {
+        "text": "оранжевая",
+        "meta": "@sys.any",
+        "alias": "colorf",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "47723d3e-6d58-44df-8888-fad4e42ae6bf",
+    "data": [
+      {
+        "text": "белая",
+        "meta": "@sys.any",
+        "alias": "colorf",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fe5fd552-6271-4057-a9da-a5f53f23dd3e",
+    "data": [
+      {
+        "text": "фиолетовая",
+        "meta": "@sys.any",
+        "alias": "colorf",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
   }
 ]
