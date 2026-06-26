@@ -1,0 +1,162 @@
+{
+  "id": "474e2f40-4992-4188-a1ba-07e8c5462b1b",
+  "parentId": "a1ea03fd-da2f-4fc1-b583-0e0e4cd8d6e1",
+  "name": "41-EndlessShop-text2",
+  "auto": true,
+  "contexts": [
+    "text-41-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-41-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-41",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "2d9c7106-4174-447e-83b3-ca97978a0c82",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-41-3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "482d0feb-2369-4046-a361-89395dbb9794",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a307815c-aa4d-4312-b86a-813e3b1ff994",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови мужское имя, например приятеля"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d00b161e-9f16-414a-9e7a-af611c76cab2",
+          "name": "item",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$item",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь товар мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови товар мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой-нибудь товар мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Ты спешишь искать выход. Из-за угла навстречу выкатывается тележка — а катит её $animal! Самый обычный, только в фартуке, а на бейджике — «$name, кассир».\n— Здравствуй, #text-41.hero, — говорит он, хотя имени своего ты не называешь. — Заблудился? Тут немудрено. У нас тут много отделов, можно бесконечно гулять. А вот выход откроется не каждому.\n— А кому же? — спрашиваешь ты.\n— Тому, у кого совесть чиста. Того, кто схитрил, магазин не выпускает. Я и сам когда-то зашёл сюда за покупками, а перед закрытием схватил с полки $item и проскочил мимо касс не заплатив, но выход так и не нашёл. Пока метался по рядам, я где-то обронил украденное. Так и не успел до полуночи — и меня назначили кассиром. Таких, как я, тут много: кто-то хотел украсть, кто-то просто опоздал.\n— Идём искать то, что ты потерял! — говоришь ты, и $animal, кажется, впервые за долгое время улыбается.\nСочиним, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-41-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

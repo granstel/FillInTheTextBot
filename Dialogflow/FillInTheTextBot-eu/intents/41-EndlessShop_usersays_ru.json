@@ -1,0 +1,132 @@
+[
+  {
+    "id": "2dfe654d-bbb6-4fc0-90c5-02a3e51dd883",
+    "data": [
+      {
+        "text": "бесконечный магазин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3d59ce19-bf27-4d57-a3a0-bd0187e4f7d1",
+    "data": [
+      {
+        "text": "про бесконечный магазин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c84a1b3a-2e13-47bb-b9de-c4f6998b4308",
+    "data": [
+      {
+        "text": "сочини историю про магазин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9bd7010c-909b-4d5f-877c-9a406cf414d5",
+    "data": [
+      {
+        "text": "история про магазин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8c185559-8551-4fab-b9d3-5c4f4005a6f5",
+    "data": [
+      {
+        "text": "магазин без выхода",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5ba575fe-8f61-4bdd-ac9a-6a2b4d094a84",
+    "data": [
+      {
+        "text": "жуткий магазин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3e45e391-1d00-4eea-be1e-03715106109a",
+    "data": [
+      {
+        "text": "магазин из которого не выйти",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4171bd12-3a15-4a3c-a5ac-8434f34a938a",
+    "data": [
+      {
+        "text": "загадочный магазин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "73c2e410-58e4-4dce-9b42-0d43b3787b40",
+    "data": [
+      {
+        "text": "страшный магазин",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "92750ddc-981f-4b57-a007-0c0d7db7153e",
+    "data": [
+      {
+        "text": "магазин и кассир",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

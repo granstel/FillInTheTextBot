@@ -1,0 +1,362 @@
+[
+  {
+    "id": "4b8d34f7-701a-4149-872e-42c266c36a78",
+    "data": [
+      {
+        "text": "Саша",
+        "meta": "@sys.any",
+        "alias": "hero",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1a9c87a3-e8ac-4fe2-b180-7142e64cc8c3",
+    "data": [
+      {
+        "text": "Дима",
+        "meta": "@sys.any",
+        "alias": "hero",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "11927812-a239-4b66-9ef7-dcc74adfea03",
+    "data": [
+      {
+        "text": "Лена",
+        "meta": "@sys.any",
+        "alias": "hero",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5e4dea8a-27b9-4be7-83d8-f04cd00b9697",
+    "data": [
+      {
+        "text": "Маша",
+        "meta": "@sys.any",
+        "alias": "hero",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d41c79fc-a60f-4704-b1a3-0fed1cf68d97",
+    "data": [
+      {
+        "text": "Артём",
+        "meta": "@sys.any",
+        "alias": "hero",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9d8d15f4-38bf-4aa2-81fa-3316c845bcef",
+    "data": [
+      {
+        "text": "Катя",
+        "meta": "@sys.any",
+        "alias": "hero",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0a514ba8-2a56-4e15-a734-85c5fa9eb480",
+    "data": [
+      {
+        "text": "Миша",
+        "meta": "@sys.any",
+        "alias": "hero",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "344ea796-3cd2-48bf-98f1-46e35d554cec",
+    "data": [
+      {
+        "text": "Аня",
+        "meta": "@sys.any",
+        "alias": "hero",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1ce4a401-4bea-4b88-abc2-074a491203d5",
+    "data": [
+      {
+        "text": "Пятёрочка",
+        "meta": "@sys.any",
+        "alias": "shop",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "400eac6f-0e97-49be-a2b9-e088bcec45e0",
+    "data": [
+      {
+        "text": "Магнит",
+        "meta": "@sys.any",
+        "alias": "shop",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2691d43c-3af9-4de6-a0e2-30942ea7f818",
+    "data": [
+      {
+        "text": "Лента",
+        "meta": "@sys.any",
+        "alias": "shop",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "49c07e28-5a8f-4f2a-a6de-2282df13ac43",
+    "data": [
+      {
+        "text": "ИКЕА",
+        "meta": "@sys.any",
+        "alias": "shop",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b7ddaea3-102d-426d-8279-7171d8249d9e",
+    "data": [
+      {
+        "text": "Ашан",
+        "meta": "@sys.any",
+        "alias": "shop",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ae3253ca-658f-413e-8ef8-94eb76ce4537",
+    "data": [
+      {
+        "text": "Перекрёсток",
+        "meta": "@sys.any",
+        "alias": "shop",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5d0d3194-eb5e-437a-bfc0-09c0560c16ac",
+    "data": [
+      {
+        "text": "Дикси",
+        "meta": "@sys.any",
+        "alias": "shop",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f45f863f-3f55-4b10-94e2-1daed47e8756",
+    "data": [
+      {
+        "text": "магазин у дома",
+        "meta": "@sys.any",
+        "alias": "shop",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ae44d8d3-5cf6-432d-ae02-e6044fa84d13",
+    "data": [
+      {
+        "text": "красный",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "10e9374d-ec81-46b6-86d8-12a04ea2589f",
+    "data": [
+      {
+        "text": "синий",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fb9ebb6a-504f-4bf1-819f-4fe52dfadd88",
+    "data": [
+      {
+        "text": "зелёный",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "050d15bb-b787-4cc7-afea-a58bd1bc2968",
+    "data": [
+      {
+        "text": "жёлтый",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "63854afc-8755-4a8f-a8a8-f25d82b8513a",
+    "data": [
+      {
+        "text": "голубой",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d1400e3c-e77e-484d-a315-76ad6f42a79d",
+    "data": [
+      {
+        "text": "оранжевый",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dd271b2d-c313-472f-adf8-2d2322ccdb75",
+    "data": [
+      {
+        "text": "фиолетовый",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9aff2669-5513-482c-9187-9642dff561d3",
+    "data": [
+      {
+        "text": "белый",
+        "meta": "@sys.any",
+        "alias": "color",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
