@@ -168,7 +168,7 @@
     "id": "f46c4478-823e-4cfd-b200-15e630b550a8",
     "data": [
       {
-        "text": "Маша",
+        "text": "Антон",
         "meta": "@sys.any",
         "alias": "name",
         "userDefined": true
@@ -183,7 +183,7 @@
     "id": "fdaef0a6-ccbb-46c5-9255-ad6be53bbfee",
     "data": [
       {
-        "text": "Аня",
+        "text": "Гриша",
         "meta": "@sys.any",
         "alias": "name",
         "userDefined": true
@@ -213,7 +213,7 @@
     "id": "86c6685b-846a-4385-ae5f-c9cb6eb4b61f",
     "data": [
       {
-        "text": "Лена",
+        "text": "Рома",
         "meta": "@sys.any",
         "alias": "name",
         "userDefined": true
