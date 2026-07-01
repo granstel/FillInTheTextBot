@@ -1,0 +1,206 @@
+{
+  "id": "e42743e7-62a4-46c3-a975-8cbb1f595a80",
+  "parentId": "a1ea03fd-da2f-4fc1-b583-0e0e4cd8d6e1",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "41-EndlessShop-text1",
+  "auto": true,
+  "contexts": [
+    "text-41-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-41-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-41",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "d7eef6f5-e5cc-4428-b5f1-a3dbffe0ec10",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про бесконечный магазин. Эта история из трёх частей, начнём с первой.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b636a020-5913-480e-81cd-11c5b73972d6",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-41-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "54f18132-5fe8-469a-9735-5ba2fd673799",
+          "name": "hero",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$hero",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови своё имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, как тебя зовут"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d981f83f-17d5-4807-8bbd-22c056b55272",
+          "name": "shop",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$shop",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любой магазин, в который ты ходишь"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь магазин"
+            },
+            {
+              "lang": "ru",
+              "value": "В какой магазин ты любишь ходить?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "953d145a-3147-443d-b491-b52f74e7c4f5",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любой цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой-нибудь цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи свой любимый цвет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Ты заходишь в магазин «$shop» за покупками — обычный, каких много. Берёшь корзинку, идёшь вдоль полок и складываешь в неё всё, что нужно. Но чем дальше ты идёшь, тем длиннее становятся ряды: за стеллажами тянется ещё один, за ним ещё, и так до самого горизонта. Магазин будто бесконечный.\nКое-где вдалеке мелькают сотрудники: кто-то расставляет товар, кто-то возит тележки — будто ничего необычного. Но покупателей, кроме тебя, нигде нет. На одной из полок тикают старые часы без стрелок🕰️, а под ними белеет странный ценник: «$color объект. Смотреть не дольше пяти секунд». Ты моргаешь — а ценника уже нет.\nИ тут сверху щёлкает динамик: «Уважаемые покупатели! Магазин закрывается. Просьба найти выход до полуночи. Тех, кто не успеет, мы будем рады видеть в нашей дружной команде!» Голос звучит чересчур радостно, и от этого совсем не по себе.\nСочиним, что было дальше?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Replacements": {
+                "🕰️": "<speaker audio=\"dialogs-upload/a557c651-94d8-48fd-9c43-d2b644615050/bd717905-bd0b-4794-9002-072c78398221.opus\">"
+              }
+            },
+            "Sber": {
+              "Replacements": {
+                "🕰️": ""
+              }
+            },
+            "Marusia": {
+              "Replacements": {
+                "🕰️": ""
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "🕰️": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-41-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

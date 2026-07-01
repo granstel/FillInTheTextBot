@@ -1,0 +1,170 @@
+{
+  "id": "327f4618-8ed2-4bf6-9b07-695851e80efa",
+  "parentId": "a1ea03fd-da2f-4fc1-b583-0e0e4cd8d6e1",
+  "name": "41-EndlessShop-text3",
+  "auto": true,
+  "contexts": [
+    "text-41-3"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-41-3",
+          "lifespan": 0
+        },
+        {
+          "name": "text-41",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "2fe01ba5-2084-49e3-ab54-92c2cbdfe09f",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любое число побольше"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь большое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число побольше"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "99d8773b-a43d-4f90-b889-b0f310932788",
+          "name": "colorf",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$colorf",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — назови какой-нибудь цвет женского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — назови цвет женского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос: назови цвет женского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вы отправляетесь на поиски.\nСначала вы идёте в книжный отдел: среди $number полок с книгами вы находите записку — «ищи там, где пахнет морем». Это же отдел пляжного отдыха! Под надувным кругом прячется новая подсказка: «ищи самое сладкое место». Конечно, отдел сладостей! За облаком сладкой ваты вы находите потерянный #text-41.item.\nВдали раздаётся бой тех самых часов — 🔔полночь! Вы бежите к кассе, кассир пробивает #text-41.item, а ты оплачиваешь. И — чудо! — #text-41.animal превращается в человека по имени #text-41.name: он и забыл, что утратил человечность из-за своего проступка!\nНа дальней стене появилась $colorf надпись «Выход». Ты выбегаешь на знакомую улицу, думая, что #text-41.name сразу за тобой, — но рядом никого. У тебя в руке остался чек, а на нём строчка: «Спасибо, что посетили магазин «#text-41.shop», #text-41.hero.»\nПо-моему, загадочно получилось! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "Text": "Оценить историю"
+                }
+              ],
+              "Replacements": {
+                "🔔": "<speaker audio=\"alice-sounds-things-bell-2.opus\">"
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить историю"
+                }
+              ],
+              "Replacements": {
+                "🔔": "<audio text=\"sm-sounds-things-bell-2\"/>"
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "Text": "Поблагодарить разработчиков"
+                }
+              ],
+              "Replacements": {
+                "🔔": "<speaker audio=marusia-sounds/things-bell-2>"
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "🔔": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-41-3"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

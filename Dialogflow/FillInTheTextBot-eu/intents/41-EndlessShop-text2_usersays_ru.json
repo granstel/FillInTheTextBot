@@ -1,0 +1,362 @@
+[
+  {
+    "id": "52b6f248-f5a7-4908-8896-25fc53e115c3",
+    "data": [
+      {
+        "text": "кот",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "adcbd406-7a26-4645-be85-23e2dc176d97",
+    "data": [
+      {
+        "text": "пёс",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e1a0b680-66f1-4f92-ab37-994398e7b875",
+    "data": [
+      {
+        "text": "бегемот",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "09eea84a-95fd-4327-af39-189261b89727",
+    "data": [
+      {
+        "text": "тигр",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "25f7f82d-e95d-4fdf-9686-1cfecf4b4826",
+    "data": [
+      {
+        "text": "лев",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "afc074ad-59b7-4af0-92de-2e1ba3e46c4d",
+    "data": [
+      {
+        "text": "заяц",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ee44984e-1cd1-4723-83cd-194507188a8d",
+    "data": [
+      {
+        "text": "ёжик",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9c593c56-1ee2-4d77-9a30-44a50e4be8f2",
+    "data": [
+      {
+        "text": "медведь",
+        "meta": "@sys.any",
+        "alias": "animal",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "62a97486-88ce-4866-9a6c-fc8496839020",
+    "data": [
+      {
+        "text": "Саша",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "08db1d81-c883-40ba-9f20-5bf07bd483a0",
+    "data": [
+      {
+        "text": "Петя",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a9c693bf-b48e-4df6-aa05-c164b5d6b9cf",
+    "data": [
+      {
+        "text": "Дима",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f46c4478-823e-4cfd-b200-15e630b550a8",
+    "data": [
+      {
+        "text": "Антон",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fdaef0a6-ccbb-46c5-9255-ad6be53bbfee",
+    "data": [
+      {
+        "text": "Гриша",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8f4d2e10-e5dc-492c-b254-b45d9150617e",
+    "data": [
+      {
+        "text": "Костя",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "86c6685b-846a-4385-ae5f-c9cb6eb4b61f",
+    "data": [
+      {
+        "text": "Рома",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c93ca59c-b91d-43c7-bec2-b7aeeaa2e5c1",
+    "data": [
+      {
+        "text": "Миша",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dd9fa8ee-bd92-4e1b-a5a6-5691567b1e0c",
+    "data": [
+      {
+        "text": "шоколад",
+        "meta": "@sys.any",
+        "alias": "item",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "42d4992c-7b7d-425b-8ad6-ce67d2ec6425",
+    "data": [
+      {
+        "text": "мяч",
+        "meta": "@sys.any",
+        "alias": "item",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2a3f0eae-fa76-4b62-b3e9-9de1cfcf57ec",
+    "data": [
+      {
+        "text": "телефон",
+        "meta": "@sys.any",
+        "alias": "item",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6b7c2a3a-dfd8-4da3-81c5-44e0fe3a9415",
+    "data": [
+      {
+        "text": "фонарик",
+        "meta": "@sys.any",
+        "alias": "item",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7030f15d-6ce6-4a6a-953e-db4ae2cedd86",
+    "data": [
+      {
+        "text": "журнал",
+        "meta": "@sys.any",
+        "alias": "item",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5b5995de-b490-4687-bc4e-d7d4643641a7",
+    "data": [
+      {
+        "text": "банан",
+        "meta": "@sys.any",
+        "alias": "item",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d093dece-f9b7-4340-9523-23fd6dd4d4da",
+    "data": [
+      {
+        "text": "сок",
+        "meta": "@sys.any",
+        "alias": "item",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "22b43fba-598b-4749-96bb-bce9c9e1cdc6",
+    "data": [
+      {
+        "text": "хлеб",
+        "meta": "@sys.any",
+        "alias": "item",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
