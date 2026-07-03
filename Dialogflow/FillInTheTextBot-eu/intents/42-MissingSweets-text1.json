@@ -1,0 +1,231 @@
+{
+  "id": "cc420002-2222-4abc-8def-420000000002",
+  "parentId": "cc420001-1111-4abc-8def-420000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "42-MissingSweets-text1",
+  "auto": true,
+  "contexts": [
+    "text-42-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-42-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-42",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cc420002-2222-4abc-8def-4200000000c0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про пропажу сладостей на теплоходе. Эта история состоит из двух частей, начнём с первой.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc420002-2222-4abc-8def-4200000000c1",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-42-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc420002-2222-4abc-8def-4200000000c2",
+          "name": "name1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любое имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала — назови любое имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи какое-нибудь имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc420002-2222-4abc-8def-4200000000c3",
+          "name": "name2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови ещё одно имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — другое имя"
+            },
+            {
+              "lang": "ru",
+              "value": "И ещё одно имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc420002-2222-4abc-8def-4200000000c4",
+          "name": "kakaya",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$kakaya",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи слово, отвечающее на вопрос «какая?»"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какая?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любое прилагательное в женском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc420002-2222-4abc-8def-4200000000c5",
+          "name": "kakoy",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$kakoy",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь — «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи слово на вопрос «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Любое прилагательное в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc420002-2222-4abc-8def-4200000000c6",
+          "name": "sweet",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$sweet",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — назови что-нибудь сладкое мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — что-нибудь сладкое мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос: сладкое лакомство мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Сочиняем детектив на теплоходе! $name1 и $name2 вместе с роднёй и друзьями отправились в путешествие по реке. И вдруг прямо на борту обнаруживается загадка: по всему кораблю одна за другой пропадают сладости! Расследовать её берутся наши бравые сыщики.\nНачинают с буфета. $name2 заглядывает за прилавок — а $kakaya витрина совсем пуста, ни одной конфеты! «Так-так, улики ведут в трюм!» — уверенно заявляет $name1 и первым спешит вниз. Но и в трюме ни крошки: только $kakoy ящик, а в нём пусто.\nТогда друзья наведываются в кают-компанию, где ещё утром лежал целый $sweet. Теперь и его нет! И снова $name1 будто заранее знает, куда идти.\n$name2 чует неладное: откуда $name1 всё знает наперёд? Уж не $name1 ли таскает все сладости?!\nСочиним, что было дальше?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-42-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

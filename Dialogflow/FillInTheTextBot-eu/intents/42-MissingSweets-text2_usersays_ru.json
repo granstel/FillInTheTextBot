@@ -1,0 +1,19 @@
+[
+  { "id": "cc420003-3333-4abc-8def-42000d5b0001", "data": [ { "text": "уютное", "meta": "@sys.any", "alias": "kakoe", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0002", "data": [ { "text": "большое", "meta": "@sys.any", "alias": "kakoe", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0003", "data": [ { "text": "странное", "meta": "@sys.any", "alias": "kakoe", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0004", "data": [ { "text": "круглое", "meta": "@sys.any", "alias": "kakoe", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0005", "data": [ { "text": "зелёное", "meta": "@sys.any", "alias": "kakoe", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0006", "data": [ { "text": "старое", "meta": "@sys.any", "alias": "kakoe", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0007", "data": [ { "text": "загадочное", "meta": "@sys.any", "alias": "kakoe", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0008", "data": [ { "text": "пустое", "meta": "@sys.any", "alias": "kakoe", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+
+  { "id": "cc420003-3333-4abc-8def-42000d5b0011", "data": [ { "text": "5", "meta": "@sys.number-integer", "alias": "num", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0012", "data": [ { "text": "10", "meta": "@sys.number-integer", "alias": "num", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0013", "data": [ { "text": "100", "meta": "@sys.number-integer", "alias": "num", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0014", "data": [ { "text": "30", "meta": "@sys.number-integer", "alias": "num", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0015", "data": [ { "text": "7", "meta": "@sys.number-integer", "alias": "num", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0016", "data": [ { "text": "500", "meta": "@sys.number-integer", "alias": "num", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0017", "data": [ { "text": "48", "meta": "@sys.number-integer", "alias": "num", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc420003-3333-4abc-8def-42000d5b0018", "data": [ { "text": "12", "meta": "@sys.number-integer", "alias": "num", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 }
+]
