@@ -1,0 +1,162 @@
+{
+  "id": "cc420003-3333-4abc-8def-420000000003",
+  "parentId": "cc420001-1111-4abc-8def-420000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "42-MissingSweets-text2",
+  "auto": true,
+  "contexts": [
+    "text-42-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-42-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-42",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cc420003-3333-4abc-8def-4200000000d1",
+          "name": "kakoe",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$kakoe",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи слово, отвечающее на вопрос «какое?»"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какое?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Любое прилагательное в среднем роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc420003-3333-4abc-8def-4200000000d2",
+          "name": "num",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$num",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — назови любое число"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — любое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи какое-нибудь число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Друзья обходят весь теплоход — и камбуз, и кают-компанию, и $kakoe кафе на палубе. Всюду пусто! Сладости исчезли до единой, да и пассажиры куда-то подевались.\nОстаётся последнее непроверенное место — капитанский мостик. Выходит, воришка — сам капитан?!\n#text-42.name2 решительно распахивает дверь — и... «Сюрприз!!!» 🎉 На мостике собрались все друзья и родные, а на столе — гора сладостей и огромный торт с $num свечами!\nОказывается, никто ничего не крал: #text-42.name1 весь день готовил сюрприз, ведь сегодня #text-42.name2 празднует день рождения! А сладости заранее перенесли сюда.\nС днём рождения! 🎂 По-моему, здорово получилось. Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "🎉": "",
+                "🎂": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "🎉": "<speaker audio=\"alice-sounds-human-kids-1.opus\">",
+                "🎂": ""
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-42-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
