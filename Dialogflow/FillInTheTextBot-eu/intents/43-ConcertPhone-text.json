@@ -1,0 +1,229 @@
+{
+  "id": "aa430002-2222-4abc-8def-430000000002",
+  "parentId": "aa430001-1111-4abc-8def-430000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "43-ConcertPhone-text",
+  "auto": true,
+  "contexts": [
+    "text-43"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-43",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa430002-2222-4abc-8def-4300000000a0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про случай на концерте.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa430002-2222-4abc-8def-4300000000a1",
+          "name": "festival",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$festival",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва придумай название какого-нибудь фестиваля"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови название фестиваля или праздника"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай, как называется фестиваль"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa430002-2222-4abc-8def-4300000000a2",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи чьё-нибудь имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Имя приятеля или друга"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa430002-2222-4abc-8def-4300000000a3",
+          "name": "drink",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$drink",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи название какого-нибудь напитка"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь напиток"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой-нибудь напиток"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa430002-2222-4abc-8def-4300000000a4",
+          "name": "adjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — скажи, «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Однажды мы с друзьями поехали на фестиваль $festival.\nМой друг $name объявил, что снимет всё на телефон «для истории». История вышла короткой: толпа качнула его, телефон улетел в людское море — а там все билеты на обратный поезд!\nМы звонили на номер, но вокруг орали тысячи людей. Тогда $name заорал: «ЛЮДИ! КТО НАЙДЁТ ТЕЛЕФОН — УГОЩУ ВСЮ ПОЛЯНУ! Каждому — $drink!»\nФраза пошла по толпе: люди подняли фонарики, и перед сценой зажглось созвездие огоньков. Вокалист даже перестал петь и засмотрелся.\nИ тут из глубины поднялась рука с телефоном! Его передавали над головами бережно, как $adjective кубок. Вокалист дождался и сказал: «Нашли? Тогда этот припев — вам!» — и снова заиграла музыка.\n$drink на всю поляну $name так и не поставил. Но телефон и билеты спасли, а запись того концерта цела до сих пор — кривая, дрожащая, и лучшая из всех✨\nПо-моему, отлично получилось! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {}
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {}
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {}
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {}
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-43"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

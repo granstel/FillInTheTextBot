@@ -1,0 +1,132 @@
+[
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e001",
+    "data": [
+      {
+        "text": "случай на концерте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e002",
+    "data": [
+      {
+        "text": "про концерт",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e003",
+    "data": [
+      {
+        "text": "сочини историю про концерт",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e004",
+    "data": [
+      {
+        "text": "история про фестиваль",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e005",
+    "data": [
+      {
+        "text": "про фестиваль",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e006",
+    "data": [
+      {
+        "text": "потерянный телефон на концерте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e007",
+    "data": [
+      {
+        "text": "телефон на концерте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e008",
+    "data": [
+      {
+        "text": "как мы были на фестивале",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e009",
+    "data": [
+      {
+        "text": "сочини про концерт",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa430001-1111-4abc-8def-43000000e010",
+    "data": [
+      {
+        "text": "история про музыкальный фестиваль",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
