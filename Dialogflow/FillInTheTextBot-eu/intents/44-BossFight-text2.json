@@ -1,0 +1,127 @@
+{
+  "id": "cc440003-3333-4abc-8def-440000000003",
+  "parentId": "cc440001-1111-4abc-8def-440000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "44-BossFight-text2",
+  "auto": true,
+  "contexts": [
+    "text-44-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-44-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-44",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cc440003-3333-4abc-8def-4400000000d1",
+          "name": "kakaya",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$kakaya",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок — скажи слово, отвечающее на вопрос «какая?»"
+            },
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — «какая?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Напоследок — любое прилагательное в женском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "#text-44.name1 бросился вперёд, но его здоровье было на исходе. Он замахнулся, вложив в удар всю силу, но #text-44.creature перехватил его лапой и отшвырнул к стене. В воздухе взорвалась $kakaya вспышка — #text-44.name2 применила магию! На секунду показалось, что они справятся... Но #text-44.creature поднялся снова. #text-44.name1 попытался встать — экран поплыл и потемнел.\nGAME OVER\n«Ну ладно, — сказал #text-44.name1, откидываясь на спинку кресла. — Давай попробуем ещё раз. Только чаю налью».\nВ наушнике зашуршало: «Только теперь не зевай. У него вторая фаза начинается на трети здоровья, а ты в неё опять напролом полез. Всё, чекпоинт загружен, я тебя жду на респе».\nПо-моему, здорово получилось. Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-44-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
