@@ -1,0 +1,10 @@
+[
+  { "id": "cc440003-3333-4abc-8def-44000d5b0001", "data": [ { "text": "огненная", "meta": "@sys.any", "alias": "kakaya", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc440003-3333-4abc-8def-44000d5b0002", "data": [ { "text": "синяя", "meta": "@sys.any", "alias": "kakaya", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc440003-3333-4abc-8def-44000d5b0003", "data": [ { "text": "зелёная", "meta": "@sys.any", "alias": "kakaya", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc440003-3333-4abc-8def-44000d5b0004", "data": [ { "text": "ослепительная", "meta": "@sys.any", "alias": "kakaya", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc440003-3333-4abc-8def-44000d5b0005", "data": [ { "text": "красная", "meta": "@sys.any", "alias": "kakaya", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc440003-3333-4abc-8def-44000d5b0006", "data": [ { "text": "ледяная", "meta": "@sys.any", "alias": "kakaya", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc440003-3333-4abc-8def-44000d5b0007", "data": [ { "text": "звёздная", "meta": "@sys.any", "alias": "kakaya", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 },
+  { "id": "cc440003-3333-4abc-8def-44000d5b0008", "data": [ { "text": "тёмная", "meta": "@sys.any", "alias": "kakaya", "userDefined": true } ], "isTemplate": false, "count": 0, "lang": "ru", "updated": 0 }
+]

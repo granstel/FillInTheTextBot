@@ -1,0 +1,285 @@
+{
+  "id": "cc440002-2222-4abc-8def-440000000002",
+  "parentId": "cc440001-1111-4abc-8def-440000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "44-BossFight-text1",
+  "auto": true,
+  "contexts": [
+    "text-44-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-44-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-44",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cc440002-2222-4abc-8def-4400000000c0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про финальный бой. Эта история состоит из двух частей, начнём с первой.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc440002-2222-4abc-8def-4400000000c1",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-44-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc440002-2222-4abc-8def-4400000000c2",
+          "name": "name1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала — назови какое-нибудь мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай мужское имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc440002-2222-4abc-8def-4400000000c3",
+          "name": "name2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь — какое-нибудь женское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "А теперь — женское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое женское имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc440002-2222-4abc-8def-4400000000c4",
+          "name": "color1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любой цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи какой-нибудь цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай цвет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc440002-2222-4abc-8def-4400000000c5",
+          "name": "kakoe",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$kakoe",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи слово, отвечающее на вопрос «какое?»"
+            },
+            {
+              "lang": "ru",
+              "value": "«Какое?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Любое прилагательное в среднем роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc440002-2222-4abc-8def-4400000000c6",
+          "name": "kakoy",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$kakoy",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь — «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи слово на вопрос «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Любое прилагательное в мужском роде"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc440002-2222-4abc-8def-4400000000c7",
+          "name": "num",
+          "required": true,
+          "dataType": "@sys.number-integer",
+          "value": "$num",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови число больше ста"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи число больше ста"
+            },
+            {
+              "lang": "ru",
+              "value": "Придумай число больше ста"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cc440002-2222-4abc-8def-4400000000c8",
+          "name": "creature",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$creature",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос первой части — назови какое-нибудь мифическое существо мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — мифическое существо мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос: любое мифическое существо мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "$name1 замер в конце длинного каменного коридора. За его спиной шла $name2 — с луком наготове. На его плечах висел $color1 плащ, изодранный в предыдущих боях, а в руке он сжимал меч — $kakoe лезвие ещё дымилось после встречи со стражниками. Впереди, у трона из костей, поднялся огромный $kakoy $creature — босс подземелья.\n«У меня осталось всего одно зелье», — прошептал $name1, заглядывая в пустой инвентарь. «А у меня мало стрел — всего $num», — отозвалась $name2.\n$creature взревел, сорвался с места и швырнул в них булыжник. $name2 отскочила и выпустила стрелу — прямо в глаз чудовищу.\nХочешь узнать, чем всё закончилось?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-44-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
