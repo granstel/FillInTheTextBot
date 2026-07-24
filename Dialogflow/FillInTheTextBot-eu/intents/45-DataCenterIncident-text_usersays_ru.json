@@ -40,43 +40,43 @@
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
-    "id": "aa450002-2222-4abc-8def-45000000nb01",
-    "data": [{ "text": "47", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "id": "aa450002-2222-4abc-8def-45000000st01",
+    "data": [{ "text": "ВКонтакте", "meta": "@sys.any", "alias": "site", "userDefined": true }],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
-    "id": "aa450002-2222-4abc-8def-45000000nb02",
-    "data": [{ "text": "100", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "id": "aa450002-2222-4abc-8def-45000000st02",
+    "data": [{ "text": "Ютуб", "meta": "@sys.any", "alias": "site", "userDefined": true }],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
-    "id": "aa450002-2222-4abc-8def-45000000nb03",
-    "data": [{ "text": "25", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "id": "aa450002-2222-4abc-8def-45000000st03",
+    "data": [{ "text": "Гугл", "meta": "@sys.any", "alias": "site", "userDefined": true }],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
-    "id": "aa450002-2222-4abc-8def-45000000nb04",
-    "data": [{ "text": "88", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "id": "aa450002-2222-4abc-8def-45000000st04",
+    "data": [{ "text": "Одноклассники", "meta": "@sys.any", "alias": "site", "userDefined": true }],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
-    "id": "aa450002-2222-4abc-8def-45000000nb05",
-    "data": [{ "text": "300", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "id": "aa450002-2222-4abc-8def-45000000st05",
+    "data": [{ "text": "Телеграм", "meta": "@sys.any", "alias": "site", "userDefined": true }],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
-    "id": "aa450002-2222-4abc-8def-45000000nb06",
-    "data": [{ "text": "42", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "id": "aa450002-2222-4abc-8def-45000000st06",
+    "data": [{ "text": "Тикток", "meta": "@sys.any", "alias": "site", "userDefined": true }],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
-    "id": "aa450002-2222-4abc-8def-45000000nb07",
-    "data": [{ "text": "999", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "id": "aa450002-2222-4abc-8def-45000000st07",
+    "data": [{ "text": "Википедия", "meta": "@sys.any", "alias": "site", "userDefined": true }],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
-    "id": "aa450002-2222-4abc-8def-45000000nb08",
-    "data": [{ "text": "56", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "id": "aa450002-2222-4abc-8def-45000000st08",
+    "data": [{ "text": "Яндекс", "meta": "@sys.any", "alias": "site", "userDefined": true }],
     "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
   },
   {
