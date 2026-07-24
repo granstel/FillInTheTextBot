@@ -1,0 +1,283 @@
+{
+  "id": "aa450002-2222-4abc-8def-450000000002",
+  "parentId": "aa450001-1111-4abc-8def-450000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "45-DataCenterIncident-text",
+  "auto": true,
+  "contexts": [
+    "text-45"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-45",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa450002-2222-4abc-8def-4500000000a0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про случай в дата-центре.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa450002-2222-4abc-8def-4500000000a1",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва назови свой любимый цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой твой любимый цвет?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa450002-2222-4abc-8def-4500000000a2",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови число больше двадцати"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое число больше двадцати"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови число побольше двадцати"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa450002-2222-4abc-8def-4500000000a3",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи имя своего друга"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови чьё-нибудь имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Имя приятеля или друга"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa450002-2222-4abc-8def-4500000000a4",
+          "name": "adjective1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "А теперь скажи — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Просто ответь — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Один вопрос — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa450002-2222-4abc-8def-4500000000a5",
+          "name": "adjective2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И ещё раз — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Снова — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Опять же — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa450002-2222-4abc-8def-4500000000a6",
+          "name": "food",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$food",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последнее — назови что-нибудь съедобное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — что-нибудь съедобное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос — назови еду мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Представь: ты ночью работаешь в дата-центре — огромном зале, где рядами стоят огромные компьютеры, на которых держится весь интернет. Все спят, а ты следишь за порядком. На экране горит спокойный $color огонёк — всё хорошо.\nИ вдруг экран вспыхивает красным, воет сирена: главный сайт упал! Проходит $number минут, а сайт не работает, тысячи людей не могут зайти. Ты в панике поднимаешь по тревоге всю команду.\nЧерез полчаса, зевая, прибегает $name и остальные. Все тыкают в кнопки, но никто не понимает, почему сайт не работает.\nТы заходишь в дальний угол зала — и всё ясно. Там стоит уборщица: чтобы включить $adjective1 пылесос, она выдернула из розетки $adjective2 сервер! А сверху поставила греться свой $food.\nСервер включили обратно — и всё заработало. А в журнале записали причину аварии: «пылесос». Ниже приписали: «сопутствующий фактор — $food».\nПо-моему, забавно вышло! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {}
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {}
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {}
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {}
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-45"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

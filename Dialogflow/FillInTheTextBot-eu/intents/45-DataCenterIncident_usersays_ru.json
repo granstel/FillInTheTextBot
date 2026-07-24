@@ -1,0 +1,132 @@
+[
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e001",
+    "data": [
+      {
+        "text": "случай в дата-центре",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e002",
+    "data": [
+      {
+        "text": "про дата-центр",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e003",
+    "data": [
+      {
+        "text": "сочини историю про дата-центр",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e004",
+    "data": [
+      {
+        "text": "история про серверную",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e005",
+    "data": [
+      {
+        "text": "про серверную",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e006",
+    "data": [
+      {
+        "text": "авария в дата-центре",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e007",
+    "data": [
+      {
+        "text": "история про айтишников",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e008",
+    "data": [
+      {
+        "text": "случай на работе программиста",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e009",
+    "data": [
+      {
+        "text": "сочини про дата-центр",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa450001-1111-4abc-8def-45000000e010",
+    "data": [
+      {
+        "text": "поломка в дата-центре",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

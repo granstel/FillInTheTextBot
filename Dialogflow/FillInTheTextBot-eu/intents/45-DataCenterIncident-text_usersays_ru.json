@@ -1,0 +1,242 @@
+[
+  {
+    "id": "aa450002-2222-4abc-8def-45000000cl01",
+    "data": [{ "text": "красный", "meta": "@sys.any", "alias": "color", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000cl02",
+    "data": [{ "text": "синий", "meta": "@sys.any", "alias": "color", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000cl03",
+    "data": [{ "text": "зелёный", "meta": "@sys.any", "alias": "color", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000cl04",
+    "data": [{ "text": "жёлтый", "meta": "@sys.any", "alias": "color", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000cl05",
+    "data": [{ "text": "фиолетовый", "meta": "@sys.any", "alias": "color", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000cl06",
+    "data": [{ "text": "оранжевый", "meta": "@sys.any", "alias": "color", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000cl07",
+    "data": [{ "text": "голубой", "meta": "@sys.any", "alias": "color", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000cl08",
+    "data": [{ "text": "розовый", "meta": "@sys.any", "alias": "color", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nb01",
+    "data": [{ "text": "47", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nb02",
+    "data": [{ "text": "100", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nb03",
+    "data": [{ "text": "25", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nb04",
+    "data": [{ "text": "88", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nb05",
+    "data": [{ "text": "300", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nb06",
+    "data": [{ "text": "42", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nb07",
+    "data": [{ "text": "999", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nb08",
+    "data": [{ "text": "56", "meta": "@sys.number", "alias": "number", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nm01",
+    "data": [{ "text": "Дима", "meta": "@sys.any", "alias": "name", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nm02",
+    "data": [{ "text": "Саша", "meta": "@sys.any", "alias": "name", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nm03",
+    "data": [{ "text": "Костя", "meta": "@sys.any", "alias": "name", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nm04",
+    "data": [{ "text": "Максим", "meta": "@sys.any", "alias": "name", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nm05",
+    "data": [{ "text": "Петя", "meta": "@sys.any", "alias": "name", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nm06",
+    "data": [{ "text": "Ваня", "meta": "@sys.any", "alias": "name", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nm07",
+    "data": [{ "text": "Лёша", "meta": "@sys.any", "alias": "name", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000nm08",
+    "data": [{ "text": "Андрей", "meta": "@sys.any", "alias": "name", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a101",
+    "data": [{ "text": "квадратный", "meta": "@sys.any", "alias": "adjective1", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a102",
+    "data": [{ "text": "полосатый", "meta": "@sys.any", "alias": "adjective1", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a103",
+    "data": [{ "text": "огромный", "meta": "@sys.any", "alias": "adjective1", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a104",
+    "data": [{ "text": "блестящий", "meta": "@sys.any", "alias": "adjective1", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a105",
+    "data": [{ "text": "золотой", "meta": "@sys.any", "alias": "adjective1", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a106",
+    "data": [{ "text": "круглый", "meta": "@sys.any", "alias": "adjective1", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a107",
+    "data": [{ "text": "деревянный", "meta": "@sys.any", "alias": "adjective1", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a108",
+    "data": [{ "text": "колючий", "meta": "@sys.any", "alias": "adjective1", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a201",
+    "data": [{ "text": "фиолетовый", "meta": "@sys.any", "alias": "adjective2", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a202",
+    "data": [{ "text": "стеклянный", "meta": "@sys.any", "alias": "adjective2", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a203",
+    "data": [{ "text": "кривой", "meta": "@sys.any", "alias": "adjective2", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a204",
+    "data": [{ "text": "гигантский", "meta": "@sys.any", "alias": "adjective2", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a205",
+    "data": [{ "text": "пушистый", "meta": "@sys.any", "alias": "adjective2", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a206",
+    "data": [{ "text": "острый", "meta": "@sys.any", "alias": "adjective2", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a207",
+    "data": [{ "text": "светящийся", "meta": "@sys.any", "alias": "adjective2", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000a208",
+    "data": [{ "text": "розовый", "meta": "@sys.any", "alias": "adjective2", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000fd01",
+    "data": [{ "text": "чебурек", "meta": "@sys.any", "alias": "food", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000fd02",
+    "data": [{ "text": "пирожок", "meta": "@sys.any", "alias": "food", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000fd03",
+    "data": [{ "text": "банан", "meta": "@sys.any", "alias": "food", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000fd04",
+    "data": [{ "text": "бутерброд", "meta": "@sys.any", "alias": "food", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000fd05",
+    "data": [{ "text": "батон", "meta": "@sys.any", "alias": "food", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000fd06",
+    "data": [{ "text": "сырок", "meta": "@sys.any", "alias": "food", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000fd07",
+    "data": [{ "text": "пряник", "meta": "@sys.any", "alias": "food", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  },
+  {
+    "id": "aa450002-2222-4abc-8def-45000000fd08",
+    "data": [{ "text": "огурец", "meta": "@sys.any", "alias": "food", "userDefined": true }],
+    "isTemplate": false, "count": 0, "lang": "ru", "updated": 0
+  }
+]
