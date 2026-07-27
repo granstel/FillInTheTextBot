@@ -249,6 +249,19 @@
           "title": "истории",
           "buttons": [
             {
+              "text": "Случай в дата-центре"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
               "text": "Гороскоп про водолеев"
             },
             {
