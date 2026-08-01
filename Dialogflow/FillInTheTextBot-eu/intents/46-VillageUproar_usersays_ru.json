@@ -1,0 +1,132 @@
+[
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e001",
+    "data": [
+      {
+        "text": "переполох в деревне",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e002",
+    "data": [
+      {
+        "text": "про деревню",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e003",
+    "data": [
+      {
+        "text": "история про деревню",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e004",
+    "data": [
+      {
+        "text": "сочини историю про деревню",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e005",
+    "data": [
+      {
+        "text": "деревенская история",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e006",
+    "data": [
+      {
+        "text": "про козу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e007",
+    "data": [
+      {
+        "text": "пропала коза",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e008",
+    "data": [
+      {
+        "text": "история про бабушку в деревне",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e009",
+    "data": [
+      {
+        "text": "сочини про деревню",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa460001-1111-4abc-8def-46000000e010",
+    "data": [
+      {
+        "text": "каникулы в деревне",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
