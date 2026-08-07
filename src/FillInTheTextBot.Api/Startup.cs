@@ -8,6 +8,8 @@ using System;
 using System.Linq;
 using System.Reflection;
 using FillInTheTextBot.Api.DI;
+using FillInTheTextBot.Api.Health;
+using Microsoft.Extensions.Hosting;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
@@ -16,6 +18,12 @@ namespace FillInTheTextBot.Api
 {
     public class Startup
     {
+        /// <summary>
+        /// Путь проверки здоровья. По нему ходит балансировщик, чтобы понимать,
+        /// можно ли слать на экземпляр трафик.
+        /// </summary>
+        public const string HealthPath = "/health";
+
         private const int DefaultOtlpPort = 4317;
 
         private readonly IConfiguration _configuration;
@@ -41,8 +49,25 @@ namespace FillInTheTextBot.Api
             });
 
             services.AddAppConfiguration(_configuration);
+
+            AddHealth(services);
+
             services.AddInternalServices();
             services.AddExternalServices();
+        }
+
+        private static void AddHealth(IServiceCollection services)
+        {
+            services.AddSingleton<ReadinessState>();
+            services.AddHostedService<GracefulShutdownService>();
+
+            services.AddHealthChecks()
+                .AddCheck<ReadinessHealthCheck>("readiness");
+
+            // Хост должен дождаться и текущих запросов, и разбора очереди фоновых работ
+            services.AddOptions<HostOptions>()
+                .Configure<ShutdownConfiguration>((options, shutdown) =>
+                    options.ShutdownTimeout = TimeSpan.FromSeconds(shutdown.TimeoutSeconds));
         }
 
         private void AddTelemetry(IServiceCollection services)
@@ -122,6 +147,7 @@ namespace FillInTheTextBot.Api
             {
                 e.MapControllers();
                 e.MapPrometheusScrapingEndpoint();
+                e.MapHealthChecks(HealthPath);
             });
         }
     }

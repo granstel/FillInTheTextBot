@@ -16,6 +16,7 @@ namespace FillInTheTextBot.Api.DI
             services.AddSingleton(configuration.Dialogflow);
             services.AddSingleton(configuration.Tracing);
             services.AddSingleton(configuration.Conversation);
+            services.AddSingleton(configuration.Shutdown ?? new ShutdownConfiguration());
         }
     }
 }
