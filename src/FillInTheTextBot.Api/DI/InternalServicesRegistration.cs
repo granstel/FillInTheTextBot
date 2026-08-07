@@ -1,4 +1,5 @@
 ﻿using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.BackgroundTasks;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FillInTheTextBot.Api.DI
@@ -9,6 +10,10 @@ namespace FillInTheTextBot.Api.DI
         {
             services.AddTransient<IConversationService, ConversationService>();
             services.AddScoped<IDialogflowService, DialogflowService>();
+
+            services.AddSingleton<BackgroundTaskQueue>();
+            services.AddSingleton<IBackgroundTaskQueue>(provider => provider.GetRequiredService<BackgroundTaskQueue>());
+            services.AddHostedService<BackgroundTaskProcessor>();
         }
     }
 }
