@@ -14,10 +14,6 @@
     <PackageReference Include="OpenTracing" Version="0.12.1" />
     <PackageReference Include="prometheus-net" Version="7.0.0" />
     <PackageReference Include="StackExchange.Redis" Version="2.12.14" />
-    <PackageReference Include="System.ServiceModel.Duplex" Version="4.9.0" />
-    <PackageReference Include="System.ServiceModel.Http" Version="4.9.0" />
-    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.9.0" />
-    <PackageReference Include="System.ServiceModel.Security" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
