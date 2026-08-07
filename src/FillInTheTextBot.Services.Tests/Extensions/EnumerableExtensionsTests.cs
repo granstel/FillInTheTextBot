@@ -1,6 +1,7 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using FillInTheTextBot.Services.Extensions;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace FillInTheTextBot.Services.Tests.Extensions
 {
@@ -16,7 +17,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = source.JoinToString();
 
 
-            Assert.AreEqual("a, b, c", result);
+            ClassicAssert.AreEqual("a, b, c", result);
         }
 
         [Test]
@@ -28,7 +29,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = source.JoinToString("|");
 
 
-            Assert.AreEqual("a|b", result);
+            ClassicAssert.AreEqual("a|b", result);
         }
 
         [Test]
@@ -41,7 +42,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = source.JoinToString();
 
 
-            Assert.Null(result);
+            ClassicAssert.Null(result);
         }
 
         [Test]
@@ -53,7 +54,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = source.JoinToString();
 
 
-            Assert.AreEqual(string.Empty, result);
+            ClassicAssert.AreEqual(string.Empty, result);
         }
 
         [Test]
@@ -65,7 +66,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = source.JoinToString();
 
 
-            Assert.AreEqual("1, 2, 3", result);
+            ClassicAssert.AreEqual("1, 2, 3", result);
         }
     }
 }

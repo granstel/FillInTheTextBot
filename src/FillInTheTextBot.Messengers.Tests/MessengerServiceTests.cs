@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoFixture;
@@ -8,6 +8,7 @@ using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace FillInTheTextBot.Messengers.Tests
 {
@@ -55,9 +56,9 @@ namespace FillInTheTextBot.Messengers.Tests
             var result = await _target.ProcessIncomingAsync(new InputFixture());
 
 
-            Assert.AreSame(request, _target.AfterInput.Request);
-            Assert.AreSame(response, _target.AfterInput.Response);
-            Assert.NotNull(result);
+            ClassicAssert.AreSame(request, _target.AfterInput.Request);
+            ClassicAssert.AreSame(response, _target.AfterInput.Response);
+            ClassicAssert.NotNull(result);
         }
 
         [Test]
@@ -73,7 +74,7 @@ namespace FillInTheTextBot.Messengers.Tests
 
 
             _conversationService.Verify(s => s.GetResponseAsync(It.IsAny<Request>()), Times.Never);
-            Assert.AreSame(commandResponse, _target.AfterInput.Response);
+            ClassicAssert.AreSame(commandResponse, _target.AfterInput.Response);
         }
 
         #endregion Основной поток
@@ -99,9 +100,9 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var context = request.RequiredContexts.Single(c => c.Name == "source-Sber");
 
-            Assert.AreEqual(2, context.LifeSpan);
-            Assert.AreEqual(request.UserHash, context.Parameters[nameof(request.UserHash)]);
-            Assert.AreEqual(request.ClientId, context.Parameters[nameof(request.ClientId)]);
+            ClassicAssert.AreEqual(2, context.LifeSpan);
+            ClassicAssert.AreEqual(request.UserHash, context.Parameters[nameof(request.UserHash)]);
+            ClassicAssert.AreEqual(request.ClientId, context.Parameters[nameof(request.ClientId)]);
         }
 
         [Test]
@@ -118,8 +119,8 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var context = request.RequiredContexts.Single(c => c.Name == "source-Yandex");
 
-            Assert.AreEqual(string.Empty, context.Parameters[nameof(request.UserHash)]);
-            Assert.AreEqual(string.Empty, context.Parameters[nameof(request.ClientId)]);
+            ClassicAssert.AreEqual(string.Empty, context.Parameters[nameof(request.UserHash)]);
+            ClassicAssert.AreEqual(string.Empty, context.Parameters[nameof(request.ClientId)]);
         }
 
         [Test]
@@ -136,7 +137,7 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var context = request.RequiredContexts.Single(c => c.Name == "screen");
 
-            Assert.AreEqual(2, context.LifeSpan);
+            ClassicAssert.AreEqual(2, context.LifeSpan);
         }
 
         [Test]
@@ -153,7 +154,7 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var context = request.RequiredContexts.Single(c => c.Name == "OldUser");
 
-            Assert.AreEqual(2, context.LifeSpan);
+            ClassicAssert.AreEqual(2, context.LifeSpan);
         }
 
         [Test]
@@ -168,7 +169,7 @@ namespace FillInTheTextBot.Messengers.Tests
             await _target.ProcessIncomingAsync(new InputFixture());
 
 
-            Assert.AreEqual(1, request.RequiredContexts.Count);
+            ClassicAssert.AreEqual(1, request.RequiredContexts.Count);
         }
 
         #endregion Контексты
@@ -186,8 +187,8 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var response = _target.AfterInput.Response;
 
-            Assert.True(response.Text.StartsWith(ErrorAnswerStart));
-            Assert.AreEqual(ErrorLink, response.Buttons.Single().Url);
+            ClassicAssert.True(response.Text.StartsWith(ErrorAnswerStart));
+            ClassicAssert.AreEqual(ErrorLink, response.Buttons.Single().Url);
         }
 
         [Test]
@@ -203,7 +204,7 @@ namespace FillInTheTextBot.Messengers.Tests
             await _target.ProcessIncomingAsync(new InputFixture());
 
 
-            Assert.True(_target.AfterInput.Response.Text.StartsWith(ErrorAnswerStart));
+            ClassicAssert.True(_target.AfterInput.Response.Text.StartsWith(ErrorAnswerStart));
         }
 
         [Test]
@@ -215,8 +216,8 @@ namespace FillInTheTextBot.Messengers.Tests
             var result = await _target.ProcessIncomingAsync(new InputFixture());
 
 
-            Assert.NotNull(result);
-            Assert.NotNull(_target.AfterInput);
+            ClassicAssert.NotNull(result);
+            ClassicAssert.NotNull(_target.AfterInput);
         }
 
         #endregion Обработка ошибок

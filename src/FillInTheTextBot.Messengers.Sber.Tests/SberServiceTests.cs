@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoFixture;
@@ -6,6 +6,7 @@ using GranSteL.Helpers.Redis;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using Sber.SmartApp.Models;
 using InternalModels = FillInTheTextBot.Models;
 
@@ -87,9 +88,9 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             await _target.ProcessIncomingAsync(input);
 
 
-            Assert.True(captured.IsOldUser);
-            Assert.AreEqual(5, captured.NextTextIndex);
-            Assert.AreEqual(userState.ScopeKey, captured.ScopeKey);
+            ClassicAssert.True(captured.IsOldUser);
+            ClassicAssert.AreEqual(5, captured.NextTextIndex);
+            ClassicAssert.AreEqual(userState.ScopeKey, captured.ScopeKey);
         }
 
         [Test]
@@ -108,9 +109,9 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             await _target.ProcessIncomingAsync(input);
 
 
-            Assert.False(captured.IsOldUser);
-            Assert.AreEqual(0, captured.NextTextIndex);
-            Assert.Null(captured.ScopeKey);
+            ClassicAssert.False(captured.IsOldUser);
+            ClassicAssert.AreEqual(0, captured.NextTextIndex);
+            ClassicAssert.Null(captured.ScopeKey);
         }
 
         #endregion Before: состояние пользователя из кэша
@@ -137,7 +138,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
 
             var context = captured.RequiredContexts.Single(c => c.Name == $"sber-character-{characterId}");
 
-            Assert.AreEqual(2, context.LifeSpan);
+            ClassicAssert.AreEqual(2, context.LifeSpan);
         }
 
         [Test]
@@ -158,7 +159,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
 
             var context = captured.RequiredContexts.Single(c => c.Name == "official");
 
-            Assert.AreEqual(2, context.LifeSpan);
+            ClassicAssert.AreEqual(2, context.LifeSpan);
         }
 
         [Test]
@@ -177,7 +178,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             await _target.ProcessIncomingAsync(input);
 
 
-            Assert.AreEqual(2, captured.RequiredContexts.Count, "Ожидаются только sber-character-* и source-Sber");
+            ClassicAssert.AreEqual(2, captured.RequiredContexts.Count, "Ожидаются только sber-character-* и source-Sber");
         }
 
         #endregion Before: контексты Сбера
@@ -204,7 +205,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             await _target.ProcessIncomingAsync(input);
 
 
-            Assert.AreEqual(sessionId, captured.SessionId);
+            ClassicAssert.AreEqual(sessionId, captured.SessionId);
             _cache.Verify(c => c.AddAsync(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<TimeSpan?>()), Times.Never);
         }
 
@@ -228,8 +229,8 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             await _target.ProcessIncomingAsync(input);
 
 
-            Assert.AreNotEqual(cachedSessionId, captured.SessionId);
-            Assert.AreEqual(32, captured.SessionId.Length, "Идентификатор сессии — Guid в формате N");
+            ClassicAssert.AreNotEqual(cachedSessionId, captured.SessionId);
+            ClassicAssert.AreEqual(32, captured.SessionId.Length, "Идентификатор сессии — Guid в формате N");
         }
 
         [Test]
@@ -250,7 +251,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             await WaitForAsync(() => _cache.Invocations.Any(i => i.Method.Name == nameof(IRedisCacheService.AddAsync)));
 
 
-            Assert.IsNotEmpty(captured.SessionId);
+            ClassicAssert.IsNotEmpty(captured.SessionId);
 
             // Кэширование сессии — fire-and-forget
             _cache.Verify(
@@ -303,9 +304,9 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = await _target.ProcessIncomingAsync(input);
 
 
-            Assert.AreEqual(input.SessionId, result.SessionId);
-            Assert.AreEqual(input.MessageId, result.MessageId);
-            Assert.AreSame(input.Uuid, result.Uuid);
+            ClassicAssert.AreEqual(input.SessionId, result.SessionId);
+            ClassicAssert.AreEqual(input.MessageId, result.MessageId);
+            ClassicAssert.AreSame(input.Uuid, result.Uuid);
         }
 
         #endregion AfterAsync

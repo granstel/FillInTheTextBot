@@ -1,6 +1,7 @@
 ﻿using FillInTheTextBot.Services.Extensions;
 using AutoFixture;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace FillInTheTextBot.Services.Tests.Extensions
 {
@@ -21,7 +22,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = expected.Sanitize();
 
 
-            Assert.Null(result);
+            ClassicAssert.Null(result);
         }
 
         [Test]
@@ -33,7 +34,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = expected.Sanitize();
 
 
-            Assert.True(string.IsNullOrEmpty(result));
+            ClassicAssert.True(string.IsNullOrEmpty(result));
         }
                     
         [Test]      
@@ -45,7 +46,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = expected.Sanitize();
 
 
-            Assert.AreEqual(expected, result);
+            ClassicAssert.AreEqual(expected, result);
         }
                     
         [Test]      
@@ -58,7 +59,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
 
 
             var expected = "This text is with \"quotes\"";
-            Assert.AreEqual(expected, result);
+            ClassicAssert.AreEqual(expected, result);
         }
 
         #endregion Sanitize

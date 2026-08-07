@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 
 namespace FillInTheTextBot.Messengers.Tests.Controllers
 {
@@ -48,7 +49,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             Target.OnActionExecuting(context);
 
 
-            Assert.True(context.Result is NotFoundResult);
+            ClassicAssert.True(context.Result is NotFoundResult);
         }
 
         [Test]
@@ -66,7 +67,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             Target.OnActionExecuting(context);
 
 
-            Assert.Null(context.Result);
+            ClassicAssert.Null(context.Result);
         }
 
         [Test]
@@ -84,7 +85,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             Target.OnActionExecuting(context);
 
 
-            Assert.Null(context.Result);
+            ClassicAssert.Null(context.Result);
         }
 
         [Test]
@@ -102,7 +103,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             Target.OnActionExecuting(context);
 
 
-            Assert.Null(context.Result);
+            ClassicAssert.Null(context.Result);
         }
 
         #endregion OnActionExecuting
@@ -118,7 +119,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             var result = Target.GetInfo();
 
 
-            Assert.True(result.Contains(expected));
+            ClassicAssert.True(result.Contains(expected));
         }
 
         [Test]
@@ -138,7 +139,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
 
             MockRepository.VerifyAll();
             var value = (result as JsonResult)?.Value;
-            Assert.AreEqual(expected, value);
+            ClassicAssert.AreEqual(expected, value);
         }
 
         [Test]
@@ -159,7 +160,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             MockRepository.VerifyAll();
 
             var value = (result as JsonResult)?.Value;
-            Assert.AreEqual(expected, value);
+            ClassicAssert.AreEqual(expected, value);
         }
 
         [Test]
@@ -175,7 +176,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             MockRepository.VerifyAll();
 
             var value = (result as JsonResult)?.Value;
-            Assert.AreEqual(expected, value);
+            ClassicAssert.AreEqual(expected, value);
         }
     }
 }

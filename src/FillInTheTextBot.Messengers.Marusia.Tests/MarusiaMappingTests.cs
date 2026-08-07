@@ -1,10 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoFixture;
 using MailRu.Marusia.Models;
 using MailRu.Marusia.Models.Input;
 using NUnit.Framework;
+using NUnit.Framework.Legacy;
 using InternalModels = FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Messengers.Marusia.Tests
@@ -34,7 +35,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = source.ToRequest();
 
-            Assert.Null(result);
+            ClassicAssert.Null(result);
         }
 
         [Test]
@@ -42,8 +43,8 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
         {
             var result = new InputModel().ToRequest();
 
-            Assert.AreEqual(InternalModels.Source.Marusia, result.Source);
-            Assert.AreEqual(InternalModels.Appeal.NoOfficial, result.Appeal);
+            ClassicAssert.AreEqual(InternalModels.Source.Marusia, result.Source);
+            ClassicAssert.AreEqual(InternalModels.Appeal.NoOfficial, result.Appeal);
         }
 
         [Test]
@@ -64,10 +65,10 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(source.Session.SkillId, result.ChatHash);
-            Assert.AreEqual(source.Session.UserId, result.UserHash);
-            Assert.AreEqual(source.Session.SessionId, result.SessionId);
-            Assert.True(result.NewSession);
+            ClassicAssert.AreEqual(source.Session.SkillId, result.ChatHash);
+            ClassicAssert.AreEqual(source.Session.UserId, result.UserHash);
+            ClassicAssert.AreEqual(source.Session.SessionId, result.SessionId);
+            ClassicAssert.True(result.NewSession);
         }
 
         [Test]
@@ -81,7 +82,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(text, result.Text);
+            ClassicAssert.AreEqual(text, result.Text);
         }
 
         [Test]
@@ -100,8 +101,8 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(source.Meta.Locale, result.Language);
-            Assert.AreEqual(source.Meta.ClientId, result.ClientId);
+            ClassicAssert.AreEqual(source.Meta.Locale, result.Language);
+            ClassicAssert.AreEqual(source.Meta.ClientId, result.ClientId);
         }
 
         [Test]
@@ -119,7 +120,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToRequest();
 
 
-            Assert.True(result.HasScreen);
+            ClassicAssert.True(result.HasScreen);
         }
 
         [Test]
@@ -137,7 +138,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToRequest();
 
 
-            Assert.False(result.HasScreen);
+            ClassicAssert.False(result.HasScreen);
         }
 
         #endregion ToRequest
@@ -152,7 +153,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = source.ToResponse();
 
-            Assert.Null(result);
+            ClassicAssert.Null(result);
         }
 
         [Test]
@@ -169,9 +170,9 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToResponse();
 
 
-            Assert.AreEqual("Текст", result.Text);
-            Assert.AreEqual("Озвучка", result.Tts);
-            Assert.True(result.EndSession);
+            ClassicAssert.AreEqual("Текст", result.Text);
+            ClassicAssert.AreEqual("Озвучка", result.Tts);
+            ClassicAssert.True(result.EndSession);
         }
 
         [Test]
@@ -187,8 +188,8 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToResponse();
 
 
-            Assert.AreEqual("Первая\nВторая", result.Text);
-            Assert.AreEqual("Первая\nВторая", result.Tts);
+            ClassicAssert.AreEqual("Первая\nВторая", result.Text);
+            ClassicAssert.AreEqual("Первая\nВторая", result.Tts);
         }
 
         [Test]
@@ -200,7 +201,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToResponse();
 
 
-            Assert.Null(result.Buttons);
+            ClassicAssert.Null(result.Buttons);
         }
 
         #endregion ToResponse
@@ -215,7 +216,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = source.ToResponseButtons();
 
-            Assert.Null(result);
+            ClassicAssert.Null(result);
         }
 
         [Test]
@@ -232,9 +233,9 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
 
             var button = result.Single();
 
-            Assert.AreEqual("Быстрый", button.Title);
-            Assert.True(button.Hide);
-            Assert.Null(button.Url);
+            ClassicAssert.AreEqual("Быстрый", button.Title);
+            ClassicAssert.True(button.Hide);
+            ClassicAssert.Null(button.Url);
         }
 
         [Test]
@@ -251,8 +252,8 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToResponseButtons();
 
 
-            Assert.AreEqual(url, result.Single().Url);
-            Assert.False(result.Single().Hide);
+            ClassicAssert.AreEqual(url, result.Single().Url);
+            ClassicAssert.False(result.Single().Hide);
         }
 
         [Test]
@@ -267,7 +268,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToResponseButtons();
 
 
-            Assert.Null(result.Single().Url);
+            ClassicAssert.Null(result.Single().Url);
         }
 
         #endregion ToResponseButtons
@@ -287,8 +288,8 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.ToOutput();
 
 
-            Assert.AreEqual(source.Text, result.Response.Text);
-            Assert.AreEqual(source.UserHash, result.Session.UserId);
+            ClassicAssert.AreEqual(source.Text, result.Response.Text);
+            ClassicAssert.AreEqual(source.UserHash, result.Session.UserId);
         }
 
         [Test]
@@ -306,8 +307,8 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.FillOutput(destination);
 
 
-            Assert.AreEqual(source.Session.SessionId, result.Session.SessionId);
-            Assert.AreEqual(source.Version, result.Version);
+            ClassicAssert.AreEqual(source.Session.SessionId, result.Session.SessionId);
+            ClassicAssert.AreEqual(source.Version, result.Version);
         }
 
         [Test]
@@ -319,7 +320,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = source.FillOutput(null);
 
 
-            Assert.Null(result);
+            ClassicAssert.Null(result);
         }
 
         [Test]
@@ -330,7 +331,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = source.FillOutput(new OutputModel());
 
-            Assert.Null(result);
+            ClassicAssert.Null(result);
         }
 
         #endregion ToOutput и FillOutput
