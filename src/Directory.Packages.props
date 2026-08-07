@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup Label="Логирование">
-    <PackageVersion Include="NLog.Web.AspNetCore" Version="5.5.0" />
+    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.1.4" />
   </ItemGroup>
 
   <ItemGroup Label="Телеметрия">
