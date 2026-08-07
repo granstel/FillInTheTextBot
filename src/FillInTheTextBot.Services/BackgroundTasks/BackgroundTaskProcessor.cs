@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
@@ -9,9 +11,10 @@ namespace FillInTheTextBot.Services.BackgroundTasks
     public sealed class BackgroundTaskProcessor : BackgroundService
     {
         /// <summary>
-        /// Работы в очереди независимы, поэтому выполняются параллельно — как это было
-        /// с прежним fire-and-forget. Ограничение не даёт при всплеске открыть
-        /// неограниченное число обращений к Redis и Dialogflow.
+        /// Сколько работ выполняется одновременно. Прежний fire-and-forget запускал их
+        /// без ограничений, и медленная работа не задерживала остальные — это свойство
+        /// нужно сохранить. Ограничение не даёт при всплеске открыть неограниченное
+        /// число обращений к Redis и Dialogflow.
         /// </summary>
         public const int MaxDegreeOfParallelism = 4;
 
@@ -24,14 +27,9 @@ namespace FillInTheTextBot.Services.BackgroundTasks
             _log = log;
         }
 
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            var options = new ParallelOptions { MaxDegreeOfParallelism = MaxDegreeOfParallelism };
-
-            // Чтение намеренно не отменяется по stoppingToken: цикл заканчивается, когда
-            // очередь закрыта на запись и разобрана. Так при остановке приложения уже
-            // принятые работы доводятся до конца, а не теряются
-            await Parallel.ForEachAsync(_queue.ReadAllAsync(), options, (task, _) => ExecuteTaskAsync(task));
+            return DrainAsync();
         }
 
         public override async Task StopAsync(CancellationToken cancellationToken)
@@ -39,9 +37,40 @@ namespace FillInTheTextBot.Services.BackgroundTasks
             _queue.Complete();
 
             await base.StopAsync(cancellationToken);
+
+            // BackgroundService запускает ExecuteAsync отложенно, и при остановке вскоре
+            // после старта задача отменяется до входа в тело метода — тогда очередь никто
+            // не разобрал. Поэтому остаток добирается здесь, независимо от того,
+            // успел ли стартовать основной цикл.
+            await DrainAsync();
         }
 
-        private async ValueTask ExecuteTaskAsync(BackgroundTask task)
+        private Task DrainAsync()
+        {
+            // Несколько независимых потребителей одного канала. Parallel.ForEachAsync здесь
+            // не подходит: при остановке его задача завершается как отменённая, не дочитав
+            // очередь, и принятые работы теряются.
+            var consumers = Enumerable
+                .Range(0, MaxDegreeOfParallelism)
+                .Select(_ => ConsumeAsync());
+
+            return Task.WhenAll(consumers);
+        }
+
+        /// <summary>
+        /// Читает очередь, пока она не закрыта на запись и не разобрана. Отмена по
+        /// stoppingToken намеренно не используется: при остановке приложения уже принятые
+        /// работы должны быть доведены до конца, а не потеряны вместе с процессом.
+        /// </summary>
+        private async Task ConsumeAsync()
+        {
+            await foreach (var task in _queue.ReadAllAsync())
+            {
+                await ExecuteTaskAsync(task);
+            }
+        }
+
+        private async Task ExecuteTaskAsync(BackgroundTask task)
         {
             try
             {

@@ -102,6 +102,41 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
         }
 
         [Test]
+        public async Task Enqueue_WorkBehindSlowOne_NotBlocked()
+        {
+            // Прежний fire-and-forget выполнял работы одновременно, и медленная не
+            // задерживала остальные. Это свойство должно сохраняться
+            var slowStarted = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+            var slowFinish = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+            var fastExecuted = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+
+            await _target.StartAsync(CancellationToken.None);
+
+            _queue.Enqueue("медленная", () =>
+            {
+                slowStarted.TrySetResult(true);
+                return slowFinish.Task;
+            });
+
+            await slowStarted.Task;
+
+            _queue.Enqueue("быстрая", () =>
+            {
+                fastExecuted.TrySetResult(true);
+                return Task.CompletedTask;
+            });
+
+
+            var completed = await Task.WhenAny(fastExecuted.Task, Task.Delay(5000));
+
+
+            slowFinish.TrySetResult(true);
+
+            ClassicAssert.AreSame(fastExecuted.Task, completed,
+                "Быстрая работа не должна ждать завершения медленной");
+        }
+
+        [Test]
         public async Task StopAsync_PendingWork_Executed()
         {
             var executed = new TaskCompletionSource<bool>();
