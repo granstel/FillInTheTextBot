@@ -13,8 +13,13 @@ using NLog.Web;
 
 namespace FillInTheTextBot.Api
 {
-    public static class Program
+    // Не static: тип используется как параметр WebApplicationFactory в интеграционных тестах
+    public class Program
     {
+        private Program()
+        {
+        }
+
         public static void Main(string[] args)
         {
             var app = BuildApplication(args);
