@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using NLog.Web;
 using System.Linq;
 using System.Reflection;
+using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.Configuration;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using NLog.Web;
 
 namespace FillInTheTextBot.Api
 {
@@ -13,36 +17,63 @@ namespace FillInTheTextBot.Api
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            var app = BuildApplication(args);
+
+            app.Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args)
+        public static WebApplication BuildApplication(string[] args)
         {
-            var builder = WebHost.CreateDefaultBuilder(args);
+            var builder = WebApplication.CreateBuilder(WithHostingStartupAssemblies(args));
 
-            var hostingStartupAssemblies = builder.GetSetting(WebHostDefaults.HostingStartupAssembliesKey) ?? string.Empty;
-            var hostingStartupAssembliesList = hostingStartupAssemblies.Split(';');
+            builder.Host.UseNLog();
 
-            var names = GetAssembliesNames();
-            var fullList = hostingStartupAssembliesList.Concat(names).Distinct().ToList();
-            var concatenatedNames = string.Join(';', fullList);
+            var startup = new Startup(builder.Configuration);
+            startup.ConfigureServices(builder.Services);
 
-            var host = builder
-                .UseSetting(WebHostDefaults.HostingStartupAssembliesKey, concatenatedNames)
-                .UseStartup<Startup>()
-                .UseNLog()
-                .Build();
+            var app = builder.Build();
 
-            return host;
+            // Статические мапперы берут логгер отсюда, поэтому фабрику нужно выставить
+            // до того, как приложение начнёт принимать запросы
+            InternalLoggerFactory.Factory = app.Services.GetRequiredService<ILoggerFactory>();
+
+            var configuration = app.Services.GetRequiredService<AppConfiguration>();
+            startup.Configure(app, configuration);
+
+            return app;
+        }
+
+        /// <summary>
+        /// Каждый мессенджер регистрирует себя через IHostingStartup, поэтому список сборок
+        /// нужно передать до создания билдера — в момент его создания хост уже выполняет
+        /// hosting startup'ы, и более поздний UseSetting на них не влияет.
+        /// </summary>
+        private static string[] WithHostingStartupAssemblies(string[] args)
+        {
+            var assembliesNames = GetAssembliesNames();
+
+            if (assembliesNames.Count == 0)
+            {
+                return args;
+            }
+
+            var names = string.Join(';', assembliesNames);
+
+            var extendedArgs = args
+                .Concat(new[] { $"--{WebHostDefaults.HostingStartupAssembliesKey}={names}" })
+                .ToArray();
+
+            return extendedArgs;
         }
 
         private static ICollection<string> GetAssembliesNames()
         {
-            var callingAssemble = Assembly.GetCallingAssembly();
+            var assembly = typeof(Program).Assembly;
 
-            var names = callingAssemble.GetCustomAttributes<ApplicationPartAttribute>()
+            var names = assembly.GetCustomAttributes<ApplicationPartAttribute>()
                 .Where(a => a.AssemblyName.Contains("FillInTheTextBot", StringComparison.InvariantCultureIgnoreCase))
-                .Select(a => a.AssemblyName).ToList();
+                .Select(a => a.AssemblyName)
+                .ToList();
 
             return names;
         }

@@ -4,7 +4,6 @@ using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using FillInTheTextBot.Api.DI;
@@ -16,10 +15,9 @@ namespace FillInTheTextBot.Api
     {
         private readonly IConfiguration _configuration;
 
-        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
+        public Startup(IConfiguration configuration)
         {
             _configuration = configuration;
-            InternalLoggerFactory.Factory = loggerFactory;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
