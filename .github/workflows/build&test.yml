@@ -18,4 +18,4 @@ jobs:
       with:
         dotnet-version: 10.0.x
     - name: Build and test
-      run: dotnet test --verbosity normal src/FillInTheTextBot.sln
+      run: dotnet test --verbosity normal src/FillInTheTextBot.slnx
