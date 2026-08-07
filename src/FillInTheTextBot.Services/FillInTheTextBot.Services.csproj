@@ -11,8 +11,6 @@
     <PackageReference Include="GranSteL.Tools.ScopeSelector" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
     <PackageReference Include="Newtonsoft.Json" />
-    <PackageReference Include="OpenTracing" />
-    <PackageReference Include="prometheus-net" />
     <PackageReference Include="StackExchange.Redis" />
   </ItemGroup>
 

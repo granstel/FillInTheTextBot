@@ -18,12 +18,13 @@
   </ItemGroup>
 
   <ItemGroup Label="Телеметрия">
-    <PackageVersion Include="Jaeger" Version="1.0.3" />
-    <PackageVersion Include="OpenTracing" Version="0.12.1" />
-    <PackageVersion Include="OpenTracing.Contrib.NetCore" Version="0.8.0" />
-    <PackageVersion Include="prometheus-net" Version="7.0.0" />
-    <PackageVersion Include="prometheus-net.AspNetCore" Version="7.0.0" />
-    <PackageVersion Include="prometheus-net.AspNetCore.Grpc" Version="7.0.0" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.17.0" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.17.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.17.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.17.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.17.0" />
+    <!-- Экспортёр Prometheus у OpenTelemetry до сих пор выходит только в prerelease -->
+    <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.17.0-beta.1" />
   </ItemGroup>
 
   <ItemGroup Label="Dialogflow и Redis">
