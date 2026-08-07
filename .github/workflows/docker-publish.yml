@@ -1,16 +1,32 @@
 name: Docker publish
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+concurrency:
+  # Раскатки не должны идти параллельно: две одновременные сломают порядок замены экземпляров
+  group: deploy-production
+  cancel-in-progress: false
 
 jobs:
-  build-and-push:
+  publish:
     runs-on: ubuntu-latest
+
+    outputs:
+      version: ${{ steps.version.outputs.value }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Read version
+        id: version
+        run: |
+          version=$(grep -oPm1 '(?<=<Version>)[^<]+' src/FillInTheTextBot.Api/FillInTheTextBot.Api.csproj)
+          echo "value=${version}" >> "$GITHUB_OUTPUT"
+          echo "Version: ${version}"
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -25,5 +41,23 @@ jobs:
           file: ./src/FillInTheTextBot.Api/Dockerfile
           push: true
           tags: |
-            granstel/fillinthetextbot:${{ github.event.release.tag_name }}
+            granstel/fillinthetextbot:${{ steps.version.outputs.value }}
+            granstel/fillinthetextbot:${{ github.sha }}
             granstel/fillinthetextbot:latest
+
+  deploy:
+    needs: publish
+    runs-on: ubuntu-latest
+    # Шаг пропускается, пока не заданы секреты доступа к серверу
+    if: ${{ vars.DEPLOY_ENABLED == 'true' }}
+
+    steps:
+      - name: Rollout on server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            cd ${{ secrets.DEPLOY_PATH }}
+            ./rollout.sh ${{ needs.publish.outputs.version }}
