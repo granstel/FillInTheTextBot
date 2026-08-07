@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using FillInTheTextBot.Services;
-using FillInTheTextBot.Services.Extensions;
+using FillInTheTextBot.Services.BackgroundTasks;
 using GranSteL.Helpers.Redis;
 using MailRu.Marusia.Models;
 using MailRu.Marusia.Models.Input;
@@ -15,13 +15,16 @@ namespace FillInTheTextBot.Messengers.Marusia
         private const string PongResponse = "pong";
 
         private readonly IRedisCacheService _cache;
+        private readonly IBackgroundTaskQueue _backgroundTasks;
 
         public MarusiaService(
             ILogger<MarusiaService> log,
             IConversationService conversationService,
-            IRedisCacheService cache) : base(log, conversationService)
+            IRedisCacheService cache,
+            IBackgroundTaskQueue backgroundTasks) : base(log, conversationService)
         {
             _cache = cache;
+            _backgroundTasks = backgroundTasks;
         }
 
         protected override Models.Request Before(InputModel input)
@@ -67,7 +70,10 @@ namespace FillInTheTextBot.Messengers.Marusia
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 
-            _cache.AddAsync($"marusia:{input.Session?.UserId}", string.Empty, TimeSpan.FromDays(14)).Forget();
+            var cacheKey = $"marusia:{input.Session?.UserId}";
+
+            _backgroundTasks.Enqueue("marusia user mark",
+                () => _cache.AddAsync(cacheKey, string.Empty, TimeSpan.FromDays(14)));
 
             return Task.FromResult(output);
         }

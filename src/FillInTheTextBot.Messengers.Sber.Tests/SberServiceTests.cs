@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using AutoFixture;
+using FillInTheTextBot.Services.BackgroundTasks;
 using GranSteL.Helpers.Redis;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -21,6 +22,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
     {
         private Mock<Services.IConversationService> _conversationService;
         private Mock<IRedisCacheService> _cache;
+        private Mock<IBackgroundTaskQueue> _backgroundTasks;
 
         private SberService _target;
 
@@ -32,7 +34,18 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             _conversationService = new Mock<Services.IConversationService>();
             _cache = new Mock<IRedisCacheService>();
 
-            _target = new SberService(Mock.Of<ILogger<SberService>>(), _conversationService.Object, _cache.Object);
+            _backgroundTasks = new Mock<IBackgroundTaskQueue>();
+
+            // Фоновые работы выполняются сразу, чтобы тест проверял результат, а не гонку
+            _backgroundTasks
+                .Setup(q => q.Enqueue(It.IsAny<string>(), It.IsAny<Func<Task>>()))
+                .Returns((string _, Func<Task> work) =>
+                {
+                    work().GetAwaiter().GetResult();
+                    return true;
+                });
+
+            _target = new SberService(Mock.Of<ILogger<SberService>>(), _conversationService.Object, _cache.Object, _backgroundTasks.Object);
 
             _fixture = new Fixture { OmitAutoProperties = true };
         }

@@ -2,7 +2,9 @@
 using System.Linq;
 using System.Threading.Tasks;
 using AutoFixture;
+using System;
 using FillInTheTextBot.Models;
+using FillInTheTextBot.Services.BackgroundTasks;
 using FillInTheTextBot.Services.Configuration;
 using GranSteL.Helpers.Redis;
 using Moq;
@@ -20,6 +22,7 @@ namespace FillInTheTextBot.Services.Tests
     {
         private Mock<IDialogflowService> _dialogflowService;
         private Mock<IRedisCacheService> _cache;
+        private Mock<IBackgroundTaskQueue> _backgroundTasks;
 
         private ConversationConfiguration _configuration;
 
@@ -33,9 +36,20 @@ namespace FillInTheTextBot.Services.Tests
             _dialogflowService = new Mock<IDialogflowService>();
             _cache = new Mock<IRedisCacheService>();
 
+            _backgroundTasks = new Mock<IBackgroundTaskQueue>();
+
+            // Фоновые работы выполняются сразу, чтобы тест проверял результат, а не гонку
+            _backgroundTasks
+                .Setup(q => q.Enqueue(It.IsAny<string>(), It.IsAny<Func<Task>>()))
+                .Returns((string _, Func<Task> work) =>
+                {
+                    work().GetAwaiter().GetResult();
+                    return true;
+                });
+
             _configuration = new ConversationConfiguration();
 
-            _target = new ConversationService(_configuration, _dialogflowService.Object, _cache.Object);
+            _target = new ConversationService(_configuration, _dialogflowService.Object, _cache.Object, _backgroundTasks.Object);
 
             _fixture = new Fixture { OmitAutoProperties = true };
         }

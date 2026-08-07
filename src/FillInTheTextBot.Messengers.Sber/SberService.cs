@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using FillInTheTextBot.Services;
-using FillInTheTextBot.Services.Extensions;
+using FillInTheTextBot.Services.BackgroundTasks;
 using GranSteL.Helpers.Redis;
 using Microsoft.Extensions.Logging;
 using Sber.SmartApp.Models;
@@ -12,13 +12,16 @@ namespace FillInTheTextBot.Messengers.Sber
     public class SberService : MessengerService<Request, Response>, ISberService
     {
         private readonly IRedisCacheService _cache;
+        private readonly IBackgroundTaskQueue _backgroundTasks;
 
         public SberService(
             ILogger<SberService> log,
             IConversationService conversationService,
-            IRedisCacheService cache) : base(log, conversationService)
+            IRedisCacheService cache,
+            IBackgroundTaskQueue backgroundTasks) : base(log, conversationService)
         {
             _cache = cache;
+            _backgroundTasks = backgroundTasks;
         }
 
         protected override Models.Request Before(Request input)
@@ -76,7 +79,10 @@ namespace FillInTheTextBot.Messengers.Sber
             {
                 sessionId = Guid.NewGuid().ToString("N");
 
-                _cache.AddAsync(cacheKey, sessionId, TimeSpan.FromMinutes(5)).Forget();
+                var newSessionId = sessionId;
+
+                _backgroundTasks.Enqueue("sber session",
+                    () => _cache.AddAsync(cacheKey, newSessionId, TimeSpan.FromMinutes(5)));
             }
 
             return sessionId;
