@@ -8,12 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jaeger" Version="1.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.36" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="5.5.0" />
-    <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.8.0" />
-    <PackageReference Include="prometheus-net.AspNetCore" Version="7.0.0" />
-    <PackageReference Include="prometheus-net.AspNetCore.Grpc" Version="7.0.0" />
+    <PackageReference Include="Jaeger" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <PackageReference Include="NLog.Web.AspNetCore" />
+    <PackageReference Include="OpenTracing.Contrib.NetCore" />
+    <PackageReference Include="prometheus-net.AspNetCore" />
+    <PackageReference Include="prometheus-net.AspNetCore.Grpc" />
   </ItemGroup>
 
   <ItemGroup>
