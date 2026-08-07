@@ -65,7 +65,7 @@ namespace FillInTheTextBot.Api.DI
         private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
         {
             context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out string jsonPath);
-            var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(SessionsClient.DefaultScopes);
+            var credential = LoadServiceAccountCredential(jsonPath, SessionsClient.DefaultScopes);
 
             var endpoint = GetEndpoint(context, SessionsClient.DefaultEndpoint);
 
@@ -94,7 +94,7 @@ namespace FillInTheTextBot.Api.DI
         private static ContextsClient CreateDialogflowContextsClient(ScopeContext context)
         {
             context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out string jsonPath);
-            var credential = GoogleCredential.FromFile(jsonPath).CreateScoped(ContextsClient.DefaultScopes);
+            var credential = LoadServiceAccountCredential(jsonPath, ContextsClient.DefaultScopes);
 
             var endpoint = GetEndpoint(context, ContextsClient.DefaultEndpoint);
 
@@ -107,6 +107,20 @@ namespace FillInTheTextBot.Api.DI
             var client = clientBuilder.Build();
 
             return client;
+        }
+
+        /// <summary>
+        /// GoogleCredential.FromFile объявлен устаревшим: он определяет тип учётных данных
+        /// по содержимому файла, из-за чего подменённый файл может увести аутентификацию
+        /// на другой механизм. CredentialFactory требует указать тип явно.
+        /// </summary>
+        private static GoogleCredential LoadServiceAccountCredential(string jsonPath, IEnumerable<string> scopes)
+        {
+            var serviceAccountCredential = CredentialFactory.FromFile<ServiceAccountCredential>(jsonPath);
+
+            var credential = serviceAccountCredential.ToGoogleCredential().CreateScoped(scopes);
+
+            return credential;
         }
 
         private static string GetEndpoint(ScopeContext context, string defaultEndpoint)
