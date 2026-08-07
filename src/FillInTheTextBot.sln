@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FillInTheTextBot.Messengers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Sber.Tests", "FillInTheTextBot.Messengers.Sber.Tests\FillInTheTextBot.Messengers.Sber.Tests.csproj", "{1FBAF882-BD88-454B-8987-CA81369E2731}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillInTheTextBot.Messengers.Marusia.Tests", "FillInTheTextBot.Messengers.Marusia.Tests\FillInTheTextBot.Messengers.Marusia.Tests.csproj", "{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,18 @@ Global
 		{1FBAF882-BD88-454B-8987-CA81369E2731}.Release|x64.Build.0 = Release|Any CPU
 		{1FBAF882-BD88-454B-8987-CA81369E2731}.Release|x86.ActiveCfg = Release|Any CPU
 		{1FBAF882-BD88-454B-8987-CA81369E2731}.Release|x86.Build.0 = Release|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Debug|x64.Build.0 = Debug|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Debug|x86.Build.0 = Debug|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Release|x64.ActiveCfg = Release|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Release|x64.Build.0 = Release|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9A8CCF2-862A-4596-8B69-BA1435E4C1D7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
