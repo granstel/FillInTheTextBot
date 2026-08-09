@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup Label="Логирование">
-    <PackageVersion Include="NLog.Web.AspNetCore" Version="5.5.0" />
+    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.1.4" />
   </ItemGroup>
 
   <ItemGroup Label="Телеметрия">
@@ -30,7 +30,7 @@
     <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.31.0" />
     <PackageVersion Include="GranSteL.Helpers.Redis" Version="1.1.0" />
     <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
-    <PackageVersion Include="StackExchange.Redis" Version="2.12.14" />
+    <PackageVersion Include="StackExchange.Redis" Version="3.1.13" />
   </ItemGroup>
 
   <ItemGroup Label="Модели голосовых площадок">
