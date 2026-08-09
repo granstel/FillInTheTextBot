@@ -10,7 +10,7 @@ namespace FillInTheTextBot.Services
         /// Имя источника активностей. Его нужно передать в AddSource при настройке
         /// OpenTelemetry, иначе активности будут создаваться, но никуда не уедут.
         /// </summary>
-        public const string ActivitySourceName = "FillInTheTextBot";
+        public const string ActivitySourceName = Telemetry.ScopeName;
 
         private static readonly ActivitySource ActivitySource = new(ActivitySourceName);
 
