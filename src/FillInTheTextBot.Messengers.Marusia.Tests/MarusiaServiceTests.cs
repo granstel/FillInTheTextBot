@@ -9,7 +9,6 @@ using MailRu.Marusia.Models.Input;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
-using NUnit.Framework.Legacy;
 using InternalModels = FillInTheTextBot.Models;
 
 namespace FillInTheTextBot.Messengers.Marusia.Tests
@@ -84,9 +83,9 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             await _target.ProcessIncomingAsync(input);
 
 
-            ClassicAssert.True(captured.IsOldUser);
-            ClassicAssert.AreEqual(4, captured.NextTextIndex);
-            ClassicAssert.AreEqual(scopeKey, captured.ScopeKey);
+            Assert.That(captured.IsOldUser, Is.True);
+            Assert.That(captured.NextTextIndex, Is.EqualTo(4));
+            Assert.That(captured.ScopeKey, Is.EqualTo(scopeKey));
         }
 
         [Test]
@@ -105,9 +104,9 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             await _target.ProcessIncomingAsync(input);
 
 
-            ClassicAssert.False(captured.IsOldUser);
-            ClassicAssert.AreEqual(0, captured.NextTextIndex);
-            ClassicAssert.Null(captured.ScopeKey);
+            Assert.That(captured.IsOldUser, Is.False);
+            Assert.That(captured.NextTextIndex, Is.EqualTo(0));
+            Assert.That(captured.ScopeKey, Is.Null);
         }
 
         #endregion Before: состояние пользователя и сессии
@@ -123,7 +122,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = await _target.ProcessIncomingAsync(input);
 
 
-            ClassicAssert.AreEqual("pong", result.Response.Text);
+            Assert.That(result.Response.Text, Is.EqualTo("pong"));
             _conversationService.Verify(s => s.GetResponseAsync(It.IsAny<InternalModels.Request>()), Times.Never);
         }
 
@@ -136,7 +135,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = await _target.ProcessIncomingAsync(input);
 
 
-            ClassicAssert.AreEqual("pong", result.Response.Text);
+            Assert.That(result.Response.Text, Is.EqualTo("pong"));
         }
 
         [Test]
@@ -154,7 +153,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = await _target.ProcessIncomingAsync(input);
 
 
-            ClassicAssert.AreEqual(response.Text, result.Response.Text);
+            Assert.That(result.Response.Text, Is.EqualTo(response.Text));
         }
 
         #endregion Команда ping
@@ -180,9 +179,9 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = await _target.ProcessIncomingAsync(input);
 
 
-            ClassicAssert.AreEqual(true, result.UserStateUpdate[InternalModels.Request.IsOldUserKey]);
-            ClassicAssert.AreEqual(6, result.UserStateUpdate[InternalModels.Response.NextTextIndexStorageKey]);
-            ClassicAssert.AreEqual(response.ScopeKey, result.SessionState[InternalModels.Response.ScopeStorageKey]);
+            Assert.That(result.UserStateUpdate[InternalModels.Request.IsOldUserKey], Is.EqualTo(true));
+            Assert.That(result.UserStateUpdate[InternalModels.Response.NextTextIndexStorageKey], Is.EqualTo(6));
+            Assert.That(result.SessionState[InternalModels.Response.ScopeStorageKey], Is.EqualTo(response.ScopeKey));
         }
 
         [Test]
@@ -220,8 +219,8 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var result = await _target.ProcessIncomingAsync(input);
 
 
-            ClassicAssert.AreEqual(input.Version, result.Version);
-            ClassicAssert.AreEqual(input.Session.UserId, result.Session.UserId);
+            Assert.That(result.Version, Is.EqualTo(input.Version));
+            Assert.That(result.Session.UserId, Is.EqualTo(input.Session.UserId));
         }
 
         #endregion AfterAsync
