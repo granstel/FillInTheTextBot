@@ -2,7 +2,6 @@
 using AutoFixture.Kernel;
 using FillInTheTextBot.Models;
 using NUnit.Framework;
-using NUnit.Framework.Legacy;
 using System.Linq;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Buttons;
@@ -32,7 +31,7 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             var result = source.ToRequest();
 
-            ClassicAssert.IsNull(result);
+            Assert.That(result, Is.Null);
         }
 
         [Test]
@@ -42,18 +41,18 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             var result = source.ToRequest();
 
-            ClassicAssert.IsNotNull(result);
+            Assert.That(result, Is.Not.Null);
 
-            ClassicAssert.AreEqual(source.Session.SkillId, result.ChatHash);
-            ClassicAssert.AreEqual(source.Session.UserId, result.UserHash);
-            ClassicAssert.AreEqual(source.Request.OriginalUtterance, result.Text);
-            ClassicAssert.AreEqual(source.Session.SessionId, result.SessionId);
-            ClassicAssert.AreEqual(source.Session.New, result.NewSession);
-            ClassicAssert.AreEqual(source.Meta.Locale, result.Language);
-            ClassicAssert.AreEqual(result.HasScreen, source.Meta.Interfaces.Screen != null);
-            ClassicAssert.AreEqual(result.ClientId, source.Meta.ClientId);
-            ClassicAssert.AreEqual(Source.Yandex, result.Source);
-            ClassicAssert.AreEqual(Appeal.NoOfficial, result.Appeal);
+            Assert.That(result.ChatHash, Is.EqualTo(source.Session.SkillId));
+            Assert.That(result.UserHash, Is.EqualTo(source.Session.UserId));
+            Assert.That(result.Text, Is.EqualTo(source.Request.OriginalUtterance));
+            Assert.That(result.SessionId, Is.EqualTo(source.Session.SessionId));
+            Assert.That(result.NewSession, Is.EqualTo(source.Session.New));
+            Assert.That(result.Language, Is.EqualTo(source.Meta.Locale));
+            Assert.That(source.Meta.Interfaces.Screen != null, Is.EqualTo(result.HasScreen));
+            Assert.That(source.Meta.ClientId, Is.EqualTo(result.ClientId));
+            Assert.That(result.Source, Is.EqualTo(Source.Yandex));
+            Assert.That(result.Appeal, Is.EqualTo(Appeal.NoOfficial));
         }
 
         [Test]
@@ -64,7 +63,7 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             var result = source.FillOutput(destination);
 
-            ClassicAssert.IsNull(result);
+            Assert.That(result, Is.Null);
         }
 
         [Test]
@@ -75,7 +74,7 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             var result = source.FillOutput(destination);
 
-            ClassicAssert.IsNull(result);
+            Assert.That(result, Is.Null);
         }
 
         [Test]
@@ -92,10 +91,10 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
             output = input.FillOutput(output);
 
 
-            ClassicAssert.AreEqual(input.Session.SessionId, output.Session.SessionId);
-            ClassicAssert.AreEqual(input.Session.MessageId, output.Session.MessageId);
-            ClassicAssert.AreEqual(input.Version, output.Version);
-            ClassicAssert.NotNull(output.Response);
+            Assert.That(output.Session.SessionId, Is.EqualTo(input.Session.SessionId));
+            Assert.That(output.Session.MessageId, Is.EqualTo(input.Session.MessageId));
+            Assert.That(output.Version, Is.EqualTo(input.Version));
+            Assert.That(output.Response, Is.Not.Null);
         }
 
         [Test]
@@ -114,8 +113,8 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
             var result = input.ToResponse();
 
 
-            ClassicAssert.NotNull(result?.Buttons);
-            ClassicAssert.AreEqual(buttons.Length, result?.Buttons?.Length);
+            Assert.That(result?.Buttons, Is.Not.Null);
+            Assert.That(result?.Buttons?.Length, Is.EqualTo(buttons.Length));
         }
     }
 }
