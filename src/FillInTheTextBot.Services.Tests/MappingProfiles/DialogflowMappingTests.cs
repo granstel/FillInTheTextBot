@@ -25,13 +25,13 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
             // ReSharper disable once ExpressionIsAlwaysNull
             var dialog = source.ToDialog();
 
-            Assert.IsEmpty(dialog.Parameters);
-            Assert.IsFalse(dialog.EndConversation);
-            Assert.IsTrue(dialog.ParametersIncomplete);
-            Assert.IsNull(dialog.Response);
-            Assert.IsNull(dialog.Action);
-            Assert.IsEmpty(dialog.Buttons);
-            Assert.IsNull(dialog.Payload);
+            Assert.That(dialog.Parameters, Is.Empty);
+            Assert.That(dialog.EndConversation, Is.False);
+            Assert.That(dialog.ParametersIncomplete, Is.True);
+            Assert.That(dialog.Response, Is.Null);
+            Assert.That(dialog.Action, Is.Null);
+            Assert.That(dialog.Buttons, Is.Empty);
+            Assert.That(dialog.Payload, Is.Null);
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.IsEmpty(dialog.Parameters);
+            Assert.That(dialog.Parameters, Is.Empty);
         }
 
         [Test]
@@ -61,9 +61,9 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.IsNotEmpty(dialog.Parameters, "Parameters should not be empty");
-            Assert.True(dialog.Parameters.ContainsKey(key));
-            Assert.True(dialog.Parameters.Values.Contains(value));
+            Assert.That(dialog.Parameters, Is.Not.Empty, "Parameters should not be empty");
+            Assert.That(dialog.Parameters.ContainsKey(key), Is.True);
+            Assert.That(dialog.Parameters.Values.Contains(value), Is.True);
         }
 
         [Test]
@@ -95,9 +95,9 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.IsNotEmpty(dialog.Parameters, "Parameters should not be empty");
-            Assert.True(dialog.Parameters.ContainsKey(key));
-            Assert.True(dialog.Parameters.Values.Contains(string.Join("/", stringValue, anotherStringValue)));
+            Assert.That(dialog.Parameters, Is.Not.Empty, "Parameters should not be empty");
+            Assert.That(dialog.Parameters.ContainsKey(key), Is.True);
+            Assert.That(dialog.Parameters.Values.Contains(string.Join("/", stringValue, anotherStringValue)), Is.True);
         }
 
         [Test]
@@ -112,7 +112,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.AreEqual(fulfillmentText, dialog.Response);
+            Assert.That(dialog.Response, Is.EqualTo(fulfillmentText));
         }
 
         [Test]
@@ -133,10 +133,10 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var result = dialog?.Buttons.FirstOrDefault();
 
-            Assert.IsNotNull(result);
-            Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
-            Assert.AreEqual(quickReplyText, result.Text);
-            Assert.True(result.IsQuickReply);
+            Assert.That(result, Is.Not.Null);
+            Assert.That(dialog.Buttons, Is.Not.Empty, "Buttons should not be empty");
+            Assert.That(result.Text, Is.EqualTo(quickReplyText));
+            Assert.That(result.IsQuickReply, Is.True);
         }
 
         [Test]
@@ -160,10 +160,10 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var result = dialog.Buttons.FirstOrDefault();
 
-            Assert.IsNotNull(result);
-            Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
-            Assert.AreEqual(buttonText, result.Text);
-            Assert.False(result.IsQuickReply);
+            Assert.That(result, Is.Not.Null);
+            Assert.That(dialog.Buttons, Is.Not.Empty, "Buttons should not be empty");
+            Assert.That(result.Text, Is.EqualTo(buttonText));
+            Assert.That(result.IsQuickReply, Is.False);
         }
 
         [Test]
@@ -192,10 +192,10 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.IsNotEmpty(dialog.Buttons, "Buttons should not be empty");
+            Assert.That(dialog.Buttons, Is.Not.Empty, "Buttons should not be empty");
 
             var expectedValues = new[] { quickReplyText, buttonText };
-            Assert.True(dialog.Buttons.Select(b => b.Text).All(t => expectedValues.Contains(t)));
+            Assert.That(dialog.Buttons.Select(b => b.Text).All(t => expectedValues.Contains(t)), Is.True);
         }
 
         [Test]
@@ -208,7 +208,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.AreEqual(!source.AllRequiredParamsPresent, dialog.ParametersIncomplete);
+            Assert.That(dialog.ParametersIncomplete, Is.EqualTo(!source.AllRequiredParamsPresent));
         }
 
         [Test]
@@ -221,7 +221,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.AreEqual(source.Action, dialog.Action);
+            Assert.That(dialog.Action, Is.EqualTo(source.Action));
         }
 
         [Test]
@@ -234,7 +234,7 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             var dialog = source.ToDialog();
 
-            Assert.True(dialog.EndConversation);
+            Assert.That(dialog.EndConversation, Is.True);
         }
     }
 }

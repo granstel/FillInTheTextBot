@@ -48,7 +48,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             Target.OnActionExecuting(context);
 
 
-            Assert.True(context.Result is NotFoundResult);
+            Assert.That(context.Result is NotFoundResult, Is.True);
         }
 
         [Test]
@@ -66,7 +66,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             Target.OnActionExecuting(context);
 
 
-            Assert.Null(context.Result);
+            Assert.That(context.Result, Is.Null);
         }
 
         [Test]
@@ -84,7 +84,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             Target.OnActionExecuting(context);
 
 
-            Assert.Null(context.Result);
+            Assert.That(context.Result, Is.Null);
         }
 
         [Test]
@@ -102,7 +102,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             Target.OnActionExecuting(context);
 
 
-            Assert.Null(context.Result);
+            Assert.That(context.Result, Is.Null);
         }
 
         #endregion OnActionExecuting
@@ -118,7 +118,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             var result = Target.GetInfo();
 
 
-            Assert.True(result.Contains(expected));
+            Assert.That(result.Contains(expected), Is.True);
         }
 
         [Test]
@@ -138,7 +138,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
 
             MockRepository.VerifyAll();
             var value = (result as JsonResult)?.Value;
-            Assert.AreEqual(expected, value);
+            Assert.That(value, Is.EqualTo(expected));
         }
 
         [Test]
@@ -159,7 +159,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             MockRepository.VerifyAll();
 
             var value = (result as JsonResult)?.Value;
-            Assert.AreEqual(expected, value);
+            Assert.That(value, Is.EqualTo(expected));
         }
 
         [Test]
@@ -175,7 +175,7 @@ namespace FillInTheTextBot.Messengers.Tests.Controllers
             MockRepository.VerifyAll();
 
             var value = (result as JsonResult)?.Value;
-            Assert.AreEqual(expected, value);
+            Assert.That(value, Is.EqualTo(expected));
         }
     }
 }

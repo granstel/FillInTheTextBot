@@ -53,7 +53,7 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             _mockRepository.VerifyAll();
 
-            Assert.NotNull(result);
+            Assert.That(result, Is.Not.Null);
         }
     }
 }

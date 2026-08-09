@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using AutoFixture;
 using NUnit.Framework;
@@ -48,7 +48,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = source.ToRequest();
 
-            Assert.Null(result);
+            Assert.That(result, Is.Null);
         }
 
         [Test]
@@ -56,7 +56,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
         {
             var result = new Request().ToRequest();
 
-            Assert.AreEqual(InternalModels.Source.Sber, result.Source);
+            Assert.That(result.Source, Is.EqualTo(InternalModels.Source.Sber));
         }
 
         [Test]
@@ -70,7 +70,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(sub, result.UserHash);
+            Assert.That(result.UserHash, Is.EqualTo(sub));
         }
 
         [Test]
@@ -84,7 +84,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(userId, result.UserHash);
+            Assert.That(result.UserHash, Is.EqualTo(userId));
         }
 
         [Test]
@@ -105,7 +105,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.True(result.HasScreen);
+            Assert.That(result.HasScreen, Is.True);
         }
 
         [Test]
@@ -113,7 +113,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
         {
             var result = new Request().ToRequest();
 
-            Assert.False(result.HasScreen);
+            Assert.That(result.HasScreen, Is.False);
         }
 
         [Test]
@@ -127,7 +127,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(surface, result.ClientId);
+            Assert.That(result.ClientId, Is.EqualTo(surface));
         }
 
         [Test]
@@ -139,7 +139,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(InternalModels.Appeal.Official, result.Appeal);
+            Assert.That(result.Appeal, Is.EqualTo(InternalModels.Appeal.Official));
         }
 
         [Test]
@@ -147,7 +147,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
         {
             var result = new Request().ToRequest();
 
-            Assert.AreEqual(InternalModels.Appeal.NoOfficial, result.Appeal);
+            Assert.That(result.Appeal, Is.EqualTo(InternalModels.Appeal.NoOfficial));
         }
 
         [Test]
@@ -159,7 +159,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(InternalModels.Appeal.NoOfficial, result.Appeal);
+            Assert.That(result.Appeal, Is.EqualTo(InternalModels.Appeal.NoOfficial));
         }
 
         #endregion ToRequest
@@ -173,7 +173,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
 
             var result = CreateRequest(text).ToRequest();
 
-            Assert.AreEqual(text, result.Text);
+            Assert.That(result.Text, Is.EqualTo(text));
         }
 
         [Test]
@@ -186,7 +186,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual("event:rating_result", result.Text);
+            Assert.That(result.Text, Is.EqualTo("event:rating_result"));
         }
 
         [Test]
@@ -198,7 +198,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual("какое-то кое-что слово", result.Text);
+            Assert.That(result.Text, Is.EqualTo("какое-то кое-что слово"));
         }
 
         [Test]
@@ -218,7 +218,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual("кое-что", result.Text);
+            Assert.That(result.Text, Is.EqualTo("кое-что"));
         }
 
         [Test]
@@ -240,7 +240,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(text, result.Text);
+            Assert.That(result.Text, Is.EqualTo(text));
         }
 
         [Test]
@@ -262,7 +262,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToRequest();
 
 
-            Assert.AreEqual(text, result.Text);
+            Assert.That(result.Text, Is.EqualTo(text));
         }
 
         #endregion ToRequest: текст запроса
@@ -277,7 +277,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = source.ToResponse();
 
-            Assert.Null(result);
+            Assert.That(result, Is.Null);
         }
 
         [Test]
@@ -289,7 +289,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToResponse();
 
 
-            Assert.AreEqual(MessageNameValues.AnswerToUser, result.MessageName);
+            Assert.That(result.MessageName, Is.EqualTo(MessageNameValues.AnswerToUser));
         }
 
         [Test]
@@ -301,7 +301,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToResponse();
 
 
-            Assert.AreEqual("CALL_RATING", result.MessageName);
+            Assert.That(result.MessageName, Is.EqualTo("CALL_RATING"));
         }
 
         [Test]
@@ -318,9 +318,9 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToResponse();
 
 
-            Assert.AreEqual("Текст для озвучки", result.Payload.PronounceText);
-            Assert.AreEqual(PronounceTextTypeValues.Ssml, result.Payload.PronounceTextType);
-            Assert.AreEqual("Текст на экран", result.Payload.Items.Single().Bubble.Text);
+            Assert.That(result.Payload.PronounceText, Is.EqualTo("Текст для озвучки"));
+            Assert.That(result.Payload.PronounceTextType, Is.EqualTo(PronounceTextTypeValues.Ssml));
+            Assert.That(result.Payload.Items.Single().Bubble.Text, Is.EqualTo("Текст на экран"));
         }
 
         [Test]
@@ -332,8 +332,8 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToResponse();
 
 
-            Assert.True(result.Payload.AutoListening);
-            Assert.False(result.Payload.Finished);
+            Assert.That(result.Payload.AutoListening, Is.True);
+            Assert.That(result.Payload.Finished, Is.False);
         }
 
         [Test]
@@ -345,8 +345,8 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToResponse();
 
 
-            Assert.False(result.Payload.AutoListening);
-            Assert.True(result.Payload.Finished);
+            Assert.That(result.Payload.AutoListening, Is.False);
+            Assert.That(result.Payload.Finished, Is.True);
         }
 
         [Test]
@@ -359,7 +359,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToResponse();
 
 
-            Assert.AreEqual("radost", result.Payload.Emotion.EmotionId);
+            Assert.That(result.Payload.Emotion.EmotionId, Is.EqualTo("radost"));
         }
 
         [Test]
@@ -371,7 +371,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.ToResponse();
 
 
-            Assert.Null(result.Payload.Emotion);
+            Assert.That(result.Payload.Emotion, Is.Null);
         }
 
         #endregion ToResponse
@@ -395,8 +395,8 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
 
             var button = result.Payload.Suggestions.Buttons.Single();
 
-            Assert.AreEqual("Быстрый ответ", button.Title);
-            Assert.AreEqual(ActionTypeValues.Text, button.Action.Type);
+            Assert.That(button.Title, Is.EqualTo("Быстрый ответ"));
+            Assert.That(button.Action.Type, Is.EqualTo(ActionTypeValues.Text));
         }
 
         [Test]
@@ -418,8 +418,8 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
 
             var action = result.Payload.Suggestions.Buttons.Single().Action;
 
-            Assert.AreEqual(ActionTypeValues.DeepLink, action.Type);
-            Assert.AreEqual(url, action.DeepLink);
+            Assert.That(action.Type, Is.EqualTo(ActionTypeValues.DeepLink));
+            Assert.That(action.DeepLink, Is.EqualTo(url));
         }
 
         [Test]
@@ -441,10 +441,10 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
 
             var card = result.Payload.Items.Single().Card;
 
-            Assert.AreEqual(CardTypeValues.GridCard, card.Type);
-            Assert.AreEqual(2, card.Columns);
-            CollectionAssert.AreEqual(new[] { "Первая", "Вторая" }, card.Items.Select(i => i.BottomText.Text));
-            Assert.IsEmpty(result.Payload.Suggestions.Buttons);
+            Assert.That(card.Type, Is.EqualTo(CardTypeValues.GridCard));
+            Assert.That(card.Columns, Is.EqualTo(2));
+            Assert.That(card.Items.Select(i => i.BottomText.Text), Is.EqualTo(new[] { "Первая", "Вторая" }));
+            Assert.That(result.Payload.Suggestions.Buttons, Is.Empty);
         }
 
         [Test]
@@ -459,8 +459,8 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             // PayloadItem создаёт пустую карточку сам, маппинг её не заполняет
             var card = result.Payload.Items.Single().Card;
 
-            Assert.Null(card.Type);
-            Assert.True(card.Items == null || card.Items.Length == 0);
+            Assert.That(card.Type, Is.Null);
+            Assert.That(card.Items == null || card.Items.Length == 0, Is.True);
         }
 
         #endregion ToResponse: кнопки
@@ -475,7 +475,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             // ReSharper disable once ExpressionIsAlwaysNull
             var result = source.FillResponse(new Response());
 
-            Assert.Null(result);
+            Assert.That(result, Is.Null);
         }
 
         [Test]
@@ -497,10 +497,10 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.FillResponse(destination);
 
 
-            Assert.AreEqual(source.SessionId, result.SessionId);
-            Assert.AreEqual(source.MessageId, result.MessageId);
-            Assert.AreSame(source.Uuid, result.Uuid);
-            Assert.AreSame(device, result.Payload.Device);
+            Assert.That(result.SessionId, Is.EqualTo(source.SessionId));
+            Assert.That(result.MessageId, Is.EqualTo(source.MessageId));
+            Assert.That(result.Uuid, Is.SameAs(source.Uuid));
+            Assert.That(result.Payload.Device, Is.SameAs(device));
         }
 
         [Test]
@@ -516,8 +516,8 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             var result = source.FillResponse(null);
 
 
-            Assert.NotNull(result);
-            Assert.AreEqual(source.SessionId, result.SessionId);
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.SessionId, Is.EqualTo(source.SessionId));
         }
 
         #endregion FillResponse

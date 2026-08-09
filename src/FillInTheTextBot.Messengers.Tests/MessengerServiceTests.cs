@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoFixture;
@@ -55,9 +55,9 @@ namespace FillInTheTextBot.Messengers.Tests
             var result = await _target.ProcessIncomingAsync(new InputFixture());
 
 
-            Assert.AreSame(request, _target.AfterInput.Request);
-            Assert.AreSame(response, _target.AfterInput.Response);
-            Assert.NotNull(result);
+            Assert.That(_target.AfterInput.Request, Is.SameAs(request));
+            Assert.That(_target.AfterInput.Response, Is.SameAs(response));
+            Assert.That(result, Is.Not.Null);
         }
 
         [Test]
@@ -73,7 +73,7 @@ namespace FillInTheTextBot.Messengers.Tests
 
 
             _conversationService.Verify(s => s.GetResponseAsync(It.IsAny<Request>()), Times.Never);
-            Assert.AreSame(commandResponse, _target.AfterInput.Response);
+            Assert.That(_target.AfterInput.Response, Is.SameAs(commandResponse));
         }
 
         #endregion Основной поток
@@ -99,9 +99,9 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var context = request.RequiredContexts.Single(c => c.Name == "source-Sber");
 
-            Assert.AreEqual(2, context.LifeSpan);
-            Assert.AreEqual(request.UserHash, context.Parameters[nameof(request.UserHash)]);
-            Assert.AreEqual(request.ClientId, context.Parameters[nameof(request.ClientId)]);
+            Assert.That(context.LifeSpan, Is.EqualTo(2));
+            Assert.That(context.Parameters[nameof(request.UserHash)], Is.EqualTo(request.UserHash));
+            Assert.That(context.Parameters[nameof(request.ClientId)], Is.EqualTo(request.ClientId));
         }
 
         [Test]
@@ -118,8 +118,8 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var context = request.RequiredContexts.Single(c => c.Name == "source-Yandex");
 
-            Assert.AreEqual(string.Empty, context.Parameters[nameof(request.UserHash)]);
-            Assert.AreEqual(string.Empty, context.Parameters[nameof(request.ClientId)]);
+            Assert.That(context.Parameters[nameof(request.UserHash)], Is.EqualTo(string.Empty));
+            Assert.That(context.Parameters[nameof(request.ClientId)], Is.EqualTo(string.Empty));
         }
 
         [Test]
@@ -136,7 +136,7 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var context = request.RequiredContexts.Single(c => c.Name == "screen");
 
-            Assert.AreEqual(2, context.LifeSpan);
+            Assert.That(context.LifeSpan, Is.EqualTo(2));
         }
 
         [Test]
@@ -153,7 +153,7 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var context = request.RequiredContexts.Single(c => c.Name == "OldUser");
 
-            Assert.AreEqual(2, context.LifeSpan);
+            Assert.That(context.LifeSpan, Is.EqualTo(2));
         }
 
         [Test]
@@ -168,7 +168,7 @@ namespace FillInTheTextBot.Messengers.Tests
             await _target.ProcessIncomingAsync(new InputFixture());
 
 
-            Assert.AreEqual(1, request.RequiredContexts.Count);
+            Assert.That(request.RequiredContexts.Count, Is.EqualTo(1));
         }
 
         #endregion Контексты
@@ -186,8 +186,8 @@ namespace FillInTheTextBot.Messengers.Tests
 
             var response = _target.AfterInput.Response;
 
-            Assert.True(response.Text.StartsWith(ErrorAnswerStart));
-            Assert.AreEqual(ErrorLink, response.Buttons.Single().Url);
+            Assert.That(response.Text.StartsWith(ErrorAnswerStart), Is.True);
+            Assert.That(response.Buttons.Single().Url, Is.EqualTo(ErrorLink));
         }
 
         [Test]
@@ -203,7 +203,7 @@ namespace FillInTheTextBot.Messengers.Tests
             await _target.ProcessIncomingAsync(new InputFixture());
 
 
-            Assert.True(_target.AfterInput.Response.Text.StartsWith(ErrorAnswerStart));
+            Assert.That(_target.AfterInput.Response.Text.StartsWith(ErrorAnswerStart), Is.True);
         }
 
         [Test]
@@ -215,8 +215,8 @@ namespace FillInTheTextBot.Messengers.Tests
             var result = await _target.ProcessIncomingAsync(new InputFixture());
 
 
-            Assert.NotNull(result);
-            Assert.NotNull(_target.AfterInput);
+            Assert.That(result, Is.Not.Null);
+            Assert.That(_target.AfterInput, Is.Not.Null);
         }
 
         #endregion Обработка ошибок
