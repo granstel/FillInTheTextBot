@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Services.BackgroundTasks
 {
-    public sealed class BackgroundTaskQueue : IBackgroundTaskQueue
+    public sealed class BackgroundTaskQueue : IBackgroundTaskQueue, IBackgroundTaskReader
     {
         /// <summary>
         /// Ёмкость подобрана с запасом на всплеск запросов: при штатной нагрузке очередь
@@ -59,9 +59,6 @@ namespace FillInTheTextBot.Services.BackgroundTasks
             return _channel.Reader.ReadAllAsync();
         }
 
-        /// <summary>
-        /// Закрывает очередь на запись. Уже принятые работы остаются доступны для чтения.
-        /// </summary>
         public void Complete()
         {
             _channel.Writer.TryComplete();

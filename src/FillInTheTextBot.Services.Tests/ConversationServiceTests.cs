@@ -9,7 +9,6 @@ using FillInTheTextBot.Services.Configuration;
 using GranSteL.Helpers.Redis;
 using Moq;
 using NUnit.Framework;
-using NUnit.Framework.Legacy;
 
 namespace FillInTheTextBot.Services.Tests
 {
@@ -80,10 +79,10 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.AreEqual(dialog.Response, result.Text);
-            ClassicAssert.True(result.Finished);
-            ClassicAssert.AreEqual(dialog.ScopeKey, result.ScopeKey);
-            CollectionAssert.AreEquivalent(buttons.Select(b => b.Text), result.Buttons.Select(b => b.Text));
+            Assert.That(result.Text, Is.EqualTo(dialog.Response));
+            Assert.That(result.Finished, Is.True);
+            Assert.That(result.ScopeKey, Is.EqualTo(dialog.ScopeKey));
+            Assert.That(result.Buttons.Select(b => b.Text), Is.EquivalentTo(buttons.Select(b => b.Text)));
         }
 
         [Test]
@@ -95,9 +94,9 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.Null(result.Text);
-            ClassicAssert.False(result.Finished);
-            ClassicAssert.IsEmpty(result.Buttons);
+            Assert.That(result.Text, Is.Null);
+            Assert.That(result.Finished, Is.False);
+            Assert.That(result.Buttons, Is.Empty);
         }
 
         [Test]
@@ -111,7 +110,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.AreEqual(7, result.NextTextIndex);
+            Assert.That(result.NextTextIndex, Is.EqualTo(7));
         }
 
         #endregion Маппинг Dialog -> Response
@@ -132,8 +131,8 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.AreEqual(0, result.NextTextIndex);
-            ClassicAssert.AreEqual(0, request.NextTextIndex);
+            Assert.That(result.NextTextIndex, Is.EqualTo(0));
+            Assert.That(request.NextTextIndex, Is.EqualTo(0));
         }
 
         [Test]
@@ -150,7 +149,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.AreEqual(0, result.NextTextIndex);
+            Assert.That(result.NextTextIndex, Is.EqualTo(0));
         }
 
         [Test]
@@ -167,7 +166,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.AreEqual(42, result.NextTextIndex);
+            Assert.That(result.NextTextIndex, Is.EqualTo(42));
         }
 
         #endregion resetTextIndex
@@ -199,7 +198,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.AreEqual("Поехали! Название Текст истории", result.Text);
+            Assert.That(result.Text, Is.EqualTo("Поехали! Название Текст истории"));
         }
 
         [Test]
@@ -225,7 +224,7 @@ namespace FillInTheTextBot.Services.Tests
 
 
             _dialogflowService.Verify(s => s.GetResponseAsync("event:text-2", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<IEnumerable<Context>>()), Times.Once);
-            ClassicAssert.AreEqual(2, result.NextTextIndex, "Индекс следующего текста должен увеличиться на единицу");
+            Assert.That(result.NextTextIndex, Is.EqualTo(2), "Индекс следующего текста должен увеличиться на единицу");
         }
 
         [Test]
@@ -265,7 +264,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.AreEqual("Что-то у меня не нашлось никаких текстов...", result.Text);
+            Assert.That(result.Text, Is.EqualTo("Что-то у меня не нашлось никаких текстов..."));
             _dialogflowService.Verify(
                 s => s.GetResponseAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<IEnumerable<Context>>()),
                 Times.Never);
@@ -295,12 +294,12 @@ namespace FillInTheTextBot.Services.Tests
 
             if (expected)
             {
-                ClassicAssert.NotNull(passedContexts);
-                ClassicAssert.AreEqual(computedContext.Name, passedContexts.Single().Name);
+                Assert.That(passedContexts, Is.Not.Null);
+                Assert.That(passedContexts.Single().Name, Is.EqualTo(computedContext.Name));
             }
             else
             {
-                ClassicAssert.Null(passedContexts);
+                Assert.That(passedContexts, Is.Null);
             }
         }
 
@@ -323,7 +322,7 @@ namespace FillInTheTextBot.Services.Tests
             await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.Null(passedContexts);
+            Assert.That(passedContexts, Is.Null);
         }
 
         #endregion GetText
@@ -345,7 +344,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.AreEqual("CALL_RATING", result.Text);
+            Assert.That(result.Text, Is.EqualTo("CALL_RATING"));
         }
 
         #endregion CALL_RATING
@@ -378,8 +377,8 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.AreEqual("Первый Второй", result.Text);
-            ClassicAssert.AreEqual("Новая", result.Buttons.Single().Text);
+            Assert.That(result.Text, Is.EqualTo("Первый Второй"));
+            Assert.That(result.Buttons.Single().Text, Is.EqualTo("Новая"));
         }
 
         [Test]
@@ -391,7 +390,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.AreEqual("Первый", result.Text);
+            Assert.That(result.Text, Is.EqualTo("Первый"));
             _dialogflowService.Verify(s => s.GetResponseAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Never);
         }
 
@@ -418,7 +417,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.AreEqual("Здравствуйте, вы готов?", result.Text);
+            Assert.That(result.Text, Is.EqualTo("Здравствуйте, вы готов?"));
         }
 
         [Test]
@@ -432,7 +431,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.AreEqual("Привет, ты готов?", result.Text);
+            Assert.That(result.Text, Is.EqualTo("Привет, ты готов?"));
 
             IDictionary<string, string> ignored = null;
             _cache.Verify(c => c.TryGet(It.IsAny<string>(), out ignored, It.IsAny<bool>()), Times.Never);
@@ -452,7 +451,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.AreEqual("Привет", result.Text);
+            Assert.That(result.Text, Is.EqualTo("Привет"));
         }
 
         #endregion Appeal
@@ -484,7 +483,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            CollectionAssert.AreEqual(new[] { "Из диалога", "Из payload" }, result.Buttons.Select(b => b.Text));
+            Assert.That(result.Buttons.Select(b => b.Text), Is.EqualTo(new[] { "Из диалога", "Из payload" }));
         }
 
         [Test]
@@ -510,7 +509,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            CollectionAssert.AreEqual(new[] { "Яндекс", "Общая" }, result.Buttons.Select(b => b.Text));
+            Assert.That(result.Buttons.Select(b => b.Text), Is.EqualTo(new[] { "Яндекс", "Общая" }));
         }
 
         [Test]
@@ -532,7 +531,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.AreEqual("Видимая", result.Buttons.Single().Text);
+            Assert.That(result.Buttons.Single().Text, Is.EqualTo("Видимая"));
         }
 
         #endregion Кнопки из payload
@@ -561,8 +560,8 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.AreEqual("Привет, имя!", result.Text);
-            ClassicAssert.AreEqual("Привет, Вася!", result.AlternativeText);
+            Assert.That(result.Text, Is.EqualTo("Привет, имя!"));
+            Assert.That(result.AlternativeText, Is.EqualTo("Привет, Вася!"));
         }
 
         [Test]
@@ -587,8 +586,8 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.AreEqual("Привет, имя!", result.Text);
-            ClassicAssert.AreEqual("Привет, Вася!", result.AlternativeText);
+            Assert.That(result.Text, Is.EqualTo("Привет, имя!"));
+            Assert.That(result.AlternativeText, Is.EqualTo("Привет, Вася!"));
         }
 
         [Test]
@@ -600,8 +599,8 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.AreEqual("Привет", result.Text);
-            ClassicAssert.AreEqual("Привет", result.AlternativeText);
+            Assert.That(result.Text, Is.EqualTo("Привет"));
+            Assert.That(result.AlternativeText, Is.EqualTo("Привет"));
         }
 
         #endregion Replacements из payload
@@ -621,7 +620,7 @@ namespace FillInTheTextBot.Services.Tests
             await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.True(request.ResetContexts, "Сравнение слов сброса должно быть регистронезависимым");
+            Assert.That(request.ResetContexts, Is.True, "Сравнение слов сброса должно быть регистронезависимым");
         }
 
         [Test]
@@ -637,7 +636,7 @@ namespace FillInTheTextBot.Services.Tests
             await _target.GetResponseAsync(request);
 
 
-            ClassicAssert.False(request.ResetContexts);
+            Assert.That(request.ResetContexts, Is.False);
         }
 
         #endregion ResetContexts
@@ -656,7 +655,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.AreEqual("radost", result.Emotions["sberEmotion"]);
+            Assert.That(result.Emotions["sberEmotion"], Is.EqualTo("radost"));
         }
 
         [Test]
@@ -671,8 +670,8 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.True(result.Emotions.ContainsKey("sberEmotion"));
-            ClassicAssert.IsNotEmpty(result.Emotions["sberEmotion"]);
+            Assert.That(result.Emotions.ContainsKey("sberEmotion"), Is.True);
+            Assert.That(result.Emotions["sberEmotion"], Is.Not.Empty);
         }
 
         [Test]
@@ -684,7 +683,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.IsEmpty(result.Emotions);
+            Assert.That(result.Emotions, Is.Empty);
         }
 
         [Test]
@@ -699,7 +698,7 @@ namespace FillInTheTextBot.Services.Tests
             var result = await _target.GetResponseAsync(new Request());
 
 
-            ClassicAssert.IsEmpty(result.Emotions);
+            Assert.That(result.Emotions, Is.Empty);
         }
 
         #endregion Эмоции
