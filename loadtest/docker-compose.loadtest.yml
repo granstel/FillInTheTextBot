@@ -1,0 +1,65 @@
+# Нагрузочный стенд: приложение + эмулятор Dialogflow + Redis + k6.
+# Всё собирается из исходников, чтобы гонять нагрузку по текущему коду.
+#
+# Запуск одной командой (из корня репозитория):
+#   docker compose -f loadtest/docker-compose.loadtest.yml up --build --abort-on-container-exit --exit-code-from k6
+#
+# Код выхода = коду k6: если пороги (thresholds) не пройдены, команда падает.
+
+services:
+
+  redis:
+    image: redis:alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+
+  dialogflow-emulator:
+    build:
+      context: ../src
+      dockerfile: Dialogflow.Emulator/Dockerfile
+    environment:
+      # Выгрузка агента монтируется снаружи (см. volumes), в образ не зашита
+      - AGENT_PATH=/app/agent
+      # gRPC поверх незашифрованного HTTP/2 (h2c): приложение ходит сюда
+      # с ChannelCredentials.Insecure. Эндпоинт задаётся явно, чтобы Protocols=Http2
+      # применился именно к нему (через ASPNETCORE_URLS настройка не срабатывает)
+      - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:8195
+      - Kestrel__Endpoints__Grpc__Protocols=Http2
+    volumes:
+      - ../Dialogflow/FillInTheTextBot-test-eu:/app/agent:ro
+
+  fillinthetextbot:
+    build:
+      context: ../src
+      dockerfile: FillInTheTextBot.Api/Dockerfile
+    depends_on:
+      - redis
+      - dialogflow-emulator
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      # Dialogflow направлен в эмулятор: EmulatorEndpoint включает insecure-канал
+      # без учётных данных Google (см. ExternalServicesRegistration)
+      - AppConfiguration__Dialogflow__0__ScopeId=emulator
+      - AppConfiguration__Dialogflow__0__ProjectId=fillinthetextbot-test
+      - AppConfiguration__Dialogflow__0__EmulatorEndpoint=dialogflow-emulator:8195
+      - AppConfiguration__Redis__ConnectionString=redis:6379
+      - AppConfiguration__Redis__KeyPrefix=fitb-load
+      - AppConfiguration__Tracing__Enabled=false
+      - Logging__LogLevel__Default=Warning
+    volumes:
+      # Пустой IncomingToken → эндпоинт /yandex доступен без токена в URL
+      # (AddConfiguration<YandexConfiguration> читает только этот файл, без env)
+      - ./config/appsettings.Yandex.json:/app/appsettings.Yandex.json:ro
+
+  k6:
+    image: grafana/k6:latest
+    depends_on:
+      - fillinthetextbot
+    environment:
+      - BASE_URL=http://fillinthetextbot
+      # Профиль нагрузки; дефолты — спецификация (пик 18 rps, подъём/пик/спуск по 1 мин)
+      - PEAK_RPS=${PEAK_RPS:-18}
+      - RAMP_DURATION=${RAMP_DURATION:-1m}
+      - PEAK_DURATION=${PEAK_DURATION:-1m}
+    volumes:
+      - ./k6:/scripts:ro
+    command: run /scripts/story-happy-path.js

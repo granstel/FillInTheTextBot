@@ -7,6 +7,7 @@ using Google.Cloud.Dialogflow.V2;
 using GranSteL.Helpers.Redis;
 using GranSteL.Tools.ScopeSelector;
 using Grpc.Auth;
+using Grpc.Core;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
 
@@ -35,6 +36,7 @@ namespace FillInTheTextBot.Api.DI
                     context.TryAddParameter(nameof(configuration.Region), configuration.Region);
                     context.TryAddParameter(nameof(configuration.LanguageCode), configuration.LanguageCode);
                     context.TryAddParameter(nameof(configuration.LogQuery), configuration.LogQuery.ToString());
+                    context.TryAddParameter(nameof(configuration.EmulatorEndpoint), configuration.EmulatorEndpoint);
 
                     return context;
                 });
@@ -55,6 +57,17 @@ namespace FillInTheTextBot.Api.DI
 
         private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
         {
+            if (TryGetEmulatorEndpoint(context, out var emulatorEndpoint))
+            {
+                var emulatorClientBuilder = new SessionsClientBuilder
+                {
+                    Endpoint = emulatorEndpoint,
+                    ChannelCredentials = ChannelCredentials.Insecure
+                };
+
+                return emulatorClientBuilder.Build();
+            }
+
             context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out string jsonPath);
             var credential = LoadServiceAccountCredential(jsonPath, SessionsClient.DefaultScopes);
 
@@ -84,6 +97,17 @@ namespace FillInTheTextBot.Api.DI
 
         private static ContextsClient CreateDialogflowContextsClient(ScopeContext context)
         {
+            if (TryGetEmulatorEndpoint(context, out var emulatorEndpoint))
+            {
+                var emulatorClientBuilder = new ContextsClientBuilder
+                {
+                    Endpoint = emulatorEndpoint,
+                    ChannelCredentials = ChannelCredentials.Insecure
+                };
+
+                return emulatorClientBuilder.Build();
+            }
+
             context.TryGetParameterValue(nameof(DialogflowConfiguration.JsonPath), out string jsonPath);
             var credential = LoadServiceAccountCredential(jsonPath, ContextsClient.DefaultScopes);
 
@@ -112,6 +136,13 @@ namespace FillInTheTextBot.Api.DI
             var credential = serviceAccountCredential.ToGoogleCredential().CreateScoped(scopes);
 
             return credential;
+        }
+
+        private static bool TryGetEmulatorEndpoint(ScopeContext context, out string endpoint)
+        {
+            context.TryGetParameterValue(nameof(DialogflowConfiguration.EmulatorEndpoint), out endpoint);
+
+            return !string.IsNullOrWhiteSpace(endpoint);
         }
 
         private static string GetEndpoint(ScopeContext context, string defaultEndpoint)

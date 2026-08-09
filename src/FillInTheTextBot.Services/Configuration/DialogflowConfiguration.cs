@@ -15,5 +15,12 @@
         public bool LogQuery { get; set; }
 
         public bool DoNotUseForNewSessions { get; set; }
+
+        /// <summary>
+        /// Адрес локального эмулятора Dialogflow. Если задан, клиент идёт в него
+        /// по незашифрованному каналу и без учётных данных Google.
+        /// Используется только в интеграционных тестах и при локальном запуске.
+        /// </summary>
+        public virtual string EmulatorEndpoint { get; set; }
     }
 }

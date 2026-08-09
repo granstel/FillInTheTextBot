@@ -1,4 +1,4 @@
-<Solution>
+﻿<Solution>
   <Configurations>
     <Platform Name="Any CPU" />
     <Platform Name="x64" />
@@ -16,7 +16,9 @@
     <Project Path="FillInTheTextBot.Messengers.Sber.Tests/FillInTheTextBot.Messengers.Sber.Tests.csproj" />
     <Project Path="FillInTheTextBot.Messengers.Yandex.Tests/FillInTheTextBot.Messengers.Yandex.Tests.csproj" />
     <Project Path="FillInTheTextBot.Services.Tests/FillInTheTextBot.Services.Tests.csproj" />
+    <Project Path="FillInTheTextBot.Api.IntegrationTests/FillInTheTextBot.Api.IntegrationTests.csproj" />
   </Folder>
+  <Project Path="Dialogflow.Emulator/Dialogflow.Emulator.csproj" />
   <Project Path="FillInTheTextBot.Api/FillInTheTextBot.Api.csproj" />
   <Project Path="FillInTheTextBot.Models/FillInTheTextBot.Models.csproj" />
   <Project Path="FillInTheTextBot.Services/FillInTheTextBot.Services.csproj" />
