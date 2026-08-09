@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup Label="Dialogflow и Redis">
-    <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.4.0" />
+    <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.31.0" />
     <PackageVersion Include="GranSteL.Helpers.Redis" Version="1.1.0" />
     <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
     <PackageVersion Include="StackExchange.Redis" Version="2.12.14" />
