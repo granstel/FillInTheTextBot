@@ -22,18 +22,20 @@ namespace FillInTheTextBot.Api
         // ReSharper disable once UnusedMember.Global
         public void ConfigureServices(IServiceCollection services)
         {
+            var appConfiguration = _configuration.GetSection(nameof(AppConfiguration)).Get<AppConfiguration>();
+
             services
                 .AddMvc()
                 .AddNewtonsoftJson();
 
-            services.AddTelemetry(_configuration);
+            services.AddTelemetry(appConfiguration.Tracing);
 
             services.AddHttpLogging(o =>
             {
                 o.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;
             });
 
-            services.AddAppConfiguration(_configuration);
+            services.AddAppConfiguration(appConfiguration);
             services.AddInternalServices();
             services.AddExternalServices();
         }

@@ -2,7 +2,6 @@ using System;
 using System.Reflection;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -14,12 +13,12 @@ namespace FillInTheTextBot.Api.DI
     {
         private const int DefaultOtlpPort = 4317;
 
-        internal static void AddTelemetry(this IServiceCollection services, IConfiguration configuration)
+        internal static void AddTelemetry(this IServiceCollection services, TracingConfiguration tracing)
         {
             var assemblyName = Assembly.GetExecutingAssembly().GetName();
             var version = assemblyName.Version?.ToString(3);
 
-            var otlpEndpoint = GetOtlpEndpoint(configuration);
+            var otlpEndpoint = GetOtlpEndpoint(tracing);
 
             services.AddOpenTelemetry()
                 .ConfigureResource(resource => resource.AddService(assemblyName.Name, serviceVersion: version))
@@ -48,12 +47,8 @@ namespace FillInTheTextBot.Api.DI
         /// Адрес OTLP-коллектора. Если хост не задан, экспорт трейсов не включается —
         /// иначе экспортёр будет циклически долбиться в несуществующий адрес.
         /// </summary>
-        private static Uri GetOtlpEndpoint(IConfiguration configuration)
+        private static Uri GetOtlpEndpoint(TracingConfiguration tracing)
         {
-            var tracing = configuration
-                .GetSection($"{nameof(AppConfiguration)}:{nameof(AppConfiguration.Tracing)}")
-                .Get<TracingConfiguration>();
-
             if (string.IsNullOrWhiteSpace(tracing?.Host))
             {
                 return null;
@@ -61,9 +56,7 @@ namespace FillInTheTextBot.Api.DI
 
             var port = tracing.Port is > 0 ? tracing.Port.Value : DefaultOtlpPort;
 
-            var endpoint = new Uri($"http://{tracing.Host}:{port}");
-
-            return endpoint;
+            return new UriBuilder(Uri.UriSchemeHttp, tracing.Host, port).Uri;
         }
     }
 }
