@@ -1,0 +1,23 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Messengers/">
+    <Project Path="FillInTheTextBot.Messengers/FillInTheTextBot.Messengers.csproj" />
+    <Project Path="FillInTheTextBot.Messengers.Marusia/FillInTheTextBot.Messengers.Marusia.csproj" />
+    <Project Path="FillInTheTextBot.Messengers.Sber/FillInTheTextBot.Messengers.Sber.csproj" />
+    <Project Path="FillInTheTextBot.Messengers.Yandex/FillInTheTextBot.Messengers.Yandex.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="FillInTheTextBot.Messengers.Tests/FillInTheTextBot.Messengers.Tests.csproj" />
+    <Project Path="FillInTheTextBot.Messengers.Marusia.Tests/FillInTheTextBot.Messengers.Marusia.Tests.csproj" />
+    <Project Path="FillInTheTextBot.Messengers.Sber.Tests/FillInTheTextBot.Messengers.Sber.Tests.csproj" />
+    <Project Path="FillInTheTextBot.Messengers.Yandex.Tests/FillInTheTextBot.Messengers.Yandex.Tests.csproj" />
+    <Project Path="FillInTheTextBot.Services.Tests/FillInTheTextBot.Services.Tests.csproj" />
+  </Folder>
+  <Project Path="FillInTheTextBot.Api/FillInTheTextBot.Api.csproj" />
+  <Project Path="FillInTheTextBot.Models/FillInTheTextBot.Models.csproj" />
+  <Project Path="FillInTheTextBot.Services/FillInTheTextBot.Services.csproj" />
+</Solution>

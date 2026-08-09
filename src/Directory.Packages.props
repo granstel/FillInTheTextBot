@@ -1,0 +1,53 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup Label="Microsoft">
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.36" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="6.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+  </ItemGroup>
+
+  <ItemGroup Label="Сериализация">
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup Label="Логирование">
+    <PackageVersion Include="NLog.Web.AspNetCore" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup Label="Телеметрия">
+    <PackageVersion Include="Jaeger" Version="1.0.3" />
+    <PackageVersion Include="OpenTracing" Version="0.12.1" />
+    <PackageVersion Include="OpenTracing.Contrib.NetCore" Version="0.8.0" />
+    <PackageVersion Include="prometheus-net" Version="7.0.0" />
+    <PackageVersion Include="prometheus-net.AspNetCore" Version="7.0.0" />
+    <PackageVersion Include="prometheus-net.AspNetCore.Grpc" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Label="Dialogflow и Redis">
+    <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.4.0" />
+    <PackageVersion Include="GranSteL.Helpers.Redis" Version="1.1.0" />
+    <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
+    <PackageVersion Include="StackExchange.Redis" Version="2.12.14" />
+  </ItemGroup>
+
+  <ItemGroup Label="Модели голосовых площадок">
+    <PackageVersion Include="MailRu.Marusia.Models" Version="1.1.0" />
+    <PackageVersion Include="Sber.SmartApp.Models" Version="1.0.0" />
+    <PackageVersion Include="Yandex.Dialogs.Models" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup Label="Тесты">
+    <PackageVersion Include="AutoFixture" Version="4.18.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.8.1" />
+    <PackageVersion Include="Moq" Version="4.20.72" />
+    <PackageVersion Include="nunit" Version="3.13.3" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="6.2.0" />
+  </ItemGroup>
+
+</Project>
