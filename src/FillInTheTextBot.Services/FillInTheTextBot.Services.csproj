@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <OutputType>Library</OutputType>
   </PropertyGroup>
 
@@ -9,7 +9,7 @@
     <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="4.4.0" />
     <PackageReference Include="GranSteL.Helpers.Redis" Version="1.1.0" />
     <PackageReference Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="OpenTracing" Version="0.12.1" />
     <PackageReference Include="prometheus-net" Version="7.0.0" />
