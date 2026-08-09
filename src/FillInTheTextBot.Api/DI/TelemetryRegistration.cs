@@ -44,14 +44,21 @@ namespace FillInTheTextBot.Api.DI
         }
 
         /// <summary>
-        /// Адрес OTLP-коллектора. Если хост не задан, экспорт трейсов не включается —
-        /// иначе экспортёр будет циклически долбиться в несуществующий адрес.
+        /// Адрес OTLP-коллектора. Трейсинг включается только явным флагом Enabled —
+        /// иначе экспортёр не добавляется, чтобы не долбиться в несуществующий адрес.
         /// </summary>
         private static Uri GetOtlpEndpoint(TracingConfiguration tracing)
         {
-            if (string.IsNullOrWhiteSpace(tracing?.Host))
+            if (tracing is not { Enabled: true })
             {
                 return null;
+            }
+
+            if (string.IsNullOrWhiteSpace(tracing.Host))
+            {
+                throw new InvalidOperationException(
+                    $"{nameof(TracingConfiguration)}.{nameof(TracingConfiguration.Host)} обязателен, " +
+                    $"когда трейсинг включён ({nameof(TracingConfiguration.Enabled)} = true).");
             }
 
             var port = tracing.Port is > 0 ? tracing.Port.Value : DefaultOtlpPort;
