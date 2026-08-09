@@ -16,12 +16,13 @@ namespace FillInTheTextBot.Api.DI
 
         internal static void AddTelemetry(this IServiceCollection services, IConfiguration configuration)
         {
-            var version = Assembly.GetExecutingAssembly().GetName().Version?.ToString(3);
+            var assemblyName = Assembly.GetExecutingAssembly().GetName();
+            var version = assemblyName.Version?.ToString(3);
 
             var otlpEndpoint = GetOtlpEndpoint(configuration);
 
             services.AddOpenTelemetry()
-                .ConfigureResource(resource => resource.AddService("FillInTheTextBot", serviceVersion: version))
+                .ConfigureResource(resource => resource.AddService(assemblyName.Name, serviceVersion: version))
                 .WithTracing(builder =>
                 {
                     builder
