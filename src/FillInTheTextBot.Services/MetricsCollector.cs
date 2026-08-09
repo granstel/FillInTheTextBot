@@ -9,7 +9,7 @@ namespace FillInTheTextBot.Services
         /// <summary>
         /// Имя счётчика. Его нужно передать в AddMeter при настройке OpenTelemetry.
         /// </summary>
-        public const string MeterName = "FillInTheTextBot";
+        public const string MeterName = Telemetry.ScopeName;
 
         private const string MetricName = "metrics";
 
