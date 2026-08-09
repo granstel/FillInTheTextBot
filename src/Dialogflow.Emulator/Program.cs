@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddGrpc();
 builder.Services.AddSingleton<IAgentStorage, AgentStorage>();
+builder.Services.AddSingleton<SlotFillingStore>();
 
 var app = builder.Build();
 

@@ -38,8 +38,36 @@ public sealed class AgentResponse
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
+    [JsonPropertyName("parameters")]
+    public AgentParameter[]? Parameters { get; set; }
+
     [JsonPropertyName("messages")]
     public AgentMessage[]? Messages { get; set; }
+}
+
+/// <summary>
+/// Параметр интента. Обязательные (required) со своими промптами эмулятор набивает
+/// по очереди (слот-филлинг), необязательные со статическим value отдаёт как есть.
+/// </summary>
+public sealed class AgentParameter
+{
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+
+    [JsonPropertyName("required")]
+    public bool Required { get; set; }
+
+    [JsonPropertyName("prompts")]
+    public AgentPrompt[]? Prompts { get; set; }
+}
+
+public sealed class AgentPrompt
+{
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
 }
 
 public sealed class AgentMessage

@@ -29,6 +29,7 @@ public sealed class EmulatorFixture : IAsyncDisposable
         builder.Logging.SetMinimumLevel(LogLevel.Warning);
         builder.Services.AddGrpc();
         builder.Services.AddSingleton<IAgentStorage, AgentStorage>();
+        builder.Services.AddSingleton<SlotFillingStore>();
 
         // Порт 0 — операционная система выдаёт свободный, чтобы параллельные
         // прогоны не дрались за один и тот же

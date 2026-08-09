@@ -105,6 +105,15 @@ public sealed class AgentStorage : IAgentStorage
         return intent?.Responses?.FirstOrDefault()?.Action;
     }
 
+    /// <summary>
+    /// Параметры интента из выгрузки: обязательные (слоты) с промптами и
+    /// необязательные со статическим значением (напр. textKey).
+    /// </summary>
+    public static IReadOnlyList<AgentParameter> GetParameters(AgentIntent? intent)
+    {
+        return intent?.Responses?.FirstOrDefault()?.Parameters ?? [];
+    }
+
     private void Register(AgentIntent intent)
     {
         _intentsByName[intent.Name!] = intent;

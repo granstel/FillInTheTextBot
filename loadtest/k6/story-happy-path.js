@@ -1,16 +1,14 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 
-// Нагрузочный тест happy path «сочинения истории» через Yandex-эндпоинт.
+// Нагрузочный тест основного пути пользователя — сочинения истории — через
+// Yandex-эндпоинт, против приложения с эмулятором Dialogflow и Redis.
 //
-// ВАЖНО про эмулятор: Dialogflow-эмулятор — стаб. Он матчит интент по имени
-// события или ТОЧНОЙ обучающей фразе, без разбора языка, БЕЗ слот-филлинга и
-// контекстов. Поэтому полноценно «сочинить историю от начала до конца» (заполнить
-// слоты словами и получить итоговый текст) на нём нельзя — многошаговый диалог
-// со слотами тут не воспроизводится. Скрипт гоняет достижимую последовательность
-// реплик story-бота, каждая из которых попадает в реальный интент (не Fallback)
-// и возвращает осмысленный ответ, прогоняя весь конвейр: HTTP → контроллер →
-// ConversationService → gRPC в Dialogflow-эмулятор → Redis (кэш сессии) → ответ.
+// Полный путь истории «29-late»: выбор истории → бот по очереди спрашивает 6 слов
+// → на последнее слово приходит собранная история с подставленными словами.
+// Эмулятор поддерживает слот-филлинг, поэтому путь проходит от начала до конца
+// с выводом результата, прогоняя весь конвейер:
+// HTTP → контроллер → ConversationService → gRPC в эмулятор → Redis → ответ.
 
 const BASE_URL = __ENV.BASE_URL || 'http://localhost:8080';
 const YANDEX_PATH = __ENV.YANDEX_PATH || '/yandex';
@@ -20,14 +18,20 @@ const RAMP_DURATION = __ENV.RAMP_DURATION || '1m';   // плавный подъ�
 const PEAK_DURATION = __ENV.PEAK_DURATION || '1m';   // длительность пика
 
 // Один проход = одна пользовательская сессия. Реплики идут по кругу; при step===0
-// открывается новая сессия. Все шаги проверены на живом стенде (200 + не Fallback).
+// открывается новая сессия. Значения слов произвольны (эмулятор их не валидирует).
 const STEPS = [
-  { command: '', newSession: true },                 // пустая команда в новой сессии → событие Welcome
-  { command: 'что ты умеешь', newSession: false },   // What can you do
-  { command: 'покажи список историй', newSession: false }, // TextsList — вход в выбор истории
-  { command: 'помоги мне', newSession: false },      // Help
-  { command: 'выйти', newSession: false },            // Exit
+  { command: '', newSession: true },                    // пустая команда в новой сессии → Welcome
+  { command: 'опоздала в больницу', newSession: false }, // выбор истории → бот спрашивает 1-е слово
+  { command: '3', newSession: false },                   // слот number
+  { command: 'медведь', newSession: false },             // слот character
+  { command: 'два', newSession: false },                 // слот mult
+  { command: 'зайцы', newSession: false },               // слот animals
+  { command: 'лес', newSession: false },                 // слот place
+  { command: '5', newSession: false },                   // слот speed → собранная история
 ];
+
+// Индекс шага, на котором должна прийти готовая история (последнее слово)
+const COMPOSED_STEP = STEPS.length - 1;
 
 export const options = {
   scenarios: {
@@ -111,13 +115,14 @@ export default function () {
   }
 
   const current = STEPS[step];
+  const currentStep = step;
 
-  const res = http.post(`${BASE_URL}${YANDEX_PATH}`, payload(current.command, current.newSession, sessionId, step), {
+  const res = http.post(`${BASE_URL}${YANDEX_PATH}`, payload(current.command, current.newSession, sessionId, currentStep), {
     headers: { 'Content-Type': 'application/json' },
-    tags: { step: String(step) },
+    tags: { step: String(currentStep) },
   });
 
-  check(res, {
+  const checks = {
     'статус 200': (r) => r.status === 200,
     'есть текст ответа': (r) => {
       try { return typeof r.json('response.text') === 'string' && r.json('response.text').length > 0; }
@@ -127,7 +132,17 @@ export default function () {
       try { return !String(r.json('response.text')).startsWith('Не совсем понимаю'); }
       catch (e) { return false; }
     },
-  });
+  };
+
+  // На последнем слове должна прийти собранная история
+  if (currentStep === COMPOSED_STEP) {
+    checks['история собрана'] = (r) => {
+      try { return String(r.json('response.text')).includes('Вот что получилось'); }
+      catch (e) { return false; }
+    };
+  }
+
+  check(res, checks);
 
   step = (step + 1) % STEPS.length;
 }

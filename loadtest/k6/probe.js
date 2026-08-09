@@ -4,19 +4,18 @@ export const options = { vus: 1, iterations: 1 };
 
 const BASE = __ENV.BASE_URL || 'http://fillinthetextbot';
 const PATH = '/yandex';
+const SID = `probe-${Date.now()}`;
 
-// Единый session_id на всю последовательность — как в реальном диалоге
-const SID = 'probe-session-1';
-
+// Полный путь сочинения истории «29-late»: выбор истории + 6 слов
 const STEPS = [
-  ['welcome (пусто, new)', '', true],
-  ['покажи список историй', 'покажи список историй', false],
-  ['новый', 'новый', false],
-  ['начать', 'начать', false],
-  ['дальше', 'дальше', false],
-  ['ещё', 'ещё', false],
-  ['повтори', 'повтори', false],
-  ['выйти', 'выйти', false],
+  ['welcome', '', true],
+  ['история: опоздала в больницу', 'опоздала в больницу', false],
+  ['слово 1 (number)', '3', false],
+  ['слово 2 (character)', 'медведь', false],
+  ['слово 3 (mult)', 'два', false],
+  ['слово 4 (animals)', 'зайцы', false],
+  ['слово 5 (place)', 'лес', false],
+  ['слово 6 (speed)', '5', false],
 ];
 
 function payload(cmd, isNew, i) {
@@ -39,6 +38,6 @@ export default function () {
     });
     let text = '';
     try { text = res.json('response.text') || ''; } catch (e) { text = '<no json>'; }
-    console.log(`[${res.status}] ${label} -> ${String(text).slice(0, 110)}`);
+    console.log(`[${res.status}] ${label} -> ${String(text).slice(0, 160)}`);
   }
 }
