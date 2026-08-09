@@ -16,8 +16,7 @@ namespace FillInTheTextBot.Api.DI
 
         internal static void AddTelemetry(this IServiceCollection services, IConfiguration configuration)
         {
-            var fullVersion = Assembly.GetExecutingAssembly().GetName().Version;
-            var version = $"{fullVersion?.Major}.{fullVersion?.Minor}.{fullVersion?.Build}";
+            var version = Assembly.GetExecutingAssembly().GetName().Version?.ToString(3);
 
             var otlpEndpoint = GetOtlpEndpoint(configuration);
 
