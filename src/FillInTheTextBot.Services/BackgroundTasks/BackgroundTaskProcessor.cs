@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,7 +7,8 @@ using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Services.BackgroundTasks
 {
-    public sealed class BackgroundTaskProcessor : BackgroundService
+    public sealed class BackgroundTaskProcessor(IBackgroundTaskReader queue, ILogger<BackgroundTaskProcessor> log)
+        : BackgroundService
     {
         /// <summary>
         /// Сколько работ выполняется одновременно. Прежний fire-and-forget запускал их
@@ -16,16 +16,7 @@ namespace FillInTheTextBot.Services.BackgroundTasks
         /// нужно сохранить. Ограничение не даёт при всплеске открыть неограниченное
         /// число обращений к Redis и Dialogflow.
         /// </summary>
-        public const int MaxDegreeOfParallelism = 4;
-
-        private readonly BackgroundTaskQueue _queue;
-        private readonly ILogger<BackgroundTaskProcessor> _log;
-
-        public BackgroundTaskProcessor(BackgroundTaskQueue queue, ILogger<BackgroundTaskProcessor> log)
-        {
-            _queue = queue;
-            _log = log;
-        }
+        private const int MaxDegreeOfParallelism = 4;
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
@@ -34,7 +25,7 @@ namespace FillInTheTextBot.Services.BackgroundTasks
 
         public override async Task StopAsync(CancellationToken cancellationToken)
         {
-            _queue.Complete();
+            queue.Complete();
 
             await base.StopAsync(cancellationToken);
 
@@ -64,7 +55,7 @@ namespace FillInTheTextBot.Services.BackgroundTasks
         /// </summary>
         private async Task ConsumeAsync()
         {
-            await foreach (var task in _queue.ReadAllAsync())
+            await foreach (var task in queue.ReadAllAsync())
             {
                 await ExecuteTaskAsync(task);
             }
@@ -78,7 +69,7 @@ namespace FillInTheTextBot.Services.BackgroundTasks
             }
             catch (Exception e)
             {
-                _log.LogError(e, "Error while executing background task '{TaskName}'", task.Name);
+                log.LogError(e, "Error while executing background task '{TaskName}'", task.Name);
             }
         }
     }

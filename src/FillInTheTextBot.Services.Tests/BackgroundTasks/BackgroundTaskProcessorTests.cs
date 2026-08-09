@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using FillInTheTextBot.Services.BackgroundTasks;
 using Microsoft.Extensions.Logging.Abstractions;
 using NUnit.Framework;
-using NUnit.Framework.Legacy;
 
 namespace FillInTheTextBot.Services.Tests.BackgroundTasks
 {
@@ -47,8 +46,8 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
             var completed = await Task.WhenAny(executed.Task, Task.Delay(5000));
 
 
-            ClassicAssert.True(accepted);
-            ClassicAssert.AreSame(executed.Task, completed, "Работа из очереди должна быть выполнена");
+            Assert.That(accepted, Is.True);
+            Assert.That(completed, Is.SameAs(executed.Task), "Работа из очереди должна быть выполнена");
         }
 
         [Test]
@@ -75,8 +74,8 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
             await WaitForAsync(() => executed.Count == count);
 
 
-            ClassicAssert.AreEqual(count, executed.Count);
-            CollectionAssert.AreEquivalent(Enumerable.Range(0, count), executed);
+            Assert.That(executed.Count, Is.EqualTo(count));
+            Assert.That(executed, Is.EquivalentTo(Enumerable.Range(0, count)));
         }
 
         [Test]
@@ -98,7 +97,7 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
             var completed = await Task.WhenAny(executed.Task, Task.Delay(5000));
 
 
-            ClassicAssert.AreSame(executed.Task, completed, "Исключение в одной работе не должно останавливать обработчик");
+            Assert.That(completed, Is.SameAs(executed.Task), "Исключение в одной работе не должно останавливать обработчик");
         }
 
         [Test]
@@ -132,7 +131,7 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
 
             slowFinish.TrySetResult(true);
 
-            ClassicAssert.AreSame(fastExecuted.Task, completed,
+            Assert.That(completed, Is.SameAs(fastExecuted.Task),
                 "Быстрая работа не должна ждать завершения медленной");
         }
 
@@ -155,7 +154,7 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
 
             var completed = await Task.WhenAny(executed.Task, Task.Delay(5000));
 
-            ClassicAssert.AreSame(executed.Task, completed, "Принятые работы должны успеть выполниться при остановке");
+            Assert.That(completed, Is.SameAs(executed.Task), "Принятые работы должны успеть выполниться при остановке");
         }
 
         [Test]
@@ -166,14 +165,14 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
             {
                 var accepted = _queue.Enqueue($"работа-{i}", () => Task.CompletedTask);
 
-                ClassicAssert.True(accepted, $"Работа {i} должна помещаться в очередь");
+                Assert.That(accepted, Is.True, $"Работа {i} должна помещаться в очередь");
             }
 
 
             var overflow = _queue.Enqueue("лишняя", () => Task.CompletedTask);
 
 
-            ClassicAssert.False(overflow, "Переполнение очереди не должно блокировать вызывающий поток");
+            Assert.That(overflow, Is.False, "Переполнение очереди не должно блокировать вызывающий поток");
         }
 
         [Test]
@@ -181,7 +180,7 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
         {
             var accepted = _queue.Enqueue("пустая", null);
 
-            ClassicAssert.False(accepted);
+            Assert.That(accepted, Is.False);
         }
 
         private static async Task WaitForAsync(Func<bool> condition, int timeoutMilliseconds = 5000)
