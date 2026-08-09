@@ -158,6 +158,39 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
         }
 
         [Test]
+        public async Task StopAsync_InFlightWork_WaitsUntilCompleted()
+        {
+            var started = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+            var release = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+            var finished = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+
+            await _target.StartAsync(CancellationToken.None);
+
+            _queue.Enqueue("в полёте", async () =>
+            {
+                started.TrySetResult(true);
+                await release.Task;
+                finished.TrySetResult(true);
+            });
+
+            await started.Task; // работа стартовала и висит на release
+
+            var stop = _target.StopAsync(CancellationToken.None);
+
+            // Пока работа не отпущена, StopAsync не должен завершиться
+            var early = await Task.WhenAny(stop, Task.Delay(300));
+            Assert.That(early, Is.Not.SameAs(stop), "StopAsync не должен завершаться, пока работа в полёте");
+            Assert.That(finished.Task.IsCompleted, Is.False);
+
+            release.TrySetResult(true);
+
+            await stop; // после отпускания StopAsync завершается
+
+            Assert.That(finished.Task.IsCompletedSuccessfully, Is.True,
+                "Работа должна быть доведена до конца до завершения StopAsync");
+        }
+
+        [Test]
         public void Enqueue_QueueIsFull_TaskDropped()
         {
             // Обработчик не запущен, поэтому очередь только наполняется
