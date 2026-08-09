@@ -1,23 +1,16 @@
 ﻿using FillInTheTextBot.Api.Middleware;
-using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
-using System.Reflection;
 using FillInTheTextBot.Api.DI;
-using OpenTelemetry.Metrics;
-using OpenTelemetry.Resources;
-using OpenTelemetry.Trace;
 
 namespace FillInTheTextBot.Api
 {
     public class Startup
     {
-        private const int DefaultOtlpPort = 4317;
-
         private readonly IConfiguration _configuration;
 
         public Startup(IConfiguration configuration)
@@ -33,7 +26,7 @@ namespace FillInTheTextBot.Api
                 .AddMvc()
                 .AddNewtonsoftJson();
 
-            AddTelemetry(services);
+            services.AddTelemetry(_configuration);
 
             services.AddHttpLogging(o =>
             {
@@ -43,62 +36,6 @@ namespace FillInTheTextBot.Api
             services.AddAppConfiguration(_configuration);
             services.AddInternalServices();
             services.AddExternalServices();
-        }
-
-        private void AddTelemetry(IServiceCollection services)
-        {
-            var fullVersion = Assembly.GetExecutingAssembly().GetName().Version;
-            var version = $"{fullVersion?.Major}.{fullVersion?.Minor}.{fullVersion?.Build}";
-
-            var otlpEndpoint = GetOtlpEndpoint();
-
-            services.AddOpenTelemetry()
-                .ConfigureResource(resource => resource.AddService("FillInTheTextBot", serviceVersion: version))
-                .WithTracing(builder =>
-                {
-                    builder
-                        // Без AddSource активности из Tracing создаются, но не экспортируются
-                        .AddSource(Tracing.ActivitySourceName)
-                        .AddAspNetCoreInstrumentation()
-                        .AddHttpClientInstrumentation();
-
-                    if (otlpEndpoint is not null)
-                    {
-                        builder.AddOtlpExporter(options => options.Endpoint = otlpEndpoint);
-                    }
-                })
-                .WithMetrics(builder => builder
-                    .AddMeter(MetricsCollector.MeterName)
-                    .AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation()
-                    .AddRuntimeInstrumentation()
-                    .AddPrometheusExporter());
-        }
-
-        /// <summary>
-        /// Адрес OTLP-коллектора. Если хост не задан, экспорт трейсов не включается —
-        /// иначе экспортёр будет циклически долбиться в несуществующий адрес.
-        /// </summary>
-        private Uri GetOtlpEndpoint()
-        {
-            // Значения читаются как строки, а не через Get<TracingConfiguration>: в шаблонном
-            // appsettings.json Port пустой, и типизированная привязка на нём падает
-            var tracing = _configuration.GetSection($"{nameof(AppConfiguration)}:{nameof(AppConfiguration.Tracing)}");
-
-            var host = tracing[nameof(TracingConfiguration.Host)];
-
-            if (string.IsNullOrWhiteSpace(host))
-            {
-                return null;
-            }
-
-            var port = int.TryParse(tracing[nameof(TracingConfiguration.Port)], out var configuredPort) && configuredPort > 0
-                ? configuredPort
-                : DefaultOtlpPort;
-
-            var endpoint = new Uri($"http://{host}:{port}");
-
-            return endpoint;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
