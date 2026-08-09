@@ -1,5 +1,5 @@
-﻿using System;
-using System.Linq;
+using System;
+using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
@@ -10,14 +10,6 @@ namespace FillInTheTextBot.Services.BackgroundTasks
     public sealed class BackgroundTaskProcessor(IBackgroundTaskReader queue, ILogger<BackgroundTaskProcessor> log)
         : BackgroundService
     {
-        /// <summary>
-        /// Сколько работ выполняется одновременно. Прежний fire-and-forget запускал их
-        /// без ограничений, и медленная работа не задерживала остальные — это свойство
-        /// нужно сохранить. Ограничение не даёт при всплеске открыть неограниченное
-        /// число обращений к Redis и Dialogflow.
-        /// </summary>
-        private const int MaxDegreeOfParallelism = 4;
-
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
             return DrainAsync();
@@ -36,29 +28,38 @@ namespace FillInTheTextBot.Services.BackgroundTasks
             await DrainAsync();
         }
 
-        private Task DrainAsync()
-        {
-            // Несколько независимых потребителей одного канала. Parallel.ForEachAsync здесь
-            // не подходит: при остановке его задача завершается как отменённая, не дочитав
-            // очередь, и принятые работы теряются.
-            var consumers = Enumerable
-                .Range(0, MaxDegreeOfParallelism)
-                .Select(_ => ConsumeAsync());
-
-            return Task.WhenAll(consumers);
-        }
-
         /// <summary>
-        /// Читает очередь, пока она не закрыта на запись и не разобрана. Отмена по
-        /// stoppingToken намеренно не используется: при остановке приложения уже принятые
-        /// работы должны быть доведены до конца, а не потеряны вместе с процессом.
+        /// Читает очередь и запускает каждую работу, не дожидаясь её завершения:
+        /// параллелизм не ограничен, как в прежнем fire-and-forget, и медленная или
+        /// зависшая работа не задерживает остальные. Отмена по stoppingToken намеренно
+        /// не используется — при остановке приложения уже принятые работы должны быть
+        /// доведены до конца, поэтому после закрытия очереди метод дожидается запущенных.
         /// </summary>
-        private async Task ConsumeAsync()
+        private async Task DrainAsync()
         {
+            var running = new ConcurrentDictionary<Task, byte>();
+
             await foreach (var task in queue.ReadAllAsync())
             {
-                await ExecuteTaskAsync(task);
+                var work = ExecuteTaskAsync(task);
+
+                // Синхронно завершившиеся работы (Task.CompletedTask и т.п.) не трекаем
+                if (work.IsCompleted)
+                {
+                    continue;
+                }
+
+                // Трекаем работы «в полёте», чтобы дождаться их при остановке. Работа
+                // сама убирает себя из набора по завершении, иначе он рос бы бесконечно.
+                running[work] = 0;
+                _ = work.ContinueWith(
+                    finished => running.TryRemove(finished, out _),
+                    CancellationToken.None,
+                    TaskContinuationOptions.ExecuteSynchronously,
+                    TaskScheduler.Default);
             }
+
+            await Task.WhenAll(running.Keys);
         }
 
         private async Task ExecuteTaskAsync(BackgroundTask task)
