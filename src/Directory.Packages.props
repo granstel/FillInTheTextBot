@@ -6,6 +6,7 @@
 
   <ItemGroup Label="Microsoft">
     <PackageVersion Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.10" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
   </ItemGroup>
 

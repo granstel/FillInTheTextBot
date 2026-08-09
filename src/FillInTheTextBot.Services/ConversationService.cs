@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FillInTheTextBot.Models;
+using FillInTheTextBot.Services.BackgroundTasks;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using FillInTheTextBot.Services.Mapping;
@@ -17,12 +18,14 @@ namespace FillInTheTextBot.Services
         private readonly ConversationConfiguration _configuration;
         private readonly IDialogflowService _dialogflowService;
         private readonly IRedisCacheService _cache;
+        private readonly IBackgroundTaskQueue _backgroundTasks;
 
         public ConversationService(ConversationConfiguration configuration, IDialogflowService dialogflowService,
-            IRedisCacheService cache)
+            IRedisCacheService cache, IBackgroundTaskQueue backgroundTasks)
         {
             _dialogflowService = dialogflowService;
             _cache = cache;
+            _backgroundTasks = backgroundTasks;
             _configuration = configuration;
         }
 
@@ -289,7 +292,8 @@ namespace FillInTheTextBot.Services
                     { "alternativeText", texts.AlternativeText }
                 };
 
-                _dialogflowService.SetContextAsync(sessionId, scopeKey, "savedText", 5, parameters).Forget();
+                _backgroundTasks.Enqueue("savedText context",
+                    () => _dialogflowService.SetContextAsync(sessionId, scopeKey, "savedText", 5, parameters));
             }
         }
 

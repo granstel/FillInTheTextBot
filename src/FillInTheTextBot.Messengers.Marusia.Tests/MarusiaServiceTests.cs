@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoFixture;
 using FillInTheTextBot.Services;
+using FillInTheTextBot.Services.BackgroundTasks;
 using GranSteL.Helpers.Redis;
 using MailRu.Marusia.Models;
 using MailRu.Marusia.Models.Input;
@@ -22,6 +23,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
     {
         private Mock<IConversationService> _conversationService;
         private Mock<IRedisCacheService> _cache;
+        private Mock<IBackgroundTaskQueue> _backgroundTasks;
 
         private MarusiaService _target;
 
@@ -33,7 +35,18 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             _conversationService = new Mock<IConversationService>();
             _cache = new Mock<IRedisCacheService>();
 
-            _target = new MarusiaService(Mock.Of<ILogger<MarusiaService>>(), _conversationService.Object, _cache.Object);
+            _backgroundTasks = new Mock<IBackgroundTaskQueue>();
+
+            // Фоновые работы выполняются сразу, чтобы тест проверял результат, а не гонку
+            _backgroundTasks
+                .Setup(q => q.Enqueue(It.IsAny<string>(), It.IsAny<Func<Task>>()))
+                .Returns((string _, Func<Task> work) =>
+                {
+                    work().GetAwaiter().GetResult();
+                    return true;
+                });
+
+            _target = new MarusiaService(Mock.Of<ILogger<MarusiaService>>(), _conversationService.Object, _cache.Object, _backgroundTasks.Object);
 
             _fixture = new Fixture { OmitAutoProperties = true };
         }
