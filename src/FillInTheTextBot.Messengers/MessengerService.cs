@@ -42,9 +42,9 @@ namespace FillInTheTextBot.Messengers
                     request = Before(input);
                 }
 
-                using (Tracing.Trace(s => s
-                    .WithTag(nameof(request.UserHash), request.UserHash)
-                    .WithTag(nameof(request.SessionId), request.SessionId)))
+                using (Tracing.Trace(a => a
+                    .SetTag(nameof(request.UserHash), request.UserHash)
+                    .SetTag(nameof(request.SessionId), request.SessionId)))
                 {
                     var contexts = GetContexts(request);
                     request.RequiredContexts.AddRange(contexts);

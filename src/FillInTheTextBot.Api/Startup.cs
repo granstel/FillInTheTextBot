@@ -1,5 +1,4 @@
 ﻿using FillInTheTextBot.Api.Middleware;
-using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using FillInTheTextBot.Api.DI;
-using Prometheus;
 
 namespace FillInTheTextBot.Api
 {
@@ -24,21 +22,23 @@ namespace FillInTheTextBot.Api
         // ReSharper disable once UnusedMember.Global
         public void ConfigureServices(IServiceCollection services)
         {
+            var appConfiguration = _configuration.GetSection(nameof(AppConfiguration)).Get<AppConfiguration>();
+
             services
                 .AddMvc()
                 .AddNewtonsoftJson();
 
-            services.AddOpenTracing();
+            services.AddTelemetry(appConfiguration.Tracing);
+
             services.AddHttpLogging(o =>
             {
                 o.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;
             });
 
-            services.AddAppConfiguration(_configuration);
+            services.AddAppConfiguration(appConfiguration);
             services.AddInternalServices();
             services.AddExternalServices();
         }
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         // ReSharper disable once UnusedMember.Global
@@ -47,8 +47,6 @@ namespace FillInTheTextBot.Api
             app.UseMiddleware<ExceptionsMiddleware>();
 
             app.UseRouting();
-            app.UseHttpMetrics();
-            app.UseGrpcMetrics();
 
             if (configuration.HttpLog.Enabled)
             {
@@ -62,7 +60,7 @@ namespace FillInTheTextBot.Api
             app.UseEndpoints(e =>
             {
                 e.MapControllers();
-                e.MapMetrics();
+                e.MapPrometheusScrapingEndpoint();
             });
         }
     }
