@@ -13,6 +13,7 @@ RUN dotnet publish "Dialogflow.Emulator/Dialogflow.Emulator.csproj" -c Release -
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-# Выгрузка агента монтируется снаружи, см. docker-compose
+# Выгрузка агента в образ не копируется — каталог /app/agent (AGENT_PATH)
+# монтируется снаружи при запуске контейнера (том/bind-mount)
 ENV AGENT_PATH=/app/agent
 ENTRYPOINT ["dotnet", "Dialogflow.Emulator.dll"]
