@@ -23,7 +23,7 @@
           "name": "text-name",
           "required": false,
           "dataType": "@sys.any",
-          "value": "про дом в лесу.",
+          "value": "текст от подписчика: про дом в лесу.",
           "defaultValue": "",
           "isList": false,
           "prompts": [],
