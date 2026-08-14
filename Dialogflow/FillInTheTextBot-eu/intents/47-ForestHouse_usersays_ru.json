@@ -1,0 +1,132 @@
+[
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e001",
+    "data": [
+      {
+        "text": "дом в лесу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e002",
+    "data": [
+      {
+        "text": "про дом в лесу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e003",
+    "data": [
+      {
+        "text": "история про лесной дом",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e004",
+    "data": [
+      {
+        "text": "сочини про дом в лесу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e005",
+    "data": [
+      {
+        "text": "лесной дом",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e006",
+    "data": [
+      {
+        "text": "страшный дом в лесу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e007",
+    "data": [
+      {
+        "text": "про монстра в лесу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e008",
+    "data": [
+      {
+        "text": "монстр в лесу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e009",
+    "data": [
+      {
+        "text": "мальчик и дом в лесу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa470001-1111-4abc-8def-47000000e010",
+    "data": [
+      {
+        "text": "заброшенный дом в лесу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

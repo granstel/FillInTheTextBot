@@ -1,0 +1,291 @@
+{
+  "id": "aa470002-2222-4abc-8def-470000000002",
+  "parentId": "aa470001-1111-4abc-8def-470000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "47-ForestHouse-text",
+  "auto": true,
+  "contexts": [
+    "text-47"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-47",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa470002-2222-4abc-8def-4700000000a0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про дом в лесу.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa470002-2222-4abc-8def-4700000000b1",
+          "name": "name1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва назови любое мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала — скажи какое-нибудь мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любое мужское имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa470002-2222-4abc-8def-4700000000b2",
+          "name": "direction",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$direction",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Выбери — «направо» или «налево»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Что скажешь: «направо» или «налево»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Одно из двух — «направо» или «налево»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa470002-2222-4abc-8def-4700000000b3",
+          "name": "adjective1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь ответь в двух-трёх словах — какой?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи в нескольких словах — какой?"
+            },
+            {
+              "lang": "ru",
+              "value": "В двух-трёх словах — какой?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa470002-2222-4abc-8def-4700000000b4",
+          "name": "adjective2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь просто — какой?"
+            },
+            {
+              "lang": "ru",
+              "value": "Ещё раз — какой?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи — какой?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa470002-2222-4abc-8def-4700000000b5",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи название животного мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa470002-2222-4abc-8def-4700000000b6",
+          "name": "adjective3",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjective3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — какой?"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — какой?"
+            },
+            {
+              "lang": "ru",
+              "value": "Последнее — какой?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Однажды мальчик $name1 гулял по лесу и дошёл до развилки. Он свернул $direction. Впереди виднелся $adjective1 дом... Мальчик решается зайти. Вдруг из темноты навстречу ему вышел $adjective2 $animal! $name1 вскрикнул и бросился прочь, залез на дерево и долго там висел, но вскоре слез. Обратный путь домой был $adjective3. Дома он всё рассказал маме с папой, и родители уложили его спать.\nНаутро мальчик решил осмотреть всё до конца. Он взял фонарик, по дороге подобрал палку — и снова стоял у того самого дома. Мальчик зашёл внутрь, и вдруг что-то зашуршало! Он повернулся... но это была всего лишь мышь. Обернулся в другую сторону — а там тот самый монстр! То есть старая вешалка с порванной курткой. $name1 рассмеялся и, довольный, зашагал домой. 😄\nПо-моему, забавно получилось! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "😄": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "😄": ""
+              }
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "😄": ""
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "😄": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-47"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
