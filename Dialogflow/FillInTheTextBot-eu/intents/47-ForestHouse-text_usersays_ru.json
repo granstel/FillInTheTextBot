@@ -393,7 +393,7 @@
     "id": "aa470002-2222-4abc-8def-47000400010d",
     "data": [
       {
-        "text": "полосатый",
+        "text": "красный",
         "meta": "@sys.any",
         "alias": "adjective2",
         "userDefined": true
@@ -408,7 +408,7 @@
     "id": "aa470002-2222-4abc-8def-47000400020d",
     "data": [
       {
-        "text": "лохматый",
+        "text": "синий",
         "meta": "@sys.any",
         "alias": "adjective2",
         "userDefined": true
@@ -423,7 +423,7 @@
     "id": "aa470002-2222-4abc-8def-47000400030d",
     "data": [
       {
-        "text": "зубастый",
+        "text": "зелёный",
         "meta": "@sys.any",
         "alias": "adjective2",
         "userDefined": true
@@ -438,7 +438,7 @@
     "id": "aa470002-2222-4abc-8def-47000400040d",
     "data": [
       {
-        "text": "огромный",
+        "text": "жёлтый",
         "meta": "@sys.any",
         "alias": "adjective2",
         "userDefined": true
@@ -453,7 +453,7 @@
     "id": "aa470002-2222-4abc-8def-47000400050d",
     "data": [
       {
-        "text": "зелёный",
+        "text": "оранжевый",
         "meta": "@sys.any",
         "alias": "adjective2",
         "userDefined": true
@@ -468,7 +468,7 @@
     "id": "aa470002-2222-4abc-8def-47000400060d",
     "data": [
       {
-        "text": "страшный",
+        "text": "фиолетовый",
         "meta": "@sys.any",
         "alias": "adjective2",
         "userDefined": true
@@ -483,7 +483,7 @@
     "id": "aa470002-2222-4abc-8def-47000400070d",
     "data": [
       {
-        "text": "добрый",
+        "text": "голубой",
         "meta": "@sys.any",
         "alias": "adjective2",
         "userDefined": true
@@ -498,7 +498,7 @@
     "id": "aa470002-2222-4abc-8def-47000400080d",
     "data": [
       {
-        "text": "пушистый",
+        "text": "чёрный",
         "meta": "@sys.any",
         "alias": "adjective2",
         "userDefined": true
@@ -663,7 +663,7 @@
     "id": "aa470002-2222-4abc-8def-47000600010d",
     "data": [
       {
-        "text": "длинный",
+        "text": "добрый",
         "meta": "@sys.any",
         "alias": "adjective3",
         "userDefined": true
@@ -678,7 +678,7 @@
     "id": "aa470002-2222-4abc-8def-47000600020d",
     "data": [
       {
-        "text": "короткий",
+        "text": "злой",
         "meta": "@sys.any",
         "alias": "adjective3",
         "userDefined": true
@@ -693,7 +693,7 @@
     "id": "aa470002-2222-4abc-8def-47000600030d",
     "data": [
       {
-        "text": "извилистый",
+        "text": "весёлый",
         "meta": "@sys.any",
         "alias": "adjective3",
         "userDefined": true
@@ -708,7 +708,7 @@
     "id": "aa470002-2222-4abc-8def-47000600040d",
     "data": [
       {
-        "text": "тёмный",
+        "text": "храбрый",
         "meta": "@sys.any",
         "alias": "adjective3",
         "userDefined": true
@@ -723,7 +723,7 @@
     "id": "aa470002-2222-4abc-8def-47000600050d",
     "data": [
       {
-        "text": "солнечный",
+        "text": "ленивый",
         "meta": "@sys.any",
         "alias": "adjective3",
         "userDefined": true
@@ -738,7 +738,7 @@
     "id": "aa470002-2222-4abc-8def-47000600060d",
     "data": [
       {
-        "text": "весёлый",
+        "text": "хитрый",
         "meta": "@sys.any",
         "alias": "adjective3",
         "userDefined": true
@@ -753,7 +753,7 @@
     "id": "aa470002-2222-4abc-8def-47000600070d",
     "data": [
       {
-        "text": "страшный",
+        "text": "вредный",
         "meta": "@sys.any",
         "alias": "adjective3",
         "userDefined": true
@@ -768,7 +768,7 @@
     "id": "aa470002-2222-4abc-8def-47000600080d",
     "data": [
       {
-        "text": "быстрый",
+        "text": "смелый",
         "meta": "@sys.any",
         "alias": "adjective3",
         "userDefined": true
