@@ -11,7 +11,7 @@
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
   <ItemGroup Label="Логирование">
-    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.1.4" />
+    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.2.0" />
   </ItemGroup>
   <ItemGroup Label="Телеметрия">
     <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.17.0" />
