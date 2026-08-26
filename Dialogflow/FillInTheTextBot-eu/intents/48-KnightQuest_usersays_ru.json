@@ -1,0 +1,132 @@
+[
+  {
+    "id": "62036f35-90c0-4455-a68e-268224c0932a",
+    "data": [
+      {
+        "text": "поход рыцаря",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b1bbf6f7-497f-49a3-b041-356d64fc58fe",
+    "data": [
+      {
+        "text": "про рыцаря",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b257b7ea-1c84-48ce-b0d6-6a4cca346b8b",
+    "data": [
+      {
+        "text": "история про рыцаря",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3aa23dbe-5d2e-4e6b-b335-3c6d9429bbd5",
+    "data": [
+      {
+        "text": "сочини про рыцаря",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "87b82eca-02cd-4efa-92a4-5589c2ab15df",
+    "data": [
+      {
+        "text": "рыцарь и пирамида",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a682acc2-cedc-4506-8525-2f7cc6e22188",
+    "data": [
+      {
+        "text": "рыцарь в пустыне",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e9a48d54-9e33-44d8-9f26-95d7dcab9e33",
+    "data": [
+      {
+        "text": "рыцарь и мумии",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ef43e40b-094f-48cf-bf78-92cb483d6a97",
+    "data": [
+      {
+        "text": "рыцарь и фараон",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7996ad41-1652-446d-a9d1-0136b0830928",
+    "data": [
+      {
+        "text": "приключения рыцаря",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f263e20f-c3e6-4928-9ae9-80d7e73c070c",
+    "data": [
+      {
+        "text": "рыцарь и сокровище",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

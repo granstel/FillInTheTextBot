@@ -1,0 +1,204 @@
+{
+  "id": "0cb08163-b8a4-4ca5-8803-72e4dfe2fca2",
+  "parentId": "ec39c5ec-78b1-4835-8730-617a58025d09",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "48-KnightQuest-text1",
+  "auto": true,
+  "contexts": [
+    "text-48-1"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-48-1",
+          "lifespan": 0
+        },
+        {
+          "name": "text-48",
+          "lifespan": 50
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "ed13446c-79a3-4535-9009-b117416355a4",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "текст от подписчика: про поход рыцаря. Эта история из двух частей, начнём с первой.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "1700a318-f85e-4c2a-80cd-a777ff9efe3e",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-48-2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "8aa7396c-225c-4206-acb5-ce10a961eada",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи любое мужское имя"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови мужское имя, например приятеля"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "922bb9e1-91e1-453b-981b-ce507c41eb3d",
+          "name": "direction",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$direction",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Скажи: налево или направо?"
+            },
+            {
+              "lang": "ru",
+              "value": "Выбери: налево или направо?"
+            },
+            {
+              "lang": "ru",
+              "value": "Куда свернуть — налево или направо?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aafd3d20-9991-49ac-9129-20f01cb7bc52",
+          "name": "adjPower",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjPower",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Ответь на вопрос «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любое слово на вопрос «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи что-нибудь на вопрос «какой?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "6c70ef8c-8ac5-42e4-94fe-ebeb19c94dea",
+          "name": "adjPharaoh",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjPharaoh",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос первой части — снова ответь: «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок в этой части — ещё раз «какой?»"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос части — «какой?»"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, история называется «Поход рыцаря» — она из двух частей, начнём с первой! Жил-был отважный рыцарь по имени $name. Как-то шёл он по знойной пустыне и вдруг увидел впереди огромные пирамиды. Как настоящий храбрец, он решил заглянуть внутрь! Рыцарь прошёл запутанный лабиринт, и перед ним разошлись два пути. Недолго думая, он свернул $direction. А там его поджидали мумии и скелеты — гостю они были совсем не рады! Но рыцарь выхватил волшебный меч, взмахнул им — и из клинка вырвался $adjPower вихрь, что вмиг разметал всех врагов. Только рыцарь двинулся дальше, как из огромного саркофага поднялся $adjPharaoh фараон Тутанхамон! Он приказал своим мумиям идти в атаку. Врагов набежало столько, что рыцарь не стал испытывать судьбу и мигом выскочил из пирамиды наружу.\nХочешь узнать, что ждало его снаружи?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-48-1"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

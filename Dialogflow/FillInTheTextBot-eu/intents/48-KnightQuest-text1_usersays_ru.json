@@ -1,0 +1,572 @@
+[
+  {
+    "id": "983368b4-175f-43c6-b97d-d22a001e2b18",
+    "data": [
+      {
+        "text": "Артур",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2221f486-1437-45a4-8c01-c0a1720055ad",
+    "data": [
+      {
+        "text": "Максим",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ee018db9-6fab-4d68-850c-56e624e5cb1e",
+    "data": [
+      {
+        "text": "Иван",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "072beb2e-822d-46ee-9b82-b590f44c164d",
+    "data": [
+      {
+        "text": "Егор",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a24d1b08-ab4a-4f0b-b74b-7e446d9b8f77",
+    "data": [
+      {
+        "text": "Дмитрий",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "611b9560-ed79-45da-840e-6a5d7aa37724",
+    "data": [
+      {
+        "text": "Тимур",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dfc0387b-e5c6-4b32-8b7c-c90fc6e65707",
+    "data": [
+      {
+        "text": "Олег",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7e049bcd-a516-4d67-b3cc-54182f3ccddb",
+    "data": [
+      {
+        "text": "Роман",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ce54b6a6-252e-47b7-8843-832a1bf0ebea",
+    "data": [
+      {
+        "text": "Никита",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f2e3dbc9-2666-41e7-a492-73b3c9f75c2c",
+    "data": [
+      {
+        "text": "Пётр",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8e8feb50-0d73-403c-a2ed-9f4dda1aefcc",
+    "data": [
+      {
+        "text": "налево",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3eb02fb0-e98a-4350-85da-b7647e3979dc",
+    "data": [
+      {
+        "text": "направо",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "080ff2e2-288c-40d6-8479-1d4edaf471cb",
+    "data": [
+      {
+        "text": "влево",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a2da87da-e765-4e12-b3c5-ed1dd0087085",
+    "data": [
+      {
+        "text": "вправо",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fbb0422f-ad0d-499b-8b68-b50d524c4f79",
+    "data": [
+      {
+        "text": "пойти налево",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "82850ce4-960a-482d-ac3d-7324ce2f5afa",
+    "data": [
+      {
+        "text": "свернуть направо",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9a31f5e4-4a0a-4598-b3b0-617ec3e2371e",
+    "data": [
+      {
+        "text": "налево пойду",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "827ff740-9f97-4f46-bf3c-e91750328aa6",
+    "data": [
+      {
+        "text": "лучше направо",
+        "meta": "@sys.any",
+        "alias": "direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9ee54c25-d07e-4fad-a019-33074dfe926e",
+    "data": [
+      {
+        "text": "огненный",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "680cc737-80ea-4294-b2a9-d7259da70412",
+    "data": [
+      {
+        "text": "ледяной",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a09bf36e-b461-4d07-9fd9-bdecc57f9670",
+    "data": [
+      {
+        "text": "громовой",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d1db61c1-8d41-42ea-a695-2918de6d84a5",
+    "data": [
+      {
+        "text": "золотой",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "51794103-337f-4c39-a2fa-6c8fb23c5a4e",
+    "data": [
+      {
+        "text": "красный",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "725d2b1f-8411-43d5-a37f-cac8d004ed88",
+    "data": [
+      {
+        "text": "тёмный",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8f8c8513-0d9b-437c-b9b6-a94bdabd8650",
+    "data": [
+      {
+        "text": "светящийся",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e024fa7c-829c-4c29-bb38-988b3c00e9aa",
+    "data": [
+      {
+        "text": "стальной",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9485af9f-4390-44ea-9256-5bec2d46b810",
+    "data": [
+      {
+        "text": "могучий",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "637c6a06-fa08-47d7-8910-bc736a409ada",
+    "data": [
+      {
+        "text": "синий",
+        "meta": "@sys.any",
+        "alias": "adjPower",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f69c1d2a-bc30-4118-bc3f-9a479ddda567",
+    "data": [
+      {
+        "text": "полосатый",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c8f2fa08-54f3-4f06-83ba-49cff859fedc",
+    "data": [
+      {
+        "text": "огромный",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "440ae885-01a0-4465-8f34-91fd14cf33ba",
+    "data": [
+      {
+        "text": "злой",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5319f9f2-2afa-4caf-9037-b2ef8aee279b",
+    "data": [
+      {
+        "text": "древний",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8af13aa6-490e-4baa-845c-63c4370ae88d",
+    "data": [
+      {
+        "text": "золотой",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3b1e97b7-ceb0-42de-ad79-3c03aa1048a3",
+    "data": [
+      {
+        "text": "страшный",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8bd66489-ea21-4179-bc1f-17d8372cec05",
+    "data": [
+      {
+        "text": "зелёный",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ed22c2a1-dcf9-42c1-be2f-b08758ac9210",
+    "data": [
+      {
+        "text": "огненный",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9c191ae1-0c79-4ff0-a0a4-8b8832bfd1ba",
+    "data": [
+      {
+        "text": "могучий",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5ddd2821-60aa-4c31-be67-adb76c5b009c",
+    "data": [
+      {
+        "text": "ужасный",
+        "meta": "@sys.any",
+        "alias": "adjPharaoh",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
