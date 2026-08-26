@@ -1,0 +1,171 @@
+{
+  "id": "66a141de-8f93-4bf1-a031-a80018b39d4a",
+  "parentId": "ec39c5ec-78b1-4835-8730-617a58025d09",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "48-KnightQuest-text2",
+  "auto": true,
+  "contexts": [
+    "text-48-2"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-48-2",
+          "lifespan": 0
+        },
+        {
+          "name": "text-48",
+          "lifespan": 0
+        },
+        {
+          "name": "multipart-text",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "8c31160e-97d9-4342-8d13-e72cfb02bee4",
+          "name": "whoOutside",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$whoOutside",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Ответь на вопрос «кто?»"
+            },
+            {
+              "lang": "ru",
+              "value": "А теперь ответь: кто это?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, кто это может быть"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e8bab1a2-66f1-492b-91e5-3635d095836e",
+          "name": "whoGuard",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$whoGuard",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — снова «кто?»"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — кто это?"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос: кто это?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Да, давай!"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "У самого выхода рыцаря уже поджидал $whoOutside! Рыцарь ловко увернулся, добежал до верного коня и умчался прочь. Но вскоре любопытство взяло верх — рыцарь решил вернуться, только на этот раз прихватил крепкий лук и щит. У самого входа дорогу ему преградил $whoGuard, но рыцарь ловко с ним справился и шагнул в темноту. Разделавшись с мумиями, он встал лицом к лицу с Тутанхамоном — и начался жестокий, долгий поединок. Вскоре рыцарь одолел фараона, и вдруг прямо в стене открылся тайный проход! Внутри повсюду сверкали золотые монеты и жемчуг, а в центре лежал великий алмаз, который все считали давно пропавшим. Рыцарь схватил кристалл — и всё вокруг загудело! 💥 Пирамида начала рушиться. Времени было в обрез, но храбрец успел выскочить наружу и смотрел, как древние стены оседают в песок. А после вскочил на коня и поскакал домой.\nВот такой славный поход получился! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Yandex": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.ru/fillinthetextbot",
+                  "Text": "Выразить восхищение автору текста"
+                }
+              ],
+              "Replacements": {
+                "💥": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "IsQuickReply": true,
+                  "Text": "Оценить историю"
+                }
+              ],
+              "Replacements": {
+                "💥": ""
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "IsQuickReply": false,
+                  "Url": "https://vk.ru/fillinthetextbot",
+                  "Text": "Выразить восхищение автору текста"
+                }
+              ],
+              "Replacements": {
+                "💥": ""
+              }
+            },
+            "Default": {
+              "Replacements": {
+                "💥": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-48-2"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

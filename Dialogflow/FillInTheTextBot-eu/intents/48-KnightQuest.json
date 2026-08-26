@@ -1,16 +1,23 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "ec39c5ec-78b1-4835-8730-617a58025d09",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "48-KnightQuest",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-48",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
-          "id": "c525daaf-40a6-41cd-9124-0753b0ff3db2",
+          "id": "53fb0977-1fa9-4e43-9d6f-627beec2ef97",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +38,9 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история —"
+            "Отлично! Сочиняем",
+            "Здорово! Давай сочиним",
+            "Класс! Сейчас придумаем"
           ],
           "condition": ""
         }
