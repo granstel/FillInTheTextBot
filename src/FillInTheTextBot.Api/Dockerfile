@@ -1,8 +1,7 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-# curl нужен только для HEALTHCHECK: по его состоянию скрипт раскатки понимает,
-# что новый экземпляр готов принимать трафик
+# curl нужен для HEALTHCHECK ниже; в базовом образе его нет
 RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 # Начиная с .NET 8 образы по умолчанию слушают 8080. Порт зафиксирован явно,
