@@ -59,6 +59,15 @@ fi
 SAFE_VERSION="${VERSION//[^A-Za-z0-9_.-]/_}"
 NEW_NAME="fitb_${SAFE_VERSION}_$(date +%s)"
 
+# Общая сеть для прокси, сервиса и redis. Создаётся здесь, чтобы на новом сервере
+# не было ручного шага: docker network create идемпотентен по смыслу — если сеть уже
+# есть, ничего не делаем. Владельцем её никто не объявляет (в compose она external),
+# потому что потребителей три и лишать двоих из них сети чужим `compose down` не надо.
+if ! docker network inspect "$NETWORK" >/dev/null 2>&1; then
+  echo "==> Создаю docker-сеть ${NETWORK}"
+  docker network create "$NETWORK" >/dev/null
+fi
+
 echo "==> Тянем образ ${IMAGE}"
 docker pull "$IMAGE"
 
