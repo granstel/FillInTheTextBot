@@ -1,20 +1,15 @@
-# Пограничный прокси: терминирует TLS, сам выпускает и продлевает сертификат
-# Let's Encrypt, и маршрутизирует трафик на контейнеры сервиса.
+# Пограничный прокси: терминирует TLS, выпускает и продлевает сертификат
+# Let's Encrypt, маршрутизирует трафик по docker-меткам контейнеров сервиса.
 #
-# Сам сервис (fitb) этим compose НЕ поднимается — его раскатывает rollout.sh
-# с перекрытием старого и нового экземпляра, чтобы обновление шло без простоя.
-# Traefik обнаруживает контейнеры сервиса по docker-меткам на общей сети.
+# Сам сервис этим compose не поднимается — его раскатывает rollout.sh.
 #
-# Запускается один раз и работает постоянно:
-#   docker compose -f deploy/docker-compose.yml up -d
+#   docker compose -f docker-compose.yml up -d
 
 name: fitb-edge
 
 networks:
-  # Та же сеть, где живут redis/prometheus и контейнеры сервиса.
-  # Помечена external намеренно: потребителей у неё трое (прокси, redis,
-  # контейнеры раскатки) и ни один не должен считаться владельцем. Создаётся
-  # автоматически в rollout.sh, вручную делать ничего не нужно.
+  # External намеренно: потребителей трое (прокси, redis, контейнеры сервиса)
+  # и ни один не владелец. Создаётся автоматически в rollout.sh.
   network:
     external: true
 
@@ -29,42 +24,35 @@ services:
       - "80:80"
       - "443:443"
     command:
-      # --- Провайдер: читаем конфигурацию из меток docker-контейнеров ---
       - --providers.docker=true
-      # Ничего не публикуем наружу без явной метки traefik.enable=true
+      # Без явной метки traefik.enable=true наружу ничего не выходит
       - --providers.docker.exposedbydefault=false
       - --providers.docker.network=network
 
-      # --- Точки входа ---
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
-      # Служебная точка входа с API. Наружу НЕ публикуется (её нет в ports),
-      # поэтому доступна только изнутри docker-сети — оттуда rollout.sh
-      # спрашивает, взял ли прокси новый экземпляр в ротацию.
+      # Служебная точка входа с API: наружу не публикуется (её нет в ports),
+      # доступна только изнутри docker-сети, откуда её опрашивает rollout.sh
       - --entrypoints.traefik.address=:8080
       - --api=true
       - --api.insecure=true
-      # Весь http автоматически переводим на https. Запросы ACME-проверки
-      # (/.well-known/acme-challenge/...) Traefik обслуживает до редиректа,
-      # поэтому выпуск сертификата не ломается.
+
+      # ACME-проверку Traefik обслуживает до редиректа, выпуск не ломается
       - --entrypoints.web.http.redirections.entrypoint.to=websecure
       - --entrypoints.web.http.redirections.entrypoint.scheme=https
 
-      # --- Let's Encrypt (HTTP-01 challenge на 80 порту) ---
       - --certificatesresolvers.le.acme.email=${ACME_EMAIL}
       - --certificatesresolvers.le.acme.storage=/acme/acme.json
       - --certificatesresolvers.le.acme.httpchallenge=true
       - --certificatesresolvers.le.acme.httpchallenge.entrypoint=web
 
-      # Заголовки, чьё имя является алиасом управляемого Traefik заголовка,
-      # отбрасываем — иначе клиент может подменить X-Forwarded-*.
+      # Иначе клиент может подменить X-Forwarded-* заголовком-алиасом
       - --entrypoints.web.http.aliasHeadersStrategy=delete
       - --entrypoints.websecure.http.aliasHeadersStrategy=delete
 
       - --log.level=INFO
       - --accesslog=true
     volumes:
-      # Только чтение сокета: Traefik лишь наблюдает за контейнерами
+      # Только чтение: Traefik лишь наблюдает за контейнерами
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      # Хранилище сертификатов; acme.json Traefik создаёт сам с правами 600
       - ./acme:/acme
