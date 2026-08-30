@@ -66,18 +66,25 @@ echo "==> Активен: ${ACTIVE:-(нет — первый запуск)}; п�
 echo "==> Тянем образ версии ${VERSION}"
 compose "$TARGET" pull
 
-# --wait ждёт HEALTHCHECK образа
-echo "==> Поднимаем ${TARGET} и ждём готовности, до ${HEALTH_TIMEOUT}s"
-if ! compose "$TARGET" up -d --wait --wait-timeout "$HEALTH_TIMEOUT"; then
-  echo "!! Новый экземпляр не стал здоровым за ${HEALTH_TIMEOUT}s — откатываемся." >&2
-  compose "$TARGET" logs --tail 50 || true
-  compose "$TARGET" down >/dev/null 2>&1 || true
-  exit 1
-fi
-echo "   Новый экземпляр здоров."
+echo "==> Поднимаем ${TARGET}"
+compose "$TARGET" up -d
 
 NEW_ID="$(compose "$TARGET" ps -q fitb)"
 NEW_IP="$(docker inspect -f "{{ (index .NetworkSettings.Networks \"${NETWORK}\").IPAddress }}" "$NEW_ID")"
+
+# Стучимся с хоста, поэтому curl внутри образа не нужен
+echo "==> Ждём готовности ${NEW_IP} на /health, до ${HEALTH_TIMEOUT}s"
+deadline=$(( $(date +%s) + HEALTH_TIMEOUT ))
+until curl -fsS -m 2 "http://${NEW_IP}/health" >/dev/null 2>&1; do
+  if [ "$(date +%s)" -ge "$deadline" ]; then
+    echo "!! Новый экземпляр не стал здоровым за ${HEALTH_TIMEOUT}s — откатываемся." >&2
+    compose "$TARGET" logs --tail 50 || true
+    compose "$TARGET" down >/dev/null 2>&1 || true
+    exit 1
+  fi
+  sleep 2
+done
+echo "   Новый экземпляр здоров."
 
 # Гасить старый до подтверждения ротации — оставить пул без живых серверов.
 echo "==> Ждём, пока Traefik возьмёт ${NEW_IP} в ротацию, до ${ROTATION_TIMEOUT}s"
@@ -87,6 +94,7 @@ until curl -fsS -m 2 "$API_URL" 2>/dev/null | grep -q "\"http://${NEW_IP}:80\":\
 do
   if [ "$(date +%s)" -ge "$deadline" ]; then
     echo "!! Traefik не взял новый экземпляр в ротацию за ${ROTATION_TIMEOUT}s — откатываемся." >&2
+    compose "$TARGET" logs --tail 50 || true
     compose "$TARGET" down >/dev/null 2>&1 || true
     exit 1
   fi

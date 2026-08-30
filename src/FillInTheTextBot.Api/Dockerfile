@@ -1,8 +1,6 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-# curl нужен для HEALTHCHECK ниже; в базовом образе его нет
-RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 # Начиная с .NET 8 образы по умолчанию слушают 8080. Порт зафиксирован явно,
 # чтобы контракт контейнера не поменялся вместе с версией рантайма.
@@ -31,5 +29,4 @@ RUN dotnet publish "FillInTheTextBot.Api.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-HEALTHCHECK --interval=5s --timeout=3s --start-period=20s --retries=3 CMD curl -fsS http://localhost:80/health || exit 1
 ENTRYPOINT ["dotnet", "FillInTheTextBot.Api.dll"]
