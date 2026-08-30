@@ -1,15 +1,12 @@
-# Пограничный прокси: терминирует TLS, выпускает и продлевает сертификат
-# Let's Encrypt, маршрутизирует трафик по docker-меткам контейнеров сервиса.
-#
-# Сам сервис этим compose не поднимается — его раскатывает rollout.sh.
+# Пограничный прокси: TLS, сертификат Let's Encrypt, маршрутизация по docker-меткам.
+# Сервис поднимает rollout.sh.
 #
 #   docker compose -f docker-compose.yml up -d
 
 name: fitb-edge
 
 networks:
-  # Сеть создаёт этот стек: прокси поднимается первым и работает постоянно.
-  # Redis и контейнеры сервиса подключаются к ней как к внешней.
+  # Создаётся этим стеком; redis и сервис подключаются к ней как к внешней
   network:
     name: network
 
@@ -31,8 +28,7 @@ services:
 
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
-      # Служебная точка входа с API: наружу не публикуется (её нет в ports),
-      # доступна только изнутри docker-сети, откуда её опрашивает rollout.sh
+      # Наружу не публикуется; API опрашивает rollout.sh изнутри сети
       - --entrypoints.traefik.address=:8080
       - --api=true
       - --api.insecure=true

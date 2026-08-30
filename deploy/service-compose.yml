@@ -1,5 +1,4 @@
-# Контейнер сервиса. Поднимается rollout.sh под именем проекта fitb-blue или
-# fitb-green: во время раската живут оба, поэтому имя проекта задаётся снаружи.
+# Контейнер сервиса. Имя проекта задаёт rollout.sh — во время раската живут оба цвета.
 #
 #   VERSION=1.27.0 docker compose -p fitb-green -f service-compose.yml up -d --wait
 
@@ -13,7 +12,7 @@ services:
     restart: unless-stopped
     networks:
       network:
-        # Стабильное имя экземпляра, одинаковое у обоих цветов
+        # Одинаковый у обоих цветов
         aliases:
           - ${SERVICE_ALIAS:-fitb}
     env_file:
@@ -21,8 +20,7 @@ services:
     volumes:
       - ${KEYS_DIR:?задайте KEYS_DIR в .env}:/app/keys:ro
       - ${LOGS_DIR:?задайте LOGS_DIR в .env}:/app/logs
-    # Запас на слив трафика и завершение запросов при остановке.
-    # Должен быть больше, чем DrainDelaySeconds + Shutdown.TimeoutSeconds сервиса.
+    # Больше, чем DrainDelaySeconds + Shutdown.TimeoutSeconds сервиса
     stop_grace_period: ${STOP_TIMEOUT:-45}s
     labels:
       app: fitb
