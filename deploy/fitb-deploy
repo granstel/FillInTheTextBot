@@ -18,7 +18,7 @@ REPO_DIR="${WORK_DIR}/.repo"
 
 # Синхронизируется только это. Остальное в каталоге раскатки — локальная
 # конфигурация с секретами (.env, app.env, acme/), её не трогаем.
-SYNCED=(rollout.sh docker-compose.yml redis-compose.yml env.example app-env.example)
+SYNCED=(rollout.sh docker-compose.yml redis-compose.yml service-compose.yml env.example app-env.example)
 
 requested="${SSH_ORIGINAL_COMMAND:-}"
 
