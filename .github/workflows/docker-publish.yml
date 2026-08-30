@@ -1,9 +1,10 @@
 name: Docker publish
 
 on:
-  push:
-    branches: [ master ]
-  workflow_dispatch:
+  # Выпуск версии — публикация релиза в GitHub. Имя тега релиза становится
+  # тегом образа и версией, которую раскатывает rollout.sh на сервере.
+  release:
+    types: [ published ]
 
 concurrency:
   # Раскатки не должны идти параллельно: две одновременные сломают порядок замены экземпляров
@@ -24,7 +25,11 @@ jobs:
       - name: Read version
         id: version
         run: |
-          version=$(grep -oPm1 '(?<=<Version>)[^<]+' src/FillInTheTextBot.Api/FillInTheTextBot.Api.csproj)
+          version='${{ github.event.release.tag_name }}'
+          if [ -z "$version" ]; then
+            echo "У релиза пустой тег — нечего собирать" >&2
+            exit 1
+          fi
           echo "value=${version}" >> "$GITHUB_OUTPUT"
           echo "Version: ${version}"
 
