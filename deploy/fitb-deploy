@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+#
+# Форсированная команда для ключа раскатки из CI.
+#
+# Устанавливается на сервер ОДИН РАЗ вручную, под root:
+#   install -m 755 -o root -g root deploy/fitb-deploy /usr/local/sbin/fitb-deploy
+#
+# Сам себя этот файл НЕ обновляет — намеренно. Он и есть граница доверия: если бы
+# CI мог его переписать, то любой коммит в репозиторий получал бы на сервере права
+# группы docker, то есть фактически root. Меняется он редко, обновляется руками.
+#
+# Что делает:
+#   1. Из присланной CI команды достаёт номер версии по строгому шаблону.
+#      Что бы ни прислали ещё — игнорируется.
+#   2. Подтягивает каталог deploy/ РОВНО С ТЕГА этой версии (частичный клон,
+#      только нужный каталог) и обновляет им рабочую копию в /opt/fitb, чтобы
+#      скрипты раскатки всегда соответствовали выпущенной версии.
+#   3. Запускает обновлённый rollout.sh.
+set -euo pipefail
+
+WORK_DIR="${FITB_WORK_DIR:-/opt/fitb}"
+REPO_DIR="${WORK_DIR}/.repo"
+
+# Синхронизируются только эти файлы. Всё остальное в /opt/fitb — локальная
+# конфигурация с секретами (.env, app.env, redis-compose.yml, acme/), её не трогаем.
+SYNCED=(rollout.sh docker-compose.yml README.md env.example app-env.example)
+
+requested="${SSH_ORIGINAL_COMMAND:-}"
+
+version="$(printf '%s' "$requested" \
+  | grep -oE '(^|[^0-9A-Za-z.-])[0-9]+\.[0-9]+\.[0-9]+([-+.][A-Za-z0-9.-]+)?([^0-9A-Za-z.-]|$)' \
+  | grep -oE '[0-9]+\.[0-9]+\.[0-9]+([-+.][A-Za-z0-9.-]+)?' \
+  | head -1 || true)"
+
+if [ -z "$version" ]; then
+  echo "!! Ключу раскатки доступна только команда вида './rollout.sh <версия>'." >&2
+  echo "   В запросе не найден номер версии. Запрошено: ${requested:-<пусто>}" >&2
+  exit 2
+fi
+
+echo "==> Раскатка версии ${version} (запрос от ключа CI)"
+
+# --- синхронизация deploy/ с тегом версии ---
+if [ -d "${REPO_DIR}/.git" ]; then
+  git -C "$REPO_DIR" fetch -q --filter=blob:none origin \
+      "refs/tags/${version}:refs/tags/${version}" 2>/dev/null || true
+
+  if git -C "$REPO_DIR" rev-parse -q --verify "refs/tags/${version}^{commit}" >/dev/null; then
+    git -C "$REPO_DIR" -c advice.detachedHead=false checkout -q --force "refs/tags/${version}"
+    echo "==> Сверяю deploy/ с тегом ${version}"
+
+    compose_changed=0
+    for f in "${SYNCED[@]}"; do
+      src="${REPO_DIR}/deploy/${f}"
+      [ -f "$src" ] || continue
+      if ! cmp -s "$src" "${WORK_DIR}/${f}"; then
+        cp -f "$src" "${WORK_DIR}/${f}"
+        echo "   обновлён: ${f}"
+        [ "$f" = "docker-compose.yml" ] && compose_changed=1
+      fi
+    done
+    chmod +x "${WORK_DIR}/rollout.sh"
+
+    if [ "$compose_changed" = "1" ]; then
+      echo "!! docker-compose.yml изменился — конфигурация прокси на сервере устарела." >&2
+      echo "   Примените вручную (перезапуск Traefik рвёт соединения, поэтому не автоматом):" >&2
+      echo "     docker compose -f ${WORK_DIR}/docker-compose.yml up -d" >&2
+    fi
+  else
+    echo "!! Тег ${version} в репозитории не найден — работаю с текущей копией deploy/." >&2
+  fi
+else
+  echo "!! ${REPO_DIR} не является клоном репозитория — синхронизация deploy/ пропущена." >&2
+fi
+
+cd "$WORK_DIR"
+exec ./rollout.sh "$version"
