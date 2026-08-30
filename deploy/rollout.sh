@@ -9,7 +9,10 @@
 #   2. Поднимаем НОВЫЙ контейнер рядом со старым, с теми же метками Traefik —
 #      Traefik добавляет его в пул балансировки как второй сервер.
 #   3. Ждём, пока новый ответит здоровьем на /health.
-#   4. Гасим старый: он по SIGTERM объявляет себя неготовым (health -> 503),
+#   4. Спрашиваем у Traefik, взял ли он новый экземпляр в ротацию. Готовность
+#      приложения и готовность прокси — разные события: прокси узнаёт о ней
+#      своей проверкой, и гасить старый до этого нельзя.
+#   5. Гасим старый: он по SIGTERM объявляет себя неготовым (health -> 503),
 #      Traefik уводит с него трафик, приложение доживает текущие запросы и
 #      разбирает очередь фоновых задач, и только потом выходит.
 #
@@ -42,6 +45,9 @@ HEALTH_TIMEOUT="${HEALTH_TIMEOUT:-60}"   # сколько ждём готовн�
 # Запас на слив трафика (drain) + завершение запросов и очереди фоновых задач.
 # Должен быть больше, чем DrainDelaySeconds + Shutdown.TimeoutSeconds сервиса.
 STOP_TIMEOUT="${STOP_TIMEOUT:-45}"
+TRAEFIK_CONTAINER="${TRAEFIK_CONTAINER:-traefik}"   # имя контейнера прокси
+TRAEFIK_SERVICE="${TRAEFIK_SERVICE:-fitb}"          # имя сервиса в метках ниже
+ROTATION_TIMEOUT="${ROTATION_TIMEOUT:-30}"          # сколько ждём попадания в пул, сек
 
 if [ ! -f "$APP_ENV_FILE" ]; then
   echo "!! Не найден файл окружения приложения: $APP_ENV_FILE" >&2
@@ -103,7 +109,34 @@ until curl -fsS -m 2 "http://${NEW_IP}/health" >/dev/null 2>&1; do
 done
 echo "   Новый экземпляр здоров."
 
-# Новый в пуле Traefik и принимает трафик — можно спокойно уводить старые.
+# Готовность приложения — ещё не готовность к переключению: Traefik узнаёт о ней
+# только своей проверкой (раз в healthcheck.interval). Если погасить старый раньше,
+# чем прокси возьмёт новый в ротацию, в пуле не останется живых серверов и клиент
+# получит 503. Поэтому спрашиваем у самого Traefik, а не полагаемся на тайминги.
+TRAEFIK_IP="$(docker inspect -f "{{ (index .NetworkSettings.Networks \"${NETWORK}\").IPAddress }}" "$TRAEFIK_CONTAINER" 2>/dev/null || true)"
+
+if [ -z "$TRAEFIK_IP" ]; then
+  echo "!! Контейнер ${TRAEFIK_CONTAINER} не найден в сети ${NETWORK}." >&2
+  echo "   Не могу убедиться, что новый экземпляр в ротации — прерываюсь, старый остаётся работать." >&2
+  docker rm -f "$NEW_NAME" >/dev/null 2>&1 || true
+  exit 1
+fi
+
+echo "==> Ждём, пока Traefik возьмёт ${NEW_IP} в ротацию, до ${ROTATION_TIMEOUT}s"
+deadline=$(( $(date +%s) + ROTATION_TIMEOUT ))
+API_URL="http://${TRAEFIK_IP}:8080/api/http/services/${TRAEFIK_SERVICE}@docker"
+until curl -fsS -m 2 "$API_URL" 2>/dev/null | grep -q "\"http://${NEW_IP}:80\":\"UP\""
+do
+  if [ "$(date +%s)" -ge "$deadline" ]; then
+    echo "!! Traefik не взял новый экземпляр в ротацию за ${ROTATION_TIMEOUT}s — откатываемся." >&2
+    docker rm -f "$NEW_NAME" >/dev/null 2>&1 || true
+    exit 1
+  fi
+  sleep 1
+done
+echo "   Traefik балансирует на новый экземпляр."
+
+# Теперь в пуле гарантированно есть живой сервер — можно уводить старые.
 for c in "${OLD[@]}"; do
   [ -z "$c" ] && continue
   echo "==> Сливаем и останавливаем старый ${c} (до ${STOP_TIMEOUT}s)"

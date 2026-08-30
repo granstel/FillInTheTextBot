@@ -36,6 +36,12 @@ services:
       # --- Точки входа ---
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
+      # Служебная точка входа с API. Наружу НЕ публикуется (её нет в ports),
+      # поэтому доступна только изнутри docker-сети — оттуда rollout.sh
+      # спрашивает, взял ли прокси новый экземпляр в ротацию.
+      - --entrypoints.traefik.address=:8080
+      - --api=true
+      - --api.insecure=true
       # Весь http автоматически переводим на https. Запросы ACME-проверки
       # (/.well-known/acme-challenge/...) Traefik обслуживает до редиректа,
       # поэтому выпуск сертификата не ломается.
