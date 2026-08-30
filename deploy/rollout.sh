@@ -41,14 +41,19 @@ if [ ! -f "$APP_ENV_FILE" ]; then
   exit 1
 fi
 
+# Прокси нужен раскатке дважды: он держит общую сеть и подтверждает ротацию.
+# Проверяем до образа и контейнера, чтобы не тратить цикл ради отказа в конце.
+TRAEFIK_IP="$(docker inspect -f "{{ (index .NetworkSettings.Networks \"${NETWORK}\").IPAddress }}" "$TRAEFIK_CONTAINER" 2>/dev/null || true)"
+
+if [ -z "$TRAEFIK_IP" ]; then
+  echo "!! Контейнер ${TRAEFIK_CONTAINER} не найден в сети ${NETWORK}." >&2
+  echo "   Поднимите прокси: docker compose -f docker-compose.yml up -d" >&2
+  exit 1
+fi
+
 # Версия + метка времени, чтобы можно было перекатать ту же версию
 SAFE_VERSION="${VERSION//[^A-Za-z0-9_.-]/_}"
 NEW_NAME="fitb_${SAFE_VERSION}_$(date +%s)"
-
-if ! docker network inspect "$NETWORK" >/dev/null 2>&1; then
-  echo "==> Создаю docker-сеть ${NETWORK}"
-  docker network create "$NETWORK" >/dev/null
-fi
 
 echo "==> Тянем образ ${IMAGE}"
 docker pull "$IMAGE"
@@ -105,14 +110,6 @@ echo "   Новый экземпляр здоров."
 # ожидания 12 таких ответов на 338 запросов обычного трафика, с ним — 0 из 911 и 0 из
 # 1342 в двух прогонах. В логе Traefik они отличимы: у ответа сливающегося экземпляра
 # указан бэкенд, у ответа самого прокси вместо бэкенда прочерк.
-TRAEFIK_IP="$(docker inspect -f "{{ (index .NetworkSettings.Networks \"${NETWORK}\").IPAddress }}" "$TRAEFIK_CONTAINER" 2>/dev/null || true)"
-
-if [ -z "$TRAEFIK_IP" ]; then
-  echo "!! Контейнер ${TRAEFIK_CONTAINER} не найден в сети ${NETWORK} — прерываюсь, старый работает." >&2
-  docker rm -f "$NEW_NAME" >/dev/null 2>&1 || true
-  exit 1
-fi
-
 echo "==> Ждём, пока Traefik возьмёт ${NEW_IP} в ротацию, до ${ROTATION_TIMEOUT}s"
 deadline=$(( $(date +%s) + ROTATION_TIMEOUT ))
 API_URL="http://${TRAEFIK_IP}:8080/api/http/services/${TRAEFIK_SERVICE}@docker"
