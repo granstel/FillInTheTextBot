@@ -1,6 +1,11 @@
-# Кэш сессий. Порты наружу не публикуются — redis доступен только внутри docker-сети.
+# Кэш сессий.
 #
 #   docker compose -f redis-compose.yml up -d
+#
+# Сервису redis доступен по имени внутри docker-сети. Наружу порт не открыт:
+# публикуется только на loopback сервера, подключаться через SSH-туннель
+#
+#   ssh -L 6379:127.0.0.1:6379 <сервер>
 
 name: fitb-redis
 
@@ -16,6 +21,10 @@ services:
     networks:
       network:
         aliases: [redis]
+    # Адрес обязателен: без него docker открыл бы порт на все интерфейсы
+    # в обход ufw, и redis оказался бы в интернете
+    ports:
+      - "127.0.0.1:6379:6379"
     command: >
       redis-server
       --requirepass ${REDIS_PASSWORD:?задайте REDIS_PASSWORD в .env}
