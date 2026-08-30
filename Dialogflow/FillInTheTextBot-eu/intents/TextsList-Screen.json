@@ -253,6 +253,22 @@
             },
             {
               "text": "Переполох в деревне"
+            },
+            {
+              "text": "Дом в лесу"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
+              "text": "Поход рыцаря"
             }
           ],
           "textToSpeech": "",

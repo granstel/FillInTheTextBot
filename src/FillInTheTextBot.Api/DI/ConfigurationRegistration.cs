@@ -1,15 +1,12 @@
 ﻿using FillInTheTextBot.Services.Configuration;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FillInTheTextBot.Api.DI
 {
     internal static class ConfigurationRegistration
     {
-        internal static void AddAppConfiguration(this IServiceCollection services, IConfiguration appConfiguration)
+        internal static void AddAppConfiguration(this IServiceCollection services, AppConfiguration configuration)
         {
-            var configuration = appConfiguration.GetSection($"{nameof(AppConfiguration)}").Get<AppConfiguration>();
-
             services.AddSingleton(configuration);
             services.AddSingleton(configuration.HttpLog);
             services.AddSingleton(configuration.Redis);

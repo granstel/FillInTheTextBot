@@ -32,7 +32,7 @@
     "data": [
       {
         "text": "2",
-        "meta": "@sys.number",
+        "meta": "@sys.any",
         "alias": "number-3",
         "userDefined": true
       }
@@ -47,7 +47,7 @@
     "data": [
       {
         "text": "1",
-        "meta": "@sys.number",
+        "meta": "@sys.any",
         "alias": "number-2",
         "userDefined": true
       }
@@ -135,7 +135,7 @@
     "data": [
       {
         "text": "12",
-        "meta": "@sys.number",
+        "meta": "@sys.any",
         "alias": "number-1",
         "userDefined": true
       }

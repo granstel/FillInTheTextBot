@@ -1,0 +1,302 @@
+[
+  {
+    "id": "b815ff82-6c30-4af4-932a-466489d70fe9",
+    "data": [
+      {
+        "text": "динозавр",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "af6c3270-824f-4985-827f-60eb1958d3f9",
+    "data": [
+      {
+        "text": "дракон",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f0c2361e-41d4-4a30-b5ae-5722a6412291",
+    "data": [
+      {
+        "text": "скорпион",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6ed06efd-b9a5-4a8b-bf2b-c09d134b7d7a",
+    "data": [
+      {
+        "text": "лев",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f50b0281-b046-4c53-93e9-620fcf08dab0",
+    "data": [
+      {
+        "text": "разбойник",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fbe5606d-1e3a-46c2-96a2-aa6bd6bbf2d9",
+    "data": [
+      {
+        "text": "великан",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "efefb1b9-92b2-44dc-a95e-fd798a707513",
+    "data": [
+      {
+        "text": "змей",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "90735f76-de69-4fea-a5d5-d72841e7c85e",
+    "data": [
+      {
+        "text": "тигр",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bd5dca4a-ec74-4f3f-ac83-3a716b6fbf63",
+    "data": [
+      {
+        "text": "крокодил",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "43dadac1-43dc-48a6-a8b3-8f1d6b6bf57c",
+    "data": [
+      {
+        "text": "паук",
+        "meta": "@sys.any",
+        "alias": "whoOutside",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2f00d703-f3ee-4ec8-8187-fd6edf1d280c",
+    "data": [
+      {
+        "text": "великан",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2c127f7a-5871-489f-a316-989f12cca0e8",
+    "data": [
+      {
+        "text": "дракон",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "36f2d42f-6729-4a12-8809-f303e9437c05",
+    "data": [
+      {
+        "text": "голем",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "eb78ad86-99eb-466c-9c10-2db0e8090e9c",
+    "data": [
+      {
+        "text": "страж",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b5bd5b2b-f557-494d-afa7-359eda9aa9b0",
+    "data": [
+      {
+        "text": "минотавр",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5bfb05cb-2a62-4231-b6af-cecb1bf74e91",
+    "data": [
+      {
+        "text": "циклоп",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e62b30e3-d3f1-4f91-b219-e58f22d26b57",
+    "data": [
+      {
+        "text": "скелет",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7b38f1dd-3814-4a6e-97c8-618520523b6e",
+    "data": [
+      {
+        "text": "тролль",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "057990c8-b042-41e3-917c-22526a7c63e6",
+    "data": [
+      {
+        "text": "змей",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3210c022-01e3-4e2e-bf6c-8f38eb5c53d6",
+    "data": [
+      {
+        "text": "робот",
+        "meta": "@sys.any",
+        "alias": "whoGuard",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

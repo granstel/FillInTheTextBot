@@ -4,7 +4,6 @@ using FillInTheTextBot.Services;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
-using NUnit.Framework.Legacy;
 using Yandex.Dialogs.Models;
 using Yandex.Dialogs.Models.Input;
 
@@ -54,7 +53,7 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             _mockRepository.VerifyAll();
 
-            ClassicAssert.NotNull(result);
+            Assert.That(result, Is.Not.Null);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using FillInTheTextBot.Models;
 using FillInTheTextBot.Services.Extensions;
 using NUnit.Framework;
-using NUnit.Framework.Legacy;
 
 namespace FillInTheTextBot.Services.Tests.Extensions
 {
@@ -17,8 +16,8 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = serialized.Deserialize<Button>();
 
 
-            ClassicAssert.AreEqual("Привет", result.Text);
-            ClassicAssert.True(result.IsQuickReply);
+            Assert.That(result.Text, Is.EqualTo("Привет"));
+            Assert.That(result.IsQuickReply, Is.True);
         }
 
         [Test]
@@ -30,7 +29,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = source.Deserialize<Button>();
 
 
-            ClassicAssert.AreSame(source, result);
+            Assert.That(result, Is.SameAs(source));
         }
 
         [Test]
@@ -42,7 +41,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = source.Deserialize<Button>();
 
 
-            ClassicAssert.Null(result);
+            Assert.That(result, Is.Null);
         }
 
         [Test]
@@ -55,7 +54,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = source.Deserialize<Button>();
 
 
-            ClassicAssert.Null(result);
+            Assert.That(result, Is.Null);
         }
 
         [Test]
@@ -67,7 +66,7 @@ namespace FillInTheTextBot.Services.Tests.Extensions
             var result = source.Deserialize<string>();
 
 
-            ClassicAssert.AreEqual("просто строка", result);
+            Assert.That(result, Is.EqualTo("просто строка"));
         }
     }
 }

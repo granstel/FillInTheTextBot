@@ -1,0 +1,36 @@
+name: Load test
+
+# Запускается только вручную: нагрузочный прогон недёшев и не нужен на каждый push
+on:
+  workflow_dispatch:
+    inputs:
+      peak_rps:
+        description: 'Пиковая нагрузка, запросов в секунду'
+        default: '18'
+      ramp_duration:
+        description: 'Длительность подъёма и спуска (напр. 1m, 30s)'
+        default: '1m'
+      peak_duration:
+        description: 'Длительность пика'
+        default: '1m'
+
+jobs:
+  loadtest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run k6 load test
+        env:
+          PEAK_RPS: ${{ inputs.peak_rps }}
+          RAMP_DURATION: ${{ inputs.ramp_duration }}
+          PEAK_DURATION: ${{ inputs.peak_duration }}
+        # Код выхода = коду k6: если пороги не пройдены, шаг и весь job падают
+        run: >
+          docker compose -f loadtest/docker-compose.loadtest.yml up
+          --build --abort-on-container-exit --exit-code-from k6
+
+      - name: Teardown
+        if: always()
+        run: docker compose -f loadtest/docker-compose.loadtest.yml down -v
