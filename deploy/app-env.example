@@ -1,0 +1,52 @@
+# Секреты и настройки приложения. Передаётся контейнеру как --env-file.
+# Скопируйте в deploy/app.env и заполните реальными значениями:
+#
+#   cp deploy/app-env.example deploy/app.env
+#
+# В репозиторий app.env не коммитится. Реальные ключи/пароли — только на сервере.
+#
+# Иерархия конфигурации задаётся двойным подчёркиванием: __ превращается в ':'
+# (AppConfiguration__Redis__ConnectionString == AppConfiguration:Redis:ConnectionString).
+
+# ---------------------------------------------------------------------------
+# Dialogflow: агенты 0..N. JsonPath — путь к ключу внутри контейнера (/app/keys
+# смонтирован из KEYS_DIR). ScopeId должен быть уникальным и непустым, иначе
+# агент не участвует в выборе.
+# ---------------------------------------------------------------------------
+AppConfiguration__Dialogflow__0__ProjectId=your-project-0
+AppConfiguration__Dialogflow__0__ScopeId=scope-0
+AppConfiguration__Dialogflow__0__JsonPath=keys/your-project-0.json
+AppConfiguration__Dialogflow__0__Region=europe-west1
+
+AppConfiguration__Dialogflow__1__ProjectId=your-project-1
+AppConfiguration__Dialogflow__1__ScopeId=scope-1
+AppConfiguration__Dialogflow__1__JsonPath=keys/your-project-1.json
+AppConfiguration__Dialogflow__1__Region=europe-west1
+
+# ...добавьте остальные агенты по тому же образцу (2, 3, ...).
+
+# ---------------------------------------------------------------------------
+# Redis (кэш сессий). Хост redis доступен по имени внутри docker-сети.
+# ---------------------------------------------------------------------------
+AppConfiguration__Redis__ConnectionString=redis:6379,password=CHANGE-ME,abortConnect=false,syncTimeout=2000,asyncTimeout=2000
+AppConfiguration__Redis__KeyPrefix=
+
+# ---------------------------------------------------------------------------
+# Трассировка (OTLP). Оставьте Host пустым, чтобы экспорт трейсов был выключен.
+# ---------------------------------------------------------------------------
+AppConfiguration__Tracing__Host=
+AppConfiguration__Tracing__Port=4317
+
+# ---------------------------------------------------------------------------
+# Плавная остановка (значения по умолчанию подходят; менять не обязательно).
+# ---------------------------------------------------------------------------
+# AppConfiguration__Shutdown__DrainDelaySeconds=10
+# AppConfiguration__Shutdown__TimeoutSeconds=30
+
+# ---------------------------------------------------------------------------
+# Токены проверки входящих запросов от площадок. Подставляются в
+# appsettings.<площадка>.json на место %ИМЯ-ПЕРЕМЕННОЙ%.
+# ---------------------------------------------------------------------------
+FITB-YANDEX-INCOMINGTOKEN=CHANGE-ME
+FITB-SBER-INCOMINGTOKEN=CHANGE-ME
+FITB-MARUSIA-INCOMINGTOKEN=CHANGE-ME

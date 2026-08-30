@@ -9,7 +9,10 @@
 **/.hg*
 **/.hg
 **/Keys/
-**/deploy/
+# deploy/: конфиги раскатки трекаются, секреты и сертификаты — нет
+/deploy/.env
+/deploy/app.env
+/deploy/acme/
 **/.config/
 **/Properties/
 /src/FillInTheTextBot.Api/FillInTheTextBot.Api.csproj.user
