@@ -1,0 +1,54 @@
+# Пограничный прокси: TLS, сертификат Let's Encrypt, маршрутизация по docker-меткам.
+# Сервис поднимает rollout.sh.
+#
+#   docker compose -f docker-compose.yml up -d
+
+name: fitb-edge
+
+networks:
+  # Создаётся этим стеком; redis и сервис подключаются к ней как к внешней
+  network:
+    name: network
+
+services:
+  traefik:
+    image: traefik:v3.7
+    container_name: traefik
+    restart: always
+    networks:
+      - network
+    ports:
+      - "80:80"
+      - "443:443"
+    command:
+      - --providers.docker=true
+      # Без явной метки traefik.enable=true наружу ничего не выходит
+      - --providers.docker.exposedbydefault=false
+      - --providers.docker.network=network
+
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      # Наружу не публикуется; API опрашивает rollout.sh изнутри сети
+      - --entrypoints.traefik.address=:8080
+      - --api=true
+      - --api.insecure=true
+
+      # ACME-проверку Traefik обслуживает до редиректа, выпуск не ломается
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+
+      - --certificatesresolvers.le.acme.email=${ACME_EMAIL}
+      - --certificatesresolvers.le.acme.storage=/acme/acme.json
+      - --certificatesresolvers.le.acme.httpchallenge=true
+      - --certificatesresolvers.le.acme.httpchallenge.entrypoint=web
+
+      # Иначе клиент может подменить X-Forwarded-* заголовком-алиасом
+      - --entrypoints.web.http.aliasHeadersStrategy=delete
+      - --entrypoints.websecure.http.aliasHeadersStrategy=delete
+
+      - --log.level=INFO
+      - --accesslog=true
+    volumes:
+      # Только чтение: Traefik лишь наблюдает за контейнерами
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./acme:/acme

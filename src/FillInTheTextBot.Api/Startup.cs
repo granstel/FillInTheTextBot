@@ -1,4 +1,4 @@
-﻿using FillInTheTextBot.Api.Middleware;
+using FillInTheTextBot.Api.Middleware;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -6,11 +6,19 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using FillInTheTextBot.Api.DI;
+using FillInTheTextBot.Api.Health;
+using Microsoft.Extensions.Hosting;
 
 namespace FillInTheTextBot.Api
 {
     public class Startup
     {
+        /// <summary>
+        /// Путь проверки здоровья. По нему ходит балансировщик, чтобы понимать,
+        /// можно ли слать на экземпляр трафик.
+        /// </summary>
+        public const string HealthPath = "/health";
+
         private readonly IConfiguration _configuration;
 
         public Startup(IConfiguration configuration)
@@ -36,8 +44,25 @@ namespace FillInTheTextBot.Api
             });
 
             services.AddAppConfiguration(appConfiguration);
+
+            AddHealth(services);
+
             services.AddInternalServices();
             services.AddExternalServices();
+        }
+
+        private static void AddHealth(IServiceCollection services)
+        {
+            services.AddSingleton<ReadinessState>();
+            services.AddHostedService<GracefulShutdownService>();
+
+            services.AddHealthChecks()
+                .AddCheck<ReadinessHealthCheck>("readiness");
+
+            // Хост должен дождаться и текущих запросов, и разбора очереди фоновых работ
+            services.AddOptions<HostOptions>()
+                .Configure<ShutdownConfiguration>((options, shutdown) =>
+                    options.ShutdownTimeout = TimeSpan.FromSeconds(shutdown.TimeoutSeconds));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +86,7 @@ namespace FillInTheTextBot.Api
             {
                 e.MapControllers();
                 e.MapPrometheusScrapingEndpoint();
+                e.MapHealthChecks(HealthPath);
             });
         }
     }

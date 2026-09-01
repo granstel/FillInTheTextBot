@@ -1,0 +1,39 @@
+# Секреты и настройки приложения, передаётся контейнеру как --env-file.
+#
+#   cp app-env.example app.env
+#
+# В репозиторий app.env не коммитится. Двойное подчёркивание = ':' в конфигурации:
+# AppConfiguration__Redis__ConnectionString == AppConfiguration:Redis:ConnectionString
+
+# Dialogflow: агенты 0..N. JsonPath — путь внутри контейнера, /app/keys смонтирован
+# из KEYS_DIR. ScopeId должен быть уникальным и непустым, иначе агент не участвует
+# в выборе; он же уезжает клиенту в состоянии сессии, поэтому менять его нельзя —
+# у пользователей с активной сессией сохранённое значение перестанет совпадать.
+AppConfiguration__Dialogflow__0__ProjectId=your-project-0
+AppConfiguration__Dialogflow__0__ScopeId=scope-0
+AppConfiguration__Dialogflow__0__JsonPath=keys/your-project-0.json
+AppConfiguration__Dialogflow__0__Region=europe-west1
+
+AppConfiguration__Dialogflow__1__ProjectId=your-project-1
+AppConfiguration__Dialogflow__1__ScopeId=scope-1
+AppConfiguration__Dialogflow__1__JsonPath=keys/your-project-1.json
+AppConfiguration__Dialogflow__1__Region=europe-west1
+
+# ...остальные агенты по тому же образцу
+
+# Redis доступен по имени внутри docker-сети; пароль тот же, что REDIS_PASSWORD в .env
+AppConfiguration__Redis__ConnectionString=redis:6379,password=CHANGE-ME,abortConnect=false,syncTimeout=2000,asyncTimeout=2000
+AppConfiguration__Redis__KeyPrefix=
+
+# Пустой Host выключает экспорт трейсов
+AppConfiguration__Tracing__Host=
+AppConfiguration__Tracing__Port=4317
+
+# Плавная остановка; значения по умолчанию подходят
+# AppConfiguration__Shutdown__DrainDelaySeconds=10
+# AppConfiguration__Shutdown__TimeoutSeconds=30
+
+# Токены проверки входящих запросов от площадок
+FITB-YANDEX-INCOMINGTOKEN=CHANGE-ME
+FITB-SBER-INCOMINGTOKEN=CHANGE-ME
+FITB-MARUSIA-INCOMINGTOKEN=CHANGE-ME
