@@ -49,6 +49,8 @@ public class HappyPathTests
             builder.UseSetting("AppConfiguration:Redis:ConnectionString", redisConnectionString);
             builder.UseSetting("AppConfiguration:Tracing:Port", "0");
 
+            // Пауза вывода из ротации нужна в бою, в тестах она только замедляет остановку
+            builder.UseSetting("AppConfiguration:Shutdown:DrainDelaySeconds", "0");
             builder.UseSetting("Logging:LogLevel:Default", "Warning");
         });
 

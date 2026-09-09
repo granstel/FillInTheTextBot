@@ -1,0 +1,36 @@
+# Контейнер сервиса. Имя проекта задаёт rollout.sh — во время раската живут оба цвета.
+#
+#   VERSION=1.27.0 docker compose -p fitb-green -f service-compose.yml up -d --wait
+
+networks:
+  network:
+    external: true
+
+services:
+  fitb:
+    image: ${IMAGE_REPO:-granstel/fillinthetextbot}:${VERSION:?задайте VERSION}
+    restart: unless-stopped
+    networks:
+      network:
+        # Одинаковый у обоих цветов
+        aliases:
+          - ${SERVICE_ALIAS:-fitb}
+    env_file:
+      - ${APP_ENV_FILE:-./app.env}
+    volumes:
+      - ${KEYS_DIR:?задайте KEYS_DIR в .env}:/app/keys:ro
+      - ${LOGS_DIR:?задайте LOGS_DIR в .env}:/app/logs
+    # Больше, чем DrainDelaySeconds + Shutdown.TimeoutSeconds сервиса
+    stop_grace_period: ${STOP_TIMEOUT:-45}s
+    labels:
+      app: fitb
+      traefik.enable: "true"
+      traefik.docker.network: ${DOCKER_NETWORK:-network}
+      traefik.http.routers.fitb.rule: "Host(`${DOMAIN:?задайте DOMAIN в .env}`)"
+      traefik.http.routers.fitb.entrypoints: websecure
+      traefik.http.routers.fitb.tls: "true"
+      traefik.http.routers.fitb.tls.certresolver: le
+      traefik.http.services.fitb.loadbalancer.server.port: "80"
+      traefik.http.services.fitb.loadbalancer.healthcheck.path: /health
+      traefik.http.services.fitb.loadbalancer.healthcheck.interval: 3s
+      traefik.http.services.fitb.loadbalancer.healthcheck.timeout: 2s

@@ -11,5 +11,7 @@
         public TracingConfiguration Tracing { get; set; }
 
         public ConversationConfiguration Conversation { get; set; }
+
+        public ShutdownConfiguration Shutdown { get; set; }
     }
 }
