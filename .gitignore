@@ -9,7 +9,6 @@
 **/.hg*
 **/.hg
 **/Keys/
-# deploy/: конфиги раскатки трекаются, секреты и сертификаты — нет
 /deploy/.env
 /deploy/app.env
 /deploy/acme/
