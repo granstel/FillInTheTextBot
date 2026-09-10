@@ -1,0 +1,322 @@
+{
+  "id": "aa490002-2222-4abc-8def-490000000002",
+  "parentId": "aa490001-1111-4abc-8def-490000000001",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "49-FirstBell-text",
+  "auto": true,
+  "contexts": [
+    "text-49"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-49",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "aa490002-2222-4abc-8def-4900000000a0",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про первый звонок.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa490002-2222-4abc-8def-4900000000a2",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва назови имя мальчика — например, одноклассника"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови имя какого-нибудь мальчика, например одноклассника"
+            },
+            {
+              "lang": "ru",
+              "value": "Имя мальчика — скажем, твоего одноклассника"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa490002-2222-4abc-8def-4900000000a3",
+          "name": "animalM",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animalM",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь назови какое-нибудь животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любого зверя мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa490002-2222-4abc-8def-4900000000a4",
+          "name": "color",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$color",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови свой любимый цвет"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой твой любимый цвет?"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови любой цвет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa490002-2222-4abc-8def-4900000000a5",
+          "name": "adjM",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjM",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "А теперь скажи — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Просто ответь — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Один вопрос — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa490002-2222-4abc-8def-4900000000a6",
+          "name": "adjM2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjM2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И ещё раз — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Снова — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Опять же — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa490002-2222-4abc-8def-4900000000a7",
+          "name": "foodM",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$foodM",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови что-нибудь съедобное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Что-нибудь съедобное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови еду мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aa490002-2222-4abc-8def-4900000000a8",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний — назови число больше десяти"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — назови число больше десяти"
+            },
+            {
+              "lang": "ru",
+              "value": "Последний вопрос — число больше десяти"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Итак, история называется «Первый звонок»! Наступило первое сентября, и вся школа выстроилась на торжественную линейку. Директор поправил галстук и объявил: «Право дать первый звонок предоставляется первокласснику по имени $name!»\n$name гордо вышел вперёд, а на его плечо вдруг запрыгнул $animalM! В лапах он держал $color колокольчик. «Какой $adjM звонарь!» — ахнул директор. Но $animalM от волнения дёрнулся — и колокольчик улетел прямо в букет завуча!\nВсе замерли. Тогда $name достал из портфеля $adjM2 $foodM и протянул его зверьку. За угощение $animalM с радостью нырнул в букет, выудил колокольчик и зазвонил так громко, что зазвенели все $number окон школы! 🔔 Так $name и его новый друг открыли учебный год🎉\nПо-моему, звонко получилось! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "🔔": "",
+                "🎉": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "🔔": "",
+                "🎉": ""
+              }
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "🔔": "",
+                "🎉": ""
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "🔔": "",
+                "🎉": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-49"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

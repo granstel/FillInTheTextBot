@@ -1,0 +1,132 @@
+[
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e001",
+    "data": [
+      {
+        "text": "первый звонок",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e002",
+    "data": [
+      {
+        "text": "история про первый звонок",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e003",
+    "data": [
+      {
+        "text": "про школьную линейку",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e004",
+    "data": [
+      {
+        "text": "сочини про первое сентября",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e005",
+    "data": [
+      {
+        "text": "история про 1 сентября",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e006",
+    "data": [
+      {
+        "text": "школьная линейка",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e007",
+    "data": [
+      {
+        "text": "про первоклассника",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e008",
+    "data": [
+      {
+        "text": "сочини историю про школу",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e009",
+    "data": [
+      {
+        "text": "история про линейку 1 сентября",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa490001-1111-4abc-8def-49000000e010",
+    "data": [
+      {
+        "text": "про звонок в школе",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
