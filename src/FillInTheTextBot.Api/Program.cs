@@ -31,6 +31,7 @@ namespace FillInTheTextBot.Api
         {
             var builder = WebApplication.CreateBuilder(WithHostingStartupAssemblies(args));
 
+            builder.Logging.ClearProviders();
             builder.Host.UseNLog();
 
             var startup = new Startup(builder.Configuration);

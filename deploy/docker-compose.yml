@@ -46,6 +46,9 @@ services:
       - --entrypoints.web.http.aliasHeadersStrategy=delete
       - --entrypoints.websecure.http.aliasHeadersStrategy=delete
 
+      - --metrics.prometheus=true
+      - --metrics.prometheus.addrouterslabels=true
+
       - --log.level=INFO
       - --accesslog=true
     volumes:

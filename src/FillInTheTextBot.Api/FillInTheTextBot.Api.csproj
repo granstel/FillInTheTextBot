@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <Version>1.26.0</Version>
-    <PackageReleaseNotes>Added new texts and computes</PackageReleaseNotes>
+    <Version>1.27.0</Version>
+    <PackageReleaseNotes>Logs to stdout in json format</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
