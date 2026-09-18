@@ -1,0 +1,132 @@
+[
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e001",
+    "data": [
+      {
+        "text": "полёт на самолёте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e002",
+    "data": [
+      {
+        "text": "история про самолёт",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e003",
+    "data": [
+      {
+        "text": "про полёт на самолёте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e004",
+    "data": [
+      {
+        "text": "сочини про самолёт",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e005",
+    "data": [
+      {
+        "text": "история про перелёт",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e006",
+    "data": [
+      {
+        "text": "про путешествие на самолёте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e007",
+    "data": [
+      {
+        "text": "случай в самолёте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e008",
+    "data": [
+      {
+        "text": "сочини историю про полёт",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e009",
+    "data": [
+      {
+        "text": "про рейс на самолёте",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa500001-1111-4abc-8def-50000000e010",
+    "data": [
+      {
+        "text": "история про рейс",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
