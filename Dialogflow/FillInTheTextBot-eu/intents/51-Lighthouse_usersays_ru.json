@@ -1,0 +1,132 @@
+[
+  {
+    "id": "0ca9bcd7-0a15-4564-9c85-c74c582094d0",
+    "data": [
+      {
+        "text": "анекдот про маяк",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e9c56011-a0bd-45f3-95e9-41e47f9baeeb",
+    "data": [
+      {
+        "text": "маяк",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6ffa3750-784b-4ed5-abe9-923813ec2e89",
+    "data": [
+      {
+        "text": "про маяк",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ca68c59c-1cd4-40e7-9320-4ac6b9fcaac2",
+    "data": [
+      {
+        "text": "расскажи анекдот про маяк",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5af0b461-121a-4d72-ace7-932249782fef",
+    "data": [
+      {
+        "text": "история про маяк",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3d2a94d9-03b5-42c9-a5ed-09cfbee211a3",
+    "data": [
+      {
+        "text": "анекдот про корабль",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "012f9a53-a563-4c56-9fe2-66d5a25b3cba",
+    "data": [
+      {
+        "text": "про линкор",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dfefc5bc-220c-4986-b49c-bdc7bb2f0913",
+    "data": [
+      {
+        "text": "сочини про маяк",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e17f7298-6dca-4772-8810-4a33e8ae487f",
+    "data": [
+      {
+        "text": "анекдот про капитана",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f2cf1591-6a04-493f-b6f3-2a30bdea7f18",
+    "data": [
+      {
+        "text": "про корабль и маяк",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

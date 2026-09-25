@@ -287,6 +287,19 @@
           "title": "истории",
           "buttons": [
             {
+              "text": "Анекдот про маяк"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
               "text": "Гороскоп про водолеев"
             },
             {
