@@ -1,0 +1,420 @@
+{
+  "id": "151a1c7b-29c3-4f08-aa9b-73fa078e4a3a",
+  "parentId": "d454879f-ae37-41e2-b045-d8e9a4dd2ade",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "51-Lighthouse-text",
+  "auto": true,
+  "contexts": [
+    "text-51"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-51",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "49f8829d-6985-4fe9-9e33-b5ba2aec34b4",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "анекдот про маяк.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "050ac222-6c8e-4100-9a7f-77ab42935867",
+          "name": "number1",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва назови какое-нибудь число"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала скажи любое число"
+            },
+            {
+              "lang": "ru",
+              "value": "Сначала назови любое число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "af48c7f7-fd07-45ad-8180-c74825ca911f",
+          "name": "surname",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$surname",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови фамилию какого-нибудь известного человека"
+            },
+            {
+              "lang": "ru",
+              "value": "Вспомни фамилию кого-нибудь знаменитого"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи фамилию какого-нибудь известного человека"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c7fd93be-59be-44d6-9af5-3af98c487ff8",
+          "name": "cartoon",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$cartoon",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как называется твой любимый мультфильм?"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой мультфильм тебе нравится больше всего?"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови свой любимый мультфильм"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b10afe3d-5a42-4b85-8ac3-aa71c425c05e",
+          "name": "adj1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adj1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Ответь на вопрос «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Просто ответь — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a3533c4a-7650-4599-9908-0bc0d17a01c3",
+          "name": "number2",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови число больше ста"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь число побольше — больше ста"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи какое-нибудь число больше ста"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "af0c1c2b-ef97-4e25-8611-cf2be506ef20",
+          "name": "number3",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number3",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И ещё одно число"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи ещё какое-нибудь число"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови ещё одно число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c20c37f9-766c-43b7-9558-299860e4d60f",
+          "name": "adj2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adj2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Снова — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Ещё раз ответь на вопрос «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Опять — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "140677c5-98bc-4bb6-891b-c47b69d8c2d5",
+          "name": "animal",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animal",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое-нибудь животное мужского рода, пожалуйста"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "4b5814b6-2611-4bc7-8f7e-8407884642f3",
+          "name": "song",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$song",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Как называется песня, которую ты знаешь наизусть?"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какую-нибудь песню"
+            },
+            {
+              "lang": "ru",
+              "value": "Какую песню ты любишь петь?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "bd24330a-585a-4be7-a751-e5dcca099655",
+          "name": "number4",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number4",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какое-нибудь трёхзначное число"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи число от ста до тысячи"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови трёхзначное число"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d1094413-33b4-44da-afe9-202235239125",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — как тебя зовут?"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок скажи своё имя"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее — назови своё имя"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что получилось: ночь, густой туман. По морю плывёт огромный линкор 🚢. Вдруг вперёдсмотрящий кричит:\n— Капитан, прямо по курсу какой-то объект! Возможно, встречный корабль!\nКапитан хватает рацию:\n— Встречное судно, немедленно смените курс! Новый курс — $number1!\nВ ответ по рации:\n— Ответ отрицательный. Во избежание столкновения рекомендуем сменить курс вам.\nКапитан краснеет от злости:\n— На связи капитан $surname! Линкор «$cartoon» — самый $adj1 корабль флота! Пушек — $number2! Кораблей сопровождения — $number3! Немедленно уступите дорогу!\nВ рации помолчали, потом спокойно ответили:\n— С вами говорит $name. Нас двое. Нас сопровождают собака и $adj2 $animal, который сейчас спит. Нас поддерживает радио, там играет «$song». Сворачивать мы не собираемся, потому что стоим на берегу. Это маяк номер $number4. Ваш ход.\nПо-моему, смешно получилось! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "🚢": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "🚢": "<speaker audio=\"alice-sounds-transport-ship-horn-1.opus\">"
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-51"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

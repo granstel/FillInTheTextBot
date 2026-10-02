@@ -1,16 +1,23 @@
 {
-  "id": "f8dfd69b-8d74-4cce-a54c-0fc19d618a09",
-  "name": "NewText",
+  "id": "d454879f-ae37-41e2-b045-d8e9a4dd2ade",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "51-Lighthouse",
   "auto": true,
   "contexts": [],
   "responses": [
     {
       "resetContexts": false,
       "action": "GetText",
-      "affectedContexts": [],
+      "affectedContexts": [
+        {
+          "name": "text-51",
+          "lifespan": 50
+        }
+      ],
       "parameters": [
         {
-          "id": "c525daaf-40a6-41cd-9124-0753b0ff3db2",
+          "id": "5c13ea1c-fe7a-4e96-a493-8fcf7ee35cef",
           "name": "textKey",
           "required": false,
           "dataType": "@sys.any",
@@ -31,7 +38,10 @@
           "textToSpeech": "",
           "lang": "ru",
           "speech": [
-            "Самая свежая история —"
+            "Отлично! Сочиняем",
+            "Здорово! Давай сочиним",
+            "Класс! Сейчас придумаем",
+            "Супер! Теперь сочиним "
           ],
           "condition": ""
         }
