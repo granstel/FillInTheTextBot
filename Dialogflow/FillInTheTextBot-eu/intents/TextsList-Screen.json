@@ -300,6 +300,19 @@
           "title": "истории",
           "buttons": [
             {
+              "text": "Тихая охота"
+            }
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "истории",
+          "buttons": [
+            {
               "text": "Гороскоп про водолеев"
             },
             {
