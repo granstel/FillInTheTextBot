@@ -84,6 +84,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             {
                 IsOldUser = true,
                 NextTextIndex = 5,
+                RotationState = "{\"v\":2}",
                 ScopeKey = _fixture.Create<string>()
             };
 
@@ -102,6 +103,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
 
             Assert.That(captured.IsOldUser, Is.True);
             Assert.That(captured.NextTextIndex, Is.EqualTo(5));
+            Assert.That(captured.RotationState, Is.EqualTo(userState.RotationState));
             Assert.That(captured.ScopeKey, Is.EqualTo(userState.ScopeKey));
         }
 
@@ -282,6 +284,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
 
             var response = CreateResponse();
             response.NextTextIndex = 3;
+            response.RotationState = "{\"v\":2}";
             response.ScopeKey = _fixture.Create<string>();
 
             _conversationService
@@ -296,6 +299,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
                 $"sber:{input.Uuid.UserId}",
                 It.Is<object>(o => ((InternalModels.UserState)o).IsOldUser
                                    && ((InternalModels.UserState)o).NextTextIndex == 3
+                                   && ((InternalModels.UserState)o).RotationState == response.RotationState
                                    && ((InternalModels.UserState)o).ScopeKey == response.ScopeKey),
                 TimeSpan.FromDays(14),
                 It.IsAny<bool>()), Times.Once);

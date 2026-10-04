@@ -55,5 +55,54 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
 
             Assert.That(result, Is.Not.Null);
         }
+
+        [TestCase(true)]
+        [TestCase(false)]
+        public async Task ProcessIncomingAsync_RotationStateInUserOrApplicationState_AppliedToRequest(bool inUserState)
+        {
+            const string rotationState = "{\"v\":2}";
+
+            var input = CreateInput();
+            var state = inUserState ? input.State.User : input.State.Application;
+            state.Add(Models.Response.RotationStateStorageKey, rotationState);
+
+            Models.Request captured = null;
+
+            _conversationService
+                .Setup(s => s.GetResponseAsync(It.IsAny<Models.Request>()))
+                .Callback<Models.Request>(r => captured = r)
+                .ReturnsAsync(new Models.Response());
+
+
+            await _target.ProcessIncomingAsync(input);
+
+
+            Assert.That(captured.RotationState, Is.EqualTo(rotationState));
+        }
+
+        [Test]
+        public async Task ProcessIncomingAsync_RotationState_WrittenToUserAndApplicationState()
+        {
+            var response = new Models.Response { RotationState = "{\"v\":2}" };
+
+            _conversationService.Setup(s => s.GetResponseAsync(It.IsAny<Models.Request>())).ReturnsAsync(response);
+
+
+            var result = await _target.ProcessIncomingAsync(CreateInput());
+
+
+            Assert.That(result.UserStateUpdate[Models.Response.RotationStateStorageKey], Is.EqualTo(response.RotationState));
+            Assert.That(result.ApplicationState[Models.Response.RotationStateStorageKey], Is.EqualTo(response.RotationState));
+        }
+
+        private static InputModel CreateInput()
+        {
+            return new InputModel
+            {
+                Session = new InputSession(),
+                Request = new Request { OriginalUtterance = "давай" },
+                State = new InputState { User = new State(), Application = new State(), Session = new State() }
+            };
+        }
     }
 }
