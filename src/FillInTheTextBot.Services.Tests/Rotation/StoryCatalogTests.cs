@@ -51,6 +51,21 @@ namespace FillInTheTextBot.Services.Tests.Rotation
             Assert.That(number, Is.EqualTo(expectedNumber));
         }
 
+        [TestCase("34-LibrarianMystery-text2", true, 34, 2)]
+        [TestCase("22-Valentine's day-text", true, 22, 0)]
+        [TestCase("34-LibrarianMystery", false, 0, 0)]
+        [TestCase("TextsOver", false, 0, 0)]
+        [TestCase(null, false, 0, 0)]
+        public void TryParseIntentName_Name_ParsesNumberAndPart(string intentName, bool expected, int expectedNumber, int expectedPart)
+        {
+            var result = StoryCatalog.TryParseIntentName(intentName, out var number, out var part);
+
+
+            Assert.That(result, Is.EqualTo(expected));
+            Assert.That(number, Is.EqualTo(expectedNumber));
+            Assert.That(part, Is.EqualTo(expectedPart));
+        }
+
         [TestCase("text-7", true, 7, 0)]
         [TestCase("text-34-2", true, 34, 2)]
         [TestCase("texts-over", false, 0, 0)]
