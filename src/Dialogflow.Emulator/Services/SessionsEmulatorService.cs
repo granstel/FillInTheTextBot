@@ -150,7 +150,9 @@ public sealed class SessionsEmulatorService : Sessions.SessionsBase
 
         foreach (var parameter in AgentStorage.GetParameters(intent))
         {
-            if (!parameter.Required && !string.IsNullOrEmpty(parameter.Name) && !string.IsNullOrEmpty(parameter.Value))
+            // Контекстов эмулятор не ведёт, поэтому ссылка #context.param пустая, как в Dialogflow без контекста
+            if (!parameter.Required && !string.IsNullOrEmpty(parameter.Name) && !string.IsNullOrEmpty(parameter.Value)
+                && !parameter.Value.StartsWith('#'))
             {
                 result[parameter.Name] = parameter.Value;
             }
