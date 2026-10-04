@@ -35,6 +35,12 @@ public sealed class SessionsEmulatorService : Sessions.SessionsBase
         var eventName = request.QueryInput?.Event?.Name;
         var text = request.QueryInput?.Text?.Text;
 
+        // Сброс контекстов прерывает и слот-филлинг
+        if (request.QueryParams?.ResetContexts == true)
+        {
+            _slotFilling.Remove(session);
+        }
+
         // Идёт слот-филлинг и пришёл текст — это ответ на промпт
         if (eventName is null && text is not null && _slotFilling.TryGet(session, out var active))
         {
