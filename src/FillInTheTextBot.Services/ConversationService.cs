@@ -7,26 +7,35 @@ using FillInTheTextBot.Services.BackgroundTasks;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using FillInTheTextBot.Services.Mapping;
+using FillInTheTextBot.Services.Rotation;
 using GranSteL.Helpers.Redis;
+using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Services
 {
     public class ConversationService : IConversationService
     {
+        private const int MaxRotationAttempts = 3;
+
         private static readonly Random Random = new();
 
         private readonly ConversationConfiguration _configuration;
         private readonly IDialogflowService _dialogflowService;
         private readonly IRedisCacheService _cache;
         private readonly IBackgroundTaskQueue _backgroundTasks;
+        private readonly StoryRotation _storyRotation;
+        private readonly ILogger<ConversationService> _log;
 
         public ConversationService(ConversationConfiguration configuration, IDialogflowService dialogflowService,
-            IRedisCacheService cache, IBackgroundTaskQueue backgroundTasks)
+            IRedisCacheService cache, IBackgroundTaskQueue backgroundTasks, StoryRotation storyRotation,
+            ILogger<ConversationService> log)
         {
             _dialogflowService = dialogflowService;
             _cache = cache;
             _backgroundTasks = backgroundTasks;
             _configuration = configuration;
+            _storyRotation = storyRotation;
+            _log = log;
         }
 
         public async Task<Response> GetResponseAsync(Request request)
@@ -34,6 +43,8 @@ namespace FillInTheTextBot.Services
             request = ResetContextsWhenHelpOrExitRequest(request);
 
             var dialog = await _dialogflowService.GetResponseAsync(request);
+
+            var rotationState = _storyRotation.GetState(request.RotationState, request.NextTextIndex);
 
             var response = new Response
             {
@@ -52,7 +63,7 @@ namespace FillInTheTextBot.Services
             if (string.Equals(dialog?.Action, "GetText"))
             {
                 var textKey = dialog.GetParameters("textKey").FirstOrDefault();
-                response = await GetText(request, dialog.Response, textKey);
+                response = await GetText(request, rotationState, dialog.Response, textKey);
             }
             response.NextTextIndex = request.NextTextIndex;
 
@@ -73,6 +84,13 @@ namespace FillInTheTextBot.Services
             response.Emotions = GetEmotions(dialog);
 
             TrySetSavedText(request.SessionId, request.ScopeKey, dialog, texts);
+
+            if (rotationState is not null)
+            {
+                _storyRotation.TrackCompletion(rotationState, dialog);
+            }
+
+            response.RotationState = rotationState?.Serialize() ?? request.RotationState;
 
             return response;
         }
@@ -110,13 +128,15 @@ namespace FillInTheTextBot.Services
             return texts;
         }
 
-        private async Task<Response> GetText(Request request, string startText, string textKey = null)
+        private async Task<Response> GetText(Request request, RotationState rotationState, string startText, string textKey)
         {
             using (Tracing.Trace())
             {
                 var response = new Response();
 
-                if (string.IsNullOrEmpty(textKey))
+                var isFromRotation = string.IsNullOrEmpty(textKey);
+
+                if (isFromRotation && rotationState is null)
                 {
                     using (Tracing.Trace(operationName: "Get texts from cache"))
                     {
@@ -131,18 +151,32 @@ namespace FillInTheTextBot.Services
                     }
                 }
 
-                var eventName = $"event:{textKey}";
-                MetricsCollector.Increment("event", textKey);
+                Dialog dialog = null;
 
-                // Для отдельных историй значение считается встроенным вычислителем и едет в Dialogflow
-                // контекстом внутри этого же запроса (без отдельного сетевого вызова). Если вычислитель
-                // неприменим (например, лето уже прошло), контекст не передаётся (null) и срабатывает фоллбэк-вопрос.
-                var requiredContexts = StoryComputations.TryBuildContext(textKey, out var computedContext)
-                    ? new[] { computedContext }
-                    : null;
+                for (var attempt = 1; attempt <= MaxRotationAttempts; attempt++)
+                {
+                    if (isFromRotation && rotationState is not null)
+                    {
+                        textKey = _storyRotation.SelectEvent(rotationState);
+                    }
 
-                var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey, requiredContexts);
+                    dialog = await GetTextDialogAsync(request, textKey);
 
+                    if (rotationState is null || _storyRotation.TryMarkIssued(rotationState, textKey, dialog?.IntentName))
+                    {
+                        break;
+                    }
+
+                    _log.LogWarning("Event {TextKey} matched intent {IntentName}", textKey, dialog?.IntentName);
+                    MetricsCollector.Increment("rotation_unavailable", textKey);
+
+                    if (!isFromRotation)
+                    {
+                        break;
+                    }
+
+                    _storyRotation.MarkUnavailable(textKey);
+                }
 
                 var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
 
@@ -154,6 +188,23 @@ namespace FillInTheTextBot.Services
 
                 return response;
             }
+        }
+
+        private async Task<Dialog> GetTextDialogAsync(Request request, string textKey)
+        {
+            var eventName = $"event:{textKey}";
+            MetricsCollector.Increment("event", textKey);
+
+            // Для отдельных историй значение считается встроенным вычислителем и едет в Dialogflow
+            // контекстом внутри этого же запроса (без отдельного сетевого вызова). Если вычислитель
+            // неприменим (например, лето уже прошло), контекст не передаётся (null) и срабатывает фоллбэк-вопрос.
+            var requiredContexts = StoryComputations.TryBuildContext(textKey, out var computedContext)
+                ? new[] { computedContext }
+                : null;
+
+            var dialog = await _dialogflowService.GetResponseAsync(eventName, request.SessionId, request.ScopeKey, requiredContexts);
+
+            return dialog;
         }
 
         private string GetTextKey(Request request, string[] texts)

@@ -6,7 +6,9 @@ using System;
 using FillInTheTextBot.Models;
 using FillInTheTextBot.Services.BackgroundTasks;
 using FillInTheTextBot.Services.Configuration;
+using FillInTheTextBot.Services.Rotation;
 using GranSteL.Helpers.Redis;
+using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using NUnit.Framework;
 
@@ -24,6 +26,7 @@ namespace FillInTheTextBot.Services.Tests
         private Mock<IBackgroundTaskQueue> _backgroundTasks;
 
         private ConversationConfiguration _configuration;
+        private RotationStore _rotationStore;
 
         private ConversationService _target;
 
@@ -48,7 +51,12 @@ namespace FillInTheTextBot.Services.Tests
 
             _configuration = new ConversationConfiguration();
 
-            _target = new ConversationService(_configuration, _dialogflowService.Object, _cache.Object, _backgroundTasks.Object);
+            _rotationStore = new RotationStore();
+
+            var storyRotation = new StoryRotation(_rotationStore, new RotationConfiguration(), new Random(1), TimeProvider.System);
+
+            _target = new ConversationService(_configuration, _dialogflowService.Object, _cache.Object, _backgroundTasks.Object,
+                storyRotation, NullLogger<ConversationService>.Instance);
 
             _fixture = new Fixture { OmitAutoProperties = true };
         }
@@ -778,6 +786,140 @@ namespace FillInTheTextBot.Services.Tests
         }
 
         #endregion saveToRepeat
+
+        #region Ротация
+
+        private void SetupRotation()
+        {
+            var catalog = new StoryCatalog(new Dictionary<int, int> { [1] = 0, [2] = 0, [33] = 0, [34] = 2 });
+
+            var rules = new RotationRules
+            {
+                FirstCycle = ["text-2", "text-1"],
+                Chains = [["text-33", "text-34-1"]]
+            };
+
+            _rotationStore.Apply(new RotationSnapshot(catalog, rules, new RotationSources(), DateTimeOffset.UtcNow));
+        }
+
+        private void SetupTextDialog(string textKey, string intentName)
+        {
+            _dialogflowService
+                .Setup(s => s.GetResponseAsync($"event:{textKey}", It.IsAny<string>(), It.IsAny<string>(), It.IsAny<IEnumerable<Context>>()))
+                .ReturnsAsync(new Dialog { IntentName = intentName, Response = intentName });
+        }
+
+        [Test]
+        public async Task GetResponseAsync_RotationLoadedNewUser_FirstStoryOfFirstCycle()
+        {
+            SetupRotation();
+            SetupDialog(new Dialog { Action = "GetText", Response = "Поехали!" });
+            SetupTextDialog("text-2", "2-Two-text");
+
+
+            var result = await _target.GetResponseAsync(new Request());
+
+
+            var state = RotationState.Parse(result.RotationState);
+
+            Assert.That(result.Text, Is.EqualTo("Поехали!  2-Two-text"));
+            Assert.That(state.Current, Is.EqualTo(2));
+            Assert.That(state.Last, Is.EqualTo(2));
+            string[] texts;
+            _cache.Verify(c => c.TryGet("Texts", out texts, It.IsAny<bool>()), Times.Never);
+        }
+
+        [Test]
+        public async Task GetResponseAsync_LegacyIndex_ContinuesFirstCycle()
+        {
+            SetupRotation();
+            SetupDialog(new Dialog { Action = "GetText" });
+            SetupTextDialog("text-1", "1-One-text");
+
+
+            var result = await _target.GetResponseAsync(new Request { NextTextIndex = 1 });
+
+
+            var state = RotationState.Parse(result.RotationState);
+
+            Assert.That(state.Current, Is.EqualTo(1));
+            Assert.That(state.IsDone(2), Is.True);
+        }
+
+        [Test]
+        public async Task GetResponseAsync_StoryEventNotRecognized_NextStoryIssued()
+        {
+            SetupRotation();
+            SetupDialog(new Dialog { Action = "GetText" });
+            SetupTextDialog("text-2", "Default Fallback Intent");
+            SetupTextDialog("text-1", "1-One-text");
+
+
+            var result = await _target.GetResponseAsync(new Request());
+
+
+            var state = RotationState.Parse(result.RotationState);
+
+            Assert.That(result.Text, Does.EndWith("1-One-text"));
+            Assert.That(state.Current, Is.EqualTo(1));
+            Assert.That(state.IsDone(2), Is.False, "Неизвестная агенту история не считается пройденной");
+        }
+
+        [Test]
+        public async Task GetResponseAsync_StoryByName_PreviousAbandoned()
+        {
+            SetupRotation();
+            var dialog = new Dialog { Action = "GetText" };
+            dialog.Parameters.Add("textKey", "text-2");
+            SetupDialog(dialog);
+            SetupTextDialog("text-2", "2-Two-text");
+
+            var request = new Request { RotationState = new RotationState { Current = 1 }.Serialize() };
+
+
+            var result = await _target.GetResponseAsync(request);
+
+
+            var state = RotationState.Parse(result.RotationState);
+
+            Assert.That(state.Current, Is.EqualTo(2));
+            Assert.That(state.IsDone(1), Is.True);
+        }
+
+        [Test]
+        public async Task GetResponseAsync_ChainHeadCompleted_DoneAndNextLinkPending()
+        {
+            SetupRotation();
+            SetupDialog(new Dialog { Action = "saveToRepeat", IntentName = "33-Head-text" });
+
+            var request = new Request { RotationState = new RotationState { Current = 33 }.Serialize() };
+
+
+            var result = await _target.GetResponseAsync(request);
+
+
+            var state = RotationState.Parse(result.RotationState);
+
+            Assert.That(state.IsDone(33), Is.True);
+            Assert.That(state.Current, Is.Null);
+            Assert.That(state.Next, Is.EqualTo(34));
+        }
+
+        [Test]
+        public async Task GetResponseAsync_RotationNotLoaded_StatePassedThrough()
+        {
+            SetupDialog(new Dialog());
+
+            var request = new Request { RotationState = _fixture.Create<string>() };
+
+
+            var result = await _target.GetResponseAsync(request);
+
+
+            Assert.That(result.RotationState, Is.EqualTo(request.RotationState));
+        }
+
+        #endregion Ротация
 
         private static async Task WaitForAsync(System.Func<bool> condition, int timeoutMilliseconds = 5000)
         {

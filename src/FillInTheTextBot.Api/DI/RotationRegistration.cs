@@ -12,6 +12,11 @@ namespace FillInTheTextBot.Api.DI
         internal static void AddRotation(this IServiceCollection services, RotationConfiguration configuration)
         {
             services.AddSingleton<RotationStore>();
+            services.AddSingleton(provider => new StoryRotation(
+                provider.GetRequiredService<RotationStore>(),
+                provider.GetRequiredService<RotationConfiguration>(),
+                Random.Shared,
+                TimeProvider.System));
 
             if (configuration?.Enabled == false)
             {
