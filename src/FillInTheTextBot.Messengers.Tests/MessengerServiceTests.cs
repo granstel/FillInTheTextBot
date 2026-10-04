@@ -207,6 +207,39 @@ namespace FillInTheTextBot.Messengers.Tests
         }
 
         [Test]
+        public async Task ProcessIncomingAsync_ConversationThrows_NextTextIndexFromRequestKept()
+        {
+            _target.BeforeResult = new Request { NextTextIndex = 5 };
+
+            _conversationService
+                .Setup(s => s.GetResponseAsync(It.IsAny<Request>()))
+                .ThrowsAsync(new InvalidOperationException(_fixture.Create<string>()));
+
+
+            await _target.ProcessIncomingAsync(new InputFixture());
+
+
+            Assert.That(_target.AfterInput.Response.NextTextIndex, Is.EqualTo(5));
+        }
+
+        [Test]
+        public async Task ProcessIncomingAsync_ConversationChangesIndexAndThrows_OriginalNextTextIndexKept()
+        {
+            _target.BeforeResult = new Request { NextTextIndex = 5 };
+
+            _conversationService
+                .Setup(s => s.GetResponseAsync(It.IsAny<Request>()))
+                .Callback<Request>(r => r.NextTextIndex++)
+                .ThrowsAsync(new InvalidOperationException(_fixture.Create<string>()));
+
+
+            await _target.ProcessIncomingAsync(new InputFixture());
+
+
+            Assert.That(_target.AfterInput.Response.NextTextIndex, Is.EqualTo(5));
+        }
+
+        [Test]
         public async Task ProcessIncomingAsync_AnyOutcome_AfterAsyncAlwaysInvoked()
         {
             _target.BeforeException = new InvalidOperationException(_fixture.Create<string>());
