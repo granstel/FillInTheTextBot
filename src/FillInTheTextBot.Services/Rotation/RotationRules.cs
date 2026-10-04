@@ -25,6 +25,9 @@ namespace FillInTheTextBot.Services.Rotation
         /// <summary>Не участвуют в ротации, доступны по названию.</summary>
         public string[] Hidden { get; set; } = [];
 
+        /// <summary>При пересечении кампаний первой идёт та, что выше в списке.</summary>
+        public RotationCampaign[] Campaigns { get; set; } = [];
+
         /// <exception cref="JsonException">Невалидный JSON или неизвестное поле.</exception>
         public static RotationRules Parse(string json)
         {
@@ -40,12 +43,19 @@ namespace FillInTheTextBot.Services.Rotation
 
             ValidateList(nameof(FirstCycle), FirstCycle, catalog, errors);
             ValidateList(nameof(Hidden), Hidden, catalog, errors);
+            ValidateChains(catalog, errors);
+            ValidateCampaigns(catalog, errors);
 
+            return errors;
+        }
+
+        private void ValidateChains(StoryCatalog catalog, List<string> errors)
+        {
             if (Chains is null)
             {
                 errors.Add($"{nameof(Chains)}: должен быть массивом");
 
-                return errors;
+                return;
             }
 
             var chained = new HashSet<string>();
@@ -64,8 +74,48 @@ namespace FillInTheTextBot.Services.Rotation
                     errors.Add($"{nameof(Chains)}: «{eventName}» входит в несколько цепочек");
                 }
             }
+        }
 
-            return errors;
+        private void ValidateCampaigns(StoryCatalog catalog, List<string> errors)
+        {
+            if (Campaigns is null)
+            {
+                errors.Add($"{nameof(Campaigns)}: должен быть массивом");
+
+                return;
+            }
+
+            var ids = new HashSet<string>();
+
+            foreach (var campaign in Campaigns)
+            {
+                var name = $"{nameof(Campaigns)} «{campaign?.Id}»";
+
+                if (string.IsNullOrEmpty(campaign?.Id) || !ids.Add(campaign.Id))
+                {
+                    errors.Add($"{name}: id пустой или повторяется");
+                }
+
+                if (campaign is null)
+                {
+                    continue;
+                }
+
+                var isFromValid = RotationCampaign.TryParseDate(campaign.From, out var from, out var isFromYearly);
+                var isToValid = RotationCampaign.TryParseDate(campaign.To, out var to, out var isToYearly);
+
+                if (!isFromValid || !isToValid || isFromYearly != isToYearly || !isFromYearly && from > to)
+                {
+                    errors.Add($"{name}: даты должны быть MM-DD или YYYY-MM-DD в одном формате, from не позже to");
+                }
+
+                if (campaign.Texts?.Length == 0)
+                {
+                    errors.Add($"{name}: нет историй");
+                }
+
+                ValidateList(name, campaign.Texts, catalog, errors);
+            }
         }
 
         /// <summary>
