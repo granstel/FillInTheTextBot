@@ -52,12 +52,12 @@ namespace FillInTheTextBot.Services.Rotation
 
         public async Task RefreshAsync(CancellationToken cancellationToken)
         {
-            var current = store.Snapshot?.Sources;
+            var current = store.Snapshot?.Sources ?? new RotationSources();
 
             try
             {
-                var stories = await source.GetStoryFilesAsync(current?.StoriesETag, cancellationToken);
-                var rules = await source.GetRulesAsync(current?.RulesETag, cancellationToken);
+                var stories = await source.GetStoryFilesAsync(current.StoriesETag, cancellationToken);
+                var rules = await source.GetRulesAsync(current.RulesETag, cancellationToken);
 
                 if (!stories.IsModified && !rules.IsModified)
                 {
@@ -66,13 +66,7 @@ namespace FillInTheTextBot.Services.Rotation
                     return;
                 }
 
-                var sources = new RotationSources
-                {
-                    StoriesETag = stories.IsModified ? stories.ETag : current?.StoriesETag,
-                    StoryFiles = stories.IsModified ? stories.Value : current?.StoryFiles,
-                    RulesETag = rules.IsModified ? rules.ETag : current?.RulesETag,
-                    RulesJson = rules.IsModified ? rules.Value : current?.RulesJson
-                };
+                var sources = Merge(current, stories, rules);
 
                 if (TryApply(sources, "GitHub"))
                 {
@@ -86,6 +80,32 @@ namespace FillInTheTextBot.Services.Rotation
 
                 store.ReportCheck(DateTimeOffset.UtcNow, e.Message);
             }
+        }
+
+        private static RotationSources Merge(RotationSources current, RotationSourceResult<string[]> stories,
+            RotationSourceResult<string> rules)
+        {
+            var sources = new RotationSources
+            {
+                StoriesETag = current.StoriesETag,
+                StoryFiles = current.StoryFiles,
+                RulesETag = current.RulesETag,
+                RulesJson = current.RulesJson
+            };
+
+            if (stories.IsModified)
+            {
+                sources.StoriesETag = stories.ETag;
+                sources.StoryFiles = stories.Value;
+            }
+
+            if (rules.IsModified)
+            {
+                sources.RulesETag = rules.ETag;
+                sources.RulesJson = rules.Value;
+            }
+
+            return sources;
         }
 
         private bool TryApply(RotationSources sources, string origin)
