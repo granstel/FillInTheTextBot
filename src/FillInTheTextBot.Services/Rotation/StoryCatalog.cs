@@ -7,11 +7,8 @@ namespace FillInTheTextBot.Services.Rotation
     /// Истории агента, найденные по именам файлов интентов: номер истории и число её частей.
     /// У одночастной истории частей 0, её событие — text-NN; у многочастной — text-NN-K.
     /// </summary>
-    public sealed class StoryCatalog
+    public sealed partial class StoryCatalog
     {
-        private static readonly Regex FileNamePattern = new(@"^(\d+)-.+-text(\d*)\.json$");
-        private static readonly Regex EventPattern = new(@"^text-(\d+)(?:-(\d+))?$");
-
         private readonly SortedDictionary<int, int> _parts;
 
         public StoryCatalog(IDictionary<int, int> parts)
@@ -29,7 +26,7 @@ namespace FillInTheTextBot.Services.Rotation
 
             foreach (var fileName in fileNames)
             {
-                var match = FileNamePattern.Match(fileName);
+                var match = FileNamePattern().Match(fileName);
 
                 if (!match.Success)
                 {
@@ -52,7 +49,7 @@ namespace FillInTheTextBot.Services.Rotation
             number = 0;
             part = 0;
 
-            var match = EventPattern.Match(eventName ?? string.Empty);
+            var match = EventPattern().Match(eventName ?? string.Empty);
 
             if (!match.Success)
             {
@@ -100,5 +97,11 @@ namespace FillInTheTextBot.Services.Rotation
 
             return part;
         }
+
+        [GeneratedRegex(@"^(\d+)-.+-text(\d*)\.json$")]
+        private static partial Regex FileNamePattern();
+
+        [GeneratedRegex(@"^text-(\d+)(?:-(\d+))?$")]
+        private static partial Regex EventPattern();
     }
 }
