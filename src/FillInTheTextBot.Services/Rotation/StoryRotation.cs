@@ -48,6 +48,7 @@ namespace FillInTheTextBot.Services.Rotation
         public string SelectEvent(RotationState state)
         {
             var snapshot = store.Snapshot;
+            var today = StoryComputations.ToMoscowDate(time.GetUtcNow());
 
             CloseCurrent(state);
 
@@ -59,7 +60,14 @@ namespace FillInTheTextBot.Services.Rotation
                 return snapshot.Catalog.GetEntryEvent(next.Value);
             }
 
-            var fresh = GetUnits(snapshot)
+            var campaignStory = SelectFromCampaigns(snapshot, state, today);
+
+            if (campaignStory is not null)
+            {
+                return snapshot.Catalog.GetEntryEvent(campaignStory.Value);
+            }
+
+            var fresh = GetUnits(snapshot, today)
                 .Where(number => !state.IsDone(number) && IsAvailable(number))
                 .ToList();
 
@@ -162,20 +170,39 @@ namespace FillInTheTextBot.Services.Rotation
             state.Current = null;
         }
 
-        /// <summary>Истории в порядке первого круга; звенья цепочек, кроме первого, выдаются только следом.</summary>
-        private static IEnumerable<int> GetUnits(RotationSnapshot snapshot)
+        /// <summary>Первая непройденная история активной кампании; кампании — в порядке файла.</summary>
+        private int? SelectFromCampaigns(RotationSnapshot snapshot, RotationState state, DateTime today)
         {
-            var followers = new HashSet<int>();
-
-            foreach (var eventName in snapshot.Rules.Chains.SelectMany(chain => chain.Skip(1)))
+            foreach (var campaign in snapshot.Rules.Campaigns.Where(campaign => campaign.IsActive(today)))
             {
-                if (snapshot.Catalog.TryGetStoryByEntryEvent(eventName, out var number))
+                var fresh = RotationRules.ToNumbers(campaign.Texts, snapshot.Catalog)
+                    .Where(number => !state.IsDone(number) && IsAvailable(number))
+                    .ToList();
+
+                if (fresh.Count > 0)
                 {
-                    followers.Add(number);
+                    return campaign.Shuffle ? SelectRandom(fresh, state.Last) : fresh[0];
                 }
             }
 
-            var units = snapshot.Rules.GetFirstCycle(snapshot.Catalog).Where(number => !followers.Contains(number));
+            return null;
+        }
+
+        /// <summary>
+        /// Истории в порядке первого круга. Звенья цепочек, кроме первого, выдаются только следом,
+        /// истории кампаний с hideOutside — только в даты кампании.
+        /// </summary>
+        private static IEnumerable<int> GetUnits(RotationSnapshot snapshot, DateTime today)
+        {
+            var followers = snapshot.Rules.Chains.SelectMany(chain => chain.Skip(1));
+
+            var seasonal = snapshot.Rules.Campaigns
+                .Where(campaign => campaign.HideOutside && !campaign.IsActive(today))
+                .SelectMany(campaign => campaign.Texts);
+
+            var excluded = RotationRules.ToNumbers(followers.Concat(seasonal), snapshot.Catalog).ToHashSet();
+
+            var units = snapshot.Rules.GetFirstCycle(snapshot.Catalog).Where(number => !excluded.Contains(number));
 
             return units;
         }

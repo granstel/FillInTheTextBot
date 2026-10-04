@@ -136,7 +136,7 @@ namespace FillInTheTextBot.Services.Rotation
             return firstCycle;
         }
 
-        private static IEnumerable<int> ToNumbers(IEnumerable<string> events, StoryCatalog catalog)
+        internal static IEnumerable<int> ToNumbers(IEnumerable<string> events, StoryCatalog catalog)
         {
             foreach (var eventName in events)
             {
