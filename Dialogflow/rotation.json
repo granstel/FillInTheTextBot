@@ -1,0 +1,15 @@
+{
+  "firstCycle": [
+    "text-0", "text-37-1", "text-40", "text-38", "text-39-1", "text-33", "text-34-1", "text-35",
+    "text-36", "text-32-1", "text-41-1", "text-42-1", "text-43", "text-44-1", "text-45", "text-46",
+    "text-47", "text-48-1", "text-49", "text-50", "text-51", "text-52", "text-18", "text-17",
+    "text-27-1", "text-8", "text-13", "text-5", "text-6", "text-21", "text-3", "text-4",
+    "text-25", "text-28-1", "text-1", "text-16", "text-23", "text-11", "text-2", "text-10",
+    "text-14", "text-24", "text-12", "text-22", "text-19", "text-31-1", "text-9", "text-26",
+    "text-15", "text-20", "text-7", "text-30-1", "text-29"
+  ],
+  "chains": [
+    ["text-33", "text-34-1"]
+  ],
+  "hidden": []
+}
