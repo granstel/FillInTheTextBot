@@ -4,7 +4,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
 # Начиная с .NET 8 образы по умолчанию слушают 8080. Порт зафиксирован явно,
 # чтобы контракт контейнера не поменялся вместе с версией рантайма.
-ENV ASPNETCORE_HTTP_PORTS=80
+# 8081 — служебные эндпоинты (AppConfiguration:ServicePort), только внутри docker-сети.
+ENV ASPNETCORE_HTTP_PORTS=80;8081
 EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build

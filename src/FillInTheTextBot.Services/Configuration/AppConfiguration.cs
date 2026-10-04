@@ -2,6 +2,9 @@
 {
     public class AppConfiguration
     {
+        /// <summary>Порт служебных эндпоинтов; прокси наружу его не публикует.</summary>
+        public int ServicePort { get; set; }
+
         public HttpLogConfiguration HttpLog { get; set; }
 
         public DialogflowConfiguration[] Dialogflow { get; set; }
