@@ -240,6 +240,19 @@ namespace FillInTheTextBot.Messengers.Tests
         }
 
         [Test]
+        public async Task ProcessIncomingAsync_CommandResponse_NextTextIndexFromRequestKept()
+        {
+            _target.BeforeResult = new Request { NextTextIndex = 5 };
+            _target.ProcessCommandResult = new Response();
+
+
+            await _target.ProcessIncomingAsync(new InputFixture());
+
+
+            Assert.That(_target.AfterInput.Response.NextTextIndex, Is.EqualTo(5));
+        }
+
+        [Test]
         public async Task ProcessIncomingAsync_AnyOutcome_AfterAsyncAlwaysInvoked()
         {
             _target.BeforeException = new InvalidOperationException(_fixture.Create<string>());

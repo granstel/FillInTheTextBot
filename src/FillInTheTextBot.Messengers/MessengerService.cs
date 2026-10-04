@@ -31,7 +31,7 @@ namespace FillInTheTextBot.Messengers
 
         public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
         {
-            // Ошибка не сбрасывает прогресс ротации
+            // Ошибка и команда не сбрасывают прогресс ротации
             var requestTextIndex = 0;
             Response response;
 
@@ -58,6 +58,10 @@ namespace FillInTheTextBot.Messengers
                     if (response == null)
                     {
                         response = await _conversationService.GetResponseAsync(request);
+                    }
+                    else
+                    {
+                        response.NextTextIndex = requestTextIndex;
                     }
                 }
             }
