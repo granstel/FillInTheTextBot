@@ -1,4 +1,5 @@
 using System.Linq;
+using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Rotation;
 using GranSteL.Helpers.Redis;
 using Microsoft.AspNetCore.Builder;
@@ -25,6 +26,12 @@ namespace FillInTheTextBot.Api.Endpoints
             var stories = catalog.Numbers.Select(catalog.GetEntryEvent).ToArray();
             var firstCycle = snapshot?.Rules.GetFirstCycle(catalog).Select(catalog.GetEntryEvent).ToArray() ?? [];
 
+            var today = StoryComputations.MoscowToday();
+
+            var campaigns = snapshot?.Rules.Campaigns
+                .Select(campaign => new { campaign, active = campaign.IsActive(today) })
+                .ToArray();
+
             cache.TryGet("Texts", out string[] legacyTexts);
             legacyTexts ??= [];
 
@@ -37,6 +44,7 @@ namespace FillInTheTextBot.Api.Endpoints
                 stories,
                 snapshot?.Rules.Hidden,
                 snapshot?.Rules.Chains,
+                campaigns,
                 firstCycle,
                 legacyTexts = new
                 {
