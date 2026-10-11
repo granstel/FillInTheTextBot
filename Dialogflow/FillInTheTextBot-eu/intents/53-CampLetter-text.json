@@ -1,0 +1,399 @@
+{
+  "id": "0e7a65c5-97f1-46fb-8fee-4eff516fcf17",
+  "parentId": "fffd77f8-f444-4bb2-a16d-db2b752dd239",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "53-CampLetter-text",
+  "auto": true,
+  "contexts": [
+    "text-53"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-53",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cf5bb245-4860-4f7b-af84-a66f3c80309e",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "письмо из лагеря.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e90692cb-b4e9-4e8c-8716-4156e5f249cb",
+          "name": "word",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$word",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Сперва скажи какое-нибудь слово, которое тебе нравится"
+            },
+            {
+              "lang": "ru",
+              "value": "Для начала назови своё любимое слово"
+            },
+            {
+              "lang": "ru",
+              "value": "Сначала скажи любое слово, которое тебе нравится"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7068e629-0ade-4157-b683-b1e4ed27cc1e",
+          "name": "city",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$city",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь город"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи название любого города"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови какой-нибудь город"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e22fd92b-86ac-40e0-889c-1723edde9f1a",
+          "name": "adj1",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adj1",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Ответь на вопрос «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Просто ответь — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "477d77ac-793e-4525-b15c-9b16c036ac23",
+          "name": "profession",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$profession",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какую-нибудь профессию"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи название любой профессии"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови какую-нибудь профессию"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "38d5c271-72b9-4308-8f3c-2d61d8b88b04",
+          "name": "adj2",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adj2",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Снова — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Ещё раз ответь на вопрос «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Опять — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "beabbf48-8626-46bb-899d-c800320fae87",
+          "name": "thing",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$thing",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какой-нибудь предмет мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Какой-нибудь предмет мужского рода, пожалуйста"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь предмет мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b54a7111-ae19-450e-bd99-612af814d8f4",
+          "name": "song",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$song",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови какую-нибудь песню"
+            },
+            {
+              "lang": "ru",
+              "value": "Какую песню ты знаешь наизусть?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи название какой-нибудь песни"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "12b05f73-0ca9-456c-81a8-8e5ed99e3dd0",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови имя кого-нибудь из друзей"
+            },
+            {
+              "lang": "ru",
+              "value": "Как зовут твоего друга или подругу?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи имя кого-нибудь из твоих друзей"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c8aad641-29e5-44a0-8924-3aed5a2810a3",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови число больше ста"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи какое-нибудь число больше ста"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь назови число больше ста"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "39ae2024-15f9-4114-acdf-1118e1a00946",
+          "name": "subject",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$subject",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — назови какой-нибудь школьный предмет"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок скажи название школьного предмета"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее — назови какой-нибудь школьный предмет"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Вот что получилось:\nДорогие мама и папа! Пишу вам из лагеря «$word». Только не волнуйтесь!\nВ первую же ночь наш корпус унесло ураганом в город $city. Теперь мы живём в палатке. Вожатый у нас $adj1, а по профессии — $profession.\nВчера мне на голову свалился $adj2 $thing 💥. Голова цела, но теперь я помню одну-единственную песню — «$song».\nЗато у меня появился лучший друг — $name. Мы решили навсегда остаться в лагере. Теперь нам надо рублей $number на палатку побольше.\nТакой вот сон мне приснился! Правда, здорово, что ничего этого не случилось взаправду? А ещё дома в портфеле лежит дневник, а в нём — двойка по предмету «$subject». Но это ведь пустяки по сравнению с моим сном!\nЦелую, обнимаю!\nПо-моему, отличное письмо получилось! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "💥": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "💥": ""
+              }
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "💥": ""
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "💥": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-53"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "6ff4c39b-4293-47a1-aebc-a901997ebc65",
+    "data": [
+      {
+        "text": "письмо из лагеря",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "26383dd5-03d6-4947-a534-6fdbdc86b845",
+    "data": [
+      {
+        "text": "про письмо из лагеря",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8da6e176-be15-4c6e-8aa7-5a50e7418cba",
+    "data": [
+      {
+        "text": "про лагерь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8012006b-8d12-4f38-bccb-a1418f665d9b",
+    "data": [
+      {
+        "text": "письмо родителям",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0c5ea9bb-f793-45b0-bc13-bee9852f2055",
+    "data": [
+      {
+        "text": "письмо маме и папе",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5c102b18-f1d5-42fe-a5b1-25b5229b74e5",
+    "data": [
+      {
+        "text": "сочини письмо из лагеря",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "baa4599b-134f-44ae-8dc7-1aa9fddbdf8d",
+    "data": [
+      {
+        "text": "давай письмо из лагеря",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9fec51b9-1e73-4060-96bd-9d8bf5f5f847",
+    "data": [
+      {
+        "text": "история про лагерь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1925cd59-4f95-4c5b-9e14-e217cc1ead15",
+    "data": [
+      {
+        "text": "летний лагерь",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0bdf7de3-bd31-4001-b785-c36014825ace",
+    "data": [
+      {
+        "text": "письмо",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
