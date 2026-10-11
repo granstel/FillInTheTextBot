@@ -31,6 +31,8 @@ namespace FillInTheTextBot.Messengers
 
         public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
         {
+            // Ошибка и команда не сбрасывают прогресс ротации
+            var requestTextIndex = 0;
             Response response;
 
             try
@@ -41,6 +43,8 @@ namespace FillInTheTextBot.Messengers
                 {
                     request = Before(input);
                 }
+
+                requestTextIndex = request.NextTextIndex;
 
                 using (Tracing.Trace(a => a
                     .SetTag(nameof(request.UserHash), request.UserHash)
@@ -55,6 +59,10 @@ namespace FillInTheTextBot.Messengers
                     {
                         response = await _conversationService.GetResponseAsync(request);
                     }
+                    else
+                    {
+                        response.NextTextIndex = requestTextIndex;
+                    }
                 }
             }
             catch (Exception e)
@@ -64,6 +72,7 @@ namespace FillInTheTextBot.Messengers
                 response = new Response
                 {
                     Text = ErrorAnswer,
+                    NextTextIndex = requestTextIndex,
                     Buttons = new[]
                     {
                         new Button
