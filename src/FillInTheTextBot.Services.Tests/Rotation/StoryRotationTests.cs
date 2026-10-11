@@ -323,6 +323,34 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         }
 
         [Test]
+        public void SelectEvent_OrderedCampaignStoryLastInCycle_NewCycleStartsWithAnother()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Texts = ["text-2", "text-1"] });
+            var state = new RotationState { Cycle = 1 };
+            PlayCycle(state);
+            state.Last = 2;
+
+
+            var first = _target.SelectEvent(state);
+
+
+            Assert.That(first, Is.EqualTo("text-1"));
+        }
+
+        [Test]
+        public void SelectEvent_OnlyStoryIsLast_SelectedAnyway()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Texts = ["text-2"] });
+            var state = new RotationState { Cycle = 1, Last = 2 };
+
+
+            var first = _target.SelectEvent(state);
+
+
+            Assert.That(first, Is.EqualTo("text-2"));
+        }
+
+        [Test]
         public void SelectEvent_CampaignStartedMidCycle_NotDoneCampaignStoriesFirst()
         {
             SetCampaigns(new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Texts = ["text-1", "text-2"] });

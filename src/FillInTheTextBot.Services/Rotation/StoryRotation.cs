@@ -181,7 +181,10 @@ namespace FillInTheTextBot.Services.Rotation
 
                 if (fresh.Count > 0)
                 {
-                    return campaign.Shuffle ? SelectRandom(fresh, state.Last) : fresh[0];
+                    // Новый круг не начинается с последней истории прошлого
+                    return campaign.Shuffle
+                        ? SelectRandom(fresh, state.Last)
+                        : fresh.FirstOrDefault(number => number != state.Last, fresh[0]);
                 }
             }
 
