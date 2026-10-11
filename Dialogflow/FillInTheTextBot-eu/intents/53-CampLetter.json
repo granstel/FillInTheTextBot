@@ -1,0 +1,60 @@
+{
+  "id": "fffd77f8-f444-4bb2-a16d-db2b752dd239",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "53-CampLetter",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-53",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "eabf1fc4-167b-49f3-858f-0bb844951728",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-53",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Отлично! Сочиняем",
+            "Здорово! Давай сочиним",
+            "Класс! Сейчас напишем",
+            "Супер! Теперь сочиним"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
