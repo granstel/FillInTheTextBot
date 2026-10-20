@@ -847,6 +847,27 @@ namespace FillInTheTextBot.Services.Tests
         }
 
         [Test]
+        public async Task GetResponseAsync_AllAttemptsNotRecognized_PauseHintInsteadOfStory()
+        {
+            SetupRotation();
+            SetupDialog(new Dialog { Action = "GetText" });
+            SetupTextDialog("text-2", "Default Fallback Intent");
+            SetupTextDialog("text-1", "Default Fallback Intent");
+            SetupTextDialog("text-33", "Default Fallback Intent");
+            SetupTextDialog("texts-over", "TextsOver");
+
+
+            var result = await _target.GetResponseAsync(new Request());
+
+
+            var state = RotationState.Parse(result.RotationState);
+
+            Assert.That(result.Text, Does.EndWith("TextsOver"));
+            Assert.That(state.Cycle, Is.EqualTo(0), "Круг не закончился — истории только недоступны");
+            Assert.That(state.IsDone(2) || state.IsDone(1) || state.IsDone(33), Is.False);
+        }
+
+        [Test]
         public async Task GetResponseAsync_StoryEventNotRecognized_NextStoryIssued()
         {
             SetupRotation();
