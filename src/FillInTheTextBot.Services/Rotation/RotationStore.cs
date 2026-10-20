@@ -1,5 +1,3 @@
-using System;
-
 namespace FillInTheTextBot.Services.Rotation
 {
     /// <summary>
@@ -8,21 +6,13 @@ namespace FillInTheTextBot.Services.Rotation
     public sealed class RotationStore
     {
         private volatile RotationSnapshot _snapshot;
-        private volatile RotationCheck _lastCheck;
 
         /// <summary>null, пока ни одна версия не загружена.</summary>
         public RotationSnapshot Snapshot => _snapshot;
 
-        public RotationCheck LastCheck => _lastCheck;
-
         public void Apply(RotationSnapshot snapshot)
         {
             _snapshot = snapshot;
-        }
-
-        public void ReportCheck(DateTimeOffset checkedAt, string error)
-        {
-            _lastCheck = new RotationCheck(checkedAt, error);
         }
     }
 }
