@@ -143,7 +143,7 @@ public class RotationFlowTests
             await Task.Delay(100);
         }
 
-        Assert.That(store.Snapshot, Is.Not.Null, store.LastCheck?.Error);
+        Assert.That(store.Snapshot, Is.Not.Null);
     }
 
     private static string GetSolutionRoot()

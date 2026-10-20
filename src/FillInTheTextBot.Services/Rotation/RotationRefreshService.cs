@@ -61,8 +61,6 @@ namespace FillInTheTextBot.Services.Rotation
 
                 if (!stories.IsModified && !rules.IsModified)
                 {
-                    store.ReportCheck(DateTimeOffset.UtcNow, null);
-
                     return;
                 }
 
@@ -77,8 +75,6 @@ namespace FillInTheTextBot.Services.Rotation
             {
                 log.LogError(e, "Error while refreshing rotation");
                 MetricsCollector.Increment("rotation_error", "refresh");
-
-                store.ReportCheck(DateTimeOffset.UtcNow, e.Message);
             }
         }
 
@@ -110,22 +106,17 @@ namespace FillInTheTextBot.Services.Rotation
 
         private bool TryApply(RotationSources sources, string origin)
         {
-            var now = DateTimeOffset.UtcNow;
-
-            if (!RotationSnapshot.TryCreate(sources, now, out var snapshot, out var errors))
+            if (!RotationSnapshot.TryCreate(sources, out var snapshot, out var errors))
             {
                 var error = string.Join("; ", errors);
 
                 log.LogError("Rotation from {Origin} is invalid: {Errors}", origin, error);
                 MetricsCollector.Increment("rotation_error", "invalid");
 
-                store.ReportCheck(now, error);
-
                 return false;
             }
 
             store.Apply(snapshot);
-            store.ReportCheck(now, null);
 
             log.LogInformation("Rotation loaded from {Origin}: {StoriesCount} stories, rules ETag {RulesETag}",
                 origin, snapshot.Catalog.Numbers.Count, sources.RulesETag);

@@ -56,7 +56,6 @@ namespace FillInTheTextBot.Services.Tests.Rotation
 
             Assert.That(_store.Snapshot.Catalog.Numbers, Is.EqualTo(new[] { 1, 2 }));
             Assert.That(_store.Snapshot.Rules.FirstCycle, Is.EqualTo(new[] { "text-2-1" }));
-            Assert.That(_store.LastCheck.Error, Is.Null);
             _cache.Verify(c => c.AddAsync("rotation:sources",
                 It.Is<RotationSources>(s => s.StoriesETag == "s1" && s.RulesETag == "r1"), null), Times.Once);
         }
@@ -87,7 +86,6 @@ namespace FillInTheTextBot.Services.Tests.Rotation
 
 
             Assert.That(_store.Snapshot, Is.SameAs(previous));
-            Assert.That(_store.LastCheck.Error, Does.Contain("text-3"));
             _cache.Verify(c => c.AddAsync(It.IsAny<string>(), It.IsAny<object>(), null), Times.Once);
         }
 
@@ -127,7 +125,7 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         }
 
         [Test]
-        public async Task RefreshAsync_SourceFails_ReportsErrorKeepsSnapshot()
+        public async Task RefreshAsync_SourceFails_KeepsSnapshot()
         {
             SetupSource(new(true, StoryFiles, "s1"), new(true, "{}", "r1"));
             await _target.RefreshAsync(CancellationToken.None);
@@ -141,7 +139,6 @@ namespace FillInTheTextBot.Services.Tests.Rotation
 
 
             Assert.That(_store.Snapshot, Is.SameAs(previous));
-            Assert.That(_store.LastCheck.Error, Is.EqualTo("недоступен"));
         }
 
         [Test]
