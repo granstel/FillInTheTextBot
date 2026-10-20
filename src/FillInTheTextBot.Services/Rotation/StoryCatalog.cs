@@ -16,8 +16,6 @@ namespace FillInTheTextBot.Services.Rotation
             _parts = new SortedDictionary<int, int>(parts);
         }
 
-        public static StoryCatalog Empty { get; } = new(new Dictionary<int, int>());
-
         public IReadOnlyCollection<int> Numbers => _parts.Keys;
 
         public static StoryCatalog FromFileNames(IEnumerable<string> fileNames)

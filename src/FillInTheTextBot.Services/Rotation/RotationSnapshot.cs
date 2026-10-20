@@ -1,13 +1,11 @@
-using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace FillInTheTextBot.Services.Rotation
 {
-    public sealed record RotationSnapshot(StoryCatalog Catalog, RotationRules Rules, RotationSources Sources, DateTimeOffset LoadedAt)
+    public sealed record RotationSnapshot(StoryCatalog Catalog, RotationRules Rules, RotationSources Sources)
     {
-        public static bool TryCreate(RotationSources sources, DateTimeOffset loadedAt, out RotationSnapshot snapshot,
-            out IReadOnlyList<string> errors)
+        public static bool TryCreate(RotationSources sources, out RotationSnapshot snapshot, out IReadOnlyList<string> errors)
         {
             snapshot = null;
 
@@ -40,7 +38,7 @@ namespace FillInTheTextBot.Services.Rotation
                 return false;
             }
 
-            snapshot = new RotationSnapshot(catalog, rules, sources, loadedAt);
+            snapshot = new RotationSnapshot(catalog, rules, sources);
 
             return true;
         }

@@ -39,7 +39,7 @@ namespace FillInTheTextBot.Services.Tests.Rotation
             };
 
             _store = new RotationStore();
-            _store.Apply(new RotationSnapshot(catalog, rules, new RotationSources(), DateTimeOffset.UtcNow));
+            _store.Apply(new RotationSnapshot(catalog, rules, new RotationSources()));
 
             _time = new ManualTime();
 

@@ -39,7 +39,7 @@ namespace FillInTheTextBot.Services.Tests.Rotation
                 RulesJson = File.ReadAllText(Path.Combine(root, "Dialogflow", "rotation.json"))
             };
 
-            RotationSnapshot.TryCreate(sources, DateTimeOffset.UtcNow, out var snapshot, out var errors);
+            RotationSnapshot.TryCreate(sources, out var snapshot, out var errors);
             Assert.That(errors, Is.Empty);
 
             _store = new RotationStore();

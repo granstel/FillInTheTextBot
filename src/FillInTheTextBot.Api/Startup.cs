@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using FillInTheTextBot.Api.DI;
-using FillInTheTextBot.Api.Endpoints;
 using FillInTheTextBot.Api.Health;
 using Microsoft.Extensions.Hosting;
 
@@ -89,7 +88,6 @@ namespace FillInTheTextBot.Api
                 e.MapControllers();
                 e.MapPrometheusScrapingEndpoint();
                 e.MapHealthChecks(HealthPath);
-                e.MapRotation(configuration.ServicePort);
             });
         }
     }

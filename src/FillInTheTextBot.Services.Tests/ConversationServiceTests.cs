@@ -799,7 +799,7 @@ namespace FillInTheTextBot.Services.Tests
                 Chains = [["text-33", "text-34-1"]]
             };
 
-            _rotationStore.Apply(new RotationSnapshot(catalog, rules, new RotationSources(), DateTimeOffset.UtcNow));
+            _rotationStore.Apply(new RotationSnapshot(catalog, rules, new RotationSources()));
         }
 
         private void SetupTextDialog(string textKey, string intentName)
