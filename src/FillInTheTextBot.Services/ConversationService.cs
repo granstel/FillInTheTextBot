@@ -152,6 +152,7 @@ namespace FillInTheTextBot.Services
                 }
 
                 Dialog dialog = null;
+                var isIssued = false;
 
                 for (var attempt = 1; attempt <= MaxRotationAttempts; attempt++)
                 {
@@ -164,6 +165,8 @@ namespace FillInTheTextBot.Services
 
                     if (rotationState is null || _storyRotation.TryMarkIssued(rotationState, textKey, dialog?.IntentName))
                     {
+                        isIssued = true;
+
                         break;
                     }
 
@@ -176,6 +179,12 @@ namespace FillInTheTextBot.Services
                     }
 
                     _storyRotation.MarkUnavailable(textKey);
+                }
+
+                // Агент не знает ни одной из выбранных историй — вместо истории пауза с подсказкой
+                if (!isIssued && isFromRotation)
+                {
+                    dialog = await GetTextDialogAsync(request, StoryRotation.TextsOverEvent);
                 }
 
                 var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
