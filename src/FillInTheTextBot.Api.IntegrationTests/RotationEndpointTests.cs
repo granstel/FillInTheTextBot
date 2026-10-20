@@ -1,5 +1,6 @@
 using System.Net;
 using FillInTheTextBot.Api.Endpoints;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace FillInTheTextBot.Api.IntegrationTests;
@@ -45,13 +46,31 @@ public class RotationEndpointTests
     }
 
     [Test]
+    public async Task Rotation_PublicPortWithServicePortInHost_NotFound()
+    {
+        var context = await SendAsync(localPort: 80, host: $"example.com:{ServicePort}");
+
+        Assert.That(context.Response.StatusCode, Is.EqualTo(StatusCodes.Status404NotFound));
+    }
+
+    [Test]
     public async Task Rotation_ServicePort_Ok()
     {
-        using var request = new HttpRequestMessage(HttpMethod.Get, RotationEndpoint.Path);
-        request.Headers.Host = $"localhost:{ServicePort}";
+        var context = await SendAsync(localPort: ServicePort, host: "fitb");
 
-        var response = await _client.SendAsync(request);
+        Assert.That(context.Response.StatusCode, Is.EqualTo(StatusCodes.Status200OK));
+    }
 
-        Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK), await response.Content.ReadAsStringAsync());
+    private Task<HttpContext> SendAsync(int localPort, string host)
+    {
+        var context = _factory.Server.SendAsync(c =>
+        {
+            c.Request.Method = HttpMethods.Get;
+            c.Request.Path = RotationEndpoint.Path;
+            c.Request.Host = new HostString(host);
+            c.Connection.LocalPort = localPort;
+        });
+
+        return context;
     }
 }
