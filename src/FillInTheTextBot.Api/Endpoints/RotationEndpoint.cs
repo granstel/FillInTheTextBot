@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Threading.Tasks;
 using FillInTheTextBot.Services.Rotation;
 using GranSteL.Helpers.Redis;
 using Microsoft.AspNetCore.Builder;
@@ -14,7 +15,11 @@ namespace FillInTheTextBot.Api.Endpoints
 
         internal static void MapRotation(this IEndpointRouteBuilder endpoints, int servicePort)
         {
-            endpoints.MapGet(Path, Get).RequireHost($"*:{servicePort}");
+            // Порт соединения, а не заголовок Host: заголовок задаёт клиент, а прокси передаёт его как есть
+            endpoints.MapGet(Path, Get).AddEndpointFilter((context, next) =>
+                context.HttpContext.Connection.LocalPort == servicePort
+                    ? next(context)
+                    : ValueTask.FromResult<object>(Results.NotFound()));
         }
 
         private static IResult Get(RotationStore store, IRedisCacheService cache)
