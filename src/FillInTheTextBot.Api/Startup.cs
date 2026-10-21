@@ -49,6 +49,7 @@ namespace FillInTheTextBot.Api
 
             services.AddInternalServices();
             services.AddExternalServices();
+            services.AddRotation(appConfiguration.Rotation);
         }
 
         private static void AddHealth(IServiceCollection services)

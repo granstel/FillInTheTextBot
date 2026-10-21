@@ -33,6 +33,9 @@ AppConfiguration__Tracing__Port=4317
 # AppConfiguration__Shutdown__DrainDelaySeconds=10
 # AppConfiguration__Shutdown__TimeoutSeconds=30
 
+# Необязательный токен GitHub только на чтение публичного репозитория: лимит API 5000 запросов в час вместо 60
+# AppConfiguration__Rotation__GitHubToken=
+
 # Токены проверки входящих запросов от площадок
 FITB-YANDEX-INCOMINGTOKEN=CHANGE-ME
 FITB-SBER-INCOMINGTOKEN=CHANGE-ME

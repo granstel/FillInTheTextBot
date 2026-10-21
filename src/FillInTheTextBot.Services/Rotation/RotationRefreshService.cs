@@ -1,0 +1,127 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+using FillInTheTextBot.Services.Configuration;
+using GranSteL.Helpers.Redis;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+
+namespace FillInTheTextBot.Services.Rotation
+{
+    /// <summary>
+    /// Периодически забирает список историй и правила ротации. Последняя валидная версия
+    /// кэшируется в Redis, чтобы бот стартовал с ней при недоступном GitHub.
+    /// </summary>
+    public sealed class RotationRefreshService(
+        IRotationSource source,
+        IRedisCacheService cache,
+        RotationStore store,
+        RotationConfiguration configuration,
+        ILogger<RotationRefreshService> log) : BackgroundService
+    {
+        private const string CacheKey = "rotation:sources";
+
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            LoadFromCache();
+
+            var interval = TimeSpan.FromMinutes(configuration.RefreshIntervalMinutes);
+
+            while (!stoppingToken.IsCancellationRequested)
+            {
+                await RefreshAsync(stoppingToken);
+
+                await Task.Delay(interval, stoppingToken);
+            }
+        }
+
+        public void LoadFromCache()
+        {
+            try
+            {
+                if (cache.TryGet(CacheKey, out RotationSources sources) && sources is not null)
+                {
+                    TryApply(sources, "Redis");
+                }
+            }
+            catch (Exception e)
+            {
+                log.LogError(e, "Error while loading rotation from cache");
+            }
+        }
+
+        public async Task RefreshAsync(CancellationToken cancellationToken)
+        {
+            var current = store.Snapshot?.Sources ?? new RotationSources();
+
+            try
+            {
+                var stories = await source.GetStoryFilesAsync(current.StoriesETag, cancellationToken);
+                var rules = await source.GetRulesAsync(current.RulesETag, cancellationToken);
+
+                if (!stories.IsModified && !rules.IsModified)
+                {
+                    return;
+                }
+
+                var sources = Merge(current, stories, rules);
+
+                if (TryApply(sources, "GitHub"))
+                {
+                    await cache.AddAsync(CacheKey, sources);
+                }
+            }
+            catch (Exception e) when (!cancellationToken.IsCancellationRequested)
+            {
+                log.LogError(e, "Error while refreshing rotation");
+                MetricsCollector.Increment("rotation_error", "refresh");
+            }
+        }
+
+        private static RotationSources Merge(RotationSources current, RotationSourceResult<string[]> stories,
+            RotationSourceResult<string> rules)
+        {
+            var sources = new RotationSources
+            {
+                StoriesETag = current.StoriesETag,
+                StoryFiles = current.StoryFiles,
+                RulesETag = current.RulesETag,
+                RulesJson = current.RulesJson
+            };
+
+            if (stories.IsModified)
+            {
+                sources.StoriesETag = stories.ETag;
+                sources.StoryFiles = stories.Value;
+            }
+
+            if (rules.IsModified)
+            {
+                sources.RulesETag = rules.ETag;
+                sources.RulesJson = rules.Value;
+            }
+
+            return sources;
+        }
+
+        private bool TryApply(RotationSources sources, string origin)
+        {
+            if (!RotationSnapshot.TryCreate(sources, out var snapshot, out var errors))
+            {
+                var error = string.Join("; ", errors);
+
+                log.LogError("Rotation from {Origin} is invalid: {Errors}", origin, error);
+                MetricsCollector.Increment("rotation_error", "invalid");
+
+                return false;
+            }
+
+            store.Apply(snapshot);
+
+            log.LogInformation("Rotation loaded from {Origin}: {StoriesCount} stories, rules ETag {RulesETag}",
+                origin, snapshot.Catalog.Numbers.Count, sources.RulesETag);
+
+            return true;
+        }
+    }
+}

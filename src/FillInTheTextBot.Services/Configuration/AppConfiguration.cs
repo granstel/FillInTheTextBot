@@ -13,5 +13,7 @@
         public ConversationConfiguration Conversation { get; set; }
 
         public ShutdownConfiguration Shutdown { get; set; }
+
+        public RotationConfiguration Rotation { get; set; }
     }
 }
