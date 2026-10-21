@@ -50,6 +50,7 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         [TestCase("12")]
         [TestCase("not json")]
         [TestCase("""{"v":1,"cycle":0}""")]
+        [TestCase("""{"cycle":0,"done":""}""")]
         [TestCase("""{"v":2,"done":"*"}""")]
         [TestCase("""{"v":2,"cycle":"x"}""")]
         public void Parse_Invalid_Null(string value)
