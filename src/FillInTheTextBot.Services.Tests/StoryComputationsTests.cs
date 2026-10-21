@@ -113,5 +113,14 @@ namespace FillInTheTextBot.Services.Tests
             Assert.That(result, Is.True);
             Assert.That(context.Parameters["daysLeft"], Is.EqualTo("1"));
         }
+
+        [TestCase("2026-12-31T20:59:59Z", "2026-12-31")]
+        [TestCase("2026-12-31T21:00:00Z", "2027-01-01")]
+        public void ToMoscowDate_UtcMoment_DateInMoscow(string utc, string expected)
+        {
+            var date = StoryComputations.ToMoscowDate(DateTimeOffset.Parse(utc));
+
+            Assert.That(date, Is.EqualTo(DateTime.Parse(expected)));
+        }
     }
 }
