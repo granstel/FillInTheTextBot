@@ -33,12 +33,11 @@ namespace FillInTheTextBot.Messengers
         {
             // Ошибка и команда не сбрасывают прогресс ротации
             var requestTextIndex = 0;
+            Request request = null;
             Response response;
 
             try
             {
-                Request request;
-                
                 using (Tracing.Trace(operationName: "Before"))
                 {
                     request = Before(input);
@@ -85,6 +84,8 @@ namespace FillInTheTextBot.Messengers
 
                 MetricsCollector.Increment("ErrorAnswer", string.Empty);
             }
+
+            response.RotationState ??= request?.RotationState;
 
             using (Tracing.Trace(operationName: "AfterAsync"))
             {

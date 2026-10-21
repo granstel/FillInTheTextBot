@@ -13,5 +13,8 @@ namespace FillInTheTextBot.Services.Configuration
         public string GitHubToken { get; set; }
 
         public int RefreshIntervalMinutes { get; set; } = 10;
+
+        /// <summary>Сколько не выдавать историю, которую агент Dialogflow не знает.</summary>
+        public int UnavailableMinutes { get; set; } = 10;
     }
 }
