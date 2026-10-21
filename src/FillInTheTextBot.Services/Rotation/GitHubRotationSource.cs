@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using FillInTheTextBot.Services.Configuration;
-using Newtonsoft.Json.Linq;
+using FillInTheTextBot.Services.Extensions;
 
 namespace FillInTheTextBot.Services.Rotation
 {
@@ -83,17 +83,22 @@ namespace FillInTheTextBot.Services.Rotation
 
         private static string[] ParseTree(string json)
         {
-            var tree = JObject.Parse(json);
+            var tree = json.Deserialize<GitHubTree>();
 
-            if (tree.Value<bool>("truncated"))
+            if (tree?.Tree is null)
+            {
+                throw new InvalidOperationException("В ответе GitHub нет списка файлов");
+            }
+
+            if (tree.Truncated)
             {
                 throw new InvalidOperationException("GitHub вернул неполный список файлов");
             }
 
-            var files = tree["tree"]?
-                .Where(item => item.Value<string>("type") == "blob")
-                .Select(item => item.Value<string>("path"))
-                .ToArray() ?? throw new InvalidOperationException("В ответе GitHub нет списка файлов");
+            var files = tree.Tree
+                .Where(item => item.Type == "blob")
+                .Select(item => item.Path)
+                .ToArray();
 
             return files;
         }

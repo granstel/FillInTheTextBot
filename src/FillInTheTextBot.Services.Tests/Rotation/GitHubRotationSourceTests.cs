@@ -70,6 +70,15 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         }
 
         [Test]
+        public void GetStoryFilesAsync_NoTree_Throws()
+        {
+            _handler.Respond(HttpStatusCode.OK, """{ "message": "Not Found" }""");
+
+
+            Assert.ThrowsAsync<InvalidOperationException>(() => _target.GetStoryFilesAsync(null, CancellationToken.None));
+        }
+
+        [Test]
         public async Task GetStoryFilesAsync_ETagAndToken_ConditionalAuthorizedRequest()
         {
             _configuration.GitHubToken = "token";
