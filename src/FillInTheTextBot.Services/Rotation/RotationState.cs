@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace FillInTheTextBot.Services.Rotation
 {
@@ -10,21 +9,52 @@ namespace FillInTheTextBot.Services.Rotation
     /// Ротация пользователя. Хранится на площадке строкой вида
     /// {"v":2,"cycle":3,"done":"//////8f","current":12,"next":34,"last":12}.
     /// </summary>
+    [JsonObject(MemberSerialization.OptIn)]
     public sealed class RotationState
     {
-        private const int Version = 2;
+        private const int CurrentVersion = 2;
+
+        private static readonly JsonSerializerSettings SerializerSettings = new()
+        {
+            NullValueHandling = NullValueHandling.Ignore
+        };
 
         private readonly HashSet<int> _done = [];
 
+        public RotationState() : this(CurrentVersion)
+        {
+        }
+
+        [JsonConstructor]
+        private RotationState(int v)
+        {
+            Version = v;
+        }
+
+        [JsonProperty("v", Order = 0)]
+        private int Version { get; }
+
         /// <summary>0 — первый круг, он идёт в заданном порядке.</summary>
+        [JsonProperty("cycle", Order = 1)]
         public int Cycle { get; set; }
 
+        /// <summary>Закрытые в круге истории — битовая маска по номерам в base64.</summary>
+        [JsonProperty("done", Order = 2)]
+        private string Done
+        {
+            get => EncodeDone(_done);
+            set => _done.UnionWith(DecodeDone(value));
+        }
+
         /// <summary>Выдана и ещё не дособрана.</summary>
+        [JsonProperty("current", Order = 3)]
         public int? Current { get; set; }
 
         /// <summary>Следующее звено цепочки.</summary>
+        [JsonProperty("next", Order = 4)]
         public int? Next { get; set; }
 
+        [JsonProperty("last", Order = 5)]
         public int? Last { get; set; }
 
         public bool IsDone(int number)
@@ -68,27 +98,11 @@ namespace FillInTheTextBot.Services.Rotation
 
             try
             {
-                var json = JObject.Parse(value);
+                var state = JsonConvert.DeserializeObject<RotationState>(value);
 
-                if (json.Value<int?>("v") != Version)
-                {
-                    return null;
-                }
-
-                var state = new RotationState
-                {
-                    Cycle = json.Value<int?>("cycle") ?? 0,
-                    Current = json.Value<int?>("current"),
-                    Next = json.Value<int?>("next"),
-                    Last = json.Value<int?>("last")
-                };
-
-                var done = DecodeDone(json.Value<string>("done"));
-                state._done.UnionWith(done);
-
-                return state;
+                return state?.Version == CurrentVersion ? state : null;
             }
-            catch (Exception e) when (e is JsonException or FormatException or InvalidCastException)
+            catch (Exception e) when (e is JsonException or FormatException)
             {
                 return null;
             }
@@ -96,28 +110,9 @@ namespace FillInTheTextBot.Services.Rotation
 
         public string Serialize()
         {
-            var json = new JObject
-            {
-                ["v"] = Version,
-                ["cycle"] = Cycle,
-                ["done"] = EncodeDone(_done)
-            };
-
-            AddIfSet(json, "current", Current);
-            AddIfSet(json, "next", Next);
-            AddIfSet(json, "last", Last);
-
-            var value = json.ToString(Formatting.None);
+            var value = JsonConvert.SerializeObject(this, SerializerSettings);
 
             return value;
-        }
-
-        private static void AddIfSet(JObject json, string name, int? value)
-        {
-            if (value is not null)
-            {
-                json[name] = value.Value;
-            }
         }
 
         private static string EncodeDone(ICollection<int> done)
