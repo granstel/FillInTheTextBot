@@ -1,0 +1,322 @@
+{
+  "id": "08b90134-19d8-4a78-9d94-f6c169de1333",
+  "parentId": "54373251-f43b-4822-8367-b11105587c3f",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "54-AutumnWind-text",
+  "auto": true,
+  "contexts": [
+    "text-54"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-54",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "6e056dc9-7711-4b4c-b7dc-1148a2f4dd0f",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "про осенний ветер.",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "515ac0ce-bee4-42b7-956a-b2ec875941cf",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Для начала назови число больше двадцати"
+            },
+            {
+              "lang": "ru",
+              "value": "Сперва скажи какое-нибудь число больше двадцати"
+            },
+            {
+              "lang": "ru",
+              "value": "Сначала назови число больше двадцати"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c8a669ab-d19a-4b22-aa2f-dab146e00711",
+          "name": "food",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$food",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови что-нибудь съедобное"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи, что можно съесть"
+            },
+            {
+              "lang": "ru",
+              "value": "Назови какую-нибудь еду"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "10ef6caa-8a5d-412d-8ff6-ab803c4bb6ea",
+          "name": "adjM",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjM",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Теперь скажи — «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Ответь на вопрос «какой»?"
+            },
+            {
+              "lang": "ru",
+              "value": "Просто ответь — «какой»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "794546aa-dc76-4ecb-9f09-2c6d0100a98e",
+          "name": "animalM",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$animalM",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи какое-нибудь животное мужского рода"
+            },
+            {
+              "lang": "ru",
+              "value": "Теперь — животное мужского рода"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "a5b393b0-b170-4dfc-8605-fb6dffd0ec54",
+          "name": "country",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$country",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови страну, в которой хотелось бы побывать"
+            },
+            {
+              "lang": "ru",
+              "value": "В какой стране ты мечтаешь побывать?"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи название какой-нибудь страны"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "14ce58f7-8d86-4c4d-acdc-7b4194ca12c4",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови мужское имя — например, соседа"
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи имя какого-нибудь взрослого мужчины, например соседа"
+            },
+            {
+              "lang": "ru",
+              "value": "Как зовут кого-нибудь из твоих соседей?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "c6193583-6b25-423a-800e-f6d8c47e88b7",
+          "name": "adjF",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjF",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос — «какая»?"
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок — «какая»?"
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее — «какая»?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Осень, дождь льёт вторую неделю, лужи — сантиметров $number глубиной! Мама даёт тебе список покупок, в нём одно слово: «$food». И дедушкин зонт — огромный, $adjM и старый.\nТы раскрываешь зонт, и тут налетает ветер 💨 Тебя уносит выше крыш! Рядом пристраивается клин перелётных птиц: журавли, утки и почему-то один $animalM.\n— Летишь с нами на юг? — кричит вожак. — Пункт назначения — $country!\n— Не могу, мне в магазин! У меня в списке $food!\nПтицы улетают, ветер стихает, и ты опускаешься в кучу листьев, которую сгребал дворник дядя $name. Куча огромная, $adjF и мягкая. Дворник вздыхает: «Каждую осень одно и то же!»\nЧерез неделю приходит открытка: «Пальмы, солнце, $country. Ждём следующей осенью! Твой $animalM». И приписка: «Как там $food? Удалось купить?» 🌴\nПо-моему, отлично получилось! Сочиним ещё что-нибудь?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "💨": "",
+                "🌴": ""
+              }
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ],
+              "Replacements": {
+                "💨": "",
+                "🌴": ""
+              }
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "💨": "<speaker audio=\"alice-sounds-nature-wind-1.opus\">",
+                "🌴": ""
+              }
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ],
+              "Replacements": {
+                "💨": "",
+                "🌴": ""
+              }
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-54"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
