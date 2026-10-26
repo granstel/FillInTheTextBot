@@ -287,6 +287,151 @@ namespace FillInTheTextBot.Services.Tests.Rotation
             Assert.That(state.IsDone(40), Is.False);
         }
 
+        [Test]
+        public void SelectEvent_ActiveCampaign_ItsStoriesFirstInEveryCycle()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Texts = ["text-2", "text-1"] });
+            var state = new RotationState();
+
+
+            var firstCycle = PlayCycle(state);
+            var secondCycle = PlayCycle(state);
+
+
+            Assert.That(firstCycle, Is.EqualTo(new[] { "text-2", "text-1", "text-40", "text-33", "text-34-1", "texts-over" }));
+            Assert.That(secondCycle.Take(2), Is.EqualTo(new[] { "text-2", "text-1" }));
+        }
+
+        [Test]
+        public void SelectEvent_ShuffledCampaign_ItsStoriesFirstInRandomOrder()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Shuffle = true, Texts = ["text-40", "text-2", "text-1"] });
+            var orders = new HashSet<string>();
+
+
+            for (var attempt = 0; attempt < 20; attempt++)
+            {
+                var events = PlayCycle(new RotationState { Cycle = 1 });
+
+                Assert.That(events.Take(3), Is.EquivalentTo(new[] { "text-40", "text-2", "text-1" }));
+
+                orders.Add(string.Join(",", events.Take(3)));
+            }
+
+
+            Assert.That(orders.Count, Is.GreaterThan(1));
+        }
+
+        [Test]
+        public void SelectEvent_OrderedCampaignStoryLastInCycle_NewCycleStartsWithAnother()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Texts = ["text-2", "text-1"] });
+            var state = new RotationState { Cycle = 1 };
+            PlayCycle(state);
+            state.Last = 2;
+
+
+            var first = _target.SelectEvent(state);
+
+
+            Assert.That(first, Is.EqualTo("text-1"));
+        }
+
+        [Test]
+        public void SelectEvent_OnlyStoryIsLast_SelectedAnyway()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Texts = ["text-2"] });
+            var state = new RotationState { Cycle = 1, Last = 2 };
+
+
+            var first = _target.SelectEvent(state);
+
+
+            Assert.That(first, Is.EqualTo("text-2"));
+        }
+
+        [Test]
+        public void SelectEvent_CampaignStartedMidCycle_NotDoneCampaignStoriesFirst()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Texts = ["text-1", "text-2"] });
+            var state = new RotationState { Cycle = 1 };
+            state.MarkDone(1);
+
+
+            var eventName = _target.SelectEvent(state);
+
+
+            Assert.That(eventName, Is.EqualTo("text-2"));
+        }
+
+        [Test]
+        public void SelectEvent_OverlappingCampaigns_FileOrderWithoutDuplicates()
+        {
+            SetCampaigns(
+                new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Texts = ["text-2"] },
+                new RotationCampaign { Id = "b", From = "09-01", To = "10-31", Texts = ["text-1", "text-2"] });
+
+
+            var events = PlayCycle(new RotationState());
+
+
+            Assert.That(events.Take(3), Is.EqualTo(new[] { "text-2", "text-1", "text-40" }));
+        }
+
+        [Test]
+        public void SelectEvent_HiddenStoryInActiveCampaign_Selected()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "10-01", To = "10-10", Texts = ["text-3"] });
+
+
+            var eventName = _target.SelectEvent(new RotationState());
+
+
+            Assert.That(eventName, Is.EqualTo("text-3"));
+        }
+
+        [Test]
+        public void SelectEvent_HideOutsideOutOfDates_NeverSelected()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "12-20", To = "01-10", HideOutside = true, Texts = ["text-1"] });
+
+
+            var events = PlayCycle(new RotationState());
+
+
+            Assert.That(events, Does.Not.Contain("text-1"));
+        }
+
+        [Test]
+        public void SelectEvent_NotHideOutsideOutOfDates_UsualStory()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "12-20", To = "01-10", Texts = ["text-1"] });
+
+
+            var events = PlayCycle(new RotationState());
+
+
+            Assert.That(events, Is.EqualTo(new[] { "text-40", "text-33", "text-34-1", "text-1", "text-2", "texts-over" }));
+        }
+
+        [Test]
+        public void SelectEvent_CampaignByMoscowDate_ActiveFromMoscowMidnight()
+        {
+            SetCampaigns(new RotationCampaign { Id = "a", From = "2026-10-05", To = "2026-10-05", Texts = ["text-2"] });
+            _time.Now = new DateTimeOffset(2026, 10, 4, 21, 0, 0, TimeSpan.Zero);
+
+
+            var eventName = _target.SelectEvent(new RotationState());
+
+
+            Assert.That(eventName, Is.EqualTo("text-2"));
+        }
+
+        private void SetCampaigns(params RotationCampaign[] campaigns)
+        {
+            _store.Snapshot.Rules.Campaigns = campaigns;
+        }
+
         private List<string> PlayCycle(RotationState state)
         {
             var events = new List<string>();
