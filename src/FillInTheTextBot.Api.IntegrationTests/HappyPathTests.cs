@@ -51,6 +51,7 @@ public class HappyPathTests
 
             // Пауза вывода из ротации нужна в бою, в тестах она только замедляет остановку
             builder.UseSetting("AppConfiguration:Shutdown:DrainDelaySeconds", "0");
+            builder.UseSetting("AppConfiguration:Rotation:Enabled", "false");
             builder.UseSetting("Logging:LogLevel:Default", "Warning");
         });
 

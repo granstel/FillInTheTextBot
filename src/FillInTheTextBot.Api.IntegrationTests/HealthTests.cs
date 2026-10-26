@@ -24,6 +24,7 @@ public class HealthTests
             builder.UseSetting("AppConfiguration:Tracing:Port", "0");
             // Пауза вывода из ротации нужна в бою, в тестах она только замедляет остановку
             builder.UseSetting("AppConfiguration:Shutdown:DrainDelaySeconds", "0");
+            builder.UseSetting("AppConfiguration:Rotation:Enabled", "false");
             builder.UseSetting("Logging:LogLevel:Default", "Warning");
         });
 
