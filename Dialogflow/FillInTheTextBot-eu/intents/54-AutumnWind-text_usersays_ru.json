@@ -1,0 +1,962 @@
+[
+  {
+    "id": "a723e568-bd4d-408c-83d7-5555f16d2b6a",
+    "data": [
+      {
+        "text": "21",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "dee9d73f-abb4-4392-a6df-66c6bb49cf6e",
+    "data": [
+      {
+        "text": "25",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "187c5ab9-4a19-43be-a4fe-41070ddd228a",
+    "data": [
+      {
+        "text": "30",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "93d16790-58b5-4601-8606-31d3860ac7a3",
+    "data": [
+      {
+        "text": "33",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ce9586ee-c939-4cae-86db-28e1de3aa8ad",
+    "data": [
+      {
+        "text": "40",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0042088c-e133-4fc5-89fd-11b6c0f7c73e",
+    "data": [
+      {
+        "text": "47",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "52f63d7d-fc28-425f-bbbd-a7e9a08abfcd",
+    "data": [
+      {
+        "text": "50",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "32a8ca60-d30c-4249-828d-22a3bab3964e",
+    "data": [
+      {
+        "text": "64",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0ae36ede-4d09-48bf-a058-5a019cfb8403",
+    "data": [
+      {
+        "text": "99",
+        "meta": "@sys.number",
+        "alias": "number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "655e1e15-e049-4d17-8f9d-d8a3d4af8acd",
+    "data": [
+      {
+        "text": "колбаса",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e20b0213-0d10-490a-850c-d2190b996f83",
+    "data": [
+      {
+        "text": "хлеб",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f7da772e-ad3c-4121-ba04-40e86172cc9d",
+    "data": [
+      {
+        "text": "пельмени",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "693bce50-83dc-417f-b756-e9c8ce95b0cc",
+    "data": [
+      {
+        "text": "мороженое",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "036fe796-ede1-41d5-bf60-4c39f9269aaa",
+    "data": [
+      {
+        "text": "торт",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6cb10797-0066-471e-aea5-6d44bd022ceb",
+    "data": [
+      {
+        "text": "морковка",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "55273a8f-43d8-4706-9e65-dbb60478e872",
+    "data": [
+      {
+        "text": "сосиски",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "81e9b7c9-3faa-477d-af36-76bcc92626d1",
+    "data": [
+      {
+        "text": "яблоко",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6aff5dbf-ade3-4c28-aedd-8d7e06c89e7d",
+    "data": [
+      {
+        "text": "пицца",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2eedab62-af7a-48a0-acd1-df5f7550e076",
+    "data": [
+      {
+        "text": "сыр",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f918ae70-275e-4bf2-a703-c1f426cefa10",
+    "data": [
+      {
+        "text": "крылатый",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "59f69b5e-e7be-4a1d-a63d-18e244dcb5d3",
+    "data": [
+      {
+        "text": "пушистый",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b4645394-b1ba-4234-9c25-83fd34b24730",
+    "data": [
+      {
+        "text": "полосатый",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c19d14a0-aa11-4315-b115-dd05fa10dfda",
+    "data": [
+      {
+        "text": "зелёный",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6936e2a1-76d2-4431-ad0b-b355c09635db",
+    "data": [
+      {
+        "text": "весёлый",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "479bc6dd-569d-4c23-8948-7d822bfc91d1",
+    "data": [
+      {
+        "text": "дырявый",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9ad20d2e-4c54-42f8-bfe6-56d4ef0dd475",
+    "data": [
+      {
+        "text": "волшебный",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "72370702-eaf3-40fd-bf05-b67a0a2915ef",
+    "data": [
+      {
+        "text": "огромный",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ddd68f0b-4084-4acf-8828-220a87402159",
+    "data": [
+      {
+        "text": "смешной",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c67bb307-b7aa-45e5-9ae1-d9b8fab3d59d",
+    "data": [
+      {
+        "text": "крокодил",
+        "meta": "@sys.any",
+        "alias": "animalM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b37c761b-580c-4eba-90c8-cdb8466691ad",
+    "data": [
+      {
+        "text": "бегемот",
+        "meta": "@sys.any",
+        "alias": "animalM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b4c82449-0b30-4db0-95ba-f5814ba289c9",
+    "data": [
+      {
+        "text": "кот",
+        "meta": "@sys.any",
+        "alias": "animalM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b2d16e7c-fd9f-44a6-a612-1bf3c0de54b7",
+    "data": [
+      {
+        "text": "пингвин",
+        "meta": "@sys.any",
+        "alias": "animalM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "221dc994-16d5-481b-bf48-b1659010273a",
+    "data": [
+      {
+        "text": "слон",
+        "meta": "@sys.any",
+        "alias": "animalM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9b5130b2-49d8-4e3f-af73-060b8c2da39e",
+    "data": [
+      {
+        "text": "жираф",
+        "meta": "@sys.any",
+        "alias": "animalM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "18ce7d66-e9ad-4e79-a47a-7175c4aa230a",
+    "data": [
+      {
+        "text": "ёжик",
+        "meta": "@sys.any",
+        "alias": "animalM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1d0ebc75-79b3-4a7e-b802-0ff25bbee4fd",
+    "data": [
+      {
+        "text": "медведь",
+        "meta": "@sys.any",
+        "alias": "animalM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4ad52b4e-27e0-462c-9ff8-a40c09755dcb",
+    "data": [
+      {
+        "text": "тигр",
+        "meta": "@sys.any",
+        "alias": "animalM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6e7aa422-5384-4c89-8459-3a61e57a1f91",
+    "data": [
+      {
+        "text": "Египет",
+        "meta": "@sys.any",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "58f90ec5-533a-483a-bf2d-3066681e0a10",
+    "data": [
+      {
+        "text": "Бразилия",
+        "meta": "@sys.any",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cdb53740-2c5a-46d2-a0df-4345086d0149",
+    "data": [
+      {
+        "text": "Турция",
+        "meta": "@sys.any",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1d2c6b3c-3206-4bad-ba38-5e7a92728228",
+    "data": [
+      {
+        "text": "Италия",
+        "meta": "@sys.any",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0ca83710-90a8-4584-86ed-20cf53235eae",
+    "data": [
+      {
+        "text": "Австралия",
+        "meta": "@sys.any",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a389f55e-e8b5-498e-84cc-5a3f2691e5b8",
+    "data": [
+      {
+        "text": "Китай",
+        "meta": "@sys.any",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "87d8b5d7-6fc3-4c56-9982-b8077b5ac458",
+    "data": [
+      {
+        "text": "Мексика",
+        "meta": "@sys.any",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "13e12917-a66f-4569-a369-b621871becff",
+    "data": [
+      {
+        "text": "Индия",
+        "meta": "@sys.any",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0943dc41-7d58-4b77-831b-3dca2f7a6a38",
+    "data": [
+      {
+        "text": "Франция",
+        "meta": "@sys.any",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "687e5c0e-77ca-4b6c-8fab-0aae6008b430",
+    "data": [
+      {
+        "text": "Гена",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ab03b581-5b1e-43f6-a89a-329df4cddd8a",
+    "data": [
+      {
+        "text": "Валера",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d49a4310-8c99-430e-bfbd-9047a14beaea",
+    "data": [
+      {
+        "text": "Петя",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "04469bcf-01b4-4a2d-99bc-20041d15e38f",
+    "data": [
+      {
+        "text": "Сергей",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "60e31095-7a8d-4b27-baaf-9a6c64a267e2",
+    "data": [
+      {
+        "text": "Андрей",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "85f584d2-5f7f-4cbc-8bb0-56e178d16004",
+    "data": [
+      {
+        "text": "Миша",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7198785b-32f9-4d0a-b1a5-d100cd648a75",
+    "data": [
+      {
+        "text": "Вася",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cf5aaca6-1de7-4f31-b843-0467cc9855d7",
+    "data": [
+      {
+        "text": "Коля",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5c777919-506f-4662-9a53-442c9e18a97d",
+    "data": [
+      {
+        "text": "Дима",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ac7021b0-7c82-41fc-8a8d-58e997710bde",
+    "data": [
+      {
+        "text": "фиолетовая",
+        "meta": "@sys.any",
+        "alias": "adjF",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e57deb62-973e-48cc-b39c-17a3ec192d2c",
+    "data": [
+      {
+        "text": "пушистая",
+        "meta": "@sys.any",
+        "alias": "adjF",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6dbd04d5-539e-41cf-9d99-e2d0e97c5a44",
+    "data": [
+      {
+        "text": "колючая",
+        "meta": "@sys.any",
+        "alias": "adjF",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4914de21-14ce-4873-8c06-09f9380c134c",
+    "data": [
+      {
+        "text": "весёлая",
+        "meta": "@sys.any",
+        "alias": "adjF",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6a2dbb61-666e-4736-b4de-a2c82f82efe4",
+    "data": [
+      {
+        "text": "полосатая",
+        "meta": "@sys.any",
+        "alias": "adjF",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "42f0a964-9a51-4d0a-8c0e-4da80c2aeace",
+    "data": [
+      {
+        "text": "золотая",
+        "meta": "@sys.any",
+        "alias": "adjF",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "031d6f2b-1501-42f1-97b5-05fff5a96ea6",
+    "data": [
+      {
+        "text": "смешная",
+        "meta": "@sys.any",
+        "alias": "adjF",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "39b7cc65-e973-4009-818c-49e38e5f7014",
+    "data": [
+      {
+        "text": "мокрая",
+        "meta": "@sys.any",
+        "alias": "adjF",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d247792f-7a72-4598-9126-5c4a0de22571",
+    "data": [
+      {
+        "text": "огромная",
+        "meta": "@sys.any",
+        "alias": "adjF",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
