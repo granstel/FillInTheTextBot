@@ -123,9 +123,9 @@ namespace FillInTheTextBot.Services
 
                 var queryResult = intentResponse.QueryResult;
 
-                MetricsCollector.Increment("intent", queryResult.Intent.DisplayName);
-
                 var response = queryResult.ToDialog();
+
+                MetricsCollector.Increment("intent", response.IntentName ?? string.Empty);
 
                 response.ScopeKey = context.ScopeId;
 

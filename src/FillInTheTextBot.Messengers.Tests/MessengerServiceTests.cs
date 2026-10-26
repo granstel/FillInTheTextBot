@@ -265,6 +265,35 @@ namespace FillInTheTextBot.Messengers.Tests
             Assert.That(_target.AfterInput, Is.Not.Null);
         }
 
+        [Test]
+        public async Task ProcessIncomingAsync_ConversationThrows_RotationStateFromRequestKept()
+        {
+            _target.BeforeResult = new Request { RotationState = _fixture.Create<string>() };
+
+            _conversationService
+                .Setup(s => s.GetResponseAsync(It.IsAny<Request>()))
+                .ThrowsAsync(new InvalidOperationException(_fixture.Create<string>()));
+
+
+            await _target.ProcessIncomingAsync(new InputFixture());
+
+
+            Assert.That(_target.AfterInput.Response.RotationState, Is.EqualTo(_target.BeforeResult.RotationState));
+        }
+
+        [Test]
+        public async Task ProcessIncomingAsync_CommandResponse_RotationStateFromRequestKept()
+        {
+            _target.BeforeResult = new Request { RotationState = _fixture.Create<string>() };
+            _target.ProcessCommandResult = new Response();
+
+
+            await _target.ProcessIncomingAsync(new InputFixture());
+
+
+            Assert.That(_target.AfterInput.Response.RotationState, Is.EqualTo(_target.BeforeResult.RotationState));
+        }
+
         #endregion Обработка ошибок
 
         #region Не реализованные по умолчанию методы

@@ -63,6 +63,27 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         }
 
         [Test]
+        public void IntentNames_ParseToStoryOnlyInStoryFiles()
+        {
+            var mismatches = _fileNames
+                .Where(fileName => !fileName.Contains("_usersays_"))
+                .Select(fileName => (fileName, name: ReadIntent(fileName).Value<string>("name")))
+                .Where(intent =>
+                {
+                    var isStoryName = StoryCatalog.TryParseIntentName(intent.name, out var number, out var part);
+                    var expected = GetExpectedEvent(intent.fileName);
+                    var actual = part == 0 ? $"text-{number}" : $"text-{number}-{part}";
+
+                    return isStoryName ? actual != expected : expected is not null;
+                })
+                .Select(intent => $"{intent.fileName}: {intent.name}")
+                .ToList();
+
+
+            Assert.That(mismatches, Is.Empty);
+        }
+
+        [Test]
         public void RotationRules_Valid()
         {
             var json = File.ReadAllText(Path.Combine(GetRepositoryRoot(), "Dialogflow", "rotation.json"));
@@ -96,13 +117,20 @@ namespace FillInTheTextBot.Services.Tests.Rotation
 
         private string[] ReadEvents(string fileName)
         {
-            var json = File.ReadAllText(Path.Combine(_intentsPath, fileName));
-
-            var intent = JObject.Parse(json);
+            var intent = ReadIntent(fileName);
 
             var events = intent["events"]?.Select(e => e.Value<string>("name")).ToArray() ?? [];
 
             return events;
+        }
+
+        private JObject ReadIntent(string fileName)
+        {
+            var json = File.ReadAllText(Path.Combine(_intentsPath, fileName));
+
+            var intent = JObject.Parse(json);
+
+            return intent;
         }
 
         private static string GetRepositoryRoot()

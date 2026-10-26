@@ -36,6 +36,8 @@ namespace FillInTheTextBot.Messengers.Sber
 
             request.NextTextIndex = Convert.ToInt32(userState?.NextTextIndex ?? 0);
 
+            request.RotationState = userState?.RotationState;
+
             request.ScopeKey = userState?.ScopeKey;
 
             var contexts = GetContexts(input);
@@ -58,6 +60,7 @@ namespace FillInTheTextBot.Messengers.Sber
             {
                 IsOldUser = true,
                 NextTextIndex = response.NextTextIndex,
+                RotationState = response.RotationState,
                 ScopeKey = response.ScopeKey
             };
 

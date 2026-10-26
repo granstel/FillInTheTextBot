@@ -30,6 +30,8 @@ namespace FillInTheTextBot.Models
 
         public bool CancelsSlotFilling { get; set; }
 
+        public string IntentName { get; set; }
+
         public IEnumerable<string> GetParameters(string key)
         {
             return Parameters?.Where(p => string.Equals(p.Key, key)).Select(p => p.Value);

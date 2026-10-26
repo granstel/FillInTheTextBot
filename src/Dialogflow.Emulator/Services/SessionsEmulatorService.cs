@@ -35,6 +35,12 @@ public sealed class SessionsEmulatorService : Sessions.SessionsBase
         var eventName = request.QueryInput?.Event?.Name;
         var text = request.QueryInput?.Text?.Text;
 
+        // Сброс контекстов прерывает и слот-филлинг
+        if (request.QueryParams?.ResetContexts == true)
+        {
+            _slotFilling.Remove(session);
+        }
+
         // Идёт слот-филлинг и пришёл текст — это ответ на промпт
         if (eventName is null && text is not null && _slotFilling.TryGet(session, out var active))
         {
@@ -150,7 +156,9 @@ public sealed class SessionsEmulatorService : Sessions.SessionsBase
 
         foreach (var parameter in AgentStorage.GetParameters(intent))
         {
-            if (!parameter.Required && !string.IsNullOrEmpty(parameter.Name) && !string.IsNullOrEmpty(parameter.Value))
+            // Контекстов эмулятор не ведёт, поэтому ссылка #context.param пустая, как в Dialogflow без контекста
+            if (!parameter.Required && !string.IsNullOrEmpty(parameter.Name) && !string.IsNullOrEmpty(parameter.Value)
+                && !parameter.Value.StartsWith('#'))
             {
                 result[parameter.Name] = parameter.Value;
             }

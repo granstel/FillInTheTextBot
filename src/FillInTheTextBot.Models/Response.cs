@@ -6,6 +6,7 @@ namespace FillInTheTextBot.Models
     {
         public static string NextTextIndexStorageKey => nameof(NextTextIndex).ToUpper();
         public static string ScopeStorageKey => nameof(ScopeKey).ToUpper();
+        public static string RotationStateStorageKey => nameof(RotationState).ToUpper();
 
         public Response()
         {
@@ -25,6 +26,8 @@ namespace FillInTheTextBot.Models
         public ICollection<Button> Buttons { get; set; }
 
         public int NextTextIndex { get; set; }
+
+        public string RotationState { get; set; }
 
         public string ScopeKey { get; set; }
         

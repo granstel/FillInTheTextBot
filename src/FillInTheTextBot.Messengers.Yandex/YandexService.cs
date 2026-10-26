@@ -34,6 +34,13 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             request.NextTextIndex = Convert.ToInt32(nextTextIndex);
 
+            if (input.TryGetFromUserState(Models.Response.RotationStateStorageKey, out string rotationState) != true)
+            {
+                input.TryGetFromApplicationState(Models.Response.RotationStateStorageKey, out rotationState);
+            }
+
+            request.RotationState = rotationState;
+
             input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
 
             request.ScopeKey = scopeKey;
@@ -67,6 +74,9 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
             output.AddToApplicationState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
+
+            output.AddToUserState(Models.Response.RotationStateStorageKey, response.RotationState);
+            output.AddToApplicationState(Models.Response.RotationStateStorageKey, response.RotationState);
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 

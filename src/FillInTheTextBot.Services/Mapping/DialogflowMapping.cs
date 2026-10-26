@@ -22,6 +22,7 @@ namespace FillInTheTextBot.Services.Mapping
             destination.Action = source?.Action;
             destination.EndConversation = string.Equals(destination.Action, "endConversation");
             destination.CancelsSlotFilling = source?.CancelsSlotFilling ?? false;
+            destination.IntentName = source?.Intent?.DisplayName;
 
             return destination;
         }
