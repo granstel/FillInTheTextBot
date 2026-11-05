@@ -39,6 +39,10 @@ namespace FillInTheTextBot.Messengers.Marusia
 
             request.NextTextIndex = Convert.ToInt32(nextTextIndex);
 
+            input.TryGetFromUserState(Models.Response.RotationStateStorageKey, out string rotationState);
+
+            request.RotationState = rotationState;
+
             input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
 
             request.ScopeKey = scopeKey;
@@ -67,6 +71,7 @@ namespace FillInTheTextBot.Messengers.Marusia
             output.AddToUserState(Models.Request.IsOldUserKey, true);
 
             output.AddToUserState(Models.Response.NextTextIndexStorageKey, response.NextTextIndex);
+            output.AddToUserState(Models.Response.RotationStateStorageKey, response.RotationState);
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
 

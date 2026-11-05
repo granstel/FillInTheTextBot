@@ -60,6 +60,25 @@ namespace FillInTheTextBot.Services.Rotation
             return true;
         }
 
+        /// <summary>Интент заполнения истории: «34-LibrarianMystery-text2» — история 34, часть 2.</summary>
+        public static bool TryParseIntentName(string intentName, out int number, out int part)
+        {
+            number = 0;
+            part = 0;
+
+            var match = IntentNamePattern().Match(intentName ?? string.Empty);
+
+            if (!match.Success)
+            {
+                return false;
+            }
+
+            number = int.Parse(match.Groups[1].Value);
+            part = ParsePart(match.Groups[2].Value);
+
+            return true;
+        }
+
         public bool Contains(int number)
         {
             return _parts.ContainsKey(number);
@@ -101,5 +120,8 @@ namespace FillInTheTextBot.Services.Rotation
 
         [GeneratedRegex(@"^text-(\d+)(?:-(\d+))?$")]
         private static partial Regex EventPattern();
+
+        [GeneratedRegex(@"^(\d+)-.+-text(\d*)$")]
+        private static partial Regex IntentNamePattern();
     }
 }

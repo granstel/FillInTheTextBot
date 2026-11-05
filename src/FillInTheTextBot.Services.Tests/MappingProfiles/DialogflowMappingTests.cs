@@ -236,5 +236,26 @@ namespace FillInTheTextBot.Services.Tests.MappingProfiles
 
             Assert.That(dialog.EndConversation, Is.True);
         }
+
+        [Test]
+        public void ToDialog_Intent_IntentNameEqualsDisplayName()
+        {
+            var source = new QueryResult
+            {
+                Intent = new Intent { DisplayName = _fixture.Create<string>() }
+            };
+
+            var dialog = source.ToDialog();
+
+            Assert.That(dialog.IntentName, Is.EqualTo(source.Intent.DisplayName));
+        }
+
+        [Test]
+        public void ToDialog_NoIntent_IntentNameIsNull()
+        {
+            var dialog = new QueryResult().ToDialog();
+
+            Assert.That(dialog.IntentName, Is.Null);
+        }
     }
 }

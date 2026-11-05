@@ -6,6 +6,8 @@
         
         public int NextTextIndex { get; set; }
 
+        public string RotationState { get; set; }
+
         public string ScopeKey { get; set; }
     }
 }
