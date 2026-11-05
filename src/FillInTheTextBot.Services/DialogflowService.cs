@@ -88,12 +88,12 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        public Task SetContextAsync(string sessionId, string scopeKey, string contextName, int lifeSpan = 1,
+        public async Task SetContextAsync(string sessionId, string scopeKey, string contextName, int lifeSpan = 1,
             IDictionary<string, string> parameters = null)
         {
             using (Tracing.Trace())
             {
-                return _contextsClientSelector.Invoke((client, context) => 
+                await _contextsClientSelector.Invoke((client, context) =>
                     SetContextInternalAsync(client, sessionId, context, contextName, lifeSpan, parameters), scopeKey);
             }
         }
@@ -133,7 +133,7 @@ namespace FillInTheTextBot.Services
             }
         }
 
-        private Task SetContextInternalAsync(ContextsClient client, string sessionId, ScopeContext scopeContext, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
+        private async Task SetContextInternalAsync(ContextsClient client, string sessionId, ScopeContext scopeContext, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
             using (Tracing.Trace())
             {
@@ -146,7 +146,7 @@ namespace FillInTheTextBot.Services
 
                 MetricsCollector.Increment("dialogflow_CreateContext_scope", scopeContext.ScopeId);
 
-                return client.CreateContextAsync(session, context);
+                await client.CreateContextAsync(session, context).ConfigureAwait(false);
             }
         }
 
