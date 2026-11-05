@@ -180,6 +180,40 @@ namespace FillInTheTextBot.Services.Tests.Rotation
             Assert.That(afterExpiration, Is.EqualTo("text-40"));
         }
 
+        [TestCase(0)]
+        [TestCase(2)]
+        public void SelectEvent_RemainingStoryUnavailable_ProgressPreservedUntilExpired(int cycle)
+        {
+            var state = new RotationState { Cycle = cycle, Last = 2 };
+
+            foreach (var number in new[] { 33, 34, 1, 2 })
+            {
+                state.MarkDone(number);
+            }
+
+            _target.MarkUnavailable("text-40");
+            var beforePause = state.Serialize();
+
+
+            var pause = _target.SelectEvent(state);
+            var repeatedPause = _target.SelectEvent(state);
+
+
+            Assert.That(pause, Is.EqualTo(StoryRotation.TextsOverEvent));
+            Assert.That(repeatedPause, Is.EqualTo(StoryRotation.TextsOverEvent));
+            Assert.That(state.Serialize(), Is.EqualTo(beforePause));
+
+            _time.Now = _time.Now.AddMinutes(11);
+
+            Assert.That(_target.SelectEvent(state), Is.EqualTo("text-40"));
+            Issue(state, "text-40");
+            Complete(state, 40);
+
+            Assert.That(_target.SelectEvent(state), Is.EqualTo(StoryRotation.TextsOverEvent));
+            Assert.That(state.Cycle, Is.EqualTo(cycle + 1));
+            Assert.That(state.IsDone(40) || state.IsDone(2), Is.False);
+        }
+
         [Test]
         public void TryMarkIssued_OtherIntent_FalseStateUnchanged()
         {
@@ -280,7 +314,7 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         [Test]
         public void GetState_SerializedState_LegacyIndexIgnored()
         {
-            var state = _target.GetState("""{"v":2,"cycle":4,"done":""}""", 2);
+            var state = _target.GetState("""{"Cycle":4,"Done":""}""", 2);
 
 
             Assert.That(state.Cycle, Is.EqualTo(4));

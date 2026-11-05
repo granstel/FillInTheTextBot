@@ -81,7 +81,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var input = CreateInput();
             input.State.User.Add(InternalModels.Request.IsOldUserKey, true);
             input.State.User.Add(InternalModels.Response.NextTextIndexStorageKey, 4);
-            input.State.User.Add(InternalModels.Response.RotationStateStorageKey, "{\"v\":2}");
+            input.State.User.Add(InternalModels.Response.RotationStateStorageKey, "test-rotation-state");
 
             var scopeKey = _fixture.Create<string>();
             input.State.Session.Add(InternalModels.Response.ScopeStorageKey, scopeKey);
@@ -99,7 +99,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
 
             Assert.That(captured.IsOldUser, Is.True);
             Assert.That(captured.NextTextIndex, Is.EqualTo(4));
-            Assert.That(captured.RotationState, Is.EqualTo("{\"v\":2}"));
+            Assert.That(captured.RotationState, Is.EqualTo("test-rotation-state"));
             Assert.That(captured.ScopeKey, Is.EqualTo(scopeKey));
         }
 
@@ -183,7 +183,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
             var response = new InternalModels.Response
             {
                 NextTextIndex = 6,
-                RotationState = "{\"v\":2}",
+                RotationState = "test-rotation-state",
                 ScopeKey = _fixture.Create<string>()
             };
 
@@ -197,7 +197,7 @@ namespace FillInTheTextBot.Messengers.Marusia.Tests
 
             Assert.That(result.UserStateUpdate[InternalModels.Request.IsOldUserKey], Is.EqualTo(true));
             Assert.That(result.UserStateUpdate[InternalModels.Response.NextTextIndexStorageKey], Is.EqualTo(6));
-            Assert.That(result.UserStateUpdate[InternalModels.Response.RotationStateStorageKey], Is.EqualTo("{\"v\":2}"));
+            Assert.That(result.UserStateUpdate[InternalModels.Response.RotationStateStorageKey], Is.EqualTo("test-rotation-state"));
             Assert.That(result.SessionState[InternalModels.Response.ScopeStorageKey], Is.EqualTo(response.ScopeKey));
         }
 

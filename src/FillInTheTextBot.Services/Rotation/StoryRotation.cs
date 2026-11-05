@@ -42,8 +42,8 @@ namespace FillInTheTextBot.Services.Rotation
         }
 
         /// <summary>
-        /// Входное событие следующей истории или <see cref="TextsOverEvent"/>, если круг закончился:
-        /// тогда состояние уже переведено на следующий круг.
+        /// Входное событие следующей истории или <see cref="TextsOverEvent"/> для паузы.
+        /// Новый круг начинается, только если все истории текущего круга закрыты.
         /// </summary>
         public string SelectEvent(RotationState state)
         {
@@ -67,14 +67,21 @@ namespace FillInTheTextBot.Services.Rotation
                 return snapshot.Catalog.GetEntryEvent(campaignStory.Value);
             }
 
-            var fresh = GetUnits(snapshot, today)
-                .Where(number => !state.IsDone(number) && IsAvailable(number))
+            var remaining = GetUnits(snapshot, today)
+                .Where(number => !state.IsDone(number))
                 .ToList();
 
-            if (fresh.Count == 0)
+            if (remaining.Count == 0)
             {
                 state.StartNextCycle();
 
+                return TextsOverEvent;
+            }
+
+            var fresh = remaining.Where(IsAvailable).ToList();
+
+            if (fresh.Count == 0)
+            {
                 return TextsOverEvent;
             }
 

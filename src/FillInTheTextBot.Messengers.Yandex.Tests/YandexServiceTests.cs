@@ -60,7 +60,7 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
         [TestCase(false)]
         public async Task ProcessIncomingAsync_RotationStateInUserOrApplicationState_AppliedToRequest(bool inUserState)
         {
-            const string rotationState = "{\"v\":2}";
+            const string rotationState = "test-rotation-state";
 
             var input = CreateInput();
             var state = inUserState ? input.State.User : input.State.Application;
@@ -83,7 +83,7 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
         [Test]
         public async Task ProcessIncomingAsync_RotationState_WrittenToUserAndApplicationState()
         {
-            var response = new Models.Response { RotationState = "{\"v\":2}" };
+            var response = new Models.Response { RotationState = "test-rotation-state" };
 
             _conversationService.Setup(s => s.GetResponseAsync(It.IsAny<Models.Request>())).ReturnsAsync(response);
 
