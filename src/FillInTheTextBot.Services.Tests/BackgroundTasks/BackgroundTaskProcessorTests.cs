@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Concurrent;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -214,6 +215,68 @@ namespace FillInTheTextBot.Services.Tests.BackgroundTasks
             var accepted = _queue.Enqueue("пустая", null);
 
             Assert.That(accepted, Is.False);
+        }
+
+        [TestCase(false)]
+        [TestCase(true)]
+        public async Task Enqueue_ParentRequestFinished_WorkKeepsTraceContext(bool failWork)
+        {
+            var stopped = new ConcurrentQueue<Activity>();
+            using var listener = new ActivityListener
+            {
+                ShouldListenTo = source => source.Name == Tracing.ActivitySourceName,
+                Sample = (ref ActivityCreationOptions<ActivityContext> _) => ActivitySamplingResult.AllDataAndRecorded,
+                ActivityStopped = activity => stopped.Enqueue(activity)
+            };
+            ActivitySource.AddActivityListener(listener);
+
+            var started = new TaskCompletionSource<Activity>(TaskCreationOptions.RunContinuationsAsynchronously);
+            var release = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+            ActivityContext parentContext;
+
+            using (var parent = new Activity("Synthetic request").SetIdFormat(ActivityIdFormat.W3C).Start())
+            {
+                parentContext = parent.Context;
+                _queue.Enqueue("synthetic work", async () =>
+                {
+                    started.SetResult(Activity.Current);
+                    await release.Task;
+
+                    if (failWork)
+                    {
+                        throw new InvalidOperationException("Synthetic failure");
+                    }
+                });
+            }
+
+            await _target.StartAsync(CancellationToken.None);
+
+            try
+            {
+                var activity = await started.Task.WaitAsync(TimeSpan.FromSeconds(5));
+
+                Assert.Multiple(() =>
+                {
+                    Assert.That(activity.OperationName, Is.EqualTo("Background task"));
+                    Assert.That(activity.TraceId, Is.EqualTo(parentContext.TraceId));
+                    Assert.That(activity.ParentSpanId, Is.EqualTo(parentContext.SpanId));
+                    Assert.That(stopped, Is.Empty);
+                });
+
+                release.SetResult();
+                await _target.StopAsync(CancellationToken.None);
+
+                Assert.Multiple(() =>
+                {
+                    Assert.That(stopped, Does.Contain(activity));
+                    Assert.That(activity.Status, Is.EqualTo(failWork ? ActivityStatusCode.Error : ActivityStatusCode.Unset));
+                    Assert.That(activity.GetTagItem("error.type"), Is.EqualTo(failWork ? typeof(InvalidOperationException).FullName : null));
+                });
+            }
+            finally
+            {
+                release.TrySetResult();
+            }
         }
 
         private static async Task WaitForAsync(Func<bool> condition, int timeoutMilliseconds = 5000)

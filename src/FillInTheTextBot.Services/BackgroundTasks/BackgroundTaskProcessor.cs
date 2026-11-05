@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Concurrent;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
@@ -64,12 +65,17 @@ namespace FillInTheTextBot.Services.BackgroundTasks
 
         private async Task ExecuteTaskAsync(BackgroundTask task)
         {
+            using var activity = Tracing.Trace(a => a.SetTag("background.task.name", task.Name),
+                "Background task", task.ParentContext);
+
             try
             {
                 await task.Work().ConfigureAwait(false);
             }
             catch (Exception e)
             {
+                activity?.SetStatus(ActivityStatusCode.Error);
+                activity?.SetTag("error.type", e.GetType().FullName);
                 log.LogError(e, "Error while executing background task '{TaskName}'", task.Name);
             }
         }
