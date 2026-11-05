@@ -280,7 +280,7 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         [Test]
         public void GetState_SerializedState_LegacyIndexIgnored()
         {
-            var state = _target.GetState("""{"cycle":4,"done":""}""", 2);
+            var state = _target.GetState("""{"Cycle":4,"Done":""}""", 2);
 
 
             Assert.That(state.Cycle, Is.EqualTo(4));

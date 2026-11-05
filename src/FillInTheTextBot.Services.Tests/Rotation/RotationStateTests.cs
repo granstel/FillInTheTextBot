@@ -1,4 +1,6 @@
+using System.Text;
 using FillInTheTextBot.Services.Rotation;
+using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
 namespace FillInTheTextBot.Services.Tests.Rotation
@@ -42,15 +44,20 @@ namespace FillInTheTextBot.Services.Tests.Rotation
             var serialized = state.Serialize();
 
 
-            Assert.That(serialized, Is.EqualTo("""{"cycle":0,"done":"////////Hw=="}"""));
+            var json = JObject.Parse(serialized);
+
+            Assert.That(json.Count, Is.EqualTo(2));
+            Assert.That(json.Value<int>("Cycle"), Is.EqualTo(0));
+            Assert.That(json.Value<string>("Done"), Is.EqualTo("////////Hw=="));
+            Assert.That(Encoding.UTF8.GetByteCount(serialized), Is.EqualTo(33));
         }
 
         [TestCase(null)]
         [TestCase("")]
         [TestCase("12")]
         [TestCase("not json")]
-        [TestCase("""{"done":"*"}""")]
-        [TestCase("""{"cycle":"x"}""")]
+        [TestCase("""{"Done":"*"}""")]
+        [TestCase("""{"Cycle":"x"}""")]
         public void Parse_Invalid_Null(string value)
         {
             var state = RotationState.Parse(value);
@@ -59,16 +66,20 @@ namespace FillInTheTextBot.Services.Tests.Rotation
             Assert.That(state, Is.Null);
         }
 
-        [TestCase("""{"cycle":3,"done":"AQ=="}""")]
-        [TestCase("""{"v":2,"cycle":3,"done":"AQ=="}""")]
-        public void Parse_StateWithOrWithoutVersion_ProgressPreserved(string value)
+        [Test]
+        public void Parse_State_ProgressPreserved()
         {
+            const string value = """{"Last":12,"Next":34,"Current":12,"Done":"AQ==","Cycle":3}""";
+
             var state = RotationState.Parse(value);
 
 
             Assert.That(state, Is.Not.Null);
             Assert.That(state.Cycle, Is.EqualTo(3));
             Assert.That(state.IsDone(0), Is.True);
+            Assert.That(state.Current, Is.EqualTo(12));
+            Assert.That(state.Next, Is.EqualTo(34));
+            Assert.That(state.Last, Is.EqualTo(12));
         }
 
         [Test]

@@ -7,9 +7,8 @@ namespace FillInTheTextBot.Services.Rotation
 {
     /// <summary>
     /// Ротация пользователя. Хранится на площадке строкой вида
-    /// {"cycle":3,"done":"//////8f","current":12,"next":34,"last":12}.
+    /// {"Cycle":3,"Done":"//////8f","Current":12,"Next":34,"Last":12}.
     /// </summary>
-    [JsonObject(MemberSerialization.OptIn)]
     public sealed class RotationState
     {
         private static readonly JsonSerializerSettings SerializerSettings = new()
@@ -20,11 +19,10 @@ namespace FillInTheTextBot.Services.Rotation
         private readonly HashSet<int> _done = [];
 
         /// <summary>0 — первый круг, он идёт в заданном порядке.</summary>
-        [JsonProperty("cycle", Order = 1)]
         public int Cycle { get; set; }
 
         /// <summary>Закрытые в круге истории — битовая маска по номерам в base64.</summary>
-        [JsonProperty("done", Order = 2)]
+        [JsonProperty]
         private string Done
         {
             get => EncodeDone(_done);
@@ -32,14 +30,11 @@ namespace FillInTheTextBot.Services.Rotation
         }
 
         /// <summary>Выдана и ещё не дособрана.</summary>
-        [JsonProperty("current", Order = 3)]
         public int? Current { get; set; }
 
         /// <summary>Следующее звено цепочки.</summary>
-        [JsonProperty("next", Order = 4)]
         public int? Next { get; set; }
 
-        [JsonProperty("last", Order = 5)]
         public int? Last { get; set; }
 
         public bool IsDone(int number)
