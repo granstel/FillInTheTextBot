@@ -45,9 +45,7 @@ namespace FillInTheTextBot.Messengers
 
                 requestTextIndex = request.NextTextIndex;
 
-                using (Tracing.Trace(a => a
-                    .SetTag(nameof(request.UserHash), request.UserHash)
-                    .SetTag(nameof(request.SessionId), request.SessionId)))
+                using (Tracing.Trace())
                 {
                     var contexts = GetContexts(request);
                     request.RequiredContexts.AddRange(contexts);

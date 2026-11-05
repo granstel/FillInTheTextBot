@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace FillInTheTextBot.Services.BackgroundTasks
 {
@@ -9,10 +10,13 @@ namespace FillInTheTextBot.Services.BackgroundTasks
         {
             Name = name;
             Work = work;
+            ParentContext = Activity.Current?.Context ?? default;
         }
 
         public string Name { get; }
 
         public Func<Task> Work { get; }
+
+        public ActivityContext ParentContext { get; }
     }
 }
