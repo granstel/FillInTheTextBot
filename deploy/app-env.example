@@ -25,9 +25,14 @@ AppConfiguration__Dialogflow__1__Region=europe-west1
 AppConfiguration__Redis__ConnectionString=redis:6379,password=CHANGE-ME,abortConnect=false,syncTimeout=2000,asyncTimeout=2000
 AppConfiguration__Redis__KeyPrefix=
 
-# Пустой Host выключает экспорт трейсов
+# Трейсинг включается только явным Enabled=true; тогда Host обязателен.
+# OTLP/gRPC: фоновый batch, очередь 1024, пакет 256, интервал 1 с, таймаут 3 с.
+# Недоступный коллектор не блокирует запросы; при заполнении очереди spans теряются.
+AppConfiguration__Tracing__Enabled=false
 AppConfiguration__Tracing__Host=
 AppConfiguration__Tracing__Port=4317
+# Низкоуровневые сетевые spans включаются отдельно, только при Enabled=true.
+AppConfiguration__Tracing__NetworkEnabled=false
 
 # Плавная остановка; значения по умолчанию подходят
 # AppConfiguration__Shutdown__DrainDelaySeconds=10
