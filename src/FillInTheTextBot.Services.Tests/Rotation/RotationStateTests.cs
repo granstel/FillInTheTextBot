@@ -42,23 +42,33 @@ namespace FillInTheTextBot.Services.Tests.Rotation
             var serialized = state.Serialize();
 
 
-            Assert.That(serialized, Is.EqualTo("""{"v":2,"cycle":0,"done":"////////Hw=="}"""));
+            Assert.That(serialized, Is.EqualTo("""{"cycle":0,"done":"////////Hw=="}"""));
         }
 
         [TestCase(null)]
         [TestCase("")]
         [TestCase("12")]
         [TestCase("not json")]
-        [TestCase("""{"v":1,"cycle":0}""")]
-        [TestCase("""{"cycle":0,"done":""}""")]
-        [TestCase("""{"v":2,"done":"*"}""")]
-        [TestCase("""{"v":2,"cycle":"x"}""")]
+        [TestCase("""{"done":"*"}""")]
+        [TestCase("""{"cycle":"x"}""")]
         public void Parse_Invalid_Null(string value)
         {
             var state = RotationState.Parse(value);
 
 
             Assert.That(state, Is.Null);
+        }
+
+        [TestCase("""{"cycle":3,"done":"AQ=="}""")]
+        [TestCase("""{"v":2,"cycle":3,"done":"AQ=="}""")]
+        public void Parse_StateWithOrWithoutVersion_ProgressPreserved(string value)
+        {
+            var state = RotationState.Parse(value);
+
+
+            Assert.That(state, Is.Not.Null);
+            Assert.That(state.Cycle, Is.EqualTo(3));
+            Assert.That(state.IsDone(0), Is.True);
         }
 
         [Test]

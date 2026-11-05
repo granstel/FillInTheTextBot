@@ -7,32 +7,17 @@ namespace FillInTheTextBot.Services.Rotation
 {
     /// <summary>
     /// Ротация пользователя. Хранится на площадке строкой вида
-    /// {"v":2,"cycle":3,"done":"//////8f","current":12,"next":34,"last":12}.
+    /// {"cycle":3,"done":"//////8f","current":12,"next":34,"last":12}.
     /// </summary>
     [JsonObject(MemberSerialization.OptIn)]
     public sealed class RotationState
     {
-        private const int CurrentVersion = 2;
-
         private static readonly JsonSerializerSettings SerializerSettings = new()
         {
             NullValueHandling = NullValueHandling.Ignore
         };
 
         private readonly HashSet<int> _done = [];
-
-        public RotationState() : this(CurrentVersion)
-        {
-        }
-
-        [JsonConstructor]
-        private RotationState(int v)
-        {
-            Version = v;
-        }
-
-        [JsonProperty("v", Order = 0)]
-        private int Version { get; }
 
         /// <summary>0 — первый круг, он идёт в заданном порядке.</summary>
         [JsonProperty("cycle", Order = 1)]
@@ -88,7 +73,7 @@ namespace FillInTheTextBot.Services.Rotation
             return state;
         }
 
-        /// <summary>null — строка пустая, повреждена или другой версии.</summary>
+        /// <summary>null — строка пустая или повреждена.</summary>
         public static RotationState Parse(string value)
         {
             if (string.IsNullOrEmpty(value))
@@ -100,7 +85,7 @@ namespace FillInTheTextBot.Services.Rotation
             {
                 var state = JsonConvert.DeserializeObject<RotationState>(value);
 
-                return state?.Version == CurrentVersion ? state : null;
+                return state;
             }
             catch (Exception e) when (e is JsonException or FormatException)
             {

@@ -84,7 +84,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
             {
                 IsOldUser = true,
                 NextTextIndex = 5,
-                RotationState = "{\"v\":2}",
+                RotationState = "test-rotation-state",
                 ScopeKey = _fixture.Create<string>()
             };
 
@@ -284,7 +284,7 @@ namespace FillInTheTextBot.Messengers.Sber.Tests
 
             var response = CreateResponse();
             response.NextTextIndex = 3;
-            response.RotationState = "{\"v\":2}";
+            response.RotationState = "test-rotation-state";
             response.ScopeKey = _fixture.Create<string>();
 
             _conversationService
