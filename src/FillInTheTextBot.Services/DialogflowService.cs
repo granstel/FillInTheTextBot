@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Google.Cloud.Dialogflow.V2;
+using Grpc.Core;
 using System.Linq;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
@@ -116,7 +118,32 @@ namespace FillInTheTextBot.Services
                 if (isLogQuery)
                     _log.LogTrace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
-                DetectIntentResponse intentResponse = await client.DetectIntentAsync(intentRequest).ConfigureAwait(false);
+                DetectIntentResponse intentResponse;
+
+                using (var activity = Tracing.Trace(a => a
+                    .SetTag(nameof(context.ScopeId), context.ScopeId)
+                    .SetTag("rpc.system", "grpc")
+                    .SetTag("rpc.service", "google.cloud.dialogflow.v2.Sessions")
+                    .SetTag("rpc.method", "DetectIntent"), "Dialogflow DetectIntent"))
+                {
+                    try
+                    {
+                        intentResponse = await client.DetectIntentAsync(intentRequest).ConfigureAwait(false);
+                        activity?.SetTag("rpc.grpc.status_code", 0);
+                    }
+                    catch (Exception e)
+                    {
+                        activity?.SetStatus(ActivityStatusCode.Error);
+                        activity?.SetTag("error.type", e.GetType().FullName);
+
+                        if (e is RpcException rpcException)
+                        {
+                            activity?.SetTag("rpc.grpc.status_code", (int)rpcException.StatusCode);
+                        }
+
+                        throw;
+                    }
+                }
 
                 if (isLogQuery)
                     _log.LogTrace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
@@ -135,7 +162,11 @@ namespace FillInTheTextBot.Services
 
         private async Task SetContextInternalAsync(ContextsClient client, string sessionId, ScopeContext scopeContext, string contextName, int lifeSpan = 1, IDictionary<string, string> parameters = null)
         {
-            using (Tracing.Trace())
+            using (var activity = Tracing.Trace(a => a
+                .SetTag(nameof(scopeContext.ScopeId), scopeContext.ScopeId)
+                .SetTag("rpc.system", "grpc")
+                .SetTag("rpc.service", "google.cloud.dialogflow.v2.Contexts")
+                .SetTag("rpc.method", "CreateContext")))
             {
                 scopeContext.TryGetParameterValue(nameof(DialogflowConfiguration.ProjectId), out string projectId);
                 scopeContext.TryGetParameterValue(nameof(DialogflowConfiguration.Region), out string region);
@@ -146,7 +177,23 @@ namespace FillInTheTextBot.Services
 
                 MetricsCollector.Increment("dialogflow_CreateContext_scope", scopeContext.ScopeId);
 
-                await client.CreateContextAsync(session, context).ConfigureAwait(false);
+                try
+                {
+                    await client.CreateContextAsync(session, context).ConfigureAwait(false);
+                    activity?.SetTag("rpc.grpc.status_code", 0);
+                }
+                catch (Exception e)
+                {
+                    activity?.SetStatus(ActivityStatusCode.Error);
+                    activity?.SetTag("error.type", e.GetType().FullName);
+
+                    if (e is RpcException rpcException)
+                    {
+                        activity?.SetTag("rpc.grpc.status_code", (int)rpcException.StatusCode);
+                    }
+
+                    throw;
+                }
             }
         }
 
