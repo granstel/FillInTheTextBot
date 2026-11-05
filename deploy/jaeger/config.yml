@@ -22,13 +22,8 @@ extensions:
   jaeger_storage:
     backends:
       local:
-        badger:
-          directories:
-            keys: /tmp/jaeger/keys
-            values: /tmp/jaeger/values
-          ephemeral: false
-          ttl:
-            spans: 24h
+        memory:
+          max_traces: 5000
 
 receivers:
   otlp:

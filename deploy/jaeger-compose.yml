@@ -4,9 +4,6 @@ networks:
   network:
     external: true
 
-volumes:
-  jaeger-data:
-
 services:
   jaeger:
     image: jaegertracing/jaeger:2.23.0
@@ -19,7 +16,6 @@ services:
       GOMEMLIMIT: 384MiB
     volumes:
       - ./jaeger/config.yml:/etc/jaeger/config.yml:ro
-      - jaeger-data:/tmp
     ports:
       - "127.0.0.1:16686:16686"
       - "127.0.0.1:13133:13133"
