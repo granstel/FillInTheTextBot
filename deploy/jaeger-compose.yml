@@ -1,0 +1,32 @@
+name: fitb-tracing
+
+networks:
+  network:
+    external: true
+
+volumes:
+  jaeger-data:
+
+services:
+  jaeger:
+    image: jaegertracing/jaeger:2.23.0
+    container_name: jaeger
+    restart: unless-stopped
+    networks:
+      - network
+    command: ["--config=/etc/jaeger/config.yml"]
+    environment:
+      GOMEMLIMIT: 384MiB
+    volumes:
+      - ./jaeger/config.yml:/etc/jaeger/config.yml:ro
+      - jaeger-data:/tmp
+    ports:
+      - "127.0.0.1:16686:16686"
+      - "127.0.0.1:13133:13133"
+    mem_limit: 512m
+    cpus: 0.5
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
