@@ -868,6 +868,31 @@ namespace FillInTheTextBot.Services.Tests
         }
 
         [Test]
+        public async Task GetResponseAsync_LastRemainingStoryNotRecognized_PausePreservesProgress()
+        {
+            SetupRotation();
+            SetupDialog(new Dialog { Action = "GetText" });
+            SetupTextDialog("text-1", "Default Fallback Intent");
+            SetupTextDialog("texts-over", "TextsOver");
+
+            var state = new RotationState { Last = 33 };
+            state.MarkDone(2);
+            state.MarkDone(33);
+            state.MarkDone(34);
+            var beforePause = state.Serialize();
+
+
+            var result = await _target.GetResponseAsync(new Request { RotationState = beforePause });
+            var nextResult = await _target.GetResponseAsync(new Request { RotationState = result.RotationState });
+
+
+            Assert.That(result.Text, Does.EndWith("TextsOver"));
+            Assert.That(nextResult.Text, Does.EndWith("TextsOver"));
+            Assert.That(result.RotationState, Is.EqualTo(beforePause));
+            Assert.That(nextResult.RotationState, Is.EqualTo(beforePause));
+        }
+
+        [Test]
         public async Task GetResponseAsync_StoryEventNotRecognized_NextStoryIssued()
         {
             SetupRotation();
