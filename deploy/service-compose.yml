@@ -21,6 +21,22 @@ services:
       - ${KEYS_DIR:?задайте KEYS_DIR в .env}:/app/keys:ro
     # Больше, чем DrainDelaySeconds + Shutdown.TimeoutSeconds сервиса
     stop_grace_period: ${STOP_TIMEOUT:-45}s
+    # Docker provider не включает starting/unhealthy контейнер в Traefik.
+    healthcheck:
+      test:
+        - CMD
+        - bash
+        - -ec
+        - >-
+          exec 3<>/dev/tcp/127.0.0.1/80;
+          printf 'GET /health HTTP/1.1\r\nHost: localhost\r\nConnection: close\r\n\r\n' >&3;
+          read -r status <&3;
+          [[ "$$status" == "HTTP/1.1 200 "* ]]
+      interval: 3s
+      timeout: 2s
+      start_period: 15s
+      start_interval: 1s
+      retries: 3
     labels:
       app: fitb
       traefik.enable: "true"
