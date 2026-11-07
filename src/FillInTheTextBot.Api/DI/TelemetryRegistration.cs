@@ -28,7 +28,7 @@ namespace FillInTheTextBot.Api.DI
                     .AddMeter(MetricsCollector.MeterName)
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
-                    .AddRuntimeInstrumentation()
+                    .AddMeter("System.Runtime")
                     .AddPrometheusExporter());
 
             if (tracing is { Enabled: true })
