@@ -37,7 +37,7 @@ public class RotationFlowTests
         _emulator = new EmulatorFixture();
         await _emulator.StartAsync(agentPath);
 
-        _redis = new ContainerBuilder("redis:alpine")
+        _redis = new ContainerBuilder(Environment.GetEnvironmentVariable("REDIS_TEST_IMAGE") ?? "redis:alpine")
             .WithPortBinding(RedisPort, true)
             .WithWaitStrategy(Wait.ForUnixContainer().UntilMessageIsLogged("Ready to accept connections"))
             .Build();

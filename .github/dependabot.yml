@@ -1,0 +1,51 @@
+version: 2
+updates:
+  - package-ecosystem: dotnet-sdk
+    directory: /
+    schedule:
+      interval: weekly
+      day: friday
+      time: "09:00"
+      timezone: Europe/Moscow
+
+  - package-ecosystem: nuget
+    directory: /src
+    schedule:
+      interval: weekly
+      day: friday
+      time: "09:00"
+      timezone: Europe/Moscow
+    groups:
+      opentelemetry:
+        patterns:
+          - "OpenTelemetry.*"
+
+  - package-ecosystem: docker
+    directories:
+      - /src/Dialogflow.Emulator
+      - /src/FillInTheTextBot.Api
+    exclude-paths:
+      - Dockerfile.original
+    schedule:
+      interval: weekly
+      day: friday
+      time: "09:00"
+      timezone: Europe/Moscow
+
+  - package-ecosystem: docker-compose
+    directories:
+      - /deploy
+      - /loadtest
+    schedule:
+      interval: weekly
+      day: friday
+      time: "09:00"
+      timezone: Europe/Moscow
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: friday
+      time: "09:00"
+      timezone: Europe/Moscow

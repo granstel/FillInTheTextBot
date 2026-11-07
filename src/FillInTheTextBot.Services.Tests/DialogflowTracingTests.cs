@@ -83,7 +83,7 @@ namespace FillInTheTextBot.Services.Tests
                 {
                     var error = new RpcException(new Status(StatusCode.Unavailable, ErrorDetail));
                     response.SetException(error);
-                    var actual = Assert.ThrowsAsync<RpcException>(async () => await operation);
+                    var actual = await Assert.ThrowsAsync<RpcException>(async () => await operation);
                     Assert.That(actual, Is.SameAs(error));
                 }
                 else
@@ -187,7 +187,7 @@ namespace FillInTheTextBot.Services.Tests
                 {
                     var error = new RpcException(new Status(StatusCode.Unavailable, ErrorDetail));
                     response.SetException(error);
-                    var actual = Assert.ThrowsAsync<RpcException>(async () => await operation);
+                    var actual = await Assert.ThrowsAsync<RpcException>(async () => await operation);
                     Assert.That(actual, Is.SameAs(error));
                 }
                 else

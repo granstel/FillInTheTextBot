@@ -61,21 +61,21 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         }
 
         [Test]
-        public void GetStoryFilesAsync_Truncated_Throws()
+        public async Task GetStoryFilesAsync_Truncated_Throws()
         {
             _handler.Respond(HttpStatusCode.OK, """{ "tree": [], "truncated": true }""");
 
 
-            Assert.ThrowsAsync<InvalidOperationException>(() => _target.GetStoryFilesAsync(null, CancellationToken.None));
+            await Assert.ThrowsAsync<InvalidOperationException>(() => _target.GetStoryFilesAsync(null, CancellationToken.None));
         }
 
         [Test]
-        public void GetStoryFilesAsync_NoTree_Throws()
+        public async Task GetStoryFilesAsync_NoTree_Throws()
         {
             _handler.Respond(HttpStatusCode.OK, """{ "message": "Not Found" }""");
 
 
-            Assert.ThrowsAsync<InvalidOperationException>(() => _target.GetStoryFilesAsync(null, CancellationToken.None));
+            await Assert.ThrowsAsync<InvalidOperationException>(() => _target.GetStoryFilesAsync(null, CancellationToken.None));
         }
 
         [Test]
@@ -94,12 +94,12 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         }
 
         [Test]
-        public void GetStoryFilesAsync_ServerError_Throws()
+        public async Task GetStoryFilesAsync_ServerError_Throws()
         {
             _handler.Respond(HttpStatusCode.Forbidden);
 
 
-            Assert.ThrowsAsync<HttpRequestException>(() => _target.GetStoryFilesAsync(null, CancellationToken.None));
+            await Assert.ThrowsAsync<HttpRequestException>(() => _target.GetStoryFilesAsync(null, CancellationToken.None));
         }
 
         [Test]

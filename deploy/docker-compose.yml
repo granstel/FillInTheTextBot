@@ -12,7 +12,7 @@ networks:
 
 services:
   traefik:
-    image: traefik:v3.7
+    image: traefik:v3.7.17
     container_name: traefik
     restart: always
     networks:

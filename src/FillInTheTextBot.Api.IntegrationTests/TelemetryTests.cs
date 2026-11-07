@@ -103,6 +103,8 @@ public class TelemetryTests
             Assert.That(health.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(exporter.Spans.Where(s => s.Kind == ActivityKind.Server), Is.Empty);
             Assert.That(metrics, Does.Contain("http_server_request_duration_seconds_count"));
+            Assert.That(metrics, Does.Contain("dotnet_gc_collections_total"));
+            Assert.That(metrics, Does.Contain("dotnet_process_memory_working_set_bytes"));
             Assert.That(metrics, Does.Contain("http_route=\"/health\""));
         });
     }

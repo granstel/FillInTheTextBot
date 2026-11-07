@@ -9,7 +9,7 @@
 services:
 
   redis:
-    image: redis:alpine
+    image: redis:8.10.3-alpine
     command: ["redis-server", "--save", "", "--appendonly", "no"]
 
   dialogflow-emulator:
@@ -51,7 +51,7 @@ services:
       - ./config/appsettings.Yandex.json:/app/appsettings.Yandex.json:ro
 
   k6:
-    image: grafana/k6:latest
+    image: grafana/k6:2.3.0
     depends_on:
       - fillinthetextbot
     environment:

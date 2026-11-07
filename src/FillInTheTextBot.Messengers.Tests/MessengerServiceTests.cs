@@ -299,25 +299,25 @@ namespace FillInTheTextBot.Messengers.Tests
         #region Не реализованные по умолчанию методы
 
         [Test]
-        public void ProcessIncomingAsync_BeforeAndAfterNotOverridden_NotImplemented()
+        public async Task ProcessIncomingAsync_BeforeAndAfterNotOverridden_NotImplemented()
         {
             // Before бросает NotImplementedException, она перехватывается и превращается
             // в ответ об ошибке, но AfterAsync вызывается вне try и падает уже наружу
             var target = new NotOverriddenMessengerService(Mock.Of<ILogger>(), _conversationService.Object);
 
-            Assert.ThrowsAsync<NotImplementedException>(() => target.ProcessIncomingAsync(new InputFixture()));
+            await Assert.ThrowsAsync<NotImplementedException>(() => target.ProcessIncomingAsync(new InputFixture()));
         }
 
         [Test]
-        public void SetWebhookAsync_NotOverridden_NotImplemented()
+        public async Task SetWebhookAsync_NotOverridden_NotImplemented()
         {
-            Assert.ThrowsAsync<NotImplementedException>(() => _target.SetWebhookAsync(_fixture.Create<string>()));
+            await Assert.ThrowsAsync<NotImplementedException>(() => _target.SetWebhookAsync(_fixture.Create<string>()));
         }
 
         [Test]
-        public void DeleteWebhookAsync_NotOverridden_NotImplemented()
+        public async Task DeleteWebhookAsync_NotOverridden_NotImplemented()
         {
-            Assert.ThrowsAsync<NotImplementedException>(() => _target.DeleteWebhookAsync());
+            await Assert.ThrowsAsync<NotImplementedException>(() => _target.DeleteWebhookAsync());
         }
 
         #endregion Не реализованные по умолчанию методы
