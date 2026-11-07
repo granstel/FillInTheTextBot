@@ -14,6 +14,16 @@
   "hidden": [],
   "campaigns": [
     {
+      "id": "new-year",
+      "from": "12-25",
+      "to": "01-07",
+      "hideOutside": true,
+      "texts": [
+        "text-18",
+        "text-30-1"
+      ]
+    },
+    {
       "id": "zodiac-capricorn",
       "from": "12-22",
       "to": "01-19",
