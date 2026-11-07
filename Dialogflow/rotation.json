@@ -11,5 +11,115 @@
   "chains": [
     ["text-33", "text-34-1"]
   ],
-  "hidden": []
+  "hidden": [],
+  "campaigns": [
+    {
+      "id": "zodiac-capricorn",
+      "from": "12-22",
+      "to": "01-19",
+      "hideOutside": true,
+      "texts": [
+        "text-8"
+      ]
+    },
+    {
+      "id": "zodiac-aquarius",
+      "from": "01-20",
+      "to": "02-18",
+      "hideOutside": true,
+      "texts": [
+        "text-9"
+      ]
+    },
+    {
+      "id": "zodiac-pisces",
+      "from": "02-19",
+      "to": "03-20",
+      "hideOutside": true,
+      "texts": [
+        "text-10"
+      ]
+    },
+    {
+      "id": "zodiac-aries",
+      "from": "03-21",
+      "to": "04-19",
+      "hideOutside": true,
+      "texts": [
+        "text-11"
+      ]
+    },
+    {
+      "id": "zodiac-taurus",
+      "from": "04-20",
+      "to": "05-20",
+      "hideOutside": true,
+      "texts": [
+        "text-12"
+      ]
+    },
+    {
+      "id": "zodiac-gemini",
+      "from": "05-21",
+      "to": "06-20",
+      "hideOutside": true,
+      "texts": [
+        "text-13"
+      ]
+    },
+    {
+      "id": "zodiac-cancer",
+      "from": "06-21",
+      "to": "07-22",
+      "hideOutside": true,
+      "texts": [
+        "text-14"
+      ]
+    },
+    {
+      "id": "zodiac-leo",
+      "from": "07-23",
+      "to": "08-22",
+      "hideOutside": true,
+      "texts": [
+        "text-16"
+      ]
+    },
+    {
+      "id": "zodiac-virgo",
+      "from": "08-23",
+      "to": "09-22",
+      "hideOutside": true,
+      "texts": [
+        "text-15"
+      ]
+    },
+    {
+      "id": "zodiac-libra",
+      "from": "09-23",
+      "to": "10-22",
+      "hideOutside": true,
+      "texts": [
+        "text-19"
+      ]
+    },
+    {
+      "id": "zodiac-scorpio",
+      "from": "10-23",
+      "to": "11-21",
+      "hideOutside": true,
+      "texts": [
+        "text-21"
+      ]
+    },
+    {
+      "id": "zodiac-sagittarius",
+      "from": "11-22",
+      "to": "12-21",
+      "hideOutside": true,
+      "texts": [
+        "text-23"
+      ]
+    }
+  ]
 }
