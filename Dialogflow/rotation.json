@@ -31,7 +31,89 @@
       "texts": [
         "text-20",
         "text-27-1",
-        "text-26"
+        "text-26",
+        "text-35"
+      ]
+    },
+    {
+      "id": "valentines-day",
+      "from": "02-13",
+      "to": "02-14",
+      "hideOutside": true,
+      "texts": [
+        "text-22"
+      ]
+    },
+    {
+      "id": "february-23",
+      "from": "02-22",
+      "to": "02-23",
+      "hideOutside": true,
+      "texts": [
+        "text-24"
+      ]
+    },
+    {
+      "id": "march-8",
+      "from": "03-07",
+      "to": "03-08",
+      "hideOutside": true,
+      "texts": [
+        "text-25"
+      ]
+    },
+    {
+      "id": "library-mysteries",
+      "from": "06-13",
+      "to": "06-13",
+      "hideOutside": false,
+      "texts": [
+        "text-33",
+        "text-34-1"
+      ]
+    },
+    {
+      "id": "summer-holidays",
+      "from": "05-29",
+      "to": "08-29",
+      "hideOutside": false,
+      "texts": [
+        "text-32-1",
+        "text-37-1",
+        "text-46",
+        "text-53"
+      ]
+    },
+    {
+      "id": "first-bell",
+      "from": "08-25",
+      "to": "09-01",
+      "hideOutside": true,
+      "texts": [
+        "text-49"
+      ]
+    },
+    {
+      "id": "back-to-school",
+      "from": "08-25",
+      "to": "09-07",
+      "hideOutside": false,
+      "texts": [
+        "text-0",
+        "text-27-1"
+      ]
+    },
+    {
+      "id": "spooky-week",
+      "from": "10-25",
+      "to": "10-31",
+      "hideOutside": false,
+      "texts": [
+        "text-17",
+        "text-31-1",
+        "text-39-1",
+        "text-41-1",
+        "text-47"
       ]
     },
     {
