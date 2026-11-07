@@ -134,6 +134,66 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         }
 
         [Test]
+        public void Parse_Campaign_ReadsFields()
+        {
+            const string json = """
+                                {
+                                  "campaigns": [
+                                    { "id": "new-year", "from": "12-20", "to": "01-10", "shuffle": true, "hideOutside": true,
+                                      "texts": ["text-1", "text-2"] }
+                                  ]
+                                }
+                                """;
+
+
+            var rules = RotationRules.Parse(json);
+
+
+            var campaign = rules.Campaigns[0];
+
+            Assert.That(campaign.Id, Is.EqualTo("new-year"));
+            Assert.That(campaign.From, Is.EqualTo("12-20"));
+            Assert.That(campaign.To, Is.EqualTo("01-10"));
+            Assert.That(campaign.Shuffle, Is.True);
+            Assert.That(campaign.HideOutside, Is.True);
+            Assert.That(campaign.Texts, Is.EqualTo(new[] { "text-1", "text-2" }));
+            Assert.That(rules.Validate(_catalog), Is.Empty);
+        }
+
+        [TestCase("", "03-01", "03-14", "text-1")]
+        [TestCase("promo", "03-01", "2027-03-14", "text-1")]
+        [TestCase("promo", "2027-03-14", "2027-03-01", "text-1")]
+        [TestCase("promo", "3-1", "03-14", "text-1")]
+        [TestCase("promo", "03-01", "03-14", "text-99")]
+        [TestCase("promo", "03-01", "03-14", null)]
+        public void Validate_InvalidCampaign_Error(string id, string from, string to, string eventName)
+        {
+            var rules = new RotationRules
+            {
+                Campaigns = [new RotationCampaign { Id = id, From = from, To = to, Texts = eventName is null ? [] : [eventName] }]
+            };
+
+
+            var errors = rules.Validate(_catalog);
+
+
+            Assert.That(errors, Has.Count.EqualTo(1));
+        }
+
+        [Test]
+        public void Validate_DuplicateCampaignId_Error()
+        {
+            var campaign = new RotationCampaign { Id = "promo", From = "03-01", To = "03-14", Texts = ["text-1"] };
+            var rules = new RotationRules { Campaigns = [campaign, campaign] };
+
+
+            var errors = rules.Validate(_catalog);
+
+
+            Assert.That(errors, Has.Count.EqualTo(1));
+        }
+
+        [Test]
         public void GetFirstCycle_PartialList_ListedFirstThenRestByNumberWithoutHidden()
         {
             var rules = new RotationRules

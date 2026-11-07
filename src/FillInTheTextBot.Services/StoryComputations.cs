@@ -90,7 +90,12 @@ namespace FillInTheTextBot.Services
         /// <summary>Текущая дата по Москве (UTC+3).</summary>
         public static DateTime MoscowToday()
         {
-            return DateTimeOffset.UtcNow.ToOffset(MoscowOffset).Date;
+            return ToMoscowDate(DateTimeOffset.UtcNow);
+        }
+
+        public static DateTime ToMoscowDate(DateTimeOffset moment)
+        {
+            return moment.ToOffset(MoscowOffset).Date;
         }
 
         /// <summary>
