@@ -24,6 +24,17 @@
       ]
     },
     {
+      "id": "april-fools",
+      "from": "04-01",
+      "to": "04-01",
+      "hideOutside": false,
+      "texts": [
+        "text-20",
+        "text-27-1",
+        "text-26"
+      ]
+    },
+    {
       "id": "zodiac-capricorn",
       "from": "12-22",
       "to": "01-19",
