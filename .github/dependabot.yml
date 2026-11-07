@@ -24,8 +24,6 @@ updates:
     directories:
       - /src/Dialogflow.Emulator
       - /src/FillInTheTextBot.Api
-    exclude-paths:
-      - Dockerfile.original
     schedule:
       interval: weekly
       day: friday
