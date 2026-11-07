@@ -9,6 +9,7 @@ using FillInTheTextBot.Services.Rotation;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 
 namespace FillInTheTextBot.Api.IntegrationTests;
 
@@ -234,9 +235,12 @@ public class RotationFlowTests
 
         public Task<RotationSourceResult<string>> GetRulesAsync(string etag, CancellationToken cancellationToken)
         {
-            var rules = File.ReadAllText(rulesPath);
+            var rules = RotationRules.Parse(File.ReadAllText(rulesPath));
 
-            return Task.FromResult(new RotationSourceResult<string>(true, rules, null));
+            // Эти сценарии проверяют обычный первый круг независимо от сезонных кампаний.
+            rules.Campaigns = [];
+
+            return Task.FromResult(new RotationSourceResult<string>(true, JsonConvert.SerializeObject(rules), null));
         }
     }
 }
