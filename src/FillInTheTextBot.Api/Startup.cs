@@ -6,9 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
-using System.Text.Encodings.Web;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using FillInTheTextBot.Api.DI;
 using FillInTheTextBot.Api.Health;
 using Microsoft.Extensions.Hosting;
@@ -36,17 +33,7 @@ namespace FillInTheTextBot.Api
         {
             var appConfiguration = _configuration.GetSection(nameof(AppConfiguration)).Get<AppConfiguration>();
 
-            services
-                .AddControllers()
-                .AddJsonOptions(options =>
-                {
-                    var json = options.JsonSerializerOptions;
-                    json.PropertyNamingPolicy = null;
-                    json.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-                    json.AllowTrailingCommas = true;
-                    json.ReadCommentHandling = JsonCommentHandling.Skip;
-                    json.Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping;
-                });
+            services.AddYandex();
 
             services.AddTelemetry(appConfiguration.Tracing);
 
@@ -97,8 +84,7 @@ namespace FillInTheTextBot.Api
 
             app.UseEndpoints(e =>
             {
-                e.MapControllers();
-                e.MapYandexWebhook();
+                e.MapYandexEndpoints();
                 e.MapPrometheusScrapingEndpoint();
                 e.MapHealthChecks(HealthPath);
             });
