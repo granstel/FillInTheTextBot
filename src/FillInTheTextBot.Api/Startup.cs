@@ -36,7 +36,7 @@ namespace FillInTheTextBot.Api
             var appConfiguration = _configuration.GetSection(nameof(AppConfiguration)).Get<AppConfiguration>();
 
             services
-                .AddMvc()
+                .AddControllers()
                 .AddJsonOptions(options =>
                 {
                     var json = options.JsonSerializerOptions;
