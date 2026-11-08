@@ -43,4 +43,3 @@ AppConfiguration__Tracing__NetworkEnabled=false
 
 # Токены проверки входящих запросов от площадок
 FITB-YANDEX-INCOMINGTOKEN=CHANGE-ME
-FITB-MARUSIA-INCOMINGTOKEN=CHANGE-ME

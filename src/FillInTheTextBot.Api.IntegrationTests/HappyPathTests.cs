@@ -1,7 +1,6 @@
 using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
-using FillInTheTextBot.Messengers.Marusia;
 using FillInTheTextBot.Models;
 using Google.Cloud.Dialogflow.V2;
 using Google.Protobuf;
@@ -140,16 +139,14 @@ public class HappyPathTests
     }
 
 
-    [TestCase("yandex")]
-    [TestCase("marusia")]
-    public async Task Webhook_PreservesWireNamesAndLegacyState(string platform)
+    [Test]
+    public async Task Webhook_PreservesWireNamesAndLegacyState()
     {
         const string legacyState = """{"Cycle":1,"Done":"AQ==","Current":29}""";
         var sessionId = Guid.NewGuid().ToString("N");
         var payload = CreatePayload(isNewSession: false, command: "ping", sessionId,
             userState: new Dictionary<string, object> { ["ISOLDUSER"] = true, ["NEXTTEXTINDEX"] = "7", ["ROTATIONSTATE"] = legacyState });
-        var path = GetWebhookPath(platform);
-        using var body = await PostAsync(path, payload);
+        using var body = await PostAsync(_yandexPath, payload);
         var root = body.RootElement;
         var answer = root.GetProperty("response");
         var session = root.GetProperty("session");
@@ -169,11 +166,8 @@ public class HappyPathTests
             Assert.That(state.GetProperty("ROTATIONSTATE").GetString(), Is.EqualTo(legacyState));
             Assert.That(state.GetProperty(Request.IsOldUserKey).GetBoolean(), Is.True);
             Assert.That(root.GetProperty("session_state").GetProperty("SCOPEKEY").ValueKind, Is.EqualTo(JsonValueKind.Null));
-        });
-        if (platform == "yandex")
-        {
             Assert.That(root.GetProperty("application_state").GetProperty("NEXTTEXTINDEX").GetInt32(), Is.EqualTo(7));
-        }
+        });
     }
 
     [Test]
@@ -197,47 +191,14 @@ public class HappyPathTests
             !button.GetProperty("hide").GetBoolean()), Is.True);
     }
 
-    [Test]
-    public async Task MarusiaWebhook_CollectsWordsAndReturnsCompletedStory()
+    [TestCase("/sber")]
+    [TestCase("/sber/test-token")]
+    [TestCase("/marusia")]
+    [TestCase("/marusia/test-token")]
+    public async Task RetiredWebhook_ReturnsNotFound(string path)
     {
-        var path = GetWebhookPath("marusia");
-        var sessionId = Guid.NewGuid().ToString("N");
-        var userId = Guid.NewGuid().ToString("N");
-        object? userState = null;
-        object? sessionState = null;
-
-        var welcome = await SayAsync(string.Empty, isNewSession: true);
-        Assert.That(welcome, Does.StartWith("Добро пожаловать!"));
-
-        foreach (var word in new[] { "опоздала в больницу", "3", "медведь", "два", "зайцы", "лес" })
-        {
-            var answer = await SayAsync(word);
-            Assert.That(answer, Is.Not.Empty.And.Not.StartWith("Не совсем понимаю"));
-        }
-
-        var story = await SayAsync("5");
-        Assert.That(story, Does.Contain("Вот что получилось").And.Contain("медведь").And.Contain("зайцы"));
-
-        async Task<string?> SayAsync(string command, bool isNewSession = false)
-        {
-            var payload = CreatePayload(isNewSession, command, sessionId, userState, userId, sessionState);
-            using var body = await PostAsync(path, payload);
-            var root = body.RootElement;
-            userState = root.GetProperty("user_state_update").Clone();
-            sessionState = root.GetProperty("session_state").Clone();
-            return root.GetProperty("response").GetProperty("text").GetString();
-        }
-    }
-
-    private string GetWebhookPath(string platform)
-    {
-        var token = platform switch
-        {
-            "yandex" => _factory.Services.GetRequiredService<YandexConfiguration>().IncomingToken,
-            "marusia" => _factory.Services.GetRequiredService<MarusiaConfiguration>().IncomingToken,
-            _ => throw new ArgumentOutOfRangeException(nameof(platform))
-        };
-        return string.IsNullOrEmpty(token) ? $"/{platform}" : $"/{platform}/{Uri.EscapeDataString(token)}";
+        using var response = await _client.PostAsync(path, JsonContent.Create(CreatePayload(true, string.Empty)));
+        Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.NotFound));
     }
 
     private async Task<JsonDocument> PostAsync(string path, object payload)
@@ -271,7 +232,7 @@ public class HappyPathTests
     }
 
     private static object CreatePayload(bool isNewSession, string command, string? sessionId = null,
-        object? userState = null, string? userId = null, object? sessionState = null)
+        object? userState = null)
     {
         return new
         {
@@ -281,7 +242,7 @@ public class HappyPathTests
                 message_id = 0,
                 session_id = sessionId ?? Guid.NewGuid().ToString("N"),
                 skill_id = "integration-tests",
-                user_id = userId ?? Guid.NewGuid().ToString("N"),
+                user_id = Guid.NewGuid().ToString("N"),
                 @new = isNewSession
             },
             request = new
@@ -292,7 +253,7 @@ public class HappyPathTests
                 markup = new { dangerous_context = false },
                 nlu = new { tokens = Array.Empty<string>(), entities = Array.Empty<object>() }
             },
-            state = new { session = sessionState ?? new { }, user = userState ?? new { } },
+            state = new { session = new { }, user = userState ?? new { } },
             version = "1.0"
         };
     }
@@ -323,7 +284,7 @@ public class HappyPathTests
             if (request is DetectIntentRequest { QueryInput.Text.Text: "5" } && response is DetectIntentResponse intent)
             {
                 var payload = JsonParser.Default.Parse<Struct>("""
-                    {"Yandex":{"buttons":[{"text":"Кнопка из payload","url":"https://example.test/story","isQuickReply":false}]}}
+                    {"Sber":{},"Marusia":{},"Yandex":{"buttons":[{"text":"Кнопка из payload","url":"https://example.test/story","isQuickReply":false}]}}
                     """);
                 intent.QueryResult.FulfillmentMessages.Add(new Intent.Types.Message { Payload = payload });
             }

@@ -25,7 +25,6 @@
     <PackageVersion Include="StackExchange.Redis" Version="3.4.31" />
   </ItemGroup>
   <ItemGroup Label="Модели голосовых площадок">
-    <PackageVersion Include="MailRu.Marusia.Models" Version="2.0.0" />
     <PackageVersion Include="Yandex.Dialogs.Models" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup Label="Тесты">

@@ -16,7 +16,6 @@ COPY ["FillInTheTextBot.Services/FillInTheTextBot.Services.csproj", "FillInTheTe
 COPY ["FillInTheTextBot.Models/FillInTheTextBot.Models.csproj", "FillInTheTextBot.Models/"]
 COPY ["FillInTheTextBot.Messengers/FillInTheTextBot.Messengers.csproj", "FillInTheTextBot.Messengers/"]
 COPY ["FillInTheTextBot.Messengers.Yandex/FillInTheTextBot.Messengers.Yandex.csproj", "FillInTheTextBot.Messengers.Yandex/"]
-COPY ["FillInTheTextBot.Messengers.Marusia/FillInTheTextBot.Messengers.Marusia.csproj", "FillInTheTextBot.Messengers.Marusia/"]
 RUN dotnet restore "FillInTheTextBot.Api/FillInTheTextBot.Api.csproj"
 COPY . .
 WORKDIR "/src/FillInTheTextBot.Api"
