@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using FillInTheTextBot.Services.Rotation;
-using Newtonsoft.Json;
 using NUnit.Framework;
 
 namespace FillInTheTextBot.Services.Tests.Rotation
@@ -37,9 +36,19 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         }
 
         [Test]
-        public void Parse_UnknownField_Throws()
+        public void Snapshot_UnknownRuleField_Rejected()
         {
-            Assert.Throws<JsonSerializationException>(() => RotationRules.Parse("""{ "hiden": [] }"""));
+            var sources = new RotationSources
+            {
+                StoryFiles = ["1-Test-text.json"],
+                RulesJson = """{ "hiden": [] }"""
+            };
+
+            var applied = RotationSnapshot.TryCreate(sources, out var snapshot, out var errors);
+
+            Assert.That(applied, Is.False);
+            Assert.That(snapshot, Is.Null);
+            Assert.That(errors, Has.Some.Contains("hiden"));
         }
 
         [Test]

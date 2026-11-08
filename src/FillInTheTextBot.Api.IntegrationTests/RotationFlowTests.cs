@@ -5,11 +5,11 @@ using DotNet.Testcontainers.Builders;
 using DotNet.Testcontainers.Containers;
 using FillInTheTextBot.Messengers.Yandex;
 using FillInTheTextBot.Models;
+using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Rotation;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
 
 namespace FillInTheTextBot.Api.IntegrationTests;
 
@@ -44,7 +44,15 @@ public class RotationFlowTests
 
         await _redis.StartAsync();
 
-        var source = new LocalRotationSource(Path.Combine(agentPath, "intents"), Path.Combine(dialogflowPath, "rotation.json"));
+        var files = Directory.GetFiles(Path.Combine(agentPath, "intents"));
+        var tree = new { tree = files.Select(file => new { path = Path.GetFileName(file), type = "blob" }) };
+        var rules = JsonNode.Parse(File.ReadAllText(Path.Combine(dialogflowPath, "rotation.json")))!.AsObject();
+        rules["campaigns"] = new JsonArray();
+        var source = new GitHubRotationSource(new HttpClient(new RotationHttpHandler(tree, rules)), new RotationConfiguration
+        {
+            StoriesUrl = "https://rotation.test/stories",
+            RulesUrl = "https://rotation.test/rules"
+        });
 
         _factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
         {
@@ -224,23 +232,17 @@ public class RotationFlowTests
         }
     }
 
-    private sealed class LocalRotationSource(string intentsPath, string rulesPath) : IRotationSource
+    private sealed class RotationHttpHandler(object tree, JsonObject rules) : HttpMessageHandler
     {
-        public Task<RotationSourceResult<string[]>> GetStoryFilesAsync(string etag, CancellationToken cancellationToken)
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            var files = Directory.GetFiles(intentsPath).Select(file => Path.GetFileName(file)).ToArray();
-
-            return Task.FromResult(new RotationSourceResult<string[]>(true, files, null));
-        }
-
-        public Task<RotationSourceResult<string>> GetRulesAsync(string etag, CancellationToken cancellationToken)
-        {
-            var rules = RotationRules.Parse(File.ReadAllText(rulesPath));
-
-            // Эти сценарии проверяют обычный первый круг независимо от сезонных кампаний.
-            rules.Campaigns = [];
-
-            return Task.FromResult(new RotationSourceResult<string>(true, JsonConvert.SerializeObject(rules), null));
+            var content = request.RequestUri?.AbsolutePath switch
+            {
+                "/stories" => JsonContent.Create(tree),
+                "/rules" => JsonContent.Create(rules),
+                _ => throw new InvalidOperationException(request.RequestUri?.ToString())
+            };
+            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = content });
         }
     }
 }
