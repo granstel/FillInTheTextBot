@@ -7,11 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Cloud.Dialogflow.V2" />
-    <PackageReference Include="GranSteL.Helpers.Redis" />
     <PackageReference Include="GranSteL.Tools.ScopeSelector" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
-    <PackageReference Include="StackExchange.Redis" />
   </ItemGroup>
 
   <ItemGroup>

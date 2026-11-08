@@ -5,7 +5,7 @@ using FillInTheTextBot.Models;
 using FillInTheTextBot.Services.BackgroundTasks;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Rotation;
-using GranSteL.Helpers.Redis;
+using FillInTheTextBot.Services.Caching;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using NUnit.Framework;

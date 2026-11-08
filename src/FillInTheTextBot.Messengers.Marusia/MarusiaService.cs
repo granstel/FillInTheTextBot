@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.BackgroundTasks;
-using GranSteL.Helpers.Redis;
+using FillInTheTextBot.Services.Caching;
 using MailRu.Marusia.Models;
 using MailRu.Marusia.Models.Input;
 using Microsoft.Extensions.Logging;

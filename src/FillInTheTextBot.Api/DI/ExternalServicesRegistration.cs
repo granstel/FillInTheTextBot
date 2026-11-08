@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FillInTheTextBot.Api.Caching;
+using FillInTheTextBot.Services.Caching;
 using FillInTheTextBot.Services.Configuration;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
-using GranSteL.Helpers.Redis;
 using GranSteL.Tools.ScopeSelector;
 using Grpc.Auth;
 using Grpc.Core;

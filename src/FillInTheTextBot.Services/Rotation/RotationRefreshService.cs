@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using FillInTheTextBot.Services.Configuration;
-using GranSteL.Helpers.Redis;
+using FillInTheTextBot.Services.Caching;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
