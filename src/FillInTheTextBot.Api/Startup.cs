@@ -5,6 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using FillInTheTextBot.Api.DI;
 using FillInTheTextBot.Api.Health;
 using Microsoft.Extensions.Hosting;
@@ -34,7 +37,15 @@ namespace FillInTheTextBot.Api
 
             services
                 .AddMvc()
-                .AddNewtonsoftJson();
+                .AddJsonOptions(options =>
+                {
+                    var json = options.JsonSerializerOptions;
+                    json.PropertyNamingPolicy = null;
+                    json.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+                    json.AllowTrailingCommas = true;
+                    json.ReadCommentHandling = JsonCommentHandling.Skip;
+                    json.Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping;
+                });
 
             services.AddTelemetry(appConfiguration.Tracing);
 

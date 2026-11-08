@@ -1,6 +1,6 @@
 using System.Text;
 using FillInTheTextBot.Services.Rotation;
-using Newtonsoft.Json.Linq;
+using System.Text.Json.Nodes;
 using NUnit.Framework;
 
 namespace FillInTheTextBot.Services.Tests.Rotation
@@ -44,11 +44,11 @@ namespace FillInTheTextBot.Services.Tests.Rotation
             var serialized = state.Serialize();
 
 
-            var json = JObject.Parse(serialized);
+            var json = JsonNode.Parse(serialized).AsObject();
 
             Assert.That(json.Count, Is.EqualTo(2));
-            Assert.That(json.Value<int>("Cycle"), Is.EqualTo(0));
-            Assert.That(json.Value<string>("Done"), Is.EqualTo("////////Hw=="));
+            Assert.That(json["Cycle"].GetValue<int>(), Is.EqualTo(0));
+            Assert.That(json["Done"].GetValue<string>(), Is.EqualTo("////////Hw=="));
             Assert.That(Encoding.UTF8.GetByteCount(serialized), Is.EqualTo(33));
         }
 

@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace FillInTheTextBot.Services.Rotation
 {
@@ -11,9 +13,14 @@ namespace FillInTheTextBot.Services.Rotation
     /// </summary>
     public sealed class RotationState
     {
-        private static readonly JsonSerializerSettings SerializerSettings = new()
+        private static readonly JsonSerializerOptions SerializerOptions = new()
         {
-            NullValueHandling = NullValueHandling.Ignore
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+            PropertyNameCaseInsensitive = true,
+            AllowTrailingCommas = true,
+            ReadCommentHandling = JsonCommentHandling.Skip,
+            NumberHandling = JsonNumberHandling.AllowReadingFromString,
+            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
         };
 
         private readonly HashSet<int> _done = [];
@@ -22,7 +29,7 @@ namespace FillInTheTextBot.Services.Rotation
         public int Cycle { get; set; }
 
         /// <summary>Закрытые в круге истории — битовая маска по номерам в base64.</summary>
-        [JsonProperty]
+        [JsonInclude]
         private string Done
         {
             get => EncodeDone(_done);
@@ -78,7 +85,7 @@ namespace FillInTheTextBot.Services.Rotation
 
             try
             {
-                var state = JsonConvert.DeserializeObject<RotationState>(value);
+                var state = JsonSerializer.Deserialize<RotationState>(value, SerializerOptions);
 
                 return state;
             }
@@ -90,7 +97,7 @@ namespace FillInTheTextBot.Services.Rotation
 
         public string Serialize()
         {
-            var value = JsonConvert.SerializeObject(this, SerializerSettings);
+            var value = JsonSerializer.Serialize(this, SerializerOptions);
 
             return value;
         }

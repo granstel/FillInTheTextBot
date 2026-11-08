@@ -1,5 +1,6 @@
 using System.Net;
 using Dialogflow.Emulator.Services;
+using Grpc.AspNetCore.Server;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.Server;
@@ -22,12 +23,12 @@ public sealed class EmulatorFixture : IAsyncDisposable
 
     public string Endpoint { get; private set; } = string.Empty;
 
-    public async Task StartAsync(string agentPath)
+    public async Task StartAsync(string agentPath, Action<GrpcServiceOptions>? configureGrpc = null)
     {
         var builder = WebApplication.CreateBuilder();
 
         builder.Logging.SetMinimumLevel(LogLevel.Warning);
-        builder.Services.AddGrpc();
+        builder.Services.AddGrpc(options => configureGrpc?.Invoke(options));
         builder.Services.AddSingleton<IAgentStorage, AgentStorage>();
         builder.Services.AddSingleton<SlotFillingStore>();
 

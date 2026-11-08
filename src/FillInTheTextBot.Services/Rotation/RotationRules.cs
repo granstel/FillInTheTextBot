@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace FillInTheTextBot.Services.Rotation
 {
@@ -9,9 +10,12 @@ namespace FillInTheTextBot.Services.Rotation
     /// </summary>
     public sealed class RotationRules
     {
-        private static readonly JsonSerializerSettings ParseSettings = new()
+        private static readonly JsonSerializerOptions ParseOptions = new()
         {
-            MissingMemberHandling = MissingMemberHandling.Error
+            PropertyNameCaseInsensitive = true,
+            AllowTrailingCommas = true,
+            ReadCommentHandling = JsonCommentHandling.Skip,
+            UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow
         };
 
         public static RotationRules Empty => new();
@@ -31,8 +35,8 @@ namespace FillInTheTextBot.Services.Rotation
         /// <exception cref="JsonException">Невалидный JSON или неизвестное поле.</exception>
         public static RotationRules Parse(string json)
         {
-            var rules = JsonConvert.DeserializeObject<RotationRules>(json, ParseSettings)
-                        ?? throw new JsonSerializationException("Пустой файл правил");
+            var rules = JsonSerializer.Deserialize<RotationRules>(json, ParseOptions)
+                        ?? throw new JsonException("Пустой файл правил");
 
             return rules;
         }

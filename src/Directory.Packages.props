@@ -3,12 +3,8 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup Label="Microsoft">
-    <PackageVersion Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="10.0.14" />
     <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.14" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.14" />
-  </ItemGroup>
-  <ItemGroup Label="Сериализация">
-    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
   <ItemGroup Label="Логирование">
     <PackageVersion Include="NLog.Web.AspNetCore" Version="6.2.2" />
@@ -24,14 +20,14 @@
   <ItemGroup Label="Dialogflow и Redis">
     <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.34.0" />
     <PackageVersion Include="Grpc.AspNetCore" Version="2.85.0" />
-    <PackageVersion Include="GranSteL.Helpers.Redis" Version="1.1.0" />
+    <PackageVersion Include="GranSteL.Helpers.Redis" Version="2.0.0" />
     <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
     <PackageVersion Include="StackExchange.Redis" Version="3.4.31" />
   </ItemGroup>
   <ItemGroup Label="Модели голосовых площадок">
-    <PackageVersion Include="MailRu.Marusia.Models" Version="1.1.0" />
-    <PackageVersion Include="Sber.SmartApp.Models" Version="1.0.0" />
-    <PackageVersion Include="Yandex.Dialogs.Models" Version="1.4.0" />
+    <PackageVersion Include="MailRu.Marusia.Models" Version="2.0.0" />
+    <PackageVersion Include="Sber.SmartApp.Models" Version="2.0.0" />
+    <PackageVersion Include="Yandex.Dialogs.Models" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup Label="Тесты">
     <PackageVersion Include="AutoFixture" Version="4.18.1" />
