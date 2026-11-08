@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.BackgroundTasks;
-using FillInTheTextBot.Services.Caching;
+using GranSteL.Helpers.Redis;
 using Microsoft.Extensions.Logging;
 using Sber.SmartApp.Models;
 

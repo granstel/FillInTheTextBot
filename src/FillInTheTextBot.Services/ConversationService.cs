@@ -8,7 +8,7 @@ using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
 using FillInTheTextBot.Services.Mapping;
 using FillInTheTextBot.Services.Rotation;
-using FillInTheTextBot.Services.Caching;
+using GranSteL.Helpers.Redis;
 using Microsoft.Extensions.Logging;
 
 namespace FillInTheTextBot.Services

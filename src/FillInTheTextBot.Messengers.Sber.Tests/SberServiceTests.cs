@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoFixture;
 using FillInTheTextBot.Services.BackgroundTasks;
-using FillInTheTextBot.Services.Caching;
+using GranSteL.Helpers.Redis;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
