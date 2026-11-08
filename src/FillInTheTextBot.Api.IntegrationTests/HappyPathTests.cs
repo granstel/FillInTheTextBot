@@ -199,6 +199,80 @@ public class HappyPathTests
             !button.GetProperty("hide").GetBoolean()), Is.True);
     }
 
+    [TestCase("marusia")]
+    [TestCase("sber")]
+    public async Task Webhook_CollectsWordsAndReturnsCompletedStory(string platform)
+    {
+        var path = GetWebhookPath(platform);
+        var sessionId = Guid.NewGuid().ToString("N");
+        var userId = Guid.NewGuid().ToString("N");
+        var messageId = 0;
+        object? userState = null;
+        object? sessionState = null;
+
+        var welcome = await SayAsync(string.Empty, isNewSession: true);
+        Assert.That(welcome, Does.StartWith("Добро пожаловать!"));
+
+        if (platform == "sber")
+        {
+            var database = _factory.Services.GetRequiredService<IDatabase>();
+            RedisKey cacheKey = $"integration-json:sber:session:{userId}";
+            RedisValue storedSession = default;
+            for (var attempt = 0; attempt < 50; attempt++)
+            {
+                storedSession = await database.StringGetAsync(cacheKey);
+                if (storedSession.HasValue)
+                {
+                    break;
+                }
+
+                await Task.Delay(100);
+            }
+
+            Assert.That(Guid.TryParseExact(storedSession.ToString(), "N", out _), Is.True,
+                "Сессия должна сохраняться в Redis как строка без JSON-кавычек");
+        }
+
+        foreach (var word in new[] { "опоздала в больницу", "3", "медведь", "два", "зайцы", "лес" })
+        {
+            var answer = await SayAsync(word);
+            Assert.That(answer, Is.Not.Empty.And.Not.StartWith("Не совсем понимаю"));
+        }
+
+        var story = await SayAsync("5");
+        Assert.That(story, Does.Contain("Вот что получилось").And.Contain("медведь").And.Contain("зайцы"));
+
+        async Task<string?> SayAsync(string command, bool isNewSession = false)
+        {
+            if (platform == "marusia")
+            {
+                var payload = CreatePayload(isNewSession, command, sessionId, userState, userId, sessionState);
+                using var body = await PostAsync(path, payload);
+                var root = body.RootElement;
+                userState = root.GetProperty("user_state_update").Clone();
+                sessionState = root.GetProperty("session_state").Clone();
+                return root.GetProperty("response").GetProperty("text").GetString();
+            }
+
+            var sberPayload = new
+            {
+                messageName = "MESSAGE_TO_SKILL",
+                messageId = ++messageId,
+                sessionId,
+                uuid = new { sub = userId, userChannel = "test-channel" },
+                payload = new
+                {
+                    new_session = isNewSession,
+                    device = new { platformType = "test-platform" },
+                    message = new { original_text = command }
+                }
+            };
+            using var sberBody = await PostAsync(path, sberPayload);
+            return sberBody.RootElement.GetProperty("payload").GetProperty("items")[0]
+                .GetProperty("bubble").GetProperty("text").GetString();
+        }
+    }
+
     [Test]
     public async Task SberWebhook_RoundTripsDeviceAndUpdatesLegacyRedisState()
     {
@@ -286,7 +360,8 @@ public class HappyPathTests
         return text;
     }
 
-    private static object CreatePayload(bool isNewSession, string command, string? sessionId = null, object? userState = null)
+    private static object CreatePayload(bool isNewSession, string command, string? sessionId = null,
+        object? userState = null, string? userId = null, object? sessionState = null)
     {
         return new
         {
@@ -296,7 +371,7 @@ public class HappyPathTests
                 message_id = 0,
                 session_id = sessionId ?? Guid.NewGuid().ToString("N"),
                 skill_id = "integration-tests",
-                user_id = Guid.NewGuid().ToString("N"),
+                user_id = userId ?? Guid.NewGuid().ToString("N"),
                 @new = isNewSession
             },
             request = new
@@ -307,7 +382,7 @@ public class HappyPathTests
                 markup = new { dangerous_context = false },
                 nlu = new { tokens = Array.Empty<string>(), entities = Array.Empty<object>() }
             },
-            state = new { session = new { }, user = userState ?? new { } },
+            state = new { session = sessionState ?? new { }, user = userState ?? new { } },
             version = "1.0"
         };
     }
