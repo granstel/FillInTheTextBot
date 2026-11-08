@@ -1,4 +1,5 @@
 using FillInTheTextBot.Api.Middleware;
+using FillInTheTextBot.Messengers.Yandex;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -97,6 +98,7 @@ namespace FillInTheTextBot.Api
             app.UseEndpoints(e =>
             {
                 e.MapControllers();
+                e.MapYandexWebhook();
                 e.MapPrometheusScrapingEndpoint();
                 e.MapHealthChecks(HealthPath);
             });
