@@ -7,6 +7,7 @@ using System;
 using System.Linq;
 using FillInTheTextBot.Api.DI;
 using FillInTheTextBot.Api.Health;
+using FillInTheTextBot.Api.Serialization;
 using Microsoft.Extensions.Hosting;
 
 namespace FillInTheTextBot.Api
@@ -34,7 +35,7 @@ namespace FillInTheTextBot.Api
 
             services
                 .AddMvc()
-                .AddNewtonsoftJson();
+                .AddJsonOptions(options => VoiceWebhookJson.Configure(options.JsonSerializerOptions));
 
             services.AddTelemetry(appConfiguration.Tracing);
 

@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
 namespace FillInTheTextBot.Messengers
 {
@@ -21,7 +20,6 @@ namespace FillInTheTextBot.Messengers
         private readonly MessengerConfiguration _configuration;
         
         protected readonly ILogger Log;
-        protected JsonSerializerSettings SerializerSettings;
 
         private const string TokenParameter = "token";
 
@@ -61,7 +59,7 @@ namespace FillInTheTextBot.Messengers
 
             var response = await _messengerService.ProcessIncomingAsync(input);
 
-            return Json(response, SerializerSettings);
+            return Json(response);
         }
 
         [HttpPut("{token?}")]
