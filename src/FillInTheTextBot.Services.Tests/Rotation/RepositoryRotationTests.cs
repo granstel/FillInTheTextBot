@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using FillInTheTextBot.Services.Rotation;
-using Newtonsoft.Json.Linq;
+using System.Text.Json.Nodes;
 using NUnit.Framework;
 
 namespace FillInTheTextBot.Services.Tests.Rotation
@@ -67,7 +67,7 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         {
             var mismatches = _fileNames
                 .Where(fileName => !fileName.Contains("_usersays_"))
-                .Select(fileName => (fileName, name: ReadIntent(fileName).Value<string>("name")))
+                .Select(fileName => (fileName, name: ReadIntent(fileName)["name"]?.GetValue<string>()))
                 .Where(intent =>
                 {
                     var isStoryName = StoryCatalog.TryParseIntentName(intent.name, out var number, out var part);
@@ -119,16 +119,16 @@ namespace FillInTheTextBot.Services.Tests.Rotation
         {
             var intent = ReadIntent(fileName);
 
-            var events = intent["events"]?.Select(e => e.Value<string>("name")).ToArray() ?? [];
+            var events = intent["events"]?.AsArray().Select(e => e?["name"]?.GetValue<string>()).ToArray() ?? [];
 
             return events;
         }
 
-        private JObject ReadIntent(string fileName)
+        private JsonObject ReadIntent(string fileName)
         {
             var json = File.ReadAllText(Path.Combine(_intentsPath, fileName));
 
-            var intent = JObject.Parse(json);
+            var intent = JsonNode.Parse(json).AsObject();
 
             return intent;
         }
