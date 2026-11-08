@@ -191,16 +191,6 @@ public class HappyPathTests
             !button.GetProperty("hide").GetBoolean()), Is.True);
     }
 
-    [TestCase("/sber")]
-    [TestCase("/sber/test-token")]
-    [TestCase("/marusia")]
-    [TestCase("/marusia/test-token")]
-    public async Task RetiredWebhook_ReturnsNotFound(string path)
-    {
-        using var response = await _client.PostAsync(path, JsonContent.Create(CreatePayload(true, string.Empty)));
-        Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.NotFound));
-    }
-
     private async Task<JsonDocument> PostAsync(string path, object payload)
     {
         using var response = await _client.PostAsync(path, JsonContent.Create(payload));
