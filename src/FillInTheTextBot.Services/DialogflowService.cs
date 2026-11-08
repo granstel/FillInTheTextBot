@@ -51,7 +51,6 @@ namespace FillInTheTextBot.Services
             _eventResolvers = new Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>>
             {
                 {InternalModels.Source.Yandex, DefaultWelcomeEventResolve},
-                {InternalModels.Source.Sber, DefaultWelcomeEventResolve},
                 {InternalModels.Source.Marusia, DefaultWelcomeEventResolve}
             };
         }
