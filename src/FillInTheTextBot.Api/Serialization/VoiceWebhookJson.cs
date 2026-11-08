@@ -37,6 +37,17 @@ namespace FillInTheTextBot.Api.Serialization
                 return;
             }
 
+            var inputSessionType = typeInfo.Type == typeof(YandexModels.Session) ? typeof(YandexModels.Input.InputSession)
+                : typeInfo.Type == typeof(MarusiaModels.Session) ? typeof(MarusiaModels.Input.InputSession)
+                : null;
+            if (inputSessionType is not null)
+            {
+                typeInfo.PolymorphismOptions = new JsonPolymorphismOptions
+                {
+                    DerivedTypes = { new JsonDerivedType(inputSessionType) }
+                };
+            }
+
             // The voice SDKs declare their wire names using Newtonsoft attributes.
             var contract = typeInfo.Type.GetCustomAttribute<Newtonsoft.Json.JsonObjectAttribute>();
             var useSnakeCase = contract?.NamingStrategyType == typeof(SnakeCaseNamingStrategy);

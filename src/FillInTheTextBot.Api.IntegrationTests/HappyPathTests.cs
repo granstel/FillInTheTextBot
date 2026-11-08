@@ -154,12 +154,15 @@ public class HappyPathTests
         using var body = await PostAsync(path, payload);
         var root = body.RootElement;
         var answer = root.GetProperty("response");
+        var session = root.GetProperty("session");
         var state = root.GetProperty("user_state_update");
 
         Assert.Multiple(() =>
         {
             Assert.That(root.GetProperty("version").GetString(), Is.EqualTo("1.0"));
-            Assert.That(root.GetProperty("session").GetProperty("session_id").GetString(), Is.EqualTo(sessionId));
+            Assert.That(session.GetProperty("session_id").GetString(), Is.EqualTo(sessionId));
+            Assert.That(session.GetProperty("skill_id").GetString(), Is.EqualTo("integration-tests"));
+            Assert.That(session.GetProperty("new").GetBoolean(), Is.False);
             Assert.That(answer.GetProperty("text").GetString(), Is.EqualTo("pong"));
             Assert.That(answer.GetProperty("end_session").GetBoolean(), Is.False);
             Assert.That(answer.TryGetProperty("tts", out _), Is.False);
