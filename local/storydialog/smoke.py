@@ -224,9 +224,9 @@ def run():
         while True:
             try:
                 text = input("> ")
-            except EOFError:
+            except (EOFError, KeyboardInterrupt):
                 return
-            if text == "/quit":
+            if text.strip() == "/quit":
                 return
             print(session.say(text)["response"]["text"])
     elif mode == "emulator":
