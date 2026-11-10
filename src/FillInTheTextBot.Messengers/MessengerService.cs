@@ -31,7 +31,7 @@ namespace FillInTheTextBot.Messengers
 
         public virtual async Task<TOutput> ProcessIncomingAsync(TInput input)
         {
-            // Ошибка и команда не сбрасывают прогресс ротации
+            // Ошибка и команда сохраняют прогресс и выбранный движок.
             var requestTextIndex = 0;
             Request request = null;
             Response response;
@@ -84,6 +84,8 @@ namespace FillInTheTextBot.Messengers
             }
 
             response.RotationState ??= request?.RotationState;
+            response.ConversationProvider ??= request?.ConversationProvider;
+            response.ConversationState ??= request?.ConversationState;
 
             using (Tracing.Trace(operationName: "AfterAsync"))
             {

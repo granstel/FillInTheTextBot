@@ -47,12 +47,27 @@ namespace FillInTheTextBot.Messengers.Yandex.Tests
             Assert.That(result.UserHash, Is.EqualTo(source.Session.UserId));
             Assert.That(result.Text, Is.EqualTo(source.Request.OriginalUtterance));
             Assert.That(result.SessionId, Is.EqualTo(source.Session.SessionId));
+            Assert.That(result.MessageId, Is.EqualTo(source.Session.MessageId));
             Assert.That(result.NewSession, Is.EqualTo(source.Session.New));
             Assert.That(result.Language, Is.EqualTo(source.Meta.Locale));
             Assert.That(source.Meta.Interfaces.Screen != null, Is.EqualTo(result.HasScreen));
             Assert.That(source.Meta.ClientId, Is.EqualTo(result.ClientId));
             Assert.That(result.Source, Is.EqualTo(Source.Yandex));
             Assert.That(result.Appeal, Is.EqualTo(Appeal.NoOfficial));
+        }
+
+        [Test]
+        public void ToRequest_ZeroMessageId_Preserved()
+        {
+            var source = new InputModel { Session = new InputSession { MessageId = 0 } };
+
+            Assert.That(source.ToRequest().MessageId, Is.EqualTo(0L));
+        }
+
+        [Test]
+        public void ToRequest_NoSession_MessageIdIsNull()
+        {
+            Assert.That(new InputModel().ToRequest().MessageId, Is.Null);
         }
 
         [Test]

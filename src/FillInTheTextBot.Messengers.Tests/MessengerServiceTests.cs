@@ -294,6 +294,71 @@ namespace FillInTheTextBot.Messengers.Tests
             Assert.That(_target.AfterInput.Response.RotationState, Is.EqualTo(_target.BeforeResult.RotationState));
         }
 
+        [Test]
+        public async Task ProcessIncomingAsync_ConversationChangesStateAndThrows_LatestStateKept()
+        {
+            _target.BeforeResult = new Request
+            {
+                ConversationProvider = "StoryDialog",
+                ConversationState = "initial-state"
+            };
+            _conversationService
+                .Setup(s => s.GetResponseAsync(It.IsAny<Request>()))
+                .Callback<Request>(r => r.ConversationState = "pending-state")
+                .ThrowsAsync(new InvalidOperationException("synthetic failure"));
+
+            await _target.ProcessIncomingAsync(new InputFixture());
+
+            Assert.That(_target.AfterInput.Response.ConversationProvider, Is.EqualTo("StoryDialog"));
+            Assert.That(_target.AfterInput.Response.ConversationState, Is.EqualTo("pending-state"));
+        }
+
+        [Test]
+        public async Task ProcessIncomingAsync_ConversationReturnsNewMetadata_ResponseStateKept()
+        {
+            _target.BeforeResult = new Request
+            {
+                ConversationProvider = "request-provider",
+                ConversationState = "request-state"
+            };
+            _conversationService
+                .Setup(s => s.GetResponseAsync(It.IsAny<Request>()))
+                .ReturnsAsync(new Response
+                {
+                    ConversationProvider = "response-provider",
+                    ConversationState = "response-state"
+                });
+
+            await _target.ProcessIncomingAsync(new InputFixture());
+
+            Assert.That(_target.AfterInput.Response.ConversationProvider, Is.EqualTo("response-provider"));
+            Assert.That(_target.AfterInput.Response.ConversationState, Is.EqualTo("response-state"));
+        }
+
+        [Test]
+        public async Task ProcessIncomingAsync_ConversationClearsRequestMetadata_DoesNotRestoreOldState()
+        {
+            _target.BeforeResult = new Request
+            {
+                ConversationProvider = "StoryDialog",
+                ConversationState = "old-session-state",
+                NewSession = true
+            };
+            _conversationService
+                .Setup(s => s.GetResponseAsync(It.IsAny<Request>()))
+                .Callback<Request>(r =>
+                {
+                    r.ConversationProvider = null;
+                    r.ConversationState = null;
+                })
+                .ReturnsAsync(new Response());
+
+            await _target.ProcessIncomingAsync(new InputFixture());
+
+            Assert.That(_target.AfterInput.Response.ConversationProvider, Is.Null);
+            Assert.That(_target.AfterInput.Response.ConversationState, Is.Null);
+        }
+
         #endregion Обработка ошибок
 
         #region Не реализованные по умолчанию методы

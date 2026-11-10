@@ -20,6 +20,7 @@ namespace FillInTheTextBot.Messengers.Yandex
             destinaton.UserHash = source.Session?.UserId;
             destinaton.Text = source.Request?.OriginalUtterance;
             destinaton.SessionId = source.Session?.SessionId;
+            destinaton.MessageId = source.Session?.MessageId;
             destinaton.NewSession = source.Session?.New;
             destinaton.Language = source.Meta?.Locale;
             destinaton.HasScreen = source.Meta?.Interfaces?.Screen != null;

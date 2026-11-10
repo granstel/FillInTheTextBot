@@ -41,6 +41,12 @@ namespace FillInTheTextBot.Messengers.Yandex
 
             request.RotationState = rotationState;
 
+            input.TryGetFromSessionState(Models.Response.ConversationProviderStorageKey, out string conversationProvider);
+            input.TryGetFromSessionState(Models.Response.ConversationStateStorageKey, out string conversationState);
+
+            request.ConversationProvider = conversationProvider;
+            request.ConversationState = conversationState;
+
             input.TryGetFromSessionState(Models.Response.ScopeStorageKey, out string scopeKey);
 
             request.ScopeKey = scopeKey;
@@ -79,6 +85,16 @@ namespace FillInTheTextBot.Messengers.Yandex
             output.AddToApplicationState(Models.Response.RotationStateStorageKey, response.RotationState);
 
             output.AddToSessionState(Models.Response.ScopeStorageKey, response.ScopeKey);
+
+            if (response.ConversationProvider != null)
+            {
+                output.AddToSessionState(Models.Response.ConversationProviderStorageKey, response.ConversationProvider);
+            }
+
+            if (response.ConversationState != null)
+            {
+                output.AddToSessionState(Models.Response.ConversationStateStorageKey, response.ConversationState);
+            }
 
             output.AddAnalyticsEvent(Models.Response.ScopeStorageKey, new Dictionary<string, object> { { Models.Response.ScopeStorageKey, response.ScopeKey } });
 

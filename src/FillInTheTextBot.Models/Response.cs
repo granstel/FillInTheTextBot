@@ -7,6 +7,8 @@ namespace FillInTheTextBot.Models
         public static string NextTextIndexStorageKey => nameof(NextTextIndex).ToUpper();
         public static string ScopeStorageKey => nameof(ScopeKey).ToUpper();
         public static string RotationStateStorageKey => nameof(RotationState).ToUpper();
+        public static string ConversationProviderStorageKey => nameof(ConversationProvider).ToUpperInvariant();
+        public static string ConversationStateStorageKey => nameof(ConversationState).ToUpperInvariant();
 
         public string ChatHash { get; set; }
 
@@ -23,6 +25,10 @@ namespace FillInTheTextBot.Models
         public int NextTextIndex { get; set; }
 
         public string RotationState { get; set; }
+
+        public string ConversationProvider { get; set; }
+
+        public string ConversationState { get; set; }
 
         public string ScopeKey { get; set; }
     }

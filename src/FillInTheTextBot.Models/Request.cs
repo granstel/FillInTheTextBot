@@ -23,6 +23,8 @@ namespace FillInTheTextBot.Models
 
         public string SessionId { get; set; }
 
+        public long? MessageId { get; set; }
+
         public bool? NewSession { get; set; }
 
         public List<Context> RequiredContexts { get; set; }
@@ -36,6 +38,10 @@ namespace FillInTheTextBot.Models
         public int NextTextIndex { get; set; }
 
         public string RotationState { get; set; }
+
+        public string ConversationProvider { get; set; }
+
+        public string ConversationState { get; set; }
 
         public string ScopeKey { get; set; }
 
