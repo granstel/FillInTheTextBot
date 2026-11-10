@@ -4,11 +4,16 @@
 Checkout `StoryDialog` по умолчанию находится рядом с `FillInTheTextBot`.
 Команды выполняются из корня FillInTheTextBot; Go, .NET и Python на хосте не нужны.
 
-Пользовательские фразы настраиваются в профиле StoryDialog (`nlu/example.json`).
-После подготовки профиля задайте `STORYDIALOG_UNDERSTANDING_FILE=/app/nlu/model.json`
-в окружении Compose и пересоздайте стенд. Профиль применяется к новым разговорам;
+Обучающие фразы настраиваются в StoryDialog (`nlu/train.example.json`).
+После обучения задайте `STORYDIALOG_UNDERSTANDING_FILE=/app/nlu/model-encoder.json`
+и `STORYDIALOG_ENCODER_ENDPOINT=http://encoder:8080` в окружении Compose,
+затем поднимите стенд с `--profile learned`. Профиль применяется к новым разговорам;
 без настройки сохраняются встроенные правила. Команда подготовки описана в
 `StoryDialog/docs/understanding.md`.
+
+При включённом обученном профиле проверка новых формулировок:
+`docker compose -f local/storydialog/compose.yaml --profile checks run --build --rm --no-deps smoke learned`.
+Обычный `smoke` проверяет режим встроенных правил.
 
 ```sh
 docker compose -f local/storydialog/compose.yaml up --build -d

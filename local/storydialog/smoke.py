@@ -203,6 +203,25 @@ def text_understanding():
     print("PASS portable text understanding, clarification, verbatim answers and NLU replay")
 
 
+def learned_understanding():
+    session = Session()
+    session.say(new=True)
+    repeated = session.say("Пожалуйста, произнеси вопрос ещё один раз")
+    includes(repeated, "прилагательное", "unseen paraphrase repeats question")
+    require("Уточните" not in repeated["response"]["text"], "unseen paraphrase classified")
+    require(post(BASE, session.last_request) == repeated, "learned replay")
+    guarded = session.say("отмени историю")
+    includes(guarded, "Уточните", "learned cancellation needs confirmation")
+    includes(session.say("/repeat"), "прилагательное", "guard preserved slot")
+    literal = "Робот сказал: отмени историю!"
+    session.say("/answer " + literal)
+    session.say("/answer термос")
+    result = session.say("Ну, пусть будет двадцать один")
+    require(literal in result["response"]["text"], "literal creative answer preserved")
+    includes(result, "ровно 21", "numeric slot bypasses classifier")
+    print("PASS learned unseen paraphrase, confirmation, literal answer, numeric slot and replay")
+
+
 def unavailable_and_switch(active):
     old_state = copy.deepcopy(active.state["session"])
     failed = post(UNAVAILABLE, active.payload("тест недоступности"))
@@ -249,13 +268,23 @@ def run():
             if text.strip() == "/quit":
                 return
             print(session.say(text)["response"]["text"])
+    elif mode == "learned-unavailable":
+        session = Session()
+        first = session.say(new=True)
+        failed = session.say("Пожалуйста, произнеси вопрос ещё один раз")
+        includes(failed, "временно недоступен", "encoder outage is explicit")
+        require(story_state(first)["v"] == story_state(failed)["v"], "encoder outage preserves version")
+        includes(session.say("/repeat"), "прилагательное", "explicit command works without encoder")
+        print("PASS encoder outage preserves state without fallback")
+    elif mode == "learned":
+        learned_understanding()
     elif mode == "emulator":
         hello = Session().say(new=True)
         includes(hello, "LOCAL_DIALOGFLOW_EMULATOR", "Dialogflow emulator selected")
         require(hello["session_state"][PROVIDER] == "Dialogflow", "Dialogflow provider pin")
         print("PASS Dialogflow emulator")
     else:
-        require(mode == "smoke", "supported modes: smoke, chat, emulator")
+        require(mode == "smoke", "supported modes: smoke, chat, emulator, learned, learned-unavailable")
         require(os.environ.get("CONVERSATION_PROVIDER", "StoryDialog") == "StoryDialog", "full smoke requires StoryDialog")
         wait_ready(DF)
         wait_ready(UNAVAILABLE)

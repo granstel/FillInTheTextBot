@@ -87,6 +87,7 @@ services:
       ADMIN_ADDR: ":8080"
       CATALOG_DIR: /app/stories
       UNDERSTANDING_FILE: ${STORYDIALOG_UNDERSTANDING_FILE:-}
+      ENCODER_ENDPOINT: ${STORYDIALOG_ENCODER_ENDPOINT:-}
       MONGODB_URI: mongodb://mongo:27017
       MONGODB_DATABASE: fitb_storydialog_local
       SESSION_TTL: 1h
@@ -100,6 +101,23 @@ services:
       interval: 2s
       timeout: 3s
       retries: 30
+
+  encoder:
+    profiles: [learned]
+    image: storydialog-nlu-encoder:local
+    build:
+      context: ${STORYDIALOG_SOURCE:-../../../StoryDialog}/nlu/training
+      dockerfile: Dockerfile.encoder
+    read_only: true
+    tmpfs: [/tmp]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health', timeout=2)"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    environment:
+      PYTHONDONTWRITEBYTECODE: "1"
+      HF_HUB_OFFLINE: "1"
 
   dialogflow-emulator:
     build:
