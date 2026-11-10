@@ -18,4 +18,5 @@
   <Project Path="FillInTheTextBot.Api/FillInTheTextBot.Api.csproj" />
   <Project Path="FillInTheTextBot.Models/FillInTheTextBot.Models.csproj" />
   <Project Path="FillInTheTextBot.Services/FillInTheTextBot.Services.csproj" />
+  <Project Path="StoryDialog.Contracts/StoryDialog.Contracts.csproj" />
 </Solution>

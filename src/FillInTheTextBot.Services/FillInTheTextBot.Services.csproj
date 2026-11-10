@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Cloud.Dialogflow.V2" />
+    <PackageReference Include="Grpc.Net.Client" />
     <PackageReference Include="GranSteL.Helpers.Redis" />
     <PackageReference Include="GranSteL.Tools.ScopeSelector" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
@@ -15,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
+    <ProjectReference Include="..\StoryDialog.Contracts\StoryDialog.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,61 @@
+syntax = "proto3";
+package storydialog.v1;
+option go_package = "storydialog.local/storydialog/api/storydialog/v1;storydialogv1";
+option csharp_namespace = "StoryDialog.Contracts.V1";
+
+service Dialog {
+  rpc ListStories(ListStoriesRequest) returns (ListStoriesResponse);
+  rpc Turn(TurnRequest) returns (Reply);
+  rpc GetConversation(GetConversationRequest) returns (Reply);
+}
+
+message ListStoriesRequest {}
+message StorySummary {
+  string id = 1;
+  string title = 2;
+  string language = 3;
+  string version = 4;
+  uint32 question_count = 5;
+  uint32 part_count = 6;
+}
+message ListStoriesResponse { repeated StorySummary stories = 1; }
+message StartStory { string story_id = 1; }
+enum Command {
+  COMMAND_UNSPECIFIED = 0;
+  COMMAND_HELP = 1;
+  COMMAND_REPEAT = 2;
+  COMMAND_CANCEL = 3;
+  COMMAND_RESTART = 4;
+  COMMAND_CONTINUE = 5;
+}
+enum Status {
+  STATUS_UNSPECIFIED = 0;
+  STATUS_COLLECTING = 1;
+  STATUS_AWAITING_CONTINUE = 2;
+  STATUS_COMPLETED = 3;
+  STATUS_CANCELLED = 4;
+}
+message TurnRequest {
+  string conversation_id = 1;
+  string request_id = 2;
+  uint64 expected_version = 3;
+  oneof input {
+    StartStory start = 4;
+    string text = 5;
+    Command command = 6;
+  }
+}
+message GetConversationRequest { string conversation_id = 1; }
+message Reply {
+  string conversation_id = 1;
+  uint64 version = 2;
+  string text = 3;
+  Status status = 4;
+  string story_id = 5;
+  string story_version = 6;
+  string slot_name = 7;
+  uint32 question_index = 8;
+  uint32 question_count = 9;
+  uint32 part_index = 10;
+  uint32 part_count = 11;
+}

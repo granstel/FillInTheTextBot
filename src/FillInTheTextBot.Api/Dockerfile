@@ -14,6 +14,7 @@ COPY ["Directory.Packages.props", "./"]
 COPY ["FillInTheTextBot.Api/FillInTheTextBot.Api.csproj", "FillInTheTextBot.Api/"]
 COPY ["FillInTheTextBot.Services/FillInTheTextBot.Services.csproj", "FillInTheTextBot.Services/"]
 COPY ["FillInTheTextBot.Models/FillInTheTextBot.Models.csproj", "FillInTheTextBot.Models/"]
+COPY ["StoryDialog.Contracts/StoryDialog.Contracts.csproj", "StoryDialog.Contracts/"]
 COPY ["FillInTheTextBot.Messengers/FillInTheTextBot.Messengers.csproj", "FillInTheTextBot.Messengers/"]
 COPY ["FillInTheTextBot.Messengers.Yandex/FillInTheTextBot.Messengers.Yandex.csproj", "FillInTheTextBot.Messengers.Yandex/"]
 RUN dotnet restore "FillInTheTextBot.Api/FillInTheTextBot.Api.csproj"
