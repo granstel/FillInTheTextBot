@@ -1,0 +1,8 @@
+FROM python:3.14-alpine
+WORKDIR /checks
+COPY --from=storydialog-source /api/storydialog/v1/dialog.proto /contracts/owner.proto
+COPY src/StoryDialog.Contracts/Protos/dialog.proto /contracts/export.proto
+RUN cmp /contracts/owner.proto /contracts/export.proto
+COPY local/storydialog/smoke.py ./smoke.py
+USER 65532:65532
+ENTRYPOINT ["python", "-u", "smoke.py"]

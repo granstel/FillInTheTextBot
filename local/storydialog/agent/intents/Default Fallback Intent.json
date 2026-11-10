@@ -1,0 +1,4 @@
+{
+  "name": "Default Fallback Intent",
+  "responses": [{ "messages": [{ "type": "0", "speech": ["LOCAL_DIALOGFLOW_EMULATOR_FALLBACK"] }] }]
+}

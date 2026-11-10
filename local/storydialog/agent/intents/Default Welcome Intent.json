@@ -1,0 +1,5 @@
+{
+  "name": "Default Welcome Intent",
+  "events": [{ "name": "Welcome" }, { "name": "EasyWelcome" }],
+  "responses": [{ "messages": [{ "type": "0", "speech": ["LOCAL_DIALOGFLOW_EMULATOR"] }] }]
+}

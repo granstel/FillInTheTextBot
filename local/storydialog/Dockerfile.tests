@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0.403
+WORKDIR /src
+COPY . .
+COPY --from=dialogflow-fixtures /FillInTheTextBot-eu/intents /Dialogflow/FillInTheTextBot-eu/intents
+COPY --from=dialogflow-fixtures /rotation.json /Dialogflow/rotation.json
+RUN dotnet restore FillInTheTextBot.Services.Tests/FillInTheTextBot.Services.Tests.csproj \
+    && dotnet restore FillInTheTextBot.Messengers.Tests/FillInTheTextBot.Messengers.Tests.csproj \
+    && dotnet restore FillInTheTextBot.Messengers.Yandex.Tests/FillInTheTextBot.Messengers.Yandex.Tests.csproj \
+    && dotnet restore FillInTheTextBot.Api.IntegrationTests/FillInTheTextBot.Api.IntegrationTests.csproj
+CMD ["sh", "-c", "dotnet test FillInTheTextBot.Services.Tests/FillInTheTextBot.Services.Tests.csproj -c Release --no-restore --nologo && dotnet test FillInTheTextBot.Messengers.Tests/FillInTheTextBot.Messengers.Tests.csproj -c Release --no-restore --nologo && dotnet test FillInTheTextBot.Messengers.Yandex.Tests/FillInTheTextBot.Messengers.Yandex.Tests.csproj -c Release --no-restore --nologo && dotnet test FillInTheTextBot.Api.IntegrationTests/FillInTheTextBot.Api.IntegrationTests.csproj -c Release --no-restore --nologo --filter FullyQualifiedName~ConversationProviderRegistrationTests"]

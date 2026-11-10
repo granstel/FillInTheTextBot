@@ -1,0 +1,171 @@
+name: fitb-storydialog-local
+
+x-fitb: &fitb
+  image: fitb-storydialog-local:dev
+  build:
+    context: ../../src
+    dockerfile: FillInTheTextBot.Api/Dockerfile
+  init: true
+  environment: &fitb-environment
+    ASPNETCORE_ENVIRONMENT: Production
+    ASPNETCORE_HTTP_PORTS: "80"
+    AppConfiguration__Conversation__Provider: ${CONVERSATION_PROVIDER:-StoryDialog}
+    AppConfiguration__StoryDialog__Endpoint: http://storydialog:50051
+    AppConfiguration__StoryDialog__ApiKey: ""
+    AppConfiguration__StoryDialog__DefaultStoryId: moon-picnic
+    AppConfiguration__StoryDialog__TimeoutMilliseconds: "1500"
+    AppConfiguration__Dialogflow__0__ScopeId: emulator
+    AppConfiguration__Dialogflow__0__ProjectId: local-synthetic
+    AppConfiguration__Dialogflow__0__JsonPath: ""
+    AppConfiguration__Dialogflow__0__Region: ""
+    AppConfiguration__Dialogflow__0__EmulatorEndpoint: dialogflow-emulator:8195
+    AppConfiguration__Dialogflow__0__LogQuery: "false"
+    AppConfiguration__Redis__ConnectionString: redis:6379
+    AppConfiguration__Redis__KeyPrefix: fitb-storydialog-local
+    AppConfiguration__Rotation__Enabled: "false"
+    AppConfiguration__Rotation__StoriesUrl: ""
+    AppConfiguration__Rotation__RulesUrl: ""
+    AppConfiguration__Rotation__GitHubToken: ""
+    AppConfiguration__Tracing__Enabled: "false"
+    AppConfiguration__HttpLog__Enabled: "false"
+    AppConfiguration__Shutdown__DrainDelaySeconds: "0"
+    Logging__LogLevel__Default: Warning
+  volumes:
+    - ./config/appsettings.Yandex.json:/app/appsettings.Yandex.json:ro
+  depends_on:
+    mongo:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+    storydialog:
+      condition: service_healthy
+    dialogflow-emulator:
+      condition: service_started
+
+services:
+  unit:
+    profiles: [unit]
+    build:
+      context: ../../src
+      dockerfile: ../local/storydialog/Dockerfile.tests
+      additional_contexts:
+        dialogflow-fixtures: ../../Dialogflow
+    network_mode: none
+
+  mongo:
+    image: mongo@sha256:e0ce8c35124d4a9f9785532d1f268f39e9728ffa1cb38f46fa482436424c4bd3
+    command: ["mongod", "--bind_ip_all", "--wiredTigerCacheSizeGB", "0.25", "--quiet"]
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "quit(db.runCommand({ping:1}).ok ? 0 : 1)"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  redis:
+    image: redis:8.10.3-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  storydialog:
+    build:
+      context: .
+      dockerfile: Dockerfile.storydialog
+      additional_contexts:
+        storydialog-source: ${STORYDIALOG_SOURCE:-../../../StoryDialog}
+    init: true
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    environment:
+      GRPC_ADDR: ":50051"
+      ADMIN_ADDR: ":8080"
+      CATALOG_DIR: /app/stories
+      MONGODB_URI: mongodb://mongo:27017
+      MONGODB_DATABASE: fitb_storydialog_local
+      SESSION_TTL: 1h
+    depends_on:
+      mongo:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "/app/storydialog", "list", "--endpoint", "localhost:50051", "--timeout", "2s"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  dialogflow-emulator:
+    build:
+      context: ../../src
+      dockerfile: Dialogflow.Emulator/Dockerfile
+    environment:
+      AGENT_PATH: /app/agent
+      Kestrel__Endpoints__Grpc__Url: http://0.0.0.0:8195
+      Kestrel__Endpoints__Grpc__Protocols: Http2
+      Logging__LogLevel__Default: Warning
+    volumes:
+      - ./agent:/app/agent:ro
+
+  fitb:
+    <<: *fitb
+
+  gateway:
+    image: nginx:stable-alpine@sha256:583b7f2fce1cdb8da5ad5c39ebd3c33b98b87d493190e548bdee1fa8c619c311
+    entrypoint: ["nginx", "-g", "daemon off;"]
+    user: nginx
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    tmpfs: [/tmp]
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks: [default, ingress]
+    ports:
+      - "127.0.0.1:18082:8080"
+    depends_on:
+      - fitb
+
+  fitb-dialogflow:
+    <<: *fitb
+    profiles: [checks]
+    environment:
+      <<: *fitb-environment
+      AppConfiguration__Conversation__Provider: Dialogflow
+
+  fitb-unavailable:
+    <<: *fitb
+    profiles: [checks]
+    environment:
+      <<: *fitb-environment
+      AppConfiguration__Conversation__Provider: StoryDialog
+      AppConfiguration__StoryDialog__Endpoint: http://storydialog:50052
+
+  smoke:
+    profiles: [checks]
+    build:
+      context: ../..
+      dockerfile: local/storydialog/Dockerfile.smoke
+      additional_contexts:
+        storydialog-source: ${STORYDIALOG_SOURCE:-../../../StoryDialog}
+    environment:
+      BASE_URL: http://gateway:8080
+      DIALOGFLOW_URL: http://fitb-dialogflow
+      UNAVAILABLE_URL: http://fitb-unavailable
+      CONVERSATION_PROVIDER: ${CONVERSATION_PROVIDER:-StoryDialog}
+    depends_on:
+      - gateway
+      - fitb-dialogflow
+      - fitb-unavailable
+
+networks:
+  default:
+    internal: true
+  ingress:
+    driver: bridge
+
+volumes:
+  mongo-data:

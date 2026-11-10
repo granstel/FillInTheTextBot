@@ -1,5 +1,7 @@
 # Занимательные истории голосовых помощников
 
+[Локальный стенд StoryDialog и проверки через Docker](local/storydialog/README.md).
+
 Чтобы начать, скажите:
 - "Давай сыграем в занимательные истории" ([Алисе из Яндекса](https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal)) или нажмите сюда -> [![alice](https://dialogs.s3.yandex.net/badges/v1-term1.svg)](https://alice.ya.ru/s/a557c651-94d8-48fd-9c43-d2b644615050)
 
