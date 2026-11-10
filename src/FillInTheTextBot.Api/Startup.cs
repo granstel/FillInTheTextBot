@@ -46,9 +46,12 @@ namespace FillInTheTextBot.Api
 
             AddHealth(services);
 
-            services.AddInternalServices();
-            services.AddExternalServices();
-            services.AddRotation(appConfiguration.Rotation);
+            services.AddInternalServices(appConfiguration.Conversation);
+            services.AddExternalServices(appConfiguration.Conversation);
+            if (appConfiguration.Conversation.Provider == ConversationProvider.Dialogflow)
+            {
+                services.AddRotation(appConfiguration.Rotation);
+            }
         }
 
         private static void AddHealth(IServiceCollection services)

@@ -15,10 +15,13 @@ namespace FillInTheTextBot.Api.DI
 {
     internal static class ExternalServicesRegistration
     {
-        internal static void AddExternalServices(this IServiceCollection services)
+        internal static void AddExternalServices(this IServiceCollection services, ConversationConfiguration configuration)
         {
-            services.AddSingleton(RegisterSessionsClientScopes);
-            services.AddSingleton(RegisterContextsClientScopes);
+            if (configuration.Provider == ConversationProvider.Dialogflow)
+            {
+                services.AddSingleton(RegisterSessionsClientScopes);
+                services.AddSingleton(RegisterContextsClientScopes);
+            }
             services.AddSingleton(RegisterRedisClient);
             services.AddSingleton(RegisterCacheService);
         }
