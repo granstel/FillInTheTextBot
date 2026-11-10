@@ -47,19 +47,10 @@ public sealed class StoryDialogConversationService : IConversationService
             return invalidState;
         }
 
-        var words = (request.Text ?? "").Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
-        var text = string.Join(" ", words);
-        var normalized = text.ToLowerInvariant();
         var startId = state.Version == 0 ? state.StoryId : null;
-        if (normalized.StartsWith("/story ", StringComparison.Ordinal))
+        if (state.Version == 0 && request.Text?.StartsWith("/story ", StringComparison.Ordinal) == true)
         {
-            startId = text.Substring(7).Trim();
-        }
-        else if (normalized == "другая история" && state.StoryOrder.Length > 0)
-        {
-            var currentIndex = Array.IndexOf(state.StoryOrder, state.StoryId);
-            var nextIndex = (currentIndex + 1) % state.StoryOrder.Length;
-            startId = state.StoryOrder[nextIndex];
+            startId = request.Text.Substring(7).Trim();
         }
 
         if (startId != null && !StoryDialogState.IsStoryId(startId))
@@ -116,10 +107,6 @@ public sealed class StoryDialogConversationService : IConversationService
             if (startId != null)
             {
                 turn.Start = new StartStory { StoryId = startId };
-            }
-            else if (GetCommand(normalized, state.Status) is { } command)
-            {
-                turn.Command = command;
             }
             else
             {
@@ -206,22 +193,6 @@ public sealed class StoryDialogConversationService : IConversationService
             var reply = await _client.TurnAsync(request, cancellationToken);
             return reply;
         }
-    }
-
-    private static Command? GetCommand(string text, DialogStatus status)
-    {
-        Command? command = text switch
-        {
-            "/help" or "покажи помощь" or "помоги мне" => Command.Help,
-            "/repeat" or "повтори вопрос" or "повтори результат" or "повтори последний ответ" => Command.Repeat,
-            "повторить" when status == DialogStatus.Completed => Command.Repeat,
-            "/cancel" or "отмени историю" or "отменить историю" => Command.Cancel,
-            "/restart" or "начни заново" or "начать заново" => Command.Restart,
-            "/continue" or "продолжи историю" or "продолжить историю" or "следующая часть" => Command.Continue,
-            "продолжить" or "да" when status == DialogStatus.AwaitingContinue => Command.Continue,
-            _ => null
-        };
-        return command;
     }
 
     private static Button[] Buttons(params string[] texts)

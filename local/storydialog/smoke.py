@@ -183,6 +183,26 @@ def multipart_commands():
     print("PASS multipart, commands, carry")
 
 
+def text_understanding():
+    session = Session()
+    session.say(new=True)
+    repeated = session.say("Повтори вопрос, пожалуйста")
+    includes(repeated, "прилагательное", "polite repeat keeps first slot")
+    replay = post(BASE, session.last_request)
+    require(replay == repeated, "NLU result replays exactly")
+    uncertain = session.say("повтори")
+    includes(uncertain, "Уточните", "ambiguous text requests clarification")
+    includes(session.say("/repeat"), "прилагательное", "clarification does not consume slot")
+    creative = "Стоп,  не отменяй историю!"
+    includes(session.say(creative), "предмет", "creative response does not cancel")
+    includes(session.say("термос"), "бутербродов", "creative response fills one slot")
+    result = session.say("Ну, пусть будет двадцать один")
+    require(creative in result["response"]["text"], "creative text preserved exactly")
+    includes(result, "ровно 21", "numeric wrapper parsed in numeric slot")
+    includes(session.say("/story robot-courier"), "имя", "active story selection handled by backend")
+    print("PASS portable text understanding, clarification, verbatim answers and NLU replay")
+
+
 def unavailable_and_switch(active):
     old_state = copy.deepcopy(active.state["session"])
     failed = post(UNAVAILABLE, active.payload("тест недоступности"))
@@ -243,6 +263,7 @@ def run():
         active = ordinary_story()
         print("PASS ordinary story, exact HTTP replay, conflicting replay, resync, legacy state")
         multipart_commands()
+        text_understanding()
         unavailable_and_switch(active)
         time.sleep(1)
         require((df_calls(BASE), df_calls(UNAVAILABLE)) == calls, "no Dialogflow fallback calls")

@@ -64,7 +64,7 @@ public class StoryDialogConversationServiceTests
 
         _client.NextReply = Reply(DialogStatus.Collecting, "Второй вопрос?");
         var next = await _service.GetResponseAsync(Request(2, part.ConversationState, continuation));
-        Assert.That(_client.Turns.Last().Command, Is.EqualTo(Command.Continue));
+        Assert.That(_client.Turns.Last().Text, Is.EqualTo(continuation));
 
         _client.NextReply = Reply(DialogStatus.Completed, "Готовая история.");
         var completed = await _service.GetResponseAsync(Request(3, next.ConversationState, "другое слово"));
@@ -78,7 +78,7 @@ public class StoryDialogConversationServiceTests
         });
 
         await _service.GetResponseAsync(Request(4, completed.ConversationState, "Повторить"));
-        Assert.That(_client.Turns.Last().Command, Is.EqualTo(Command.Repeat));
+        Assert.That(_client.Turns.Last().Text, Is.EqualTo("Повторить"));
     }
 
     [Test]
@@ -289,22 +289,22 @@ public class StoryDialogConversationServiceTests
         Assert.That(_client.Turns, Is.Empty);
     }
 
-    [TestCase("/help", Command.Help)]
-    [TestCase("покажи помощь", Command.Help)]
-    [TestCase("/repeat", Command.Repeat)]
-    [TestCase("Повтори вопрос", Command.Repeat)]
-    [TestCase("/cancel", Command.Cancel)]
-    [TestCase("отмени историю", Command.Cancel)]
-    [TestCase("/restart", Command.Restart)]
-    [TestCase("начать заново", Command.Restart)]
-    [TestCase("/continue", Command.Continue)]
-    [TestCase("следующая часть", Command.Continue)]
-    public async Task ExplicitCommand_IsMapped(string text, Command command)
+    [TestCase("/help")]
+    [TestCase("покажи помощь")]
+    [TestCase("/repeat")]
+    [TestCase("Повтори вопрос")]
+    [TestCase("/cancel")]
+    [TestCase("отмени историю")]
+    [TestCase("/restart")]
+    [TestCase("начать заново")]
+    [TestCase("/continue")]
+    [TestCase("следующая часть")]
+    public async Task Commands_AreForwardedAsUnmodifiedText(string text)
     {
         var start = await Welcome();
         await _service.GetResponseAsync(Request(1, start.ConversationState, text));
-        Assert.That(_client.Turns.Last().InputCase, Is.EqualTo(TurnRequest.InputOneofCase.Command));
-        Assert.That(_client.Turns.Last().Command, Is.EqualTo(command));
+        Assert.That(_client.Turns.Last().InputCase, Is.EqualTo(TurnRequest.InputOneofCase.Text));
+        Assert.That(_client.Turns.Last().Text, Is.EqualTo(text));
     }
 
     [TestCase("стоп")]
@@ -319,19 +319,17 @@ public class StoryDialogConversationServiceTests
         Assert.That(_client.Turns.Last().Text, Is.EqualTo(text));
     }
 
-    [Test]
-    public async Task NextStory_UsesPinnedOrderEvenWhenCatalogOrderChanges()
+    [TestCase("Другая история")]
+    [TestCase("/story robot-courier")]
+    [TestCase("Повтори вопрос, пожалуйста")]
+    [TestCase("Стоп,  не отменяй историю!")]
+    public async Task ActiveStory_TextIsForwardedWithoutCatalogLookup(string text)
     {
         var start = await Welcome();
-        var first = _client.Catalog.Stories[0];
-        _client.Catalog.Stories.RemoveAt(0);
-        _client.Catalog.Stories.Add(first);
-        var next = await _service.GetResponseAsync(Request(1, start.ConversationState, "Другая история"));
-        Assert.That(_client.Turns.Last().Start.StoryId, Is.EqualTo("robot-courier"));
-        Assert.That(next.Text, Does.Contain("Робот-курьер"));
-
-        await _service.GetResponseAsync(Request(2, next.ConversationState, "Другая история"));
-        Assert.That(_client.Turns.Last().Start.StoryId, Is.EqualTo("moon-picnic"));
+        await _service.GetResponseAsync(Request(1, start.ConversationState, text));
+        Assert.That(_client.Turns.Last().InputCase, Is.EqualTo(TurnRequest.InputOneofCase.Text));
+        Assert.That(_client.Turns.Last().Text, Is.EqualTo(text));
+        Assert.That(_client.ListCalls, Is.EqualTo(1));
     }
 
     [Test]
