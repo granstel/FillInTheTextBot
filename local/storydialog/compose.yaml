@@ -86,9 +86,12 @@ services:
       GRPC_ADDR: ":50051"
       ADMIN_ADDR: ":8080"
       CATALOG_DIR: /app/stories
+      UNDERSTANDING_FILE: ${STORYDIALOG_UNDERSTANDING_FILE:-}
       MONGODB_URI: mongodb://mongo:27017
       MONGODB_DATABASE: fitb_storydialog_local
       SESSION_TTL: 1h
+    volumes:
+      - ${STORYDIALOG_SOURCE:-../../../StoryDialog}/nlu:/app/nlu:ro
     depends_on:
       mongo:
         condition: service_healthy
