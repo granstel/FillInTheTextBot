@@ -1,0 +1,232 @@
+{
+  "id": "d11f852a-c948-4c5c-99c8-7ced13b49ed6",
+  "parentId": "26cab6ca-bcb9-4d77-a486-cecd0124b93b",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "56-FiveStars-text",
+  "auto": true,
+  "contexts": [
+    "text-56"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-56",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "9e3c653e-d335-4a81-ba25-5750d594f852",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "«Пять звёзд».",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e3e06ff2-1ce4-4a60-837f-26c49ef4c591",
+          "name": "adjM",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$adjM",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови прилагательное, отвечающее на вопрос «какой?»."
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи прилагательное на вопрос «какой?»."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "9d16da04-53ba-4aa1-b001-87895f162433",
+          "name": "name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$name",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови мужское имя."
+            },
+            {
+              "lang": "ru",
+              "value": "Скажи какое-нибудь мужское имя."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "22e1e840-f6dd-4182-add0-db089a58dc97",
+          "name": "exclamation",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$exclamation",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Что ты восклицаешь от удивления?"
+            },
+            {
+              "lang": "ru",
+              "value": "Как ты восклицаешь, когда удивляешься?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "aeb90865-0d2e-43d2-a85c-fb7f40a40833",
+          "name": "food",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$food",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любимое блюдо."
+            },
+            {
+              "lang": "ru",
+              "value": "Какое у тебя любимое блюдо?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0648ee85-4247-4854-b613-5b38d5c45807",
+          "name": "activity",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$activity",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И напоследок: продолжи фразу «Мне лень…»."
+            },
+            {
+              "lang": "ru",
+              "value": "И последнее: закончи фразу «Мне лень…»."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Ты запускаешь новую игру. Перед тобой город у океана: пальмы, неон, набережная.\r\nУ тротуара тормозит $adjM кабриолет. За рулём — парень в тёмных очках. Над ним надпись: «Ваш напарник».\r\n— Я $name. Прыгай! Доставим чемодан — и город наш!\r\nОн пересаживается, уступая тебе руль. Вы мчитесь вдоль пляжа, взлетаете с трамплина и приземляетесь на палубу яхты.\r\nНа экране вспыхивают пять звёзд. Над вами зависают вертолёты!\r\n— $exclamation! — кричишь ты. Напарник прижимает чемодан к груди.\r\nИз каюты выходит бабушка в халате.\r\n— Наконец-то мой заказ! Пять звёзд вам поставила авансом.\r\nОна открывает чемодан. Внутри — $food.\r\nС вертолётов спускаются курьеры. Один привёз чай, другой — салфетки.\r\n— Теперь все в сборе! Кто поможет по хозяйству?\r\nНа экране: «Финальная миссия. Задание: $activity».\r\nНиже мигает: «Это задание ещё никто не прошёл».\r\nКнопка «Пропустить» недоступна. Бабушка всё предусмотрела.\r\nВот это приключение! Сочиним ещё?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-56"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
