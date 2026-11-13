@@ -1,0 +1,132 @@
+[
+  {
+    "id": "2ec6e6cc-02ac-404c-becf-21f2b2b0d7e5",
+    "data": [
+      {
+        "text": "пять звёзд",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8ae37571-8194-4478-83aa-4ba180c63407",
+    "data": [
+      {
+        "text": "история пять звёзд",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d0d26c14-170e-4ac2-9e12-02fee94fded7",
+    "data": [
+      {
+        "text": "сочини пять звёзд",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "376cc6bb-7df2-42aa-82db-2ec442480ca5",
+    "data": [
+      {
+        "text": "история про компьютерную игру",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f04e289a-b2ff-45ad-a494-e20f9e276a9c",
+    "data": [
+      {
+        "text": "сочини историю про игру",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "00886bff-0256-4feb-908b-97fe214a2d24",
+    "data": [
+      {
+        "text": "про видеоигру",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a5f2391e-8570-47d5-902b-bb5d6303f8ed",
+    "data": [
+      {
+        "text": "про гта",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4ccb0254-e95c-4d18-b8fc-ac5e3793ff0b",
+    "data": [
+      {
+        "text": "история про гта шесть",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e108f5ee-60cb-4d1b-9409-2a1f030c428b",
+    "data": [
+      {
+        "text": "доставка на яхту",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "df6cd45f-4192-4e20-8142-06794cd8f150",
+    "data": [
+      {
+        "text": "приключение в компьютерной игре",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

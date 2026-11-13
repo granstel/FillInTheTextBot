@@ -24,7 +24,8 @@
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
-          "outputDialogContexts": []
+          "outputDialogContexts": [],
+          "value": "text-56"
         },
         {
           "id": "780483dc-0757-4276-87e6-c1b2797b02cb",
