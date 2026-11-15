@@ -7,7 +7,7 @@ WORKDIR /app
 ENV ASPNETCORE_HTTP_PORTS=80
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:10.0.403 AS build
+FROM mcr.microsoft.com/dotnet/sdk:11.0.100 AS build
 WORKDIR /src
 # Central Package Management: без этого файла версии пакетов не заданы и restore падает
 COPY ["Directory.Packages.props", "./"]
