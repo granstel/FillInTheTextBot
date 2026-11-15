@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:10.0.14 AS base
 WORKDIR /app
 EXPOSE 8080
 
-FROM mcr.microsoft.com/dotnet/sdk:10.0.403 AS build
+FROM mcr.microsoft.com/dotnet/sdk:11.0.100 AS build
 WORKDIR /src
 COPY ["Directory.Packages.props", "./"]
 COPY ["Dialogflow.Emulator/Dialogflow.Emulator.csproj", "Dialogflow.Emulator/"]
