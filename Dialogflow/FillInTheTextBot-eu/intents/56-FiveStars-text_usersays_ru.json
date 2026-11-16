@@ -1,0 +1,752 @@
+[
+  {
+    "id": "9c0666af-7afb-4fd7-b2f4-8f8866bf5ead",
+    "data": [
+      {
+        "text": "розовый",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a955d8ad-d97d-4323-83b0-30097baaa260",
+    "data": [
+      {
+        "text": "огромный",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "518e3a1a-c233-47d3-8ed1-1bbbff47d880",
+    "data": [
+      {
+        "text": "крошечный",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "58af6adc-e4fd-417b-8b88-c5c5ef750c7b",
+    "data": [
+      {
+        "text": "блестящий",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0e13a919-877c-4877-9d23-b8247d6a8a5f",
+    "data": [
+      {
+        "text": "полосатый",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0dee638f-55ab-4de4-95c0-8167b133e567",
+    "data": [
+      {
+        "text": "пушистый",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e37ceb3f-e97b-4c78-bd30-f429f3b10702",
+    "data": [
+      {
+        "text": "золотой",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9c4bfa8e-7ba0-4e02-9844-c107e4f7ee41",
+    "data": [
+      {
+        "text": "квадратный",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d9ed1baa-1e14-473a-b2fa-48e6238dbd86",
+    "data": [
+      {
+        "text": "летающий",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "02678252-03b8-4c16-856b-3e87c9673fb4",
+    "data": [
+      {
+        "text": "сонный",
+        "meta": "@sys.any",
+        "alias": "adjM",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "88e2522b-1b87-4b6d-916e-9f5b81064ada",
+    "data": [
+      {
+        "text": "Антон",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fb006602-2796-4f20-bd1b-19b25791ffeb",
+    "data": [
+      {
+        "text": "Саша",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2f7b292b-1c6e-43c1-9e73-0e52d0eaef5a",
+    "data": [
+      {
+        "text": "Дима",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "aa4cec78-a2b5-440a-95b5-d0e32fbf3863",
+    "data": [
+      {
+        "text": "Лёша",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ecfc0f6b-564e-4b80-ba54-16f4d7632cda",
+    "data": [
+      {
+        "text": "Миша",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c16201b6-3f4a-4fde-8068-38e1df337a9a",
+    "data": [
+      {
+        "text": "Лев",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ab89579e-18ae-4fd0-b7e0-e7ee20d3ccfa",
+    "data": [
+      {
+        "text": "Женя",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "10c6c667-9d33-4f83-9c00-79bfbc50b1d2",
+    "data": [
+      {
+        "text": "Ваня",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2dadc84b-c99d-427f-96af-008a40f981f5",
+    "data": [
+      {
+        "text": "Петя",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8936a5b7-014a-4381-96c3-903d0e3a3d30",
+    "data": [
+      {
+        "text": "Максим",
+        "meta": "@sys.any",
+        "alias": "name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "38ca5f92-5eee-462d-b6b3-b2f7f9a14ff0",
+    "data": [
+      {
+        "text": "Ого",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "eb6716e3-aacb-4f21-99e3-8cff34417756",
+    "data": [
+      {
+        "text": "Вот это да",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e3cfb94a-a123-4d0c-98b8-f7b600b05484",
+    "data": [
+      {
+        "text": "Ничего себе",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "592592c0-7b35-4cfe-90c1-2ea66b6f0ced",
+    "data": [
+      {
+        "text": "Мамочки",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e95472d0-5eea-44c1-b12c-b11025a46885",
+    "data": [
+      {
+        "text": "Ух ты",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "193be078-533a-446d-9c1f-693feac9cde6",
+    "data": [
+      {
+        "text": "Ничегошеньки себе",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f7c4ba1a-cdb6-4b72-8de0-3b31b2f8ad0a",
+    "data": [
+      {
+        "text": "Невероятно",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1fe283e0-e65c-433d-baf3-9c850175b3a6",
+    "data": [
+      {
+        "text": "Не может быть",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0ca1792d-efcc-4a4b-a5d5-007e332f7601",
+    "data": [
+      {
+        "text": "Вот это номер",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "02bbb112-c289-44c9-942a-4e3401df67f8",
+    "data": [
+      {
+        "text": "Ёлки-палки",
+        "meta": "@sys.any",
+        "alias": "exclamation",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "116e3ae6-ca45-4e3a-8e33-8cf5dac47d78",
+    "data": [
+      {
+        "text": "пицца",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "02c4ac1b-bb8b-4050-9101-3cf07266f737",
+    "data": [
+      {
+        "text": "пельмени",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1e9839e2-daed-4303-bebd-ce0dd7294092",
+    "data": [
+      {
+        "text": "жареная картошка",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9ee92ff6-a36c-4467-a593-0d546e867fbb",
+    "data": [
+      {
+        "text": "мороженое",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "9859456a-cc1d-49dd-9fd8-7029d4fc0f30",
+    "data": [
+      {
+        "text": "борщ",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "0173d839-49ce-45a7-b270-35e422fdae33",
+    "data": [
+      {
+        "text": "блины",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "6557c2ae-ff5b-47a0-9c52-c7cdba52bfbe",
+    "data": [
+      {
+        "text": "макароны с сыром",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "61787482-4f01-4849-8d1f-5f2f8988d1dc",
+    "data": [
+      {
+        "text": "гречневая каша",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "e3b86d8c-3d2a-4026-8cd6-d0736b7ea157",
+    "data": [
+      {
+        "text": "омлет",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "4a917013-2168-4fff-9361-2341300f41e2",
+    "data": [
+      {
+        "text": "салат",
+        "meta": "@sys.any",
+        "alias": "food",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "363b32b6-53a0-40ce-81fa-e03e837dca05",
+    "data": [
+      {
+        "text": "мыть посуду",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7ae0e830-b315-48a1-9b6b-a16c05a38499",
+    "data": [
+      {
+        "text": "делать уроки",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "05be1618-0957-49c8-b4ec-7106970ed9e1",
+    "data": [
+      {
+        "text": "рано вставать",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "87ce8496-7c7e-4b83-aae7-40d490d45e56",
+    "data": [
+      {
+        "text": "убираться",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d0fe29ae-e981-435c-bf06-147f99da861a",
+    "data": [
+      {
+        "text": "выносить мусор",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "83a33b64-6a3a-467a-ac50-a29e23eca3f5",
+    "data": [
+      {
+        "text": "мыть полы",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c266e0e3-161a-40c8-9ceb-edc47005af36",
+    "data": [
+      {
+        "text": "чистить картошку",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "89faeed3-2aa0-44c2-8937-cfc619d2a521",
+    "data": [
+      {
+        "text": "заправлять кровать",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8fe093fc-f287-43d1-b054-7d91d29edc96",
+    "data": [
+      {
+        "text": "поливать цветы",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "82a4e50a-3a43-4650-9a61-e4346218d8ad",
+    "data": [
+      {
+        "text": "пылесосить",
+        "meta": "@sys.any",
+        "alias": "activity",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

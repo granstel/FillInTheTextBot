@@ -3,17 +3,17 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup Label="Microsoft">
-    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.14" />
-    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="11.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="11.0.0" />
   </ItemGroup>
   <ItemGroup Label="Логирование">
     <PackageVersion Include="NLog.Web.AspNetCore" Version="6.2.2" />
   </ItemGroup>
   <ItemGroup Label="Телеметрия">
-    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.20.1" />
-    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.20.1" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.20.2" />
-    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.20.2" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.21.0" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.21.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.21.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.21.0" />
     <!-- Экспортёр Prometheus у OpenTelemetry до сих пор выходит только в prerelease -->
     <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.20.1-beta.1" />
   </ItemGroup>
@@ -29,8 +29,8 @@
   </ItemGroup>
   <ItemGroup Label="Тесты">
     <PackageVersion Include="AutoFixture" Version="4.18.1" />
-    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.14" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.15" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.12.0" />
     <PackageVersion Include="Testcontainers" Version="4.16.0" />
     <PackageVersion Include="Moq" Version="4.21.0" />
     <PackageVersion Include="nunit" Version="5.0.0" />
