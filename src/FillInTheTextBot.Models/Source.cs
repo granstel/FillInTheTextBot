@@ -7,6 +7,7 @@ namespace FillInTheTextBot.Models
     {
         Default,
         Yandex,
+        // Старые ключи ещё встречаются в payload Dialogflow.
         Sber,
         Marusia
     }

@@ -14,10 +14,8 @@ COPY ["Directory.Packages.props", "./"]
 COPY ["FillInTheTextBot.Api/FillInTheTextBot.Api.csproj", "FillInTheTextBot.Api/"]
 COPY ["FillInTheTextBot.Services/FillInTheTextBot.Services.csproj", "FillInTheTextBot.Services/"]
 COPY ["FillInTheTextBot.Models/FillInTheTextBot.Models.csproj", "FillInTheTextBot.Models/"]
-COPY ["FillInTheTextBot.Messengers.Sber/FillInTheTextBot.Messengers.Sber.csproj", "FillInTheTextBot.Messengers.Sber/"]
 COPY ["FillInTheTextBot.Messengers/FillInTheTextBot.Messengers.csproj", "FillInTheTextBot.Messengers/"]
 COPY ["FillInTheTextBot.Messengers.Yandex/FillInTheTextBot.Messengers.Yandex.csproj", "FillInTheTextBot.Messengers.Yandex/"]
-COPY ["FillInTheTextBot.Messengers.Marusia/FillInTheTextBot.Messengers.Marusia.csproj", "FillInTheTextBot.Messengers.Marusia/"]
 RUN dotnet restore "FillInTheTextBot.Api/FillInTheTextBot.Api.csproj"
 COPY . .
 WORKDIR "/src/FillInTheTextBot.Api"
