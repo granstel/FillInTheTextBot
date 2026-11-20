@@ -51,7 +51,7 @@ services:
       - ./config/appsettings.Yandex.json:/app/appsettings.Yandex.json:ro
 
   k6:
-    image: grafana/k6:2.3.0
+    image: grafana/k6:2.4.0
     depends_on:
       - fillinthetextbot
     environment:
