@@ -22,7 +22,7 @@
     <PackageVersion Include="Grpc.AspNetCore" Version="2.85.0" />
     <PackageVersion Include="GranSteL.Helpers.Redis" Version="2.0.0" />
     <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
-    <PackageVersion Include="StackExchange.Redis" Version="3.4.31" />
+    <PackageVersion Include="StackExchange.Redis" Version="3.4.35" />
   </ItemGroup>
   <ItemGroup Label="Модели голосовых площадок">
     <PackageVersion Include="MailRu.Marusia.Models" Version="2.0.0" />
