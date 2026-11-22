@@ -21,11 +21,12 @@ public static class YandexWebhookEndpoint
 
     public static void MapYandexEndpoints(this IEndpointRouteBuilder endpoints)
     {
-        var json = endpoints.ServiceProvider.GetRequiredService<IOptions<JsonOptions>>().Value.SerializerOptions;
+        var serializerOptions = endpoints.ServiceProvider
+            .GetRequiredService<IOptions<JsonOptions>>().Value.SerializerOptions;
 
         endpoints.MapGet("Yandex", IResult (HttpRequest request, YandexConfiguration configuration) =>
             string.IsNullOrEmpty(configuration.IncomingToken)
-                ? Results.Json($"{DateTime.Now:F} {GetWebhookUrl(request)}", json)
+                ? Results.Json($"{DateTime.Now:F} {GetWebhookUrl(request)}", serializerOptions)
                 : Results.NotFound());
 
         endpoints.MapPost(WebhookRoute, async Task<IResult> (
@@ -45,7 +46,7 @@ public static class YandexWebhookEndpoint
             InputModel input = null;
             try
             {
-                input = await ReadInputAsync(request, encoding, json);
+                input = await ReadInputAsync(request, encoding, serializerOptions);
                 if (input is null)
                 {
                     log.LogError("A non-empty request body is required.");
@@ -57,19 +58,19 @@ public static class YandexWebhookEndpoint
             }
 
             var response = await service.ProcessIncomingAsync(input);
-            return Results.Json(response, json);
+            return Results.Json(response, serializerOptions);
         });
 
         endpoints.MapPut(WebhookRoute, async Task<IResult> (
             HttpRequest request, IYandexService service, YandexConfiguration configuration) =>
             HasValidToken(request, configuration)
-                ? Results.Json(await service.SetWebhookAsync(GetWebhookUrl(request)), json)
+                ? Results.Json(await service.SetWebhookAsync(GetWebhookUrl(request)), serializerOptions)
                 : Results.NotFound());
 
         endpoints.MapDelete(WebhookRoute, async Task<IResult> (
             HttpRequest request, IYandexService service, YandexConfiguration configuration) =>
             HasValidToken(request, configuration)
-                ? Results.Json(await service.DeleteWebhookAsync(), json)
+                ? Results.Json(await service.DeleteWebhookAsync(), serializerOptions)
                 : Results.NotFound());
     }
 
