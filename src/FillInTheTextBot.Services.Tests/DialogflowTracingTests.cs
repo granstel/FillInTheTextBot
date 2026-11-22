@@ -8,7 +8,6 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.Dialogflow.V2;
 using GranSteL.Tools.ScopeSelector;
 using Grpc.Core;
-using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using NUnit.Framework;
 
@@ -58,7 +57,7 @@ namespace FillInTheTextBot.Services.Tests
             var scope = new ScopeContext("test-scope", false);
             scope.TryAddParameter(nameof(DialogflowConfiguration.ProjectId), "tracing-test-project");
             var selector = new ScopesSelector<ContextsClient>(new[] { scope }, _ => client.Object);
-            var target = new DialogflowService(NullLogger<DialogflowService>.Instance, null, selector);
+            var target = new DialogflowService(null, selector);
 
 
             var operation = target.SetContextAsync("test-session", "test-scope", "test-context");
@@ -160,7 +159,7 @@ namespace FillInTheTextBot.Services.Tests
             scope.TryAddParameter(nameof(DialogflowConfiguration.ProjectId), "tracing-test-project");
             scope.TryAddParameter(nameof(DialogflowConfiguration.LanguageCode), "en");
             var selector = new ScopesSelector<SessionsClient>(new[] { scope }, _ => client.Object);
-            var target = new DialogflowService(NullLogger<DialogflowService>.Instance, selector, null);
+            var target = new DialogflowService(selector, null);
 
 
             var operation = target.GetResponseAsync(requestText, sessionId, "test-scope");

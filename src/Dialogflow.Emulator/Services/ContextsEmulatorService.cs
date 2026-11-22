@@ -18,7 +18,7 @@ public sealed class ContextsEmulatorService : Contexts.ContextsBase
 
     public override Task<Context> CreateContext(CreateContextRequest request, ServerCallContext context)
     {
-        _log.LogInformation("CreateContext '{ContextName}'", request.Context?.Name);
+        _log.LogInformation("CreateContext");
 
         return Task.FromResult(request.Context ?? new Context());
     }

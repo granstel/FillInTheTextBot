@@ -6,10 +6,8 @@ using Google.Cloud.Dialogflow.V2;
 using Grpc.Core;
 using System.Linq;
 using FillInTheTextBot.Services.Configuration;
-using FillInTheTextBot.Services.Extensions;
 using GranSteL.Tools.ScopeSelector;
 using InternalModels = FillInTheTextBot.Models;
-using Microsoft.Extensions.Logging;
 using FillInTheTextBot.Services.Mapping;
 
 namespace FillInTheTextBot.Services
@@ -32,19 +30,15 @@ namespace FillInTheTextBot.Services
             {ErrorCommand, ErrorEventName}
         };
 
-        private readonly ILogger<DialogflowService> _log;
-
         private readonly ScopesSelector<SessionsClient> _sessionsClientSelector;
         private readonly ScopesSelector<ContextsClient> _contextsClientSelector;
 
         private readonly Dictionary<InternalModels.Source, Func<InternalModels.Request, string, EventInput>> _eventResolvers;
 
         public DialogflowService(
-            ILogger<DialogflowService> log,
             ScopesSelector<SessionsClient> sessionsClientSelector,
             ScopesSelector<ContextsClient> contextsClientSelector)
         {
-            _log = log;
             _sessionsClientSelector = sessionsClientSelector;
             _contextsClientSelector = contextsClientSelector;
 
@@ -107,14 +101,8 @@ namespace FillInTheTextBot.Services
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.ProjectId), out string projectId);
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.LanguageCode), out string languageCode);
                 context.TryGetParameterValue(nameof(DialogflowConfiguration.Region), out string region);
-                context.TryGetParameterValue(nameof(DialogflowConfiguration.LogQuery), out string logQuery);
 
                 var intentRequest = CreateQuery(request, projectId, languageCode, region);
-
-                bool.TryParse(logQuery, out var isLogQuery);
-
-                if (isLogQuery)
-                    _log.LogTrace($"Request:{System.Environment.NewLine}{intentRequest.Serialize()}");
 
                 DetectIntentResponse intentResponse;
 
@@ -142,9 +130,6 @@ namespace FillInTheTextBot.Services
                         throw;
                     }
                 }
-
-                if (isLogQuery)
-                    _log.LogTrace($"Response:{System.Environment.NewLine}{intentResponse.Serialize()}");
 
                 var queryResult = intentResponse.QueryResult;
 

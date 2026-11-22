@@ -12,7 +12,6 @@
 
         public virtual string LanguageCode => "ru";
 
-        public bool LogQuery { get; set; }
 
         public bool DoNotUseForNewSessions { get; set; }
 

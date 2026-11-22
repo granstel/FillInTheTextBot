@@ -2,6 +2,7 @@
 using System.Linq;
 using FillInTheTextBot.Api.DI;
 using FillInTheTextBot.Api.Health;
+using FillInTheTextBot.Api.Logging;
 using FillInTheTextBot.Api.Middleware;
 using FillInTheTextBot.Messengers.Yandex;
 using FillInTheTextBot.Services;
@@ -12,24 +13,48 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using NLog.Web;
+using Microsoft.Extensions.Logging.Console;
 
 namespace FillInTheTextBot.Api;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static int Main(string[] args)
+    {
+        try
+        {
+            Run(args);
+            return 0;
+        }
+        catch (Exception exception) when (exception is not HostAbortedException)
+        {
+            AppConsoleFormatter.Write(Console.Out, LogLevel.Critical, nameof(Program),
+                "Application host failed", exception);
+            return 1;
+        }
+    }
+
+    private static void Run(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
         builder.Logging.ClearProviders();
-        builder.Host.UseNLog();
+        builder.Logging.AddConsole(options =>
+        {
+            options.FormatterName = AppConsoleFormatter.FormatterName;
+            options.LogToStandardErrorThreshold = LogLevel.None;
+        }).AddConsoleFormatter<AppConsoleFormatter, ConsoleFormatterOptions>();
 
         var services = builder.Services;
         var appConfiguration = builder.Configuration.GetSection(nameof(AppConfiguration)).Get<AppConfiguration>();
 
         services.AddYandex(builder.Configuration);
         services.AddTelemetry(appConfiguration.Tracing);
-        services.AddHttpLogging(options => options.LoggingFields = HttpLoggingFields.All);
+        services.AddHttpLogging(options =>
+        {
+            options.LoggingFields = HttpLoggingFields.RequestMethod | HttpLoggingFields.ResponseStatusCode |
+                HttpLoggingFields.Duration;
+            options.CombineLogs = true;
+        });
 
         services.AddAppConfiguration(appConfiguration);
         services.AddSingleton<ReadinessState>();

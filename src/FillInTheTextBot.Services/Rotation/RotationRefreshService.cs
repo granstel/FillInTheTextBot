@@ -108,9 +108,7 @@ namespace FillInTheTextBot.Services.Rotation
         {
             if (!RotationSnapshot.TryCreate(sources, out var snapshot, out var errors))
             {
-                var error = string.Join("; ", errors);
-
-                log.LogError("Rotation from {Origin} is invalid: {Errors}", origin, error);
+                log.LogError("Rotation from {Origin} is invalid ({ErrorCount} errors)", origin, errors.Count);
                 MetricsCollector.Increment("rotation_error", "invalid");
 
                 return false;
@@ -118,8 +116,8 @@ namespace FillInTheTextBot.Services.Rotation
 
             store.Apply(snapshot);
 
-            log.LogInformation("Rotation loaded from {Origin}: {StoriesCount} stories, rules ETag {RulesETag}",
-                origin, snapshot.Catalog.Numbers.Count, sources.RulesETag);
+            log.LogInformation("Rotation loaded from {Origin}: {StoriesCount} stories",
+                origin, snapshot.Catalog.Numbers.Count);
 
             return true;
         }

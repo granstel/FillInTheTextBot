@@ -53,7 +53,6 @@ public class HappyPathTests
             builder.UseSetting("AppConfiguration:Dialogflow:0:ScopeId", "emulator");
             builder.UseSetting("AppConfiguration:Dialogflow:0:ProjectId", "fillinthetextbot-test");
             builder.UseSetting("AppConfiguration:Dialogflow:0:EmulatorEndpoint", _emulator.Endpoint);
-            builder.UseSetting("AppConfiguration:Dialogflow:0:LogQuery", "true");
             builder.UseSetting("AppConfiguration:Redis:ConnectionString", redisConnectionString);
             builder.UseSetting("AppConfiguration:Redis:KeyPrefix", "integration-json:");
             builder.UseSetting("AppConfiguration:Tracing:Port", "0");

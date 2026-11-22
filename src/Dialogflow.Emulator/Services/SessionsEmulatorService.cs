@@ -67,7 +67,7 @@ public sealed class SessionsEmulatorService : Sessions.SessionsBase
 
         intent ??= _agentStorage.GetFallback();
 
-        _log.LogInformation("DetectIntent '{QueryText}' matched intent '{IntentName}'", queryText, intent?.Name);
+        _log.LogInformation("DetectIntent matched: {Matched}", intent is not null);
 
         var pending = GetRequiredSlots(intent);
 

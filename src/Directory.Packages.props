@@ -6,9 +6,6 @@
     <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="11.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="11.0.0" />
   </ItemGroup>
-  <ItemGroup Label="Логирование">
-    <PackageVersion Include="NLog.Web.AspNetCore" Version="6.3.0" />
-  </ItemGroup>
   <ItemGroup Label="Телеметрия">
     <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.21.0" />
     <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.21.0" />
