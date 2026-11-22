@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
+using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Dialogflow.V2;
 using GranSteL.Helpers.Redis;
@@ -49,19 +52,30 @@ namespace FillInTheTextBot.Api.DI
 
             var scopeContexts = GetScopesContexts(configuration);
 
-            var selector = new ScopesSelector<SessionsClient>(scopeContexts, CreateDialogflowSessionsClient);
+            var tracing = provider.GetRequiredService<TracingConfiguration>();
+            var adapter = tracing is { Enabled: true, DialogflowResponseTimingEnabled: true }
+                ? GrpcNetClientAdapter.Default.WithAdditionalOptions(options =>
+                {
+                    options.HttpHandler = new DialogflowResponseTimingHandler(options.HttpHandler ??
+                        new SocketsHttpHandler { EnableMultipleHttp2Connections = true });
+                    options.DisposeHttpClient = true;
+                })
+                : null;
+            var selector = new ScopesSelector<SessionsClient>(scopeContexts,
+                context => CreateDialogflowSessionsClient(context, adapter));
 
             return selector;
         }
 
-        private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context)
+        private static SessionsClient CreateDialogflowSessionsClient(ScopeContext context, GrpcAdapter adapter)
         {
             if (TryGetEmulatorEndpoint(context, out var emulatorEndpoint))
             {
                 var emulatorClientBuilder = new SessionsClientBuilder
                 {
                     Endpoint = emulatorEndpoint,
-                    ChannelCredentials = ChannelCredentials.Insecure
+                    ChannelCredentials = ChannelCredentials.Insecure,
+                    GrpcAdapter = adapter
                 };
 
                 return emulatorClientBuilder.Build();
@@ -75,7 +89,8 @@ namespace FillInTheTextBot.Api.DI
             var clientBuilder = new SessionsClientBuilder
             {
                 ChannelCredentials = credential.ToChannelCredentials(),
-                Endpoint = endpoint
+                Endpoint = endpoint,
+                GrpcAdapter = adapter
             };
 
             var client = clientBuilder.Build();
