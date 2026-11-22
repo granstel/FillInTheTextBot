@@ -17,7 +17,7 @@ public class ConversationProviderRegistrationTests
     public void DefaultProvider_RegistersDialogflowAndRotationWithoutLoadingCredentials()
     {
         var builder = CreateBuilder();
-        new Startup(builder.Configuration).ConfigureServices(builder.Services);
+        Program.ConfigureServices(builder.Services, builder.Configuration);
 
         using var host = builder.Build();
         using var scope = host.Services.CreateScope();
@@ -38,7 +38,7 @@ public class ConversationProviderRegistrationTests
     public void StoryDialog_ResolvesWithInvalidGoogleCredentialPathAndWithoutRotation()
     {
         var builder = CreateBuilder("StoryDialog");
-        new Startup(builder.Configuration).ConfigureServices(builder.Services);
+        Program.ConfigureServices(builder.Services, builder.Configuration);
 
         using var host = builder.Build();
         using var scope = host.Services.CreateScope();
@@ -61,7 +61,7 @@ public class ConversationProviderRegistrationTests
     {
         var builder = CreateBuilder(provider);
 
-        Assert.Throws<InvalidOperationException>(() => new Startup(builder.Configuration).ConfigureServices(builder.Services));
+        Assert.Throws<InvalidOperationException>(() => Program.ConfigureServices(builder.Services, builder.Configuration));
     }
 
     private static HostApplicationBuilder CreateBuilder(string? provider = null)

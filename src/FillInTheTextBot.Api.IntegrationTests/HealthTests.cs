@@ -42,7 +42,7 @@ public class HealthTests
     [Test]
     public async Task Health_Running_Healthy()
     {
-        var response = await _client.GetAsync(Startup.HealthPath);
+        var response = await _client.GetAsync("/health");
 
         Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
         Assert.That(await response.Content.ReadAsStringAsync(), Is.EqualTo("Healthy"));
@@ -54,7 +54,7 @@ public class HealthTests
         // Именно так делает GracefulShutdownService при получении сигнала остановки
         _factory.Services.GetRequiredService<ReadinessState>().BeginShutdown();
 
-        var response = await _client.GetAsync(Startup.HealthPath);
+        var response = await _client.GetAsync("/health");
 
         Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.ServiceUnavailable),
             "Пока приложение ещё принимает запросы, проверка здоровья должна уже краснеть");
