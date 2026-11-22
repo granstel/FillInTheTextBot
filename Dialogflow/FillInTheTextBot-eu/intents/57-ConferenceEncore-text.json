@@ -1,0 +1,209 @@
+{
+  "id": "a7dfdf5b-7867-4934-9b19-b82d0f4802bf",
+  "parentId": "7ce24e9e-46dc-47ea-9784-d25b1777fa0c",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "57-ConferenceEncore-text",
+  "auto": true,
+  "contexts": [
+    "text-57"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "saveToRepeat",
+      "affectedContexts": [
+        {
+          "name": "text-57",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "b9d0ab7e-7f8f-4cc8-9cd0-c2e5caec6f61",
+          "name": "text-name",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "«Доклад на бис».",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "0017400f-72c8-4a5f-af5c-c8ccd6bb08fd",
+          "name": "homeChore",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$homeChore",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Что ты меньше всего любишь делать по дому?"
+            },
+            {
+              "lang": "ru",
+              "value": "Какое дело по дому ты меньше всего любишь? Назови само действие."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "440f042b-df01-4f19-8574-da2b31fdabbe",
+          "name": "slideNumber",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$slideNumber",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови число от трёх до десяти."
+            },
+            {
+              "lang": "ru",
+              "value": "Выбери любое число от трёх до десяти."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "f6a05185-474f-4480-b6ba-e4dfcccbd288",
+          "name": "kitchenItem",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$kitchenItem",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "Назови любой предмет, который можно найти на кухне."
+            },
+            {
+              "lang": "ru",
+              "value": "Что можно найти на кухне? Назови один предмет."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "b532d798-5f55-492d-9e4f-c36c698773b9",
+          "name": "hitAdjective",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$hitAdjective",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "ru",
+              "value": "И последний вопрос. Скажи любое слово, которое отвечает на вопрос «какой?»."
+            },
+            {
+              "lang": "ru",
+              "value": "И напоследок назови любое прилагательное на вопрос «какой?»."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "2",
+          "platform": "telegram",
+          "title": "",
+          "replies": [
+            "Повтори пожалуйста"
+          ],
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "На конференции инженеров в залах шли доклады. В холле у входа — выставка изобретений и фоновая музыка.\r\nПосле доклада «Проблема века — $homeChore» выступала Вика. Взяла с трибуны пульт. Щёлкнула — слайд не дрогнул.\r\nОна жала кнопку и просила техника: «Следующий слайд, пожалуйста!» К слайду номер $slideNumber зал уже подсказывал хором.\r\nЗакончив, Вика случайно убрала пульт в сумочку. На стенде изобретателей речь превращали в песни. Вика сказала в микрофон «$kitchenItem», и программа спела это на четыре голоса. Вика дала разработчикам запись своего доклада.\r\nНа вечеринке в холле диджей объявил: «А теперь — $hitAdjective хит конференции!» Ударил бас, и Вика услышала свой голос: «Следующий слайд, пожалуйста!»\r\nВика полезла в сумочку за телефоном, чтобы снять видео, и задела кнопку пульта. Заиграл марш. Она достала пульт.\r\n— А я-то думал, почему днём в холле песни сами переключались! — рассмеялся техник. — А это вы взяли пульт от музыки!\r\nЗдорово! Сочиним ещё?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "Default": {
+              "Buttons": [
+                {
+                  "Text": "Да!",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Sber": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "IsQuickReply": true
+                }
+              ]
+            },
+            "Yandex": {
+              "Buttons": [
+                {
+                  "Text": "Оценить историю",
+                  "Url": "https://dialogs.yandex.ru/store/skills/12ef2083-sochinyal",
+                  "IsQuickReply": false
+                }
+              ]
+            },
+            "Marusia": {
+              "Buttons": [
+                {
+                  "Text": "Поблагодарить разработчиков",
+                  "Url": "https://vk.com/im?sel=-201360423",
+                  "IsQuickReply": false
+                }
+              ]
+            }
+          },
+          "textToSpeech": "",
+          "lang": "ru",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "text-57"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
