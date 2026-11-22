@@ -1,0 +1,60 @@
+{
+  "id": "7ce24e9e-46dc-47ea-9784-d25b1777fa0c",
+  "parentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "rootParentId": "d291c001-eaf2-4136-853f-cbd2ef4cf12a",
+  "name": "57-ConferenceEncore",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "GetText",
+      "affectedContexts": [
+        {
+          "name": "text-57",
+          "lifespan": 50
+        }
+      ],
+      "parameters": [
+        {
+          "id": "01fdf5b5-fdf9-48c7-9bc7-b753992ebd93",
+          "name": "textKey",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "text-57",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "ru",
+          "speech": [
+            "Отлично! Сочиняем",
+            "Здорово! Давай сочиним",
+            "Класс! Сейчас придумаем",
+            "Супер! Теперь сочиним"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

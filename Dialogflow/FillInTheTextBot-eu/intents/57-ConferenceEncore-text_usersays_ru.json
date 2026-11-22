@@ -1,0 +1,482 @@
+[
+  {
+    "id": "bc0f74a8-99bb-41ee-b65f-5e8d4a38b6c2",
+    "data": [
+      {
+        "text": "мыть посуду",
+        "meta": "@sys.any",
+        "alias": "homeChore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "2eef9823-cf12-4f4c-bab1-e212d3878d1c",
+    "data": [
+      {
+        "text": "пылесосить",
+        "meta": "@sys.any",
+        "alias": "homeChore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "fad0f9a9-9648-4a27-acf3-146d8aa9f380",
+    "data": [
+      {
+        "text": "гладить шторы",
+        "meta": "@sys.any",
+        "alias": "homeChore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "29d3b357-69c4-406c-9dc6-4dd94a6b9c8e",
+    "data": [
+      {
+        "text": "выносить мусор",
+        "meta": "@sys.any",
+        "alias": "homeChore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "a50f8e63-5383-456c-9e2d-edb932ae2806",
+    "data": [
+      {
+        "text": "мыть полы",
+        "meta": "@sys.any",
+        "alias": "homeChore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ae5932ba-af33-4136-93e7-36ee3472187b",
+    "data": [
+      {
+        "text": "разбирать шкаф",
+        "meta": "@sys.any",
+        "alias": "homeChore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "242502ac-c04e-4a55-87ab-5cb4058f791a",
+    "data": [
+      {
+        "text": "вытирать пыль",
+        "meta": "@sys.any",
+        "alias": "homeChore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "56fa3775-1c54-4784-92d7-500c61c05512",
+    "data": [
+      {
+        "text": "чистить плиту",
+        "meta": "@sys.any",
+        "alias": "homeChore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "551a0f2e-fdcd-4ac9-8e04-855894bef636",
+    "data": [
+      {
+        "text": "три",
+        "meta": "@sys.number",
+        "alias": "slideNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "804ebfb0-ae12-4208-85d3-6e50b3de3e40",
+    "data": [
+      {
+        "text": "четыре",
+        "meta": "@sys.number",
+        "alias": "slideNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "623660d6-f935-4c75-b4e1-e08d730c46a6",
+    "data": [
+      {
+        "text": "пять",
+        "meta": "@sys.number",
+        "alias": "slideNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7349e93f-df61-4247-ab93-1ed4be32c895",
+    "data": [
+      {
+        "text": "шесть",
+        "meta": "@sys.number",
+        "alias": "slideNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f4241652-fbdf-410e-be52-46ba5edd1cee",
+    "data": [
+      {
+        "text": "семь",
+        "meta": "@sys.number",
+        "alias": "slideNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "7cb50371-4461-4bf1-81a1-f15c7ba4d3dd",
+    "data": [
+      {
+        "text": "восемь",
+        "meta": "@sys.number",
+        "alias": "slideNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c20d26b4-5e9b-418a-87d5-f91c7988a961",
+    "data": [
+      {
+        "text": "девять",
+        "meta": "@sys.number",
+        "alias": "slideNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "107d71a7-0e17-4426-a8b2-76dd29b93f2e",
+    "data": [
+      {
+        "text": "десять",
+        "meta": "@sys.number",
+        "alias": "slideNumber",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ebdc2a0c-acd2-4bc1-99cc-edbe222f052e",
+    "data": [
+      {
+        "text": "тёрка",
+        "meta": "@sys.any",
+        "alias": "kitchenItem",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8922c8ff-5e59-4dad-a339-f5cd1afce818",
+    "data": [
+      {
+        "text": "чайник",
+        "meta": "@sys.any",
+        "alias": "kitchenItem",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "39da834f-a38a-4c66-8102-ed8c77d9b580",
+    "data": [
+      {
+        "text": "деревянная лопатка",
+        "meta": "@sys.any",
+        "alias": "kitchenItem",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "c6190817-912d-4dd8-a61e-4baf9bd60863",
+    "data": [
+      {
+        "text": "сито",
+        "meta": "@sys.any",
+        "alias": "kitchenItem",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3a1028d8-d343-4a7d-b094-d0f478d0e3f7",
+    "data": [
+      {
+        "text": "сковорода",
+        "meta": "@sys.any",
+        "alias": "kitchenItem",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "b74630c0-5022-43bd-b384-dd8b4cde379d",
+    "data": [
+      {
+        "text": "щипцы для спагетти",
+        "meta": "@sys.any",
+        "alias": "kitchenItem",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "d190c8c3-f9ce-4d15-be39-6b5f3d7a5e5a",
+    "data": [
+      {
+        "text": "солонка",
+        "meta": "@sys.any",
+        "alias": "kitchenItem",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "21b11268-4de0-4ee3-96e8-0049bebd0f66",
+    "data": [
+      {
+        "text": "прихватка",
+        "meta": "@sys.any",
+        "alias": "kitchenItem",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "195e1a07-6e44-41f5-800a-eabe478e8b3c",
+    "data": [
+      {
+        "text": "пушистый",
+        "meta": "@sys.any",
+        "alias": "hitAdjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "bca45a77-a92f-4841-82d5-9b4ebf01dab6",
+    "data": [
+      {
+        "text": "застенчивый",
+        "meta": "@sys.any",
+        "alias": "hitAdjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5a3c1247-1b1e-45cc-8c64-88c4dc64c53c",
+    "data": [
+      {
+        "text": "морковный",
+        "meta": "@sys.any",
+        "alias": "hitAdjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "f28ad52d-d9f7-4328-9300-6aa3cc22cb70",
+    "data": [
+      {
+        "text": "ледяной",
+        "meta": "@sys.any",
+        "alias": "hitAdjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "862e1c9c-6428-4ee1-a276-72c7327fa087",
+    "data": [
+      {
+        "text": "полосатый",
+        "meta": "@sys.any",
+        "alias": "hitAdjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "3ef74bdc-868c-45bd-bfd6-d1da237c62ac",
+    "data": [
+      {
+        "text": "круглый",
+        "meta": "@sys.any",
+        "alias": "hitAdjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "ac37e28a-3326-4afa-ac13-748de4d054f6",
+    "data": [
+      {
+        "text": "вонючий",
+        "meta": "@sys.any",
+        "alias": "hitAdjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "1d59f97b-a133-4148-ad3e-2d6505580f88",
+    "data": [
+      {
+        "text": "скрипучий",
+        "meta": "@sys.any",
+        "alias": "hitAdjective",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]

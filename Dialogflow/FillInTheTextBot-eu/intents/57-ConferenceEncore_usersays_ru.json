@@ -1,0 +1,106 @@
+[
+  {
+    "id": "9e217636-da25-4e59-9c00-8114200b101b",
+    "data": [
+      {
+        "text": "доклад на бис",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "89f66082-afdc-44e9-ba00-2b7d3852eaeb",
+    "data": [
+      {
+        "text": "история доклад на бис",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "8f8eac54-c8f5-4621-8e0b-a5ef086da19f",
+    "data": [
+      {
+        "text": "сочиним доклад на бис",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "75a94b03-8ad7-403f-87fd-6729b318b49a",
+    "data": [
+      {
+        "text": "расскажи доклад на бис",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "cbc07fe9-353e-4e59-a5f8-20cd927f07e7",
+    "data": [
+      {
+        "text": "давай историю про конференцию",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "5e508c5c-1ee4-4166-885d-471d9d48620d",
+    "data": [
+      {
+        "text": "история про конференцию инженеров",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "394f5899-d4a2-4ba6-8a11-64d057682231",
+    "data": [
+      {
+        "text": "давай сочиним про конференцию",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  },
+  {
+    "id": "811c8a12-5c8d-49bb-b907-13d31ec56a4a",
+    "data": [
+      {
+        "text": "история про доклад на конференции",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "ru",
+    "updated": 0
+  }
+]
