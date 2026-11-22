@@ -11,6 +11,7 @@
     <PackageReference Include="GranSteL.Tools.ScopeSelector" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="StackExchange.Redis" VersionOverride="3.4.35" />
   </ItemGroup>
 
   <ItemGroup>
