@@ -101,5 +101,5 @@ Content-Type и JSON всех восьми ответов сценария. CPU 
 - `k6/probe.js` — вспомогательный скрипт: прогоняет один полный путь истории и
   печатает ответы (удобно посмотреть, что во что попадает). Запуск:
   `docker compose -f loadtest/docker-compose.loadtest.yml run --rm k6 run /scripts/probe.js`.
-- `config/appsettings.Yandex.json` — пустой `IncomingToken`, чтобы `/yandex`
-  был доступен без токена (монтируется в контейнер приложения).
+- `Yandex__IncomingToken` в Compose переопределяет токен пустой строкой,
+  чтобы `/yandex` был доступен без токена.

@@ -27,7 +27,7 @@ public class Program
         var services = builder.Services;
         var appConfiguration = builder.Configuration.GetSection(nameof(AppConfiguration)).Get<AppConfiguration>();
 
-        services.AddYandex();
+        services.AddYandex(builder.Configuration);
         services.AddTelemetry(appConfiguration.Tracing);
         services.AddHttpLogging(options => options.LoggingFields = HttpLoggingFields.All);
 
