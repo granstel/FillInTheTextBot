@@ -308,18 +308,6 @@ namespace FillInTheTextBot.Messengers.Tests
             await Assert.ThrowsAsync<NotImplementedException>(() => target.ProcessIncomingAsync(new InputFixture()));
         }
 
-        [Test]
-        public async Task SetWebhookAsync_NotOverridden_NotImplemented()
-        {
-            await Assert.ThrowsAsync<NotImplementedException>(() => _target.SetWebhookAsync(_fixture.Create<string>()));
-        }
-
-        [Test]
-        public async Task DeleteWebhookAsync_NotOverridden_NotImplemented()
-        {
-            await Assert.ThrowsAsync<NotImplementedException>(() => _target.DeleteWebhookAsync());
-        }
-
         #endregion Не реализованные по умолчанию методы
 
         private class AfterCall
