@@ -22,7 +22,8 @@ WORKDIR "/src/FillInTheTextBot.Api"
 RUN dotnet build "FillInTheTextBot.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "FillInTheTextBot.Api.csproj" -c Release -o /app/publish
+ARG RELEASE_VERSION
+RUN dotnet publish "FillInTheTextBot.Api.csproj" -c Release -o /app/publish ${RELEASE_VERSION:+-p:Version="$RELEASE_VERSION"}
 
 FROM base AS final
 WORKDIR /app

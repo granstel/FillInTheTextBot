@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <Version>2.0.1</Version>
     <PackageReleaseNotes>Dialogflow and network tracing with bounded background export</PackageReleaseNotes>
   </PropertyGroup>
 
