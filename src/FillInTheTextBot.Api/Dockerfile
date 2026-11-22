@@ -5,6 +5,8 @@ WORKDIR /app
 # Начиная с .NET 8 образы по умолчанию слушают 8080. Порт зафиксирован явно,
 # чтобы контракт контейнера не поменялся вместе с версией рантайма.
 ENV ASPNETCORE_HTTP_PORTS=80
+# После пустого пробуждения воркер раньше засыпает, пока другой занят.
+ENV DOTNET_ThreadPool_SpuriousDispatchNoSpinThreshold=0
 EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:11.0.100 AS build
