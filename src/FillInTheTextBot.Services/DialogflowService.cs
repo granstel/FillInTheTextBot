@@ -14,6 +14,8 @@ namespace FillInTheTextBot.Services
 {
     public class DialogflowService : IDialogflowService
     {
+        internal const string DetectIntentActivityName = "Dialogflow DetectIntent";
+
         private const string EventKey = "event:";
         private const string StartCommand = "/start";
         private const string ErrorCommand = "/error";
@@ -110,7 +112,7 @@ namespace FillInTheTextBot.Services
                     .SetTag(nameof(context.ScopeId), context.ScopeId)
                     .SetTag("rpc.system", "grpc")
                     .SetTag("rpc.service", "google.cloud.dialogflow.v2.Sessions")
-                    .SetTag("rpc.method", "DetectIntent"), "Dialogflow DetectIntent"))
+                    .SetTag("rpc.method", "DetectIntent"), DetectIntentActivityName))
                 {
                     try
                     {

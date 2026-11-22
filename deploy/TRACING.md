@@ -39,6 +39,13 @@ Docker healthcheck удерживает запускающийся контей�
 на время диагностики. HTTP connection setup — отдельная трасса, связанная с
 исходящим HTTP-спаном через ссылку, а не обычный дочерний спан.
 
+Для замеров чтения ответа включить
+`AppConfiguration__Tracing__DialogflowResponseTimingEnabled=true` вместе с
+трассировкой. В спане `Dialogflow DetectIntent` событие `dialogflow.response.read`
+отмечает получение заголовков. Поля `first_data_ms`, `last_data_ms` и
+`stream_end_ms` показывают время от заголовков до чтения данных и конца потока.
+При прерванном чтении доступны только достигнутые этапы.
+
 Интерфейс доступен через SSH-туннель:
 
 ```bash

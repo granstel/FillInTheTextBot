@@ -33,6 +33,8 @@ AppConfiguration__Tracing__Host=
 AppConfiguration__Tracing__Port=4317
 # Низкоуровневые сетевые spans включаются отдельно, только при Enabled=true.
 AppConfiguration__Tracing__NetworkEnabled=false
+# Тайминги чтения ответа DetectIntent в спанах.
+AppConfiguration__Tracing__DialogflowResponseTimingEnabled=false
 
 # Плавная остановка; значения по умолчанию подходят
 # AppConfiguration__Shutdown__DrainDelaySeconds=10
