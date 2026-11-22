@@ -167,7 +167,7 @@ namespace FillInTheTextBot.Services
                         break;
                     }
 
-                    _log.LogWarning("Event {TextKey} matched intent {IntentName}", textKey, dialog?.IntentName);
+                    _log.LogWarning("Dialogflow did not start the selected story");
                     MetricsCollector.Increment("rotation_unavailable", textKey);
 
                     if (!isFromRotation)

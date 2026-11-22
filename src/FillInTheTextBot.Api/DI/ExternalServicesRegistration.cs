@@ -35,7 +35,6 @@ namespace FillInTheTextBot.Api.DI
                     context.TryAddParameter(nameof(configuration.JsonPath), configuration.JsonPath);
                     context.TryAddParameter(nameof(configuration.Region), configuration.Region);
                     context.TryAddParameter(nameof(configuration.LanguageCode), configuration.LanguageCode);
-                    context.TryAddParameter(nameof(configuration.LogQuery), configuration.LogQuery.ToString());
                     context.TryAddParameter(nameof(configuration.EmulatorEndpoint), configuration.EmulatorEndpoint);
 
                     return context;

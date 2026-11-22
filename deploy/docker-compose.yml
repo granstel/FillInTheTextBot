@@ -51,6 +51,16 @@ services:
 
       - --log.level=INFO
       - --accesslog=true
+      # URL вебхука может содержать токен.
+      - --accesslog.format=json
+      - --accesslog.fields.defaultmode=drop
+      - --accesslog.fields.names.StartUTC=keep
+      - --accesslog.fields.names.RequestMethod=keep
+      - --accesslog.fields.names.DownstreamStatus=keep
+      - --accesslog.fields.names.Duration=keep
+      - --accesslog.fields.names.RouterName=keep
+      - --accesslog.fields.headers.defaultmode=drop
+      - --accesslog.fields.queryparameters.defaultmode=drop
     volumes:
       # Только чтение: Traefik лишь наблюдает за контейнерами
       - /var/run/docker.sock:/var/run/docker.sock:ro

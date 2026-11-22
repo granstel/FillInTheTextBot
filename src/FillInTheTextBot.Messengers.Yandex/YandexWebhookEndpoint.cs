@@ -54,7 +54,7 @@ public static class YandexWebhookEndpoint
             }
             catch (Exception error) when (error is JsonException or FormatException or OverflowException)
             {
-                log.LogError("{Error}", error.Message);
+                log.LogError(error, "Invalid Yandex webhook JSON");
             }
 
             var response = await service.ProcessIncomingAsync(input);
