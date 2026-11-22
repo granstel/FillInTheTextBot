@@ -150,15 +150,5 @@ namespace FillInTheTextBot.Messengers
                                               $"{typeof(TOutput)} at overrided '{nameof(AfterAsync)}' method of " +
                                               $"{typeof(MessengerService<TInput, TOutput>)} type");
         }
-
-        public virtual Task<bool> SetWebhookAsync(string url)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual Task<bool> DeleteWebhookAsync()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

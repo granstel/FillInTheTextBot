@@ -44,6 +44,7 @@ jobs:
         with:
           context: ./src
           file: ./src/FillInTheTextBot.Api/Dockerfile
+          build-args: RELEASE_VERSION=${{ steps.version.outputs.value }}
           push: true
           tags: |
             granstel/fillinthetextbot:${{ steps.version.outputs.value }}

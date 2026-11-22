@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <Version>2.0.1</Version>
     <PackageReleaseNotes>Dialogflow and network tracing with bounded background export</PackageReleaseNotes>
   </PropertyGroup>
 
@@ -18,8 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FillInTheTextBot.Messengers.Marusia\FillInTheTextBot.Messengers.Marusia.csproj" />
-    <ProjectReference Include="..\FillInTheTextBot.Messengers.Sber\FillInTheTextBot.Messengers.Sber.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Messengers.Yandex\FillInTheTextBot.Messengers.Yandex.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Models\FillInTheTextBot.Models.csproj" />
     <ProjectReference Include="..\FillInTheTextBot.Services\FillInTheTextBot.Services.csproj" />

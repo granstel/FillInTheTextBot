@@ -210,8 +210,6 @@ public class TelemetryTests
     private sealed class UnusedYandexService : IYandexService
     {
         public Task<OutputModel> ProcessIncomingAsync(InputModel input) => throw new AssertionException("Запрос должен быть отклонён до вызова сервиса");
-        public Task<bool> SetWebhookAsync(string url) => throw new AssertionException("Неожиданный вызов сервиса");
-        public Task<bool> DeleteWebhookAsync() => throw new AssertionException("Неожиданный вызов сервиса");
     }
 
     private sealed record ExportedSpan(string Source, ActivityKind Kind, string DisplayName,

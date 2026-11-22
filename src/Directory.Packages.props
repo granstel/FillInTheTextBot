@@ -15,19 +15,17 @@
     <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.21.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.21.0" />
     <!-- Экспортёр Prometheus у OpenTelemetry до сих пор выходит только в prerelease -->
-    <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.20.1-beta.1" />
+    <PackageVersion Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.21.0-beta.1" />
   </ItemGroup>
   <ItemGroup Label="Dialogflow и Redis">
     <PackageVersion Include="Google.Cloud.Dialogflow.V2" Version="4.34.0" />
     <PackageVersion Include="Grpc.AspNetCore" Version="2.85.0" />
-    <PackageVersion Include="GranSteL.Helpers.Redis" Version="2.0.0" />
+    <PackageVersion Include="GranSteL.Helpers.Redis" Version="2.0.1" />
     <PackageVersion Include="GranSteL.Tools.ScopeSelector" Version="1.0.0" />
     <PackageVersion Include="StackExchange.Redis" Version="3.4.35" />
   </ItemGroup>
   <ItemGroup Label="Модели голосовых площадок">
-    <PackageVersion Include="MailRu.Marusia.Models" Version="2.0.0" />
-    <PackageVersion Include="Sber.SmartApp.Models" Version="2.0.0" />
-    <PackageVersion Include="Yandex.Dialogs.Models" Version="2.0.0" />
+    <PackageVersion Include="Yandex.Dialogs.Models" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup Label="Тесты">
     <PackageVersion Include="AutoFixture" Version="4.18.1" />

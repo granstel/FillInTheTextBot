@@ -45,10 +45,7 @@ services:
       - AppConfiguration__Redis__KeyPrefix=fitb-load
       - AppConfiguration__Tracing__Enabled=false
       - Logging__LogLevel__Default=Warning
-    volumes:
-      # Пустой IncomingToken → эндпоинт /yandex доступен без токена в URL
-      # (AddConfiguration<YandexConfiguration> читает только этот файл, без env)
-      - ./config/appsettings.Yandex.json:/app/appsettings.Yandex.json:ro
+      - Yandex__IncomingToken=
 
   k6:
     image: grafana/k6:2.4.0

@@ -6,6 +6,8 @@ namespace FillInTheTextBot.Api.Health
 {
     public sealed class ReadinessHealthCheck : IHealthCheck
     {
+        internal const string Route = "/health";
+
         private readonly ReadinessState _state;
 
         public ReadinessHealthCheck(ReadinessState state)

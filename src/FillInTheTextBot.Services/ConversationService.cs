@@ -6,7 +6,6 @@ using FillInTheTextBot.Models;
 using FillInTheTextBot.Services.BackgroundTasks;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Extensions;
-using FillInTheTextBot.Services.Mapping;
 using FillInTheTextBot.Services.Rotation;
 using GranSteL.Helpers.Redis;
 using Microsoft.Extensions.Logging;
@@ -17,7 +16,6 @@ namespace FillInTheTextBot.Services
     {
         private const int MaxRotationAttempts = 3;
 
-        private static readonly Random Random = new();
 
         private readonly ConversationConfiguration _configuration;
         private readonly IDialogflowService _dialogflowService;
@@ -81,7 +79,6 @@ namespace FillInTheTextBot.Services
             response.Text = texts.Text;
             response.AlternativeText = texts.AlternativeText;
 
-            response.Emotions = GetEmotions(dialog);
 
             TrySetSavedText(request.SessionId, request.ScopeKey, dialog, texts);
 
@@ -232,54 +229,6 @@ namespace FillInTheTextBot.Services
             }
 
             return textKey;
-        }
-
-        private IDictionary<string, string> GetEmotions(Dialog dialog)
-        {
-            using (Tracing.Trace())
-            {
-                var result = GetEmotionsFromDialog(dialog);
-
-                var textName = dialog?.GetParameters("text-name")?.FirstOrDefault();
-
-                if (result.Any() || dialog?.ParametersIncomplete == true || string.IsNullOrEmpty(textName))
-                {
-                    return result;
-                }
-
-                foreach (var source in EmotionsToStoryMap.SourceEmotions.Keys)
-                {
-                    var emotions = EmotionsToStoryMap.SourceEmotions[source];
-
-                    var emotion = emotions.OrderBy(x => Random.Next()).FirstOrDefault();
-
-                    var emotionKey = EmotionsKeysMap.SourceEmotionKeys[source];
-
-                    result.Add(emotionKey, emotion);
-                }
-
-                return result;
-            }
-        }
-
-        private Dictionary<string, string> GetEmotionsFromDialog(Dialog dialog)
-        {
-            using (Tracing.Trace())
-            {
-                var result = new Dictionary<string, string>();
-
-                foreach (var emotionKey in EmotionsKeysMap.SourceEmotionKeys.Values)
-                {
-                    var emotion = dialog?.GetParameters(emotionKey).FirstOrDefault();
-
-                    if (!string.IsNullOrEmpty(emotion))
-                    {
-                        result.Add(emotionKey, emotion);
-                    }
-                }
-
-                return result;
-            }
         }
 
         private string GetResponseText(Appeal appeal, string responseText)

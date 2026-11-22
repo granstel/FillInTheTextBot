@@ -8,11 +8,6 @@ namespace FillInTheTextBot.Models
         public static string ScopeStorageKey => nameof(ScopeKey).ToUpper();
         public static string RotationStateStorageKey => nameof(RotationState).ToUpper();
 
-        public Response()
-        {
-            Emotions = new Dictionary<string, string>();
-        }
-
         public string ChatHash { get; set; }
 
         public string UserHash { get; set; }
@@ -30,7 +25,5 @@ namespace FillInTheTextBot.Models
         public string RotationState { get; set; }
 
         public string ScopeKey { get; set; }
-        
-        public IDictionary<string, string> Emotions { get; set; }
     }
 }
