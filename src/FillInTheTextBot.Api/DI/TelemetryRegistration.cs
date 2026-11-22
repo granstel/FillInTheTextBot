@@ -1,5 +1,6 @@
 using System;
 using System.Reflection;
+using FillInTheTextBot.Api.Health;
 using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -39,7 +40,7 @@ namespace FillInTheTextBot.Api.DI
                         // Без AddSource активности из Tracing создаются, но не экспортируются
                         .AddSource(Tracing.ActivitySourceName)
                         .AddAspNetCoreInstrumentation(options => options.Filter = context =>
-                            !context.Request.Path.StartsWithSegments(Startup.HealthPath,
+                            !context.Request.Path.StartsWithSegments(ReadinessHealthCheck.Route,
                                 StringComparison.OrdinalIgnoreCase)
                             && !context.Request.Path.StartsWithSegments("/metrics",
                                 StringComparison.OrdinalIgnoreCase))
