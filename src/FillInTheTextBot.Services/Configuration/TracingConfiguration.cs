@@ -6,6 +6,8 @@
 
         public bool NetworkEnabled { get; set; }
 
+        public bool DialogflowResponseTimingEnabled { get; set; }
+
         public string Host { get; set; }
 
         public int? Port { get; set; }
