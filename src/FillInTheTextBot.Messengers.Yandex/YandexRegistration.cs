@@ -1,15 +1,16 @@
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FillInTheTextBot.Messengers.Yandex;
 
 public static class YandexRegistration
 {
-    public static void AddYandex(this IServiceCollection services)
+    public static void AddYandex(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddConfiguration<YandexConfiguration>("appsettings.Yandex.json");
+        services.AddSingleton(_ => configuration.GetRequiredSection("Yandex").Get<YandexConfiguration>());
         services.AddTransient<IYandexService, YandexService>();
         services.ConfigureHttpJsonOptions(options =>
         {

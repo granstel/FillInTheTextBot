@@ -2,6 +2,7 @@ using FillInTheTextBot.Services;
 using FillInTheTextBot.Services.Configuration;
 using FillInTheTextBot.Services.Rotation;
 using FillInTheTextBot.Services.StoryDialog;
+using FillInTheTextBot.Messengers.Yandex;
 using Google.Cloud.Dialogflow.V2;
 using GranSteL.Tools.ScopeSelector;
 using Microsoft.Extensions.Configuration;
@@ -13,6 +14,19 @@ namespace FillInTheTextBot.Api.IntegrationTests;
 [TestFixture]
 public class ConversationProviderRegistrationTests
 {
+    [TestCase("")]
+    [TestCase("synthetic-incoming-token")]
+    public void Yandex_BindsIncomingTokenFromApplicationConfiguration(string token)
+    {
+        var builder = CreateBuilder();
+        builder.Configuration["Yandex:IncomingToken"] = token;
+        Program.ConfigureServices(builder.Services, builder.Configuration);
+
+        using var host = builder.Build();
+
+        Assert.That(host.Services.GetRequiredService<YandexConfiguration>().IncomingToken, Is.EqualTo(token));
+    }
+
     [Test]
     public void DefaultProvider_RegistersDialogflowAndRotationWithoutLoadingCredentials()
     {
@@ -78,6 +92,7 @@ public class ConversationProviderRegistrationTests
         }));
         var settings = new Dictionary<string, string?>
         {
+            ["Yandex:IncomingToken"] = "synthetic-incoming-token",
             ["AppConfiguration:HttpLog:Enabled"] = "false",
             ["AppConfiguration:Tracing:Enabled"] = "false",
             ["AppConfiguration:Redis:ConnectionString"] = "127.0.0.1:1",

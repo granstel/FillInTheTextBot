@@ -30,8 +30,7 @@ x-fitb: &fitb
     AppConfiguration__HttpLog__Enabled: "false"
     AppConfiguration__Shutdown__DrainDelaySeconds: "0"
     Logging__LogLevel__Default: Warning
-  volumes:
-    - ./config/appsettings.Yandex.json:/app/appsettings.Yandex.json:ro
+    Yandex__IncomingToken: ""
   depends_on:
     mongo:
       condition: service_healthy

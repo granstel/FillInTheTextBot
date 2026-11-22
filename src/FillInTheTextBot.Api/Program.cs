@@ -49,7 +49,7 @@ public class Program
     {
         var appConfiguration = configuration.GetSection(nameof(AppConfiguration)).Get<AppConfiguration>();
 
-        services.AddYandex();
+        services.AddYandex(configuration);
         services.AddTelemetry(appConfiguration.Tracing);
         services.AddHttpLogging(options => options.LoggingFields = HttpLoggingFields.All);
 
