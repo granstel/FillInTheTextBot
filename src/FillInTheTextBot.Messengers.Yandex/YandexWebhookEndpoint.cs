@@ -60,18 +60,6 @@ public static class YandexWebhookEndpoint
             var response = await service.ProcessIncomingAsync(input);
             return Results.Json(response, serializerOptions);
         });
-
-        endpoints.MapPut(WebhookRoute, async Task<IResult> (
-            HttpRequest request, IYandexService service, YandexConfiguration configuration) =>
-            HasValidToken(request, configuration)
-                ? Results.Json(await service.SetWebhookAsync(GetWebhookUrl(request)), serializerOptions)
-                : Results.NotFound());
-
-        endpoints.MapDelete(WebhookRoute, async Task<IResult> (
-            HttpRequest request, IYandexService service, YandexConfiguration configuration) =>
-            HasValidToken(request, configuration)
-                ? Results.Json(await service.DeleteWebhookAsync(), serializerOptions)
-                : Results.NotFound());
     }
 
     private static bool HasValidToken(HttpRequest request, YandexConfiguration configuration)
